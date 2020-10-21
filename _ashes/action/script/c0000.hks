@@ -1,5 +1,4 @@
-﻿-- GIT TUTORIAL CHANGE
--- All custom edits are made by Angeluso
+﻿-- All custom edits are made by Angeluso
 -- Do NOT copy from this file and publicize without permission 
 
 function ExecEvent(state)
