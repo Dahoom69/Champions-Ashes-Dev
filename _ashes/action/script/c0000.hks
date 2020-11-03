@@ -1,5 +1,4 @@
-﻿-- testing
--- All custom edits are made by Angeluso
+﻿-- All custom edits are made by Angeluso
 -- Do NOT copy from this file and publicize without permission 
 
 function ExecEvent(state)
@@ -1724,6 +1723,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
 
         ExecEventAllBody(l1)
     elseif request == ATTACK_REQUEST_BOTH_HEAVY then
+        local sp_m = env(345 , HAND_RIGHT)
         if artsr2 == TRUE then
             SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         end
@@ -1744,7 +1744,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 b2 = "W_AttackBothHeavyWepBroken2Start"
             end
         end
-        ExecEventAllBody(b2)
+
+        if (   env(1116, 100279) == TRUE)      then 
+        else 
+            ExecEventAllBody(b2) 
+        end
     elseif request == ATTACK_REQUEST_ARROW_BOTH_RIGHT then
         if ExecHandChange(HAND_RIGHT, TRUE, blend_type) == TRUE then
             return TRUE
