@@ -3275,6 +3275,7 @@ function ExecWeaponChange(blend_type)
     end
     local kind = WEAPON_CHANGE_REQUEST_INVALID
     if env(1106, ACTION_ARM_CHANGE_WEAPON_R) == TRUE then
+        iT = FALSE 
         kind = GetWeaponChangeType(HAND_RIGHT)
     elseif env(1106, ACTION_ARM_CHANGE_WEAPON_L) == TRUE then
         kind = GetWeaponChangeType(HAND_LEFT)
