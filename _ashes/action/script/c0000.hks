@@ -891,6 +891,7 @@ function SetSwordArtsPointInfo(button, is_point_consume)
         act("アーツポイント使用予約", button, hand)
     end
     local sel = 0
+
     if env("アーツポイント足りるか", button, hand) == FALSE then -- 344 or HasEnoughArtsPoints no fp no mp
         sel = 1
     elseif env(311, hand) == 0 then -- get weapon durability
@@ -7583,7 +7584,7 @@ function AttackRightLight1_onUpdate() -- r11
             else staminaRegen = 15 end
             
             AddStamina(staminaRegen)
-            act(2002, 621)
+            act(2002, 621) -- set speffect 621
             act(2002, 622)
         end
         return
@@ -7827,6 +7828,7 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end
 
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 then r1 = "W_AttackRightHeavySpecial1Start" end
+
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
     else
@@ -7944,7 +7946,7 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
     end
 end
 
-function AttackRightHeavySpecial1End_onUpdate()
+function AttackRightHeavySpecial1End_onUpdate() -- r23 r2 charged super
     local r1 = "W_AttackRightLight1"
     local sp_m = env(345 , HAND_RIGHT)
 
@@ -8691,6 +8693,12 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
     if sp_m == 643 then 
         l1 = "W_AttackBothLeft2" 
     end
+
+    
+    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
         
     local b2 = "W_AttackBothHeavy2Start"
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
@@ -8730,7 +8738,12 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
         if (sp_m == 624) then r2 = "W_AttackRightHeavy1SubStart" end
 
 --        if 20 > env(2016) and sp_m == 624 then  ExecEventHalfBlend(Event_MagicInvalidRight, ALLBODY) end
-        if 20 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
+        if 20 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end  -- get fp
+
+        if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 625)
+        end
 
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, r2, FALSE, TRUE) == TRUE then
             return 
@@ -8771,6 +8784,11 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     if (sp_m == 643) then 
         l1  = "W_AttackBothLeft3"
+    end
+
+    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
     end
 
     if (is_catalysts == TRUE ) then  
@@ -8849,7 +8867,7 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
     end
 end
 
-function AttackBothHeavySpecial1End_onUpdate()
+function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super
     local sp_m = env(345 , HAND_RIGHT)
     local r2 = "W_AttackRightHeavy1Start"
     if (sp_m == 101) then   
@@ -8864,6 +8882,11 @@ function AttackBothHeavySpecial1End_onUpdate()
     local l1 = "W_AttackBothLeft1"
     if (sp_m == 643) then 
         l1  = "W_AttackBothLeft3"
+    end
+
+    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
     end
 
     if AttackCommonFunction("W_AttackRightLight1", r2, l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
@@ -9004,7 +9027,7 @@ function AttackBothLightStep_onUpdate() -- roll r1
     end
 end
 
-function AttackBothLightStepSpecial_onUpdate()
+function AttackBothLightStepSpecial_onUpdate() -- bs r2
     local sp_m = env(345 , HAND_RIGHT)
         local r2 = "W_AttackBothHeavy1Start"
         local r1 = "W_AttackBothLight1"
@@ -9018,6 +9041,11 @@ function AttackBothLightStepSpecial_onUpdate()
         if (sp_m == 643) then 
             l1 = "W_AttackBothLeft3" 
             --l1 = "W_AttackBothLeft2" 
+         end
+
+         if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+         then 
+             act(2002, 625)
          end
 
          if (env(345 , HAND_RIGHT) == 624) then r2 = "W_AttackRightHeavy1SubStart" end
@@ -9053,6 +9081,12 @@ function AttackBothHeavyKick_onUpdate()
 
     local b1 = "W_AttackBothLight1"
     local sp_m = env(345 , HAND_RIGHT)
+
+    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
+
     if (   (sp_m ~= 50 and sp_m ~= 179 and sp_m ~= 232 and sp_m ~= 264 and sp_m ~= 164 and sp_m ~= 107)   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then b1 = "W_AttackBothLight2" end
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9065,6 +9099,13 @@ function AttackBothHeavyKickSpecial_onUpdate()
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
+
+    local sp_m = env(345 , HAND_RIGHT)
+    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
+
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         return 
     else
