@@ -8585,12 +8585,13 @@ function AttackBothLeft3_onUpdate()  -- l13
     end
 end
 
-function AttackBothLeftDash_onUpdate()
+function AttackBothLeftDash_onUpdate() -- bothdashleft
     local r1 = "W_AttackRightLight1"
     local l1 = "W_AttackBothLeft1"
     local b1 = "W_AttackBothLight1"
     local hand = HAND_RIGHT
     local style = c_Style
+    local sp_m = env(345 , HAND_RIGHT)
     if style == HAND_LEFT_BOTH then
         hand = HAND_LEFT
     end
@@ -8601,6 +8602,8 @@ function AttackBothLeftDash_onUpdate()
     end
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
+    
+    if (sp_m == 643) then l1 = "W_AttackBothLeft3" end
 
     if AttackCommonFunction(r1, "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -8979,8 +8982,21 @@ function AttackBothDash_onUpdate() -- run r1
     if (sp_ugso == 95 or sp_ugso == 128 or sp_ugso == 163 or sp_ugso == 193) then specialWeaponsO = TRUE
     else specialWeaponsO = FALSE end
 
-    if (   (is_Um == TRUE and specialWeaponsM == FALSE )  or (is_Uo == TRUE and specialWeaponsO == FALSE   )    ) 
-    then r1 =  "W_AttackBothLight2" end
+    local is_rightHandCA = FALSE
+    local is_leftHandCA = FALSE
+    local is_both_right = FALSE
+    if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
+
+    --if (is_Um == TRUE and sp_ugsm == 655 and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+    --if (is_Umo == TRUE and sp_ugso == 655 and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+
+    if (is_Um == TRUE and specialWeaponsM == TRUE and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+    if (is_Uo == TRUE and specialWeaponsO == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+    if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
+
+
+    --if (   (is_Um == TRUE and specialWeaponsM == FALSE )  or (is_Uo == TRUE and specialWeaponsO == FALSE   )    ) 
+    --then r1 =  "W_AttackBothLight2" end
 
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
