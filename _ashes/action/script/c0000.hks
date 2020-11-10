@@ -2100,7 +2100,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 if (env(345 , c_SwordArtsHand) == 624) then
                     if iT ~= TRUE then ExecEventAllBody("W_Warcry")
                     else ExecEventAllBody("W_OneShotNoGenTransStart") end
-                elseif (sp_m == 654 and (style == HAND_RIGHT and style ~= HAND_RIGHT_BOTH  )) then ExecEventAllBody("W_Warcry")
+                elseif (    (sp_m == 654 or sp_m == 621) and (style == HAND_RIGHT and style ~= HAND_RIGHT_BOTH  )) then ExecEventAllBody("W_Warcry")
                 else ExecEventAllBody("W_OneShotNoGenTransStart") end
     else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
     elseif request == SWORDARTS_REQUEST_RIGHT_STORMSTANCE or request == SWORDARTS_REQUEST_LEFT_STORMSTANCE then
@@ -11298,7 +11298,7 @@ function ChargeContinue2_onUpdate()
     end
 end
 
-function Warcry_onUpdate()
+function Warcry_onUpdate() -- 037670 UT WA 
     local r2 = "W_AttackRightHeavySpecial1Start"
     local b2 = "W_AttackBothHeavySpecial1Start"
     local hand = HAND_RIGHT
@@ -11371,7 +11371,7 @@ function OneShotNoGenTrans_Activate()
     return 
 end
 
-function OneShotNoGenTransStart_onUpdate()
+function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local b1 = "W_AttackBothLight1"
