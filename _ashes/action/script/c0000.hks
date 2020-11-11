@@ -517,18 +517,24 @@ function GetSwordArtsRequest()
     local style = c_Style
     local is_both = FALSE
     local arts_id = c_SwordArtsID
-    if HAND_LEFT_BOTH <= style then
-        is_both = TRUE
-    end
-    if is_both == TRUE then
-        local request = arts_id + 200
-        return request
-    elseif c_SwordArtsHand == HAND_RIGHT then
-        local request = arts_id + 200
-        return request
-    else
-        local request = arts_id + 100
-        return request
+
+    local sp_m = env(345 , HAND_RIGHT)
+    local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+    if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100281) == TRUE) ) then 
+    else 
+        if HAND_LEFT_BOTH <= style then
+            is_both = TRUE
+        end
+        if is_both == TRUE then
+            local request = arts_id + 200
+            return request
+        elseif c_SwordArtsHand == HAND_RIGHT then
+            local request = arts_id + 200
+            return request
+        else
+            local request = arts_id + 100
+            return request
+        end
     end
 end
 
@@ -1569,6 +1575,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
     end 
 
     if request == ATTACK_REQUEST_RIGHT_LIGHT then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
         if artsr1 == TRUE then
             SetSwordArtsPointInfo(ACTION_ARM_R1, TRUE)
         end
@@ -1579,6 +1590,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             ExecEventAllBody(b1)
         else  
             ExecEventAllBody(r1) end
+
+        end
     elseif request == ATTACK_REQUEST_LIGHT_KICK then
         local sp_m = env(345 , HAND_RIGHT)
         local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
@@ -1590,6 +1603,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             else ExecEventAllBody("W_AttackRightLightKick") end
         end
     elseif request == ATTACK_REQUEST_RIGHT_HEAVY then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
         if artsr2 == TRUE then
             SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         end
@@ -1614,7 +1632,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             ExecEventAllBody(b2)
         else  
             ExecEventAllBody(r2) end
+
+        end
     elseif request == ATTACK_REQUEST_HEAVY_KICK then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
         if HAND_LEFT_BOTH <= style or iT == TRUE then
             if IsArtsSpAtk() == TRUE then
                 ExecEventAllBody("W_AttackBothHeavyKickSpecial")
@@ -1626,10 +1651,23 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         else
             ExecEventAllBody("W_AttackRightHeavyKick")
         end
+
+    end
     elseif request == ATTACK_REQUEST_LEFT_LIGHT then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
         atk_hand = HAND_LEFT
         ExecEventAllBody(l1)
+        end
     elseif request == ATTACK_REQUEST_LEFT_HEAVY then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
         atk_hand = HAND_LEFT
         local sp_m = env(345 , HAND_RIGHT)
         local sp_g = env(345 , HAND_LEFT)
@@ -1682,28 +1720,41 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         end
 
         ExecEventAllBody(l2)
+    end
     elseif request == ATTACK_REQUEST_LEFT_HEAVY_SP then
-        atk_hand = HAND_LEFT
-        if l2 == "W_AttackLeftHeavy2" then
-            l2 = "W_AttackLeftHeavySp2"
-        elseif l2 == "W_AttackLeftHeavy3" then
-            l2 = "W_AttackLeftHeavySp3"
-        else
-            l2 = "W_AttackLeftHeavySp1"
-        end
-        ExecEventAllBody(l2)
-    elseif request == ATTACK_REQUEST_BOTH_LIGHT then
-        if artsr1 == TRUE then
-            SetSwordArtsPointInfo(ACTION_ARM_R1, TRUE)
-        end
-        if IsArtsSpAtk() == TRUE and b1 == "W_AttackBothLightStep" then
-            b1 = "W_AttackBothLightStepSpecial"
-        end
-
         local sp_m = env(345 , HAND_RIGHT)
-        if (   GetEquipType(HAND_RIGHT, 36) == TRUE and sp_m == 176 and env(1116, 100282) == TRUE)    then 
-        else
-        ExecEventAllBody(b1)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
+            atk_hand = HAND_LEFT
+            if l2 == "W_AttackLeftHeavy2" then
+                l2 = "W_AttackLeftHeavySp2"
+            elseif l2 == "W_AttackLeftHeavy3" then
+                l2 = "W_AttackLeftHeavySp3"
+            else
+                l2 = "W_AttackLeftHeavySp1"
+            end
+            ExecEventAllBody(l2)
+        end
+    elseif request == ATTACK_REQUEST_BOTH_LIGHT then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
+        else 
+
+            if artsr1 == TRUE then
+                SetSwordArtsPointInfo(ACTION_ARM_R1, TRUE)
+            end
+            if IsArtsSpAtk() == TRUE and b1 == "W_AttackBothLightStep" then
+                b1 = "W_AttackBothLightStepSpecial"
+            end
+
+            local sp_m = env(345 , HAND_RIGHT)
+            if (   GetEquipType(HAND_RIGHT, 36) == TRUE and sp_m == 176 and env(1116, 100282) == TRUE)    then 
+            else
+            ExecEventAllBody(b1)
+            end
         end
     elseif request == ATTACK_REQUEST_BOTH_LEFT then
         if r1 == "W_AttackRightLightDash" then
@@ -1725,30 +1776,35 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         ExecEventAllBody(l1)
     elseif request == ATTACK_REQUEST_BOTH_HEAVY then
         local sp_m = env(345 , HAND_RIGHT)
-        if artsr2 == TRUE then
-            SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
-        end
-        if IsWarcrySpAtk() == TRUE then
-            if b2 == "W_AttackBothHeavy1Start" then
-                b2 = "W_AttackBothHeavySpecial1Start"
-            elseif b2 == "W_AttackBothHeavy1SubStart" then
-                b2 = "W_AttackBothHeavySpecial1SubStart"
-            elseif b2 == "W_AttackBothHeavy2Start" then
-                b2 = "W_AttackBothHeavySpecial2Start"
-            end
-        elseif IsWepBrokenHeavyAtk() == TRUE then
-            if b2 == "W_AttackBothHeavy1Start" then
-                b2 = "W_AttackBothHeavyWepBroken1Start"
-            elseif b2 == "W_AttackBothHeavy1SubStart" then
-                b2 = "W_AttackBothHeavyWepBroken1SubStart"
-            elseif b2 == "W_AttackBothHeavy2Start" then
-                b2 = "W_AttackBothHeavyWepBroken2Start"
-            end
-        end
-
-        if (   env(1116, 100279) == TRUE)      then 
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100289) == TRUE) ) then 
         else 
-            ExecEventAllBody(b2) 
+
+            if artsr2 == TRUE then
+                SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
+            end
+            if IsWarcrySpAtk() == TRUE then
+                if b2 == "W_AttackBothHeavy1Start" then
+                    b2 = "W_AttackBothHeavySpecial1Start"
+                elseif b2 == "W_AttackBothHeavy1SubStart" then
+                    b2 = "W_AttackBothHeavySpecial1SubStart"
+                elseif b2 == "W_AttackBothHeavy2Start" then
+                    b2 = "W_AttackBothHeavySpecial2Start"
+                end
+            elseif IsWepBrokenHeavyAtk() == TRUE then
+                if b2 == "W_AttackBothHeavy1Start" then
+                    b2 = "W_AttackBothHeavyWepBroken1Start"
+                elseif b2 == "W_AttackBothHeavy1SubStart" then
+                    b2 = "W_AttackBothHeavyWepBroken1SubStart"
+                elseif b2 == "W_AttackBothHeavy2Start" then
+                    b2 = "W_AttackBothHeavyWepBroken2Start"
+                end
+            end
+
+            if (   env(1116, 100279) == TRUE)      then 
+            else 
+                ExecEventAllBody(b2) 
+            end
         end
     elseif request == ATTACK_REQUEST_ARROW_BOTH_RIGHT then
         if ExecHandChange(HAND_RIGHT, TRUE, blend_type) == TRUE then
@@ -3515,7 +3571,12 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         return FALSE
     end
     SetEvasionStaminaCost()
-    if request == ATTACK_REQUEST_ROLLING then
+    if request == ATTACK_REQUEST_ROLLING then -- rolling evade 
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100281) == TRUE) ) then 
+        else 
+
         if is_usechainrecover == TRUE then
             local damagecount = GetVariable("DamageCount")
             if 4 <= damagecount then
@@ -3615,10 +3676,16 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         if ( weight == EVASION_WEIGHT_INDEX_LIGHT and GetVariable("IsLockon") == false )
         then ExecEventAllBody("W_BackStepSuperlight") 
         else ExecEventAllBody(event) end
+    end
     elseif request == ATTACK_REQUEST_JUMP then
         AddStamina(c_StaminaCostJump)
         ExecEventAllBody("W_Jump")
     elseif request == ATTACK_REQUEST_BACKSTEP then
+        local sp_m = env(345 , HAND_RIGHT)
+        local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+        if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100281) == TRUE) ) then 
+        else 
+            
         ResetDamageCount()
         local index = GetWeightIndex(FALSE)
         local event = "W_BackStepLight"  -- backstep w no i-frames
@@ -3640,6 +3707,7 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         end
         AddStamina(c_StaminaCostBackStep)
         ExecEventAllBody(event)
+    end
     else
         return FALSE
     end
@@ -4419,6 +4487,11 @@ function ExecDamage(is_parry, is_attackwhileguard)
 end
 
 function ExecGuardOnCancelTiming(guardcondition, blend_type)
+    local sp_m = env(345 , HAND_RIGHT)
+    local is_Um = GetEquipType(HAND_RIGHT, 26, 35)     
+    if (    (is_Um == FALSE and sp_m == 163 and env(1116, 100281) == TRUE) ) then 
+    else 
+
     if env(243) == FALSE then
         return FALSE
     elseif guardcondition == TO_GUARDON then
@@ -4429,6 +4502,7 @@ function ExecGuardOnCancelTiming(guardcondition, blend_type)
         return TRUE
     end
     return FALSE
+end
 end
 
 function LadderIdleCommonFunction(hand)
