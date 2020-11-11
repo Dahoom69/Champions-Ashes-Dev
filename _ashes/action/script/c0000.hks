@@ -9425,6 +9425,8 @@ function AttackCrossbowRightEmpty_Upper_onUpdate() -- neutral transform (UT > T)
         r1 = "W_AttackRightHeavy2End" 
         b1 = "W_AttackBothHeavy2End" 
     end
+
+    if sp_m == 614 then b2 = "W_AttackBothHeavy1Start" end
     if sp_m == 643 then 
         r1 = "W_AttackRightLight3" 
         b1 = "W_AttackBothLight3" 
