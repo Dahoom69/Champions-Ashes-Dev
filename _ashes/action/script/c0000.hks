@@ -1721,13 +1721,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                         end
                     else 
                         local speed = GetVariable("MoveSpeedLevelReal")
-                        if 1.60000002384186 < speed then l2 = "W_AttackLeftHeavySp1"
-                        --if r1 == "W_AttackRightLightDash" then
-                          --  l2 = "W_AttackLeftHeavySp1"
-                        elseif r1 == "W_AttackRightLightStep" then
-                            l2 = "W_AttackLeftHeavySp2"
+                        if 1.60000002384186 < speed then l2 = "W_AttackLeftHeavySp1" -- 32090	guns run
+                        elseif r1 == "W_AttackRightLightStep" then 
+                            l2 = "W_AttackLeftHeavySp2" -- 32091	guns roll
                         elseif l1 == "W_AttackLeftLight1" then
-                            l2 = "W_AttackLeftHeavy1"
+                            if (sp_g == 618 or sp_g == 652) then l2 = "W_AttackLeftHeavy1" -- 32000	guns offhand
+                            else l2 = "W_ParryLeftStart" end -- 32000	guns offhand
                         elseif l1 == "W_AttackLeftLight2" then
                             l2 = "W_AttackLeftHeavy1"
                         elseif l1 == "W_AttackLeftHeavy2" then
@@ -1735,11 +1734,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                         end
                     end
                 else
-                    l2 = "W_AttackLeftHeavySp3"
+                    l2 = "W_AttackLeftHeavySp3" -- 32092    guns out of ammo
                 end
-            --else 
-              --  l2 = "W_AttackLeftHeavySp3"
-            --end
         end
         if sp_g == 651 then 
             local speed = GetVariable("MoveSpeedLevelReal")
@@ -12022,16 +12018,32 @@ function SwordArtsLeft_Activate()
 end
 
 function ParryLeftStart_onUpdate()
+    local sp_g = env(345 , HAND_LEFT)
+
     if SwordArtsParryCommonFunction() == TRUE then
         return 
+
+    elseif (sp_g == 602 or sp_g == 617 or sp_g == 628 or sp_g == 629 or sp_g == 630 or sp_g == 653) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
+        act("特殊補間設定", 0, TRUE)
+        ExecEventAllBody("W_ParryLeftStart_WepBreak")
+        return -- new
+
     else
         return 
     end
 end
 
 function ParryLeftStart_WepBreak_onUpdate()
+    local sp_g = env(345 , HAND_LEFT)
+
     if SwordArtsParryCommonFunction() == TRUE then
         return 
+
+    elseif (sp_g == 602 or sp_g == 617 or sp_g == 628 or sp_g == 629 or sp_g == 630 or sp_g == 653) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
+        act("特殊補間設定", 0, TRUE)
+        ExecEventAllBody("W_AttackLeftHeavy1")
+        return -- new
+
     else
         return 
     end
