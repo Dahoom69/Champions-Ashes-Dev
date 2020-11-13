@@ -3861,7 +3861,7 @@ function ExecFallStart(fall_type)
     return TRUE
 end
 
-function ExecAddDamage(damage_dir, attack_dir, damage_level, is_guard, is_damaged)
+function ExecAddDamage(damage_dir, attack_dir, damage_level, is_guard, is_damaged) -- receive damage add damage get damaged ?
     if is_damaged == FALSE then
         return 
     elseif env(334, 9) == TRUE then
@@ -4246,10 +4246,10 @@ function ExecDeath()
     return 
 end
 
-function ExecDamage(is_parry, is_attackwhileguard)
+function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage get damaged ?
     local damage_level = env(236)
     local damage_type = env(202)
-    local is_damaged = env(256)
+    local is_damaged = env(256) -- is damaged
     if damage_level <= DAMAGE_LEVEL_NONE and is_damaged == FALSE and (damage_type == DAMAGE_TYPE_INVALID or damage_type == DAMAGE_TYPE_WEAK_POINT or damage_type == DAMAGE_LEVEL_MINIMUM) then
         return FALSE
     end
@@ -4262,6 +4262,7 @@ function ExecDamage(is_parry, is_attackwhileguard)
     elseif damage_type == DAMAGE_TYPE_GUARD and env(334, 4) == TRUE then
         damage_type = DAMAGE_TYPE_GUARDBREAK
     end
+    
     if DAMAGE_TYPE_GUARDED <= damage_type and damage_type <= DAMAGE_TYPE_WALL_LEFT then
         Replanning()
         if (damage_type == DAMAGE_TYPE_GUARDBREAK_BLAST or damage_type == DAMAGE_TYPE_GUARDBREAK_FLING) and IsGuardbreakBlowDamage(damage_level) == FALSE then
@@ -4350,6 +4351,9 @@ function ExecDamage(is_parry, is_attackwhileguard)
             ExecEventAllBody("W_DrawStanceRightHeavyLoopGuard")
             return TRUE
         elseif env(1116, 100350) == TRUE then
+            return FALSE
+        elseif env(1116, 100351) == TRUE then
+            ExecEventAllBody("W_AttackRightCounter")
             return FALSE
         elseif env(1116, 100700) == TRUE then
             return FALSE
@@ -7807,6 +7811,15 @@ function AttackRightLight3_onUpdate() -- r13
                 act(2002, 622)
             end
             return 
+    else
+        return 
+    end
+end
+
+
+function AttackRightCounter_onUpdate()
+    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1SubStart", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+        return 
     else
         return 
     end
@@ -11436,6 +11449,10 @@ function Warcry_onUpdate() -- 037670 UT WA
         hand = HAND_LEFT
     end
     if env(345 , hand) == 242 then
+        r2 = "W_AttackRightHeavy1Start"
+        b2 = "W_AttackBothHeavy1Start"
+    end
+    if env(345 , hand) == 656 then
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
     end
