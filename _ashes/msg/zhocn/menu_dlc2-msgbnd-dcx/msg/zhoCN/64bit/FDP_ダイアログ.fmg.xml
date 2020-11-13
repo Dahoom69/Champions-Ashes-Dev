@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fmg>
+<compression>None</compression>
+<version>DarkSouls3</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="1">确定</text>
+<text id="2">取消</text>
+<text id="3">是</text>
+<text id="4">否</text>
+<text id="5">同意</text>
+<text id="6">不同意</text>
+<text id="7">%null%</text>
+<text id="8">%null%</text>
+<text id="9">%null%</text>
+<text id="10">%null%</text>
+<text id="11">%null%</text>
+<text id="12">%null%</text>
+<text id="13">%null%</text>
+<text id="14">%null%</text>
+<text id="15">重试</text>
+<text id="16">继续</text>
+<text id="17">回到标题画面</text>
+<text id="40200">所需灵魂不足</text>
+<text id="40201">所需道具不足</text>
+<text id="40202">所需的灵魂与道具不足</text>
+<text id="40300">设定将恢复为初始预设，
+您确定吗？</text>
+<text id="40500">所有设定将恢复为预设
+您确定吗？</text>
+<text id="102000">将放置&lt;?itemName?&gt;
+您确定吗？</text>
+<text id="102001">将丢弃&lt;?itemName?&gt;
+您确定吗？</text>
+<text id="102002">将全数放置所选择的道具
+您确定吗？</text>
+<text id="102003">将全数丢弃所选择的道具
+您确定吗？</text>
+<text id="102004">%null%</text>
+<text id="102005">%null%</text>
+<text id="102006">%null%</text>
+<text id="102007">%null%</text>
+<text id="102008">%null%</text>
+<text id="102009">%null%</text>
+<text id="102010">已超过可持有的灵魂上限
+将失去超过上限的灵魂，仍要使用吗？</text>
+<text id="103000">必需能力值不足
+无法发挥原有性能</text>
+<text id="103001">必需能力值不足
+以双手共持，则能发挥原有性能</text>
+<text id="103110">因与其他装备中的戒指相克
+无法装备此戒指</text>
+<text id="103111">%null%</text>
+<text id="103112">%null%</text>
+<text id="103113">%null%</text>
+<text id="103114">%null%</text>
+<text id="103115">%null%</text>
+<text id="103116">%null%</text>
+<text id="103117">%null%</text>
+<text id="103118">%null%</text>
+<text id="103119">%null%</text>
+<text id="103120">此戒指目前无法卸除</text>
+<text id="103121">%null%</text>
+<text id="103122">%null%</text>
+<text id="103123">%null%</text>
+<text id="103124">%null%</text>
+<text id="103125">%null%</text>
+<text id="103126">%null%</text>
+<text id="103127">%null%</text>
+<text id="103128">%null%</text>
+<text id="103129">%null%</text>
+<text id="103130">目前不能更换装备</text>
+<text id="103131">%null%</text>
+<text id="103132">%null%</text>
+<text id="103133">%null%</text>
+<text id="103134">%null%</text>
+<text id="103135">%null%</text>
+<text id="103136">%null%</text>
+<text id="103137">%null%</text>
+<text id="103138">%null%</text>
+<text id="103139">%null%</text>
+<text id="103140">因记忆空格减少
+将移除无法记忆的法术
+您确定吗？</text>
+<text id="103141">已移除无法记忆的法术</text>
+<text id="103142">%null%</text>
+<text id="103143">%null%</text>
+<text id="103144">%null%</text>
+<text id="103145">%null%</text>
+<text id="103146">%null%</text>
+<text id="103147">%null%</text>
+<text id="103148">%null%</text>
+<text id="103149">%null%</text>
+<text id="103150">卸除此戒指会造成损坏
+确定要装备吗？</text>
+<text id="103151">卸除此戒指会造成损坏
+确定要卸除吗？</text>
+<text id="110000">将保存游戏数据，返回标题画面
+您确定吗？</text>
+<text id="211000">%null%</text>
+<text id="212000">要花费&lt;?demandSoul?&gt;灵魂升级吗？</text>
+<text id="212001">将中止升级
+您确定吗？</text>
+<text id="212002">请选择1个以上要成长的能力值</text>
+<text id="212003">%null%</text>
+<text id="212004">%null%</text>
+<text id="212005">%null%</text>
+<text id="212006">%null%</text>
+<text id="212007">%null%</text>
+<text id="212008">%null%</text>
+<text id="212009">%null%</text>
+<text id="212010">已达等级上限，无法再升级</text>
+<text id="212250">您要升级吗？</text>
+<text id="212251">将中止升级
+您确定吗？</text>
+<text id="212500">您要升级吗？</text>
+<text id="212501">将中止升级
+您确定吗？</text>
+<text id="212502">%null%</text>
+<text id="212503">取得&lt;?itemNum?&gt;个&lt;?gdsparam@490?&gt;</text>
+<text id="212750">要执行重生吗？</text>
+<text id="212751">将中止重生
+您确定吗？</text>
+<text id="212752">请将能力值成长至原有等级</text>
+<text id="212753">%null%</text>
+<text id="212754">%null%</text>
+<text id="212755">%null%</text>
+<text id="212756">%null%</text>
+<text id="212757">%null%</text>
+<text id="212758">%null%</text>
+<text id="212759">%null%</text>
+<text id="212760">因记忆空格减少
+将移除无法记忆的法术
+要执行重生吗？</text>
+<text id="212761">已移除无法记忆的法术</text>
+<text id="221000">要将&lt;?itemNameBeforeForge?&gt;
+强化成&lt;?itemNameAfterForge?&gt;吗？</text>
+<text id="222000">要将&lt;?itemNameBeforeForge?&gt;
+质变强化成&lt;?itemNameAfterForge?&gt;吗？</text>
+<text id="223000">修理&lt;?itemName?&gt;
+需要&lt;?demandSoul?&gt;灵魂</text>
+<text id="231000">以&lt;?demandSoul?&gt;灵魂
+购买&lt;?itemName?&gt;</text>
+<text id="231001">%null%</text>
+<text id="231002">%null%</text>
+<text id="231003">%null%</text>
+<text id="231004">%null%</text>
+<text id="231005">%null%</text>
+<text id="231006">%null%</text>
+<text id="231007">%null%</text>
+<text id="231008">%null%</text>
+<text id="231009">%null%</text>
+<text id="231010">超过可持有上限的道具将被收纳</text>
+<text id="231011">%null%</text>
+<text id="231012">%null%</text>
+<text id="231013">%null%</text>
+<text id="231014">%null%</text>
+<text id="231015">%null%</text>
+<text id="231016">%null%</text>
+<text id="231017">%null%</text>
+<text id="231018">%null%</text>
+<text id="231019">%null%</text>
+<text id="231020">已超过可持有与收纳上限，无法购买</text>
+<text id="231100">已达可购买上限，无法购买</text>
+<text id="232000">以&lt;?sellSouls?&gt;灵魂
+卖出&lt;?itemName?&gt;</text>
+<text id="232001">%null%</text>
+<text id="232002">装备中的道具无法卖出</text>
+<text id="232003">无法卖出此道具</text>
+<text id="234001">骑士名簿信息读取失败</text>
+<text id="234002">%null%</text>
+<text id="234003">正在取得骑士名簿信息</text>
+<text id="234004">%null%</text>
+<text id="234005">%null%</text>
+<text id="234006">%null%</text>
+<text id="234007">%null%</text>
+<text id="234008">%null%</text>
+<text id="234009">%null%</text>
+<text id="234010">正在取得骑士信息</text>
+<text id="234011">骑士信息读取失败</text>
+<text id="235000">要开始分配吗？</text>
+<text id="235001">将中止分配
+您确定吗？</text>
+<text id="236000">使用&lt;?demandSoul?&gt;灵魂
+炼成&lt;?itemName?&gt;</text>
+<text id="236001">%null%</text>
+<text id="236002">%null%</text>
+<text id="236003">%null%</text>
+<text id="236004">%null%</text>
+<text id="236005">%null%</text>
+<text id="236006">%null%</text>
+<text id="236007">%null%</text>
+<text id="236008">%null%</text>
+<text id="236009">%null%</text>
+<text id="236010">已超过可持有上限，无法收纳炼成的道具</text>
+<text id="236011">已超过可持有与收纳上限，无法炼成</text>
+<text id="251020">装备中的道具无法被收纳</text>
+<text id="251021">无法收纳此道具</text>
+<text id="251022">%null%</text>
+<text id="251023">%null%</text>
+<text id="251024">%null%</text>
+<text id="251025">%null%</text>
+<text id="251026">%null%</text>
+<text id="251027">%null%</text>
+<text id="251028">%null%</text>
+<text id="251029">%null%</text>
+<text id="251030">已超过可收纳上限，无法收纳</text>
+<text id="251031">已超过可持有上限，无法取出</text>
+<text id="261000">没有记忆空格</text>
+<text id="261001">可用空格不足</text>
+<text id="261002">没有可以记忆法术的空格</text>
+<text id="261003">不能重复记忆法术</text>
+<text id="261004">使用此法术的必需能力值不足</text>
+<text id="261005">与可使用此法术的誓约不相符</text>
+<text id="311000">将要消除此则讯息
+您确定吗？</text>
+<text id="311001">要给此则讯息好评吗？</text>
+<text id="311002">要给此则讯息恶评吗？</text>
+<text id="321000">此内容已写成讯息</text>
+<text id="321001">将放弃目前写成的讯息
+您确定吗？</text>
+<text id="322000">此则讯息将从历史讯息中删除
+您确定吗？</text>
+<text id="334510">已超过可持有与收纳上限，
+不能持有&lt;?itemName?&gt;</text>
+<text id="334511">已超过可持有与收纳上限，
+不能全数持有&lt;?itemName?&gt;</text>
+<text id="334512">%null%</text>
+<text id="334513">%null%</text>
+<text id="334514">%null%</text>
+<text id="334515">%null%</text>
+<text id="334516">%null%</text>
+<text id="334517">%null%</text>
+<text id="334518">%null%</text>
+<text id="334519">%null%</text>
+<text id="334520">已超过可持有与收纳上限，
+无法持有部分道具</text>
+<text id="401701">&lt;?sysmsg@401701?&gt;</text>
+<text id="402001">要放弃创建中的角色，返回标题画面吗？</text>
+<text id="402002">将以此角色开始游戏，
+您确定吗？</text>
+<text id="402003">您尚未输入名字
+
+请输入名字以结束编辑</text>
+<text id="402004">角色信息保存失败</text>
+<text id="402005">%null%</text>
+<text id="402006">%null%</text>
+<text id="402007">%null%</text>
+<text id="402008">%null%</text>
+<text id="402009">%null%</text>
+<text id="402010">要放弃所编辑的内容，恢复为初始预设吗？</text>
+<text id="402011">将放弃所编辑的内容，
+您确定吗？</text>
+<text id="402012">%null%</text>
+<text id="402013">%null%</text>
+<text id="402014">%null%</text>
+<text id="402015">%null%</text>
+<text id="402016">%null%</text>
+<text id="402017">%null%</text>
+<text id="402018">%null%</text>
+<text id="402019">%null%</text>
+<text id="402020">所输入的名字包含不恰当的文字，
+无法作为角色名字使用
+
+请输入其他名字</text>
+<text id="402021">%null%</text>
+<text id="402022">%null%</text>
+<text id="402023">%null%</text>
+<text id="402024">%null%</text>
+<text id="402025">%null%</text>
+<text id="402026">%null%</text>
+<text id="402027">%null%</text>
+<text id="402028">%null%</text>
+<text id="402029">%null%</text>
+<text id="402030">变更性别后，
+会失去部分已编辑的内容
+
+您确定吗？</text>
+<text id="402101">要放弃编辑中的角色，结束重生吗？</text>
+<text id="402102">将结束编辑，执行重生
+您确定吗？</text>
+<text id="402103">%null%</text>
+<text id="402104">%null%</text>
+<text id="402105">%null%</text>
+<text id="402106">%null%</text>
+<text id="402107">%null%</text>
+<text id="402108">%null%</text>
+<text id="402109">%null%</text>
+<text id="402110">要放弃所编辑的内容，恢复为原来的状态吗？</text>
+<text id="404010">将放弃已设定的内容，回到前一个画面
+您确定吗？</text>
+<text id="406011">将以选择的角色档案开始游戏</text>
+<text id="406012">要删除选择的角色档案，
+开始新游戏吗？</text>
+<text id="406013">将删除选择的角色档案，
+您确定吗？</text>
+<text id="420000">要保存现在的外貌设定吗？</text>
+<text id="420001">要覆盖原有的外貌设定吗？</text>
+<text id="420002">要放弃编辑中的内容，
+读取外貌设定吗？</text>
+<text id="420003">不能读取不同性别的外貌</text>
+<text id="420004">将删除选择的外貌，
+您确定吗？</text>
+<text id="420005">%null%</text>
+<text id="420006">%null%</text>
+<text id="420007">%null%</text>
+<text id="420008">%null%</text>
+<text id="420009">%null%</text>
+<text id="420010">并无已保存的外貌设定</text>
+<text id="450000">要直接进入第&lt;?nextLoopCount?&gt;轮游戏吗？
+若不直接进入下一轮
+之后可以在祭祀场的营火开始第&lt;?nextLoopCount?&gt;轮游戏</text>
+<text id="450001">开始第&lt;?nextLoopCount?&gt;轮游戏后
+将无法回到现在第&lt;?loopCount?&gt;轮游戏
+您确定要开始第&lt;?nextLoopCount?&gt;轮的游戏吗？</text>
+<text id="502000">将这个灵体遣返回原来的世界吗？</text>
+<text id="502001">没有可遣返的灵体</text>
+<text id="550000">由于您重复发生多人联机时的非正当脱机
+已被隔绝与此世界的联系
+若无“白教之环，”则无法恢复联系</text>
+<text id="550100">由于您一定时间内没有动作
+已回到原来的世界</text>
+<text id="620000">将以选择的角色开始游戏
+您确定吗？</text>
+<text id="620001">要停止游玩王者遗灰吗？</text>
+</entries>
+</fmg>
