@@ -1731,6 +1731,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                             l2 = "W_AttackLeftHeavy1"
                         elseif l1 == "W_AttackLeftHeavy2" then
                             l2 = "W_AttackLeftHeavy1"
+                        elseif (sp_g == 602 or sp_g == 617 or sp_g == 628 or sp_g == 629 or sp_g == 630 or sp_g == 653) and l2 == "W_AttackLeftHeavy1" then
+                            l2 = "W_ParryLeftStart"
                         end
                     end
                 else
@@ -7816,7 +7818,6 @@ function AttackRightLight3_onUpdate() -- r13
     end
 end
 
-
 function AttackRightCounter_onUpdate()
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1SubStart", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -8426,7 +8427,9 @@ function AttackBothLight1_onUpdate()  -- r11
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
 
+    local sp_g = env(345 , HAND_LEFT)
     local offhand = "W_AttackLeftHeavy1"
+    if (sp_g == 602 or sp_g == 617 or sp_g == 628 or sp_g == 629 or sp_g == 630 or sp_g == 653 ) then offhand = "W_ParryLeftStart" end
     --local sp_o = env(345 , HAND_LEFT)
     --if sp_o == 650 then offhand = "W_AttackLeftHeavy2" end
 
