@@ -524,7 +524,7 @@ function GetSwordArtsRequest()
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100281) == TRUE) then 
+        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100278) == TRUE) then 
         else 
 
         if HAND_LEFT_BOTH <= style then
@@ -1611,12 +1611,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
         if HAND_LEFT_BOTH <= style or iT == TRUE then 
-            if (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE  and env(1116, 100282) == TRUE) or (sp_m == 171 and is_both_right == TRUE and env(1116, 100281) == TRUE)  or 
-                    (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE and env(1116, 100282) == TRUE) or (sp_o == 171 and is_both_right == FALSE and env(1116, 100281) == TRUE)    ) then 
+            if (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE  and env(1116, 100282) == TRUE) or (sp_m == 171 and is_both_right == TRUE and env(1116, 100282) == TRUE)  or 
+                    (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE and env(1116, 100282) == TRUE) or (sp_o == 171 and is_both_right == FALSE and env(1116, 100282) == TRUE)    ) then 
             else ExecEventAllBody("W_AttackBothLightKick") end
         else
-            if (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE  and env(1116, 100282) == TRUE) or (sp_m == 171 and is_both_right == TRUE and env(1116, 100281) == TRUE)  or 
-                    (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE and env(1116, 100282) == TRUE) or (sp_o == 171 and is_both_right == FALSE and env(1116, 100281) == TRUE)    ) then 
+            if (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE  and env(1116, 100282) == TRUE) or (sp_m == 171 and is_both_right == TRUE and env(1116, 100282) == TRUE)  or 
+                    (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE and env(1116, 100282) == TRUE) or (sp_o == 171 and is_both_right == FALSE and env(1116, 100282) == TRUE)    ) then 
             else ExecEventAllBody("W_AttackRightLightKick") end
         end
     elseif request == ATTACK_REQUEST_RIGHT_HEAVY then
@@ -3621,7 +3621,7 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100281) == TRUE) then 
+        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100278) == TRUE) then 
         else 
 
         if is_usechainrecover == TRUE then
@@ -3734,7 +3734,7 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100281) == TRUE) then 
+        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100278) == TRUE) then 
         else 
             
         ResetDamageCount()
@@ -4548,7 +4548,7 @@ function ExecGuardOnCancelTiming(guardcondition, blend_type)
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100281) == TRUE) then 
+        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100278) == TRUE) then 
         else 
 
     if env(243) == FALSE then
