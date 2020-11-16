@@ -1878,63 +1878,61 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         atk_hand = HAND_LEFT
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-        if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
-            blend_type = UPPER
-        end
-        ExecEventHalfBlend(Event_MagicBuffLeft, blend_type)
-    else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
+            if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then blend_type = UPPER end
+            ExecEventHalfBlend(Event_MagicBuffLeft, blend_type)
+        else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
     elseif request == SWORDARTS_REQUEST_LEFT_CROSSBOWSTEPIN then
         return FALSE
     elseif request == SWORDARTS_REQUEST_LEFT_ONESHOTFULL then
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-        atk_hand = HAND_LEFT
-        SetBaseCategory()
-        ExecEventAllBody("W_OneShotFullLeftStart")
-    else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
+            atk_hand = HAND_LEFT
+            SetBaseCategory()
+            ExecEventAllBody("W_OneShotFullLeftStart")
+        else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
     elseif request == SWORDARTS_REQUEST_LEFT_MAGICBUFFPRAY then
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-        SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, FALSE)
-        ExecEventHalfBlend(Event_MagicBuffLeft, ALLBODY)
-    else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
+            SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, FALSE)
+            ExecEventHalfBlend(Event_MagicBuffLeft, ALLBODY)
+        else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
     elseif request == SWORDARTS_REQUEST_LEFT_MAGICBUFFATTACK then
         atk_hand = HAND_LEFT
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-        local sp_kind_left = env(345 , HAND_LEFT)
-        local sp_kind_right = env(345 , HAND_RIGHT)
-        local dual = FALSE
-        local style = c_Style
-        if sp_kind_left == 265 and sp_kind_right == 265 then
-            dual = TRUE
-        end
-        if dual == TRUE and style == HAND_RIGHT then
-            if IsNodeActive("MagicBuffLeft_Upper_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffRight3")
-            elseif IsNodeActive("MagicBuffLeft2_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffRight2")
-            elseif IsNodeActive("MagicBuffLeft3_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffRight3")
-            elseif IsNodeActive("MagicBuffRight_Upper_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffLeft3")
-            elseif IsNodeActive("MagicBuffRight2_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffLeft2")
-            elseif IsNodeActive("MagicBuffRight3_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffLeft3")
-            else
-                ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
+            local sp_kind_left = env(345 , HAND_LEFT)
+            local sp_kind_right = env(345 , HAND_RIGHT)
+            local dual = FALSE
+            local style = c_Style
+            if sp_kind_left == 265 and sp_kind_right == 265 then
+                dual = TRUE
             end
-        elseif IsNodeActive("MagicBuffLeft_Upper_Selector") == TRUE then
-            ExecEventAllBody("W_MagicBuffLeft2")
-        elseif IsNodeActive("MagicBuffLeft2_Selector") == TRUE then
-            ExecEventAllBody("W_MagicBuffLeft3")
-        elseif IsNodeActive("MagicBuffLeft3_Selector") == TRUE then
-            ExecEventAllBody("W_MagicBuffLeft2")
-        else
-            ExecEventHalfBlend(Event_MagicBuffLeft, ALLBODY)
-        end
-    else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
+            if dual == TRUE and style == HAND_RIGHT then
+                if IsNodeActive("MagicBuffLeft_Upper_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffRight3")
+                elseif IsNodeActive("MagicBuffLeft2_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffRight2")
+                elseif IsNodeActive("MagicBuffLeft3_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffRight3")
+                elseif IsNodeActive("MagicBuffRight_Upper_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffLeft3")
+                elseif IsNodeActive("MagicBuffRight2_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffLeft2")
+                elseif IsNodeActive("MagicBuffRight3_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffLeft3")
+                else
+                    ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
+                end
+            elseif IsNodeActive("MagicBuffLeft_Upper_Selector") == TRUE then
+                ExecEventAllBody("W_MagicBuffLeft2")
+            elseif IsNodeActive("MagicBuffLeft2_Selector") == TRUE then
+                ExecEventAllBody("W_MagicBuffLeft3")
+            elseif IsNodeActive("MagicBuffLeft3_Selector") == TRUE then
+                ExecEventAllBody("W_MagicBuffLeft2")
+            else
+                ExecEventHalfBlend(Event_MagicBuffLeft, ALLBODY)
+            end
+    else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
     elseif request == SWORDARTS_REQUEST_RIGHT_STEPIN or request == SWORDARTS_REQUEST_LEFT_STEPIN then
         is_find_atk = FALSE
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
@@ -2125,25 +2123,28 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_CircleStepLeft", left)
             SetVariable("EnableTAE_CircleStepRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
-        if (faultyWA ~= TRUE) then
-            if IsNodeActive("CircleStepStart_Blend") == TRUE then
-                if 0 <= angle then
-                    SetVariable("CircleStepDirectionSelftrans", 1)
+            if (faultyWA ~= TRUE) then
+                if IsNodeActive("CircleStepStart_Blend") == TRUE then
+                    if 0 <= angle then
+                        SetVariable("CircleStepDirectionSelftrans", 1)
+                    else
+                        SetVariable("CircleStepDirectionSelftrans", 0)
+                    end
+                    SetVariable("CircleStepAngleSelftrans", angle)
+                    ExecEventAllBody("W_CircleStepStartSelftrans")
                 else
-                    SetVariable("CircleStepDirectionSelftrans", 0)
+                    if 0 <= angle then
+                        SetVariable("CircleStepDirection", 1)
+                    else
+                        SetVariable("CircleStepDirection", 0)
+                    end
+                    SetVariable("CircleStepAngle", angle)
+                    ExecEventAllBody("W_CircleStepStart")
                 end
-                SetVariable("CircleStepAngleSelftrans", angle)
-                ExecEventAllBody("W_CircleStepStartSelftrans")
-            else
-                if 0 <= angle then
-                    SetVariable("CircleStepDirection", 1)
-                else
-                    SetVariable("CircleStepDirection", 0)
-                end
-                SetVariable("CircleStepAngle", angle)
-                ExecEventAllBody("W_CircleStepStart")
+            else 
+                if (style == HAND_RIGHT_BOTH or style == HAND_LEFT_BOTH or style == HAND_BOTH) then ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) 
+                else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end 
             end
-        else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
         end
     elseif request == SWORDARTS_REQUEST_RIGHT_CHARGESHOT or request == SWORDARTS_REQUEST_LEFT_CHARGESHOT then
         is_find_atk = FALSE
@@ -9162,11 +9163,9 @@ function AttackBothDash_onUpdate() -- run r1
     --if (is_Uo == TRUE and specialWeaponsO == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
     --if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
 
-
     if (is_Um == TRUE and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
     if (is_Uo == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
     if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
-
 
 
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
