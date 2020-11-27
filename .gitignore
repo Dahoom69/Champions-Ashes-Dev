@@ -2,3 +2,6 @@ modengine.ini
 project.json
 *.bak
 *.dsasbak
+
+# Windows shortcuts
+*.lnk
