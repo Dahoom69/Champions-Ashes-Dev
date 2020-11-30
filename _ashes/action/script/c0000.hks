@@ -1733,6 +1733,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                             l2 = "W_AttackLeftHeavy1"
                         elseif (sp_g == 602 or sp_g == 617 or sp_g == 628 or sp_g == 629 or sp_g == 630 or sp_g == 653) and l2 == "W_AttackLeftHeavy1" then
                             l2 = "W_ParryLeftStart"
+                            -- ParryLeftStart = 23032100 
+                            -- ParryLeftStart_WepBr = 23032101
+                            -- AttackLeftHeavy1 = 617032000
                         end
                     end
                 else
