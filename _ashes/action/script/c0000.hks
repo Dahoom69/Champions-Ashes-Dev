@@ -7888,8 +7888,8 @@ function AttackRightLightDash_onUpdate() -- run r1
 
     if (   (sp_m ~= 50 and sp_m ~= 179 and sp_m ~= 232 and sp_m ~= 264 and sp_m ~= 164 and sp_m ~= 107)   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then r1 = "W_AttackRightLight2" end
 
-    if ( is_Um == TRUE  ) 
-    then r1 =  "W_AttackRightLight2" end
+    if ( is_Um == TRUE  ) then r1 =  "W_AttackRightLight2" end
+    if (GetEquipType(HAND_RIGHT, 25) and sp_m == 163) then  r1 =  "W_AttackRightLight3" end
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
@@ -7897,6 +7897,7 @@ function AttackRightLightDash_onUpdate() -- run r1
     if (sp_m == 643) then r1 = "W_AttackRightLight2" end
     if (sp_m == 643 and env(1116, 100281) == TRUE) then r1 = "W_AttackRightLight1" end
     if sp_m == 614 then r1 = "W_AttackRightHeavySpecial1Start" end
+
     
         if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return 
@@ -9164,8 +9165,12 @@ function AttackBothDash_onUpdate() -- run r1
     --if (is_Uo == TRUE and specialWeaponsO == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
     --if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
 
-    if  ((is_Um == TRUE or sp_ugsm == 163) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
-    if ((is_Uo == TRUE or sp_ugso == 163) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+    if (sp_ugsm == 163 and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+    if (sp_ugso == 163 and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+    if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight3" end
+
+    if (is_Um == TRUE and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+    if (is_Uo == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
     if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
 
 
