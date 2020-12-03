@@ -9146,10 +9146,8 @@ function AttackBothDash_onUpdate() -- run r1
     local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
     local specialWeaponsM
     local specialWeaponsO
-    if (sp_ugsm == 95 or sp_ugsm == 128 or sp_ugsm == 163 or sp_ugsm == 193) then specialWeaponsM = TRUE
-    else specialWeaponsM = FALSE end
-    if (sp_ugso == 95 or sp_ugso == 128 or sp_ugso == 163 or sp_ugso == 193) then specialWeaponsO = TRUE
-    else specialWeaponsO = FALSE end
+    if (sp_ugsm == 95 or sp_ugsm == 128 or sp_ugsm == 163 or sp_ugsm == 193) then specialWeaponsM = TRUE else specialWeaponsM = FALSE end
+    if (sp_ugso == 95 or sp_ugso == 128 or sp_ugso == 163 or sp_ugso == 193) then specialWeaponsO = TRUE else specialWeaponsO = FALSE end
 
     local is_rightHandCA = FALSE
     local is_leftHandCA = FALSE
@@ -9166,8 +9164,8 @@ function AttackBothDash_onUpdate() -- run r1
     --if (is_Uo == TRUE and specialWeaponsO == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
     --if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
 
-    if (is_Um == TRUE and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
-    if (is_Uo == TRUE and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+    if  ((is_Um == TRUE or sp_ugsm == 163) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+    if ((is_Uo == TRUE or sp_ugso == 163) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
     if (is_rightHandCA == TRUE or is_leftHandCA == TRUE)   then r1 =  "W_AttackBothLight2" end
 
 
