@@ -11195,7 +11195,12 @@ function AttackSpinStart_Upper_onUpdate()
     if env(1116, 100440) == TRUE then
         act(2001, 1.20000004768372)
     end
-    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight2", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
+
+    local sp_g = env(345 , HAND_LEFT)
+    local offhandboth = "W_AttackLeftLight2"
+    if (sp_g == 602 or sp_g == 617 or sp_g == 628 or sp_g == 629 or sp_g == 630 or sp_g == 653 ) and style == HAND_RIGHT then offhandboth = "W_ParryLeftStart" end
+
+    if SwordArtsCommonFunction(r1, r2, offhandboth, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         act(2001, 1)
         return 
     elseif env(1116, 100590) == TRUE and 0 < env(1108, ACTION_ARM_R2) and 0 < env(1001) then
