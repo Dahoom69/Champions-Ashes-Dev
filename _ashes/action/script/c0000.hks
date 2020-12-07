@@ -509,6 +509,27 @@ function GetSwordArtsInfo()
             end
         end
 
+        if (env(225, HAND_LEFT) == 33 and sp == 240 ) then 
+            arts_hand = HAND_LEFT   
+            arts_id = SWORDARTS_MAGICBUFF
+ 
+
+           -- SWORDARTS_REQUEST_LEFT_MAGICBUFF
+
+            --if arts_hand == HAND_LEFT then
+              --  if arts_id == SWORDARTS_REQUEST_RIGHT_ONESHOT then
+                --    arts_hand = HAND_RIGHT
+                  --  arts_id = env(326, HAND_RIGHT) 
+               -- elseif arts_id ~= SWORDARTS_ONESHOTFULL then
+                 --   arts_id = SWORDARTS_PARRY
+               -- end
+            --elseif arts_id == SWORDARTS_RIGHTARTS then
+              --  arts_id = SWORDARTS_PARRY
+                --arts_hand = HAND_LEFT
+            --end
+        end
+
+
     end
     return arts_id, arts_hand
 end
