@@ -9976,7 +9976,26 @@ function StepInRight_Activate()
 end
 
 function StepInRightStart_Upper_onUpdate()
-    if SwordArtsCommonFunction("W_AttackRightLight2", "W_StepInRightUppercut", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight2", "W_StepInRightUppercut", FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
+
+    local is_GH = GetEquipType(HAND_RIGHT, 35) 
+
+    local r1 = "W_AttackRightLight2"
+    local b1 = "W_AttackBothLight2"
+    local r2 = "W_StepInRightUppercut"
+
+    if is_GH == TRUE then 
+        r1 = "W_StepInRightUppercut" 
+        b1 = "W_StepInRightUppercut"
+        r2 = "W_StepInRightSlash" 
+    end
+
+    if env(1116, 100293) == TRUE then
+        r1 = "W_StepInRightDashStart" 
+        b1 = "W_StepInRightDashStart"
+        r2 = "W_OneShotNoGenTransStart" 
+    end
+
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, r2, FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
@@ -9987,7 +10006,7 @@ function StepInRightStart_Upper_onUpdate()
     end
 end
 
-function StepInRightUppercut_onUpdate()
+function StepInRightUppercut_onUpdate() -- R1
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -9999,8 +10018,20 @@ function StepInRightUppercut_onUpdate()
     end
 end
 
-function StepInRightSlash_onUpdate()
+function StepInRightSlash_onUpdate() -- R2
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+        return 
+    elseif env("アニメ終了か", 1) == TRUE then
+        SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
+        ExecEventAllBody("W_Idle")
+        return 
+    else
+        return 
+    end
+end
+
+function StepInRightDashStart_onUpdate()
+    if SwordArtsCommonFunction("W_AttackRightLight3", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
