@@ -11511,7 +11511,7 @@ function ChargeContinue_onUpdate()
 
     if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l2, "W_AttackBothLight1", b2, is_artsr1, is_artsr2, TRUE, GEN_TRANS_LFET) == TRUE then
         return 
-    elseif (sp_kind == 656 or sp_kind == 72) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then -- new
+    elseif (sp_kind == 656 or sp_kind == 72) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE or (env(1108, ACTION_ARM_L2) <= 0 and env(1116, 100280) == TRUE)   ) then -- new
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_ChargeContinue2")
         return -- new
