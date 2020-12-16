@@ -1600,6 +1600,17 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     end 
 
+    -- ==============================[ Custom Code Start ]==============================
+    -- Author: Halvard
+    -- note: Turn Great Scythe WAR2 into regular R2 when a certain effect is active
+    -- =================================================================================
+    if env(345, HAND_RIGHT) == 50 and env(1116, 101000) == TRUE then
+        r2 = "W_AttackRightHeavyKick"
+        b2 = "W_AttackBothHeavy2Start"
+        artsr2 = FALSE
+    end
+    -- ===============================[ Custom Code end ]===============================
+
     if request == ATTACK_REQUEST_RIGHT_LIGHT then
         local sp_m = env(345 , HAND_RIGHT)
         local sp_o = env(345 , HAND_LEFT)
@@ -1648,8 +1659,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
         if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
-        else 
-
+        else   
+                
         if artsr2 == TRUE then
             SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         end
@@ -1673,9 +1684,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if (iT == TRUE) then 
             ExecEventAllBody(b2)
         else  
-            ExecEventAllBody(r2) end
-
+           ExecEventAllBody(r2) end
         end
+        
     elseif request == ATTACK_REQUEST_HEAVY_KICK then
         local sp_m = env(345 , HAND_RIGHT)
         local sp_o = env(345 , HAND_LEFT)
