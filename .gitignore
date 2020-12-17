@@ -5,3 +5,6 @@ project.json
 
 # Windows shortcuts
 *.lnk
+
+# folders
+_ashes/sfx/frpg_sfxbnd_commoneffects_effect-ffxbnd-dcx
