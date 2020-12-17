@@ -331,6 +331,9 @@ function GetWeightIndex(is_move)
         end
     elseif env(305, CONDITION_TYPE_GRAVITY_WEAK) == TRUE and move_weight < MOVE_WEIGHT_HEAVY then
         move_weight = MOVE_WEIGHT_HEAVY
+    elseif env(1116, 699) == TRUE then 
+        move_weight = MOVE_WEIGHT_LIGHT
+        evasion_weight = EVASION_WEIGHT_INDEX_LIGHT
     end
     local weight = evasion_weight
     if is_move == TRUE then
@@ -3756,7 +3759,7 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         SetVariable("EnableTAE_RollingLeft", left)
         SetVariable("EnableTAE_RollingRight", right)
         AddStamina(c_StaminaCostRolling)
-        if ( weight == EVASION_WEIGHT_INDEX_LIGHT and GetVariable("IsLockon") == false )
+        if ( (weight == EVASION_WEIGHT_INDEX_LIGHT and GetVariable("IsLockon") == false) and env(1116, 699) == FALSE) 
         then ExecEventAllBody("W_BackStepSuperlight") 
         else ExecEventAllBody(event) end
     end
