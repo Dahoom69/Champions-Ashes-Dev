@@ -1541,7 +1541,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
     local ca_neverFeintToForwardR1 = env(1116, 100821) == TRUE
     local ca_neverFeintToR2 = env(1116, 100822) == TRUE
     local ca_neverFeintToForwardR2 = env(1116, 100823) == TRUE
-    local ca_neverFeintToNonSpells = env(1116, 100824) == TRUE 
+    local ca_neverFeintToNonSpells = env(1116, 100824) == TRUE
+    local ca_neverFeintForNPC = env(1116, 100825) == TRUE
     --local ca_isWaRequest = (request >= 100 and request <= 136) or (request >= 200 and request <= 236) 
     --local ca_isWaRequest = (request > 99 and request < 137) or (request > 199 and request < 237) 
     --local ca_isWaRequest = ((request >= 100) and (request <= 136)) or ((request >= 200) and (request <= 236)) 
@@ -1557,6 +1558,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
     -- logic execution
     if ca_feintWindowActive == false then
         ca_feintCounter = 0
+    elseif ca_neverFeintForNPC == true then
+        return FALSE
     elseif ca_alwaysAllowWaFeint == true and ca_isWaRequest == true then
        ca_feintCounter = ca_feintCounter 
     elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then
