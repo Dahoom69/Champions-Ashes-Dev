@@ -610,7 +610,8 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_INVALID
             elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
                 return ATTACK_REQUEST_LIGHT_KICK
-            elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE)   then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt
+            elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
+                return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt
             else
                 return ATTACK_REQUEST_BOTH_LIGHT
             end
@@ -633,7 +634,8 @@ function GetAttackRequest(is_guard)
             elseif is_crossbow == TRUE then
                 act("弓矢スロット選択", 0)
                 return ATTACK_REQUEST_RIGHT_CROSSBOW
-            elseif is_gh == TRUE and sp == 655 then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt
+            elseif is_gh == TRUE and sp == 655 then
+                return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt
             end
         elseif is_staff == TRUE then
             return ATTACK_REQUEST_INVALID
@@ -666,9 +668,8 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_ARROW_BOTH_RIGHT
             end
         elseif (     (is_unfaltering_prayer == TRUE and ( style == HAND_LEFT or style == HAND_LEFT_BOTH))   or   ((sp_c == 185 or sp_c == 127 or sp_c == 267) and style ~= HAND_LEFT_BOTH)   or  ((sp_lb == 185 or sp_lb == 127 or sp_lb == 267) and style == HAND_LEFT_BOTH)       ) then
-            if is_both == TRUE then
-                
-                return 
+            if is_both == TRUE then               
+                return ATTACK_REQUEST_INVALID
             else
                 return ATTACK_REQUEST_INVALID
             end
@@ -687,7 +688,6 @@ function GetAttackRequest(is_guard)
             end
         elseif env(1106, ACTION_ARM_HEAVY_KICK) == TRUE then
             local check_weapon = FALSE --GetEquipType(hand, WEAPON_CATEGORY_STAFF)
-
 
             if  ((check_weapon == FALSE and env(1116, 100260) == FALSE) )  then
                 return ATTACK_REQUEST_HEAVY_KICK
@@ -754,12 +754,11 @@ function GetAttackRequest(is_guard)
             elseif sp == 178 or sp == 207 or sp == 217 or sp == 220 or sp == 234 or sp == 257 or sp == 186 or sp == 20 or (is_d == TRUE and sp == 150) then
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or is_r == TRUE then
-                return  ATTACK_REQUEST_LEFT_HEAVY_SP -- ATTACK_REQUEST_LIGHT_KICK
+                return ATTACK_REQUEST_LEFT_HEAVY_SP -- ATTACK_REQUEST_LIGHT_KICK
             elseif is_sl == TRUE then 
-                return 
+                return ATTACK_REQUEST_INVALID
             elseif is_catalysts == TRUE then 
-                return 
-
+                return ATTACK_REQUEST_INVALID
             end
         end
         local is_sl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD, WEAPON_CATEGORY_LARGE_SHIELD, WEAPON_CATEGORY_TORCH)
@@ -1525,13 +1524,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         return FALSE
     end
 
-    -- ******************************************************
-    -- * Feint Limit System written by Halvard starts here. *
-    -- ******************************************************
-
-    -- initialize local variables
-
-
+    -- ==============================[ Custom Code Start ]==============================
+    -- Author: Halvard
+    -- note: Feint Limit System to prevent people from chaining feints too much
+    -- =================================================================================
+    
     local ca_feintLimitOneActive = env(1116, 100801) == TRUE 
     local ca_feintLimitTwoActive = env(1116, 100802) == TRUE
     local ca_feintLimitThreeActive = env(1116, 100803) == TRUE
@@ -1543,24 +1540,17 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
     local ca_neverFeintToForwardR2 = env(1116, 100823) == TRUE
     local ca_neverFeintToNonSpells = env(1116, 100824) == TRUE
     local ca_neverFeintForNPC = env(1116, 100825) == TRUE
-    --local ca_isWaRequest = (request >= 100 and request <= 136) or (request >= 200 and request <= 236) 
-    --local ca_isWaRequest = (request > 99 and request < 137) or (request > 199 and request < 237) 
-    --local ca_isWaRequest = ((request >= 100) and (request <= 136)) or ((request >= 200) and (request <= 236)) 
-    --local ca_isWaRequest = ((request >= 100 and request <= 136) or (request >= 200 and request <= 236)) 
-    --local ca_isWaRequest = (((request >= 100) and (request <= 136)) or ((request >= 200) and (request <= 236))) == true
-    --local ca_isWaRequest = request >= 100 and request <= 136 or request >= 200 and request <= 236
-    local ca_isWaRequest = request == 100 or request == 101 or request == 102 or request == 103 or request == 104 or request == 105 or request == 106 or request == 107 or request == 108 or request == 109 or request == 100 or request == 111 or request == 112 or request == 113 or request == 114 or request == 115 or request == 116 or request == 117 or request == 118 or request == 119 or request == 120 or request == 121 or request == 122 or request == 123 or request == 124 or request == 125 or request == 126 or request == 127 or request == 128 or request == 129 or request == 130 or request == 131 or request == 132 or request == 133 or request == 134 or request == 135 or request == 136 or request == 200 or request == 201 or request == 202 or request == 203 or request == 204 or request == 205 or request == 206 or request == 207 or request == 208 or request == 209 or request == 200 or request == 211 or request == 212 or request == 213 or request == 214 or request == 215 or request == 216 or request == 217 or request == 218 or request == 219 or request == 220 or request == 221 or request == 222 or request == 223 or request == 224 or request == 225 or request == 226 or request == 227 or request == 228 or request == 229 or request == 230 or request == 231 or request == 232 or request == 233 or request == 234 or request == 235 or request == 236
+    local ca_isWaRequest = (request >= 100 and request <= 136) or (request >= 200 and request <= 236) 
     local ca_isR1Request = request == ATTACK_REQUEST_RIGHT_LIGHT or request == ATTACK_REQUEST_BOTH_LIGHT
     local ca_isForwardR1Request = request == ATTACK_REQUEST_LIGHT_KICK 
     local ca_isR2Request = request == ATTACK_REQUEST_RIGHT_HEAVY or request == ATTACK_REQUEST_BOTH_HEAVY
     local ca_isForwardR2Request = request == ATTACK_REQUEST_HEAVY_KICK
     
-    -- logic execution
     if ca_feintWindowActive == false then
         ca_feintCounter = 0
-    elseif ca_neverFeintForNPC == true then
+    elseif ca_neverFeintForNPC then
         return FALSE
-    elseif ca_alwaysAllowWaFeint == true and ca_isWaRequest == true then
+    elseif ca_alwaysAllowWaFeint and ca_isWaRequest then
        ca_feintCounter = ca_feintCounter 
     elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then
         return FALSE
@@ -1568,23 +1558,20 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         return FALSE
     elseif ca_feintLimitThreeActive and ca_feintCounter >= 3 then
         return FALSE
-    elseif ca_neverFeintToR1 == true and ca_isR1Request == true then
+    elseif ca_neverFeintToR1 and ca_isR1Request then
        return FALSE
-    elseif ca_neverFeintToForwardR1 == true and ca_isForwardR1Request == true then
+    elseif ca_neverFeintToForwardR1 and ca_isForwardR1Request then
         return FALSE
-    elseif ca_neverFeintToR2 == true and ca_isR2Request == true then
+    elseif ca_neverFeintToR2 and ca_isR2Request then
         return FALSE
-    elseif ca_neverFeintToForwardR2 == true and ca_isForwardR2Request == true then
+    elseif ca_neverFeintToForwardR2 and ca_isForwardR2Request then
         return FALSE
-    elseif ca_neverFeintToNonSpells == true then
+    elseif ca_neverFeintToNonSpells then
         return FALSE
     else 
         ca_feintCounter = ca_feintCounter + 1
-    end
-    
-    -- *************************
-    -- * End of the feint code *
-    -- *************************
+    end  
+    -- ===============================[ Custom Code end ]===============================
 
     local style = c_Style
     local atk_hand = HAND_RIGHT
@@ -2699,17 +2686,16 @@ function ExecMagic(quick_type, blend_type)
         return FALSE
     end
 
-    -- ******************************************************
-    -- * Feint Limit System written by Halvard starts here. *
-    -- ******************************************************
+    -- ==============================[ Custom Code Start ]==============================
+    -- Author: Halvard
+    -- note: Spell Feint Limit System to prevent people from chaining feints too much
+    -- =================================================================================
 
-    -- initialize local variables
     local ca_feintLimitOneActive = env(1116, 100801) == TRUE
     local ca_feintLimitTwoActive = env(1116, 100802) == TRUE
     local ca_feintLimitThreeActive = env(1116, 100803) == TRUE
     local ca_feintWindowActive = ca_feintLimitOneActive or ca_feintLimitTwoActive or ca_feintLimitThreeActive
     
-    -- logic execution
     if ca_feintWindowActive == false then
         ca_feintCounter = 0
     elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then
@@ -2721,10 +2707,7 @@ function ExecMagic(quick_type, blend_type)
     else 
         ca_feintCounter = ca_feintCounter + 1
     end
-
-    -- *************************
-    -- * End of the feint code *
-    -- *************************
+    -- ===============================[ Custom Code end ]===============================
 
     if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
         blend_type = UPPER
