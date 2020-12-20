@@ -9993,14 +9993,22 @@ function StepInRight_Activate()
 end
 
 function StepInRightStart_Upper_onUpdate()
-
-    local is_GH = GetEquipType(HAND_RIGHT, 35) 
-
+   
     local r1 = "W_AttackRightLight2"
     local b1 = "W_AttackBothLight2"
     local r2 = "W_StepInRightUppercut"
 
-    if is_GH == TRUE then 
+    local is_GHm = GetEquipType(HAND_RIGHT, 35) -- dragon tooth
+    local is_GHo = GetEquipType(HAND_LEFT, 35)
+    local is_rightHandCA = FALSE
+    local is_leftHandCA = FALSE
+    local is_both_left = FALSE
+    if c_Style == HAND_LEFT_BOTH then is_both_left = TRUE end
+
+    if (is_GHm == TRUE and is_both_left == FALSE ) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+    if (is_GHo == TRUE and is_both_left == TRUE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+
+    if is_rightHandCA == TRUE or is_leftHandCA == TRUE then 
         r1 = "W_StepInRightUppercut" 
         b1 = "W_StepInRightUppercut"
         r2 = "W_StepInRightSlash" 
