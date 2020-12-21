@@ -8856,7 +8856,8 @@ function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
     local b1 = "W_AttackBothLight1"
     local l1 = "W_AttackBothLeft1"
     local hand = HAND_RIGHT
-    if env(345 , hand) == 264 or env(345 , hand) == 164 or env(345 , hand) == 614  then b1 = "W_AttackBothLight2" end
+    if env(345 , hand) == 264 then b1 = "W_AttackBothLight3" end
+    if env(345 , hand) == 164 or env(345 , hand) == 614  then b1 = "W_AttackBothLight2" end
     if env(345 , hand) == 643 then b1 = "W_AttackBothLight2" l1 = "W_AttackBothLeft2" end
     
     if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
@@ -8877,7 +8878,8 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge
     local b1 = "W_AttackBothLight1"
     local l1 = "W_AttackBothLeft1"
     local hand = HAND_RIGHT
-    if env(345 , hand) == 264 or env(345 , hand) == 164 or env(345 , hand) == 614  then b1 = "W_AttackBothLight2" end
+    if env(345 , hand) == 264 then b1 = "W_AttackBothLight3" end
+    if env(345 , hand) == 164 or env(345 , hand) == 614  then b1 = "W_AttackBothLight2" end
     if env(345 , hand) == 643 then b1 = "W_AttackBothLight2" end
 
     act("特殊補間設定", 0, FALSE)
