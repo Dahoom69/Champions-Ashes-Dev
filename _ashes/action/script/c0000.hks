@@ -3261,10 +3261,9 @@ function ExecItem(quick_type, blend_type)
                 ResetRequest()
                 return FALSE
             end
-            ExecEventHalfBlend(Event_DragonHeadStartAfterLVL2, blend_type)
-        else
-           -- ExecEventHalfBlend(Event_DragonHeadStartBefore, blend_type)
-            ExecEventHalfBlend(Event_ItemShockWeaveStart, blend_type)
+            ExecEventHalfBlend(Event_DragonHeadStartAfterLVL2, blend_type) -- twinkling dragon head
+        else            
+            ExecEventHalfBlend(Event_DragonHeadEndBefore, blend_type)
         end
     elseif item_type == ITEM_DRAGONFULLLVL2 then
         if env(305, CONDITION_TYPE_DRAGONFULL) == TRUE then
@@ -3275,8 +3274,7 @@ function ExecItem(quick_type, blend_type)
             AddStamina(-100)
             ExecEventHalfBlend(Event_DragonFullStartAfterLVL2, blend_type)
         else
-            --ExecEventHalfBlend(Event_DragonFullStartBefore, blend_type)
-            ExecEventHalfBlend(Event_ItemShockWeaveEnd, blend_type)
+            ExecEventHalfBlend(Event_DragonFullEndBefore, blend_type) -- twinkling dragon body
         end
     elseif item_type == ITEM_OLDMONK then
         ExecEventHalfBlend(Event_ItemOldMonk, blend_type)
@@ -13140,13 +13138,13 @@ function ItemDrinkStart_Upper_onUpdate()
     end
 end
 
-function DragonHeadStartBefore_Upper_onUpdate()
+function DragonHeadStartBefore_Upper_onUpdate() -- dragon head
     local blend_type, lower_state = GetHalfBlendInfo()
     if ItemCommonFunction(blend_type) == TRUE then
         return 
-    elseif env("アニメ終了か", 1) == TRUE then
-        ExecEventHalfBlendNoReset(Event_DragonHeadEndBefore, blend_type)
-        return 
+    --elseif env("アニメ終了か", 1) == TRUE then
+      --  ExecEventHalfBlendNoReset(Event_DragonHeadEndBefore, blend_type)
+      --  return 
     elseif HalfBlendLowerCommonFunction(Event_DragonHeadStartBefore, lower_state, FALSE, FALSE) == TRUE then
         return 
     else
@@ -13154,7 +13152,7 @@ function DragonHeadStartBefore_Upper_onUpdate()
     end
 end
 
-function DragonHeadEndBefore_Upper_onUpdate()
+function DragonHeadEndBefore_Upper_onUpdate() -- twinkling dragon head
     local blend_type, lower_state = GetHalfBlendInfo()
     if ItemCommonFunction(blend_type) == TRUE then
         return 
@@ -13273,9 +13271,9 @@ function DragonFullStartBefore_Upper_onUpdate()
     local blend_type, lower_state = GetHalfBlendInfo()
     if ItemCommonFunction(blend_type) == TRUE then
         return 
-    elseif env("アニメ終了か", 1) == TRUE then
-        ExecEventHalfBlendNoReset(Event_DragonFullEndBefore, blend_type)
-        return 
+   -- elseif env("アニメ終了か", 1) == TRUE then
+     --   ExecEventHalfBlendNoReset(Event_DragonFullEndBefore, blend_type)
+       -- return 
     elseif HalfBlendLowerCommonFunction(Event_DragonFullStartBefore, lower_state, FALSE, FALSE) == TRUE then
         return 
     else
