@@ -9,3 +9,5 @@ project.json
 # folders
 _ashes/sfx/frpg_sfxbnd_commoneffects_effect-ffxbnd-dcx
 _ashes/menu/01_common-tpf-dcx
+_ashes/msg/engus/item_dlc2-msgbnd-dcx
+_ashes/msg/engus/menu_dlc2-msgbnd-dcx
