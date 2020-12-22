@@ -7906,6 +7906,7 @@ function AttackRightLightStep_onUpdate() -- roll r1
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 264 or sp_m == 164 or sp_m == 643 or sp_m == 614 then r1 = "W_AttackRightLight2" end
+    if (sp_m == 642) then r2 = "W_AttackRightHeavy2Start" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
@@ -8033,13 +8034,14 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end
     if (env(345 , HAND_RIGHT) ~= 624) then iT = FALSE end
     local sp_m = env(345 , HAND_RIGHT)
     local r1 = "W_AttackRightLight1"
+    local r2 = "W_AttackRightHeavy2Start"
     if sp_m == 643 then r1 = "W_AttackRightLight1" end
 
     if sp_m == 614 then r1 = "W_AttackRightHeavySpecial1Start" end
-    local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 642 then r2 = "W_AttackRightHeavy1SubStart" end
 
-    if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -8261,13 +8263,15 @@ end
 
 function AttackRightHeavyKickSpecial_onUpdate() -- run r2
     local r1 = "W_AttackRightLight1"
+    local r2 = "W_AttackRightHeavy2Start"
     if i1BB == TRUE then r1 = "W_AttackRightLight1" end
     
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 then r1 = "W_AttackRightLight2" end
     if sp_m == 164 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 614 then r1 = "W_AttackRightHeavySpecial1Start" end
-    if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
         return 
