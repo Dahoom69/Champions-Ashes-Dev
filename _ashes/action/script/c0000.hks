@@ -7741,13 +7741,13 @@ function AttackRightLight1_onUpdate() -- r11
     local r2 = "W_AttackRightHeavy1SubStart"
     local sp_m = env(345 , HAND_RIGHT)
     if GetEquipType(HAND_RIGHT, 20, 23, 26, 27, 29, 30, 35, 36, 38, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 137 or sp_m == 43 then r2 = "W_AttackRightHeavy2Start" end
-    if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 55 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 50 or sp_m == 232 or i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
+    if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 55 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 112 or sp_m == 50 or sp_m == 232 or i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
     -- applied to:
     -- dagger, SS, bks, mlgs, ugs, fast cs, cgs, rapier, katana, axe, GH, spear, glaive, whip, fist and claw
     
     -- added exceptions for:
-    -- dark sword, hollowslayer, lothric knight ss, gs, skss, heavy cs, dancer, old wolf, black blade and bloodlust, ledo, GL, scythe, friede, BB weapons
+    -- dark sword, hollowslayer, lothric knight ss, skss, heavy cs, dancer, old wolf, black blade and bloodlust, ledo, GL, bkg, scythe, friede, BB weapons
 
     local sp_o = env(345 , HAND_LEFT)
     local leftoffhand = "W_AttackLeftHeavy1"
@@ -7843,13 +7843,13 @@ function AttackRightLight3_onUpdate() -- r13
     local r2 = "W_AttackRightHeavy1SubStart"
     local sp_m = env(345 , HAND_RIGHT)
     if GetEquipType(HAND_RIGHT, 20, 23, 26, 27, 29, 30, 35, 36, 38, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 137 or sp_m == 43 then r2 = "W_AttackRightHeavy2Start" end
-    if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 55 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 50 or sp_m == 232 or i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
+    if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 55 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 112 or sp_m == 50 or sp_m == 232 or i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
     -- applied to:
     -- dagger, SS, bks, mlgs, ugs, fast cs, cgs, rapier, katana, axe, GH, spear, glaive, whip, fist and claw
     
     -- added exceptions for:
-    -- dark sword, hollowslayer, lothric knight ss, gs, skss, heavy cs, dancer, old wolf, black blade and bloodlust, ledo, GL, scythe, friede, BB weapons
+    -- dark sword, hollowslayer, lothric knight ss, gs, skss, heavy cs, dancer, old wolf, black blade and bloodlust, ledo, GL, bkg, scythe, friede, BB weapons
     
     local sp_o = env(345 , HAND_LEFT)
     local leftoffhand = "W_AttackLeftHeavy1"
