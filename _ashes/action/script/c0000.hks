@@ -8621,7 +8621,6 @@ function AttackBothLight3_onUpdate()  -- r13
     -- added exceptions for:
     -- dark sword, hollowslayer, lothric knight ss, old wolf, ledo, GL, whip, BB weapons
 
-    local sp_m = env(345 , HAND_RIGHT)
     local l1 = "W_AttackBothLeft2"
     if sp_m == 613  then l1 = "W_AttackBothLeft2" end
 
