@@ -6957,6 +6957,10 @@ function BackStep_onUpdate()
         --br2 = "W_AttackBothLightStepSpecial"
     --end
 
+
+    rr2 = "W_CrossbowStepInFire"    
+    br2 = "W_CrossbowStepInReload"
+
     if i1BB == TRUE then 
         rr1 = "W_AttackRightLightDashSpecial" 
         br1 = "W_AttackBothDashSpecial"
@@ -7008,7 +7012,6 @@ function BackStep_onUpdate()
 
     if (env(345 , HAND_RIGHT) == 624) then br2 = "W_AttackBothHeavy2Start" end
 
--- if GetEquipType(HAND_RIGHT, 26) == TRUE then  --  br2 = "W_StrongBashRight" -- end
 
     if EvasionCommonFunction(FALL_TYPE_DEFAULT, rr1, rr2, ll1, lh1, br1, br2) == TRUE then
         return 
