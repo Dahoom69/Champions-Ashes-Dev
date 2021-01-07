@@ -7008,6 +7008,8 @@ function BackStep_onUpdate()
 
     if (env(345 , HAND_RIGHT) == 624) then br2 = "W_AttackBothHeavy2Start" end
 
+-- if GetEquipType(HAND_RIGHT, 26) == TRUE then  --  br2 = "W_StrongBashRight" -- end
+
     if EvasionCommonFunction(FALL_TYPE_DEFAULT, rr1, rr2, ll1, lh1, br1, br2) == TRUE then
         return 
     else
