@@ -6957,9 +6957,19 @@ function BackStep_onUpdate()
         --br2 = "W_AttackBothLightStepSpecial"
     --end
 
+    local hand = HAND_RIGHT
 
-    rr2 = "W_CrossbowStepInFire"    
-    br2 = "W_CrossbowStepInReload"
+    if style == HAND_LEFT_BOTH then
+        hand = HAND_LEFT
+    end
+
+    local is_m = GetEquipType(hand, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 41) 
+
+    if is_m == TRUE then 
+        rr2 = "W_CrossbowStepInFire"    
+        br2 = "W_CrossbowStepInReload"
+    end
+
 
     if i1BB == TRUE then 
         rr1 = "W_AttackRightLightDashSpecial" 
