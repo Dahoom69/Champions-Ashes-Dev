@@ -897,8 +897,8 @@ function SetEvasionStaminaCost()
         c_StaminaCostBackStep = -11
         c_StaminaCostJump = -16
     elseif weight == WEIGHT_HEAVY then
-        c_StaminaCostRolling = -16
-        c_StaminaCostBackStep = -11
+        c_StaminaCostRolling = -20
+        c_StaminaCostBackStep = -14
         c_StaminaCostJump = -16
     elseif weight == WEIGHT_OVERWEIGHT then
         c_StaminaCostRolling = -26
