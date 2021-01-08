@@ -6965,6 +6965,7 @@ function BackStep_onUpdate()
 
     local is_m = GetEquipType(hand, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42) 
     if is_m == TRUE then rr2 = "W_CrossbowStepInFire" br2 = "W_CrossbowStepInReload" end
+    if IsDualBlade() == TRUE then br2 = "W_CrossbowStepInFire" end
     if (env(345 , hand) == 43) then rr2 = "W_AttackRightHeavy1Start" br2 = "W_AttackBothHeavy1Start" end
 
     if i1BB == TRUE then 
