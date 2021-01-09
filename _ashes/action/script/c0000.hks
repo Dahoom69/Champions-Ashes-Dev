@@ -1,4 +1,4 @@
-﻿-- All custom edits are made by Angeluso
+-- All custom edits are made by Angeluso
 -- Do NOT copy from this file and publicize without permission 
 
 function ExecEvent(state)
@@ -308,6 +308,7 @@ function GetWeightIndex(is_move)
     elseif move_id == WEIGHT_HEAVY or move_id == WEIGHT_HEAVY + 20 or move_id == WEIGHT_HEAVY + 40 or move_id == WEIGHT_HEAVY + 60 then
         move_weight = MOVE_WEIGHT_HEAVY
         evasion_weight = EVASION_WEIGHT_INDEX_HEAVY
+        act(2002, 660)
     elseif move_id == WEIGHT_OVERWEIGHT or move_id == WEIGHT_OVERWEIGHT + 20 or move_id == WEIGHT_OVERWEIGHT + 40 or move_id == WEIGHT_OVERWEIGHT + 60 then
         move_weight = MOVE_WEIGHT_HEAVY
         evasion_weight = EVASION_WEIGHT_INDEX_OVERWEIGHT
@@ -4985,6 +4986,8 @@ function ExecSlide()
 end
 
 function IdleCommonFunction()
+    if env(257) == WEIGHT_HEAVY or move_id == WEIGHT_HEAVY + 20 or move_id == WEIGHT_HEAVY + 40 or move_id == WEIGHT_HEAVY + 60 then act(2002, 660) end
+        
     --local LeftWeaponSP = env(345 , HAND_LEFT) -- gunz
     --local AltWepMotionIndex = 17
 
