@@ -976,7 +976,7 @@ function SetSwordArtsPointInfo(button, is_point_consume)
             local sp_kind_L = env(345 , HAND_LEFT)
             local sp_kind_R = env(345 , HAND_RIGHT)
             local style = c_Style
-            if sp_kind_L == 265 and sp_kind_R == 265 then
+            if (sp_kind_L == 265 or sp_kind_L == 665) and (sp_kind_R == 265 or sp_kind_R == 665) then
                 DebugPrint(1, style)
                 if style == HAND_BOTH or style == HAND_LEFT_BOTH or style == HAND_RIGHT_BOTH then
                     val = "IsEnoughArtPointsL2_2"
@@ -1951,7 +1951,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             local sp_kind_right = env(345 , HAND_RIGHT)
             local dual = FALSE
             local style = c_Style
-            if sp_kind_left == 265 and sp_kind_right == 265 then
+            if (sp_kind_left == 265 or sp_kind_left == 665) and (sp_kind_right == 265 or sp_kind_right == 665) then
                 dual = TRUE
             end
             if dual == TRUE and style == HAND_RIGHT then
@@ -2067,7 +2067,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local sp_kind_right = env(345 , HAND_RIGHT)
         local dual = FALSE
         local style = c_Style
-        if sp_kind_left == 265 and sp_kind_right == 265 then
+        if (sp_kind_left == 265 or sp_kind_left == 665) and (sp_kind_right == 265 or sp_kind_right == 665) then
             dual = TRUE
         end
         if dual == TRUE and style == HAND_RIGHT then
