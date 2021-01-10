@@ -4986,7 +4986,6 @@ function ExecSlide()
 end
 
 function IdleCommonFunction()
-    if env(257) == WEIGHT_HEAVY or move_id == WEIGHT_HEAVY + 20 or move_id == WEIGHT_HEAVY + 40 or move_id == WEIGHT_HEAVY + 60 then act(2002, 660) end
         
     --local LeftWeaponSP = env(345 , HAND_LEFT) -- gunz
     --local AltWepMotionIndex = 17
