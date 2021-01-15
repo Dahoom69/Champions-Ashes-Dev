@@ -4520,6 +4520,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
             return TRUE
         end
     elseif damage_level == DAMAGE_LEVEL_EXLARGE then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_LARGE_BLOW)
@@ -4527,6 +4534,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         Replanning()
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_EX_BLAST then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_LARGE_BLOW)
         ExecEventAllBody("W_DamageExBlast")
@@ -4540,6 +4554,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         Replanning()
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_SMALL_BLOW then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_SMALL_BLOW)
@@ -4547,6 +4568,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         Replanning()
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_UPPER then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_LARGE_BLOW)
@@ -4557,6 +4585,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
         return FALSE
     elseif damage_level == DAMAGE_LEVEL_FLING then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_FLING)
@@ -6960,6 +6995,12 @@ function BackStep_onUpdate()
     if IsDualBlade() == TRUE then br2 = "W_CrossbowStepInFire" end
     if (env(345 , hand) == 43) then rr2 = "W_AttackRightHeavy1Start" br2 = "W_AttackBothHeavy1Start" end
 
+    local is_both_right = FALSE
+    if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
+
+    local catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF)
+    if catalysto == TRUE and is_both_right == FALSE then br2 = "W_AttackBothHeavy1Start" end
+
     if i1BB == TRUE then 
         rr1 = "W_AttackRightLightDashSpecial" 
         br1 = "W_AttackBothDashSpecial"
@@ -9037,8 +9078,11 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
 
         if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
         if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and ((GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176)) then  b1 =  "W_AttackBothLight1" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179) then  b1 =  "W_AttackBothLight2" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE) then  b1 =  "W_AttackBothLight3" end
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
+
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
         
         if sp_m == 614 then b1 =  "W_AttackBothLight2" end
         if (sp_m == 643) then b1 = "W_AttackBothLight2" 
@@ -9082,8 +9126,11 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176) then  b1 =  "W_AttackBothLight1" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 51 or sp_m == 179 then  b1 =  "W_AttackBothLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 42) == TRUE) then  b1 =  "W_AttackBothLight3" end
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
+
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
     
     if (sp_m == 605) then 
         r1 = "W_AttackBothLight2" 
