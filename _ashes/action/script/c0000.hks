@@ -4520,6 +4520,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
             return TRUE
         end
     elseif damage_level == DAMAGE_LEVEL_EXLARGE then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_LARGE_BLOW)
@@ -4527,6 +4534,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         Replanning()
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_EX_BLAST then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_LARGE_BLOW)
         ExecEventAllBody("W_DamageExBlast")
@@ -4540,6 +4554,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         Replanning()
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_SMALL_BLOW then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_SMALL_BLOW)
@@ -4547,6 +4568,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         Replanning()
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_UPPER then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_LARGE_BLOW)
@@ -4557,6 +4585,13 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
         return FALSE
     elseif damage_level == DAMAGE_LEVEL_FLING then
+        -- Insert start: poise resisted throws by halvard
+        if (env(334, 2) == TRUE and env(329) == FALSE) then
+            damage_level = DAMAGE_LEVEL_NONE
+            ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
+            return FALSE
+        end
+        -- Insert end
         ResetDamageCount()
         SetVariable("DamageDirection", damage_angle)
         act(141, DAMAGE_FLAG_FLING)
