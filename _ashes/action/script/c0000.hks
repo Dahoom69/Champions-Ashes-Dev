@@ -6995,6 +6995,14 @@ function BackStep_onUpdate()
     if IsDualBlade() == TRUE then br2 = "W_CrossbowStepInFire" end
     if (env(345 , hand) == 43) then rr2 = "W_AttackRightHeavy1Start" br2 = "W_AttackBothHeavy1Start" end
 
+    local is_both = FALSE
+    local is_both_right = FALSE
+    if HAND_LEFT_BOTH <= c_Style then is_both = TRUE end
+    if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
+
+    local catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF)
+    if catalysto == TRUE and is_both_right == FALSE then br2 = "W_AttackBothHeavy1Start" end
+
     if i1BB == TRUE then 
         rr1 = "W_AttackRightLightDashSpecial" 
         br1 = "W_AttackBothDashSpecial"
