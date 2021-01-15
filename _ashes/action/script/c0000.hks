@@ -9072,8 +9072,11 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
 
         if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
         if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and ((GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176)) then  b1 =  "W_AttackBothLight1" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179) then  b1 =  "W_AttackBothLight2" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE) then  b1 =  "W_AttackBothLight3" end
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
+
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
+        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
         
         if sp_m == 614 then b1 =  "W_AttackBothLight2" end
         if (sp_m == 643) then b1 = "W_AttackBothLight2" 
@@ -9117,8 +9120,11 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176) then  b1 =  "W_AttackBothLight1" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 51 or sp_m == 179 then  b1 =  "W_AttackBothLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 42) == TRUE) then  b1 =  "W_AttackBothLight3" end
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
+
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
+    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
     
     if (sp_m == 605) then 
         r1 = "W_AttackBothLight2" 
