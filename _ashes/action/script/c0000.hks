@@ -8444,7 +8444,7 @@ function AttackLeftHeavy1_onUpdate()
         iG = TRUE
     end
 
-    if GetEquipType(HAND_LEFT, 48) == TRUE then r1 = "W_AttackRightLight2" end
+    if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight3" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
@@ -8481,6 +8481,8 @@ function AttackLeftHeavy2_onUpdate()
         l1 = "W_AttackLeftHeavy1" 
         iG = TRUE
     end
+
+    if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp3" end
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
@@ -8528,6 +8530,8 @@ function AttackLeftHeavy3_onUpdate()
     if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 651 or sp_o == 652 or sp_o == 653) then 
         l1 = "W_AttackLeftHeavy1" 
     end
+
+    if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
 
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
