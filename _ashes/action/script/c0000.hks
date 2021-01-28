@@ -7815,6 +7815,8 @@ function AttackRightLight1_onUpdate() -- r11
     local is_Ro = GetEquipType(HAND_LEFT, 27) 
     if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
+    if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
+
 
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -7864,6 +7866,7 @@ function AttackRightLight2_onUpdate() -- r12
 
 
     if (sp_m == 654) then r1 = "W_AttackRightLight1" end
+    if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -7924,6 +7927,7 @@ function AttackRightLight3_onUpdate() -- r13
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
 
     if (sp_m == 643) then r2 = "W_AttackRightHeavy2Start" end
+    if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
 
         if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return 
@@ -8440,7 +8444,7 @@ function AttackLeftHeavy1_onUpdate()
         iG = TRUE
     end
 
-
+    if GetEquipType(HAND_LEFT, 48) == TRUE then r1 = "W_AttackRightLight2" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
