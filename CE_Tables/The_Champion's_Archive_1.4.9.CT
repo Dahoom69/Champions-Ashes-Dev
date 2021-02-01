@@ -8,7 +8,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - Ashes 1.4.8 - 25/12/2020"</Description>
+      <Description>"Open -The Champion's Archive 1.4.9"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -1047,7 +1047,8 @@ if syntaxcheck then return end
 
 [ENABLE]
 disableMemrec(memrec)
-showText([[
+showText([[ Who the fuck gave this to you?
+
                               Dark Souls III Cheat Engine Table
                     By Phokz / Pox911 / Zanzer / Zullie the Witch
 
@@ -1111,8 +1112,6 @@ weapon level into account (works with +5 weapons too)
 
 Mass ItemGib: Spawns all items of a category at once Will also include max weapon upgrade,
 also includes an option for infusions but it wont affect shields or unique weapons.
-
-Max Weapon Level: Change this to 10 and itemGib will spawn weapons as such, (also needs to be 10 for matchmaking)
 
 Upgrades Need No Materials: Remove requirement for item upgrading
 
@@ -1289,14 +1288,13 @@ Champion Ashes table contributors
 ----------------------
 liar: getting new item ids
 Bladesinger: first person to add them to itemGib
-Gáté: Cycling Tears
 Rayan(Dahoom): Table host since update 1.4.3
 James: Helping figure out some of the complicated stuff
 
 
 Mini Ashes Changelog (Current patch only):
 
-Added: 1.4.8 items, updated FAQ, Made PhantomParam Helper a little bit easier to use (still not optimal).
+Added: Amygdalan Arm, both humanity heads are hidden inside itemGib, updated FAQ a lot, Added PhantomParam Helper.
 
 ]])
 
@@ -1592,7 +1590,6 @@ I1:patch4Byte(0x0,103520000) --Reference ID: Vanilla Tears ID.
 I1:refCategory(2) --Reference Category: SpEffect
 I1:patchByte(0x44,95) --Enabling use of and unlimited use of item
 I1:isUse(1) --Also enabling use.
-I1:goodsUseAnim (16) --The Bundle animation
 
 local I2 = SpEffectParam:new("OK",103520100) --Vanilla Tears Child ID (Stateinfo linked)
 I2:replaceSpEffectId(41) --On death, apply: PREFERABLY an unused SpEffectParam ID...
@@ -1628,7 +1625,6 @@ P1:iconId (173)
 P1:refId (220)
 P1:refCategory (1)
 P1:isConsume (0)
-P1:goodsUseAnim (16)
 
 local P2 = SpEffectParam:new("PvPenny",3000)
 P2:changeMpRate (-100)
@@ -1703,919 +1699,33 @@ paramUtils:restore("NoConsume")
                   </CheatEntries>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>1337159021</ID>
-                  <Description>"Misc"</Description>
-                  <Options moHideChildren="1"/>
-                  <LastState Value="" RealAddress="00000000"/>
-                  <Color>000040</Color>
-                  <GroupHeader>1</GroupHeader>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>1337159061</ID>
-                      <Description>"Usefull NPC menus"</Description>
-                      <Options moHideChildren="1"/>
-                      <LastState Value="" RealAddress="00000000"/>
-                      <Color>000040</Color>
-                      <GroupHeader>1</GroupHeader>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>1337159066</ID>
-                          <Description>"Level Up"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>[ENABLE]
-alloc(FirekeeperMenu,100,DarkSoulsIII.exe)
-createthread(FirekeeperMenu)
-
-FirekeeperMenu:
-sub rsp,48
-lea rcx,[rsp+28]
-call DarkSoulsIII.exe+BE21F0 //BE0700
-add rsp,48
-ret
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-dealloc(FirekeeperMenu)
-</AssemblerScript>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337159063</ID>
-                          <Description>"Attune Spell"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>[ENABLE]
-alloc(BonfireAttuneSpell,100,DarkSoulsIII.exe)
-createthread(BonfireAttuneSpell)
-
-BonfireAttuneSpell:
-sub rsp,48
-lea rcx,[rsp+28]
-call DarkSoulsIII.exe+BE1E00
-add rsp,48
-ret
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-dealloc(BonfireAttuneSpell)
-</AssemblerScript>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337159064</ID>
-                          <Description>"Organize Storage Box"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>[ENABLE]
-alloc(BonfireStorageBox,100,DarkSoulsIII.exe)
-createthread(BonfireStorageBox)
-
-BonfireStorageBox:
-sub rsp,48
-lea rcx,[rsp+28]
-call DarkSoulsIII.exe+BE2440
-add rsp,48
-ret
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-dealloc(BonfireStorageBox)
-</AssemblerScript>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337159065</ID>
-                          <Description>"Undead Match"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>//Thanks to Luke_Yui for message box
-[ENABLE]
-alloc(BonfireUndeadMatch,100,DarkSoulsIII.exe)
-createthread(BonfireUndeadMatch)
-
-label(Error)
-alloc(ErrorText,128)
-
-BonfireUndeadMatch:
-sub rsp,48
-mov rcx,[CSDlc]
-cmp word ptr [rcx+11],0
-jle short Error
-lea rcx,[rsp+28]
-call DarkSoulsIII.exe+BE1F50
-add rsp,48
-ret
-
-Error:
-lea rax,[ErrorText]
-mov [rsp+30],rax
-lea rcx,[rsp+30]
-call DarkSoulsIII.exe+75BC70
-add rsp,48
-ret
-
-ErrorText:
-dw 'Missing License: Ashes of Ariandel',A
-dw 'Missing License: The Ringed City',0
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-dealloc(BonfireUndeadMatch)
-dealloc(ErrorText)
-</AssemblerScript>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337159067</ID>
-                          <Description>"Allot Estus"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>[ENABLE]
-alloc(BsmAllotEstus,100,DarkSoulsIII.exe)
-createthread(BsmAllotEstus)
-
-BsmAllotEstus:
-sub rsp,48
-lea rcx,[rsp+28]
-call DarkSoulsIII.exe+BE0900
-add rsp,48
-ret
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-dealloc(BsmAllotEstus)
-</AssemblerScript>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337159069</ID>
-                          <Description>"Reallocate stats"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>//Author: ametalon
-[ENABLE]
-alloc(free_stats_realloc,100,DarkSoulsIII.exe)
-createthread(free_stats_realloc)
-
-free_stats_realloc:
-sub rsp,48
-lea rcx,[rsp+28]
-call 140BE25F0
-add rsp,48
-ret
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-
-[DISABLE]
-dealloc(free_stats_realloc)
-
-</AssemblerScript>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337159068</ID>
-                          <Description>"Alter Appearance"</Description>
-                          <LastState/>
-                          <Color>000040</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>[ENABLE]
-alloc(alter_appearance,100,DarkSoulsIII.exe)
-createthread(alter_appearance)
-
-alter_appearance:
-sub rsp,48
-lea rcx,[rsp+28]
-call DarkSoulsIII.exe+BE0610
-add rsp,48
-ret
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-
-[DISABLE]
-dealloc(alter_appearance)
-</AssemblerScript>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337097681</ID>
-                      <Description>"Lighting mod (aka: VFX Shader)"</Description>
-                      <Options moHideChildren="1"/>
-                      <LastState/>
-                      <Color>000040</Color>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>//Author: inuNorii
-//Lets you mess with the lighting
-//reverse engineered from a publically available DLL
-//do not use this without watchdog, you will most likely get banned
-[ENABLE]
-alloc(LightingMod,$100,"DarkSoulsIII.exe"+629C7D)
-alloc(BrightnessMod,4)
-registerSymbol(BrightnessMod)
-label(returnhere)
-label(originalcode)
-label(exit)
-
-BrightnessMod: //Changes the game brightness past the intended limit
-dd (float)-0.2
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)1.4 (float)1.4 (float)1.4
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.6
-
-DarkSoulsIII.exe+4727638:
-dd (float)2.56
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.3
-
-DarkSoulsIII.exe+4786138: //The Fire FadesTM Edition
-db 00
-
-LightingMod:
-cmp [BrightnessMod],0
-je originalcode
-movss xmm0,[BrightnessMod]
-movss xmm2,[BrightnessMod] //[DarkSoulsIII.exe+3D6ADD0]
-jmp exit
-
-//VFX:: -&gt; Reshaded
-
-originalcode:
-movss xmm2,[DarkSoulsIII.exe+3D6ADD0]
-
-exit:
-jmp returnhere
-
-"DarkSoulsIII.exe"+629C7D:
-jmp LightingMod
-nop 3
-returnhere:
+                  <ID>1337080386</ID>
+                  <Description>"Low render distance"</Description>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{Gate 05/08/2019}
 {$lua}
 if syntaxcheck then return end
---this needs a better solution
-memoryrecord_freeze(getAddressList().getMemoryRecordByDescription("VFXReshadedPopup"))
-{$asm}
-[DISABLE]
-"DarkSoulsIII.exe"+629C7D:
-movss xmm2,[DarkSoulsIII.exe+3D6ADD0]
-
-dealloc(LightingMod)
-dealloc(BrightnessMod)
-unregisterSymbol(BrightnessMod)
-
-DarkSoulsIII.exe+3D6C0C0:
-dd 3F800000
-dd 3F800000
-dd 3F800000
-
-DarkSoulsIII.exe+1717B28:
-dd 3F800000
-
-DarkSoulsIII.exe+4727638:
-dd 3F800000
-
-DarkSoulsIII.exe+0212450:
-dd 3F800000
-
-DarkSoulsIII.exe+4786138:
-db 00
-</AssemblerScript>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>1337097683</ID>
-                          <Description>"Game Brightness"</Description>
-                          <VariableType>Float</VariableType>
-                          <Address>BrightnessMod</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337097684</ID>
-                          <Description>"Vfx R/G/B"</Description>
-                          <Options moRecursiveSetValue="1"/>
-                          <VariableType>Float</VariableType>
-                          <Address>DarkSoulsIII.exe+3D6C0C0</Address>
-                          <CheatEntries>
-                            <CheatEntry>
-                              <ID>1337097685</ID>
-                              <Description>"Red"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+0</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097686</ID>
-                              <Description>"Green"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+4</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097687</ID>
-                              <Description>"Blue"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+8</Address>
-                            </CheatEntry>
-                          </CheatEntries>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337097688</ID>
-                          <Description>"Map"</Description>
-                          <VariableType>Float</VariableType>
-                          <Address>DarkSoulsIII.exe+1717B28</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337097689</ID>
-                          <Description>"Vfx"</Description>
-                          <VariableType>Float</VariableType>
-                          <Address>DarkSoulsIII.exe+4727638</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337097690</ID>
-                          <Description>"Glow"</Description>
-                          <VariableType>Float</VariableType>
-                          <Address>DarkSoulsIII.exe+0212450</Address>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337097692</ID>
-                          <Description>"Presets"</Description>
-                          <Options moHideChildren="1"/>
-                          <LastState Value="" RealAddress="00000000"/>
-                          <GroupHeader>1</GroupHeader>
-                          <CheatEntries>
-                            <CheatEntry>
-                              <ID>1337159070</ID>
-                              <Description>"Rayan's"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author: Rayan(Dahoom)
-[ENABLE]
-BrightnessMod:
-dd (float)-0.45
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)1.4 (float)1.4 (float)1.4
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.6
-
-DarkSoulsIII.exe+4727638:
-dd (float)2.56
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.3
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097694</ID>
-                              <Description>"Default"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author:
-[ENABLE]
-VFXvalue:
-dd (float)-2.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)2.0 (float)2.0 (float)2.0
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.5
-
-DarkSoulsIII.exe+4727638:
-dd (float)5.0
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.2
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097696</ID>
-                              <Description>"Alternate"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author:
-[ENABLE]
-VFXvalue:
-dd (float)-1.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)2.0 (float)2.0 (float)2.0
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.9
-
-DarkSoulsIII.exe+4727638:
-dd (float)5.0
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.2
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097697</ID>
-                              <Description>"Alternate 2"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author:
-[ENABLE]
-VFXvalue:
-dd (float)-1.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)2.0 (float)2.0 (float)2.0
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.85
-
-DarkSoulsIII.exe+4727638:
-dd (float)10.0
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.2
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097695</ID>
-                              <Description>"Preset"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author:
-[ENABLE]
-VFXvalue:
-dd (float)-1.4
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)1.4 (float)1.4 (float)1.4
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.5
-
-DarkSoulsIII.exe+4727638:
-dd (float)4.0
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.0
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097701</ID>
-                              <Description>"inuDarkPreset (Torch Recommended)"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author: inuNorii
-[ENABLE]
-VFXvalue:
-dd (float)-1.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)5.0 (float)5.0 (float)5.0
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.05
-
-DarkSoulsIII.exe+4727638:
-dd (float)0.5
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.5
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097750</ID>
-                              <Description>"inuDarkPresetAlt (Torch Recommended)"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author: inuNorii
-[ENABLE]
-VFXvalue:
-dd (float)-1.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)5.0 (float)5.0 (float)5.0
-
-DarkSoulsIII.exe+1717B28:
-dd (float)0.1
-
-DarkSoulsIII.exe+4727638:
-dd (float)0.5
-
-DarkSoulsIII.exe+0212450:
-dd (float)0.5
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>92379</ID>
-                              <Description>"Darkest Souls Option 1"</Description>
-                              <Options moHideChildren="1"/>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author: Zullie the Witch
-[ENABLE]
-VFXvalue:
-dd (float)0.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd 41A00000 41A00000 41A00000
-
-DarkSoulsIII.exe+1717B28:
-dd 3A83126F
-
-DarkSoulsIII.exe+4727638:
-dd (float)1.0
-
-DarkSoulsIII.exe+0212450:
-dd 3F800000
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>92370</ID>
-                              <Description>"Darkest Souls Option 2"</Description>
-                              <Options moHideChildren="1"/>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author: Zullie the Witch
-[ENABLE]
-VFXvalue:
-dd (float)0.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd 3F800000 3F800000 3F800000
-
-DarkSoulsIII.exe+1717B28:
-dd 3A83126F
-
-DarkSoulsIII.exe+4727638:
-dd (float)1.0
-
-DarkSoulsIII.exe+0212450:
-dd 43FA0000
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097693</ID>
-                              <Description>"None"</Description>
-                              <LastState/>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Author: FROMSOFTWARE
-[ENABLE]
-VFXvalue:
-dd (float)0.0
-
-DarkSoulsIII.exe+3D6C0C0:
-dd (float)1.0 (float)1.0 (float)1.0
-
-DarkSoulsIII.exe+1717B28:
-dd (float)1.0
-
-DarkSoulsIII.exe+4727638:
-dd (float)1.0
-
-DarkSoulsIII.exe+0212450:
-dd (float)1.0
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-</AssemblerScript>
-                            </CheatEntry>
-                          </CheatEntries>
-                        </CheatEntry>
-                        <CheatEntry>
-                          <ID>1337097698</ID>
-                          <Description>"Misc"</Description>
-                          <Options moHideChildren="1"/>
-                          <LastState Value="" RealAddress="00000000"/>
-                          <Color>C0C0C0</Color>
-                          <GroupHeader>1</GroupHeader>
-                          <CheatEntries>
-                            <CheatEntry>
-                              <ID>1337097691</ID>
-                              <Description>"GOTY"</Description>
-                              <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:Standard
-1:The Fire FadesTM Edition
-</DropDownList>
-                              <ShowAsSigned>1</ShowAsSigned>
-                              <VariableType>Byte</VariableType>
-                              <Address>DarkSoulsIII.exe+4786138</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337097680</ID>
-                              <Description>"VFXReshadedPopup"</Description>
-                              <LastState/>
-                              <Color>000080</Color>
-                              <VariableType>Auto Assembler Script</VariableType>
-                              <AssemblerScript>//Thanks to LukeYui for providing the function for this meme!
-[ENABLE]
-alloc(PopupMsgInvade,256,DarkSoulsIII.exe)
-alloc(CreateNewString,256,DarkSoulsIII.exe)
-alloc(NewString,512)
-define(StringLookupByID,DarkSoulsIII.exe+E0C6E0)
-define(SprjLuaEventMan,DarkSoulsIII.exe+473A9C8)
-
-NewString:
-dw 'VFX -&gt; Reshaded',0
-
-CreateNewString:
-mov r9d,ebx
-xor edx,edx
-cmp r9d,03A7D28C
-jne DarkSoulsIII.exe+E0C6E5 //StringLookupByID+05
-lea rax,[NewString]
-jmp DarkSoulsIII.exe+E0C6F3 //StringLookupByID+13
-
-StringLookupByID:
-jmp CreateNewString
-
-PopupMsgInvade:
-mov rcx,[SprjLuaEventMan]
-mov edx,00000001
-mov r8d,03A7D28C
-sub rsp,28
-call 140473040
-add rsp,28
-ret
-
-createthread(PopupMsgInvade)
-
-{$lua}
-if not syntaxcheck then disableMemrec(memrec) end
-{$asm}
-[DISABLE]
-DarkSoulsIII.exe+E0C6E0:
-db 44 8B CB 33 D2
-
-dealloc(CreateNewString)
-dealloc(NewString)
-dealloc(PopupMsgInvade)
-</AssemblerScript>
-                            </CheatEntry>
-                          </CheatEntries>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337075953</ID>
-                      <Description>"Session info UI"</Description>
-                      <LastState/>
-                      <Color>000040</Color>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>{
-  Author: inuNorii
-  Desc: Shows parts of Session Info in a separate window
-        made with CEs Form Editor and some bad lua
-
-        no booli
-}
-[ENABLE]
-{$lua}
-if syntaxcheck then return end
-SessionInfo.Show()
-
-local EmptyPlayerName = "None"
-local EmptyPlayerValues = ""
-
-local charTypeT = {}
-charTypeT[0] = "Host"
-charTypeT[1] = "White Phantom"
-charTypeT[2] = "Dark Spirit"
-charTypeT[3] = "Ghost"
-charTypeT[4] = "Ghost"
-charTypeT[8] = "Hollow"
-charTypeT[10] = "Transparent"
-charTypeT[11] = "Invisible"
-charTypeT[12] = "Dragon"
-charTypeT[13] = "Arena"
-
-local teamTypeT = {}
-teamTypeT[0] = "Invalid"
-teamTypeT[1] = "Host"
-teamTypeT[2] = "Phantom"
-teamTypeT[3] = "Black Phantom"
-teamTypeT[4] = "Hollow"
-teamTypeT[6] = "Enemy"
-teamTypeT[7] = "Boss"
-teamTypeT[8] = "Friend"
-teamTypeT[9] = "AngryFriend"
-teamTypeT[10] = "DecoyEnemy"
-teamTypeT[11] = "BloodChild"
-teamTypeT[12] = "BattleFriend"
-teamTypeT[13] = "Dragon"
-teamTypeT[16] = "Dark Spirit"
-teamTypeT[17] = "Watchdog of Farron"
-teamTypeT[18] = "Aldrich Faithful"
-teamTypeT[24] = "Darkwraiths"
-teamTypeT[26] = "NPC"
-teamTypeT[27] = "Hostile NPC"
-teamTypeT[29] = "Arena"
-teamTypeT[31] = "Mad Phantom"
-teamTypeT[32] = "Mad Spirit"
-teamTypeT[33] = "Giant crabs,Dragons from Lothric castle"
-
-function P1_CopyProfileClick(sender)
-local CheatTable = getAddressList()
-local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 1").Value
-local WebAddress = "https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
-writeToClipboard(WebAddress)
+[enable]
+local lodids = {19, 22, 26, 50, 54, 61}
+for i,lt in ipairs(lodids) do
+local lod = LodParam:new("LodEdit",lt)
+lod:lv01_BorderDist(5)
+lod:lv01_PlayDist(1)
+lod:lv12_BorderDist(15)
+lod:lv12_PlayDist(2)
+lod:textureLod(0)
+lod:lv23_BorderDist(15)
+lod:lv23_PlayDist(1)
+lod:lv34_BorderDist(15)
+lod:lv34_PlayDist(1)
+lod:lv45_BorderDist(15)
+lod:lv45_PlayDist(1)
+lod:distanceScaleId(1)
 end
-
-function P2_CopyProfileClick(sender)
-local CheatTable = getAddressList()
-local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 2").Value
-local WebAddress = "https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
-writeToClipboard(WebAddress)
-end
-
-function P3_CopyProfileClick(sender)
-local CheatTable = getAddressList()
-local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 3").Value
-local WebAddress = "https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
-writeToClipboard(WebAddress)
-end
-
-function P4_CopyProfileClick(sender)
-local CheatTable = getAddressList()
-local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 4").Value
-local WebAddress = "https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
-writeToClipboard(WebAddress)
-end
-
-function P5_CopyProfileClick(sender)
-local CheatTable = getAddressList()
-local HexID = CheatTable.getMemoryRecordByDescription("SteamID64 (H3x) 5").Value
-local WebAddress = "https://steamcommunity.com/profiles/" .. tostring(tonumber(HexID, 16))
-writeToClipboard(WebAddress)
-end
-
-function SessionInfoUpdate(timer)
-if readInteger("[[[BaseB]+40]+38]+0") == nil then
-control_setCaption(SessionInfo.P1_Name, EmptyPlayerName)
-control_setCaption(SessionInfo.P1_Value_CharType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P1_Value_TeamType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P1_Value_Level, EmptyPlayerValues)
-control_setCaption(SessionInfo.P1_Value_Upgrade, EmptyPlayerValues)
-else
-control_setCaption(SessionInfo.P1_Name, readString("[[[[BaseB]+40]+38]+XB]+88",32,1))
-control_setCaption(SessionInfo.P1_Value_CharType, charTypeT[readInteger("[[[BaseB]+40]+38]+70")])
-control_setCaption(SessionInfo.P1_Value_TeamType, teamTypeT[readInteger("[[[BaseB]+40]+38]+74")])
-control_setCaption(SessionInfo.P1_Value_Level, readInteger("[[[[BaseB]+40]+38]+XB]+70"))
-control_setCaption(SessionInfo.P1_Value_Upgrade, readBytes("[[[[BaseB]+40]+38]+XB]+B3"))
-end
-
-if readInteger("[[[BaseB]+40]+70]+0") == nil then
-control_setCaption(SessionInfo.P2_Name, EmptyPlayerName)
-control_setCaption(SessionInfo.P2_Value_CharType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P2_Value_TeamType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P2_Value_Level, EmptyPlayerValues)
-control_setCaption(SessionInfo.P2_Value_Upgrade, EmptyPlayerValues)
-else
-control_setCaption(SessionInfo.P2_Name, readString("[[[[BaseB]+40]+70]+XB]+88",32,1))
-control_setCaption(SessionInfo.P2_Value_CharType, charTypeT[readInteger("[[[BaseB]+40]+70]+70")])
-control_setCaption(SessionInfo.P2_Value_TeamType, teamTypeT[readInteger("[[[BaseB]+40]+70]+74")])
-control_setCaption(SessionInfo.P2_Value_Level, readInteger("[[[[BaseB]+40]+70]+XB]+70"))
-control_setCaption(SessionInfo.P2_Value_Upgrade, readBytes("[[[[BaseB]+40]+70]+XB]+B3"))
-end
-
-if readInteger("[[[BaseB]+40]+A8]+0") == nil then
-control_setCaption(SessionInfo.P3_Name, EmptyPlayerName)
-control_setCaption(SessionInfo.P3_Value_CharType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P3_Value_TeamType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P3_Value_Level, EmptyPlayerValues)
-control_setCaption(SessionInfo.P3_Value_Upgrade, EmptyPlayerValues)
-else
-control_setCaption(SessionInfo.P3_Name, readString("[[[[BaseB]+40]+A8]+XB]+88",32,1))
-control_setCaption(SessionInfo.P3_Value_CharType, charTypeT[readInteger("[[[BaseB]+40]+A8]+70")])
-control_setCaption(SessionInfo.P3_Value_TeamType, teamTypeT[readInteger("[[[BaseB]+40]+A8]+74")])
-control_setCaption(SessionInfo.P3_Value_Level, readInteger("[[[[BaseB]+40]+A8]+XB]+70"))
-control_setCaption(SessionInfo.P3_Value_Upgrade, readBytes("[[[[BaseB]+40]+A8]+XB]+B3"))
-end
-
-if readInteger("[[[BaseB]+40]+E0]+0") == nil then
-control_setCaption(SessionInfo.P4_Name, EmptyPlayerName)
-control_setCaption(SessionInfo.P4_Value_CharType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P4_Value_TeamType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P4_Value_Level, EmptyPlayerValues)
-control_setCaption(SessionInfo.P4_Value_Upgrade, EmptyPlayerValues)
-else
-control_setCaption(SessionInfo.P4_Name, readString("[[[[BaseB]+40]+E0]+XB]+88",32,1))
-control_setCaption(SessionInfo.P4_Value_CharType, charTypeT[readInteger("[[[BaseB]+40]+E0]+70")])
-control_setCaption(SessionInfo.P4_Value_TeamType, teamTypeT[readInteger("[[[BaseB]+40]+E0]+74")])
-control_setCaption(SessionInfo.P4_Value_Level, readInteger("[[[[BaseB]+40]+E0]+XB]+70"))
-control_setCaption(SessionInfo.P4_Value_Upgrade, readBytes("[[[[BaseB]+40]+E0]+XB]+B3"))
-end
-
-if readInteger("[[[BaseB]+40]+118]+0") == nil then
-control_setCaption(SessionInfo.P5_Name, EmptyPlayerName)
-control_setCaption(SessionInfo.P5_Value_CharType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P5_Value_TeamType, EmptyPlayerValues)
-control_setCaption(SessionInfo.P5_Value_Level, EmptyPlayerValues)
-control_setCaption(SessionInfo.P5_Value_Upgrade, EmptyPlayerValues)
-else
-control_setCaption(SessionInfo.P5_Name, readString("[[[[BaseB]+40]+118]+XB]+88",32,1))
-control_setCaption(SessionInfo.P5_Value_CharType, charTypeT[readInteger("[[[BaseB]+40]+118]+70")])
-control_setCaption(SessionInfo.P5_Value_TeamType, teamTypeT[readInteger("[[[BaseB]+40]+118]+74")])
-control_setCaption(SessionInfo.P5_Value_Level, readInteger("[[[[BaseB]+40]+118]+XB]+70"))
-control_setCaption(SessionInfo.P5_Value_Upgrade, readBytes("[[[[BaseB]+40]+118]+XB]+B3"))
-end
-
-end
-
-SessionInfoTimer = createTimer(getMainForm())
-SessionInfoTimer.Interval = 200
-SessionInfoTimer.OnTimer = SessionInfoUpdate
-SessionInfoTimer.setEnabled(true)
-
-[DISABLE]
-{$lua}
-if syntaxcheck then return end
-SessionInfo.Hide()
-
-if(SessionInfoTimer ~= nil) then
-SessionInfoTimer.destroy()
-end
+[disable]
+paramUtils:restore("LodEdit")
 </AssemblerScript>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337103835</ID>
-                      <Description>"Covenant Reversal &amp; Untrue Dark rings"</Description>
-                      <LastState/>
-                      <Color>000040</Color>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>[ENABLE]
-{$lua}
-if syntaxcheck then return end
-
-local Rings = {
-      20740,--Reversal
-      20560,--Untrue Dark
-}
-for i,id in ipairs(Rings) do
-local Ring = EquipParamAccessory:new("CovRings",id)
-      Ring:sortId(8000)--Goes to top of sorting list
-      Ring:weight(0)--Has no weight
-      Ring:accessoryCategory(1)--Covenant Slot
-      end
-
-
-[DISABLE]
-{$lua}
-if syntaxcheck then return end
-paramUtils:restore("CovRings")
-</AssemblerScript>
-                    </CheatEntry>
-                  </CheatEntries>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
@@ -3161,29 +2271,6 @@ Sharp Onyx Blade+10 for your +3 char will be autocorrected to Onyx Blade+1.
 </AssemblerScript>
                     </CheatEntry>
                     <CheatEntry>
-                      <ID>1337159077</ID>
-                      <Description>"Max Weapon Level"</Description>
-                      <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:+0
-1:+1
-2:+2
-3:+3
-4:+4
-5:+5
-6:+6
-7:+7
-8:+8
-9:+9
-10:+10
-</DropDownList>
-                      <Color>D50000</Color>
-                      <VariableType>Byte</VariableType>
-                      <Address>BaseA</Address>
-                      <Offsets>
-                        <Offset>B3</Offset>
-                        <Offset>10</Offset>
-                      </Offsets>
-                    </CheatEntry>
-                    <CheatEntry>
                       <ID>1337099073</ID>
                       <Description>"← Spawn Item"</Description>
                       <LastState/>
@@ -3204,7 +2291,22 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337081767</ID>
                       <Description>"Item Name"</Description>
-                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">027804E0:Amygdalan Arm
+                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">007D9470:Hammer of the Great Tree
+01CB2310:Andre's technique
+01455140:King's Shield
+15F51DB0:Old Hunter Hat
+13D8A650:?ProtectorName?(Priest's Fancy Hat)
+400003F2:Dragon Scale
+40000871:Mystical Key
+40000870:Old Grave Key
+40000151:Thunder Flask
+4036C964:Sunlight Blade
+20004F1C:Ring of the Unburdened +1
+20004F1D:Ring of the Unburdened +2
+20004F1E:Ring of the Unburdened +3
+20005168:Rusted Iron Ring
+20005172:Thief Ring
+2000517C:Cursed Giant's Ring
 01CB4A20:Deep Chime
 0274D090:Burial Blade
 009A6B40:Ancient Dragon Halberd
@@ -3241,9 +2343,6 @@ CREATETHREAD(ItemGib)
 02798B80:Church Cannon
 02796470:Fist of Gracia
 0279B290:Piercing Rifle
-20004F1C:Ring of the Unburdened +1
-20004F1D:Ring of the Unburdened +2
-20004F1E:Ring of the Unburdened +3
 13DC76E0:Mask of the Father
 13DC4FD0:Mask of the Mother
 13DC9DF0:Mask of the Child
@@ -3261,8 +2360,8 @@ CREATETHREAD(ItemGib)
 13DAC930:Crab Helmet
 13DAF040:Pygmy Crown
 13DB1750:Crown of Filianore
-13D83120:Overflow Black Hole
-13D80A10:Overflow Black Hole (Void)
+13D83120:Haral Legion Head
+13D80A10:Mass of humanity
 15F37000:Valkyrie Helm
 13D85830:Badger's Black Hat
 13D87F40:Demon of Hatred Head
@@ -3488,12 +2587,6 @@ CREATETHREAD(ItemGib)
 15F4F6A0:Okami Helmet
 15F4FA88:Okami Armor
 15F50258:Okami Leggings
-20004F10:Lucky Clover Ring
-20004F1A:Ring of the Unburdened
-20004F1C:Ring of the Unburdened+1
-20004F1D:Ring of the Unburdened+2
-20004F1E:Ring of the Unburdened+2
-20005168:Rusted Iron Ring
 404D0E91:Vanilla Sherbet
 404D0E90:Tasteless Sherbet
 404D0F59:Drop Sherbet
@@ -3515,7 +2608,6 @@ CREATETHREAD(ItemGib)
 40000153:Pale Pine Bundle
 40000152:Human Pine Bundle
 40000131:Rock
-400003F2:Dragon Scale
 00A87500:Dark Hand
 0001ADB0:Fists
 00061A80:Standard Arrow
@@ -4247,7 +3339,9 @@ CREATETHREAD(ItemGib)
 20004EF2:Ring of Sacrifice
 20004F06:Young Dragon Ring
 20004F07:Bellowing Dragoncrest Ring
+20004F10:Lucky Clover Ring
 20004F11:Witch's Ring
+20004F1A:Ring of the Unburdened
 20004F1B:Ring of the Sun's First Born
 20004F2E:Lingering Dragoncrest Ring
 20004F2F:Lingering Dragoncrest Ring+1
@@ -4838,9 +3932,12 @@ unregistersymbol(MassGibDone)
                           <AssemblerScript>{$lua}
 local newWeapons =
 {
--- weapons --
+
+-- weapons
 
   0x009A4430, --Lothric's Great Scythe
+  0x007D9470, --Hammer of the Great Tree
+  0x01CB2310, --Andre's technique
   0x009A6B40, --Ancient Dragon Halberd
   0x01CAFC00, --Bewitched Alonne Sword
   0x01C9C380, --Magic Twinswords "Makoto"
@@ -4863,8 +3960,8 @@ local newWeapons =
   0x0277DDD0, --Beast Cutter
   0x027545C0, --Reiterpallasch
   0x0274D090, --Burial Blade
-  0x027804E0, --Amygdalan Arm
   0x01CB4A20, --Deep Chime
+  0x01455140, --King's Shield
 
 -- Side Arms
 
@@ -5522,8 +4619,11 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newArmors = -- Ashes Armor
 {
--- Standalone Helmets --
 
+
+-- Standalone Helmets --
+  0x15F51DB0, --Old Hunter Hat
+  0x13D8A650, --Priest's Fancy Hat
   0x13DC76E0, --Mask of the Father
   0x13DC4FD0, --Mask of the Mother
   0x13DC9DF0, --Mask of the Child
@@ -6183,14 +5283,18 @@ Spawn()
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>{$lua}
 local newRings =
-{
-  0x20004F1A,  --Ring of the Unburdened
-  0x20004F1C,  --Ring of the Unburdened +1
-  0x20004F1D,  --Ring of the Unburdened +2
-  0x20004F1E,  --Ring of the Unburdened +3
-  0x20004F10,  --Lucky Clover Ring
-  0x20005168   --Rusted Iron Ring
-}
+  {
+
+  0x20004F1A, --Ring of the Unburdened
+  0x20004F1C, --Ring of the Unburdened +1
+  0x20004F1D, --Ring of the Unburdened +2
+  0x20004F1E, --Ring of the Unburdened +3
+  0x20005168, --Rusted Iron Ring
+  0x20004F10, --Lucky Clover Ring
+  0x20005172, --Thief Ring
+  0x2000517C, --Cursed Giant's Ring
+
+  }
 
 local ringsBase = -- Base rings
 {
@@ -6374,8 +5478,6 @@ local newMagic =
       --/////////// Pyromancies ///////////
       --0x4027AC40,	--Dark Orb
       --0x4024C610,	--Combustion
-
-      --  &lt;--- Add new magic here. EX: 0xDEADBEAF, -- Description
   }
 
 function InitialiseForm()
@@ -6666,6 +5768,9 @@ local newItems =
   0x40000152, --Human Pine Bundle
   0x40000131, --Rock
   0x400003F2, --Dragon Scale
+  0x40000871, --Mystical Key
+  0x40000870, --Old Grave Key
+  0x40000151, --Thunder Flask
   }
 
 function InitialiseForm()
@@ -7301,193 +6406,6 @@ goods:patchAllBinary(0x45,1,3)
 {$lua}
 if syntaxcheck then return end
 paramUtils:restore("discardableItems")
-</AssemblerScript>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>1337098006</ID>
-              <Description>"BonfireWarp"</Description>
-              <Options moHideChildren="1"/>
-              <LastState/>
-              <VariableType>Auto Assembler Script</VariableType>
-              <AssemblerScript>{
- Author: inuNorii
- Desc: Warp to selected bonfire, plays the bonfire warp animation.
-
- Thanks to Luke_Yui for message box
-}
-[ENABLE]
-alloc(BonfireWarp,256,DarkSoulsIII.exe)
-alloc(TargetBonfireId,8)
-alloc(ErrorText,140)
-define(SprjLuaEventMan,DarkSoulsIII.exe+473A9C8)
-registerSymbol(BonfireWarp)
-registerSymbol(TargetBonfireId)
-label(return)
-label(CeremonyCheck)
-label(DLCCheck)
-label(DLCCheck2)
-label(Error)
-
-BonfireWarp:
-sub rsp,48
-mov rcx,[SprjLuaEventMan]
-mov rdx,[CSDlc]
-mov r8,[TargetBonfireId]
-lea r8d,[r8-000003E8]
-xor r9d,r9d
-cmp r8d,3D10A2 //Champion Gundyr
-jle CeremonyCheck
-cmp r8d,4C4B40 //The Ringed Rity
-jge DLCCheck
-cmp r8d,44AA20 //Ashes of Ariandel
-jge DLCCheck2
-return:
-mov rdx,[BaseC+ACC]
-lea edx,[rdx-000003E8]
-call 140475DC0
-add rsp,48
-ret
-
-CeremonyCheck:
-cmp r8d,3D10A1 //Untended Graves
-jl return
-mov r9d,A
-jmp return
-DLCCheck:
-lea rax,[ErrorText+46]
-cmp byte ptr [rdx+12],1
-jne Error
-jmp return
-DLCCheck2:
-lea rax,[ErrorText]
-cmp byte ptr [rdx+11],1
-jne Error
-jmp return
-
-Error:
-mov [rsp+30],rax
-lea rcx,[rsp+30]
-call 14075BC70
-add rsp,48
-ret
-
-ErrorText:
-dw 'Missing License: Ashes of Ariandel',0
-dw 'Missing License: The Ringed City',0
-
-TargetBonfireId:
-dd #4002951
-
-[DISABLE]
-dealloc(BonfireWarp)
-dealloc(ErrorText)
-dealloc(TargetBonfireId)
-unregisterSymbol(BonfireWarp)
-unregisterSymbol(TargetBonfireId)
-</AssemblerScript>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>1337098007</ID>
-                  <Description>"TargetBonfireId"</Description>
-                  <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">1000:Shadow Realm
-4002959:Ashen Grave
-4002950:Firelink Shrine
-4002951:Cemetery of Ash
-4002952:Iudex Gundyr
-4002953:Untended Graves
-4002954:Champion Gundyr
-3002950:High Wall of Lothric
-3002955:Tower on the Wall
-3002952:Vordt of the Boreal Valley
-3002951:Oceiros, the Consumed King
-3002960:High Wall of Lothric, Teleport
-3102950:Undead Settlement
-3102952:Cliff Underside
-3102953:Dilipidated Bridge
-3102951:Pit of Hollows
-3302956:Road of Sacrifices
-3302950:Halfway Fortress
-3302957:Crucifixion Woods
-3302953:Farron Keep
-3302954:Keep Ruins
-3302958:Farron Keep Perimeter
-3302955:The Bridge
-3302951:Abyss Watchers
-3502950:Cleansing Chapel
-3502951:Deacons of the Deep
-3502952:Rosaria's Bed Chamber
-3802956:Catacombs of Carthus
-3802950:High Lord Wolnir
-3802951:Abandoned Tomb
-3802952:Old King's Antechamber
-3802953:Demon Ruins
-3802954:Old Demon King
-3702957:Irithyll of the Boreal valley
-3702954:Hidden Path
-3702950:Church of Yorshka
-3702955:Distant Manor
-3702951:Pontiff Sulyvahn
-3702956:Water Reserve
-3702953:Anor Londo
-3702958:Prison Tower
-3702952:Chamber of the Princess
-3902950:Irithyll Dungeon
-3902952:Profaned Capital
-3902951:Yhorm The Giant
-3012950:Lothric Castle
-3012952:Dragon Barracks
-3012951:Dragonslayer Armour
-3412951:Grand Archives
-3412950:Twin Princes
-3202950:Archdragon Peak
-3202953:Dragon-Kin Mausoleum
-3202952:Great Belfry
-3202951:Nameless King
-4102950:Flameless Shrine
-4102951:Kiln of the First Flame
-4102952:The First Flame
-4502951:Snowfield
-4502953:Corvian Settlement
-4502954:Snowy Mountain Pass
-4502955:Ariandel Chapel
-4502957:Depths of the Painting
-5002951:The Dreg Heap
-5002952:Earthen Peak Ruins
-5002953:Within the Earthen Peak Ruins
-5002950:The Demon Prince
-5102110:The Ringed City
-5102952:Mausoleum Lookout
-5102953:Ringed Inner Wall
-5102954:Ringed City Streets
-5102955:Shared Grave
-5102950:Church of Filianore
-5112951:Filianore's rest
-5112950:Slave Knight Gael
-5102951:Darkeater Midir
-4602950:Grand Rooftop
-4702950:Kiln of Flame
-5302950:Dragon Ruins
-5402950:Round Plaza
-</DropDownList>
-                  <ShowAsSigned>1</ShowAsSigned>
-                  <VariableType>4 Bytes</VariableType>
-                  <Address>TargetBonfireId</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337098008</ID>
-                  <Description>"← Warp"</Description>
-                  <LastState/>
-                  <Color>FF5E5E</Color>
-                  <VariableType>Auto Assembler Script</VariableType>
-                  <AssemblerScript>[ENABLE]
-{$lua}
-if syntaxcheck then return end
-disableMemrec(memrec)
-{$asm}
-createthread(BonfireWarp)
-[DISABLE]
 </AssemblerScript>
                 </CheatEntry>
               </CheatEntries>
@@ -9769,370 +8687,6 @@ db 00
 
 
 </AssemblerScript>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159048</ID>
-                  <Description>"PhantomParam Helper"</Description>
-                  <Options moHideChildren="1"/>
-                  <LastState/>
-                  <Color>000040</Color>
-                  <VariableType>Auto Assembler Script</VariableType>
-                  <AssemblerScript>[ENABLE]
-alloc(PhanParAdd,8)
-registersymbol(PhanParAdd)
-[DISABLE]
-dealloc(PhanParAdd)
-unregistersymbol(PhanParAdd)
-</AssemblerScript>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>1337159074</ID>
-                      <Description>"Quick guide"</Description>
-                      <LastState/>
-                      <Color>FF0000</Color>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>{$lua}
-if syntaxcheck then return end
-
-[ENABLE]
-disableMemrec(memrec)
-showText([[reminder that this is a WIP (fully functional just not explained well, which will take some testing &amp; time )
-
-1. Press on "Get Adress List" then get the phantom adress you want to edit (see the list below)
-
-2. Put the adress you want to edit in "PhantomParam picked"
-
-3. Press "Open"-&gt;"Outline intensity" then edit the param to your heart's content
-
-Intensity is somewhat like Brightness, with 0 Being Disabled
-
-Outline is the most obvious thing you notice in a phantom, The host has this at 0
-
-Overlay is simple, just a 2d color filter on everything
-
-Fill is uhh how do I explain this? a shade coming from the inside? the intensitry needs to be raised a bit to notice it
-
-Edge seems to be the opposite of Fill it's easier to notice and looks like it mirrors it in shade direction
-
-Fade seems to only have 2 options (0/1), and the only thing it does is remove cloth and other things
-
-Fade1 is ???
-
-Intensity and Fade values support decimals both positive and negative,
-while R G B values range only from 0 to 255.
-
-Unk1 is currently unknown as to what it does exactly
-
-The FadeType Value has 3 states:
-0= Disabled,
-1= Enabled,
-2= Dark transparency (needs high intensity to look good),
-3= Normal transparency,
-4 -&gt; ???= Pitch black with minor details in white, seems to show a bit of the outline color when attacking
-
-
-Big thanks to Gate for providing this (I (Rayan) just made it more user friendly and included the dropdown menu),
-And to ChurchGuard for providing an explanation on what these options do
-
--------------------------------------------------------------------------
-and this is what they mean (note: they might not be a 1:1 match with ashes, since they added a couple extra ones)
-
-1		White w/Less glow
-2		White w/More glow
-3		Faded brown with slight blue glow
-4		Same as above
-5		Faded brown with pink glow
-6		Bright blue with pink shade
-7		Brighter blue with pink shade
-8		Aqua Blue w/White tint
-9		Aqua Blue w/Slightly darker white tint
-10		Bright Aqua w/bright white tint
-11		Bright Aqua
-12		Glowing Grey
-13		Grey w/Dark purple shade
-14		White w/slight glow
-15		Translucent w/Grey shade
-16		Chalk White/Faded White
-17		Invisibility with dark green color
-18		Marine blue
-19		Brighter Marine
-20		Bright Yellow
-21		Light Orange
-22		Light Purple
-23		Light Green/Yellow
-24		Light Orange w/Less glow
-25		Darker Marine
-26		Same as above
-27		White Phantom with more shine
-28		Similar to 16 but w/light purple shade
-29		Similar to 16 but w/Glow
-30		Like Darkmoon blue w/fade
-31		Translucent Grey
-32		Transparent Grey, like ghost color
-33		Transparent w/Purple glow
-35		Normal colors w/Orange shade
-36		Like 35 but with peach glow
-40		Transparent teal color
-41		Completely Invisible
-42		Completely White
-43		Grey shade
-50		Bright Sky Blue shade
-51		Cyan glow
-52		Yellow glow
-53		Orange glow
-54		Purple glow
-55		Green/yellow glow
-56		Similar to 53 w/less glow
-57		Similar to 25
-58		Similar to 25
-59		Similar to 25 with brighter edges
-60		Similar to normal dark spirit
-61		Similar to White Phantom
-62		Like 32 with more white glow
-63		Bright white color w/slight peach shade
-64		Bright gold glow
-65		Bright gold glow with red shade
-66		Purple glow
-67		Purple glow with red shade
-68		Turquoise glow
-69		Green glow with red shade
-70		Blue glow
-71		Darkmoon spirit color with bright white glow
-72		Darkmoon color with yellow glow
-73		Darkmoon color with green/yellow glow
-74		Transparent, ghost color
-75		Transparent with no glow
-76		Transparent with less glow
-80		White phantom color
-81		Dark spirit color w/Small normal colors
-82		Blue sentinel color
-83		Darkmoon spirit color
-84		Same as above
-85		Sunbro color
-86		Dark sunbro color
-87		Mound maker color
-88		Actual Moundmaker Color Game Uses
-89		Dark spirit color
-90		Dark blue glow with purple shade
-91		Aldrich faithful color
-92		Brown glow
-101		Like 1 with less glow
-102		More Washed out White Phantom
-103		Blue with orange shade
-104		Bright blue with orange shade
-105		Very bright cyan, brown shade
-106		Very bright cyan, more brown shade
-107		Very bright cyan, white shade
-108		Very bright cyan, more white shade
-109		Very bright cyan only
-170		White Phantom with more shine and blue edges
-181		Transparent with red shade
-185		Transparent with sunbro shade
-186		Transparent with dark sunbro shade
-187		Transparent with mound maker shade
-201		Black phantom
-202		Like 201 with white glow
-203		Like 201 with brown shade
-204		Bright blue with pink shade
-205		Bright cyan, slight darker shade
-206		97:Bright cyan, with lighter shades
-207		Similar to Above
-208		Similar to Above with much brighter white edges
-209		Translucent white
-
-]])
-
-[DISABLE]
-</AssemblerScript>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>1337159075</ID>
-                          <Description>"Get Adress List"</Description>
-                          <LastState/>
-                          <Color>C80000</Color>
-                          <VariableType>Auto Assembler Script</VariableType>
-                          <AssemblerScript>{
-  Author: Igromanru
-  Description: Prints the address of a Param
-}
-[ENABLE]
-{$lua}
-if syntaxcheck then return end
-
-local paramName = "PhantomParam" --enter a param Name here, for example EquipParamWeapon
---------------------------------------------------------
-paramUtils:printParamAddress(paramName)
-
-[DISABLE]
-{$lua}
-if syntaxcheck then return end
-</AssemblerScript>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337159049</ID>
-                      <Description>"PhantomParam picked"</Description>
-                      <ShowAsHex>1</ShowAsHex>
-                      <VariableType>8 Bytes</VariableType>
-                      <Address>PhanParAdd</Address>
-                    </CheatEntry>
-                    <CheatEntry>
-                      <ID>1337159050</ID>
-                      <Description>"open"</Description>
-                      <Options moHideChildren="1"/>
-                      <LastState Value="" RealAddress="00000000"/>
-                      <GroupHeader>1</GroupHeader>
-                      <CheatEntries>
-                        <CheatEntry>
-                          <ID>1337080133</ID>
-                          <Description>"Outline intensity"</Description>
-                          <VariableType>Float</VariableType>
-                          <Address>[PhanParAdd]</Address>
-                          <CheatEntries>
-                            <CheatEntry>
-                              <ID>1337080134</ID>
-                              <Description>"Overlay intensity"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+4</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080135</ID>
-                              <Description>"Fill intensity"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+8</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080136</ID>
-                              <Description>"Edge intensity"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+C</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080137</ID>
-                              <Description>"Shine intensity"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+10</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080138</ID>
-                              <Description>"Outline Red"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+14</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080139</ID>
-                              <Description>"Outline Green"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+15</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080140</ID>
-                              <Description>"Outline Blue"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+16</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080141</ID>
-                              <Description>"Overlay Red"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+17</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080142</ID>
-                              <Description>"Overlay Green"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+18</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080143</ID>
-                              <Description>"Overlay Blue"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+19</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080144</ID>
-                              <Description>"Fill Red"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+1A</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080145</ID>
-                              <Description>"Fill Green"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+1B</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080146</ID>
-                              <Description>"Fill Blue"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+1C</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080147</ID>
-                              <Description>"Edge Red"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+1D</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080148</ID>
-                              <Description>"Edge Green"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+1E</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080149</ID>
-                              <Description>"Edge Blue"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+1F</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080150</ID>
-                              <Description>"Shine Red"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+20</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080151</ID>
-                              <Description>"Shine Green"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+21</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080152</ID>
-                              <Description>"Shine Blue"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+22</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080153</ID>
-                              <Description>"Unk1"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+23</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080154</ID>
-                              <Description>"Fade"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+24</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080155</ID>
-                              <Description>"Fade1"</Description>
-                              <VariableType>Float</VariableType>
-                              <Address>+28</Address>
-                            </CheatEntry>
-                            <CheatEntry>
-                              <ID>1337080156</ID>
-                              <Description>"Fade type"</Description>
-                              <VariableType>Byte</VariableType>
-                              <Address>+2C</Address>
-                            </CheatEntry>
-                          </CheatEntries>
-                        </CheatEntry>
-                      </CheatEntries>
-                    </CheatEntry>
-                  </CheatEntries>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
@@ -68678,6 +67232,462 @@ unregistersymbol(SpEffectVfxParam)
                         <Offset>68</Offset>
                         <Offset>10C0</Offset>
                       </Offsets>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>1337099224</ID>
+              <Description>"PhantomParam Helper"</Description>
+              <Options moHideChildren="1"/>
+              <LastState/>
+              <Color>C80000</Color>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+alloc(PhanParAdd,8)
+registersymbol(PhanParAdd)
+PhanParAdd:
+dd #5728
+[DISABLE]
+dealloc(PhanParAdd)
+unregistersymbol(PhanParAdd)
+</AssemblerScript>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1337159102</ID>
+                  <Description>"Quick guide"</Description>
+                  <LastState/>
+                  <Color>FF0000</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>{$lua}
+if syntaxcheck then return end
+
+[ENABLE]
+disableMemrec(memrec)
+showText([[reminder that this is a WIP (fully functional just not explained well, which will take some testing &amp; time )
+
+
+
+Press "PP open"-&gt;"Outline intensity" then edit the param to your heart's content
+
+Intensity is somewhat like Brightness, with 0 Being Disabled, it's numbers are low
+
+Outline is the most obvious thing you notice in a phantom, The host has this at 0
+
+Overlay is simple, just a 2d color filter on everything
+
+Fill is uhh how do I explain this? a shade coming from the inside? the intensitry needs to be raised a bit to notice it
+
+Edge seems to be the opposite of Fill it's easier to notice and looks like it mirrors it in shade direction
+
+
+
+Intensity and values support decimals both positive and negative,
+while R G B values range only from 0 to 255.
+
+Unk1 is currently unknown as to what it does exactly
+
+The GhostType Value has 3 states:
+0= Disabled,
+1= Enabled,
+2= Dark transparency (needs high intensity to look good),
+3= Normal transparency,
+4 -&gt; ???= Pitch black with minor details in white, seems to show a bit of the outline color when attacking
+
+
+Big thanks to Gate for providing this (I (Rayan) just made it more user friendly,
+And to ChurchGuard for providing an explanation on what these options do
+
+-------------------------------------------------------------------------
+and this is what they mean
+
+1		White w/Less glow
+2		White w/More glow
+3		Faded brown with slight blue glow
+4		Same as above
+5		Faded brown with pink glow
+6		Bright blue with pink shade
+7		Brighter blue with pink shade
+8		Aqua Blue w/White tint
+9		Aqua Blue w/Slightly darker white tint
+10		Bright Aqua w/bright white tint
+11		Bright Aqua
+12		Glowing Grey
+13		Grey w/Dark purple shade
+14		White w/slight glow
+15		Translucent w/Grey shade
+16		Chalk White/Faded White
+17		Invisibility with dark green color
+18		Marine blue
+19		Brighter Marine
+20		Bright Yellow
+21		Light Orange
+22		Light Purple
+23		Light Green/Yellow
+24		Light Orange w/Less glow
+25		Darker Marine
+26		Same as above
+27		White Phantom with more shine
+28		Similar to 16 but w/light purple shade
+29		Similar to 16 but w/Glow
+30		Like Darkmoon blue w/fade
+31		Translucent Grey
+32		Transparent Grey, like ghost color
+33		Transparent w/Purple glow
+35		Normal colors w/Orange shade
+36		Like 35 but with peach glow
+40		Transparent teal color
+41		Completely Invisible
+42		Completely White
+43		Grey shade
+50		Bright Sky Blue shade
+51		Cyan glow
+52		Yellow glow
+53		Orange glow
+54		Purple glow
+55		Green/yellow glow
+56		Similar to 53 w/less glow
+57		Similar to 25
+58		Similar to 25
+59		Similar to 25 with brighter edges
+60		Similar to normal dark spirit
+61		Similar to White Phantom
+62		Like 32 with more white glow
+63		Bright white color w/slight peach shade
+64		Bright gold glow
+65		Bright gold glow with red shade
+66		Purple glow
+67		Purple glow with red shade
+68		Turquoise glow
+69		Green glow with red shade
+70		Blue glow
+71		Darkmoon spirit color with bright white glow
+72		Darkmoon color with yellow glow
+73		Darkmoon color with green/yellow glow
+74		Transparent, ghost color
+75		Transparent with no glow
+76		Transparent with less glow
+80		White phantom color
+81		Dark spirit color w/Small normal colors
+82		Blue sentinel color
+83		Darkmoon spirit color
+84		Same as above
+85		Sunbro color
+86		Dark sunbro color
+87		Mound maker color
+88		Actual Moundmaker Color Game Uses
+89		Dark spirit color
+90		Dark blue glow with purple shade
+91		Aldrich faithful color
+92		Brown glow
+101		Like 1 with less glow
+102		More Washed out White Phantom
+103		Blue with orange shade
+104		Bright blue with orange shade
+105		Very bright cyan, brown shade
+106		Very bright cyan, more brown shade
+107		Very bright cyan, white shade
+108		Very bright cyan, more white shade
+109		Very bright cyan only
+170		White Phantom with more shine and blue edges
+181		Transparent with red shade
+185		Transparent with sunbro shade
+186		Transparent with dark sunbro shade
+187		Transparent with mound maker shade
+201		Black phantom
+202		Like 201 with white glow
+203		Like 201 with brown shade
+204		Bright blue with pink shade
+205		Bright cyan, slight darker shade
+206		97:Bright cyan, with lighter shades
+207		Similar to Above
+208		Similar to Above with much brighter white edges
+209		Translucent white
+
+]])
+
+[DISABLE]
+</AssemblerScript>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337099229</ID>
+                  <Description>"PhantomParamID | ファントムパラメータID"</Description>
+                  <ShowAsSigned>1</ShowAsSigned>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>DarkSoulsIII.exe+4768E78</Address>
+                  <Offsets>
+                    <Offset>1F38</Offset>
+                    <Offset>80</Offset>
+                  </Offsets>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337099225</ID>
+                  <Description>"PP Address"</Description>
+                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">2512:1
+2560:2
+2608:3
+2656:4
+2704:5
+2752:6
+2800:7
+2848:8
+2896:9
+2944:10
+2992:11
+3040:12
+3088:13
+3136:14
+3184:15
+3232:16
+3280:17
+3328:18
+3376:19
+3424:20
+3472:21
+3520:22
+3568:23
+3616:24
+3664:25
+3712:26
+3760:27
+3808:28
+3856:29
+3904:30
+3952:31
+4000:32
+4048:33
+4096:35
+4144:36
+4192:40
+4240:41
+4288:42
+4336:43
+4384:50
+4432:51
+4480:52
+4528:53
+4576:54
+4624:55
+4672:56
+4720:57
+4768:58
+4816:59
+4864:60
+4912:61
+4960:62
+5008:63 (Transparent)
+5056:64
+5104:65
+5152:66
+5200:67
+5248:68
+5296:69
+5344:70
+5392:71
+5440:72
+5488:73
+5536:74 (Invisible)
+5584:75
+5632:76
+5680:80 (White Phantom)
+5728:81 (Red Spirit)
+5776:82 (Sentinel Phantom)
+5824:83 (Darkmoon Phantom)
+5872:84 (Darkmoon Phantom Lv. 2?)
+5920:85 (Sunlight Phantom)
+5968:86 (Sunlight Spirit)
+6016:87
+6064:88 (Mound-Maker)
+6112:89
+6160:90
+6208:91 (Auto-Summon Covenant)
+6256:92
+6304:101
+6352:102
+6400:103
+6448:104
+6496:105
+6544:106
+6592:107
+6640:108
+6688:109
+6736:170
+6784:181
+6832:185
+6880:186
+6928:187
+6976:201
+7024:202
+7072:203
+7120:204
+7168:205
+7216:206
+7264:207
+7312:208
+7360:209
+</DropDownList>
+                  <VariableType>4 Bytes</VariableType>
+                  <Address>PhanParAdd</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337099226</ID>
+                  <Description>"PP open"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState Value="" RealAddress="00000000"/>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337159077</ID>
+                      <Description>"Outline intensity"</Description>
+                      <VariableType>Float</VariableType>
+                      <Address>DarkSoulsIII.exe+4782838</Address>
+                      <Offsets>
+                        <Offset>readInteger("PhanParAdd")</Offset>
+                        <Offset>68</Offset>
+                        <Offset>68</Offset>
+                        <Offset>10c0</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337159078</ID>
+                          <Description>"Overlay intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+4</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159079</ID>
+                          <Description>"Fill intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+8</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159080</ID>
+                          <Description>"Edge intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+C</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159081</ID>
+                          <Description>"Shine intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+10</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159082</ID>
+                          <Description>"Outline Red"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+14</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159083</ID>
+                          <Description>"Outline Green"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+15</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159084</ID>
+                          <Description>"Outline Blue"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+16</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159085</ID>
+                          <Description>"Overlay Red"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+17</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159086</ID>
+                          <Description>"Overlay Green"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+18</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159087</ID>
+                          <Description>"Overlay Blue"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+19</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159088</ID>
+                          <Description>"Fill Red"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1A</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159089</ID>
+                          <Description>"Fill Green"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1B</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159090</ID>
+                          <Description>"Fill Blue"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1C</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159091</ID>
+                          <Description>"Edge Red"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1D</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159092</ID>
+                          <Description>"Edge Green"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1E</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159093</ID>
+                          <Description>"Edge Blue"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1F</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159094</ID>
+                          <Description>"Shine Red"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+20</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159095</ID>
+                          <Description>"Shine Green"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+21</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159096</ID>
+                          <Description>"Shine Blue"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+22</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159097</ID>
+                          <Description>"Unk1"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+23</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159098</ID>
+                          <Description>"GhostAlpha1"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+24</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159099</ID>
+                          <Description>"GhostAlpha2"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+28</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159100</ID>
+                          <Description>"GhostType"</Description>
+                          <VariableType>Byte</VariableType>
+                          <Address>+2C</Address>
+                        </CheatEntry>
+                      </CheatEntries>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
