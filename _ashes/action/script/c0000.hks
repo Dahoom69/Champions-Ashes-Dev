@@ -3609,13 +3609,14 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565 = {}
                 W_Event90565 = Event_AttackCrossbowRightEmpty
                 W_Event90565[0] = "W_AttackRightHeavySpecial1SubStart"      
-                W_Event90565[2] = "W_AttackRightHeavySpecial1SubStart_Upper"   
-                if (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackRightHeavySpecial2Start")  -- to iT 
+                W_Event90565[2] = "W_AttackRightHeavySpecial1SubStart_Upper"
+                if (env(1116, 100291) == TRUE) then    ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
+                elseif (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackRightHeavySpecial2Start")  -- to iT -- hold transform
                 else  
                     SetVariable("MoveSpeedLevelReal", 0)
                     if (iT == FALSE) then ExecEvents(W_Event90565[1], W_Event90565[1] .. "_Upper") end -- to iT 
                     for local0 = 2, #W_Event90565, 1 do
-                        SetVariable("W_AttackRightHeavySpecial1SubStart_Lower" .. local0 - 2, W_Event90565[local0])
+                        SetVariable("W_AttackRightHeavySpecial1SubStart_Lower" .. local0 - 2, W_Event90565[local0]) 
                         SetVariable("W_AttackRightHeavySpecial1SubStart_Upper" .. local0 - 2, W_Event90565[local0])
                     end
                 end
@@ -3629,7 +3630,8 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565 = Event_AttackCrossbowRightReload
                 W_Event90565[0] = "W_AttackBothHeavySpecial1SubStart"      
                 W_Event90565[2] = "W_AttackBothHeavySpecial1SubStart_Upper"   
-                if (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackBothHeavySpecial2Start")   -- to UT
+                if (env(1116, 100291) == TRUE) then    ExecEventAllBody("W_AttackBothHeavySpecial2Start") 
+                elseif (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackBothHeavySpecial2Start")   -- to UT
                 else 
                     SetVariable("MoveSpeedLevelReal", 0)
                     ExecEvents(W_Event90565[1], W_Event90565[1] .. "_Upper") -- to UT
