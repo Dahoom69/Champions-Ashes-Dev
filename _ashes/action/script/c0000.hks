@@ -1528,7 +1528,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
 
     local sp_BB = env(345 , tHand)
 
-    if ( sp_BB ~= 101 and sp_BB ~= 612 and sp_BB ~= 624 and sp_BB ~= 641 and sp_BB ~= 642) then iT = FALSE end
+    if ( sp_BB ~= 101 and sp_BB ~= 612 and sp_BB ~= 624 and sp_BB ~= 641 and sp_BB ~= 642 and sp_BB ~= 645) then iT = FALSE end
 
     if c_HasActionRequest == FALSE then
         return FALSE
@@ -1758,7 +1758,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                             l2 =  ExecEventHalfBlend(Event_AttackCrossbowLeftStart, blend_type)
                         elseif l1 == "W_AttackLeftHeavy2" then
                             l2 =   ExecEventHalfBlend(Event_AttackCrossbowLeftStart, blend_type)
-                        elseif sp_m == 101 or sp_m == 612 or sp_m == 624 or sp_m == 641 or sp_m == 642 then  l2 =   ExecEventHalfBlend(Event_AttackCrossbowLeftStart, blend_type)
+                        elseif sp_m == 101 or sp_m == 612 or sp_m == 624 or sp_m == 641 or sp_m == 642 or sp_m == 645 then  l2 =   ExecEventHalfBlend(Event_AttackCrossbowLeftStart, blend_type)
                         end
                     else 
                         local speed = GetVariable("MoveSpeedLevelReal")
@@ -3433,7 +3433,7 @@ function ExecWeaponChange(blend_type)
 
     local sp_m = env(345 , HAND_RIGHT)
 
-    if (sp_m ~= 101 and sp_m ~= 612 and sp_m ~= 641 and sp_m ~= 624 and sp_m ~= 642 ) then iT = FALSE end
+    if (sp_m ~= 101 and sp_m ~= 612 and sp_m ~= 641 and sp_m ~= 624 and sp_m ~= 642 and sp_m ~= 645 ) then iT = FALSE end
     ExecEventHalfBlend(Event_WeaponChangeStart, blend_type)
     SetAIActionState()
     return TRUE
@@ -8239,7 +8239,7 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy2Start"
     --if (i1BB == TRUE and (sp_m ~= 264 or sp_m ~= 612) ) then r1 = "W_AttackRightLight2" end
-    if (sp_m == 195 or sp_m == 613 or sp_m == 643 or sp_m == 612 or sp_m == 621 or sp_m == 624 or sp_m == 643 or sp_m == 101 or sp_m == 605  or sp_m == 620 ) then r1 = "W_AttackRightLight3" end
+    if (sp_m == 195 or sp_m == 613 or sp_m == 643 or sp_m == 612 or sp_m == 621 or sp_m == 624 or sp_m == 643 or sp_m == 101 or sp_m == 605  or sp_m == 620 or sp_m == 645 ) then r1 = "W_AttackRightLight3" end
     if (sp_m == 641) then r1 = "W_AttackRightLight1" end
     if (sp_m == 264 or sp_m == 164 or sp_m == 614) then r1 = "W_AttackRightLight3" end
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
@@ -9224,7 +9224,7 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
     end
 
     if sp_m == 195 or sp_m == 621 then b1 = "W_AttackBothLight2" end
-    if sp_m == 641 or sp_m == 605 or sp_m == 643 or sp_m == 612 or sp_m == 624 or sp_m == 101 then b1 = "W_AttackBothLight3" end
+    if sp_m == 641 or sp_m == 605 or sp_m == 643 or sp_m == 612 or sp_m == 624 or sp_m == 101  or sp_m == 645 then b1 = "W_AttackBothLight3" end
 
     if (sp_m == 643) then 
         l1  = "W_AttackBothLeft2"
