@@ -3507,7 +3507,7 @@ function ExecHandChange(hand, is_force, blend_type)
             end
             act(104, 1)
         else
-            if env(335, HAND_LEFT) == FALSE and i1BB == FALSE then
+            if env(335, HAND_LEFT) == FALSE and (i1BB == FALSE or sp_m == 609) then 
                 return FALSE
             end
             pos = GetHandChangeType(HAND_RIGHT)
