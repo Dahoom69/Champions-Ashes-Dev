@@ -616,11 +616,11 @@ function GetAttackRequest(is_guard)
             elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
                 return ATTACK_REQUEST_LIGHT_KICK
             elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
-                if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt
+                if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
                 elseif (sp == 231 or spo == 231) then 
                     SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
-                    return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora 
-                else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora
+                    return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
+                else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
                 end
             else
                 return ATTACK_REQUEST_BOTH_LIGHT
@@ -6028,10 +6028,13 @@ function MoveCommonFunction(blend_type)
         elseif IsEnableJumpAtk() == TRUE then
             r2 = "W_AttackRightHeavyKick"
             b2 = "W_AttackBothHeavyKick"
-            if i1BB == TRUE then 
+            if i1BB == TRUE and (env(345 , HAND_RIGHT) ~= 609)  then 
                 r2 = "W_AttackRightHeavyKickSpecial"
-                b2 = "W_AttackBothHeavyKickSpecial"
+                b2 = "W_AttackBothHeavyKickSpecial"          
             end
+            if (env(345 , HAND_RIGHT) == 609) then r2 = "W_AttackRightHeavyKickSpecial" end
+            if (env(345 , HAND_RIGHT) == 609 and c_Style == HAND_RIGHT_BOTH) then  b2 = "W_AttackBothHeavyKickSpecial" end -- left hand both 2h offhand combat art tonitrus
+
             if (env(345 , HAND_RIGHT) == 656) then b2 = "W_AttackBothHeavyKickSpecial" end
             if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackBothHeavy2Start" end
         end
@@ -7014,13 +7017,23 @@ function BackStep_onUpdate()
     local catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF)
     if catalysto == TRUE and is_both_right == FALSE then br2 = "W_AttackBothHeavy1Start" end
 
-    if i1BB == TRUE then 
+    if i1BB == TRUE and env(345 , HAND_RIGHT) ~= 609 then 
         rr1 = "W_AttackRightLightDashSpecial" 
         br1 = "W_AttackBothDashSpecial"
         rr2 = "W_AttackRightLightStepSpecial"
         br2 = "W_AttackBothLightStepSpecial"
     end
-    
+
+    if  (env(345 , HAND_RIGHT) == 609) then
+        rr1 = "W_AttackRightLightDashSpecial" 
+        rr2 = "W_AttackRightLightStepSpecial"
+    end
+
+    if  (env(345 , HAND_RIGHT) == 609 and c_Style == HAND_RIGHT_BOTH) then -- left hand both 2h offhand combat art tonitrus
+        br1 = "W_AttackBothDashSpecial"
+        br2 = "W_AttackBothLightStepSpecial"
+    end
+
     if (env(1116, 100282) == TRUE)
     then 
         rr1 = "W_AttackRightLightStep" 
