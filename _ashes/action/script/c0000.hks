@@ -4401,6 +4401,9 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         elseif env(1116, 100351) == TRUE then
             ExecEventAllBody("W_AttackRightCounter")
             return FALSE
+        elseif env(1116, 100352) == TRUE then
+            ExecEventAllBody("W_OneShotNoGenTransStart")
+            return FALSE
         elseif env(1116, 100700) == TRUE then
             return FALSE
         elseif env(1116, 100510) == TRUE then
