@@ -6009,10 +6009,13 @@ function MoveCommonFunction(blend_type)
     local r2 = "W_AttackRightHeavy1Start"
     local b1 = "W_AttackBothLight1"
     local b2 = "W_AttackBothHeavy1Start"
-    if i1BB == TRUE then 
+    if i1BB == TRUE and (env(345 , HAND_RIGHT) ~= 609)  then  
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
     end
+    if (env(345 , HAND_RIGHT) == 609) then r2 = "W_AttackRightHeavy1SubStart" end
+    if (env(345 , HAND_RIGHT) == 609 and c_Style == HAND_RIGHT_BOTH) then  b2 = "W_AttackBothHeavy1SubStart" end -- left hand both 2h offhand combat art tonitrus
+
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
 
     if 1.60000002384186 < speed then
@@ -9230,7 +9233,7 @@ function AttackBothHeavySpecial1SubStart_onUpdate()
 
     if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
-    elseif i1BB ~= TRUE and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
+    elseif i1BB ~= TRUE or (sp_m == 609 and c_Style == HAND_LEFT_BOTH) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_AttackBothHeavySpecial1Start")
         return 
