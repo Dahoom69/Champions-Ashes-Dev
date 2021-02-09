@@ -828,7 +828,7 @@ function GetAttackRequest(is_guard)
 end
 
 function GetEvasionRequest()
-    if env(1001) < STAMINA_MINIMUM then
+    if env(1001) < STAMINA_MINIMUM then -- no stamina, get stamina
         return ATTACK_REQUEST_INVALID
     elseif env(1106, ACTION_ARM_JUMP) == TRUE then
         local speed = GetVariable("MoveSpeedLevelReal")
@@ -3610,7 +3610,7 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565 = Event_AttackCrossbowRightEmpty
                 W_Event90565[0] = "W_AttackRightHeavySpecial1SubStart"      
                 W_Event90565[2] = "W_AttackRightHeavySpecial1SubStart_Upper"
-                if (env(1116, 100291) == TRUE) then    ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
+                if (env(1116, 100291) == TRUE and  env(1001) > 0) then    ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
                 elseif (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackRightHeavySpecial2Start")  -- to iT -- hold transform
                 else  
                     SetVariable("MoveSpeedLevelReal", 0)
@@ -3630,7 +3630,7 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565 = Event_AttackCrossbowRightReload
                 W_Event90565[0] = "W_AttackBothHeavySpecial1SubStart"      
                 W_Event90565[2] = "W_AttackBothHeavySpecial1SubStart_Upper"   
-                if (env(1116, 100291) == TRUE) then    ExecEventAllBody("W_AttackBothHeavySpecial2Start") 
+                if (env(1116, 100291) == TRUE and  env(1001) > 0) then    ExecEventAllBody("W_AttackBothHeavySpecial2Start") 
                 elseif (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackBothHeavySpecial2Start")   -- to UT
                 else 
                     SetVariable("MoveSpeedLevelReal", 0)
