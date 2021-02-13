@@ -7838,6 +7838,7 @@ function AttackRightLight1_onUpdate() -- r11
     if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
+    if (sp_m == 658) then r2 = "W_AttackRightHeavy1Start" end
 
 
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -7887,7 +7888,8 @@ function AttackRightLight2_onUpdate() -- r12
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
 
 
-    if (sp_m == 654) then r1 = "W_AttackRightLight1" end
+    if (sp_m == 654 or sp_m == 658) then r1 = "W_AttackRightLight1" end
+    if (sp_m == 658) then r2 = "W_AttackRightHeavy2Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -8123,6 +8125,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge
     local r1 = "W_AttackRightLight1"
     if (sp_m == 614) then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or (sp_m == 612) then r1 = "W_AttackRightHeavySpecial1Start" end
+    if (sp_m == 658 and env(1116, 100801) == TRUE ) then r1 = "W_AttackRightLight2" end
 
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
@@ -8165,14 +8168,16 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 614 or sp_m == 612 then r1 = "W_AttackRightLight3" end
-    if sp_m == 609 then r1 = "W_AttackRightHeavySpecial1Start" end
-    
+    if sp_m == 609 then r1 = "W_AttackRightHeavySpecial1Start" end 
 
     if (env(1116, 100801) == TRUE) and i1BB == FALSE then r1 =  "W_AttackRightLight2" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 38, 42) == TRUE) then  r1 =  "W_AttackRightLight3" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90) then  r1 =  "W_AttackRightLight1" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 51 then  r1 =  "W_AttackRightLight2" end
+
+    if sp_m == 658 then r1 = "W_AttackRightLight2" end 
+    if sp_m == 658 and env(1116, 100801) == TRUE  then r1 = "W_AttackRightLight1" end
 
 
     if (is_catalysts == TRUE) then  
