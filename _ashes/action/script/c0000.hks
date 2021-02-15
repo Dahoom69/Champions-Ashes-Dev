@@ -7004,13 +7004,20 @@ function BackStep_onUpdate()
     --end
 
     local hand = HAND_RIGHT
+    local is_both_left = FALSE
 
-    if style == HAND_LEFT_BOTH then
-        hand = HAND_LEFT
+    if c_style == HAND_LEFT_BOTH then 
+        hand = HAND_LEFT 
+        is_both_left = TRUE
     end
 
-    local is_m = GetEquipType(hand, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42) 
-    if is_m == TRUE then rr2 = "W_CrossbowStepInFire" br2 = "W_CrossbowStepInReload" end
+    local is_so = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD, WEAPON_CATEGORY_LARGE_SHIELD, WEAPON_CATEGORY_TORCH) 
+    local is_mm = GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42) 
+    local is_mo = GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42) 
+    if is_mm == TRUE then rr2 = "W_CrossbowStepInFire" br2 = "W_CrossbowStepInReload" end
+    if is_mo == TRUE and is_both_left == TRUE then br2 = "W_CrossbowStepInReload" end
+    if is_so == TRUE and is_both_left == TRUE then br2 = "W_AttackBothHeavy1Start" end
+
     if IsDualBlade() == TRUE then br2 = "W_CrossbowStepInFire" end
     if (env(345 , hand) == 43) then rr2 = "W_AttackRightHeavy1Start" br2 = "W_AttackBothHeavy1Start" end
 
