@@ -10593,6 +10593,10 @@ function DrawStanceRightAttackLight_onUpdate()
         b2 = "W_DrawStanceRightAttackHeavy"
         is_artsr2 = TRUE
     end
+    if (sp_kind == 164) then
+        r2 = "W_AttackRightHeavy1SubStart"
+        b2 = "W_AttackBothHeavy1SubStart"
+    end
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, is_artsr1, is_artsr2, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -10875,6 +10879,11 @@ function DrawStanceRightAttackHeavy_onUpdate()
             is_artsr1 = TRUE
         end
     end
+    if (sp_kind == 164) then
+        r2 = "W_AttackRightHeavy1SubStart"
+        b2 = "W_AttackBothHeavy1SubStart"
+    end
+
     if env(1116, 100700) == TRUE then
         r1 = "W_DrawStanceRightAttackLight"
         b1 = "W_DrawStanceRightAttackLight"
