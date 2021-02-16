@@ -4534,7 +4534,7 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         end
     elseif damage_level == DAMAGE_LEVEL_EXLARGE then
         -- Insert start: poise resisted throws by halvard
-        if (env(334, 2) == TRUE and env(329) == FALSE) then
+        if (env(334, 2) == TRUE and env(329) == FALSE and HalComesBack == TRUE) then
             damage_level = DAMAGE_LEVEL_NONE
             ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
             return FALSE
@@ -4548,7 +4548,7 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_EX_BLAST then
         -- Insert start: poise resisted throws by halvard
-        if (env(334, 2) == TRUE and env(329) == FALSE) then
+        if (env(334, 2) == TRUE and env(329) == FALSE and HalComesBack == TRUE) then
             damage_level = DAMAGE_LEVEL_NONE
             ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
             return FALSE
@@ -4568,7 +4568,7 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_SMALL_BLOW then
         -- Insert start: poise resisted throws by halvard
-        if (env(334, 2) == TRUE and env(329) == FALSE) then
+        if (env(334, 2) == TRUE and env(329) == FALSE and HalComesBack == TRUE) then
             damage_level = DAMAGE_LEVEL_NONE
             ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
             return FALSE
@@ -4582,7 +4582,7 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         return TRUE
     elseif damage_level == DAMAGE_LEVEL_UPPER then
         -- Insert start: poise resisted throws by halvard
-        if (env(334, 2) == TRUE and env(329) == FALSE) then
+        if (env(334, 2) == TRUE and env(329) == FALSE and HalComesBack == TRUE) then
             damage_level = DAMAGE_LEVEL_NONE
             ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
             return FALSE
@@ -4599,7 +4599,7 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         return FALSE
     elseif damage_level == DAMAGE_LEVEL_FLING then
         -- Insert start: poise resisted throws by halvard
-        if (env(334, 2) == TRUE and env(329) == FALSE) then
+        if (env(334, 2) == TRUE and env(329) == FALSE and HalComesBack == TRUE) then
             damage_level = DAMAGE_LEVEL_NONE
             ExecAddDamage(damage_angle, attack_dir, damage_level, FALSE, is_damaged)
             return FALSE
