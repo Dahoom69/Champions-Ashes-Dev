@@ -9358,7 +9358,7 @@ function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
     if sp_m == 614 then r1 = "W_AttackRightLight3" end
     if  sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
 
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", r1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackBothHeavySpecial2End")
