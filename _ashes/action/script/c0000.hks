@@ -6038,7 +6038,8 @@ function MoveCommonFunction(blend_type)
             if (env(345 , HAND_RIGHT) == 609) then r2 = "W_AttackRightHeavyKickSpecial" end
             if (env(345 , HAND_RIGHT) == 609 and c_Style == HAND_RIGHT_BOTH) then  b2 = "W_AttackBothHeavyKickSpecial" end -- left hand both 2h offhand combat art tonitrus
 
-            if (env(345 , HAND_RIGHT) == 656) then b2 = "W_AttackBothHeavyKickSpecial" end
+            if (env(345 , HAND_RIGHT) == 656 and c_Style == HAND_RIGHT_BOTH) then b2 = "W_AttackBothHeavyKickSpecial" end -- right hand both 2h mainhand !!!!!!!!!!!! c_style style
+            if (env(345 , HAND_LEFT) == 656 and c_Style == HAND_LEFT_BOTH) then b2 = "W_AttackBothHeavyKickSpecial" end -- left hand both 2h offhand !!!!!!!!!!!!!!!!!
             if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackBothHeavy2Start" end
         end
     end
