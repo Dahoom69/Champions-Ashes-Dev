@@ -1,2 +1,1 @@
 * lockable
-*.tpfbdt filter=lfs diff=lfs merge=lfs -text
