@@ -7031,6 +7031,9 @@ function BackStep_onUpdate()
     if is_mo == TRUE and is_both_left == TRUE then br2 = "W_CrossbowStepInReload" end
 
     if IsDualBlade() == TRUE then br2 = "W_CrossbowStepInFire" end
+    if osp == 250 and is_both_left == TRUE then br2 = "W_AttackBothHeavy1Start" end
+    if sp == 250 and is_both_right == TRUE then br2 = "W_AttackBothHeavy1Start" end
+    
     if (env(345 , hand) == 43) then rr2 = "W_AttackRightHeavy1Start" br2 = "W_AttackBothHeavy1Start" end
 
     if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
