@@ -308,7 +308,7 @@ function GetWeightIndex(is_move)
     elseif move_id == WEIGHT_HEAVY or move_id == WEIGHT_HEAVY + 20 or move_id == WEIGHT_HEAVY + 40 or move_id == WEIGHT_HEAVY + 60 then
         move_weight = MOVE_WEIGHT_HEAVY
         evasion_weight = EVASION_WEIGHT_INDEX_HEAVY
-        act(2002, 660)
+        act(2002, 660) -- fatroll stamina regen buff
     elseif move_id == WEIGHT_OVERWEIGHT or move_id == WEIGHT_OVERWEIGHT + 20 or move_id == WEIGHT_OVERWEIGHT + 40 or move_id == WEIGHT_OVERWEIGHT + 60 then
         move_weight = MOVE_WEIGHT_HEAVY
         evasion_weight = EVASION_WEIGHT_INDEX_OVERWEIGHT
@@ -898,6 +898,7 @@ function SetEvasionStaminaCost()
         c_StaminaCostRolling = -20
         c_StaminaCostBackStep = -14
         c_StaminaCostJump = -16
+        act(2002, 660)
     elseif weight == WEIGHT_OVERWEIGHT then
         c_StaminaCostRolling = -26
         c_StaminaCostBackStep = -18
@@ -5129,6 +5130,9 @@ function IdleCommonFunction()
         end 
 ]]
 
+    local weight = env(257)
+    if weight == WEIGHT_HEAVY then act(2002, 660) end -- fatroll stamina regen buff
+
     if (iT ~= TRUE) then iT = FALSE 
     else iT = TRUE end
 
@@ -6060,6 +6064,9 @@ function MoveCommonFunction(blend_type)
 end
 
 function GuardCommonFunction(is_guard_end, blend_type)
+    local weight = env(257)
+    if weight == WEIGHT_HEAVY then act(2002, 660) end -- fatroll stamina regen buff
+
     act(9100)
     if ExecPassiveAction(FALSE, FALL_TYPE_DEFAULT, FALSE) == TRUE then
         return TRUE
