@@ -8301,7 +8301,22 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
     if (sp_m == 264 or sp_m == 164 or sp_m == 614) then r1 = "W_AttackRightLight3" end
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
     
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+        return 
+    elseif env(1116, 100283) == TRUE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+        if env(1106, ACTION_ARM_R1) == TRUE then
+            local staminaRegen = 0
+            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
+            elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 22
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 28
+            elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 36
+            elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 44
+            else staminaRegen = 19 end
+            
+            AddStamina(staminaRegen)
+            act(2002, 621)
+            act(2002, 622)
+        end
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackRightHeavySpecial1End")
@@ -9302,8 +9317,24 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
 
     if (sp_m == 621) then l1 = "W_AttackBothHeavy2Start" end
 
+
     act("特殊補間設定", 0, FALSE)
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+        return 
+    elseif env(1116, 100283) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+        if env(1106, ACTION_ARM_R1) == TRUE then
+            local staminaRegen = 0
+            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
+            elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 22
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 28
+            elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 36
+            elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 44
+            else staminaRegen = 19 end
+            
+            AddStamina(staminaRegen)
+            act(2002, 621)
+            act(2002, 622)
+        end
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackBothHeavySpecial1End")
