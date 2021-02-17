@@ -598,8 +598,8 @@ function GetAttackRequest(is_guard)
             local is_rightHandCA = FALSE
             local is_leftHandCA = FALSE
 
-            if (    ((is_gh == TRUE and sp == 655) or sp == 167 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
-            if (    ((is_gho == TRUE and spo == 655) or spo == 167 or spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+            if (    ((is_gh == TRUE and sp == 655) or sp == 72 or sp == 167 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+            if (    ((is_gho == TRUE and spo == 655) or spo == 72 or spo == 167 or spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
             
             if is_arrow == TRUE then
                 act("弓矢スロット選択", 0)
@@ -617,9 +617,8 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_LIGHT_KICK
             elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
                 if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
-                elseif (sp == 231 or spo == 231) then 
-                    SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
-                    return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
+                elseif (sp == 231 or spo == 231) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
+                elseif (sp == 72 or spo == 72) then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
                 else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
                 end
             else
@@ -650,6 +649,7 @@ function GetAttackRequest(is_guard)
                 act(2002, 626)
                 --SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) -- doesn't work w parry shields
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
+            elseif sp == 72 then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
             elseif sp == 167 then 
                 return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora
             end
