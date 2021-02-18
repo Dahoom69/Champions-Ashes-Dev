@@ -13741,13 +13741,16 @@ function ItemDrinkNothingMP_Upper_onUpdate()
     end
 end
 
-function ItemDrinkStartSake_Upper_onUpdate()
+function ItemDrinkStartSake_Upper_onUpdate() -- executioner's glove
     local blend_type, lower_state = GetHalfBlendInfo()
     if ItemCommonFunction(blend_type) == TRUE then
         return 
-    elseif env(301, 0) == TRUE then
-        ExecEventHalfBlendNoReset(Event_ItemDrinkingSake, blend_type)
-        return 
+    elseif env("アニメ終了か", 1) == TRUE then -- new
+        ExecEventAllBody("W_Idle") -- new
+        return  -- new
+    --elseif env(301, 0) == TRUE then
+      --  ExecEventHalfBlendNoReset(Event_ItemDrinkingSake, blend_type)
+       -- return 
     elseif HalfBlendLowerCommonFunction(Event_ItemDrinkStartSake, lower_state, FALSE, FALSE) == TRUE then
         return 
     else
