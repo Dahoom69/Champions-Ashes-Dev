@@ -8173,7 +8173,14 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end
     local sp_m = env(345 , HAND_RIGHT)
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy2Start"
-    if sp_m == 643 then r1 = "W_AttackRightLight1" end
+
+    local sp_m = env(345 , HAND_RIGHT)
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 29, 30, 32, 33, 35, 36, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
+    if GetEquipType(HAND_RIGHT, 38) == TRUE or sp_m == 59 then r1 = "W_AttackRightLight3" end
+    if sp_m == 179  then r1 = "W_AttackRightLight2" end
+    if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 then r1 = "W_AttackRightLight1" end
+    
+    if sp_m == 643 then r1 = "W_AttackRightLight2" end
 
     if sp_m == 614 or sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 264 then r1 = "W_AttackRightHeavySpecial1Start" end
