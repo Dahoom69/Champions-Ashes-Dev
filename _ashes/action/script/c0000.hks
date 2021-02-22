@@ -11959,6 +11959,11 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
         b2 = "W_OneShotNoGenTransContinue"
     end
 
+    if sp_kind == 51 then
+        r1 = "W_AttackRightLight2"
+        b1 = "W_AttackBothLight2"
+    end
+
     if i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
