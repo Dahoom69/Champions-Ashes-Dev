@@ -11883,6 +11883,10 @@ function Warcry_onUpdate() -- 037670 UT WA
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
     end
+    if env(345 , hand) == 80 then
+        r2 = "W_AttackRightHeavy1Start"
+        b2 = "W_AttackBothHeavy1Start"
+    end
 
     if SwordArtsCommonFunction(g_r1, r2, g_l1, g_l2, g_b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
