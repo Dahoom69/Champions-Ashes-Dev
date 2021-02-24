@@ -1337,6 +1337,13 @@ function IsWarcrySpAtk()
             return TRUE
         end
     end
+
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+
+    if env(1116, 698) and sp_m == 166 and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 698) and sp_o == 166 and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+
     return FALSE
 end
 
@@ -1717,8 +1724,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 r2 = "W_AttackRightHeavySpecial1Start"
             elseif r2 == "W_AttackRightHeavy1SubStart" then
                 r2 = "W_AttackRightHeavySpecial1SubStart"
+            elseif env(1116, 698) and sp_m == 166 and c_Style ~= HAND_LEFT_BOTH and r2 == "W_AttackRightHeavy2Start" then r2 = "W_AttackRightHeavySpecial1Start" -- gravelord neato
+            elseif env(1116, 698) and sp_o == 166 and c_Style == HAND_LEFT_BOTH and r2 == "W_AttackRightHeavy2Start" then r2 = "W_AttackRightHeavySpecial1Start" -- gravelord neato
             elseif r2 == "W_AttackRightHeavy2Start" then
                 r2 = "W_AttackRightHeavySpecial2Start"
+
             end
         elseif IsWepBrokenHeavyAtk() == TRUE then
             if r2 == "W_AttackRightHeavy1Start" then
@@ -1914,6 +1924,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     b2 = "W_AttackBothHeavySpecial1Start"
                 elseif b2 == "W_AttackBothHeavy1SubStart" then
                     b2 = "W_AttackBothHeavySpecial1SubStart"
+                elseif env(1116, 698) and sp_m == 166 and c_Style ~= HAND_LEFT_BOTH and b2 == "W_AttackBothHeavy2Start" then b2 = "W_AttackBothHeavySpecial1Start"
+                elseif env(1116, 698) and sp_o == 166 and c_Style == HAND_LEFT_BOTH and b2 == "W_AttackBothHeavy2Start" then b2 = "W_AttackBothHeavySpecial1Start"
                 elseif b2 == "W_AttackBothHeavy2Start" then
                     b2 = "W_AttackBothHeavySpecial2Start"
                 end
