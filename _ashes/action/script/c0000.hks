@@ -598,8 +598,8 @@ function GetAttackRequest(is_guard)
             local is_rightHandCA = FALSE
             local is_leftHandCA = FALSE
 
-            if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24)   or sp == 167 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
-            if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24 ) or spo == 167 or spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+            if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24)   or sp == 167 or sp == 176 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+            if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24 ) or spo == 167 or spo == 176 or  spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
             
      --[[   "0" name="RIGHTARTS" 
             "1" name="PARRY" 
@@ -656,6 +656,7 @@ function GetAttackRequest(is_guard)
                 if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
                 elseif (sp == 231 or spo == 231) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
                 elseif (sp == 72 or spo == 72)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
+                elseif (sp == 176 or spo == 176) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art
                 else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
                 end
             else
@@ -687,8 +688,8 @@ function GetAttackRequest(is_guard)
                 --SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) -- doesn't work w parry shields
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
             elseif sp == 72  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
-            elseif sp == 167 then 
-                return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora
+            elseif sp == 167 then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora
+            elseif sp == 176 then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS
             end
         elseif is_staff == TRUE then
             return ATTACK_REQUEST_INVALID
@@ -8189,7 +8190,8 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge
     
     local r1 = "W_AttackRightLight1"
 
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 29, 30, 32, 33, 35, 36, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 29, 30, 32, 33, 35, 36, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or 
+    sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
     if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 179) or sp_m == 59 then r1 = "W_AttackRightLight3" end
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 then r1 = "W_AttackRightLight1" end
 
@@ -9136,7 +9138,8 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
 
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 30, 32, 33, 35, 36, 38, 42, 47) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 30, 32, 33, 35, 36, 38, 42, 47) == TRUE or sp_m == 51 or 
+    sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
     if GetEquipType(HAND_RIGHT, 29) == TRUE or sp_m == 59 or sp_m == 138 or sp_m == 261 or sp_m == 232 or sp_m == 235 or sp_m == 656 or sp_m == 146 then b1 = "W_AttackBothLight3" end
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50  then b1 = "W_AttackBothLight1" end
 
