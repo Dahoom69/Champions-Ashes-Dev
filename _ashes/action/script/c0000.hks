@@ -5064,7 +5064,7 @@ end
 
 function IdleCommonFunction()
         
-   -- if env(1116, 103590001) == TRUE and 1 < env(2016) then act(2002, 627) end -- if sunlight speffect has 0 fp deactive it
+    --if env(1116, 103590001) == TRUE and 9 > env(2016) then act(2002, 627) end -- if sunlight blade speffect has 0 fp deactive it
 
     --local LeftWeaponSP = env(345 , HAND_LEFT) -- gunz
     --local AltWepMotionIndex = 17
