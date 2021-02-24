@@ -987,7 +987,7 @@ function SetSwordArtsPointInfo(button, is_point_consume)
         sel = 1
     elseif env(262, hand) == TRUE then -- IsAbilityInsufficient
         sel = 1
-    elseif c_SwordArtsID == SWORDARTS_MAGICBUFFPRAY and env(1116, 135000) == FALSE then -- get special effect 135000
+    elseif c_SwordArtsID == SWORDARTS_MAGICBUFFPRAY and env(1116, 135000) == FALSE then -- get speffect special effect 135000
         sel = 1
     end
     local val = "IsEnoughArtPointsL2"
@@ -5064,6 +5064,8 @@ end
 
 function IdleCommonFunction()
         
+    if env(1116, 103590001) == TRUE and 0 < env(2016) then act(2002, 627) end -- if sunlight speffect has 0 fp deactive it
+
     --local LeftWeaponSP = env(345 , HAND_LEFT) -- gunz
     --local AltWepMotionIndex = 17
 
