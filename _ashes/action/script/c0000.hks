@@ -1341,8 +1341,8 @@ function IsWarcrySpAtk()
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if env(1116, 698) and sp_m == 166 and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato
-    if env(1116, 698) and sp_o == 166 and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 698) == TRUE and sp_m == 166 and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 698) == TRUE and sp_o == 166 and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
 
     return FALSE
 end
