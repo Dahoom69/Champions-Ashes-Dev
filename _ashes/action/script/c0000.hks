@@ -8262,6 +8262,8 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge
     if sp_m == 614 or sp_m == 612 then r1 = "W_AttackRightLight3" end
     if sp_m == 609 then r1 = "W_AttackRightHeavySpecial1Start" end 
 
+    if GetEquipType(HAND_RIGHT, 25) == TRUE then r1 =  "W_AttackRightLight2" end
+
     if (env(1116, 100801) == TRUE) and i1BB == FALSE then r1 =  "W_AttackRightLight2" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 38, 42) == TRUE) then  r1 =  "W_AttackRightLight3" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
@@ -8307,6 +8309,7 @@ function AttackRightHeavy2End_onUpdate() -- r22 release end
 
     if sp_m == 264 or sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightLight3" end
 
+    if GetEquipType(HAND_RIGHT, 25) == TRUE then r1 =  "W_AttackRightLight2" end
     if GetEquipType(HAND_RIGHT, 38) == TRUE then r1 = "W_AttackRightLight3" end
     if ( (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 193) or sp_m == 50 or sp_m == 232) then r1 = "W_AttackRightLight2" end 
 
@@ -9256,6 +9259,8 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
             iT = FALSE 
         end
 
+        if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
+
         if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
         if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and ((GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176)) then  b1 =  "W_AttackBothLight1" end
         if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
@@ -9305,6 +9310,8 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     local r2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then r2 = "W_AttackBothHeavy1SubStart" end
+
+    if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
 
     if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176) then  b1 =  "W_AttackBothLight1" end
