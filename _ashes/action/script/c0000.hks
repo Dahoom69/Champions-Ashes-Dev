@@ -8204,7 +8204,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge
     
     local r1 = "W_AttackRightLight1"
 
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 36, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or 
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or 
     sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
     if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 179) or sp_m == 59 then r1 = "W_AttackRightLight3" end
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 then r1 = "W_AttackRightLight1" end
@@ -8233,7 +8233,7 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end -- doesn't work for 
     local r2 = "W_AttackRightHeavy2Start"
 
     local sp_m = env(345 , HAND_RIGHT)
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 36, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
     if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 179) or sp_m == 59 then r1 = "W_AttackRightLight3" end
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 then r1 = "W_AttackRightLight1" end
     
@@ -9155,7 +9155,7 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
 
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 36, 38, 42, 47) == TRUE or sp_m == 51 or 
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or 
     sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
     if GetEquipType(HAND_RIGHT, 29) == TRUE or sp_m == 59 or sp_m == 138 or sp_m == 161 or sp_m == 261 or sp_m == 232 or sp_m == 235 or sp_m == 656 or sp_m == 146 then b1 = "W_AttackBothLight3" end
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50  or sp_m == 654 or sp_m == 107 then b1 = "W_AttackBothLight1" end
@@ -9200,7 +9200,7 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
     local b1 = "W_AttackBothLight1"
     local hand = HAND_RIGHT
 
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 36, 38, 42, 47) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
     if GetEquipType(HAND_RIGHT, 29) == TRUE or sp_m == 59 or sp_m == 138 or sp_m == 161 or sp_m == 261 or sp_m == 232 or sp_m == 235 or sp_m == 656 or sp_m == 146 then b1 = "W_AttackBothLight3" end
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50 or sp_m == 654 or sp_m == 107 then b1 = "W_AttackBothLight1" end
 
