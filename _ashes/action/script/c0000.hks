@@ -8070,6 +8070,7 @@ function AttackRightLightKick_onUpdate()
     local sp_m = env(345 , HAND_RIGHT)
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
+    if sp_m == 68 then r2 = "W_AttackRightHeavyKick" end
 
     if AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -9663,6 +9664,7 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2
 function AttackBothLightKick_onUpdate()
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
+    if env(345 , HAND_RIGHT) == 68 then b2 = "W_AttackBothHeavyKick" end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         return 
