@@ -9669,8 +9669,10 @@ function AttackBothLightKick_onUpdate()
     if env(345 , HAND_RIGHT) == 68 and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
     if env(345 , HAND_LEFT) == 68 and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
 
-    if env(345 , HAND_RIGHT) == 163 and GetEquipType(HAND_RIGHT, 25) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy1Start" end -- dbs
-    if env(345 , HAND_LEFT) == 163 and GetEquipType(HAND_RIGHT, 25) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy1Start" end -- dbs
+    if GetEquipType(HAND_RIGHT, 30) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
+    if GetEquipType(HAND_LEFT, 30) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
+
+    GetEquipType(HAND_RIGHT, 26, 35) 
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
