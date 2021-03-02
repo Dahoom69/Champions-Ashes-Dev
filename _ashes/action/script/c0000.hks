@@ -13846,9 +13846,9 @@ end
 
 function ItemDrinkStartSake_Upper_onUpdate() -- executioner's glove
     local blend_type, lower_state = GetHalfBlendInfo()
-    if env(1001) < STAMINA_MINIMUM then -- no stamina, get stamina
+    if ItemCommonFunction(blend_type) == TRUE then
         return 
-    elseif ItemCommonFunction(blend_type) == TRUE then
+    elseif HalfBlendUpperCommonFunction(lower_state) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then -- new
         ExecEventAllBody("W_Idle") -- new
