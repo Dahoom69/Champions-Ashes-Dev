@@ -8,7 +8,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open -The Champion's Archive 1.4.9"</Description>
+      <Description>"Open -The Champion's Archive 1.4.9.3 03/04/2021"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -202,6 +202,7 @@ end
 function runOnce(id, func)
   RunOnceResults = RunOnceResults or {
     -- self_overwrite_mark
+open_faq = true,
 
   }
   if RunOnceResults[id] then return true end
@@ -1047,7 +1048,7 @@ if syntaxcheck then return end
 
 [ENABLE]
 disableMemrec(memrec)
-showText([[ Who the fuck gave this to you?
+showText([[
 
                               Dark Souls III Cheat Engine Table
                     By Phokz / Pox911 / Zanzer / Zullie the Witch
@@ -2291,1134 +2292,7 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337081767</ID>
                       <Description>"Item Name"</Description>
-                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">007D9470:Hammer of the Great Tree
-01CB2310:Andre's technique
-01455140:King's Shield
-15F51DB0:Old Hunter Hat
-13D8A650:?ProtectorName?(Priest's Fancy Hat)
-400003F2:Dragon Scale
-40000871:Mystical Key
-40000870:Old Grave Key
-40000151:Thunder Flask
-4036C964:Sunlight Blade
-20004F1C:Ring of the Unburdened +1
-20004F1D:Ring of the Unburdened +2
-20004F1E:Ring of the Unburdened +3
-20005168:Rusted Iron Ring
-20005172:Thief Ring
-2000517C:Cursed Giant's Ring
-01CB4A20:Deep Chime
-0274D090:Burial Blade
-009A6B40:Ancient Dragon Halberd
-009A4430:Lothric's Great Scythe
-01CAFC00:Bewitched Alonne Sword
-01C9C380:Magic Twinswords "Makoto"
-01C9EA90:Salvation Axes
-01CA38B0:Silver Knight Spear
-01CA11A0:Gold and Silver Tracers
-01CA5FC0:Silver Knight Straight Sword
-01CA86D0:Abyssal Greatsword
-01CAADE0:Loyce Greatsword
-01CAD4F0:Dragon Bone Smasher
-02721170:Hunter Axe
-02725F90:Kirkhammer
-02737100:Saw Cleaver
-02739810:Blades of Mercy
-02740D40:Stake Driver
-0274A980:Ludwig's Holy Blade
-02785300:Rakuyo
-0278EF40:Whirligig Saw
-02782BF0:Holy Moonlight Sword
-0277DDD0:Beast Cutter
-027545C0:Reiterpallasch
-0271EA60:Hunter Blunderbuss
-02743450:Hunter Pistol
-02745B60:Cannon
-02751EB0:Rosmarinus
-0279D9A0:Flamesprayer
-0275E200:Evelyn
-02760910:Repeating Pistol
-02763020:Ludwig's Rifle
-02793D60:Gatling Gun
-02798B80:Church Cannon
-02796470:Fist of Gracia
-0279B290:Piercing Rifle
-13DC76E0:Mask of the Father
-13DC4FD0:Mask of the Mother
-13DC9DF0:Mask of the Child
-15EF2A40:Dark Sun Crown
-15EF7860:Mask of Velka
-15F3E530:Syan Knight Helm
-13DCEC10:Hide Knight Iron Mask
-13DDFD80:Corporeal Forlorn Hood
-13DE2490:Crown of Illusions
-13DE72B0:Archive Sage’s Hat
-12E40D20:Scholar's Shed Skin
-140D9900:Fire Keeper Blindfold
-13FE56C0:Frigid Valley Mask
-13DAA220:Corvian Knight Helm
-13DAC930:Crab Helmet
-13DAF040:Pygmy Crown
-13DB1750:Crown of Filianore
-13D83120:Haral Legion Head
-13D80A10:Mass of humanity
-15F37000:Valkyrie Helm
-13D85830:Badger's Black Hat
-13D87F40:Demon of Hatred Head
-13D8CD60:Gyoubu's Helm
-13D8F470:Monk Mask
-13D91B80:Monk Straw Hat
-13D94290:Nightjar Mask
-13D969A0:Seven Spear Helmet
-13D990B0:Okami Mask
-13DB8C80:Tengu Mask
-13DBB390:Barrel Helmet
-13DBDAA0:Gold Ardeo
-13DC01B0:Mensis Cage
-13DA2CF0:Old Monk Wrapping
-13DA5400:Dirty Colossus Sack
-13DB3E60:Priest Mask
-15F3BE20:King's Crown
-15F3C208:King's Armor
-15F3C5F0:King's Gauntlets
-15F3C9D8:King's Leggings
-15F348F0:Hunter's Hat
-15F34CD8:Hunter's Coat
-15F350C0:Hunter's Gloves
-15F354A8:Hunter's Trousers
-13DCC500:Sulyvahn's Crown
-13DCC8E8:Sulyvahn's Robe
-13DCCCD0:Sulyvahn's Bracelets
-13DCD0B8:Sulyvahn's Skirt
-15F321E0:Tower Knight Helm
-15F325C8:Tower Knight Armor
-15F329B0:Tower Knight Gauntlets
-15F32D98:Tower Knight Leggings
-15F1C250:Fume Knight Helm
-15F1C638:Fume Knight Armor
-15F1CA20:Fume Knight Gauntlets
-15F1CE08:Fume Knight Leggings
-15A995C0:Doll's Bonnet
-15A999A8:Doll's Dress
-15A99D90:Doll's Gloves
-15A9A178:Doll's Skirt
-15C81A40:Ledo Helmet
-15C81E28:Ledo Armor
-15C82210:Ledo Gauntlets
-15C825F8:Ledo Leggings
-15EE66F0:Cainhurst Helm
-15EE6AD8:Cainhurst Armor
-15EE6EC0:Cainhurst Gauntlets
-15EE72A8:Cainhurst Leggings
-15EE8E00:Snickering Top Hat
-15EE91E8:Chester's Long Coat
-15EE95D0:Chester's Gloves
-15EE99B8:Chester's Trousers
-15EF0330:Crown of the Great Lord
-15EF0718:Mantle of the Great Lord
-15EF0B00:Gauntlets of the Great Lord
-15EF0EE8:Leggings of the Great Lord
-15EF5150:Helm of the Vassal
-15EF5538:Armor of the Vassal
-15EF5920:Gauntlets of the Vassal
-15EF5D08:Leggings of the Vassal
-15EF9F70:Giant Helm
-15EFA358:Giant Armor
-15EFA740:Giant Gauntlets
-15EFAB28:Giant Leggings
-15EFC680:Black Dragon Helm
-15EFCA68:Black Dragon Armor
-15EFCE50:Black Dragon Gauntlets
-15EFD238:Black Dragon Leggings
-15EFED90:Dragonrider Helm
-15EFF178:Dragonrider Armor
-15EFF560:Dragonrider Gauntlets
-15EFF948:Dragonrider Leggings
-15F014A0:Binded Hood
-15F01888:Binded Robe
-15F01C70:Binded Gloves
-15F02058:Binded Leggings
-15F03BB0:Helm of Aurous
-15F03F98:Armor of Aurous
-15F04380:Gauntlets of Aurous
-15F04768:Leggings of Aurous
-15F062C0:Vengarl's Helm
-15F066A8:Vengarl's Armor
-15F06A90:Vengarl's Gauntlets
-15F06E78:Vengarl's Leggings
-15F089D0:Alonne's Helm
-15F08DB8:Alonne's Armor
-15F091A0:Alonne's Gauntlets
-15F09588:Alonne's Leggings
-15F0B0E0:Rampart Golem Helm
-15F0B4C8:Rampart Golem Armor
-15F0B8B0:Rampart Golem Gauntlets
-15F0BC98:Rampart Golem Leggings
-15F0D7F0:Smelter Demon Helm
-15F0DBD8:Smelter Demon Armor
-15F0DFC0:Smelter Demon Gauntlets
-15F0E3A8:Smelter Demon Leggings
-15F0FF00:Heide Knight Helm
-15F102E8:Heide Knight Armor
-15F106D0:Heide Knight Gauntlets
-15F10AB8:Heide Knight Leggings
-15F12610:Imperious Helm
-15F129F8:Imperious Armor
-15F12DE0:Imperious Gauntlets
-15F131C8:Imperious Leggings
-15F14D20:Mirror Knight Helm
-15F15108:Mirror Knight Armor
-15F154F0:Mirror Knight Gauntlets
-15F158D8:Mirror Knight Leggings
-15F17430:Loyce Helm
-15F17818:Loyce Armor
-15F17C00:Loyce Gauntlets
-15F17FE8:Loyce Leggings
-15F1E960:Hood of the Forlorn
-15F1ED48:Armor of the Forlorn
-15F1F130:Gauntlets of the Forlorn
-15F1F518:Leggings of the Forlorn
-15F21070:Golem Helm
-15F21458:Golem Armor
-15F21840:Golem Gauntlets
-15F21C28:Golem Leggings
-15F23780:Brushwood Helm
-15F23B68:Brushwood Armor
-15F23F50:Brushwood Gauntlets
-15F24338:Brushwood Leggings
-15F285A0:Penetrator Helm
-15F28988:Penetrator Armor
-15F28D70:Penetrator Gauntlets
-15F29158:Penetrator Leggings
-15F2ACB0:Dark Silver Helm
-15F2B098:Dark Silver Armor
-15F2B480:Dark Silver Gauntlets
-15F2B868:Dark Silver Leggings
-15F2D3C0:Bone Ash Mask
-15F2D7A8:Bone Ash Armor
-15F2DB90:Bone Ash Gauntlets
-15F2DF78:Bone Ash Leggings
-13B20B80:Yhorm's Crown
-13B20F68:Yhorm's Armor
-13B21350:Yhorm's Gauntlets
-13B21738:Yhorm's Leggings
-15EE3FE0:Burial Knight Helm
-15EE43C8:Burial Knight Armor
-15EE47B0:Burial Knight Gauntlets
-15EE4B98:Burial Knight Leggings
-11F78A40:Grotto Hat
-11F78E28:Grotto Robe
-11F79210:Grotto Wrap
-11F795F8:Grotto Trousers
-12A70420:Saint's Veil
-12A70808:Saint's Dress
-12AEA540:Footman's Hood
-12AEA928:Footman's Overcoat
-12AEAD10:Footman's Bracelets
-12AEB0F8:Footman's Trousers
-12BDE780:Graveguard Mask
-12BDEB68:Graveguard Robe
-12BDEF50:Graveguard Manchettes
-12BDF338:Graveguard Kilt
-13D9DED0:Gloom Helm
-13D9E2B8:Gloom Armor
-13D9E6A0:Gloom Gauntlets
-13D9EA88:Gloom Leggings
-13DA7B10:Pursuer Helm
-13DA7EF8:Pursuer Armor
-13DA82E0:Pursuer Gauntlets
-13DA86C8:Pursuer Leggings
-13D9B7C0:Blindfold Cap
-13D9BBA8:Choir Garb
-13D9BF90:Choir Gloves
-13D9C378:Choir Skirt
-13DD1320:Consumed King's Knight Helm
-13DD1708:Consumed King's Knight Armor
-13DD1AF0:Consumed King's Knight Gauntlets
-13DD1ED8:Consumed King's Knight Leggings
-13DD3A30:Elite Lothric Knight Helm
-13DD3E18:Elite Lothric Knight Armor
-13DD4200:Elite Lothric Knight Gauntlets
-13DD45E8:Elite Lothric Knight Leggings
-15F39710:Royal Lothric Knight Helm
-15F39AF8:Royal Lothric Knight Armor
-13DD6140:Gertrude's Knight Helm
-13DD6528:Gertrude's Knight Armor
-13DE7698:Ascended Gertrude's Knight Armor
-13DD6910:Gertrude's Knight Gauntlets
-13DD6CF8:Gertrude's Knight Leggings
-13DD8850:Handmaid's Mask
-13DD8C38:Handmaid's Robe
-13DDB348:Aldrich Faithful Robe
-13DDBB18:Aldrich Faithful Skirt
-13DDD670:Vanguard Helm
-13DDDA58:Vanguard Armor
-13DDDE40:Vanguard Gauntlets
-13DDE228:Vanguard Leggings
-13DE4BA0:Gravekeeper’s Helm
-13DE4F88:Gravekeeper’s Armor
-13DE5370:Gravekeeper’s Gauntlets
-13DE5758:Gravekeeper’s Leggings
-13DE99C0:High Priestess Cowl
-13DE9DA8:High Priestess Garb
-15F40C40:Armored Warrior Helm
-15F41028:Armored Warrior Armor
-15F41410:Armored Warrior Gauntlets
-15F417F8:Armored Warrior Leggings
-15F43738:Wolf's Coat
-15F43B20:Wolf's Prosthetic
-15F43F08:Wolf's Trousers
-15F45A60:Hood of the Acolyte
-15F45E48:Garb of the Acolyte
-15F46230:Gloves of the Acolyte
-15F46618:Trousers of the Acolyte
-15F48170:Red Guard Helm
-15F48558:Red Guard Armor
-15F48940:Red Guard Gauntlets
-15F48D28:Red Guard Leggings
-15F4CF90:Ashina Helmet
-15F4D378:Ashina Armor
-15F4D760:Ashina Gauntlets
-15F4DB48:Ashina Leggings
-15F4A880:Eastern General Helmet
-15F4AC68:Eastern General Armor
-15F4B050:Eastern General Gauntlets
-15F4B438:Eastern General Leggings
-15F4F6A0:Okami Helmet
-15F4FA88:Okami Armor
-15F50258:Okami Leggings
-404D0E91:Vanilla Sherbet
-404D0E90:Tasteless Sherbet
-404D0F59:Drop Sherbet
-404D0EBB:Licorice Sherbet
-404D0EE0:Sugar Sherbet
-404D0EE1:Strawberry Sherbet
-404D0EE2:Bilberry Sherbet
-404D0EE5:Honey Sherbet
-404D0EE6:Orange Sherbet
-404D0EE8:Lavender Sherbet
-404D0ED0:Lemon Sherbet
-404D0ED3:Fig Sherbet
-404D0ED5:Tomato Sherbet
-404D0EEC:Peach Sherbet
-404D0EE3:Blueberry Sherbet
-404D0EEB:fusion Sherbet
-404D1084:Marshmallow Sherbet
-404D0EB3:Pumkin Sherbet
-40000153:Pale Pine Bundle
-40000152:Human Pine Bundle
-40000131:Rock
-00A87500:Dark Hand
-0001ADB0:Fists
-00061A80:Standard Arrow
-00061AE4:Fire Arrow
-00061B48:Poison Arrow
-00061BAC:Large Arrow
-00061C10:Feather Arrow
-00061C74:Moonlight Arrow
-00061CD8:Wood Arrow
-00061D3C:Dark Arrow
-00062250:Dragonslayer Greatarrow
-00062318:Dragonslayer Lightning Arrow
-0006237C:Onislayer Greatarrow
-000623E0:Millwood Greatarrow
-00062A20:Standard Bolt
-00062A84:Heavy Bolt
-00062AE8:Sniper Bolt
-00062B4C:Wood Bolt
-00062BB0:Lightning Bolt
-00062C14:Splintering Bolt
-00062C78:Exploding Bolt
-000D9490:Smoldering Straight Sword
-000F4240:Dagger
-000F6950:Bandit's Knife
-000F9060:Parrying Dagger
-000FDE80:Rotten Ghru Dagger
-00102CA0:Harpe
-001053B0:Scholar's Candlestick
-00107AC0:Tailbone Short Sword
-0010A1D0:Corvian Greatknife
-00111700:Handmaid's Dagger
-00116520:Aquamarine Dagger
-00118C30:Murky Hand Scythe
-001E8480:Shortsword
-001EAB90:Long Sword
-001ED2A0:Broadsword
-001EF9B0:Broken Straight Sword
-001F6EE0:Lothric Knight Sword
-00203230:Sunlight Straight Sword
-00205940:Rotten Ghru Curved Sword
-0020A760:Irithyll Straight Sword
-0020F580:Cleric's Candlestick
-002143A0:Morion Blade
-002191C0:Astora Straight Sword
-0021B8D0:Barbed Straight Sword
-0021DFE0:Executioner's Greatsword
-002206F0:Anri's Straight Sword
-00222E00:Onyx Blade
-00225510:Ringed Knight Straight Sword
-00227C20:Gael's Greatsword
-002DC6C0:Estoc
-002DEDD0:Mail Breaker
-002E14E0:Rapier
-002E3BF0:Ricard's Rapier
-002E6300:Crystal Sage's Rapier
-002E8A10:Irithyll Rapier
-003D3010:Shotel
-003D7E30:Scimitar
-003DA540:Falchion
-003DCC50:Carthus Curved Sword
-003DF360:Carthus Curved Greatsword
-003E1A70:Pontiff Knight Curved Sword
-003E4180:Storm Curved Sword
-003E6890:Painting Guardian's Curved Sword
-003E8FA0:Crescent Moon Sword
-003EB6B0:Carthus Shotel
-003EDDC0:Follower Sabre
-003F04D0:Demon Scar
-004C4B40:Uchigatana
-004C7250:Washing Pole
-004C9960:Chaos Blade
-004CC070:Black Blade
-004CE780:Bloodlust
-004D0E90:Darkdrift
-004D35A0:Frayed Blade
-005B8D80:Bastard Sword
-005BDBA0:Claymore
-005C29C0:Zweihander
-005C50D0:Greatsword
-005C9EF0:Astora Greatsword
-005CC600:Murakumo
-005D1420:Lothric Knight Greatsword
-005D8950:Black Knight Greatsword
-005DB060:Flamberge
-005DD770:Exile Greatsword
-005E2590:Greatsword of Judgment
-005E4CA0:Profaned Greatsword
-005E73B0:Cathedral Knight Greatsword
-005E9AC0:Farron Greatsword
-005F0FF0:Yhorm's Great Machete
-005F3700:Dark Sword
-005F5E10:Black Knight Sword
-005F8520:Lorian's Greatsword
-005FAC30:Twin Princes' Greatsword
-005FD340:Lothric's Holy Sword
-005FFA50:Wolnir's Holy Sword
-00602160:Wolf Knight's Greatsword
-00604870:Hollowslayer Greatsword
-00606F80:Moonlight Greatsword
-00609690:Drakeblood Greatsword
-0060BDA0:Firelink Greatsword
-0060E4B0:Fume Ultra Greatsword
-00610BC0:Old Wolf Curved Sword
-006132D0:Storm Ruler
-006159E0:Harald Curved Greatsword
-006ACFC0:Hand Axe
-006AF6D0:Battle Axe
-006B1DE0:Brigand Axe
-006B6C00:Crescent Axe
-006B9310:Greataxe
-006BE130:Butcher Knife
-006C0840:Dragonslayer's Axe
-006C5660:Thrall Axe
-006C7D70:Dragonslayer Greataxe
-006CA480:Demon's Greataxe
-006CCB90:Eleonora
-006D19B0:Man Serpent Hatchet
-006D40C0:Dragon King Greataxe
-006D67D0:Millwood Battle Axe
-006D8EE0:Earth Seeker
-007A1200:Club
-007A3910:Mace
-007A6020:Morning Star
-007A8730:Reinforced Club
-007AFC60:Large Club
-007B4A80:Great Club
-007BBFB0:Great Mace
-007C8300:Great Wooden Hammer
-007CAA10:Gargoyle Flame Hammer
-007CD120:Vordt's Great Hammer
-007D6D60:Heysel Pick
-007DBB80:Warpick
-007DE290:Pickaxe
-007E09A0:Dragon Tooth
-007E30B0:Smough's Great Hammer
-007E57C0:Blacksmith Hammer
-007E7ED0:Morne's Great Hammer
-007EA5E0:Spiked Mace
-007ECCF0:Quakestone Hammer
-007EF400:Ledo's Great Hammer
-00895440:Spear
-00897B50:Winged Spear
-0089C970:Partizan
-008A8CC0:Greatlance
-008AB3D0:Lothric Knight Long Spear
-008ADAE0:Four-Pronged Plow
-008B01F0:Gargoyle Flame Spear
-008B2900:Rotten Ghru Spear
-008B5010:Tailbone Spear
-008B7720:Soldering Iron
-008BC540:Dragonslayer Swordspear
-008BEC50:Arstor's Spear
-008C1360:Saint Bident
-008C3A70:Yorshka's Spear
-008C6180:Pike
-008CAFA0:Dragonslayer Spear
-008CD6B0:Follower Javelin
-008CFDC0:Ringed Knight Spear
-008D24D0:Lothric War Banner
-008D4BE0:Crucifix of the Mad King
-00989680:Great Scythe
-0098BD90:Lucerne
-0098E4A0:Glaive
-00990BB0:Halberd
-009959D0:Black Knight Greataxe
-0099A7F0:Pontiff Knight Great Scythe
-0099CF00:Great Corvian Scythe
-0099F610:Winged Knight Halberd
-009A1D20:Gundyr's Halberd
-009AB960:Red Hilted Halberd
-009AE070:Black Knight Glaive
-009B0780:Immolation Tinder
-009B2E90:Splitleaf Greatsword
-009B55A0:Friede's Great Scythe
-00A7D8C0:Claw
-00A7FFD0:Caestus
-00A826E0:Manikin Claws
-00A84DF0:Demon's Fist
-00A89C10:Crow Talons
-00B71B00:Whip
-00B7B740:Witch's Locks
-00B7DE50:Notched Whip
-00B80560:Spotted Whip
-00B82C70:Rose of Ariandel
-00C72090:Talisman
-00C747A0:Sorcerer's Staff
-00C76EB0:Storyteller's Staff
-00C795C0:Mendicant's Staff
-00C7E3E0:Man-grub's Staff
-00C80AF0:Archdeacon's Great Staff
-00C83200:Golden Ritual Spear
-00C88020:Yorshka's Chime
-00C8CE40:Sage's Crystal Staff
-00C8F550:Heretic's Staff
-00C91C60:Court Sorcerer's Staff
-00C94370:Witchtree Branch
-00C96A80:Izalith Staff
-00C99190:Cleric's Sacred Chime
-00C9B8A0:Priest's Chime
-00C9DFB0:Saint-tree Bellvine
-00CA06C0:Caitha's Chime
-00CA2DD0:Crystal Chime
-00CA54E0:Sunlight Talisman
-00CA7BF0:Canvas Talisman
-00CAA300:Sunless Talisman
-00CACA10:Saint's Talisman
-00CAF120:White Hair Talisman
-00CC77C0:Pyromancy Flame
-00CC9ED0:Pyromancer's Parting Flame
-00CCC5E0:Murky Longstaff
-00CCECF0:Sacred Chime of Filianore
-00CD1400:Preacher's Right Arm
-00CF8500:Dragonslayer Greatbow
-00D5C690:Short Bow
-00D5EDA0:Composite Bow
-00D63BC0:Light Crossbow
-00D662D0:Arbalest
-00D689E0:Longbow
-00D6B0F0:Dragonrider Bow
-00D6FF10:Avelyn
-00D72620:Knight's Crossbow
-00D74D30:Heavy Crossbow
-00D77440:White Birch Bow
-00D79B50:Darkmoon Longbow
-00D7C260:Onislayer Greatbow
-00D7E970:Black Bow of Pharis
-00D83790:Sniper Crossbow
-00D85EA0:Millwood Greatbow
-00D885B0:Repeating Crossbow
-00F42400:Sellsword Twinblades
-00F47220:Warden Twinblades
-00F49930:Winged Knight Twinaxes
-00F4C040:Dancer's Enchanted Swords
-00F4E750:Great Machete
-00F50E60:Brigand Twindaggers
-00F53570:Gotthard Twinswords
-00F58390:Onikiri and Ubadachi
-00F5AAA0:Drang Twinspears
-00F5F8C0:Great Door Twinshields
-00F61FD0:Drang Hammers
-00F646E0:Valorheart
-00F66DF0:Crow Quills
-00F69500:Ringed Knight Paired Greatswords
-01312D00:Buckler
-01315410:Small Leather Shield
-0131A230:Round Shield
-0131C940:Large Leather Shield
-01323E70:Hawkwood's Shield
-01326580:Iron Round Shield
-0132DAB0:Wooden Shield
-013301C0:Kite Shield
-013328D0:Ghru Rotshield
-013376F0:Havel's Greatshield
-01339E00:Target Shield
-0133C510:Elkhorn Round Shield
-0133EC20:Warrior's Round Shield
-01341330:Caduceus Round Shield
-01343A40:Red and White Round Shield
-01346150:Plank Shield
-01348860:Leather Shield
-0134AF70:Crimson Parma
-0134D680:Eastern Iron Shield
-0134FD90:Llewellyn Shield
-01354BB0:Golden Falcon Shield
-013572C0:Sacred Bloom Shield
-013599D0:Ancient Dragon Greatshield
-0135C0E0:Followers Shield
-0135E7F0:Dragonhead Shield
-01409650:Lothric Knight Shield
-01410B80:Knight Shield
-014159A0:Pontiff Knight Shield
-014180B0:Carthus Shield
-0141F5E0:Black Knight Shield
-01424400:Silver Knight Shield
-01426B10:Spiked Shield
-01429220:Pierce Shield
-0142B930:East-West Shield
-0142E040:Sunlight Shield
-01430750:Crest Shield
-01432E60:Dragon Crest Shield
-01435570:Spider Shield
-01437C80:Grass Crest Shield
-0143A390:Sunset Shield
-0143CAA0:Golden Wing Crest Shield
-0143F1B0:Blue Wooden Shield
-014418C0:Silver Eagle Kite Shield
-01443FD0:Stone Parma
-014466E0:Spirit Tree Crest Shield
-01448DF0:Porcine Shield
-0144B500:Shield of Want
-0144DC10:Wargod Wooden Shield
-01450320:Ethereal Oak Shield
-01452A30:Dragonhead Greatshield
-014FD890:Lothric Knight Greatshield
-014FFFA0:Cathedral Knight Greatshield
-01504DC0:Dragonslayer Greatshield
-015074D0:Moaning Shield
-0150C2F0:Yhorm's Greatshield
-0150EA00:Black Iron Greatshield
-01511110:Wolf Knight's Greatshield
-01513820:Twin Dragon Greatshield
-01515F30:Greatshield of Glory
-01518640:Curse Ward Greatshield
-0151AD50:Bonewheel Shield
-0151D460:Stone Greatshield
-015EF3C0:Torch
-015F1AD0:Follower Torch
-1121EAC0:Fallen Knight Helm
-1121EEA8:Fallen Knight Armor
-1121F290:Fallen Knight Gauntlets
-1121F678:Fallen Knight Trousers
-11298BE0:Knight Helm
-11298FC8:Knight Armor
-112993B0:Knight Gauntlets
-11299798:Knight Leggings
-11312D00:Vilhelm's Helm
-113130E8:Vilhelm's Armor
-113134D0:Vilhelm's Gauntlets
-113138B8:Vilhelm's Leggings
-11406F40:Firelink Helm
-11407328:Firelink Armor
-11407710:Firelink Gauntlets
-11407AF8:Firelink Leggings
-11481060:Sellsword Helm
-11481448:Sellsword Armor
-11481830:Sellsword Gauntlet
-11481C18:Sellsword Trousers
-114FB180:Herald Helm
-114FB568:Herald Armor
-114FB950:Herald Gloves
-114FBD38:Herald Trousers
-115752A0:Sunless Veil
-11575688:Sunless Armor
-11575A70:Sunless Gauntlets
-11575E58:Sunless Leggings
-115EF3C0:Black Hand Hat
-115EF7A8:Black Hand Armor
-115EFB90:Assassin Gloves
-115EFF78:Assassin Trousers
-11607A60:Assassin Hood
-11607E48:Assassin Armor
-116694E0:Xanthous Crown
-116698C8:Xanthous Overcoat
-11669CB0:Xanthous Gloves
-1166A098:Xanthous Trousers
-116E3600:Northern Helm
-116E39E8:Northern Armor
-116E3DD0:Northern Gloves
-116E41B8:Northern Trousers
-1175D720:Morne's Helm
-1175DB08:Morne's Armor
-1175DEF0:Morne's Gauntlets
-1175E2D8:Morne's Leggings
-117D7840:Silver Mask
-117D7C28:Leonhard's Garb
-117D8010:Leonhard's Gauntlets
-117D83F8:Leonhard's Trousers
-11851960:Sneering Mask
-11851D48:Pale Shade Robe
-11852130:Pale Shade Gloves
-11852518:Pale Shade Trousers
-118CBA80:Sunset Helm
-118CBE68:Sunset Armor
-118CC250:Sunset Gauntlets
-118CC638:Sunset Leggings
-11945BA0:Old Sage's Blindfold
-11945F88:Cornyx's Garb
-11946370:Cornyx's Wrap
-11946758:Cornyx's Skirt
-119BFCC0:Executioner Helm
-119C00A8:Executioner Armor
-119C0490:Executioner Gauntlets
-119C0878:Executioner Leggings
-11A39DE0:Billed Mask
-11A3A1C8:Black Dress
-11A3A5B0:Black Gauntlets
-11A3A998:Black Leggings
-11AB3F00:Pyromancer Crown
-11AB42E8:Pyromancer Garb
-11AB46D0:Pyromancer Wrap
-11AB4AB8:Pyromancer Trousers
-11B2E408:Antiquated Plain Garb
-11B2E7F0:Violet Wrappings
-11B2EBD8:Loincloth TRC
-11BA8140:Court Sorcerer Hood
-11BA8528:Court Sorcerer Robe
-11BA8910:Court Sorcerer Gloves
-11BA8CF8:Court Sorcerer Trousers
-11C22260:Shira's Crown
-11C22648:Shira's Armor
-11C22A30:Shira's Gloves
-11C22E18:Shira's Trousers
-11C9C380:Sorcerer Hood
-11C9C768:Sorcerer Robe
-11C9CB50:Sorcerer Gloves
-11C9CF38:Sorcerer Trousers
-11CB4E08:Clandestine Coat
-11D905C0:Cleric Hat
-11D909A8:Cleric Blue Robe
-11D90D90:Cleric Gloves
-11D91178:Cleric Trousers
-11E84800:Lapp's Helm
-11E84BE8:Lapp's Armor
-11E84FD0:Lapp's Gauntlets
-11E853B8:Lapp's Leggings
-12625A00:Steel Soldier Helm
-12625DE8:Deserter Armor
-126265B8:Deserter Trousers
-12656740:Thief Mask
-129020C0:Sage's Big Hat
-129F6300:Aristocrat's Mask
-129F66E8:Jailer Robe
-129F6AD0:Jailer Gloves
-129F6EB8:Jailer Trousers
-12CD29C0:Worker Hat
-12CD2DA8:Worker Garb
-12CD3190:Worker Gloves
-12CD3578:Worker Trousers
-12D4CAE0:Thrall Hood
-12DC6C00:Evangelist Hat
-12DC6FE8:Evangelist Robe
-12DC73D0:Evangelist Gloves
-12DC77B8:Evangelist Trousers
-12E40D20:Scholar's Shed Skin
-12E41108:Scholar's Robe
-12EBAE40:Winged Knight Helm
-12EBB228:Winged Knight Armor
-12EBB610:Winged Knight Gauntlets
-12EBB9F8:Winged Knight Leggings
-130291A0:Cathedral Knight Helm
-13029588:Cathedral Knight Armor
-13029970:Cathedral Knight Gauntlets
-13029D58:Cathedral Knight Leggings
-13197500:Lothric Knight Helm
-131978E8:Lothric Knight Armor
-13197CD0:Lothric Knight Gauntlets
-131980B8:Lothric Knight Leggings
-1328B740:Outrider Knight Helm
-1328BB28:Outrider Knight Armor
-1328BF10:Outrider Knight Gauntlets
-1328C2F8:Outrider Knight Leggings
-1337F980:Black Knight Helm
-1337FD68:Black Knight Armor
-13380150:Black Knight Gauntlets
-13380538:Black Knight Leggings
-133F9AA0:Dark Mask
-133F9E88:Dark Armor
-133FA270:Dark Gauntlets
-133FA658:Dark Leggings
-13473BC0:Exile Mask
-13473FA8:Exile Armor
-13474390:Exile Gauntlets
-13474778:Exile Leggings
-134EDCE0:Slave Knight Hood
-134EE0C8:Slave Knight Armor
-134EE4B0:Slave Knight Gauntlets
-134EE898:Slave Knight Leggings
-13567E00:Pontiff Knight Crown
-135681E8:Pontiff Knight Armor
-135685D0:Pontiff Knight Gauntlets
-135689B8:Pontiff Knight Leggings
-135E1F20:Ordained Hood
-135E2308:Ordained Dress
-135E2AD8:Ordained Trousers
-1365C040:Golden Crown
-1365C428:Dragonscale Armor
-1365C810:Golden Bracelets
-1365CBF8:Dragonscale Waistcloth
-136D6160:Wolnir's Crown
-13750280:Undead Legion Helm
-13750668:Undead Legion Armor
-13750A50:Undead Legion Gauntlet
-13750E38:Undead Legion Leggings
-137CA3A0:Follower Helm
-137CA788:Follower Armor
-137CAB70:Follower Gloves
-137CAF58:Follower Boots
-13938700:Fire Witch Helm
-13938AE8:Fire Witch Armor
-13938ED0:Fire Witch Gauntlets
-139392B8:Fire Witch Leggings
-139B2820:Millwood Knight Helm
-139B2C08:Millwood Knight Armor
-139B2FF0:Millwood Knight Gauntlets
-139B33D8:Millwood Knight Leggings
-13A2C940:Lorian's Helm
-13A2CD28:Lorian's Armor
-13A2D110:Lorian's Gauntlets
-13A2D4F8:Lorian's Leggings
-13AA6A60:Hood of Prayer
-13AA6E48:Robe of Prayer
-13AA7618:Skirt of Prayer
-13C14DC0:Dancer's Crown
-13C151A8:Dancer's Armor
-13C15590:Dancer's Gauntlets
-13C15978:Dancer's Leggings
-13C8EEE0:Ringed Knight Hood
-13C8F2C8:Ringed Knight Armor
-13C8F6B0:Ringed Knight Gauntlets
-13C8FA98:Ringed Knight Leggings
-13D09000:Gundyr's Helm
-13D093E8:Gundyr's Armor
-13D097D0:Gundyr's Gauntlets
-13D09BB8:Gundyr's Leggings
-13D83508:Harald Legion Armor
-13D838F0:Harald Legion Gauntlets
-13D83CD8:Harald Legion Leggings
-13EF1480:Archdeacon White Crown
-13EF1868:Archdeacon Holy Garb
-13EF2038:Archdeacon Skirt
-13F6B988:Deacon Robe
-13F6C158:Deacon Skirt
-1405F7E0:Iron Dragonslayer Helm
-1405FBC8:Iron Dragonslayer Armor
-1405FFB0:Iron Dragonslayer Gauntlets
-14060398:Iron Dragonslayer Leggings
-140D9CE8:Fire Keeper Robe
-140DA0D0:Fire Keeper Gloves
-140DA4B8:Fire Keeper Skirt
-14153A20:White Preacher Head
-142C1D80:Chain Helm
-142C2168:Chain Armor
-142C2550:Leather Gauntlets
-142C2938:Chain Leggings
-143B5FC0:Nameless Knight Helm
-143B63A8:Nameless Knight Armor
-143B6790:Nameless Knight Gauntlets
-143B6B78:Nameless Knight Leggings
-144AA200:Elite Knight Helm
-144AA5E8:Elite Knight Armor
-144AA9D0:Elite Knight Gauntlets
-144AADB8:Elite Knight Leggings
-1459E440:Faraam Helm
-1459E828:Faraam Armor
-1459EC10:Faraam Gauntlets
-1459EFF8:Faraam Boots
-14692680:Catarina Helm
-14692A68:Catarina Armor
-14692E50:Catarina Gauntlets
-14693238:Catarina Leggings
-1470C7A0:Standard Helm
-1470CB88:Hard Leather Armor
-1470CF70:Hard Leather Gauntlets
-1470D358:Hard Leather Boots
-147868C0:Havel's Helm
-14786CA8:Havel's Armor
-14787090:Havel's Gauntlets
-14787478:Havel's Leggings
-148009E0:Brigand Hood
-14800DC8:Brigand Armor
-148011B0:Brigand Gauntlets
-14801598:Brigand Trousers
-1487AB00:Pharis's Hat
-1487AEE8:Leather Armor
-1487B2D0:Leather Gloves
-1487B6B8:Leather Boots
-148F4C20:Ragged Mask
-148F5008:Master's Attire
-148F53F0:Master's Gloves
-148F57D8:Loincloth
-1496ED40:Old Sorcerer Hat
-1496F128:Old Sorcerer Coat
-1496F510:Old Sorcerer Gauntlets
-1496F8F8:Old Sorcerer Boots
-149E8E60:Conjurator Hood
-149E9248:Conjurator Robe
-149E9630:Conjurator Manchettes
-149E9A18:Conjurator Boots
-14A62F80:Thief Mask
-14A63368:Black Leather Armor
-14A63750:Black Leather Gloves
-14A63B38:Black Leather Boots
-14ADD0A0:Symbol of Avarice
-14B571C0:Creighton's Steel Mask
-14B575A8:Mirrah Chain Mail
-14B57990:Mirrah Chain Gloves
-14B57D78:Mirrah Chain Leggings
-14BD12E0:Maiden Hood
-14BD16C8:Maiden Robe
-14BD1AB0:Maiden Gloves
-14BD1E98:Maiden Skirt
-14C4B400:Alva Helm
-14C4B7E8:Alva Armor
-14C4BBD0:Alva Gauntlets
-14C4BFB8:Alva Leggings
-14CC5520:Ruin Sentinel Helm
-14CC5908:Ruin Sentinel Armor
-14CC5CF0:Ruin Sentinel Gauntlets
-14CC60D8:Ruin Sentinel Leggings
-14D3F640:Shadow Mask
-14D3FA28:Shadow Garb
-14D3FE10:Shadow Gauntlets
-14D401F8:Shadow Leggings
-14DB9760:Desert Pyromancer Hood
-14DB9B48:Desert Pyromancer Garb
-14DB9F30:Desert Pyromancer Gloves
-14DBA318:Desert Pyromancer Skirt
-14E33880:Eastern Helm
-14E33C68:Eastern Armor
-14E34050:Eastern Gauntlets
-14E34438:Eastern Leggings
-14EAD9A0:Black Witch Hat
-14EADD88:Black Witch Garb
-14EAE170:Black Witch Wrappings
-14EAE558:Black Witch Trousers
-14F27AC0:Helm of Favor
-14F27EA8:Embraced Armor of Favor
-14F28290:Gauntlets of Favor
-14F28678:Leggings of Favor
-14FA1BE0:Black Witch Veil
-1501BD00:Brass Helm
-1501C0E8:Brass Armor
-1501C4D0:Brass Gauntlets
-1501C8B8:Brass Leggings
-15095E20:Blindfold Mask
-1510FF40:Silver Knight Helm
-15110328:Silver Knight Armor
-15110710:Silver Knight Gauntlets
-15110AF8:Silver Knight Leggings
-15204180:Lucatiel's Mask
-15204568:Mirrah Vest
-15204950:Mirrah Gloves
-15204D38:Mirrah Trousers
-152F83C0:Iron Helm
-152F87A8:Armor of the Sun
-152F8B90:Iron Bracelets
-152F8F78:Iron Leggings
-153EC600:Drakeblood Helm
-153EC9E8:Drakeblood Armor
-153ECDD0:Drakeblood Gauntlets
-153ED1B8:Drakeblood Leggings
-154E0C28:Drang Armor
-154E1010:Drang Gauntlets
-154E13F8:Drang Shoes
-155D4A80:Black Iron Helm
-155D4E68:Black Iron Armor
-155D5250:Black Iron Gauntlets
-155D5638:Black Iron Leggings
-156C8CC0:Painting Guardian Hood
-156C90A8:Painting Guardian Gown
-156C9490:Painting Guardian Gloves
-156C9878:Painting Guardian Waistcloth
-157BCF00:Wolf Knight Helm
-157BD2E8:Wolf Knight Armor
-157BD6D0:Wolf Knight Gauntlets
-157BDAB8:Wolf Knight Leggings
-158B1140:Dragonslayer Helm
-158B1528:Dragonslayer Armor
-158B1910:Dragonslayer Gauntlets
-158B1CF8:Dragonslayer Leggings
-159A5380:Smough's Helm
-159A5768:Smough's Armor
-159A5B50:Smough's Gauntlets
-159A5F38:Smough's Leggings
-15B8D800:Helm of Thorns
-15B8DBE8:Armor of Thorns
-15B8DFD0:Gauntlets of Thorns
-15B8E3B8:Leggings of Thorns
-15D75C80:Crown of Dusk
-15D76068:Antiquated Dress
-15D76450:Antiquated Gloves
-15D76838:Antiquated Skirt
-15E69EC0:Karla's Pointed Hat
-15E6A2A8:Karla's Coat
-15E6A690:Karla's Gloves
-15E6AA78:Karla's Trousers
-20002710:Blade of the Darkmoon
-20002724:Watchdogs of Farron
-2000272E:Aldrich Faithful
-20002738:Warrior of Sunlight
-20002742:Mound-makers
-2000274C:Way of Blue
-20002756:Blue Sentinels
-20002760:Rosaria's Fingers
-2000276A:Spear of the Church
-20004E20:Life Ring
-20004E21:Life Ring+1
-20004E22:Life Ring+2
-20004E23:Life Ring+3
-20004E2A:Chloranthy Ring
-20004E2B:Chloranthy Ring+1
-20004E2C:Chloranthy Ring+2
-20004E2D:Chloranthy Ring+3
-20004E34:Havel's Ring
-20004E35:Havel's Ring+1
-20004E36:Havel's Ring+2
-20004E37:Havel's ring+3
-20004E3E:Ring of Favor
-20004E3F:Ring of Favor+1
-20004E40:Ring of Favor+2
-20004E41:Ring of Favor+3
-20004E48:Ring of Steel Protection
-20004E49:Ring of Steel Protection+1
-20004E4A:Ring of Steel Protection+2
-20004E4B:Ring of Steel Protection+3
-20004E52:Flame Stoneplate Ring
-20004E53:Flame Stoneplate Ring+1
-20004E54:Flame Stoneplate Ring+2
-20004E5C:Thunder Stoneplate Ring
-20004E5D:Thunder Stoneplate Ring+1
-20004E5E:Thunder Stoneplate Ring+2
-20004E66:Magic Stoneplate Ring
-20004E67:Magic Stoneplate Ring+1
-20004E68:Magic Stoneplate Ring+2
-20004E70:Dark Stoneplate Ring
-20004E71:Dark Stoneplate Ring+1
-20004E72:Dark Stoneplate Ring+2
-20004E7A:Speckled Stoneplate Ring
-20004E7B:Speckled Stoneplate Ring+1
-20004E84:Bloodbite Ring
-20004E85:Bloodbite Ring+1
-20004E8E:Poisonbite Ring
-20004E8F:Poisonbite Ring+1
-20004E98:Cursebite Ring
-20004EA2:Fleshbite Ring
-20004EA3:Fleshbite Ring+1
-20004EAC:Wood Grain Ring
-20004EAD:Wood Grain Ring+1
-20004EAE:Wood Grain Ring+2
-20004EB6:Scholar Ring
-20004EC0:Priestess Ring
-20004ECA:Red Tearstone Ring
-20004ED4:Blue Tearstone Ring
-20004EDE:Wolf Ring
-20004EDF:Wolf Ring+1
-20004EE0:Wolf Ring+2
-20004EE1:Wolf Ring+3
-20004EE8:Leo Ring
-20004EF2:Ring of Sacrifice
-20004F06:Young Dragon Ring
-20004F07:Bellowing Dragoncrest Ring
-20004F10:Lucky Clover Ring
-20004F11:Witch's Ring
-20004F1A:Ring of the Unburdened
-20004F1B:Ring of the Sun's First Born
-20004F2E:Lingering Dragoncrest Ring
-20004F2F:Lingering Dragoncrest Ring+1
-20004F30:Lingering Dragoncrest Ring+2
-20004F38:Sage Ring
-20004F39:Sage Ring+1
-20004F3A:Sage Ring+2
-20004F42:Slumbering Dragoncrest Ring
-20004F4C:Dusk Crown Ring
-20004F56:Saint's Ring
-20004F60:Deep Ring
-20004F6A:Darkmoon Ring
-20004F88:Leo Ring
-20004F92:Hawk Ring
-20004F9C:Hornet Ring
-20004FA6:Covetous Gold Serpent Ring
-20004FA7:Covetous Gold Serpent Ring+1
-20004FA8:Covetous Gold Serpent Ring+2
-20004FA9:Covetous Gold Serpent Ring+3
-20004FB0:Covetous Silver Serpent Ring
-20004FB1:Covetous Silver Serpent Ring+1
-20004FB2:Covetous Silver Serpent Ring+2
-20004FB3:Covetous Silver Serpent Ring+3
-20004FBA:Sun Princess Ring
-20004FC4:Silvercat Ring
-20004FCE:Skull Ring
-20004FD8:Untrue White Ring
-20004FE2:Carthus Milkring
-20004FEC:Knight's Ring
-20004FF6:Hunter's Ring
-20005000:Knight Slayer's Ring
-2000500A:Magic Clutch Ring
-20005014:Lightning Clutch Ring
-2000501E:Fire Clutch Ring
-20005028:Dark Clutch Ring
-20005032:Baneful Bird Ring
-2000503C:Flynn's Ring
-20005046:Prisoner's Chain
-20005050:Untrue Dark Ring
-20005064:Obscuring Ring
-2000506E:Ring of the Evil Eye
-2000506F:Ring of the Evil Eye+1
-20005070:Ring of the Evil Eye+2
-20005071:Ring of the Evil Eye+3
-20005078:Calamity Ring
-20005082:Farron Ring
-2000508C:Aldrich's Ruby
-20005096:Aldrich's Sapphire
-200050B4:Lloyd's Sword Ring
-200050BE:Lloyd's Shield Ring
-200050DC:Estus Ring
-200050E6:Ashen Estus Ring
-200050F0:Horsehoof Ring
-200050FA:Carthus Bloodring
-20005104:Reversal Ring
-2000510E:Pontiff's Right Eye
-20005136:Pontiff's Left Eye
-2000515E:Dragonscale Ring
-20005208:Chillbite Ring
-200DBC68:Debug Life Ring
-200DBC69:Debug Life Ring+1
-200DBC6A:Debug Life Ring+2
-200DBC6C:Debug Life Ring+3
-200DBC72:Debug Stamina Ring
-200DBC73:Debug Stamina Ring+1
-200DBC74:Debug Stamina Ring+2
-200DE2B0:Debug Effects Ring
-40000064:White Sign Soapstone
-40000065:Red Sign Soapstone
-40000066:Red Eye Orb
-40000067:Black Separation Crystal
-4000006C:Roster of Knights
-4000006F:Cracked Red Eye Orb
-40000073:Black Eye Orb
-40000075:Darksign
-40000077:Way of White Circlet
-40000096:Estus Flask
+                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">40000096:Estus Flask
 40000097:Estus Flask
 40000098:Estus Flask+1
 40000099:Estus Flask+1
@@ -3462,59 +2336,76 @@ CREATETHREAD(ItemGib)
 400000D1:Ashen Estus Flask+9
 400000D2:Ashen Estus Flask+10
 400000D3:Ashen Estus Flask+10
+400001F4:Ember
+4000085D:Estus Shard
+4000085F:Undead Bone Shard
 400000F0:Divine Blessing
 400000F1:Hidden Blessing
+400001C8:Siegbräu
 40000104:Green Blossom
-40000106:Budding Green Blossom
+40000105:Budding Green Blossom
+40000106:Budding Green Blossom (Message)
+40000118:Repair Powder
+400001CA:Blue Bug Pellet
+400001CB:Red Bug Pellet
+400001CC:Yellow Bug Pellet
+400001CD:Black Bug Pellet
+400001C4:Mossfruit
 4000010E:Bloodred Moss Clump
 4000010F:Purple Moss Clump
 40000110:Blooming Purple Moss Clump
-40000112:Purging Stone
 40000114:Rime-blue Moss Clump
-40000118:Repair Powder
-40000122:Kukri
-40000124:Firebomb
-40000125:Dung Pie
-40000126:Alluring Skull
-40000128:Undead Hunter Charm
-40000129:Black Firebomb
-4000012B:Rope Firebomb
-4000012C:Lightning Urn
-4000012E:Rope Black Firebomb
-4000012F:Stalk Dung Pie
-40000130:Duel Charm
+40000112:Purging Stone
 40000136:Throwing Knife
 40000137:Poison Throwing Knife
+40000122:Kukri
 4000013B:Church Guardian Shiv
+40000124:Firebomb
+4000012B:Rope Firebomb
+40000129:Black Firebomb
+4000012E:Rope Black Firebomb
+4000012C:Lightning Urn
+40000125:Dung Pie
+4000012F:Stalk Dung Pie
 4000014A:Charcoal Pine Resin
-4000014B:Gold Pine Resin
-4000014E:Human Pine Resin
-4000014F:Carthus Rouge
-40000150:Pale Pine Resin
 40000154:Charcoal Pine Bundle
+4000014B:Gold Pine Resin
 40000155:Gold Pine Bundle
+40000150:Pale Pine Resin
+40000153:Pale Pine Bundle
+4000014E:Human Pine Resin
+40000152:Human Pine Bundle
+40000151:Thunder Flask
 40000157:Rotten Pine Resin
+4000014F:Carthus Rouge
+40000126:Alluring Skull
+40000156:Thunder Paper
+40000128:Undead Hunter Charm
+40000130:Duel Charm
+40000131:Rock
+400001C7:Rusted Coin
+400001C9:Rusted Gold Coin
+400001C6:Young White Branch
+400001CE:Young White Branch (Message)
+400001CF:Young White Branch (Starting Item)
+4000017C:Rubbish
+40000172:Prism Stone
 4000015E:Homeward Bone
 4000015F:Coiled Sword Fragment
-4000016E:Wolf's Blood Swordgrass
-4000016F:Human Dregs
-40000170:Forked Pale Tongue
-40000171:Proof of a Concord Well Kept
-40000172:Prism Stone
 40000173:Binoculars
-40000174:Proof of a Concord Kept
-40000175:Pale Tongue
-40000176:Vertebra Shackle
-40000177:Sunlight Medal
-40000178:Pendant
+40000846:Loretta's Bone
 40000179:Dragon Head Stone
 4000017A:Dragon Torso Stone
-4000017B:Filianore's Spear Ornament
-4000017C:Rubbish
-40000181:Dried Finger
 40000183:Twinkling Dragon Head Stone
 40000184:Twinkling Dragon Torso Stone
-40000186:Fire Keeper Soul
+4000028A:Ritual Spear Fragment
+4000028B:Divine Spear Fragment
+40000208:Hello Carving
+40000209:Thank you Carving
+4000020A:Very good! Carving
+4000020B:I'm sorry Carving
+4000020C:Help me! Carving
+40000075:Darksign
 40000190:Fading Soul
 40000191:Soul of a Deserted Corpse
 40000192:Large Soul of a Deserted Corpse
@@ -3536,140 +2427,54 @@ CREATETHREAD(ItemGib)
 400001A2:Soul of a Venerable Old Hand
 400001A3:Soul of a Champion
 400001A4:Soul of a Great Champion
-400001B8:Seed of a Giant Tree
-400001C6:Young White Branch
-400001C7:Rusted Coin
-400001C8:Siegbräu
-400001C9:Rusted Gold Coin
-400001CA:Blue Bug Pellet
-400001CB:Red Bug Pellet
-400001CC:Yellow Bug Pellet
-400001CD:Black Bug Pellet
-400001CF:Young White Branch
-400001EA:Dark Sigil
-400001F4:Ember
-40000208:Hello Carving
-40000209:Thank you Carving
-4000020A:Very good! Carving
-4000020B:I'm sorry Carving
-4000020C:Help me! Carving
-4000028A:Ritual Spear Fragment
-4000028B:Divine Spear Fragment
-400002C8:Soul of Champion Gundyr
-400002CA:Soul of the Dancer
-400002CB:Soul of a Crystal Sage
-400002CD:Soul of the Blood of the Wolf
-400002CE:Soul of Consumed Oceiros
-400002CF:Soul of Boreal Valley Vordt
-400002D0:Soul of the Old Demon King
-400002D1:Soul of Dragonslayer Armour
-400002D2:Soul of the Nameless King
-400002D4:Soul of Pontiff Sulyvahn
-400002D5:Soul of Aldrich
-400002D6:Soul of High Lord Wolnir
-400002D7:Soul of the Rotted Greatwood
 400002D8:Soul of Rosaria
+400002CF:Soul of Boreal Valley Vordt
+400002D7:Soul of the Rotted Greatwood
+400002CB:Soul of a Crystal Sage
 400002D9:Soul of the Deacons of the Deep
-400002DB:Soul of the Twin Princes
-400002DC:Soul of Yhorm the Giant
-400002DD:Soul of the Lords
+400002D6:Soul of High Lord Wolnir
+400002D4:Soul of Pontiff Sulyvahn
+400002CA:Soul of the Dancer
+400002D1:Soul of Dragonslayer Armour
 400002E3:Soul of a Demon
-400002E6:Soul of the Twin Princes
 400002E7:Soul of a Stray Demon
+400002D0:Soul of the Old Demon King
+400002CE:Soul of Consumed Oceiros
+400002C8:Soul of Champion Gundyr
+400002D2:Soul of the Nameless King
+400002CD:Soul of the Blood of the Wolf
+400002DC:Soul of Yhorm the Giant
+400002D5:Soul of Aldrich
+400002DB:Soul of the Twin Princes
+400002DD:Soul of the Lords
 400002E8:Soul of Sister Friede
-400002E9:Soul of Slave Knight Gael
 400002EA:Soul of the Demon Prince
 400002EB:Soul of Darkeater Midir
-400003E8:Titanite Shard
-400003E9:Large Titanite Shard
-400003EA:Titanite Chunk
-400003EB:Titanite Slab
-400003FC:Titanite Scale
-40000406:Twinkling Titanite
-4000044C:Heavy Gem
-40000456:Sharp Gem
-40000460:Refined Gem
-4000046A:Crystal Gem
-40000474:Arcane Gem
-4000047E:Fire Gem
-40000488:Chaos Gem
-40000492:Lightning Gem
-4000049C:Deep Gem
-400004A6:Dark Gem
-400004B0:Poison Gem
-400004BA:Blood Gem
-400004C4:Raw Gem
-400004CE:Sacred Gem
-400004D8:Hollow Gem
-400004E2:Shriving Stone
-400007D1:Lift Chamber Key
-400007D5:Small Doll
-400007D7:Jailbreaker's Key
-400007D8:Jailer's Key Ring
-400007D9:Grave Key
-400007DA:Cell Key
-400007DB:Dungeon Ground Floor Key
-400007DC:Old Cell Key
-400007DD:Tower Key
-400007DE:Grand Archives Key
-400007DF:Tower Key
-40000836:Small Lothric Banner
-40000837:Farron Coal
-40000838:Sage's Coal
-40000839:Giant's Coal
-4000083A:Profaned Coal
-4000083B:Mortician's Ashes
-4000083C:Dreamchaser's Ashes
-4000083D:Paladin's Ashes
-4000083E:Grave Warden's Ashes
-4000083F:Greirat's Ashes
-40000840:Orbeck's Ashes
-40000841:Cornyx's Ashes
-40000842:Karla's Ashes
-40000843:Irina's Ashes
-40000844:Yuria's Ashes
-40000845:Basin of Vows
-40000846:Loretta's Bone
-40000847:Braille Divine Tome of Carim
-40000848:Braille Divine Tome of Lothric
-40000849:Braille Divine Sunlight Tome
-4000084B:Cinders of a Lord
-4000084C:Cinders of a Lord
-4000084D:Cinders of a Lord
-4000084E:Cinders of a Lord
-4000084F:Great Swamp Pyromancy Tome
-40000850:Carthus Pyromancy Tome
-40000851:Izalith Pyromancy Tome
-40000852:Quelana Pyromancy Tome
-40000853:Grave Warden Pyromancy Tome
-40000854:Sage's Scroll
-40000855:Logan's Scroll
-40000856:Crystal Scroll
-40000857:Transposing Kiln
-40000859:Coiled Sword
-40000869:Champions Bones
-4000085A:Eyes of a Fire Keeper
-4000085B:Sword of Avowal
-4000085C:Golden Scroll
-4000085D:Estus Shard
-4000085E:Hawkwood's Swordgrass
-4000085F:Undead Bone Shard
-40000860:Deep Braille Divine Tome
-40000861:Londor Braille Divine Tome
-40000862:Excrement-covered Ashes
-40000863:Prisoner Chief's Ashes
-40000864:Xanthous Ashes
-40000865:Hollow's Ashes
-40000866:Patches' Ashes
-40000867:Dragon Chaser's Ashes
-40000868:Easterner's Ashes
-40000869:Champions Bones
-4000086A:Captain's Ashes
-4000086B:Contraption Key
-4000086C:Small Envoy Banner
-4000086D:Old Woman's Ashes
-4000086E:Blood of the Dark Soul
-4000086F:Young Grass Dew
+400002E9:Soul of Slave Knight Gael
+40000177:Sunlight Medal
+40000174:Proof of a Concord Kept
+40000171:Proof of a Concord Well Kept
+40000175:Pale Tongue
+40000170:Forked Pale Tongue
+40000176:Vertebra Shackle
+4000016E:Wolf's Blood Swordgrass
+4000016F:Human Dregs
+4000017B:Filianore's Spear Ornament
+40000064:White Sign Soapstone
+40000065:Red Sign Soapstone
+40000067:Black Separation Crystal
+4000006F:Cracked Red Eye Orb
+40000066:Red Eye Orb
+40000073:Black Eye Orb
+40000181:Dried Finger
+400001B8:Seed of a Giant Tree
+40000077:Way of White Circlet
+4000006C:Roster of Knights
+40000258:Champion's Vigor Challenge
+40000259:Champion's Endurance Challenge
+4000025A:Champion's Absorption Challenge
+4000025B:Champion's Drain Challenge
+4000025C:Champion's Stamina Challenge
 40002328:Beckon
 40002329:Point forward
 4000232A:Hurrah!
@@ -3702,114 +2507,1324 @@ CREATETHREAD(ItemGib)
 40002348:Darkmoon Loyalty
 40002349:Sleep
 4000234A:Toast
-4000234B:Silent Ally!
-40124F80:Farron Dart
-40127690:Great Farron Dart
+4000234B:Silent Ally
+4000234D:Make Contact
+404D0E90:Tasteless Sherbet
+404D0E91:Vanilla Sherbet
+404D0EB3:Pumpkin Sherbet
+404D0EBB:Licorice Sherbet
+404D0ED0:Lemon Sherbet
+404D0ED3:Fig Sherbet
+404D0ED5:Tomato Sherbet
+404D0EE0:Sugar Sherbet
+404D0EE1:Strawberry Sherbet
+404D0EE2:BilBerry Sherbet
+404D0EE3:Blueberry Sherbet
+404D0EE5:Honey Sherbet
+404D0EE6:Orange Sherbet
+404D0EE8:Lavender Sherbet
+404D0EEB:Fusion Sherbet
+404D0EEC:Peach Sherbet
+404D0F59:Drop Sherbet
+404D1084:Marshmallow Sherbet
+40000178:Pendant
+400003E8:Titanite Shard
+400003E9:Large Titanite Shard
+400003F2:Dragon Scale
+400003EA:Titanite Chunk
+40000406:Twinkling Titanite
+400003FC:Titanite Scale
+400003EB:Titanite Slab
+4000044C:Heavy Gem
+40000456:Sharp Gem
+40000460:Refined Gem
+400004C4:Raw Gem
+4000046A:Crystal Gem
+40000474:Arcane Gem
+4000047E:Fire Gem
+40000488:Chaos Gem
+40000492:Lightning Gem
+400004CE:Sacred Gem
+4000049C:Deep Gem
+400004A6:Dark Gem
+400004BA:Blood Gem
+400004B0:Poison Gem
+400004D8:Hollow Gem
+400004E2:Shriving Stone
+4000084B:Cinders of a Lord (Abyss Watchers)
+4000084C:Cinders of a Lord (Yhorm the Giant)
+4000084D:Cinders of a Lord (Aldrich, Devourer of Gods)
+4000084E:Cinders of a Lord (Prince Lothric)
+40000857:Transposing Kiln
+4000085A:Eyes of a Fire Keeper
+40000186:Fire Keeper Soul
+400007DA:Cell Key
+400007D1:Lift Chamber Key
+400007D9:Grave Key
+400007D8:Jailer's Key Ring
+400007D7:Jailbreaker's Key
+400007DC:Old Cell Key
+400007DE:Grand Archives Key
+400007DD:Tower Key
+400007DF:Tower Key
+40000871:Mystical Key
+40000870:Old Grave Key
+400007DB:Dungeon Ground Floor Key
+4000086B:Contraption Key
+40000836:Small Lothric Banner
+4000086C:Small Envoy Banner
+400007D5:Small Doll
+40000845:Basin of Vows
+4000085E:Hawkwood's Swordgrass
+40000859:Coiled Sword
+4000085B:Sword of Avowal
+4000086E:Blood of the Dark Soul
+4000086F:Young Grass Dew
+40000837:Farron Coal
+40000838:Sage's Coal
+40000839:Giant's Coal
+4000083A:Profaned Coal
+40000854:Sage's Scroll
+40000855:Logan's Scroll
+40000856:Crystal Scroll
+4000085C:Golden Scroll
+4000084F:Great Swamp Pyromancy Tome
+40000850:Carthus Pyromancy Tome
+40000851:Izalith Pyromancy Tome
+40000852:Quelana Pyromancy Tome
+40000853:Grave Warden Pyromancy Tome
+40000847:Braille Divine Tome of Carim
+40000848:Braille Divine Tome of Lothric
+40000849:Braille Divine Sunlight Tome
+40000861:Londor Braille Divine Tome
+40000860:Deep Braille Divine Tome
+4000083B:Mortician's Ashes
+4000083D:Paladin's Ashes
+4000083C:Dreamchaser's Ashes
+4000083E:Grave Warden's Ashes
+40000862:Excrement-covered Ashes
+40000863:Prisoner Chief's Ashes
+40000864:Xanthous Ashes
+40000868:Easterner's Ashes
+40000867:Dragon Chaser's Ashes
+40000865:Hollow's Ashes
+4000086A:Captain's Ashes
+4000083F:Greirat's Ashes
+40000840:Orbeck's Ashes
+40000841:Cornyx's Ashes
+40000843:Irina's Ashes
+40000842:Karla's Ashes
+40000866:Patches' Ashes
+40000844:Yuria's Ashes
+40000869:Champions Bones
+4000086D:Old Woman's Ashes
+400001EA:Dark Sigil
 4013D620:Soul Arrow
 4013DA08:Great Soul Arrow
 4013DDF0:Heavy Soul Arrow
 4013E1D8:Great Heavy Soul Arrow
+40124F80:Farron Dart
+40127690:Great Farron Dart
+4014EF60:Farron Hail
 4013E5C0:Homing Soulmass
 4013E9A8:Homing Crystal Soulmass
+4014F348:Crystal Hail
 4013ED90:Soul Spear
 4013F178:Crystal Soul Spear
-4013F560:Deep Soul
-4013F948:Great Deep Soul
+4014E790:White Dragon Breath
+4018B820:Soul Stream
+4014F730:Soul Greatsword
+4014FB18:Farron Flashsword
+4014FF00:Old Moonlight
 4013FD30:Magic Weapon
 40140118:Great Magic Weapon
 40140500:Crystal Magic Weapon
 401408E8:Frozen Weapon
 40144B50:Magic Shield
 40144F38:Great Magic Shield
-40147260:Hidden Weapon
-40147648:Hidden Body
+4014A910:Spook
+4014B0E0:Aural Decoy
+401A8CE0:Pestilent Mist
+401A90C8:Snap Freeze
 40149970:Cast Light
 4014A528:Repair
-4014A910:Spook
+40147260:Hidden Weapon
+40147648:Hidden Body
 4014ACF8:Chameleon
-4014B0E0:Aural Decoy
-4014E790:White Dragon Breath
-4014EF60:Farron Hail
-4014F348:Crystal Hail
-4014F730:Soul Greatsword
-4014FB18:Farron Flashsword
-4014FF00:Old Moonlight
-401875B8:Affinity
-401879A0:Great Soul Dregs
-40189CC8:Dark Edge
-4018B820:Soul Stream
 40193138:Twisted Wall of Light
-401A8CE0:Pestilent Mercury
-401A90C8:Snap Freeze
+4013F560:Deep Soul
+4013F948:Great Deep Soul
+401879A0:Great Soul Dregs
+401875B8:Affinity
+40189CC8:Dark Edge
 40249F00:Fireball
 4024A6D0:Fire Orb
-4024AAB8:Firestorm
+4027FA60:Bursting Fireball
+40256250:Great Chaos Fire Orb
+402579C0:Chaos Bed Vestiges
+40257DA8:Floating Chaos
 4024B288:Fire Surge
-4024BA58:Black Serpent
-4024C610:Combustion
+40256A20:Fire Whip
+4024AAB8:Firestorm
+40256638:Chaos Storm
 4024C9F8:Great Combustion
+40258190:Flame Fan
+40284880:Sacred Flame
+402575D8:Profaned Flame
+402896A0:Seething Chaos
 4024ED20:Poison Mist
 4024F108:Toxic Mist
 4024F4F0:Acid Surge
-40251430:Iron Flesh
 40251818:Flash Sweat
-402527B8:Carthus Flame Arc
-40252BA0:Rapport
-40253B40:Power Within
-40256250:Great Chaos Fire Orb
-40256638:Chaos Storm
-40256A20:Fire Whip
-40256E08:Black Flame
-402575D8:Profaned Flame
-402579C0:Chaos Bed Vestiges
-40257DA8:Floating Chaos
-40258190:Flame Fan
-4025B070:Warmth
 402717D0:Profuse Sweat
-4027D350:Black Fire Orb
-4027FA60:Bursting Fireball
-40282170:Boulder Heave
-40284880:Sacred Flame
+40251430:Iron Flesh
+40253B40:Power Within
 40286F90:Carthus Beacon
-402896A0:Seething Chaos
+402527B8:Carthus Flame Arc
+4025B070:Warmth
+40252BA0:Rapport
+40282170:Boulder Heave
+40256E08:Black Flame
+4027D350:Black Fire Orb
+4024BA58:Black Serpent
 403540D0:Heal Aid
 403567E0:Heal
 40356BC8:Med Heal
 40356FB0:Great Heal
 40357398:Soothing Sunlight
 40357780:Replenishment
-40357B68:Bountiful Sunlight
 40358338:Bountiful Light
+40357B68:Bountiful Sunlight
+40364688:Projected Heal
 40358720:Caressing Tears
-40358B08:Lightning Arrow
 4035B600:Tears of Denial
 4035B9E8:Homeward
-4035DD10:Force
-4035E0F8:Wrath of the Gods
-4035E4E0:Emit Force
 40360420:Seek Guidance
+40365DF8:Sacred Oath
+4035DD10:Force
+4035E4E0:Emit Force
+4035E0F8:Wrath of the Gods
+403642A0:Way of White Corona
+40358B08:Lightning Arrow
+40359AA8:Holy Bident
 40362B30:Lightning Spear
 40362F18:Great Lightning Spear
 40363300:Sunlight Spear
+40389C30:Lightning Stake
 403636E8:Lightning Storm
-40363AD0:Gnaw
-40363EB8:Dorhys' Gnawing
-403642A0:Way of White Corona
-40364688:Projected Heal
-40365240:Magic Barrier
-40365628:Great Magic Barrier
-40365DF8:Sacred Oath
-4036A448:Vow of Silence
+4038C340:Divine Pillars of Light
+40395F80:Blessed Weapon
 4036C770:Lightning Blade
 4036CB58:Darkmoon Blade
+40365240:Magic Barrier
+40365628:Great Magic Barrier
 40378AC0:Dark Blade
+4036A448:Vow of Silence
 40387520:Dead Again
-40389C30:Lightning Stake
-4038C340:Divine Pillars of Light
-4038EA50:Lifehunt Scythe
-40395F80:Blessed Weapon
-40398690:Deep Protection
 4039ADA0:Atonement
+40398690:Deep Protection
+40363AD0:Gnaw
+40363EB8:Dorhys' Gnawing
+4038EA50:Lifehunt Scythe
+40391160:Gravelord Sword Dance
+000F4240:Dagger
+000F9060:Parrying Dagger
+002DEDD0:Mail Breaker
+00102CA0:Harpe
+000F6950:Bandit's Knife
+000FDE80:Rotten Ghru Dagger
+0010A1D0:Corvian Greatknife
+00118C30:Murky Hand Scythe
+00111700:Handmaid's Dagger
+001053B0:Scholar's Candlestick
+00116520:Aquamarine Dagger
+00107AC0:Tailbone Short Sword
+00F50E60:Brigand Twindaggers
+01CA11A0:Gold and Silver Tracers
+001E8480:Shortsword
+001EAB90:Long Sword
+001ED2A0:Broadsword
+001EF9B0:Broken Straight Sword
+002191C0:Astora Straight Sword
+001F6EE0:Lothric Knight Sword
+0021B8D0:Barbed Straight Sword
+005F3700:Dark Sword
+0020F580:Cleric's Candlestick
+0020A760:Irithyll Straight Sword
+002206F0:Anri's Straight Sword
+00203230:Sunlight Straight Sword
+01CA5FC0:Silver Knight Straight Sword
+002143A0:Morion Blade
+00225510:Ringed Knight Straight Sword
+005FD340:Lothric's Holy Sword
+00F53570:Gotthard Twinswords
+00F646E0:Valorheart
+005B8D80:Bastard Sword
+005BDBA0:Claymore
+005DB060:Flamberge
+00609690:Drakeblood Greatsword
+0021DFE0:Executioner's Greatsword
+005F5E10:Black Knight Sword
+00222E00:Onyx Blade
+00604870:Hollowslayer Greatsword
+005FFA50:Wolnir's Holy Sword
+005E2590:Greatsword of Judgment
+006132D0:Storm Ruler
+00602160:Wolf Knight's Greatsword
+00606F80:Moonlight Greatsword
+0060BDA0:Firelink Greatsword
+005FAC30:Twin Princes' Greatsword
+00227C20:Gael's Greatsword
+01CAADE0:Loyce Greatsword
+005C29C0:Zweihander
+005C50D0:Greatsword
+005C9EF0:Astora Greatsword
+005D1420:Lothric Knight Greatsword
+005E73B0:Cathedral Knight Greatsword
+005D8950:Black Knight Greatsword
+0060E4B0:Fume Ultra Greatsword
+01CAD4F0:Dragon Bone Smasher
+01CA86D0:Abyssal Greatsword
+005E4CA0:Profaned Greatsword
+005F8520:Lorian's Greatsword
+00F69500:Ringed Knight Paired Greatswords
+005E9AC0:Farron Greatsword
+003D7E30:Scimitar
+003DA540:Falchion
+003D3010:Shotel
+003DCC50:Carthus Curved Sword
+003EB6B0:Carthus Shotel
+00205940:Rotten Ghru Curved Sword
+003E6890:Painting Guardian's Curved Sword
+003EDDC0:Follower Sabre
+003E1A70:Pontiff Knight Curved Sword
+003E8FA0:Crescent Moon Sword
+003E4180:Storm Curved Sword
+003F04D0:Demon Scar
+00F42400:Sellsword Twinblades
+00F47220:Warden Twinblades
+00F4C040:Dancer's Enchanted Swords
+005CC600:Murakumo
+003DF360:Carthus Curved Greatsword
+005DD770:Exile Greatsword
+006159E0:Harald Curved Greatsword
+00610BC0:Old Wolf Curved Sword
+02165CE0:Gravelord Sword
+002E14E0:Rapier
+002DC6C0:Estoc
+002E3BF0:Ricard's Rapier
+002E8A10:Irithyll Rapier
+002E6300:Crystal Sage's Rapier
+00F66DF0:Crow Quills
+004C4B40:Uchigatana
+01CAFC00:Bewitched Alonne Sword
+004C7250:Washing Pole
+004CC070:Black Blade
+004CE780:Bloodlust
+004C9960:Chaos Blade
+004D0E90:Darkdrift
+004D35A0:Frayed Blade
+00F58390:Onikiri and Ubadachi
+01C9C380:Magic Twinswords "Makoto"
+006ACFC0:Hand Axe
+006C5660:Thrall Axe
+006AF6D0:Battle Axe
+006B1DE0:Brigand Axe
+006C0840:Dragonslayer's Axe
+006D67D0:Millwood Battle Axe
+006D19B0:Man Serpent Hatchet
+006BE130:Butcher Knife
+006CCB90:Eleonora
+01C9EA90:Salvation Axes
+00F49930:Winged Knight Twinaxes
+006B9310:Greataxe
+00F4E750:Great Machete
+009959D0:Black Knight Greataxe
+006CA480:Demon's Greataxe
+006C7D70:Dragonslayer Greataxe
+005F0FF0:Yhorm's Great Machete
+006D8EE0:Earth Seeker
+007A1200:Club
+007A8730:Reinforced Club
+007A3910:Mace
+007A6020:Morning Star
+007D9470:Hammer of the Great Tree
+007DBB80:Warpick
+007E57C0:Blacksmith Hammer
+007D4650:Four Knight's Hammer
+007D6D60:Heysel Pick
+00F61FD0:Drang Hammers
+007AFC60:Large Club
+007B4A80:Great Club
+007BBFB0:Great Mace
+007EA5E0:Spiked Mace
+007DE290:Pickaxe
+007C8300:Great Wooden Hammer
+007CAA10:Gargoyle Flame Hammer
+007E7ED0:Morne's Great Hammer
+007E30B0:Smough's Great Hammer
+007ECCF0:Quakestone Hammer
+007EF400:Ledo's Great Hammer
+007CD120:Vordt's Great Hammer
+007CF830:Old King's Great Hammer
+007E09A0:Dragon Tooth
+00895440:Spear
+00897B50:Winged Spear
+0089C970:Partizan
+008B2900:Rotten Ghru Spear
+008ADAE0:Four-Pronged Plow
+008C1360:Saint Bident
+008CD6B0:Follower Javelin
+008B01F0:Gargoyle Flame Spear
+02160EC0:Moonlight Butterfly Horn
+008B7720:Soldering Iron
+008C3A70:Yorshka's Spear
+008CAFA0:Dragonslayer Spear
+00C83200:Golden Ritual Spear
+008B5010:Tailbone Spear
+008BEC50:Arstor's Spear
+01CA38B0:Silver Knight Spear
+008BC540:Dragonslayer Swordspear
+00F5AAA0:Drang Twinspears
+008C6180:Pike
+008A8CC0:Greatlance
+008AB3D0:Lothric Knight Long Spear
+008D24D0:Lothric War Banner
+008CFDC0:Ringed Knight Spear
+00990BB0:Halberd
+009AB960:Red Hilted Halberd
+0098BD90:Lucerne
+0098E4A0:Glaive
+006B6C00:Crescent Axe
+0099F610:Winged Knight Halberd
+009B2E90:Splitleaf Greatsword
+009AE070:Black Knight Glaive
+008D4BE0:Crucifix of the Mad King
+009A6B40:Ancient Dragon Halberd
+009B0780:Immolation Tinder
+009A1D20:Gundyr's Halberd
+00989680:Great Scythe
+0099CF00:Great Corvian Scythe
+0099A7F0:Pontiff Knight Great Scythe
+009B55A0:Friede's Great Scythe
+009A4430:Lothric's Great Scythe
+00B71B00:Whip
+00B7DE50:Notched Whip
+00B80560:Spotted Whip
+00B7B740:Witch's Locks
+00B82C70:Rose of Ariandel
+0001ADB0:Fists
+00A7FFD0:Caestus
+01CB2310:Andre's Technique
+00A84DF0:Demon's Fist
+00A87500:Dark Hand
+00A7D8C0:Claw
+00A826E0:Manikin Claws
+00A89C10:Crow Talons
+00D5C690:Short Bow
+00D5EDA0:Composite Bow
+00D689E0:Longbow
+00D7E970:Black Bow of Pharis
+00D77440:White Birch Bow
+00D6B0F0:Dragonrider Bow
+00D79B50:Darkmoon Longbow
+00CF8500:Dragonslayer Greatbow
+00D7C260:Onislayer Greatbow
+00D85EA0:Millwood Greatbow
+00D63BC0:Light Crossbow
+00D74D30:Heavy Crossbow
+00D83790:Sniper Crossbow
+00D662D0:Arbalest
+00D72620:Knight's Crossbow
+00D6FF10:Avelyn
+00D885B0:Repeating Crossbow
+00C747A0:Sorcerer's Staff
+00C8F550:Heretic's Staff
+00C91C60:Court Sorcerer's Staff
+00C94370:Witchtree Branch
+00C76EB0:Storyteller's Staff
+00C795C0:Mendicant's Staff
+00CCC5E0:Murky Longstaff
+00C96A80:Izalith Staff
+00C80AF0:Archdeacon's Great Staff
+00C7E3E0:Man-grub's Staff
+00CD1400:Preacher's Right Arm
+00C8CE40:Sage's Crystal Staff
+00CC77C0:Pyromancy Flame
+00CC9ED0:Pyromancer's Parting Flame
+00C72090:Talisman
+00CA7BF0:Canvas Talisman
+00CACA10:Saint's Talisman
+00CA54E0:Sunlight Talisman
+00CAA300:Sunless Talisman
+00CAF120:White Hair Talisman
+00C99190:Cleric's Sacred Chime
+00C9B8A0:Priest's Chime
+00C9DFB0:Saint-tree Bellvine
+00C88020:Yorshka's Chime
+00CA06C0:Caitha's Chime
+00CA2DD0:Crystal Chime
+00CCECF0:Sacred Chime of Filianore
+01CB4A20:Deep Chime
+01CB7130: Black Hair Talisman
+015EF3C0:Torch
+015F1AD0:Follower Torch
+015F41E0:Hunter's Torch
+02721170:Hunter Axe
+02725F90:Kirkhammer
+02737100:Saw Cleaver
+02739810:Blades of Mercy
+0273BF20:Chikage
+02740D40:Stake Driver
+0274A980:Ludwig's Holy Blade
+02782BF0:Holy Moonlight Sword
+0274D090:Burial Blade
+027545C0:Reiterpallasch
+0277DDD0:Beast Cutter
+0272FBD0:Tonitrus
+0272FDC4:Tonitrus 2
+027804E0:Amygdalan Arm
+02785300:Rakuyo
+0278EF40:Whirligig Saw
+0271EA60:Hunter Blunderbuss
+02743450:Hunter Pistol
+02745B60:Cannon
+02751EB0:Rosmarinus
+0279D9A0:Flamesprayer
+0275E200:Evelyn
+02760910:Repeating Pistol
+02763020:Ludwig's Rifle
+02793D60:Gatling Gun
+02798B80:Church Cannon
+02796470:Fist of Gracia
+0279B290:Piercing Rifle
+01312D00:Buckler
+01339E00:Target Shield
+01315410:Small Leather Shield
+01348860:Leather Shield
+0134AF70:Crimson Parma
+01343A40:Red and White Round Shield
+01341330:Caduceus Round Shield
+0133C510:Elkhorn Round Shield
+0133EC20:Warrior's Round Shield
+01346150:Plank Shield
+013328D0:Ghru Rotshield
+01326580:Iron Round Shield
+01323E70:Hawkwood's Shield
+0134FD90:Llewellyn Shield
+0134D680:Eastern Iron Shield
+01354BB0:Golden Falcon Shield
+013524A0:Cleric's Parma
+013572C0:Sacred Bloom Shield
+0135E7F0:Dragonhead Shield
+0131C940:Large Leather Shield
+014180B0:Carthus Shield
+0142B930:East-West Shield
+0143F1B0:Blue Wooden Shield
+0131A230:Round Shield
+0132DAB0:Wooden Shield
+0144DC10:Wargod Wooden Shield
+0135C0E0:Follower Shield
+013301C0:Drangleic Shield
+014418C0:Silver Eagle Kite Shield
+01410B80:Knight Shield
+01409650:Lothric Knight Shield
+01435570:Spider Shield
+0143A390:Sunset Shield
+0142E040:Sunlight Shield
+01443FD0:Stone Parma
+01426B10:Spiked Shield
+01429220:Pierce Shield
+01448DF0:Porcine Shield
+01437C80:Grass Crest Shield
+01430750:Crest Shield
+01432E60:Dragon Crest Shield
+014466E0:Spirit Tree Crest Shield
+0143CAA0:Golden Wing Crest Shield
+014159A0:Pontiff Knight Shield
+0141F5E0:Black Knight Shield
+01424400:Silver Knight Shield
+01450320:Ethereal Oak Shield
+0144B500:Shield of Want
+01455140:King's Shield
+01513820:Twin Dragon Greatshield
+0150EA00:Black Iron Greatshield
+014FD890:Lothric Knight Greatshield
+014FFFA0:Cathedral Knight Greatshield
+0151D460:Stone Greatshield
+0151AD50:Bonewheel Shield
+013599D0:Ancient Dragon Greatshield
+01515F30:Greatshield of Glory
+015074D0:Moaning Shield
+01511110:Wolf Knight's Greatshield
+013376F0:Havel's Greatshield
+01518640:Curse Ward Greatshield
+01509BE0:White Dragon Greatshield
+01504DC0:Dragonslayer Greatshield
+0150C2F0:Yhorm's Greatshield
+01452A30:Dragonhead Greatshield
+00F5F8C0:Giant Door Shield
+1470C7A0:Standard Helm
+1470CB88:Hard Leather Armor
+1470CF70:Hard Leather Gauntlets
+1470D358:Hard Leather Boots
+148009E0:Brigand Hood
+14800DC8:Brigand Armor
+148011B0:Brigand Gauntlets
+14801598:Brigand Trousers
+15204180:Lucatiel's Mask
+15204568:Mirrah Vest
+15204950:Mirrah Gloves
+15204D38:Mirrah Trousers
+142C1D80:Chain Helm
+142C2168:Chain Armor
+142C2550:Leather Gauntlets
+142C2938:Chain Leggings
+116E3600:Northern Helm
+116E39E8:Northern Armor
+116E3DD0:Northern Gloves
+116E41B8:Northern Trousers
+14B3EB20:Angeluso's Steel Mask
+13D15B20:Heavy Mirrah Chain Mail
+13D15F08:Heavy Mirrah Chain Gloves
+14AF5740:Heavy Mirrah Chain Leggings
+14B571C0:Creighton's Steel Mask
+14B575A8:Mirrah Chain Mail
+14B57990:Mirrah Chain Gloves
+14B57D78:Mirrah Chain Leggings
+152F83C0:Iron Helm
+152F87A8:Armor of the Sun
+152F8B90:Iron Bracelets
+152F8F78:Iron Leggings
+11481060:Sellsword Helm
+11481448:Sellsword Armor
+11481830:Sellsword Gauntlet
+11481C18:Sellsword Trousers
+154E0C28:Drang Armor
+154E1010:Drang Gauntlets
+154E13F8:Drang Shoes
+137CA3A0:Follower Helm
+137CA788:Follower Armor
+137CAB70:Follower Gloves
+137CAF58:Follower Boots
+11C22260:Shira's Crown
+11C22648:Shira's Armor
+11C22A30:Shira's Gloves
+11C22E18:Shira's Trousers
+140D9900:Fire Keeper Blindfold
+140D9CE8:Fire Keeper Robe
+140DA0D0:Fire Keeper Gloves
+140DA4B8:Fire Keeper Skirt
+13750280:Undead Legion Helm
+13750668:Undead Legion Armor
+13750A50:Undead Legion Gauntlet
+13750E38:Undead Legion Leggings
+114FB180:Herald Helm
+114FB568:Herald Armor
+114FB950:Herald Gloves
+114FBD38:Herald Trousers
+11298BE0:Knight Helm
+11298FC8:Knight Armor
+112993B0:Knight Gauntlets
+11299798:Knight Leggings
+13DDD670:Vanguard Helm
+13DDDA58:Vanguard Armor
+13DDDE40:Vanguard Gauntlets
+13DDE228:Vanguard Leggings
+13DE4BA0:Gravekeeper’s Helm
+13DE4F88:Gravekeeper’s Armor
+13DE5370:Gravekeeper’s Gauntlets
+13DE5758:Gravekeeper’s Leggings
+143B5FC0:Nameless Knight Helm
+143B63A8:Nameless Knight Armor
+143B6790:Nameless Knight Gauntlets
+143B6B78:Nameless Knight Leggings
+1121EAC0:Fallen Knight Helm
+1121EEA8:Fallen Knight Armor
+1121F290:Fallen Knight Gauntlets
+1121F678:Fallen Knight Trousers
+144AA200:Elite Knight Helm
+144AA5E8:Elite Knight Armor
+144AA9D0:Elite Knight Gauntlets
+144AADB8:Elite Knight Leggings
+14C4B400:Alva Helm
+14C4B7E8:Alva Armor
+14C4BBD0:Alva Gauntlets
+14C4BFB8:Alva Leggings
+153EC600:Drakeblood Helm
+153EC9E8:Drakeblood Armor
+153ECDD0:Drakeblood Gauntlets
+153ED1B8:Drakeblood Leggings
+1459E440:Faraam Helm
+1459E828:Faraam Armor
+1459EC10:Faraam Gauntlets
+1459EFF8:Faraam Boots
+118CBA80:Sunset Helm
+118CBE68:Sunset Armor
+118CC250:Sunset Gauntlets
+118CC638:Sunset Leggings
+115752A0:Sunless Veil
+11575688:Sunless Armor
+11575A70:Sunless Gauntlets
+11575E58:Sunless Leggings
+1501BD00:Brass Helm
+1501C0E8:Brass Armor
+1501C4D0:Brass Gauntlets
+1501C8B8:Brass Leggings
+134EDCE0:Slave Knight Hood
+134EE0C8:Slave Knight Armor
+134EE4B0:Slave Knight Gauntlets
+134EE898:Slave Knight Leggings
+11312D00:Vilhelm's Helm
+113130E8:Vilhelm's Armor
+113134D0:Vilhelm's Gauntlets
+113138B8:Vilhelm's Leggings
+14F27AC0:Helm of Favor
+14F27EA8:Embraced Armor of Favor
+14F28290:Gauntlets of Favor
+14F28678:Leggings of Favor
+14E33880:Eastern Helm
+14E33C68:Eastern Armor
+14E34050:Eastern Gauntlets
+14E34438:Eastern Leggings
+15B8D800:Helm of Thorns
+15B8DBE8:Armor of Thorns
+15B8DFD0:Gauntlets of Thorns
+15B8E3B8:Leggings of Thorns
+14692680:Catarina Helm
+14692A68:Catarina Armor
+14692E50:Catarina Gauntlets
+14693238:Catarina Leggings
+1175D720:Morne's Helm
+1175DB08:Morne's Armor
+1175DEF0:Morne's Gauntlets
+1175E2D8:Morne's Leggings
+11E84800:Lapp's Helm
+11E84BE8:Lapp's Armor
+11E84FD0:Lapp's Gauntlets
+11E853B8:Lapp's Leggings
+13B20B80:Yhorm's Crown
+13B20F68:Yhorm's Armor
+13B21350:Yhorm's Gauntlets
+13B21738:Yhorm's Leggings
+13197500:Lothric Knight Helm
+131978E8:Lothric Knight Armor
+13197CD0:Lothric Knight Gauntlets
+131980B8:Lothric Knight Leggings
+13DD3A30:Elite Lothric Knight Helm
+13DD3E18:Elite Lothric Knight Armor
+13DD4200:Elite Lothric Knight Gauntlets
+13DD45E8:Elite Lothric Knight Leggings
+15F39710:Royal Lothric Knight Helm
+15F39AF8:Royal Lothric Knight Armor
+130291A0:Cathedral Knight Helm
+13029588:Cathedral Knight Armor
+13029970:Cathedral Knight Gauntlets
+13029D58:Cathedral Knight Leggings
+13DD1320:Consumed King's Knight Helm
+13DD1708:Consumed King's Knight Armor
+13DD1AF0:Consumed King's Knight Gauntlets
+13DD1ED8:Consumed King's Knight Leggings
+12EBAE40:Winged Knight Helm
+12EBB228:Winged Knight Armor
+12EBB610:Winged Knight Gauntlets
+12EBB9F8:Winged Knight Leggings
+13DD6140:Gertrude's Knight Helm
+13DD6528:Gertrude's Knight Armor
+13DE7698:Ascended Gertrude's Knight Armor
+13DD6910:Gertrude's Knight Gauntlets
+13DD6CF8:Gertrude's Knight Leggings
+13FE56C0:Boreal Valley Mask
+139B2820:Millwood Knight Helm
+139B2C08:Millwood Knight Armor
+139B2FF0:Millwood Knight Gauntlets
+139B33D8:Millwood Knight Leggings
+13D80A10:Harald Legion Head
+13D83120:Alternate Harald Legion Head
+13D83508:Harald Legion Armor
+13D838F0:Harald Legion Gauntlets
+13D83CD8:Harald Legion Leggings
+14CC5520:Ruin Helm
+14CC5908:Ruin Armor
+14CC5CF0:Ruin Gauntlets
+14CC60D8:Ruin Leggings
+1328B740:Outrider Knight Helm
+1328BB28:Outrider Knight Armor
+1328BF10:Outrider Knight Gauntlets
+1328C2F8:Outrider Knight Leggings
+13567E00:Pontiff Knight Crown
+135681E8:Pontiff Knight Armor
+135685D0:Pontiff Knight Gauntlets
+135689B8:Pontiff Knight Leggings
+13938700:Fire Witch Helm
+13938AE8:Fire Witch Armor
+13938ED0:Fire Witch Gauntlets
+139392B8:Fire Witch Leggings
+13C14DC0:Dancer's Crown
+13C151A8:Dancer's Armor
+13C15590:Dancer's Gauntlets
+13C15978:Dancer's Leggings
+133F9AA0:Dark Mask
+133F9E88:Dark Armor
+133FA270:Dark Gauntlets
+133FA658:Dark Leggings
+1337F980:Black Knight Helm
+1337FD68:Black Knight Armor
+13380150:Black Knight Gauntlets
+13380538:Black Knight Leggings
+1510FF40:Silver Knight Helm
+15110328:Silver Knight Armor
+15110710:Silver Knight Gauntlets
+15110AF8:Silver Knight Leggings
+13C8EEE0:Ringed Knight Hood
+13C8F2C8:Ringed Knight Armor
+13C8F6B0:Ringed Knight Gauntlets
+13C8FA98:Ringed Knight Leggings
+158B1140:Dragonslayer Helm
+158B1528:Dragonslayer Armor
+158B1910:Dragonslayer Gauntlets
+158B1CF8:Dragonslayer Leggings
+157BCF00:Wolf Knight Helm
+157BD2E8:Wolf Knight Armor
+157BD6D0:Wolf Knight Gauntlets
+157BDAB8:Wolf Knight Leggings
+159A5380:Smough's Helm
+159A5768:Smough's Armor
+159A5B50:Smough's Gauntlets
+159A5F38:Smough's Leggings
+1405F7E0:Iron Dragonslayer Helm
+1405FBC8:Iron Dragonslayer Armor
+1405FFB0:Iron Dragonslayer Gauntlets
+14060398:Iron Dragonslayer Leggings
+13A2C940:Lorian's Helm
+13A2CD28:Lorian's Armor
+13A2D110:Lorian's Gauntlets
+13A2D4F8:Lorian's Leggings
+1365C040:Golden Crown
+1365C428:Dragonscale Armor
+1365C810:Golden Bracelets
+1365CBF8:Dragonscale Waistcloth
+11406F40:Firelink Helm
+11407328:Firelink Armor
+11407710:Firelink Gauntlets
+11407AF8:Firelink Leggings
+155D4A80:Black Iron Helm
+155D4E68:Black Iron Armor
+155D5250:Black Iron Gauntlets
+155D5638:Black Iron Leggings
+15EE3FE0:Burial Knight Helm
+15EE43C8:Burial Knight Armor
+15EE47B0:Burial Knight Gauntlets
+15EE4B98:Burial Knight Leggings
+119BFCC0:Executioner Helm
+119C00A8:Executioner Armor
+119C0490:Executioner Gauntlets
+119C0878:Executioner Leggings
+13473BC0:Exile Mask
+13473FA8:Exile Armor
+13474390:Exile Gauntlets
+13474778:Exile Leggings
+13D09000:Gundyr's Helm
+13D093E8:Gundyr's Armor
+13D097D0:Gundyr's Gauntlets
+13D09BB8:Gundyr's Leggings
+147868C0:Havel's Helm
+14786CA8:Havel's Armor
+14787090:Havel's Gauntlets
+14787478:Havel's Leggings
+115EFB90:Assassin Gloves
+115EFF78:Assassin Trousers
+11607A60:Assassin Hood
+11607E48:Assassin Armor
+115EF3C0:Black Hand Hat
+115EF7A8:Black Hand Armor
+12656740:Thief Mask
+14A63368:Black Leather Armor
+14A63750:Black Leather Gloves
+14A63B38:Black Leather Boots
+14D3F640:Shadow Mask
+14D3FA28:Shadow Garb
+14D3FE10:Shadow Gauntlets
+14D401F8:Shadow Leggings
+117D7840:Silver Mask
+117D7C28:Leonhard's Garb
+117D8010:Leonhard's Gauntlets
+117D83F8:Leonhard's Trousers
+11851960:Sneering Mask
+11851D48:Pale Shade Robe
+11852130:Pale Shade Gloves
+11852518:Pale Shade Trousers
+11A39DE0:Billed Mask
+11A3A1C8:Black Dress
+11A3A5B0:Black Gauntlets
+11A3A998:Black Leggings
+156C8CC0:Painting Guardian Hood
+156C90A8:Painting Guardian Gown
+156C9490:Painting Guardian Gloves
+156C9878:Painting Guardian Waistcloth
+11B2E408:Antiquated Plain Garb
+11B2E7F0:Violet Wrappings
+11C9C380:Sorcerer Hood
+11C9C768:Sorcerer Robe
+11C9CB50:Sorcerer Gloves
+11C9CF38:Sorcerer Trousers
+11F78A40:Grotto Hat
+11F78E28:Grotto Robe
+11F79210:Grotto Wrap
+11F795F8:Grotto Trousers
+11CB4E08:Clandestine Coat
+1496ED40:Old Sorcerer Hat
+1496F128:Old Sorcerer Coat
+1496F510:Old Sorcerer Gauntlets
+1496F8F8:Old Sorcerer Boots
+11BA8140:Court Sorcerer Hood
+11BA8528:Court Sorcerer Robe
+11BA8910:Court Sorcerer Gloves
+11BA8CF8:Court Sorcerer Trousers
+15E69EC0:Karla's Pointed Hat
+15E6A2A8:Karla's Coat
+15E6A690:Karla's Gloves
+15E6AA78:Karla's Trousers
+14EAD9A0:Black Witch Hat
+14FA1BE0:Black Witch Veil
+14EADD88:Black Witch Garb
+14EAE170:Black Witch Wrappings
+14EAE558:Black Witch Trousers
+15D75C80:Crown of Dusk
+15D76068:Antiquated Dress
+15D76450:Antiquated Gloves
+15D76838:Antiquated Skirt
+116694E0:Xanthous Crown
+116698C8:Xanthous Overcoat
+11669CB0:Xanthous Gloves
+1166A098:Xanthous Trousers
+12E40D20:Scholar's Shed Skin
+12E41108:Scholar's Robe
+129020C0:Sage's Big Hat
+13DE72B0:Archive Sage’s Hat
+11AB3F00:Pyromancer Crown
+11AB42E8:Pyromancer Garb
+11AB46D0:Pyromancer Wrap
+11AB4AB8:Pyromancer Trousers
+11945BA0:Old Sage's Blindfold
+11945F88:Cornyx's Garb
+11946370:Cornyx's Wrap
+11946758:Cornyx's Skirt
+149E8E60:Conjurator Hood
+149E9248:Conjurator Robe
+149E9630:Conjurator Manchettes
+149E9A18:Conjurator Boots
+14DB9760:Desert Pyromancer Hood
+14DB9B48:Desert Pyromancer Garb
+14DB9F30:Desert Pyromancer Gloves
+14DBA318:Desert Pyromancer Skirt
+11D905C0:Cleric Hat
+11D909A8:Cleric Blue Robe
+11D90D90:Cleric Gloves
+11D91178:Cleric Trousers
+12A70420:Saint's Veil
+12A70808:Saint's Dress
+14BD12E0:Maiden Hood
+14BD16C8:Maiden Robe
+14BD1AB0:Maiden Gloves
+14BD1E98:Maiden Skirt
+135E1F20:Ordained Hood
+135E2308:Ordained Dress
+135E2AD8:Ordained Trousers
+12DC6C00:Evangelist Hat
+12DC6FE8:Evangelist Robe
+12DC73D0:Evangelist Gloves
+12DC77B8:Evangelist Trousers
+13DE2490:Crown of Illusions
+13EF1480:Archdeacon White Crown
+13EF1868:Archdeacon Holy Garb
+13EF2038:Archdeacon Skirt
+13DE99C0:High Priestess Cowl
+13DE9DA8:High Priestess Garb
+13F6B988:Deacon Robe
+13F6C158:Deacon Skirt
+13DDB348:Aldrich Faithful Robe
+13DDBB18:Aldrich Faithful Skirt
+129F6300:Aristocrat's Mask
+129F66E8:Jailer Robe
+129F6AD0:Jailer Gloves
+129F6EB8:Jailer Trousers
+13DD8850:Jailer Handmaid's Mask
+13DD8C38:Jailer Handmaid's Robe
+13AA6A60:Hood of Prayer
+13AA6E48:Robe of Prayer
+13AA7618:Skirt of Prayer
+148F4C20:Ragged Mask
+148F5008:Master's Attire
+148F53F0:Master's Gloves
+148F57D8:Loincloth
+11B2EBD8:Loincloth TRC
+12AEA540:Footman's Hood
+12AEA928:Footman's Overcoat
+12AEAD10:Footman's Bracelets
+12AEB0F8:Footman's Trousers
+12CD29C0:Worker Hat
+12CD2DA8:Worker Garb
+12CD3190:Worker Gloves
+12CD3578:Worker Trousers
+12625A00:Steel Soldier Helm
+12625DE8:Deserter Armor
+126265B8:Deserter Trousers
+12D4CAE0:Thrall Hood
+1487AB00:Pharis's Hat
+1487AEE8:Leather Armor
+1487B2D0:Leather Gloves
+1487B6B8:Leather Boots
+136D6160:Wolnir's Crown
+15095E20:Blindfold Mask
+14ADD0A0:Symbol of Avarice
+14153A20:White Preacher Head
+15F37000:Valkyrie Helm
+13D85830:Badger's Black Hat
+13DBB390:Barrel Helmet
+13DAA220:Corvian Knight Helm
+13DAC930:Crab Helmet
+13DB1750:Crown of Filianore
+15EF2A40:Crown of the Dark Sun
+13D87F40:Demon of Hatred Head
+13DA5400:Dirty Colossus Sack
+13DBDAA0:Gold Ardeo
+13D8CD60:Gyoubu's Helm
+15F3E530:Syan Knight Helm
+13DC76E0:Mask of the Father
+13DC4FD0:Mask of the Mother
+13DC9DF0:Mask of the Child
+15EF7860:Mask of Velka
+13DC01B0:Mensis Cage
+13D8F470:Monk Mask
+13D91B80:Monk Straw Hat
+13D94290:Nightjar Mask
+13D990B0:Okami Mask
+13DA2CF0:Old Monk Wrapping
+13DB3E60:Priest Mask
+13DAF040:Pygmy Crown
+13D969A0:Seven Spear Helmet
+13DB8C80:Tengu Mask
+15F014A0:Binded Hood
+15F01888:Binded Robe
+15F01C70:Binded Gloves
+15F02058:Binded Leggings
+15F23780:Brushwood Helm
+15F23B68:Brushwood Armor
+15F23F50:Brushwood Gauntlets
+15F24338:Brushwood Leggings
+15F2ACB0:Dark Silver Helm
+15F2B098:Dark Silver Armor
+15F2B480:Dark Silver Gauntlets
+15F2B868:Dark Silver Leggings
+13D9DED0:Gloom Helm
+13D9E2B8:Gloom Armor
+13D9E6A0:Gloom Gauntlets
+13D9EA88:Gloom Leggings
+15F285A0:Penetrator Helm
+15F28988:Penetrator Armor
+15F28D70:Penetrator Gauntlets
+15F29158:Penetrator Leggings
+15EE8E00:Snickering Top Hat
+15EE91E8:Chester's Long Coat
+15EE95D0:Chester's Gloves
+15EE99B8:Chester's Trousers
+15EF9F70:Giant Helm
+15EFA358:Giant Armor
+15EFA740:Giant Gauntlets
+15EFAB28:Giant Leggings
+15F21070:Golem Helm
+15F21458:Golem Armor
+15F21840:Golem Gauntlets
+15F21C28:Golem Leggings
+15EF0330:Crown of the Great Lord
+15EF0718:Mantle of the Great Lord
+15EF0B00:Gauntlets of the Great Lord
+15EF0EE8:Leggings of the Great Lord
+15EF5150:Helm of the Vassal
+15EF5538:Armor of the Vassal
+15EF5920:Gauntlets of the Vassal
+15EF5D08:Leggings of the Vassal
+13DCC500:Sulyvahn's Crown
+13DCC8E8:Sulyvahn's Robe
+13DCCCD0:Sulyvahn's Bracelets
+13DCD0B8:Sulyvahn's Skirt
+15F089D0:Alonne's Helm
+15F08DB8:Alonne's Armor
+15F091A0:Alonne's Gauntlets
+15F09588:Alonne's Leggings
+15F03BB0:Helm of Aurous
+15F03F98:Armor of Aurous
+15F04380:Gauntlets of Aurous
+15F04768:Leggings of Aurous
+15EFC680:Black Dragon Helm
+15EFCA68:Black Dragon Armor
+15EFCE50:Black Dragon Gauntlets
+15EFD238:Black Dragon Leggings
+15F51DB0:Dragon Head
+15F52198:Dragon Body
+15EFED90:Dragonrider Helm
+15EFF178:Dragonrider Armor
+15EFF560:Dragonrider Gauntlets
+15EFF948:Dragonrider Leggings
+15F1E960:Hood of the Forlorn
+13DDFD80:Corporeal Forlorn Hood
+15F1ED48:Armor of the Forlorn
+15F1F130:Gauntlets of the Forlorn
+15F1F518:Leggings of the Forlorn
+15F0FF00:Heide Knight Helm
+13DCEC10:Heide Knight Iron Mask
+15F102E8:Heide Knight Armor
+15F106D0:Heide Knight Gauntlets
+15F10AB8:Heide Knight Leggings
+15F12610:Imperious Helm
+15F129F8:Imperious Armor
+15F12DE0:Imperious Gauntlets
+15F131C8:Imperious Leggings
+15F17430:Loyce Helm
+15F17818:Loyce Armor
+15F17C00:Loyce Gauntlets
+15F17FE8:Loyce Leggings
+15F14D20:Looking Glass Helm
+15F15108:Looking Glass Armor
+15F154F0:Looking Glass Gauntlets
+15F158D8:Looking Glass Leggings
+13DA7B10:Pursuer Helm
+13DA7EF8:Pursuer Armor
+13DA82E0:Pursuer Gauntlets
+13DA86C8:Pursuer Leggings
+15F0B0E0:Rampart Golem Helm
+15F0B4C8:Rampart Golem Armor
+15F0B8B0:Rampart Golem Gauntlets
+15F0BC98:Rampart Golem Leggings
+15F0D7F0:Smelter Demon Helm
+15F0DBD8:Smelter Demon Armor
+15F0DFC0:Smelter Demon Gauntlets
+15F0E3A8:Smelter Demon Leggings
+15F062C0:Vengarl's Hel
+15F066A8:Vengarl's Armor
+15F06A90:Vengarl's Gauntlets
+15F06E78:Vengarl's Leggings
+15F1C250:Fume Knight Helm
+15F1C638:Fume Knight Armor
+15F1CA20:Fume Knight Gauntlets
+15F1CE08:Fume Knight Leggings
+15F321E0:Tower Knight Helm
+15F325C8:Tower Knight Armor
+15F329B0:Tower Knight Gauntlets
+15F32D98:Tower Knight Leggings
+15F3BE20:King's Crown
+15F3C208:King's Armor
+15F3C5F0:King's Gauntlets
+15F3C9D8:King's Leggings
+15C81A40:Ledo Helmet
+15C81E28:Ledo Armor
+15C82210:Ledo Gauntlets
+15C825F8:Ledo Leggings
+15EE66F0:Cainhurst Helm
+15EE6AD8:Cainhurst Armor
+15EE6EC0:Cainhurst Gauntlets
+15EE72A8:Cainhurst Leggings
+15F2D3C0:Bone Ash Mask
+15F2D7A8:Bone Ash Armor
+15F2DB90:Bone Ash Gauntlets
+15F2DF78:Bone Ash Leggings
+15F348F0:Hunter's Hat
+15F544C0:Old Hunter Top Hat
+15F34CD8:Hunter's Coat
+15F350C0:Hunter's Gloves
+15F354A8:Hunter's Trousers
+15A995C0:Doll's Bonnet
+15A999A8:Doll's Dress
+15A99D90:Doll's Gloves
+15A9A178:Doll's Skirt
+12BDE780:Graveguard Mask
+12BDEB68:Graveguard Robe
+12BDEF50:Graveguard Manchettes
+12BDF338:Graveguard Kilt
+15F40C40:Armored Warrior Helm
+15F41028:Armored Warrior Armor
+15F41410:Armored Warrior Gauntlets
+15F417F8:Armored Warrior Leggings
+15F43738:Wolf's Coat
+15F43B20:Wolf's Prosthetic
+15F43F08:Wolf's Trousers
+15F45A60:Hood of the Acolyte
+15F45E48:Garb of the Acolyte
+15F46230:Gloves of the Acolyte
+15F46618:Trousers of the Acolyte
+15F48170:Red Guard Helm
+15F48558:Red Guard Armor
+15F48940:Red Guard Gauntlets
+15F48D28:Red Guard Leggings
+15F4A880:Eastern General Helmet
+15F4AC68:Eastern General Armor
+15F4B050:Eastern General Gauntlets
+15F4B438:Eastern General Leggings
+15F4CF90:Ashina Helmet
+15F4D378:Ashina Armor
+15F4D760:Ashina Gauntlets
+15F4DB48:Ashina Leggings
+15F4F6A0:Okami Helmet
+15F4FA88:Okami Armor
+15F50258:Okami Leggings
+13D8A650:Plague Mask
+13D9B7C0:Blindfold Cap
+13D9BBA8:Choir Garb
+13D9BF90:Choir Gloves
+13D9C378:Choir Skirt
+00061CD8:Wood Arrow
+00061A80:Standard Arrow
+00061BAC:Large Arrow
+00061C10:Feather Arrow
+00061AE4:Fire Arrow
+00061B48:Poison Arrow
+00061D3C:Dark Arrow
+00061C74:Moonlight Arrow
+00062250:Dragonslayer Greatarrow
+00062318:Dragonslayer Lightning Arrow
+0006237C:Onislayer Greatarrow
+000623E0:Millwood Greatarrow
+00062B4C:Wood Bolt
+00062A84:Heavy Bolt
+00062A20:Standard Bolt
+00062AE8:Sniper Bolt
+00062BB0:Lightning Bolt
+00062C14:Splintering Bolt
+00062C78:Exploding Bolt
+20004E20:Life Ring
+20004E21:Life Ring+1
+20004E22:Life Ring+2
+20004E23:Life Ring+3
+20004FBA:Sun Princess Ring
+200050DC:Estus Ring
+200050E6:Ashen Estus Ring
+20004E2A:Chloranthy Ring
+20004E2B:Chloranthy Ring+1
+20004E2C:Chloranthy Ring+2
+20004E2D:Chloranthy Ring+3
+20004E34:Havel's Ring
+20004E35:Havel's Ring+1
+20004E36:Havel's Ring+2
+20004E37:Havel's Ring+3
+20004E3E:Ring of Favor
+20004E3F:Ring of Favor+1
+20004E40:Ring of Favor+2
+20004E41:Ring of Favor+3
+20005046:Prisoner's Chain
+20004E48:Ring of Steel Protection
+20004E49:Ring of Steel Protection+1
+20004E4A:Ring of Steel Protection+2
+20004E4B:Ring of Steel Protection+3
+20004E4C:Ring of Iron Protection
+20004E66:Magic Stoneplate Ring
+20004E67:Magic Stoneplate Ring+1
+20004E68:Magic Stoneplate Ring+2
+20004E52:Flame Stoneplate Ring
+20004E53:Flame Stoneplate Ring+1
+20004E54:Flame Stoneplate Ring+2
+20004E5C:Thunder Stoneplate Ring
+20004E5D:Thunder Stoneplate Ring+1
+20004E5E:Thunder Stoneplate Ring+2
+20004E70:Dark Stoneplate Ring
+20004E71:Dark Stoneplate Ring+1
+20004E72:Dark Stoneplate Ring+2
+20004E7A:Speckled Stoneplate Ring
+20004E7B:Speckled Stoneplate Ring+1
+20004E4D:Speckled Ironplate Ring
+20004E84:Bloodbite Ring
+20004E85:Bloodbite Ring+1
+20004E8E:Poisonbite Ring
+20004E8F:Poisonbite Ring+1
+20005208:Chillbite Ring
+20005168:Rusted Iron Ring
+20005172:Theif Ring
+20004E98:Cursebite Ring
+20004EA2:Fleshbite Ring
+20004EA3:Fleshbite Ring+1
+20004FEC:Knight's Ring
+20004FF6:Hunter's Ring
+20004EB6:Scholar Ring
+20004EC0:Priestess Ring
+20004FA6:Covetous Gold Serpent Ring
+20004FA7:Covetous Gold Serpent Ring+1
+20004FA8:Covetous Gold Serpent Ring+2
+20004FA9:Covetous Gold Serpent Ring+3
+20004FB0:Covetous Silver Serpent Ring
+20004FB1:Covetous Silver Serpent Ring+1
+20004FB2:Covetous Silver Serpent Ring+2
+20004FB3:Covetous Silver Serpent Ring+3
+20004F56:Saint's Ring
+20004F60:Deep Ring
+20004F6A:Darkmoon Ring
+20004F06:Young Dragon Ring
+20004F07:Bellowing Dragoncrest Ring
+20004F10:Lucky Clover Ring
+20004F11:Witch's Ring
+20004F1A:Ring of the Unburdened
+20004F1C:Ring of the Unburdened+1
+20004F1D:Ring of the Unburdened+2
+20004F1E:Ring of the Unburdened+3
+20004F1B:Ring of the Sun's First Born
+20004F2E:Lingering Dragoncrest Ring
+20004F2F:Lingering Dragoncrest Ring+1
+20004F30:Lingering Dragoncrest Ring+2
+20004F38:Sage Ring
+20004F39:Sage Ring+1
+20004F3A:Sage Ring+2
+20004F4C:Dusk Crown Ring
+20004EE8:Leo Ring
+20004EDE:Wolf Ring
+20004EDF:Wolf Ring+1
+20004EE0:Wolf Ring+2
+20004EE1:Wolf Ring+3
+20004F92:Hawk Ring
+20004F9C:Hornet Ring
+20005000:Knight Slayer's Ring
+2000506E:Ring of the Evil Eye
+2000506F:Ring of the Evil Eye+1
+20005070:Ring of the Evil Eye+2
+20005071:Ring of the Evil Eye+3
+20005082:Farron Ring
+2000515E:Dragonscale Ring
+200050F0:Horsehoof Ring
+20004EAC:Wood Grain Ring
+20004EAD:Wood Grain Ring+1
+20004EAE:Wood Grain Ring+2
+2000503C:Flynn's Ring
+2000500A:Magic Clutch Ring
+2000501E:Fire Clutch Ring
+20005014:Lightning Clutch Ring
+20005028:Dark Clutch Ring
+20004ECA:Red Tearstone Ring
+20004ED4:Blue Tearstone Ring
+200050B4:Lloyd's Sword Ring
+200050BE:Lloyd's Shield Ring
+20004FE2:Carthus Milkring
+200050FA:Carthus Bloodring
+2000510E:Pontiff's Right Eye
+20005136:Pontiff's Left Eye
+2000508C:Aldrich's Ruby
+20005096:Aldrich's Sapphire
+20004FC4:Silvercat Ring
+20004F42:Slumbering Dragoncrest Ring
+20005064:Obscuring Ring
+20005050:Untrue Dark Ring
+20004FD8:Untrue White Ring
+20005104:Reversal Ring
+20004FCE:Skull Ring
+20005078:Calamity Ring
+2000517C:Cursed Giant's Ring
+20004EF2:Ring of Sacrifice
+20002710:Blade of the Darkmoon
+20002724:Watchdogs of Farron
+2000272E:Aldrich Faithful
+20002738:Warrior of Sunlight
+20002742:Mound-makers
+2000274C:Way of Blue
+20002756:Blue Sentinels
+20002760:Rosaria's Fingers
+2000276A:Spear of the Church
 </DropDownList>
                       <ShowAsHex>1</ShowAsHex>
                       <VariableType>4 Bytes</VariableType>
@@ -3943,6 +3958,7 @@ local newWeapons =
   0x01C9C380, --Magic Twinswords "Makoto"
   0x01C9EA90, --Salvation Axes
   0x01CA38B0, --Silver Knight Spear
+  0x02160EC0, --Moonlight Butterfly Horn
   0x01CA11A0, --Gold and Silver Tracers
   0x01CA5FC0, --Silver Knight Straight Sword
   0x01CA86D0, --Abyssal Greatsword
@@ -3958,13 +3974,17 @@ local newWeapons =
   0x0278EF40, --Whirligig Saw
   0x02782BF0, --Holy Moonlight Sword
   0x0277DDD0, --Beast Cutter
+  0x0273BF20, --Chikage
   0x027545C0, --Reiterpallasch
+  0x0272FBD0, --Tonitrus
+  0x0272FDC4, --Tonitrus 2
   0x0274D090, --Burial Blade
   0x01CB4A20, --Deep Chime
   0x01455140, --King's Shield
 
 -- Side Arms
 
+  0x015F41E0, --Hunter's Torch
   0x0271EA60, --Hunter Blunderbuss
   0x02743450, --Hunter Pistol
   0x02745B60, --Cannon
@@ -3976,7 +3996,7 @@ local newWeapons =
   0x02793D60, --Gatling Gun
   0x02798B80, --Church Cannon
   0x02796470, --Fist of Gracia
-  0x0279B290 --Piercing Rifle
+  0x0279B290  --Piercing Rifle
 
 }
 
@@ -5770,6 +5790,7 @@ local newItems =
   0x400003F2, --Dragon Scale
   0x40000871, --Mystical Key
   0x40000870, --Old Grave Key
+  0x40000156, --Thunder Paper
   0x40000151, --Thunder Flask
   }
 
