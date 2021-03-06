@@ -8496,6 +8496,9 @@ function AttackRightHeavyKick_onUpdate() -- jump
     iT = FALSE
     local r1 = "W_AttackRightLightStep"
     local sp_m = env(345 , HAND_RIGHT)
+
+    if GetEquipType(HAND_RIGHT, 23) == TRUE then r1 = "W_AttackRightLight2" end
+
     if (   (sp_m ~= 264 and sp_m ~= 164)   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then r1 = "W_AttackRightLight3" end
     if sp_m == 614 then r1 = "W_AttackRightLight2" end
     if sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
