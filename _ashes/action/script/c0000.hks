@@ -10068,13 +10068,16 @@ function AttackCrossbowRightFire_Upper_onUpdate()
 end
 
 function AttackCrossbowRightReload_Upper_onUpdate() -- neutral transform (T > UT)
-    iT = FALSE
     act("4方向移動閾値設定", 60, 80, 60, 60)
     local blend_type, lower_state = GetHalfBlendInfo()
 
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
     local sp_m = env(345 , HAND_RIGHT)
+    
+    if (sp_m == 645) then   iT = TRUE
+    else iT = FALSE end
+
     if sp_m == 605 or sp_m == 620 then 
         r1 = "W_AttackRightHeavy2End" 
         b1 = "W_AttackBothHeavy2End" 
