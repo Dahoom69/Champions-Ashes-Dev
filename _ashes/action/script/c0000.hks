@@ -12203,8 +12203,18 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
         b1 = "W_AttackBothHeavySpecial1Start"
     end
 
-    if (sp_kind == 645 and env(1116, 100801) == TRUE) then  b1 = "W_AttackRightLight2" end
-    if (sp_kind == 645 and env(1116, 100801) ~= TRUE) then  b1 = "W_AttackBothLight1" end 
+   if sp_kind == 645 and env(1116, 100801) == TRUE then 
+    r1 = "W_AttackRightLight2" 
+    b1 = "W_AttackRightLight2" 
+    iT = FALSE
+    end
+
+    if sp_kind == 645 and env(1116, 100801) == FALSE then 
+        r1 = "W_AttackBothLight1" 
+        b1 = "W_AttackBothLight1" 
+        iT = TRUE
+     end
+
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
