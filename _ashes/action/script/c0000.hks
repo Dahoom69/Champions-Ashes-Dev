@@ -8789,7 +8789,7 @@ function AttackBothLight1_onUpdate()  -- r11
     if (sp_m == 645) then  
         iT = FALSE  
         r1 = "W_AttackRightHeavySpecial1Start" 
-        r2 = "W_AttackRightHeavy1SubStart"
+        r2 = "W_AttackRightHeavy2Start"
     end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, "W_AttackBothLight2", b2, FALSE, TRUE) == TRUE then
@@ -9269,7 +9269,7 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
     if (sp_m == 645) then  
         iT = FALSE  
         r1 = "W_AttackRightHeavySpecial1Start" 
-        r2 = "W_AttackRightHeavy1SubStart"
+        r2 = "W_AttackRightHeavy2Start"
     end
         
     local b2 = "W_AttackBothHeavy2Start"
