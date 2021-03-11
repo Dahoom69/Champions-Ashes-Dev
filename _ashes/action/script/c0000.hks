@@ -16773,6 +16773,8 @@ function BonfireInitialize_onUpdate()
 end
 
 function BonfireStart_onActivate()
+    local sp_m = env(345 , HAND_RIGHT)
+    if (sp_m == 645) then act(2002, 6038)  iT = FALSE end -- turn off fire effect and untransform at bonfire
     act("貪欲者の印スリップダメージ無効")
     return 
 end
