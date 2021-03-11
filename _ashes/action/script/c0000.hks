@@ -3683,8 +3683,12 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565 = Event_AttackCrossbowRightReload
                 W_Event90565[0] = "W_AttackBothHeavySpecial1SubStart"      
                 W_Event90565[2] = "W_AttackBothHeavySpecial1SubStart_Upper"   
-                if (env(1116, 100291) == TRUE and  env(1001) > 0) then    ExecEventAllBody("W_AttackBothHeavySpecial2Start") 
-                elseif (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackBothHeavySpecial2Start")   -- to UT
+                if (env(1116, 100291) == TRUE and  env(1001) > 0) then   
+                    if sp_m == 645 then  ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
+                    else ExecEventAllBody("W_AttackBothHeavySpecial2Start") end
+                elseif (hand ~= HAND_RIGHT)  then  
+                    if sp_m == 645 then  ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
+                    else ExecEventAllBody("W_AttackBothHeavySpecial2Start") end  -- to UT
                 else 
                     SetVariable("MoveSpeedLevelReal", 0)
                     ExecEvents(W_Event90565[1], W_Event90565[1] .. "_Upper") -- to UT
@@ -8091,7 +8095,7 @@ function AttackRightLightStep_onUpdate() -- roll r1
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 264 or sp_m == 164 or sp_m == 643 or sp_m == 614 then r1 = "W_AttackRightLight2" end
     if sp_m == 612 then r1 = "W_AttackRightLight3" end
-    if sp_m == 609 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 609 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy2Start" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -8106,7 +8110,7 @@ function AttackRightLightStepSpecial_onUpdate() -- bs r2
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
     local sp_m = env(345 , HAND_RIGHT)
-    if sp_m == 264 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 264 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 609 or sp_m == 164 or sp_m == 614 then r1 = "W_AttackRightLight2" end
     if  sp_m == 612 then r1 = "W_AttackRightLight3" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -8136,7 +8140,7 @@ function AttackRightLightDash_onUpdate() -- run r1
     if sp_m == 264 or sp_m == 164 or sp_m == 612 then r1 = "W_AttackRightLight3" end
     if (sp_m == 643) or sp_m == 609 then r1 = "W_AttackRightLight2" end
     if (sp_m == 643 and env(1116, 100281) == TRUE) then r1 = "W_AttackRightLight1" end
-    if sp_m == 614 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 614 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
 
     
         if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -8159,8 +8163,7 @@ function AttackRightLightDashSpecial_onUpdate() -- bs r1
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 then r1 = "W_AttackRightLight2" end
     if sp_m == 609 or sp_m == 164 then r1 = "W_AttackRightLight3" end
-    if sp_m == 614 then r1 = "W_AttackRightHeavySpecial1Start" end
-    if  sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 614 or sp_m == 612 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
@@ -8428,6 +8431,7 @@ end
 function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack
     -- tR1
     iT = TRUE
+    
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
     local hand = HAND_RIGHT
@@ -8438,8 +8442,9 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack
         b1 = "W_AttackBothHeavy2End" 
     end
 
-    local r2 = "W_AttackBothHeavy1Start"
-    if i1BB == TRUE then r2 = "W_AttackBothHeavy1SubStart" end
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+    if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
 
     if (sp_m == 643) then 
         b1  = "W_AttackBothLight2"
@@ -8448,11 +8453,20 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack
     if sp_m == 614 then b1 = "W_AttackBothLight3" end
     if  sp_m == 609 or sp_m == 612 then b1 = "W_AttackBothLight3" end
 
-    if (env(345 , HAND_RIGHT) == 624) then r2 = "W_AttackRightHeavy1SubStart" end
+    if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
 
     if 20 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
 
-    if AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, r2, FALSE, TRUE) == TRUE then
+    
+    if (sp_m == 645) then 
+        iT = TRUE
+        b1  = "W_AttackBothLight1"
+        r1 = "W_AttackBothLight1" 
+        r2 = "W_AttackRightHeavy1SubStart"
+        b2 = "W_AttackBothHeavy1SubStart"
+    end
+
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackRightHeavySpecial2End")
@@ -8501,7 +8515,7 @@ function AttackRightHeavyKick_onUpdate() -- jump
 
     if (   (sp_m ~= 264 and sp_m ~= 164)   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then r1 = "W_AttackRightLight3" end
     if sp_m == 614 then r1 = "W_AttackRightLight2" end
-    if sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 609 or sp_m == 612 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
@@ -8517,7 +8531,7 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 or sp_m == 609 then r1 = "W_AttackRightLight2" end
     if sp_m == 164 then r1 = "W_AttackRightHeavySpecial1Start" end
-    if sp_m == 614  or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 614  or sp_m == 612 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -9197,8 +9211,6 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge
 
     local r1 = "W_AttackRightLight1" 
     if (sp_m == 645) then  
-        iT = FALSE  
-        r1 = "W_AttackRightHeavySpecial1Start" 
         r2 = "W_AttackRightHeavy1SubStart"
     end
 
@@ -9298,7 +9310,7 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
         local r2 = "W_AttackRightHeavy1Start"
         if (sp_m == 645) then  
             iT = FALSE  
-            r1 = "W_AttackRightHeavySpecial1Start" 
+            r1 = "W_AttackRightLight3" 
             r2 = "W_AttackRightHeavy1SubStart"
         end
 
@@ -9547,8 +9559,16 @@ function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
         r2  = "W_AttackRightHeavy2Start"
          r1 = "W_AttackRightLight3" end
 
+         if (sp_m == 645) then 
+            b1  = "W_AttackBothLight1"
+            r1 = "W_AttackBothLight1" 
+            r2 = "W_AttackBothHeavy1SubStart"
+        end
+
     if sp_m == 614 then r1 = "W_AttackRightLight3" end
     if  sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
+
+
 
     if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -9726,7 +9746,7 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2
          if (sp_m == 645) then  
              iT = FALSE  
              r1 = "W_AttackRightHeavySpecial1Start" 
-             r2 = "W_AttackRightHeavy1SubStart"
+             r2 = "W_AttackRightHeavy2Start"
          end
 
          if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
@@ -9823,7 +9843,7 @@ function AttackBothHeavyKickSpecial_onUpdate() -- run r2
         r2 = "W_AttackRightHeavy1SubStart"
     end
 
-    if sp_m == 614 then b1 = "W_AttackBothHeavySpecial1Start" end
+    if sp_m == 614  or sp_m == 645 then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 609 or sp_m == 612 then b1 = "W_AttackBothHeavySpecial1Start" end
 
     if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
