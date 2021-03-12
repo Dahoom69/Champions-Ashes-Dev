@@ -8,7 +8,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open -DEV 1.4.9"</Description>
+      <Description>"Open - The Developer's Archive 1.4.9.5 03/12/2021"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -3824,7 +3824,8 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337081767</ID>
                       <Description>"Item Name"</Description>
-                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">13D8A650:Plague Mask
+                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">02787A10:Boom Hammer
+13D8A650:Plague Mask
 02165CE0:Gravelord Sword
 40359AA8:Holy Bident
 40391160:Gravelord Sword Dance
@@ -5550,6 +5551,7 @@ local newWeapons =
   0x0274D090, --Burial Blade
   0x01CB4A20, --Deep Chime
   0x01455140, --King's Shield
+  0x02787A10, --Boom Hammer
 
 -- Side Arms
 
@@ -8089,7 +8091,7 @@ unregisterSymbol(BonfireData)
 3002960:High Wall of Lothric, Teleport
 3102950:Undead Settlement
 3102952:Cliff Underside
-3102953:Dilipidated Bridge
+3102953:Dilapidated Bridge
 3102951:Pit of Hollows
 3302956:Road of Sacrifices
 3302950:Halfway Fortress

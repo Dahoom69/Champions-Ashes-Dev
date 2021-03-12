@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 1.4.9.3 03/05/2021"</Description>
+      <Description>"Open - The Champion's Archive 1.4.9.5 03/12/2021"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -3373,7 +3373,7 @@ CREATETHREAD(ItemGib)
 00CA2DD0:Crystal Chime
 00CCECF0:Sacred Chime of Filianore
 01CB4A20:Deep Chime
-01CB7130: Black Hair Talisman
+01CB7130:Black Hair Talisman
 015EF3C0:Torch
 015F1AD0:Follower Torch
 015F41E0:Hunter's Torch
@@ -3393,6 +3393,7 @@ CREATETHREAD(ItemGib)
 027804E0:Amygdalan Arm
 02785300:Rakuyo
 0278EF40:Whirligig Saw
+02787A10:Boom Hammer
 0271EA60:Hunter Blunderbuss
 02743450:Hunter Pistol
 02745B60:Cannon
@@ -4391,6 +4392,7 @@ local newWeapons =
   0x02165CE0, --Gravelord Sword
   0x013524A0, --Cleric's Parma
   0x01509BE0, --White Dragon Greatshield
+  0x02787A10, --Boom Hammer
 
 
 -- Side Arms
@@ -6951,7 +6953,7 @@ unregisterSymbol(TargetBonfireId)
 3002960:High Wall of Lothric, Teleport
 3102950:Undead Settlement
 3102952:Cliff Underside
-3102953:Dilipidated Bridge
+3102953:Dilapidated Bridge
 3102951:Pit of Hollows
 3302956:Road of Sacrifices
 3302950:Halfway Fortress
