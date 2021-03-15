@@ -5552,6 +5552,8 @@ local newWeapons =
   0x01CB4A20, --Deep Chime
   0x01455140, --King's Shield
   0x02787A10, --Boom Hammer
+  0x027804E0, --Amygdalan Arm
+
 
 -- Side Arms
 

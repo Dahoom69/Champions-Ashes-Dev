@@ -4393,6 +4393,8 @@ local newWeapons =
   0x013524A0, --Cleric's Parma
   0x01509BE0, --White Dragon Greatshield
   0x02787A10, --Boom Hammer
+  0x027804E0, --Amygdalan Arm
+
 
 
 -- Side Arms
