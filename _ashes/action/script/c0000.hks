@@ -9364,8 +9364,8 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     if sp_m == 609 or (sp_m == 612) then b1 = "W_AttackBothHeavySpecial1Start" end
 
-    local r2 = "W_AttackBothHeavy1Start"
-    if i1BB == TRUE then r2 = "W_AttackBothHeavy1SubStart" end
+    local b2 = "W_AttackBothHeavy1Start"
+    if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
 
     if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
 
@@ -9411,7 +9411,7 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
             return 
         end
     else 
-        if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, r2, FALSE, TRUE) == TRUE then
+        if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
         else
             return 
