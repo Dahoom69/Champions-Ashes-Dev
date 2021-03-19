@@ -8280,8 +8280,10 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge
     if sp_m == 658 then r1 = "W_AttackRightLight2" end 
     if sp_m == 658 and env(1116, 100801) == TRUE  then r1 = "W_AttackRightLight1" end
 
+    local is_pyro = FALSE
+    if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
 
-    if (is_catalysts == TRUE) then  
+    if is_catalysts == TRUE and is_pyro ~= TRUE then  
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightLight2", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
@@ -8326,7 +8328,10 @@ function AttackRightHeavy2End_onUpdate() -- r22 release end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90  or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
     if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 51 then  r1 =  "W_AttackRightLight2" end
 
-    if (is_catalysts == TRUE) then  
+    local is_pyro = FALSE
+    if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
+
+    if is_catalysts == TRUE and is_pyro ~= TRUE then  
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightLight2", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return 
         else
@@ -9285,8 +9290,9 @@ end
 
 function AttackBothHeavy2Start_onUpdate()  -- r22 charge
     local is_catalysts = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
-    
-    if (is_catalysts == TRUE) then  
+    --local is_catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
+
+    if (    (is_catalysto == TRUE and HAND_LEFT_BOTH == c_Style) or is_catalysts == TRUE) then  
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightLight1", FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
