@@ -8,8 +8,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Developer's Archive 1.4.9.6.1 03/19/2021"</Description>
-      <Options moHideChildren="1"/>
+      <Description>"Open - The Developer's Archive 1.4.9.6.2 03/21/2021"</Description>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -16298,7 +16297,7 @@ A000276A:Spears of the Church
               <ID>1337078895</ID>
               <Description>"GameData"</Description>
               <Options moHideChildren="1"/>
-              <LastState Value="" RealAddress="00000000"/>
+              <LastState Value="" Activated="1" RealAddress="00000000"/>
               <Color>C80000</Color>
               <GroupHeader>1</GroupHeader>
               <CheatEntries>
@@ -17124,8 +17123,9 @@ disableMemrec(memrec)
 6:Sorcerer
 7:Pyromancer
 8:Cleric
-9:Deprived
-10:Debug
+9:Dragon
+10:Deprived
+11:Guardian
 </DropDownList>
                           <VariableType>Byte</VariableType>
                           <Address>BaseA</Address>
@@ -17150,16 +17150,18 @@ disableMemrec(memrec)
                           <ID>1337080909</ID>
                           <Description>"Gift"</Description>
                           <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:None
-1:Life Ring
-2:Divine Blessing
-3:Hidden Blessing
-4:Black Firebomb
-5:Fire Gem
-6:Sovereignless Soul
-7:Rusted Gold Coin
-8:Cracked Red Eye Orb
-9:Young White Branch
-10:Debug
+1:Farron Coal
+2:Sage Coal
+3:Giant Coal
+4:Profaned Coal
+5:Young Dragon Ring
+6:Ring of the Unburdened
+7:A Feast of Dung Pies
+8:Titanite Chunks
+9:Soul of a Crestfallen Knight
+10:Red Sign Soapstone
+11:Young White Branch
+12:Rubbish
 </DropDownList>
                           <VariableType>Byte</VariableType>
                           <Address>BaseA</Address>
@@ -70338,6 +70340,476 @@ unregistersymbol(SpEffectVfxParam)
                         <Offset>68</Offset>
                         <Offset>10C0</Offset>
                       </Offsets>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>1337159112</ID>
+              <Description>"PhantomParam Helpers, use the one equal to your version of CA"</Description>
+              <Options moHideChildren="1"/>
+              <LastState Value="" RealAddress="00000000"/>
+              <Color>FF0000</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>1337180910</ID>
+                  <Description>"PhantomParam Helper Champion's Ashes 1.4.9.6.2"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <Color>FF0000</Color>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+alloc(PhanParAdd,8)
+registersymbol(PhanParAdd)
+PhanParAdd:
+dd #2584
+[DISABLE]
+dealloc(PhanParAdd)
+unregistersymbol(PhanParAdd)
+</AssemblerScript>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337159102</ID>
+                      <Description>"Quick Guide"</Description>
+                      <LastState/>
+                      <Color>FF0000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if syntaxcheck then return end
+
+[ENABLE]
+disableMemrec(memrec)
+showText([[Reminder that this is a WIP (fully functional just not explained well, which will take some testing &amp; time )
+
+
+Pick the phantom color you want to edit from "PP Address"
+
+Press "PP open"-&gt;"Outline intensity" then edit the param to your heart's content
+
+Intensity is somewhat like Brightness, with 0 Being Disabled, it's numbers are low
+
+Outline is the most obvious thing you notice in a phantom, The host has this at 0
+
+Overlay is simple, just a 2d color filter on everything
+
+Fill is uhh how do I explain this? a shade coming from the inside? the intensitry needs to be raised a bit to notice it
+
+Edge seems to be the opposite of Fill it's easier to notice and looks like it mirrors it in shade direction
+
+
+
+Intensity and values support decimals both positive and negative,
+while R G B values range only from 0 to 255.
+
+Unk1 is currently unknown as to what it does exactly
+
+The GhostType Value has 3 states:
+0= Disabled,
+1= Enabled,
+2= Dark transparency (needs high intensity to look good),
+3= Normal transparency,
+4 -&gt; ???= Pitch black with minor details in white, seems to show a bit of the outline color when attacking
+
+
+Big thanks to Gate for providing this (I (Rayan) just made it more user friendly,
+And to ChurchGuard for providing an explanation on what these options do
+
+-------------------------------------------------------------------------
+and this is what they mean
+
+1		White w/Less glow
+2		White w/More glow
+3		Faded brown with slight blue glow
+4		Same as above
+5		Faded brown with pink glow
+6		Bright blue with pink shade
+7		Brighter blue with pink shade
+8		Aqua Blue w/White tint
+9		Aqua Blue w/Slightly darker white tint
+10		Bright Aqua w/bright white tint
+11		Bright Aqua
+12		Glowing Grey
+13		Grey w/Dark purple shade
+14		White w/slight glow
+15		Translucent w/Grey shade
+16		Chalk White/Faded White
+17		Invisibility with dark green color
+18		Marine blue
+19		Brighter Marine
+20		Bright Yellow
+21		Light Orange
+22		Light Purple
+23		Light Green/Yellow
+24		Light Orange w/Less glow
+25		Darker Marine
+26		Same as above
+27		White Phantom with more shine
+28		Similar to 16 but w/light purple shade
+29		Similar to 16 but w/Glow
+30		Like Darkmoon blue w/fade
+31		Translucent Grey
+32		Transparent Grey, like ghost color
+33		Transparent w/Purple glow
+35		Normal colors w/Orange shade
+36		Like 35 but with peach glow
+40		Transparent teal color
+41		Completely Invisible
+42		Completely White
+43		Grey shade
+50		Bright Sky Blue shade
+51		Cyan glow
+52		Yellow glow
+53		Orange glow
+54		Purple glow
+55		Green/yellow glow
+56		Similar to 53 w/less glow
+57		Similar to 25
+58		Similar to 25
+59		Similar to 25 with brighter edges
+60		Similar to normal dark spirit
+61		Similar to White Phantom
+62		Like 32 with more white glow
+63		Bright white color w/slight peach shade
+64		Bright gold glow
+65		Bright gold glow with red shade
+66		Purple glow
+67		Purple glow with red shade
+68		Turquoise glow
+69		Green glow with red shade
+70		Blue glow
+71		Darkmoon spirit color with bright white glow
+72		Darkmoon color with yellow glow
+73		Darkmoon color with green/yellow glow
+74		Transparent, ghost color
+75		Transparent with no glow
+76		Transparent with less glow
+80		White phantom color
+81		Dark spirit color w/Small normal colors
+82		Blue sentinel color
+83		Darkmoon spirit color
+84		Same as above
+85		Sunbro color
+86		Dark sunbro color
+87		Mound maker color
+88		Actual Moundmaker Color Game Uses
+89		Dark spirit color
+90		Dark blue glow with purple shade
+91		Aldrich faithful color
+92		Brown glow
+101		Like 1 with less glow
+102		More Washed out White Phantom
+103		Blue with orange shade
+104		Bright blue with orange shade
+105		Very bright cyan, brown shade
+106		Very bright cyan, more brown shade
+107		Very bright cyan, white shade
+108		Very bright cyan, more white shade
+109		Very bright cyan only
+170		White Phantom with more shine and blue edges
+181		Transparent with red shade
+185		Transparent with sunbro shade
+186		Transparent with dark sunbro shade
+187		Transparent with mound maker shade
+201		Black phantom
+202		Like 201 with white glow
+203		Like 201 with brown shade
+204		Bright blue with pink shade
+205		Bright cyan, slight darker shade
+206		97:Bright cyan, with lighter shades
+207		Similar to Above
+208		Similar to Above with much brighter white edges
+209		Translucent white
+500     Vaporwave -CA Exclusive
+]])
+
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337180911</ID>
+                      <Description>"PhantomParamID | ファントムパラメータID"</Description>
+                      <ShowAsSigned>1</ShowAsSigned>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>DarkSoulsIII.exe+4768E78</Address>
+                      <Offsets>
+                        <Offset>1F38</Offset>
+                        <Offset>80</Offset>
+                      </Offsets>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337159111</ID>
+                      <Description>"PP Address"</Description>
+                      <DropDownList>2584:1
+2632:2
+2680:3
+2728:4
+2776:5
+2824:6
+2872:7
+2920:8
+2968:9
+3016:10
+3064:11
+3112:12
+3160:13
+3208:14
+3256:15
+3304:16
+3352:17
+3400:18
+3448:19
+3496:20
+3544:21
+3592:22
+3640:23
+3688:24
+3736:25
+3784:26
+3832:27
+3880:28
+3928:29
+3976:30
+4024:31
+4072:32
+4120:33
+4168:35
+4216:36
+4264:40
+4312:41
+4360:42
+4408:43
+4456:50
+4504:51
+4552:52
+4600:53
+4648:54
+4696:55
+4744:56
+4792:57
+4840:58
+4888:59
+4936:60
+4984:61
+5032:62
+5080:63
+5128:64
+5176:65
+5224:66
+5272:67
+5320:68
+5368:69
+5416:70
+5464:71
+5512:72
+5560:73
+5608:74
+5656:75
+5704:76
+5752:80
+5800:81
+5848:82
+5896:83
+5944:84
+5992:85
+6040:86
+6088:87
+6136:88
+6184:89
+6232:90
+6280:91
+6328:92
+6376:101
+6424:102
+6472:103
+6520:104
+6568:105
+6616:106
+6664:107
+6712:108
+6760:109
+6808:170
+6856:181
+6904:185
+6952:186
+7000:187
+7048:201
+7096:202
+7144:203
+7192:204
+7240:205
+7288:206
+7336:207
+7384:208
+7432:209
+7480:500
+7528:501
+7576:502
+</DropDownList>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>PhanParAdd</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337159077</ID>
+                      <Description>"PP open"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337180912</ID>
+                          <Description>"Alpha1"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>DarkSoulsIII.exe+4782838</Address>
+                          <Offsets>
+                            <Offset>readInteger("PhanParAdd")</Offset>
+                            <Offset>68</Offset>
+                            <Offset>68</Offset>
+                            <Offset>10c0</Offset>
+                          </Offsets>
+                          <CheatEntries>
+                            <CheatEntry>
+                              <ID>1337180913</ID>
+                              <Description>"Alpha2"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+4</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180914</ID>
+                              <Description>"Alpha3"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+8</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180915</ID>
+                              <Description>"Alpha4"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180916</ID>
+                              <Description>"Alpha5"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+10</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180917</ID>
+                              <Description>"R1"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+14</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180918</ID>
+                              <Description>"G1"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+15</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180919</ID>
+                              <Description>"B1"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+16</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180920</ID>
+                              <Description>"R2"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+17</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180921</ID>
+                              <Description>"G2"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+18</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180922</ID>
+                              <Description>"B2"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+19</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180923</ID>
+                              <Description>"R3"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+1A</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180924</ID>
+                              <Description>"G3"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+1B</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180925</ID>
+                              <Description>"B3"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+1C</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180926</ID>
+                              <Description>"R4"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+1D</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180927</ID>
+                              <Description>"G4"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+1E</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180928</ID>
+                              <Description>"B4"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+1F</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180929</ID>
+                              <Description>"R5"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+20</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180930</ID>
+                              <Description>"G5"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+21</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180931</ID>
+                              <Description>"B5"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+22</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180932</ID>
+                              <Description>"Unk1"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+23</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180933</ID>
+                              <Description>"GhostAlpha1"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+24</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180934</ID>
+                              <Description>"GhostAlpha2"</Description>
+                              <VariableType>Float</VariableType>
+                              <Address>+28</Address>
+                            </CheatEntry>
+                            <CheatEntry>
+                              <ID>1337180935</ID>
+                              <Description>"GhostType"</Description>
+                              <VariableType>Byte</VariableType>
+                              <Address>+2C</Address>
+                            </CheatEntry>
+                          </CheatEntries>
+                        </CheatEntry>
+                      </CheatEntries>
                     </CheatEntry>
                   </CheatEntries>
                 </CheatEntry>
