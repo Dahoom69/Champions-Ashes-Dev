@@ -9475,8 +9475,8 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
         l1 = "W_AttackBothLeft3" 
     end
 
-    if sp_m == 195 or sp_m == 621 or sp_m == 646 then b1 = "W_AttackBothLight2" end
-    if sp_m == 641 or sp_m == 605 or sp_m == 609 or sp_m == 643 or sp_m == 612 or sp_m == 624 or sp_m == 101  or sp_m == 645 then b1 = "W_AttackBothLight3" end
+    if sp_m == 195 or sp_m == 621 then b1 = "W_AttackBothLight2" end
+    if sp_m == 641 or sp_m == 605 or sp_m == 609 or sp_m == 643 or sp_m == 612 or sp_m == 624 or sp_m == 101  or sp_m == 645 or sp_m == 646  then b1 = "W_AttackBothLight3" end
 
     if (sp_m == 643) then 
         l1  = "W_AttackBothLeft2"
