@@ -572,24 +572,7 @@ function GetAttackRequest(is_guard)
     local is_arrow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW, WEAPON_CATEGORY_LARGE_ARROW)
     local is_crossbow = GetEquipType(hand, WEAPON_CATEGORY_CROSSBOW)
     local is_staff = GetEquipType(hand, WEAPON_CATEGORY_STAFF)
-    -- ==============================[ Custom Code Start ]==============================
-    -- Author: Halvard
-    -- note: Allows holding the action button (A) to modify attack inputs
-    -- =================================================================================
-    if env(1106, ACTION_ARM_ACTION) == TRUE or env(1108, ACTION_ARM_ACTION) > 0 then
-        if is_arrow == TRUE or is_crossbow == TRUE or is_staff == TRUE then
-            return ATTACK_REQUEST_INVALID
-        end
-
-        if env(1106, ACTION_ARM_R1) == TRUE then
-            return ATTACK_REQUEST_LIGHT_KICK
-        elseif env(1106, ACTION_ARM_R2) == TRUE then
-            return ATTACK_REQUEST_HEAVY_KICK
-        else
-            return ATTACK_REQUEST_INVALID
-        end
-    -- ===============================[ Custom Code end ]===============================
-    elseif env(1106, ACTION_ARM_R1) == TRUE then -- if changed to elseif ~Halvard
+    if env(1106, ACTION_ARM_R1) == TRUE then 
         if is_both == TRUE then
             local sp = env(345 , HAND_RIGHT) 
             local is_gh = GetEquipType(HAND_RIGHT, 35) 
