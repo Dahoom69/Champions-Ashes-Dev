@@ -11955,7 +11955,7 @@ function AttackSpinLoopEnd_onUpdate()
     end
 end
 
-function Charge_Upper_onUpdate()
+function Charge_Upper_onUpdate() -- 6700
     local b1 = "W_AttackBothLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local l2 = "W_AttackLeftHeavy1"
@@ -11990,7 +11990,7 @@ function Charge_Upper_onUpdate()
         return 
         
 
-    elseif (    ((sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH) or ((sp_o == 656 or sp_o == 72) and style == HAND_LEFT_BOTH) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE)   ) then -- new
+    elseif (    (sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH     or (sp_o == 656 or sp_o == 72 and style == HAND_LEFT_BOTH))     and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then -- new
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_ChargeContinue")
         return -- new
@@ -12057,7 +12057,7 @@ function ChargeContinue_onUpdate()
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", l2, "W_AttackBothLight1", b2, is_artsr1, is_artsr2, TRUE, GEN_TRANS_LFET) == TRUE then
         return 
-    elseif (    ((sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH) or ((sp_o == 656 or sp_o == 72) and style == HAND_LEFT_BOTH)  and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE or (env(1108, ACTION_ARM_L2) <= 0 and env(1116, 100280) == TRUE)   )) then -- new
+    elseif (    (sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH     or (    (sp_o == 72 or sp_o == 656) and style == HAND_LEFT_BOTH)) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE or (env(1108, ACTION_ARM_L2) <= 0 and env(1116, 100280) == TRUE)   ) then -- new
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_ChargeContinue2")
         return -- new
