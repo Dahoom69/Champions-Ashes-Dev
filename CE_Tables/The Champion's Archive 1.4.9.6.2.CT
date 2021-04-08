@@ -3258,7 +3258,6 @@ CREATETHREAD(ItemGib)
 007D9470:Hammer of the Great Tree
 007DBB80:Warpick
 007E57C0:Blacksmith Hammer
-007D4650:Four Knight's Hammer
 007D6D60:Heysel Pick
 00F61FD0:Drang Hammers
 007AFC60:Large Club
@@ -4303,7 +4302,6 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337099163</ID>
                       <Description>"Mass ItemGib"</Description>
-                      <Options moHideChildren="1"/>
                       <LastState/>
                       <Color>6A0035</Color>
                       <VariableType>Auto Assembler Script</VariableType>
