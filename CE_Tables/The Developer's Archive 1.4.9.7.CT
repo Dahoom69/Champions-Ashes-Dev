@@ -8,7 +8,8 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Developer's Archive 1.4.9.6.2 03/21/2021"</Description>
+      <Description>"Open - The Developer's Archive 1.4.9.7 04/17/2021"</Description>
+      <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -5506,7 +5507,7 @@ local newWeapons =
 {
 -- Unused Stuff
 
-  0x000D9490, --?WeaponName?(smoldering straightsword
+  0x000D9490, --Smoldering Straight Sword
   0x0022A330, --?WeaponName?(quick silver sword)
   0x007D9470, --Hammer of the Great Tree
   0x007D4650, --Four Knights Hammer
@@ -5524,7 +5525,7 @@ local newWeapons =
 
 
 -- weapons --
-
+  0x01CB9840, --Paired Demon Great Machetes
   0x009A4430, --Lothric's Great Scythe
   0x009A6B40, --Ancient Dragon Halberd
   0x01CAFC00, --Bewitched Alonne Sword
@@ -5552,6 +5553,7 @@ local newWeapons =
   0x01455140, --King's Shield
   0x02787A10, --Boom Hammer
   0x027804E0, --Amygdalan Arm
+  0x01CBBF50, --Dragonslayer Swordspear (Sword Form)
 
 
 -- Side Arms
@@ -5740,7 +5742,7 @@ local weaponsBase = -- Base Weapons
   0x008B2900, --Rotten Ghru Spear
   0x008B5010, --Tailbone Spear
   0x008B7720, --Soldering Iron
-  0x008BC540, --Dragonslayer Swordspear
+  0x008BC540, --Dragonslayer Swordspear (Spear Form)
   0x008BEC50, --Arstor's Spear
   0x008C1360, --Saint Bident
   0x008C3A70, --Yorshka's Spear
@@ -16297,7 +16299,7 @@ A000276A:Spears of the Church
               <ID>1337078895</ID>
               <Description>"GameData"</Description>
               <Options moHideChildren="1"/>
-              <LastState Value="" Activated="1" RealAddress="00000000"/>
+              <LastState Value="" RealAddress="00000000"/>
               <Color>C80000</Color>
               <GroupHeader>1</GroupHeader>
               <CheatEntries>
