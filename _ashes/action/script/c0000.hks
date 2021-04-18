@@ -10645,7 +10645,7 @@ function DrawStanceRightComboStartRight_onUpdate()
 end
 
 function DrawStanceRightComboStartLeft_onUpdate()
-    if SwordArtsCommonFunction("W_DrawStanceRightAttackLight3", "W_DrawStanceRightAttackHeavy", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_DrawStanceRightAttackLight.", "W_DrawStanceRightAttackHeavy", FALSE, TRUE, TRUE, FALSE) == TRUE then
+    if SwordArtsCommonFunction("W_DrawStanceRightAttackLight3", "W_DrawStanceRightAttackHeavy", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_DrawStanceRightAttackLight3", "W_DrawStanceRightAttackHeavy", FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     else
         return 
