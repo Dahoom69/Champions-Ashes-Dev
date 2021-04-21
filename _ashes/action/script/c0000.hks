@@ -2756,7 +2756,9 @@ function ExecMagic(quick_type, blend_type)
     
     if ca_feintWindowActive == false then
         ca_feintCounter = 0
-    elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then
+    elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then  
+        if magic_hand == HAND_RIGHT then ExecEventHalfBlend(Event_MagicInvalidRight, blend_type)
+        else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
         return FALSE
     elseif ca_feintLimitTwoActive and ca_feintCounter >= 2 then
         return FALSE
