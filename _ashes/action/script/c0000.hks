@@ -2702,7 +2702,7 @@ function ExecMagic(quick_type, blend_type)
             return FALSE
         elseif style == HAND_LEFT_BOTH then
             local sp_kind = env(345 , HAND_LEFT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (GetEquipType(HAND_LEFT, 38)  == FALSE and sp_kind ~= 67)  then
+            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_LEFT, 38)  == FALSE or sp_kind ~= 67) then
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
@@ -2710,7 +2710,7 @@ function ExecMagic(quick_type, blend_type)
             SetAttackHand(HAND_LEFT)
         else
             local sp_kind = env(345 , HAND_RIGHT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (GetEquipType(HAND_LEFT, 38)  == FALSE and sp_kind ~= 67) then
+            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_RIGHT, 38)  ~= TRUE or sp_kind ~= 67) then
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
@@ -2732,7 +2732,7 @@ function ExecMagic(quick_type, blend_type)
             end
         elseif style == HAND_RIGHT then
             local sp_kind = env(345 , HAND_LEFT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257  and (GetEquipType(HAND_LEFT, 38)  == FALSE and sp_kind ~= 67) then
+            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257  and (GetEquipType(HAND_LEFT, 38)  == FALSE or sp_kind ~= 67) then
                 return FALSE
             end
             SetAttackHand(HAND_LEFT)
