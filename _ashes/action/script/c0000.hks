@@ -1745,7 +1745,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         else 
 
         if HAND_LEFT_BOTH <= style or iT == TRUE then
-            if IsArtsSpAtk() == TRUE or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67) then
+            if IsArtsSpAtk() == TRUE or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE) or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE)   then
                 ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
