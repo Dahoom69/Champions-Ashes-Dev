@@ -638,7 +638,7 @@ function GetAttackRequest(is_guard)
             elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
                 if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
                 elseif (sp == 231 or spo == 231) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
-                elseif (sp == 72 or spo == 72)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
+                elseif ((sp == 72 or spo == 72) and c_SwordArtsID ~= 24)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
                 elseif (sp == 176 or spo == 176) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art
                 else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
                 end
@@ -670,7 +670,7 @@ function GetAttackRequest(is_guard)
                 act(2002, 626)
                 --SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) -- doesn't work w parry shields
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
-            elseif sp == 72  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
+            elseif sp == 72 and c_SwordArtsID ~= 24  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
             elseif sp == 167 then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora
             elseif sp == 176 then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS
             end
