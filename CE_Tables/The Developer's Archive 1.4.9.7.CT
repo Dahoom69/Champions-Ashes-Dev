@@ -2035,99 +2035,47 @@ dealloc(allocatedMemory)
 </AssemblerScript>
                 </CheatEntry>
                 <CheatEntry>
-                  <ID>1337105178</ID>
-                  <Description>"Cycling tears"</Description>
-                  <Options moHideChildren="1"/>
+                  <ID>1337159083</ID>
+                  <Description>"PvPenny V2"</Description>
                   <LastState/>
-                  <Color>400000</Color>
                   <VariableType>Auto Assembler Script</VariableType>
-                  <AssemblerScript>{slightly better, maybe? Eat Rubbish to use, as usual}
-{$lua}
-if syntaxcheck then return end
-[enable]
-local I1 = EquipParamGoods:new("OK",380) --Vanilla Rubbish ID
-I1:patch4Byte(0x0,103520000) --Reference ID: Vanilla Tears ID.
-I1:refCategory(2) --Reference Category: SpEffect
-I1:patchByte(0x44,95) --Enabling use of and unlimited use of item
-I1:isUse(1) --Also enabling use.
-
-local I2 = SpEffectParam:new("OK",103520100) --Vanilla Tears Child ID (Stateinfo linked)
-I2:replaceSpEffectId(41) --On death, apply: PREFERABLY an unused SpEffectParam ID...
-I2:changeHpRate(-100) --Restores HP to 100%.
-I2:changeMpRate(-100) --Restores FP to 100%.
-
-local I3 = SpEffectParam:new("OK",41) --*probably* unused
-I3:effectEndurance(0.1) --duration
-I3:cycleOccurrenceSpEffectId(103520000) --Vanilla Tears Parent
-I3:stateInfo(13) --Remove all AUXILIARY... Let us know if frost persists occasionally.
-I3:spCategory(0)
-
-local I4 = SpEffectParam:new("OK",103520000)
-I4:spCategory(0) --I had forgotten about body buffs.
-[disable]
-paramUtils:restore("OK")
-</AssemblerScript>
-                  <CheatEntries>
-                    <CheatEntry>
-                      <ID>1337159060</ID>
-                      <Description>"PvPenny"</Description>
-                      <LastState/>
-                      <Color>400000</Color>
-                      <VariableType>Auto Assembler Script</VariableType>
-                      <AssemblerScript>//Big thanks to Gate for making the Cycling Tears Script!
-//This script fully heals, provides Budding Green Blossom and applies silent cycling tears.
+                  <AssemblerScript>//Author: Bladesinger
+//This script fully heals, and removes all aux effects (except for curse)
+//Big thanks to Gate for making the Cycling Tears Script!
 [ENABLE]
 {$lua}
 if syntaxcheck then return end
 
-local P1 = EquipParamGoods:new("PvPenny",0x400001C9)
-P1:iconId (173)
-P1:refId (220)
-P1:refCategory (1)
-P1:isConsume (0)
 
-local P2 = SpEffectParam:new("PvPenny",3000)
-P2:changeMpRate (-100)
+local P1 = EquipParamGoods:new("PvPenny",0x400001C9) --Rusted Gold Coin Item ID
+P1:iconId (173) --Farron Coin Icon ID
+P1:refId (220) --Divine Blessing Bullet ID
+P1:refCategory (1) --Change to Bullet type Item
+P1:isConsume (0) --Disable consumption of item
+P1:goodsUseAnim (16) --Bundle Animation ID
 
-local P3 = Bullet:new("PvPenny",226)
-P3:HitBulletID (200)
+P2 = SpEffectParam:new("PvPenny",3000) --Final Divine Blessing Effect ID
+P2:changeMpRate (-100) --Restore MP to 100%
+P2:replaceSpEffectId (103520000) --Apply Tears when Effect 3000 ends
 
-local P4 = Bullet:new("PvPenny",200)
-P4:spEffectIDForShooter (4085)
-P4:HitBulletID (211)
+P3 = SpEffectParam:new("PvPenny",103520000) --Tears Effect ID
+P3:spCategory (10000) --Unique ID, makes Tears not affect/be affected by other buffs
+P3:effectSfx (50221) --Make Tears VFX "silent"
 
-local P5 = Bullet:new("PvPenny",211)
-P5:spEffectIDForShooter (103520000)
+P4 = SpEffectParam:new("PvPenny",103520100) --Tears Flash Effect ID
+P4:spCategory (10001) ----Unique ID, makes Tears not affect/be affected by other buffs, or other Tear effects
+P4:changeHpRate (-100) --Restore HP to 100%
+P4:changeMpRate (-100) --Restore MP to 100%
+P4:replaceSpEffectId (103520000) --Apply Tears when Effect 103520100 ends
 
-local P6 = SpEffectParam:new("PvPenny",4085)
-P6:iconId (10013)
-P6:effectEndurance (60)
-P6:staminaRecoverChangeSpeed (9)
-P6:spCategory (156)
-P6:stateInfo (75)
-P6:effectSfx (75)
-
-local P7 = SpEffectParam:new("PvPenny",103520100)
-P7:replaceSpEffectId(4085)
-P7:changeHpRate(-100)
-P7:changeMpRate(-100)
-
-local P8 = SpEffectParam:new("PvPenny",4085)
-P8:effectEndurance(0.1)
-P8:cycleOccurrenceSpEffectId(103520000)
-P8:stateInfo(13)
-
-local P9 = SpEffectParam:new("PvPenny",103520000)
-P9: effectSfx (50221)
 
 [DISABLE]
 {$lua}
 if syntaxcheck then return end
 
+
 paramUtils:restore("PvPenny")
 </AssemblerScript>
-                    </CheatEntry>
-                  </CheatEntries>
                 </CheatEntry>
                 <CheatEntry>
                   <ID>1337103772</ID>
