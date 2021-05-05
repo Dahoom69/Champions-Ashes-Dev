@@ -12141,7 +12141,15 @@ function Warcry_onUpdate() -- 037670 UT WA
         b2 = "W_AttackBothHeavy1Start"
     end
 
-    if SwordArtsCommonFunction(g_r1, r2, g_l1, g_l2, g_b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+    local r1 = g_r1
+    local b1 = g_b1
+
+    if env(345 , hand) == 217 then
+        r1 = "W_AttackRightLightDash"
+        b1 = "W_AttackBothDash"
+    end    
+
+    if SwordArtsCommonFunction(r1, r2, g_l1, g_l2, b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env(1116, 100460) == TRUE and env(1108, ACTION_ARM_L2) <= 0 then
         ExecEventAllBody("W_WarcryCancel")
