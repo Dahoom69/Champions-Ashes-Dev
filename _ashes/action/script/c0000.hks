@@ -1745,14 +1745,17 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         else 
 
         if HAND_LEFT_BOTH <= style or iT == TRUE then
-            if IsArtsSpAtk() == TRUE or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE) or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE)   then
+            if IsArtsSpAtk() == TRUE or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE and env(1116, 100289) == FALSE) or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE and env(1116, 100289) == FALSE)   then
                 ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif                      (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE and env(1116, 100289) == TRUE)  or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE  and env(1116, 100289) == TRUE)   then
+                ExecEventAllBody("W_CrossbowStepInReload") 
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
             end
         elseif IsArtsSpAtk() == TRUE then
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
-        elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+        elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == FALSE then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+        elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == TRUE then  ExecEventAllBody("W_CrossbowStepInFire")
         else
             ExecEventAllBody("W_AttackRightHeavyKick")
         end
