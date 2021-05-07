@@ -7936,7 +7936,9 @@ function AttackRightLight1_onUpdate() -- r11
 
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+            return 
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -7985,9 +7987,9 @@ function AttackRightLight2_onUpdate() -- r12
     if (sp_m == 658) then r2 = "W_AttackRightHeavy2Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
 
-    if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
-        return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if      env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then return 
+    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then return
+    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -8048,7 +8050,8 @@ function AttackRightLight3_onUpdate() -- r13
 
         if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return 
-        elseif env(1116, 100283) == TRUE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2,  offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then return
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                 local staminaRegen = 0
                 if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -8398,7 +8401,8 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
     
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
@@ -8809,7 +8813,8 @@ function AttackBothLight1_onUpdate()  -- r11
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, "W_AttackBothLight2", b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction(r1, r2, l1, offhand, "W_AttackBothLight2", b2, FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, l1, offhand, "W_AttackBothLight2", b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, l1, offhand, "W_AttackBothLight2", b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
@@ -8860,7 +8865,8 @@ function AttackBothLight2_onUpdate()  -- r12
     if (sp_m == 160) then  b1 = "W_AttackBothLight1" end
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
@@ -8924,7 +8930,8 @@ function AttackBothLight3_onUpdate()  -- r13
 
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
@@ -8984,7 +8991,8 @@ function AttackBothLeft1_onUpdate() -- l11
 
     if env(1116, 100283) == FALSE and  AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then 
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then 
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -9054,7 +9062,8 @@ function AttackBothLeft2_onUpdate()  -- l12
 
      if env(1116, 100283) == FALSE  and AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackBothLeft3", offhand, r1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE  and AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackBothLeft3", offhand, r1, b2, FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackBothLeft3", offhand, r1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackBothLeft3", offhand, r1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -9119,7 +9128,8 @@ function AttackBothLeft3_onUpdate()  -- l13
 
      if env(1116, 100283) == FALSE  and  AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE  and  AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE and  AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and  AttackCommonFunction("W_AttackRightLight2", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -9496,7 +9506,8 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
     act("特殊補間設定", 0, FALSE)
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
