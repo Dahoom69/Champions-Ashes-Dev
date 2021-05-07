@@ -4290,6 +4290,14 @@ function ExecDeath()
         if env(202) ~= DAMAGE_TYPE_DEATH_FALLING and env(1116, 103520000) == TRUE then
             return FALSE
         end
+        
+        local DuelModeIsActive = env(1116, 100850) == TRUE
+        local DuelModeRestorationTriggerEffect = 100852
+        if env(202 ~= DAMAGE_TYPE_DEATH_FALLING and DuelModeIsActive) then
+            act(2002, DuelModeRestorationTriggerEffect)
+            return FALSE
+        end
+
         local damage_angle = env(222)
         SetVariable("DamageDirection", damage_angle)
         if env(1121) < 0 then
