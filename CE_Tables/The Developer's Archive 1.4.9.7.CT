@@ -8,7 +8,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Developer's Archive 1.4.9.7 04/17/2021"</Description>
+      <Description>"Open - The Developer's Archive 1.4.9.7 05/07/2021"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -2036,11 +2036,11 @@ dealloc(allocatedMemory)
                 </CheatEntry>
                 <CheatEntry>
                   <ID>1337159083</ID>
-                  <Description>"PvPenny V2"</Description>
+                  <Description>"PvPenny V3 (Explained)"</Description>
                   <LastState/>
                   <VariableType>Auto Assembler Script</VariableType>
                   <AssemblerScript>//Author: Bladesinger
-//This script fully heals, and removes all aux effects (except for curse)
+//This script fully heals, gives Budding Green Blossom Stamina Regen and removes all aux effects (except curse!)
 //Big thanks to Gate for making the Cycling Tears Script!
 [ENABLE]
 {$lua}
@@ -2054,19 +2054,23 @@ P1:refCategory (1) --Change to Bullet type Item
 P1:isConsume (0) --Disable consumption of item
 P1:goodsUseAnim (16) --Bundle Animation ID
 
-P2 = SpEffectParam:new("PvPenny",3000) --Final Divine Blessing Effect ID
+local P2 = SpEffectParam:new("PvPenny",3000) --Final Divine Blessing Effect ID
 P2:changeMpRate (-100) --Restore MP to 100%
-P2:replaceSpEffectId (103520000) --Apply Tears when Effect 3000 ends
+P2:replaceSpEffectId (3040) --Green Blossom Effect ID
+P2:cycleOccurrenceSpEffectId (103520000) --Apply Tears when Effect 3000 ends
 
-P3 = SpEffectParam:new("PvPenny",103520000) --Tears Effect ID
-P3:spCategory (10000) --Unique ID, makes Tears not affect/be affected by other buffs
-P3:effectSfx (50221) --Make Tears VFX "silent"
+local P3 = SpEffectParam:new("PvPenny",3040) --Green Blossom Effect ID
+P3:staminaRecoverChangeSpeed (9) --Makes stamina regen on par with Budding Green Blossom
 
-P4 = SpEffectParam:new("PvPenny",103520100) --Tears Flash Effect ID
-P4:spCategory (10001) ----Unique ID, makes Tears not affect/be affected by other buffs, or other Tear effects
-P4:changeHpRate (-100) --Restore HP to 100%
-P4:changeMpRate (-100) --Restore MP to 100%
-P4:replaceSpEffectId (103520000) --Apply Tears when Effect 103520100 ends
+local P4 = SpEffectParam:new("PvPenny",103520000) --Tears Effect ID
+P4:spCategory (10000) --Unique ID, makes Tears not affect/be affected by other buffs
+P4:effectSfx (50221) --Make Tears VFX "silent"
+
+local P5 = SpEffectParam:new("PvPenny",103520100) --Tears Flash Effect ID
+P5:spCategory (10001) --Unique ID, makes Tears not affect/be affected by other buffs, or other Tear effects
+P5:changeHpRate (-100) --Restore HP to 100%
+P5:changeMpRate (-100) --Restore MP to 100%
+P5:replaceSpEffectId (103520000) --Apply Tears when Effect 103520100 ends
 
 
 [DISABLE]
