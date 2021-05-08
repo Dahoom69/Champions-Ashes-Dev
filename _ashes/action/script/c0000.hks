@@ -4291,9 +4291,9 @@ function ExecDeath()
             return FALSE
         end
         
-        local DuelModeIsActive = env(1116, 100850) == TRUE
+        local DuelModeTearsIsActive = env(1116, 103520001) == TRUE
         local DuelModeRestorationTriggerEffect = 100852
-        if env(202 ~= DAMAGE_TYPE_DEATH_FALLING and DuelModeIsActive) then
+        if env(202 ~= DAMAGE_TYPE_DEATH_FALLING and DuelModeTearsIsActive) then
             act(2002, DuelModeRestorationTriggerEffect)
             return FALSE
         end
