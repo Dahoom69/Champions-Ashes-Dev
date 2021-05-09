@@ -8425,7 +8425,7 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
             act(2002, 622)
         end
         return 
-    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
+    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE and (sp_m ~= 646) then
         ExecEventAllBody("W_AttackRightHeavySpecial1End")
         return 
     else
