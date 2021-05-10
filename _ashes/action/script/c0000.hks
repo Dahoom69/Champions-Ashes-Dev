@@ -1,6 +1,71 @@
 -- All custom edits are made by Angeluso
 -- Do NOT copy from this file and publicize without permission 
 
+-- =========================[ Custom Functions Beginning ]==========================
+-- Author: Halvard
+-- =================================================================================
+
+-- *************
+-- * Duel Mode *
+-- *************
+
+DuelModeSpEffect = 100850
+DuelModeToggleSpEffect = 100851
+DuelModeRestorationTriggerSpEffect = 100852
+DuelModeTearsSpEffect = 635
+
+function isDuelModeActive()
+    return env(1116, DuelModeSpEffect) == TRUE
+end
+
+function DuelModeToggleRequest()
+    return env(1116, DuelModeToggleSpEffect) == TRUE
+end
+
+function ManualDuelModeRestorationRequest()
+    return isDuelModeActive() and env(1116, DuelModeRestorationTriggerSpEffect) == TRUE
+end
+
+function isDuelModeTearsActive()
+    return env(1116, DuelModeTearsSpEffect) == TRUE
+end
+
+function ToggleDuelMode()
+    if isDuelModeActive() then
+        act(2002, 632)
+        act(9001, DuelModeSpEffect)
+    else
+        act(2002, 631)
+        act(2002, DuelModeSpEffect)
+    end
+end
+
+function DuelModeRestoration()
+    act(2002, 110)
+
+    if ManualDuelModeRestorationRequest() then
+        act(2002, 634)
+    else
+        act(2002, 633)
+    end
+end
+
+function UpdateDuelMode()
+    if DuelModeToggleRequest() then
+        ToggleDuelMode()
+    end
+    if ManualDuelModeRestorationRequest() then
+        DuelModeRestoration()
+    end
+    if isDuelModeActive() == false or env(1116, 103520000) == TRUE then
+        act(9001, DuelModeTearsSpEffect)
+    elseif isDuelModeTearsActive() == false then
+        act(2002, DuelModeTearsSpEffect)
+    end
+end
+
+-- ============================[ Custom Functions end ]=============================
+
 function ExecEvent(state)
     ResetRequest()
     hkbFireEvent(state)
@@ -4291,10 +4356,8 @@ function ExecDeath()
             return FALSE
         end
         
-        local DuelModeTearsIsActive = env(1116, 103520001) == TRUE
-        local DuelModeRestorationTriggerEffect = 100852
-        if env(202 ~= DAMAGE_TYPE_DEATH_FALLING and DuelModeTearsIsActive) then
-            act(2002, DuelModeRestorationTriggerEffect)
+        if env(202) ~= DAMAGE_TYPE_DEATH_FALLING and isDuelModeTearsActive() then
+            DuelModeRestoration()
             return FALSE
         end
 
@@ -17956,6 +18019,7 @@ function Update()
     UpdateFemaleBlend()
     UpdateShoulderTwist()
     UpdateWristTwist()
+    UpdateDuelMode()
     g_FrameCount = g_FrameCount + 1
     return 
 end
