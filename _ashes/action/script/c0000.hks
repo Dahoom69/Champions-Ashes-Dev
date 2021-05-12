@@ -1336,7 +1336,7 @@ function IsEnableGuard()
             return FALSE
         elseif sp == 123 then
             return TRUE
-        elseif sp == 178 or sp == 207 or sp == 217 or sp == 220 or sp == 234 or sp == 257 or sp == 186  or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp == 67) then
+        elseif sp == 178 or sp == 207 or (sp == 217 and not is_sl == TRUE)  or sp == 220 or sp == 234 or sp == 257 or sp == 186  or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp == 67) then
             return FALSE
         elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or sp == 20 or  is_r == TRUE   then
             return FALSE
@@ -8775,6 +8775,8 @@ end
 function AttackLeftHeavy3_onUpdate()
     local sp_m = env(345 , HAND_RIGHT)
 
+    local is_sls = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD) 
+
     local r1 = "W_AttackRightLight1"
     if sp_m == 656 then r1 = "W_AttackRightLight3" end
     if sp_m == 609 then r1 = "W_AttackRightLight3" end
@@ -8790,7 +8792,7 @@ function AttackLeftHeavy3_onUpdate()
 
     local sp_o = env(345 , HAND_LEFT)
     local l1 = "W_AttackLeftHeavy2"
-    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 651 or sp_o == 652 or sp_o == 653) then 
+    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 651 or sp_o == 652 or sp_o == 653 or is_sls == TRUE) then 
         l1 = "W_AttackLeftHeavy1" 
     end
 
