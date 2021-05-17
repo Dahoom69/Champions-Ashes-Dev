@@ -10,3 +10,8 @@ _ashes/sfx/frpg_sfxbnd_commoneffects_effect-ffxbnd-dcx
 _ashes/menu/01_common-tpf-dcx
 _ashes/msg/engus/item_dlc2-msgbnd-dcx
 _ashes/msg/engus/menu_dlc2-msgbnd-dcx
+
+# Graphic preset files
+_ashes/param/drawparam/
+_ashes/map/m[0-9][0-9]/
+_ashes/map/m[0-9][0-9]_[0-9][0-9]_[0-9][0-9]_[0-9][0-9]/*.btl*
