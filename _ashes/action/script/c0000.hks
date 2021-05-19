@@ -11761,6 +11761,11 @@ function StampedeRightStart_onUpdate()
     local b2 = "W_StampedeRightAttackHeavy"
     local r1 = "W_StampedeRightAttackLight"
 
+    if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
+
     if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" end
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", r1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
