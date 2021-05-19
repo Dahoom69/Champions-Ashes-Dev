@@ -646,8 +646,8 @@ function GetAttackRequest(is_guard)
             local is_rightHandCA = FALSE
             local is_leftHandCA = FALSE
 
-            if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE)   or sp == 167 or sp == 176 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
-            if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE ) or spo == 167 or spo == 176 or  spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+            if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) or (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or sp == 167 or sp == 176 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+            if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE ) or (spo == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or spo == 167 or spo == 176 or  spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
             
      --[[   "0" name="RIGHTARTS" 
             "1" name="PARRY" 
@@ -704,6 +704,7 @@ function GetAttackRequest(is_guard)
                 if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
                 elseif (sp == 231 or spo == 231) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
                 elseif ((sp == 72 or spo == 72) and c_SwordArtsID ~= 24 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
+                elseif ((sp == 166 or spo == 166) and c_SwordArtsID == 12 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- old hero
                 elseif (sp == 176 or spo == 176) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art
                 else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
                 end
@@ -733,10 +734,10 @@ function GetAttackRequest(is_guard)
                 return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt
             elseif sp == 231 then 
                 act(2002, 626)
-                --SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) -- doesn't work w parry shields
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
             elseif sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
             elseif sp == 167 then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora
+            elseif (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- hero
             elseif sp == 176 then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS
             end
         elseif is_staff == TRUE then
@@ -11755,7 +11756,14 @@ function StampedeRight_Activate()
 end
 
 function StampedeRightStart_onUpdate()
-    if SwordArtsCommonFunction("W_StampedeRightAttackLight", "W_StampedeRightAttackHeavy", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_StampedeRightAttackLight", "W_StampedeRightAttackHeavy", FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
+    local sp_m = env(345 , HAND_RIGHT)
+    local r2 = "W_StampedeRightAttackHeavy"
+    local b2 = "W_StampedeRightAttackHeavy"
+    local r1 = "W_StampedeRightAttackLight"
+
+    if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" end
+
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", r1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
