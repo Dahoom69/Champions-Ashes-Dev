@@ -9184,7 +9184,7 @@ function AttackBothLeft3_onUpdate()  -- l13
         --r1 = "W_AttackBothHeavySpecial1Start"
         r1 = "W_AttackBothLight3" 
      end
-
+     if sp_m == 620 then r1 = "W_AttackBothHeavySpecial1Start" end
 
      if sp_m == 264 then 
         r1 = "W_AttackBothLight3" 
