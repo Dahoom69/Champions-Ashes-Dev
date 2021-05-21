@@ -89,12 +89,12 @@ end
 
 function GetPoiseResistedDamageLevel(default)
     if default == DAMAGE_LEVEL_NONE then return default end
-    if env(334, 26) then return DAMAGE_LEVEL_SMALL_BLOW end -- throw
-    if env(334, 27) then return DAMAGE_LEVEL_EX_BLAST end -- far throw
-    if env(334, 28) then return DAMAGE_LEVEL_FLING end -- pancake
-    if env(334, 29) then return DAMAGE_LEVEL_UPPER end -- flip
-    if env(334, 30) then return DAMAGE_LEVEL_PUSH end -- kick
-    if env(334, 32) then return DAMAGE_LEVEL_BREATH end -- trip backwards
+    if env(334, 26) == TRUE then return DAMAGE_LEVEL_SMALL_BLOW end -- throw
+    if env(334, 27) == TRUE then return DAMAGE_LEVEL_EX_BLAST end -- far throw
+    if env(334, 28) == TRUE then return DAMAGE_LEVEL_FLING end -- pancake
+    if env(334, 29) == TRUE then return DAMAGE_LEVEL_UPPER end -- flip
+    if env(334, 30) == TRUE then return DAMAGE_LEVEL_PUSH end -- kick
+    if env(334, 32) == TRUE then return DAMAGE_LEVEL_BREATH end -- trip backwards
     return default
 end
 
