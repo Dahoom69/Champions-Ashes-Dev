@@ -5,6 +5,25 @@
 -- Author: Halvard
 -- =================================================================================
 
+-- **************************
+-- * Debug Helper Functions *
+-- **************************
+
+-- ex: if condition then DBSetPhantomColor("red") end
+function DBSetPhantomColor(colorString)
+    local collorToSpEffect = {
+        reset = 5050000,
+        none = 5050001,
+        white = 5050080,
+        red = 5050081,
+        blue = 5050083,
+        yellow = 5050085,
+        purple = 5050088,
+        black = 505021
+    }
+    env(2002, collorToSpEffect[colorString])
+end
+
 -- *************
 -- * Duel Mode *
 -- *************
