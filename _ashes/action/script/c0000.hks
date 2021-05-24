@@ -98,6 +98,17 @@ function GetPoiseResistedDamageLevel(default)
     return default
 end
 
+-- ******************
+-- * Sunlight Blade *
+-- ******************
+
+function UpdateSunlightBlade()
+    local SunlightBladeSpEffect = 1103590001
+    if env(1116, SunlightBladeSpEffect) == TRUE and env(2016) < 2 then
+        act(9001, SunlightBladeSpEffect)
+    end
+end
+
 -- ============================[ Custom Functions end ]=============================
 
 function ExecEvent(state)
@@ -18039,6 +18050,7 @@ function Update()
     UpdateShoulderTwist()
     UpdateWristTwist()
     UpdateDuelMode()
+    UpdateSunlightBlade()
     g_FrameCount = g_FrameCount + 1
     return 
 end
