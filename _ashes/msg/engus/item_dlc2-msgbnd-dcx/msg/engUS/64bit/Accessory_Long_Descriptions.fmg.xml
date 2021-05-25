@@ -1,0 +1,2062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fmg>
+<compression>None</compression>
+<version>DarkSouls3</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="1">%null%</text>
+<text id="2">%null%</text>
+<text id="100">
+This ring was named after Havel the Rock,
+Lord Gwyn's old battlefield compatriot.
+
+Havel's men wore the ring to express faith in
+their leader and to carry a heavier load.</text>
+<text id="101">
+The rare gem called tearstone has the
+uncanny ability to sense imminent death.
+
+This red tearstone from Carim boosts the
+attack of its wearer when in danger.</text>
+<text id="102">Ring granted to those bound by the
+Darkmoon Blade covenant.
+Answer Dark Sun Gwyndolin's summoning.
+
+Gwyndolin, all too aware of his repulsive,
+frail appearance, created the illusion of 
+a sister Gwynevere, who helps him guard
+over Anor Londo. An unmasking of these
+deities would be tantamount to blasphemy.</text>
+<text id="103">Ring granted to those bound by the
+Forest Hunter covenant.
+Answer Alvina's summoning.
+
+The white cat Alvina speaks a human tongue
+and has lived since the early Age of Fire.
+Alvina was a trusted friend of Knight
+Artorias and the Great Wolf Sif.</text>
+<text id="104">
+This ancient ring, engraved with a large
+green flower, is of unknown origin.
+
+Hastens the regeneration of stamina.</text>
+<text id="105">
+Stoneplates, the symbol of a true knight,
+grant the strength to face various hardships.
+
+The red stoneplate symbolizes fire,
+and boosts defence against flame.</text>
+<text id="106">
+Stoneplates, the symbol of a true knight,
+grant the strength to face various hardships.
+
+The yellow stoneplate symbolizes thunder,
+and boosts defence against lightning.</text>
+<text id="107">
+Stoneplates, the symbol of a true knight,
+grant the strength to face various hardships.
+
+The blue stoneplate symbolizes souls,
+and boosts defence against magic.</text>
+<text id="108">
+Stoneplates, the symbol of a true knight,
+grant the strength to face various hardships.
+
+The precious rare speckled stoneplate grants
+a small boost to defence against magic,
+flame, and lightning.</text>
+<text id="109">
+One of the infamous bite rings
+commissioned by Sir Arstor of Carim.
+
+Despite the dreadful rumors surrounding its
+creation, this ring is an unmistakable asset,
+in its ability to help prevent bleeding.</text>
+<text id="110">
+One of the infamous bite rings
+commissioned by Sir Arstor of Carim.
+
+Despite the dreadful rumors surrounding its
+creation, this ring is an unmistakable asset,
+in its ability to help prevent poison.
+</text>
+<text id="111">
+Ring made of an ancient tiny red jewel.
+Grants small increase to HP.
+
+Rings grant powers large and small.
+Their discovery, and effective use,
+can make one's journey easier.</text>
+<text id="112">%null%</text>
+<text id="113">
+One of the infamous bite rings
+commissioned by Sir Arstor of Carim.
+
+Despite the dreadful rumors surrounding its
+creation, this ring is an unmistakable asset,
+in its ability to help prevent curses.
+</text>
+<text id="114">
+A divine ring entrusted to the head bishop
+of the Way of White and apostle to
+Allfather Lloyd, uncle to Lord Gwyn.
+It grants additional attunement slots.
+
+The head bishop of the Way of White is the
+guardian of law and caste, and one of the
+great royals of Thorolund.</text>
+<text id="115">
+A special ring granted to only the most
+accomplished sorcerers at Vinheim Dragon
+School.
+
+The ring is engraved with an everlasting
+dragon, and boosts the strength of sorceries.</text>
+<text id="116">
+This magic crown-shaped ring was granted
+to princess Dusk of Oolacile upon her birth.
+
+The ringstone allows its wearer to cast
+additional sorceries, but at the cost of
+one-half of HP.</text>
+<text id="117">
+One of the special rings granted to the four
+knights of Gwyn. The Hornet Ring belonged
+to the Lord's Blade Ciaran.
+
+By boosting critical attacks, its wearer can
+annihilate foes, as Ciaran's dagger laid
+waste to Lord Gwyn's enemies.</text>
+<text id="118">%null%</text>
+<text id="119">
+One of the special rings granted to the four
+knights of Gwyn. The Hawk Ring belonged to
+Hawkeye Gough, who led the Greatarchers.
+
+Boosts bow range, so that arrows fly like
+they were shot by Gough's great bow,
+which took down high-flying dragons.</text>
+<text id="120">
+This ring belonged to the Knight King Rendal.
+It grants its wearer protection by boosting
+defense against physical attacks.
+
+Of the many legends surrounding the Knight
+King Rendal, one of the more well-known
+speaks of his standing down a giant drake
+and slashing it to pieces.</text>
+<text id="121">
+The serpent is an imperfect dragon and symbol
+of the Undead. Its habit of devouring prey
+even larger than itself has led to an
+association with gluttony.
+
+This gold ring, engraved with the serpent,
+boosts its wearer's item discovery, so that
+more items can be amassed.</text>
+<text id="122">
+The serpent is an imperfect dragon and symbol
+of the Undead. Its habit of devouring prey
+even larger than itself has led to an
+association with gluttony.
+
+This silver ring, engraved with the serpent,
+rewards its wearer with additional souls
+for each kill.</text>
+<text id="123">
+This ring was secretly worn by a certain
+surreptitious sorcerer at Vinheim Dragon
+School.
+
+The ring is engraved with an everlasting
+dragon in silent slumber, and masks all
+sound emitting from its wearer.</text>
+<text id="124">
+Those who befriend Alvina are given this
+mysterious ring. It resembles a pearl with
+its robust pure-white fog.
+
+The ring camouflages its wearer's
+presence, helping to prevent detection.</text>
+<text id="125">
+This iron ring was used to shackle the
+guilty. It is terribly rusted, and faintly
+stained with blood.
+
+Those who find this strange ring to their
+liking will be pleased to find it easier to
+gain footing on poor ground such as swamps.</text>
+<text id="126">
+This mystical ring was created in a
+sacrificial rite of Velka, the Goddess
+of Sin.
+
+Its wearer will lose nothing upon death,
+but the ring itself breaks.
+</text>
+<text id="127">
+This mystical ring was created in a
+sacrificial rite of Velka, the Goddess
+of Sin. The magenta-shaded ring is
+especially rare.
+
+Its wearer will lose nothing upon death,
+and will be freed from any curse whatsoever,
+but the ring itself breaks.</text>
+<text id="128">
+This special ring crafted in an Eastern land
+is made of gold, but with a wood grain crest
+on its surface.
+
+Agents of subterfuge in this faraway land
+are particularly fond of the dark gold wood
+grain, which greatly alters its wearer's
+rolling action.</text>
+<text id="129">%null%</text>
+<text id="130">
+This ring is granted to those who enter a
+Covenant with Gwynevere, daughter of Lord Gwyn
+and the Princess of Sunlight. This slightly
+warm ring boosts the synergy of miracles.
+
+The Princess of Sunlight Gwynevere left
+Anor Londo along with many other deities,
+and later became wife to Flame God Flann.</text>
+<text id="131">%null%</text>
+<text id="132">%null%</text>
+<text id="133">
+This black diamond ring is granted to those
+who enter a Covenant with Velka, the Goddess
+of Sin. It automatically counterattacks when
+its wearer inflicts sustained damage.
+
+Velka the Goddess of Sin is an eccentric
+witch versed in various secret rites, an</text>
+<text id="134">
+This ring belonged to the seal guardian
+of New Londo. It prevents its wearer's
+discovery by cursed ghosts.
+
+There were once three guardians of the seal,
+but two of them tired of their eternal task,
+and left New Londo long ago.</text>
+<text id="135">%null%</text>
+<text id="136">%null%</text>
+<text id="137">
+Old ring from an old witch.
+
+Engraved minutely with indecipherable
+script, but seemingly useless.</text>
+<text id="138">
+This ring symbolizes Knight Artorias's
+covenant with the beasts of the Abyss.
+
+Its wearer, like Artorias himself, can
+traverse the Abyss.</text>
+<text id="139">
+An orange ring enchanted by a witch.
+Reduces lava damage.
+
+Since his sores were inflamed by lava
+from birth, his witch sisters gave him
+this special ring. But fool that he is,
+he readily dropped it, and from that spot,
+a terrible centipede demon was born.</text>
+<text id="140">
+The ring of a lost miracle of New Londo.
+This ring takes damage in place of its
+wearer, but has a fixed chance of breaking.
+
+As evidenced by this ring, the culture of
+New Londo was unique, and its flooding
+is widely considered to be a great loss.</text>
+<text id="141">
+A special ring granted to only the most
+accomplished sorcerers at Vinheim Dragon
+School.
+
+The ring is engraved with a lingering
+dragon, and boosts the length of the
+effects of sorceries.</text>
+<text id="142">
+According to legend, this ring contains the
+spirit of the evil eye, a dark beast which
+assaulted Astora.
+
+The strength of the evil eye does not waver,
+and HP is absorbed from fallen enemies.
+</text>
+<text id="143">
+A ring symbolizing the favor and
+protection of the goddess Fina, known
+in legend to possess "fateful beauty."
+
+This ring boosts its wearer's HP, stamina,
+and max equipment load, but breaks if
+ever removed.</text>
+<text id="144">
+One of the special rings granted to the four
+knights of Gwyn. The Leo Ring belonged to
+Ornstein the Dragonslayer.
+
+This ring strengthens counters with pierce
+weapons. His lugged spear is said
+to have sliced a boulder in two.</text>
+<text id="145">
+This special ring crafted in an Eastern land
+is made of gold, but with a wood grain crest
+on its surface.
+
+The ring slows the loss of weapon durability
+and is particularly useful to bearers of
+delicate swords crafted in the East.</text>
+<text id="146">
+One of the special rings granted to the four
+knights of Gwyn. The Wolf Ring belongs to
+Artorias the Abysswalker.
+
+Artorias had an unbendable will of steel,
+and was unmatched with a greatsword.
+
+</text>
+<text id="147">
+The rare gem called tearstone has the
+uncanny ability to sense imminent death.
+
+This blue tearstone from Catarina boosts the
+defence of its wearer when in danger.</text>
+<text id="148">
+Lord Gwyn's firstborn, who inherited the
+sunlight, once wore this ancient ring.
+Boosts the strength of miracles.
+
+Lord Gwyn's firstborn was a god of war,
+but his foolishness led to a loss of the
+annals, and rescinding of his deific status.
+Today, even his name is not known.</text>
+<text id="149">
+This ring is granted to adherents of
+Gwyndolin, Darkmoon deity and
+last born of Gwyn, Lord of Sunlight.
+Grants additional magic attunement slots.
+
+The Dark Sun Gwyndolin is the only remaining
+deity in Anor Londo. His followers are few,
+but their tasks are of vital importance.</text>
+<text id="10000">A silver pendant depicting the Darkmoon and a sword, the crest of the Darkmoon Knights, the original Blue Sentinels. Equip to pledge oneself to the Blade of the Darkmoon covenant.
+
+When a member of the Way of Blue faces a dark spirit, the Blades of the Darkmoon, by an ancient accord, help to root out the invader. Summoning takes place automatically when equipped.</text>
+<text id="10001">%null%</text>
+<text id="10002">%null%</text>
+<text id="10003">%null%</text>
+<text id="10004">%null%</text>
+<text id="10005">%null%</text>
+<text id="10006">%null%</text>
+<text id="10007">%null%</text>
+<text id="10008">%null%</text>
+<text id="10009">%null%</text>
+<text id="10010">%null%</text>
+<text id="10011">%null%</text>
+<text id="10012">%null%</text>
+<text id="10013">%null%</text>
+<text id="10014">%null%</text>
+<text id="10015">%null%</text>
+<text id="10016">%null%</text>
+<text id="10017">%null%</text>
+<text id="10018">%null%</text>
+<text id="10019">%null%</text>
+<text id="10020">Ancient medallion depicting the crest of a wolf. Symbolizes the pact with the Old Wolf of Farron. Equip to pledge oneself to the Watchdogs of Farron.
+
+The Watchdogs ensure that the warriors sleep in serenity, by taking the form of loyal spirits and hunting down those who would trespass the woods of Farron.
+
+Summoning takes place automatically while this is equipped.</text>
+<text id="10021">%null%</text>
+<text id="10022">%null%</text>
+<text id="10023">%null%</text>
+<text id="10024">%null%</text>
+<text id="10025">%null%</text>
+<text id="10026">%null%</text>
+<text id="10027">%null%</text>
+<text id="10028">%null%</text>
+<text id="10029">%null%</text>
+<text id="10030">The holy symbol of the Cathedral of the Deep, and crest of those who see beyond fire to the age of deep waters. Equip to pledge oneself to the Aldrich Faithful covenant.
+
+The Faithful ensure that Aldrich, Devourer of Gods, remains undisturbed, by taking the form of loyal spirits and hunting down those who would trespass the ruined cathedral.
+
+Summoning takes place automatically while this is equipped.</text>
+<text id="10031">%null%</text>
+<text id="10032">%null%</text>
+<text id="10033">%null%</text>
+<text id="10034">%null%</text>
+<text id="10035">%null%</text>
+<text id="10036">%null%</text>
+<text id="10037">%null%</text>
+<text id="10038">%null%</text>
+<text id="10039">%null%</text>
+<text id="10040">An ancient talisman depicting a holy symbol bestowed upon the Warriors of Sunlight. Equip to pledge oneself to the Warrior of Sunlight covenant.
+
+Warriors of Sunlight are brilliantly beaming co-operators who place their golden signatures to help those in need, for it is their duty to deliver a great conquest to their summoner.</text>
+<text id="10041">%null%</text>
+<text id="10042">%null%</text>
+<text id="10043">%null%</text>
+<text id="10044">%null%</text>
+<text id="10045">%null%</text>
+<text id="10046">%null%</text>
+<text id="10047">%null%</text>
+<text id="10048">%null%</text>
+<text id="10049">%null%</text>
+<text id="10050">A malformed vertebra found by the mad, with a queer symbol on its inside, proof of the shackles of the Gods. Equip to pledge oneself to the Mound-makers covenant.
+
+The mound-makers wish only to add to their mounds, becoming mad spirits whether summoned as co-operators or invaders.
+
+They are blithe to those around them, for in their minds, any kill might lead to another shackle.</text>
+<text id="10051">%null%</text>
+<text id="10052">%null%</text>
+<text id="10053">%null%</text>
+<text id="10054">%null%</text>
+<text id="10055">%null%</text>
+<text id="10056">%null%</text>
+<text id="10057">%null%</text>
+<text id="10058">%null%</text>
+<text id="10059">%null%</text>
+<text id="10060">Pale blue sheepskin parchment featuring an illustration of the moon, symbol of an ancient accord.
+
+Members of the Way of Blue are the beneficiaries of an ancient accord. When a dark spirit threatens them, a blue spirit will grant them assistance, and help to root out the invader.
+
+Summoning takes place automatically while this is equipped.</text>
+<text id="10061">%null%</text>
+<text id="10062">%null%</text>
+<text id="10063">%null%</text>
+<text id="10064">%null%</text>
+<text id="10065">%null%</text>
+<text id="10066">%null%</text>
+<text id="10067">%null%</text>
+<text id="10068">%null%</text>
+<text id="10069">%null%</text>
+<text id="10070">Faded sheepskin parchment depicting the Darkmoon and a sword. Equip to pledge oneself to the Blue Sentinels covenant.
+
+When a member of the Way of Blue is threatened by a dark spirit, the Blue Sentinels, in compliance with an ancient accord, assume the form of blue spirits, and help to root out the invader.
+
+Summoning takes place automatically while this is equipped.</text>
+<text id="10071">%null%</text>
+<text id="10072">%null%</text>
+<text id="10073">%null%</text>
+<text id="10074">%null%</text>
+<text id="10075">%null%</text>
+<text id="10076">%null%</text>
+<text id="10077">%null%</text>
+<text id="10078">%null%</text>
+<text id="10079">%null%</text>
+<text id="10080">Sacred seal of Archdeacon Klimt, who served Rosaria, Mother of Rebirth. Equip to pledge oneself to the Rosaria's Fingers covenant.
+
+Rosaria's Fingers collect tongues in her name. Some do it to be reborn; others do it to help comfort their voiceless goddess.</text>
+<text id="20000">A generations-old ring set with a small red jewel.
+Raises maximum HP.
+
+Rings have unique powers, and their discovery
+will do much to ease a wearisome journey.</text>
+<text id="20001">A generations-old ring set with a small red jewel.
+Raises maximum HP.
+
+Rings have unique powers, and their discovery
+will do much to ease a wearisome journey.</text>
+<text id="20002">A generations-old ring set with a small red jewel.
+Raises maximum HP.
+
+Rings have unique powers, and their discovery
+will do much to ease a wearisome journey.</text>
+<text id="20003">A generations-old ring set with a small red jewel.
+Raises maximum HP.
+
+Rings have unique powers, and their discovery
+will do much to ease a wearisome journey.</text>
+<text id="20004">%null%</text>
+<text id="20005">%null%</text>
+<text id="20006">%null%</text>
+<text id="20007">%null%</text>
+<text id="20008">%null%</text>
+<text id="20009">%null%</text>
+<text id="20010">This old ring is named for its decorative green
+blossom, but its luster is long since faded.
+
+Raises stamina recovery speed.</text>
+<text id="20011">This old ring is named for its decorative green
+blossom, but its luster is long since faded.
+
+Raises stamina recovery speed.</text>
+<text id="20012">This old ring is named for its decorative green
+blossom, but its luster is long since faded.
+
+Raises stamina recovery speed.</text>
+<text id="20013">%null%</text>
+<text id="20014">%null%</text>
+<text id="20015">%null%</text>
+<text id="20016">%null%</text>
+<text id="20017">%null%</text>
+<text id="20018">%null%</text>
+<text id="20019">%null%</text>
+<text id="20020">A ring for warriors keen on heavy accoutrements.
+Increases maximum equip load.
+
+This ring was named after Havel the Rock,
+the battlefield compatriot of Gwyn, the First Lord.
+
+The art of war has been a constant since ages past,
+and those who would follow in Havel's footsteps
+are no fewer now than in his own day.</text>
+<text id="20021">A ring for warriors keen on heavy accoutrements.
+Increases maximum equip load.
+
+This ring was named after Havel the Rock,
+the battlefield compatriot of Gwyn, the First Lord.
+
+The art of war has been a constant since ages past,
+and those who would follow in Havel's footsteps
+are no fewer now than in his own day.</text>
+<text id="20022">A ring for warriors keen on heavy accoutrements.
+Increases maximum equip load.
+
+This ring was named after Havel the Rock,
+the battlefield compatriot of Gwyn, the First Lord.
+
+The art of war has been a constant since ages past,
+and those who would follow in Havel's footsteps
+are no fewer now than in his own day.</text>
+<text id="20023">%null%</text>
+<text id="20024">%null%</text>
+<text id="20025">%null%</text>
+<text id="20026">%null%</text>
+<text id="20027">%null%</text>
+<text id="20028">%null%</text>
+<text id="20029">%null%</text>
+<text id="20030">A ring symbolizing the favor of the Goddess Fina,
+whose "fateful beauty" is mentioned in legend.
+
+True to the fickle nature of Fina's favor, her ring
+increases max HP, stamina, and maximum equip load.</text>
+<text id="20031">A ring symbolizing the favor of the Goddess Fina,
+whose "fateful beauty" is mentioned in legend.
+
+True to the fickle nature of Fina's favor, her ring
+increases max HP, stamina, and maximum equip load.</text>
+<text id="20032">A ring symbolizing the favor of the Goddess Fina,
+whose "fateful beauty" is mentioned in legend.
+
+True to the fickle nature of Fina's favor, her ring
+increases max HP, stamina, and maximum equip load.</text>
+<text id="20033">%null%</text>
+<text id="20034">%null%</text>
+<text id="20035">%null%</text>
+<text id="20036">%null%</text>
+<text id="20037">%null%</text>
+<text id="20038">%null%</text>
+<text id="20039">%null%</text>
+<text id="20040">Ring of the Knight King of ancient legend.
+Increases physical damage absorption.
+
+The Knight King was said to be lined with steel
+on the inside, such that even the talons of
+mighty dragons did him little harm.</text>
+<text id="20041">Ring of the Knight King of ancient legend.
+Increases physical damage absorption.
+
+The Knight King was said to be lined with steel
+on the inside, such that even the talons of
+mighty dragons did him little harm.</text>
+<text id="20042">Ring of the Knight King of ancient legend.
+Increases physical damage absorption.
+
+The Knight King was said to be lined with steel
+on the inside, such that even the talons of
+mighty dragons did him little harm.</text>
+<text id="20043">%null%</text>
+<text id="20044">Ring of the Knight King of ancient legend.
+Increases physical defense.
+
+The Knight King was said to be lined with steel
+on the inside, such that even the talons of
+mighty dragons did him little harm.</text>
+<text id="20045">Stoneplates are symbols of true knights,
+and speckled stoneplates are granted to
+those who face an endless journey.
+
+Slightly increases magic, lightning, fire
+and dark defense.</text>
+<text id="20046">%null%</text>
+<text id="20047">%null%</text>
+<text id="20048">%null%</text>
+<text id="20049">%null%</text>
+<text id="20050">Stoneplates are symbols of true knights,
+and red stoneplates are granted to those
+who valiantly face Chaos.
+
+Increases fire damage absorption.</text>
+<text id="20051">Stoneplates are symbols of true knights,
+and red stoneplates are granted to those
+who valiantly face Chaos.
+
+Increases fire damage absorption.</text>
+<text id="20052">Stoneplates are symbols of true knights,
+and red stoneplates are granted to those
+who valiantly face Chaos.
+
+Increases fire damage absorption.</text>
+<text id="20053">%null%</text>
+<text id="20054">%null%</text>
+<text id="20055">%null%</text>
+<text id="20056">%null%</text>
+<text id="20057">%null%</text>
+<text id="20058">%null%</text>
+<text id="20059">%null%</text>
+<text id="20060">Stoneplates are symbols of true knights,
+and yellow stoneplates are granted to
+those who would become dragons.
+
+Increases lightning damage absorption.</text>
+<text id="20061">Stoneplates are symbols of true knights,
+and yellow stoneplates are granted to
+those who would become dragons.
+
+Increases lightning damage absorption.</text>
+<text id="20062">Stoneplates are symbols of true knights,
+and yellow stoneplates are granted to
+those who would become dragons.
+
+Increases lightning damage absorption.</text>
+<text id="20063">%null%</text>
+<text id="20064">%null%</text>
+<text id="20065">%null%</text>
+<text id="20066">%null%</text>
+<text id="20067">%null%</text>
+<text id="20068">%null%</text>
+<text id="20069">%null%</text>
+<text id="20070">Stoneplates are symbols of true knights,
+and blue stoneplates are granted to
+the royal palace guards.
+
+Increases magic damage absorption.</text>
+<text id="20071">Stoneplates are symbols of true knights,
+and blue stoneplates are granted to
+the royal palace guards.
+
+Increases magic damage absorption.</text>
+<text id="20072">Stoneplates are symbols of true knights,
+and blue stoneplates are granted to
+the royal palace guards.
+
+Increases magic damage absorption.</text>
+<text id="20073">%null%</text>
+<text id="20074">%null%</text>
+<text id="20075">%null%</text>
+<text id="20076">%null%</text>
+<text id="20077">%null%</text>
+<text id="20078">%null%</text>
+<text id="20079">%null%</text>
+<text id="20080">Stoneplates are symbols of true knights,
+and dark purple stoneplates are granted to
+Undead knights.
+
+Increases dark damage absorption.</text>
+<text id="20081">Stoneplates are symbols of true knights,
+and dark purple stoneplates are granted to
+Undead knights.
+
+Increases dark damage absorption.</text>
+<text id="20082">Stoneplates are symbols of true knights,
+and dark purple stoneplates are granted to
+Undead knights.
+
+Increases dark damage absorption.</text>
+<text id="20083">%null%</text>
+<text id="20084">%null%</text>
+<text id="20085">%null%</text>
+<text id="20086">%null%</text>
+<text id="20087">%null%</text>
+<text id="20088">%null%</text>
+<text id="20089">%null%</text>
+<text id="20090">Stoneplates are symbols of true knights,
+and speckled stoneplates are granted to
+those who face an endless journey.
+
+Slightly increases magic, lightning, fire
+and dark damage absorption.</text>
+<text id="20091">Stoneplates are symbols of true knights,
+and speckled stoneplates are granted to
+those who face an endless journey.
+
+Slightly increases magic, lightning, fire
+and dark damage absorption.</text>
+<text id="20092">%null%</text>
+<text id="20093">%null%</text>
+<text id="20094">%null%</text>
+<text id="20095">%null%</text>
+<text id="20096">%null%</text>
+<text id="20097">%null%</text>
+<text id="20098">%null%</text>
+<text id="20099">%null%</text>
+<text id="20100">One of the bite rings native to Carim.
+Increases bleed resistance.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20101">One of the bite rings native to Carim.
+Increases bleed resistance.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20102">%null%</text>
+<text id="20103">%null%</text>
+<text id="20104">%null%</text>
+<text id="20105">%null%</text>
+<text id="20106">%null%</text>
+<text id="20107">%null%</text>
+<text id="20108">%null%</text>
+<text id="20109">%null%</text>
+<text id="20110">One of the bite rings native to Carim.
+Increases poison resistance.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20111">One of the bite rings native to Carim.
+Increases poison resistance.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20112">%null%</text>
+<text id="20113">%null%</text>
+<text id="20114">%null%</text>
+<text id="20115">%null%</text>
+<text id="20116">%null%</text>
+<text id="20117">%null%</text>
+<text id="20118">%null%</text>
+<text id="20119">%null%</text>
+<text id="20120">One of the bite rings native to Carim.
+Increases curse resistance.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20121">%null%</text>
+<text id="20122">%null%</text>
+<text id="20123">%null%</text>
+<text id="20124">%null%</text>
+<text id="20125">%null%</text>
+<text id="20126">%null%</text>
+<text id="20127">%null%</text>
+<text id="20128">%null%</text>
+<text id="20129">%null%</text>
+<text id="20130">One of the bite rings native to Carim.
+Raises poison, bleed, frost and curse resist.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20131">One of the bite rings native to Carim.
+Raises poison, bleed, frost and curse resist.
+
+The crafting of these rings is forbidden,
+perhaps owing to a fear of malleable stone.
+Clerics, however, dabble freely in the art.</text>
+<text id="20132">%null%</text>
+<text id="20133">%null%</text>
+<text id="20134">%null%</text>
+<text id="20135">%null%</text>
+<text id="20136">%null%</text>
+<text id="20137">%null%</text>
+<text id="20138">%null%</text>
+<text id="20139">%null%</text>
+<text id="20140">This special ring crafted in an Eastern land
+is made of metal, but with a wood grain crest
+on its surface. Slows equipment degradation.
+
+Wielders of swords originating in the same region
+follow a practice of inscribing special words
+on the blades of their swords, and are naturally
+drawn to this ring.</text>
+<text id="20141">This special ring crafted in an Eastern land
+is made of metal, but with a wood grain crest
+on its surface. Slows equipment degradation.
+
+Wielders of swords originating in the same region
+follow a practice of inscribing special words
+on the blades of their swords, and are naturally
+drawn to this ring.</text>
+<text id="20142">This special ring crafted in an Eastern land
+is made of metal, but with a wood grain crest
+on its surface. Slows equipment degradation.
+
+Wielders of swords originating in the same region
+follow a practice of inscribing special words
+on the blades of their swords, and are naturally
+drawn to this ring.</text>
+<text id="20143">%null%</text>
+<text id="20144">%null%</text>
+<text id="20145">%null%</text>
+<text id="20146">%null%</text>
+<text id="20147">%null%</text>
+<text id="20148">%null%</text>
+<text id="20149">%null%</text>
+<text id="20150">A ring engraved with a portrait of a scholar.
+Increases intelligence.
+
+In Lothric, the Scholar has long been considered
+one of the Three Pillars of the king's rule,
+and is therefore master of the Grand Archives.</text>
+<text id="20151">%null%</text>
+<text id="20152">%null%</text>
+<text id="20153">%null%</text>
+<text id="20154">%null%</text>
+<text id="20155">%null%</text>
+<text id="20156">%null%</text>
+<text id="20157">%null%</text>
+<text id="20158">%null%</text>
+<text id="20159">%null%</text>
+<text id="20160">A ring engraved with a portrait of the High Priestess.
+Increases faith.
+
+In Lothric, the High Priestess has long been
+considered one of the Three Pillars of the king's
+rule. The High Priestess also served as
+the prince's wet nurse.</text>
+<text id="20161">%null%</text>
+<text id="20162">%null%</text>
+<text id="20163">%null%</text>
+<text id="20164">%null%</text>
+<text id="20165">%null%</text>
+<text id="20166">%null%</text>
+<text id="20167">%null%</text>
+<text id="20168">%null%</text>
+<text id="20169">%null%</text>
+<text id="20170">A ring set with a large rare tearstone jewel.
+Temporarily boosts attack when HP is low.
+
+This stone is said to be a tear of mourning
+of the goddess Caitha, and of course,
+tears are always more beautiful near death.</text>
+<text id="20171">%null%</text>
+<text id="20172">%null%</text>
+<text id="20173">%null%</text>
+<text id="20174">%null%</text>
+<text id="20175">%null%</text>
+<text id="20176">%null%</text>
+<text id="20177">%null%</text>
+<text id="20178">%null%</text>
+<text id="20179">%null%</text>
+<text id="20180">A ring set with a large rare tearstone jewel.
+Temporarily boosts damage absorption when HP is low.
+
+This stone is said to be a tear of sorrow
+of the goddess Caitha, and of course,
+tears are always more beautiful near death.
+
+
+
+
+</text>
+<text id="20181">%null%</text>
+<text id="20182">%null%</text>
+<text id="20183">%null%</text>
+<text id="20184">%null%</text>
+<text id="20185">%null%</text>
+<text id="20186">%null%</text>
+<text id="20187">%null%</text>
+<text id="20188">%null%</text>
+<text id="20189">%null%</text>
+<text id="20190">Ring associated with Abysswalker Artorias,
+one of the Four Knights of Gwyn, the First Lord.
+
+Increases poise.
+
+Artorias had an unbendable will of steel,
+and was unmatched with a greatsword.</text>
+<text id="20191">Ring associated with Abysswalker Artorias,
+one of the Four Knights of Gwyn, the First Lord.
+
+Increases poise.
+
+Artorias had an unbendable will of steel,
+and was unmatched with a greatsword.
+
+</text>
+<text id="20192">Ring associated with Abysswalker Artorias,
+one of the Four Knights of Gwyn, the First Lord.
+
+Increases poise.
+
+Artorias had an unbendable will of steel,
+and was unmatched with a greatsword.
+
+</text>
+<text id="20193">%null%</text>
+<text id="20194">%null%</text>
+<text id="20195">%null%</text>
+<text id="20196">%null%</text>
+<text id="20197">%null%</text>
+<text id="20198">%null%</text>
+<text id="20199">%null%</text>
+<text id="20200">Ring associated with Dragon Slayer Ornstein,
+one of the Four Knights of Gwyn, the First Lord.
+
+Strengthens thrust weapon counter attacks.
+
+Ornstein was the first knight of the sun's eldest
+born, and his cross spear is said to have pierced
+scales made of stone.</text>
+<text id="20201">%null%</text>
+<text id="20202">%null%</text>
+<text id="20203">%null%</text>
+<text id="20204">%null%</text>
+<text id="20205">%null%</text>
+<text id="20206">%null%</text>
+<text id="20207">%null%</text>
+<text id="20208">%null%</text>
+<text id="20209">%null%</text>
+<text id="20210">This mystical ring was created in a sacrificial
+rite of Velka, the Goddess of Sin.
+
+Its wearer will lose nothing upon death,
+but the ring itself breaks.
+
+A sacrifice is only worth as much as the life
+it spares.</text>
+<text id="20211">%null%</text>
+<text id="20212">%null%</text>
+<text id="20213">%null%</text>
+<text id="20214">%null%</text>
+<text id="20215">%null%</text>
+<text id="20216">%null%</text>
+<text id="20217">%null%</text>
+<text id="20218">%null%</text>
+<text id="20219">%null%</text>
+<text id="20220">This mystical ring was created in a sacrificial
+rite of Velka, the Goddess of Sin.
+This magenta-shaded ring is especially rare.
+
+Its wearer will lose nothing upon death,
+and will be freed from any curse whatsoever,
+but the ring itself breaks.
+
+A sacrifice is only worth as much as the life
+it spares.</text>
+<text id="20221">%null%</text>
+<text id="20222">%null%</text>
+<text id="20223">%null%</text>
+<text id="20224">%null%</text>
+<text id="20225">%null%</text>
+<text id="20226">%null%</text>
+<text id="20227">%null%</text>
+<text id="20228">%null%</text>
+<text id="20229">%null%</text>
+<text id="20230">Ring forged by arcanists from a faraway land. 
+
+The ring hums with a faint energy, and gradually restores FP. 
+
+The craftsman of this ring is unknown, but one could assume he was somewhat magically inclined.</text>
+<text id="20231">A special ring given to those who are deemed fit
+to undertake the journey of discovery in Vinheim,
+home of sorcery.
+
+Greatly boosts sorceries.
+
+Apropos to the Dragon School, the seal depicts an
+everlasting dragon. A bellowing dragon symbolizes
+the true nature of the consummate sorcerer.</text>
+<text id="20232">%null%</text>
+<text id="20233">%null%</text>
+<text id="20234">%null%</text>
+<text id="20235">%null%</text>
+<text id="20236">%null%</text>
+<text id="20237">%null%</text>
+<text id="20238">%null%</text>
+<text id="20239">%null%</text>
+<text id="20240">Ring said to be forged by superstitious folk. 
+Increases luck.
+
+Luck is a concept unique to humans, fitting given its fickle and unknowable tendency.</text>
+<text id="20241">The Witch of Izalith and her daughters,
+scorched by the Flame of Chaos, taught humans
+the art of pyromancy and offered them this ring.
+
+Greatly boosts pyromancies.
+
+Every pyromancer is familiar with the parable that
+tells of the witches espousing the need to fear
+the flame, and teaching the art of pyromancy to
+men in hopes that they might learn to control it.</text>
+<text id="20242">%null%</text>
+<text id="20243">%null%</text>
+<text id="20244">%null%</text>
+<text id="20245">%null%</text>
+<text id="20246">%null%</text>
+<text id="20247">%null%</text>
+<text id="20248">%null%</text>
+<text id="20249">%null%</text>
+<text id="20250">A curiously light steel ring cursed by a Carim warlock.
+
+Increases maximum equip load, in exchange for significant absorption and poise reduction. 
+
+What value is there in defense, when one could move as fast as the wind?</text>
+<text id="20251">Ring of the Sun's first born, who inherited the
+light of Gwyn, the First Lord.
+
+Greatly boosts miracles.
+
+The Sun's first born was once a god of war,
+until he was stripped of his stature as punishment
+for his foolishness. No wonder his very name
+has slipped from the annals of history.</text>
+<text id="20252">A curiously light steel ring cursed by a Carim warlock.
+
+Increases maximum equip load, in exchange for significant absorption and poise reduction. 
+
+What value is there in defense, when one could move as fast as the wind?</text>
+<text id="20253">A curiously light steel ring cursed by a Carim warlock.
+
+Increases maximum equip load, in exchange for significant absorption and poise reduction. 
+
+What value is there in defense, when one could move as fast as the wind?</text>
+<text id="20254">A curiously light steel ring cursed by a Carim warlock.
+
+Increases maximum equip load, in exchange for significant absorption and poise reduction. 
+
+What value is there in defense, when one could move as fast as the wind?</text>
+<text id="20255">%null%</text>
+<text id="20256">%null%</text>
+<text id="20257">%null%</text>
+<text id="20258">%null%</text>
+<text id="20259">%null%</text>
+<text id="20260">%null%</text>
+<text id="20261">%null%</text>
+<text id="20262">%null%</text>
+<text id="20263">%null%</text>
+<text id="20264">%null%</text>
+<text id="20265">%null%</text>
+<text id="20266">%null%</text>
+<text id="20267">%null%</text>
+<text id="20268">%null%</text>
+<text id="20269">%null%</text>
+<text id="20270">A special ring given to those who are deemed fit
+to undertake the journey of discovery in Vinheim,
+home of sorcery.
+
+Extends length of spell effect.
+
+Apropos to the Dragon School, the seal depicts
+an everlasting dragon. A lingering dragon symbolizes
+the true nature of the consummate sorcerer.</text>
+<text id="20271">A special ring given to those who are deemed fit
+to undertake the journey of discovery in Vinheim,
+home of sorcery.
+
+Extends length of spell effect.
+
+Apropos to the Dragon School, the seal depicts
+an everlasting dragon. A lingering dragon symbolizes
+the true nature of the consummate sorcerer.</text>
+<text id="20272">A special ring given to those who are deemed fit
+to undertake the journey of discovery in Vinheim,
+home of sorcery.
+
+Extends length of spell effect.
+
+Apropos to the Dragon School, the seal depicts
+an everlasting dragon. A lingering dragon symbolizes
+the true nature of the consummate sorcerer.</text>
+<text id="20273">%null%</text>
+<text id="20274">%null%</text>
+<text id="20275">%null%</text>
+<text id="20276">%null%</text>
+<text id="20277">%null%</text>
+<text id="20278">%null%</text>
+<text id="20279">%null%</text>
+<text id="20280">A ring given to Farron's Undead Legion by one of
+the preacher twins, known more commonly as
+the Crystal Sages.
+
+Shortens spell casting time.
+
+The sorcerers of Farron's Abyss Watchers were
+known to be lonesome warriors who would only
+rely upon more pragmatic spells.</text>
+<text id="20281">A ring given to Farron's Undead Legion by one of
+the preacher twins, known more commonly as
+the Crystal Sages.
+
+Shortens spell casting time.
+
+The sorcerers of Farron's Abyss Watchers were
+known to be lonesome warriors who would only
+rely upon more pragmatic spells.</text>
+<text id="20282">A ring given to Farron's Undead Legion by one of
+the preacher twins, known more commonly as
+the Crystal Sages.
+
+Shortens spell casting time.
+
+The sorcerers of Farron's Abyss Watchers were
+known to be lonesome warriors who would only
+rely upon more pragmatic spells.</text>
+<text id="20283">%null%</text>
+<text id="20284">%null%</text>
+<text id="20285">%null%</text>
+<text id="20286">%null%</text>
+<text id="20287">%null%</text>
+<text id="20288">%null%</text>
+<text id="20289">%null%</text>
+<text id="20290">Ring of a clandestine guild of sorcerers
+based in Vinheim, home of sorcery.
+
+Masks the sound of its wearer.
+
+The Dragon School held effective sovereignty
+over Vinheim, with a great many adept assassins
+at its disposal.</text>
+<text id="20291">%null%</text>
+<text id="20292">%null%</text>
+<text id="20293">%null%</text>
+<text id="20294">%null%</text>
+<text id="20295">%null%</text>
+<text id="20296">%null%</text>
+<text id="20297">%null%</text>
+<text id="20298">%null%</text>
+<text id="20299">%null%</text>
+<text id="20300">Leaf-colored crown ring bestowed upon the
+princess of Oolacile, ancient land of golden
+sorceries.
+
+Reduces spell FP consumption, but also lowers HP.
+
+Oolacile is synonymous for its lost sorceries,
+of which the xanthous sorcerers are dedicated
+scholars. This crown ring is a rare artifact of
+great magic heritage.</text>
+<text id="20301">%null%</text>
+<text id="20302">%null%</text>
+<text id="20303">%null%</text>
+<text id="20304">%null%</text>
+<text id="20305">%null%</text>
+<text id="20306">%null%</text>
+<text id="20307">%null%</text>
+<text id="20308">%null%</text>
+<text id="20309">%null%</text>
+<text id="20310">A ring bestowed upon a Carim saint.
+Allows attunement of additional spells.
+
+In Carim, the saints give voice to the ancient
+tales. They memorize countless cumbersome
+sacred books and read them in sonorous tones,
+a function for which they are widely renowned.</text>
+<text id="20311">%null%</text>
+<text id="20312">%null%</text>
+<text id="20313">%null%</text>
+<text id="20314">%null%</text>
+<text id="20315">%null%</text>
+<text id="20316">%null%</text>
+<text id="20317">%null%</text>
+<text id="20318">%null%</text>
+<text id="20319">%null%</text>
+<text id="20320">A ring bestowed upon the Deacons of the Cathedral
+of the Deep. Allows attunement of additional spells.
+
+In the Cathedral slumber things most terrible, and as such, the deacons require a grand narrative, to ensure they do not falter in their duty.
+A philosophy, to ward away the madness beckoned
+by the grotesqueries at hand.</text>
+<text id="20321">%null%</text>
+<text id="20322">%null%</text>
+<text id="20323">%null%</text>
+<text id="20324">%null%</text>
+<text id="20325">%null%</text>
+<text id="20326">%null%</text>
+<text id="20327">%null%</text>
+<text id="20328">%null%</text>
+<text id="20329">%null%</text>
+<text id="20330">Ring of the moon deity Gwyndolin,
+youngest son of Gwyn, the First Lord.
+
+Adds many slots for attunement.
+
+Gwyndolin, also known as the Dark Sun,
+commands the Darkmoon Knights, and
+bestows this ring upon the best of them.</text>
+<text id="20331">%null%</text>
+<text id="20332">%null%</text>
+<text id="20333">%null%</text>
+<text id="20334">%null%</text>
+<text id="20335">%null%</text>
+<text id="20336">%null%</text>
+<text id="20337">%null%</text>
+<text id="20338">%null%</text>
+<text id="20339">%null%</text>
+<text id="20340">Lord Gwyn's firstborn, who inherited the
+sunlight, once wore this ancient ring.
+Boosts the strength of miracles.
+
+Lord Gwyn's firstborn was a god of war,
+but his foolishness led to a loss of the
+annals, and rescinding of his deific status.
+Today, even his name is not known.</text>
+<text id="20341">%null%</text>
+<text id="20342">%null%</text>
+<text id="20343">%null%</text>
+<text id="20344">%null%</text>
+<text id="20345">%null%</text>
+<text id="20346">%null%</text>
+<text id="20347">%null%</text>
+<text id="20348">%null%</text>
+<text id="20349">%null%</text>
+<text id="20350">Ring granted to those bound by the
+Darkmoon Blade covenant.
+Answer Dark Sun Gwyndolin's summoning.
+
+Gwyndolin, all too aware of his repulsive,
+frail appearance, created the illusion of 
+a sister Gwynevere, who helps him guard
+over Anor Londo. An unmasking of these
+deities would be tantamount to blasphemy.</text>
+<text id="20351">%null%</text>
+<text id="20352">%null%</text>
+<text id="20353">%null%</text>
+<text id="20354">%null%</text>
+<text id="20355">%null%</text>
+<text id="20356">%null%</text>
+<text id="20357">%null%</text>
+<text id="20358">%null%</text>
+<text id="20359">%null%</text>
+<text id="20360">One of the special rings granted to the four
+knights of Gwyn. The Leo Ring belonged to
+Ornstein the Dragonslayer.
+
+This ring strengthens counters with pierce
+weapons. His lugged spear is said
+to have sliced a boulder in two.</text>
+<text id="20361">%null%</text>
+<text id="20362">%null%</text>
+<text id="20363">%null%</text>
+<text id="20364">%null%</text>
+<text id="20365">%null%</text>
+<text id="20366">%null%</text>
+<text id="20367">%null%</text>
+<text id="20368">%null%</text>
+<text id="20369">%null%</text>
+<text id="20370">Ring associated with Hawkeye Gough,
+one of the Four Knights of Gwyn, the First Lord.
+
+Extends the range of arrows.
+
+In his later years, the giant Gough was blinded,
+but this did not prevent him from striking down
+a calamitous dragon with his Greatbow.</text>
+<text id="20371">%null%</text>
+<text id="20372">%null%</text>
+<text id="20373">%null%</text>
+<text id="20374">%null%</text>
+<text id="20375">%null%</text>
+<text id="20376">%null%</text>
+<text id="20377">%null%</text>
+<text id="20378">%null%</text>
+<text id="20379">%null%</text>
+<text id="20380">Ring associated with the Lord's Blade Ciaran,
+one of the Four Knights of Gwyn, the First Lord.
+
+Boosts critical attacks.
+
+The masked Ciaran was the only woman to serve in
+Gwyn's Four Knights, and her curved sword granted
+a swift death to any and all enemies of the throne.</text>
+<text id="20381">%null%</text>
+<text id="20382">%null%</text>
+<text id="20383">%null%</text>
+<text id="20384">%null%</text>
+<text id="20385">%null%</text>
+<text id="20386">%null%</text>
+<text id="20387">%null%</text>
+<text id="20388">%null%</text>
+<text id="20389">%null%</text>
+<text id="20390">A gold ring depicting a snake that could have been,
+but never was, a dragon. Fallen foes are more likely
+to drop items.
+
+Snakes are known as creatures of great avarice,
+devouring prey even larger than themselves
+by swallowing them whole.
+
+If one's shackles are cause for discontent,
+perhaps it is time for some old-fashioned greed.</text>
+<text id="20391">A gold ring depicting a snake that could have been,
+but never was, a dragon. Fallen foes are more likely
+to drop items.
+
+Snakes are known as creatures of great avarice,
+devouring prey even larger than themselves
+by swallowing them whole.
+
+If one's shackles are cause for discontent,
+perhaps it is time for some old-fashioned greed.</text>
+<text id="20392">A gold ring depicting a snake that could have been,
+but never was, a dragon. Fallen foes are more likely
+to drop items.
+
+Snakes are known as creatures of great avarice,
+devouring prey even larger than themselves
+by swallowing them whole.
+
+If one's shackles are cause for discontent,
+perhaps it is time for some old-fashioned greed.</text>
+<text id="20393">%null%</text>
+<text id="20394">%null%</text>
+<text id="20395">%null%</text>
+<text id="20396">%null%</text>
+<text id="20397">%null%</text>
+<text id="20398">%null%</text>
+<text id="20399">%null%</text>
+<text id="20400">A silver ring depicting a snake that could have been,
+but never was, a dragon. Fallen foes yield more
+souls.
+
+Snakes are known as creatures of great avarice,
+devouring prey even larger than themselves
+by swallowing them whole.
+
+If one's shackles are cause for discontent,
+perhaps it is time for some old-fashioned greed.</text>
+<text id="20401">A silver ring depicting a snake that could have been,
+but never was, a dragon. Fallen foes yield more
+souls.
+
+Snakes are known as creatures of great avarice,
+devouring prey even larger than themselves
+by swallowing them whole.
+
+If one's shackles are cause for discontent,
+perhaps it is time for some old-fashioned greed.</text>
+<text id="20402">A silver ring depicting a snake that could have been,
+but never was, a dragon. Fallen foes yield more
+souls.
+
+Snakes are known as creatures of great avarice,
+devouring prey even larger than themselves
+by swallowing them whole.
+
+If one's shackles are cause for discontent,
+perhaps it is time for some old-fashioned greed.</text>
+<text id="20403">%null%</text>
+<text id="20404">%null%</text>
+<text id="20405">%null%</text>
+<text id="20406">%null%</text>
+<text id="20407">%null%</text>
+<text id="20408">%null%</text>
+<text id="20409">%null%</text>
+<text id="20410">Ring associated with Gwynevere, princess of sunlight and eldest daughter of Gwyn, the First Lord.
+
+The ring is vaguely warm, like a beam of sunlight,
+and gradually restores HP.
+
+Gwynevere left her home with a great many
+other deities, and became a wife and mother,
+raising several heavenly children.</text>
+<text id="20411">%null%</text>
+<text id="20412">%null%</text>
+<text id="20413">%null%</text>
+<text id="20414">%null%</text>
+<text id="20415">%null%</text>
+<text id="20416">%null%</text>
+<text id="20417">%null%</text>
+<text id="20418">%null%</text>
+<text id="20419">%null%</text>
+<text id="20420">Silver ring depicting a leaping feline.
+Prevents damage from falling.
+
+In the Age of Gods, or possibly just following it,
+an old cat was said to speak a human tongue,
+with the voice of an old woman, and the form
+of a fanciful immortal.</text>
+<text id="20421">%null%</text>
+<text id="20422">%null%</text>
+<text id="20423">%null%</text>
+<text id="20424">%null%</text>
+<text id="20425">%null%</text>
+<text id="20426">%null%</text>
+<text id="20427">%null%</text>
+<text id="20428">%null%</text>
+<text id="20429">%null%</text>
+<text id="20430">One of Courland's transposed wonders.
+Derived from the soul of a Soulfeeder.
+
+Easier to be detected by enemies.
+
+The Soulfeeder was a beast that insatiably
+absorbed souls to feed its own power.
+Even after its accursed corpse was burned,
+it is said that the pungent stench of souls
+left the air permanently stained.</text>
+<text id="20431">%null%</text>
+<text id="20432">%null%</text>
+<text id="20433">%null%</text>
+<text id="20434">%null%</text>
+<text id="20435">%null%</text>
+<text id="20436">%null%</text>
+<text id="20437">%null%</text>
+<text id="20438">%null%</text>
+<text id="20439">%null%</text>
+<text id="20440">One of the illusory rings worn by the Hollows
+of Londor.
+
+Take the appearance of a phantom.
+
+The Hollows of Londor are wretchedly aged,
+fraught with deceit, and dubiously secretive.
+It is no wonder that they are deeply detested.</text>
+<text id="20441">%null%</text>
+<text id="20442">%null%</text>
+<text id="20443">%null%</text>
+<text id="20444">%null%</text>
+<text id="20445">%null%</text>
+<text id="20446">%null%</text>
+<text id="20447">%null%</text>
+<text id="20448">%null%</text>
+<text id="20449">%null%</text>
+<text id="20450">Ring worn by warriors of the sand kingdom, Carthus.
+Slightly boosts dexterity and obscures the wearer
+while rolling.
+
+The sword technique of Carthus allows for
+fluid movement with a curved sword. Masters
+of the technique are said to dazzle their
+opponents by moving as weightlessly as a
+grain of sand.
+They live for their High Lord Wolnir, conqueror
+of most kingdoms known to their people.</text>
+<text id="20451">%null%</text>
+<text id="20452">%null%</text>
+<text id="20453">%null%</text>
+<text id="20454">%null%</text>
+<text id="20455">%null%</text>
+<text id="20456">%null%</text>
+<text id="20457">%null%</text>
+<text id="20458">%null%</text>
+<text id="20459">%null%</text>
+<text id="20460">Ring engraved with a portrait of a knight.
+Increases strength.
+
+In Lothric, the Knight has long been considered
+one of the Three Pillars of the king's rule,
+they were the heros who brought the kindom victorys.
+but their leader's name has been long forgotten.</text>
+<text id="20461">%null%</text>
+<text id="20462">%null%</text>
+<text id="20463">%null%</text>
+<text id="20464">%null%</text>
+<text id="20465">%null%</text>
+<text id="20466">%null%</text>
+<text id="20467">%null%</text>
+<text id="20468">%null%</text>
+<text id="20469">%null%</text>
+<text id="20470">Ring engraved with a portrait of a hunter.
+Increases dexterity.
+
+The hunters serve Lothric on the fringes and
+in the shadows. For generations, rulers of Lothric
+have relied especially upon the Black Hand hunters 
+to punish enemies in ways that the king's
+Three Pillars cannot.</text>
+<text id="20471">%null%</text>
+<text id="20472">%null%</text>
+<text id="20473">%null%</text>
+<text id="20474">%null%</text>
+<text id="20475">%null%</text>
+<text id="20476">%null%</text>
+<text id="20477">%null%</text>
+<text id="20478">%null%</text>
+<text id="20479">%null%</text>
+<text id="20480">Ring of the savage Tsorig, more commonly known
+as the Knight Slayer.
+
+Enemies lose more stamina when guarding attacks.
+
+Long ago, Tsorig engaged the guardians of an
+ancient city in a bloody confrontation,
+and returned with their rings as his prize,
+still frozen on their dismembered fingers.</text>
+<text id="20481">%null%</text>
+<text id="20482">%null%</text>
+<text id="20483">%null%</text>
+<text id="20484">%null%</text>
+<text id="20485">%null%</text>
+<text id="20486">%null%</text>
+<text id="20487">%null%</text>
+<text id="20488">%null%</text>
+<text id="20489">%null%</text>
+<text id="20490">Ring depicting a hand grasping a blue stone.
+Increases magic attack, but compromises damage absorption.
+
+An old fable in Londor claims that the lure of
+the clutch ring reaches out to the crestfallen,
+who might otherwise be overcome by despair.</text>
+<text id="20491">%null%</text>
+<text id="20492">%null%</text>
+<text id="20493">%null%</text>
+<text id="20494">%null%</text>
+<text id="20495">%null%</text>
+<text id="20496">%null%</text>
+<text id="20497">%null%</text>
+<text id="20498">%null%</text>
+<text id="20499">%null%</text>
+<text id="20500">Ring depicting a hand grasping a yellow stone.
+Increases lightning attack, but compromises damage absorption.
+
+An old fable in Londor claims that the lure of
+the clutch ring reaches out to the crestfallen,
+who might otherwise be overcome by despair.</text>
+<text id="20501">%null%</text>
+<text id="20502">%null%</text>
+<text id="20503">%null%</text>
+<text id="20504">%null%</text>
+<text id="20505">%null%</text>
+<text id="20506">%null%</text>
+<text id="20507">%null%</text>
+<text id="20508">%null%</text>
+<text id="20509">%null%</text>
+<text id="20510">Ring depicting a hand grasping a red stone.
+Increases fire attack, but compromises damage absorption.
+
+An old fable in Londor claims that the lure of
+the clutch ring reaches out to the crestfallen,
+who might otherwise be overcome by despair.</text>
+<text id="20511">%null%</text>
+<text id="20512">%null%</text>
+<text id="20513">%null%</text>
+<text id="20514">%null%</text>
+<text id="20515">%null%</text>
+<text id="20516">%null%</text>
+<text id="20517">%null%</text>
+<text id="20518">%null%</text>
+<text id="20519">%null%</text>
+<text id="20520">Ring depicting a hand grasping a purple stone.
+Increases dark attack, but compromises damage absorption.
+
+An old fable in Londor claims that the lure of
+the clutch ring reaches out to the crestfallen,
+who might otherwise be overcome by despair.</text>
+<text id="20521">%null%</text>
+<text id="20522">%null%</text>
+<text id="20523">%null%</text>
+<text id="20524">%null%</text>
+<text id="20525">%null%</text>
+<text id="20526">%null%</text>
+<text id="20527">%null%</text>
+<text id="20528">%null%</text>
+<text id="20529">%null%</text>
+<text id="20530">Ring of Raime the traitor.
+Reduces stamina loss when blocking
+with shield.
+
+Raime was an agile swordsman who
+served King Vendrick, but after resigning
+from his post, he reconsidered his
+way of life and was born again as
+a stalwart warrior.</text>
+<text id="20531">%null%</text>
+<text id="20532">%null%</text>
+<text id="20533">%null%</text>
+<text id="20534">%null%</text>
+<text id="20535">%null%</text>
+<text id="20536">%null%</text>
+<text id="20537">%null%</text>
+<text id="20538">%null%</text>
+<text id="20539">%null%</text>
+<text id="20540">Ring of Flynn, the eulogized thief.
+Lowering equip load increases attack power.
+
+Flynn fought with the wind on his side,
+and was a hero among the weak and poor,
+yet even his admirers knew that it was
+little more than an idyllic fable.</text>
+<text id="20541">%null%</text>
+<text id="20542">%null%</text>
+<text id="20543">%null%</text>
+<text id="20544">%null%</text>
+<text id="20545">%null%</text>
+<text id="20546">%null%</text>
+<text id="20547">%null%</text>
+<text id="20548">%null%</text>
+<text id="20549">%null%</text>
+<text id="20550">Portion of a steel chain used to restrain Gundyr.
+Gain vigor, endurance, and vitality, but take
+extra damage.
+
+A prisoner is one who has staked everything on a belief, a proclivity most apparent in the greatest of champions.</text>
+<text id="20551">%null%</text>
+<text id="20552">%null%</text>
+<text id="20553">%null%</text>
+<text id="20554">%null%</text>
+<text id="20555">%null%</text>
+<text id="20556">%null%</text>
+<text id="20557">%null%</text>
+<text id="20558">%null%</text>
+<text id="20559">%null%</text>
+<text id="20560">One of the illusory rings worn by the Hollows
+of Londor.
+
+Retain human appearance while Hollow.
+
+The Hollows of Londor are wretchedly aged,
+fraught with deceit, and dubiously secretive.
+It is no wonder that they are deeply detested.</text>
+<text id="20561">%null%</text>
+<text id="20562">%null%</text>
+<text id="20563">%null%</text>
+<text id="20564">%null%</text>
+<text id="20565">%null%</text>
+<text id="20566">%null%</text>
+<text id="20567">%null%</text>
+<text id="20568">%null%</text>
+<text id="20569">%null%</text>
+<text id="20570">Ring of Sir Yorgh, who sought the blood
+of a dragon and invaded Shulva.
+Can deflect spells.
+
+When Sir Yorgh faced Sinh, the slumbering
+dragon, he drew blood with a flash of his steel,
+but Sinh responded by spewing forth the
+poison that had long brewed within him,
+blanketing the city in a miasmic cloud.</text>
+<text id="20571">%null%</text>
+<text id="20572">%null%</text>
+<text id="20573">%null%</text>
+<text id="20574">%null%</text>
+<text id="20575">%null%</text>
+<text id="20576">%null%</text>
+<text id="20577">%null%</text>
+<text id="20578">%null%</text>
+<text id="20579">%null%</text>
+<text id="20580">Ring bestowed upon the Fingers of Rosaria,
+invaders who seek tongues for their goddess.
+
+Hides the presence of the wearer when far away.
+
+It is said that Rosaria, the mother of rebirth,
+was robbed of her tongue by her firstborn,
+and has been waiting for their return ever since.</text>
+<text id="20581">%null%</text>
+<text id="20582">%null%</text>
+<text id="20583">%null%</text>
+<text id="20584">%null%</text>
+<text id="20585">%null%</text>
+<text id="20586">%null%</text>
+<text id="20587">%null%</text>
+<text id="20588">%null%</text>
+<text id="20589">%null%</text>
+<text id="20590">This ring captured the foul spirit of an evil eye,
+a creature that ravaged Astora.
+
+Absorb HP from each defeated foe.
+
+The horrid spirit nearly destroyed Astora,
+but was eventually defeated by "the sword
+of one most noble."</text>
+<text id="20591">This ring captured the foul spirit of an evil eye,
+a creature that ravaged Astora.
+
+Absorb HP from each defeated foe.
+
+The horrid spirit nearly destroyed Astora,
+but was eventually defeated by "the sword
+of one most noble."</text>
+<text id="20592">This ring captured the foul spirit of an evil eye,
+a creature that ravaged Astora.
+
+Absorb HP from each defeated foe.
+
+The horrid spirit nearly destroyed Astora,
+but was eventually defeated by "the sword
+of one most noble."</text>
+<text id="20593">%null%</text>
+<text id="20594">%null%</text>
+<text id="20595">%null%</text>
+<text id="20596">%null%</text>
+<text id="20597">%null%</text>
+<text id="20598">%null%</text>
+<text id="20599">%null%</text>
+<text id="20600">A ring made from the orange eye of a
+calamitous dragon. Receive double damage.
+
+This ring has no useful powers, and is merely
+a symbol of dragon worship, a thing quietly
+passed down amongst its most fervent
+adherents, some of whom become convinced
+the task has been bestowed upon them as
+a sacred duty.</text>
+<text id="20601">%null%</text>
+<text id="20602">%null%</text>
+<text id="20603">%null%</text>
+<text id="20604">%null%</text>
+<text id="20605">%null%</text>
+<text id="20606">%null%</text>
+<text id="20607">%null%</text>
+<text id="20608">%null%</text>
+<text id="20609">%null%</text>
+<text id="20610">A ring given to Undead Legion of Farron.
+Reduces Skill FP consumption.
+
+The Abyss Watchers, for their hunting,
+required a sword technique that went beyond
+any existing art. Wolf's blood provided just that,
+and this ring further extends the effect.</text>
+<text id="20611">%null%</text>
+<text id="20612">%null%</text>
+<text id="20613">%null%</text>
+<text id="20614">%null%</text>
+<text id="20615">%null%</text>
+<text id="20616">%null%</text>
+<text id="20617">%null%</text>
+<text id="20618">%null%</text>
+<text id="20619">%null%</text>
+<text id="20620">A malformed ring left by Aldrich, Saint of
+the Deep. Recovers HP from critical attacks.
+
+Aldrich, infamous for his appetite for flesh,
+apparently had the desire to share with others
+his joy of imbibing the final shudders of life
+while luxuriating in his victim's screams.</text>
+<text id="20621">%null%</text>
+<text id="20622">%null%</text>
+<text id="20623">%null%</text>
+<text id="20624">%null%</text>
+<text id="20625">%null%</text>
+<text id="20626">%null%</text>
+<text id="20627">%null%</text>
+<text id="20628">%null%</text>
+<text id="20629">%null%</text>
+<text id="20630">A malformed ring left by Aldrich, Saint of
+the Deep. Recovers FP from critical attacks.
+
+Aldrich, infamous for his appetite for flesh,
+apparently had the desire to share with others
+his joy of imbibing the final shudders of life
+while luxuriating in his victim's screams.</text>
+<text id="20631">%null%</text>
+<text id="20632">%null%</text>
+<text id="20633">%null%</text>
+<text id="20634">%null%</text>
+<text id="20635">%null%</text>
+<text id="20636">%null%</text>
+<text id="20637">%null%</text>
+<text id="20638">%null%</text>
+<text id="20639">%null%</text>
+<text id="20640">Protects its wearer from various ailments.
+Increases effect of status ailments.
+
+The effects of this ring, which incites all known disorders of this world, are greatly feared. Even the sorcerer who forged the ring sealed it away following its creation.</text>
+<text id="20641">%null%</text>
+<text id="20642">%null%</text>
+<text id="20643">%null%</text>
+<text id="20644">%null%</text>
+<text id="20645">%null%</text>
+<text id="20646">%null%</text>
+<text id="20647">%null%</text>
+<text id="20648">%null%</text>
+<text id="20649">%null%</text>
+<text id="20650">A ring that greatly enhances miracle strength.
+Increases effective range of miracles.
+
+A gift from the gods awarded for devotion and perserverance. The original owner is no longer of this world, yet the ring remains an object of faith.</text>
+<text id="20651">%null%</text>
+<text id="20652">%null%</text>
+<text id="20653">%null%</text>
+<text id="20654">%null%</text>
+<text id="20655">%null%</text>
+<text id="20656">%null%</text>
+<text id="20657">%null%</text>
+<text id="20658">%null%</text>
+<text id="20659">%null%</text>
+<text id="20660">Ring given to knights of the Way of White.
+Depicts Allfather Lloyd's Sword of Law.
+
+Boosts attack power when HP is full.
+
+Much time has passed since the worship of Lloyd
+was common in the Way of White.
+The clerics of Carim had always strongly
+asserted that Lloyd was a derivative fraud,
+and that the Allfather title was self-proclaimed.</text>
+<text id="20661">%null%</text>
+<text id="20662">%null%</text>
+<text id="20663">%null%</text>
+<text id="20664">%null%</text>
+<text id="20665">%null%</text>
+<text id="20666">%null%</text>
+<text id="20667">%null%</text>
+<text id="20668">%null%</text>
+<text id="20669">%null%</text>
+<text id="20670">Ring given to knights of the Way of White.
+Depicts Allfather Lloyd's Shield of Caste.
+
+Boosts damage absorption when HP is full.
+
+Much time has passed since the worship of Lloyd
+was common in the Way of White.
+The clerics of Carim had always strongly
+asserted that Lloyd was a derivative fraud,
+and that the Allfather title was self-proclaimed.</text>
+<text id="20671">%null%</text>
+<text id="20672">%null%</text>
+<text id="20673">%null%</text>
+<text id="20674">%null%</text>
+<text id="20675">%null%</text>
+<text id="20676">%null%</text>
+<text id="20677">%null%</text>
+<text id="20678">%null%</text>
+<text id="20679">%null%</text>
+<text id="20680">%null%</text>
+<text id="20681">%null%</text>
+<text id="20682">%null%</text>
+<text id="20683">%null%</text>
+<text id="20684">%null%</text>
+<text id="20685">%null%</text>
+<text id="20686">%null%</text>
+<text id="20687">%null%</text>
+<text id="20688">%null%</text>
+<text id="20689">%null%</text>
+<text id="20690">Masks one's presence from adversaries.
+Hides the wearer from Dark Spirits at a distance.
+
+The wearer's presence is obscured, concealing their very existence from invaders of that world.
+However, if permitted to get close, the effect will fade.</text>
+<text id="20691">%null%</text>
+<text id="20692">%null%</text>
+<text id="20693">%null%</text>
+<text id="20694">%null%</text>
+<text id="20695">%null%</text>
+<text id="20696">%null%</text>
+<text id="20697">%null%</text>
+<text id="20698">%null%</text>
+<text id="20699">%null%</text>
+<text id="20700">A green ring crafted from shards.
+Increases HP restored by Estus Flask.
+
+This ring was entrusted to a certain Fire Keeper,
+but in the end she never met her champion,
+and the ensuing tragic farce became
+a favorite tale of the masses.</text>
+<text id="20701">%null%</text>
+<text id="20702">%null%</text>
+<text id="20703">%null%</text>
+<text id="20704">%null%</text>
+<text id="20705">%null%</text>
+<text id="20706">%null%</text>
+<text id="20707">%null%</text>
+<text id="20708">%null%</text>
+<text id="20709">%null%</text>
+<text id="20710">Gray crystalline ring crafted from shards.
+Increases FP restored by Ashen Estus Flask.
+
+Once a treasure brought before Lothric's Queen,
+she had it enshrined in the Cemetery of Untended Graves,
+so that one day an Unkindled might
+profit from its use.</text>
+<text id="20711">%null%</text>
+<text id="20712">%null%</text>
+<text id="20713">%null%</text>
+<text id="20714">%null%</text>
+<text id="20715">%null%</text>
+<text id="20716">%null%</text>
+<text id="20717">%null%</text>
+<text id="20718">%null%</text>
+<text id="20719">%null%</text>
+<text id="20720">An old ring with a seal depicting a horse's hoof.
+Boosts kick effect.
+
+Unbreakable Patches adored this ring and the feeling that it gave it him when he kicked his marks into the depths of treacherous traps, but suffered no shortage of ridicule from his associates for relying so heavily on the tired old trick.
+
+But who is the sorrier? The horse who knows only to kick, or the fool who approaches the old beast without thought?</text>
+<text id="20721">%null%</text>
+<text id="20722">%null%</text>
+<text id="20723">%null%</text>
+<text id="20724">%null%</text>
+<text id="20725">%null%</text>
+<text id="20726">%null%</text>
+<text id="20727">%null%</text>
+<text id="20728">%null%</text>
+<text id="20729">%null%</text>
+<text id="20730">Ring worn by warriors of the sand kingdom, Carthus.
+Boosts rolling invincibility when over-encumbered.
+
+The sword technique of Carthus allows for
+fluid movement with a curved sword. Masters
+of the technique are said to dazzle their
+opponents by moving as weightlessly as a
+grain of sand.
+They live for their High Lord Wolnir, conqueror
+of most kingdoms known to their people.</text>
+<text id="20731">%null%</text>
+<text id="20732">%null%</text>
+<text id="20733">%null%</text>
+<text id="20734">%null%</text>
+<text id="20735">%null%</text>
+<text id="20736">%null%</text>
+<text id="20737">%null%</text>
+<text id="20738">%null%</text>
+<text id="20739">%null%</text>
+<text id="20740">A divine ring granted to the Darkmoon Gwyndolin
+in his youth.
+
+Causes males to perform female actions,
+and vice-versa.
+
+Gwyndolin was raised like a daughter through the
+aura of the moon, and was said to behave like
+a sullen brooding goddess.</text>
+<text id="20741">%null%</text>
+<text id="20742">%null%</text>
+<text id="20743">%null%</text>
+<text id="20744">%null%</text>
+<text id="20745">%null%</text>
+<text id="20746">%null%</text>
+<text id="20747">%null%</text>
+<text id="20748">%null%</text>
+<text id="20749">%null%</text>
+<text id="20750">Bewitched ring that Pontiff Sulyvahn bestowed
+upon his knights.
+
+Boosts attacks, as long as attacking persists.
+
+Knights who peer into the black orb are lured
+into battles of death, transformed into frenzied
+beasts. No wonder the Pontiff only provides
+these rings to those dispatched to foreign lands.</text>
+<text id="20751">%null%</text>
+<text id="20752">%null%</text>
+<text id="20753">%null%</text>
+<text id="20754">%null%</text>
+<text id="20755">%null%</text>
+<text id="20756">%null%</text>
+<text id="20757">%null%</text>
+<text id="20758">%null%</text>
+<text id="20759">%null%</text>
+<text id="20760">Wearer's will to fight is converted into strength.
+Boosts defense, as long as attacking persists.
+
+The unnatural ability of a late hero dwells within this ring, the use of which was permitted to only a select and valiant few.</text>
+<text id="20761">%null%</text>
+<text id="20762">%null%</text>
+<text id="20763">%null%</text>
+<text id="20764">%null%</text>
+<text id="20765">%null%</text>
+<text id="20766">%null%</text>
+<text id="20767">%null%</text>
+<text id="20768">%null%</text>
+<text id="20769">%null%</text>
+<text id="20770">Wearer's will to fight is converted into strength.
+Boosts stamina recovery speed, as long as attacking persists.
+
+The unnatural ability of a late hero dwells within this ring, the use of which was permitted to only a select and valiant few.</text>
+<text id="20771">%null%</text>
+<text id="20772">%null%</text>
+<text id="20773">%null%</text>
+<text id="20774">%null%</text>
+<text id="20775">%null%</text>
+<text id="20776">%null%</text>
+<text id="20777">%null%</text>
+<text id="20778">%null%</text>
+<text id="20779">%null%</text>
+<text id="20780">Wearer's will to fight is converted into strength.
+Boosts spells, as long as attacking persists.
+
+The unnatural ability of a late hero dwells within this ring, the use of which was permitted to only a select and valiant few.</text>
+<text id="20781">%null%</text>
+<text id="20782">%null%</text>
+<text id="20783">%null%</text>
+<text id="20784">%null%</text>
+<text id="20785">%null%</text>
+<text id="20786">%null%</text>
+<text id="20787">%null%</text>
+<text id="20788">%null%</text>
+<text id="20789">%null%</text>
+<text id="20790">Bewitched ring that Pontiff Sulyvahn bestowed
+upon his knights.
+
+Recovers HP with successive attacks.
+
+Knights who peer into the black orb are lured
+into battles of death, transformed into frenzied
+beasts. No wonder the Pontiff only provides
+these rings to those dispatched to foreign lands.</text>
+<text id="20791">%null%</text>
+<text id="20792">%null%</text>
+<text id="20793">%null%</text>
+<text id="20794">%null%</text>
+<text id="20795">%null%</text>
+<text id="20796">%null%</text>
+<text id="20797">%null%</text>
+<text id="20798">%null%</text>
+<text id="20799">%null%</text>
+<text id="20800">Wearer's will to fight is converted into strength.
+Recovers FP with successive attacks.
+
+The unnatural ability of a late hero dwells within this ring, the use of which was permitted to only a select and valiant few.</text>
+<text id="20801">%null%</text>
+<text id="20802">%null%</text>
+<text id="20803">%null%</text>
+<text id="20804">%null%</text>
+<text id="20805">%null%</text>
+<text id="20806">%null%</text>
+<text id="20807">%null%</text>
+<text id="20808">%null%</text>
+<text id="20809">%null%</text>
+<text id="20810">Wearer's will to fight is converted into strength.
+Adds extra damage with successive attacks.
+
+The unnatural ability of a late hero dwells within this ring, the use of which was permitted to only a select and valiant few.</text>
+<text id="20811">%null%</text>
+<text id="20812">%null%</text>
+<text id="20813">%null%</text>
+<text id="20814">%null%</text>
+<text id="20815">%null%</text>
+<text id="20816">%null%</text>
+<text id="20817">%null%</text>
+<text id="20818">%null%</text>
+<text id="20819">%null%</text>
+<text id="20820">Wearer's will to fight is converted into strength.
+Increases drop rate with successive attacks.
+
+The unnatural ability of a late hero dwells within this ring, the use of which was permitted to only a select and valiant few.</text>
+<text id="20821">%null%</text>
+<text id="20822">%null%</text>
+<text id="20823">%null%</text>
+<text id="20824">%null%</text>
+<text id="20825">%null%</text>
+<text id="20826">%null%</text>
+<text id="20827">%null%</text>
+<text id="20828">%null%</text>
+<text id="20829">%null%</text>
+<text id="20830">Ring of Oceiros, former king of Lothric.
+Reduces damage from backstabs.
+
+In his later years, Oceiros became fascinated with
+dragons. After going mad, he was more commonly
+known as the Consumed King. Many assassins were
+dispatched to his domain, but none returned.
+
+The Consumed King ascribed his resilience to
+the divine protection of the dragon scale.</text>
+<text id="20840">This iron ring was used to shackle the guilty.
+Allows full movement regardless of environment.
+
+It is terribly rusted, and faintly stained with blood. Those who find this strange ring to their liking will be pleased 
+to find it easier to gain footing on poor ground such as swamps.</text>
+<text id="20850">An ancient sapphire ring that subdues your presence, making it difficult to be detected by enemies.
+
+This ring was commonly used by thieves from a distant land to steal without being noticed.
+
+The thief gang thriving in lothric seems to value the ring a lot.</text>
+<text id="20860">Massive ring forged by giants in a bygone age.
+
+This ring embodies the unwavering resolve of giants, enabling the wielder to endure blows without flinching.
+
+Such power comes at a heavy price.</text>
+</entries>
+</fmg>
