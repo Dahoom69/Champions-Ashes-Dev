@@ -109,6 +109,24 @@ function UpdateSunlightBlade()
     end
 end
 
+-- ***************************
+-- * Ludwig's Holy Blade Buff*
+-- ***************************
+
+function UpdateLudwigHolyBladeBuff()
+    local mainBuff = 130041201
+    local aboveHalfHpBuff = 130041202
+    local belowHalfHpBuff = 130041203
+
+    if env(1116, mainBuff) == TRUE then
+        act(2002, aboveHalfHpBuff)
+        act(2002, belowHalfHpBuff)
+    else
+        act(9001, aboveHalfHpBuff)
+        act(9001, belowHalfHpBuff)
+    end
+end
+
 -- ============================[ Custom Functions end ]=============================
 
 function ExecEvent(state)
@@ -18051,6 +18069,7 @@ function Update()
     UpdateWristTwist()
     UpdateDuelMode()
     UpdateSunlightBlade()
+    UpdateLudwigHolyBladeBuff()
     g_FrameCount = g_FrameCount + 1
     return 
 end
