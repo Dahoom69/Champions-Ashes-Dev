@@ -114,9 +114,9 @@ end
 -- ***************************
 
 function UpdateLudwigHolyBladeBuff()
-    local mainBuff = 130041201
-    local aboveHalfHpBuff = 130041202
-    local belowHalfHpBuff = 130041203
+    local mainBuff = 8001
+    local aboveHalfHpBuff = 8002
+    local belowHalfHpBuff = 8003
 
     if env(1116, mainBuff) == TRUE then
         act(2002, aboveHalfHpBuff)
