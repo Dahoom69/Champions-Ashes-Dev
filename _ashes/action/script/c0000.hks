@@ -103,7 +103,7 @@ end
 -- ******************
 
 function UpdateSunlightBlade()
-    local SunlightBladeSpEffect = 1103590001
+    local SunlightBladeSpEffect = 8000
     if env(1116, SunlightBladeSpEffect) == TRUE and env(2016) < 2 then
         act(9001, SunlightBladeSpEffect)
     end
