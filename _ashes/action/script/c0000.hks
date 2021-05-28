@@ -764,12 +764,13 @@ function GetAttackRequest(is_guard)
             elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
                 return ATTACK_REQUEST_LIGHT_KICK
             elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
-                if (sp == 655 or spo == 655) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
-                elseif (sp == 231 or spo == 231) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
-                elseif ((sp == 72 or spo == 72) and c_SwordArtsID ~= 24 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
-                elseif ((sp == 166 or spo == 166) and c_SwordArtsID == 12 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- old hero
-                elseif (sp == 176 or spo == 176) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art
-                else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
+                if (sp == 655 or (spo == 655 and is_leftHandCA == TRUE) ) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
+                elseif (sp == 231 or (spo == 231 and is_leftHandCA == TRUE)) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
+                elseif ((sp == 72 or (spo == 72 and is_leftHandCA == TRUE)) and c_SwordArtsID ~= 24 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
+                elseif ((sp == 166 or (spo == 166 and is_leftHandCA == TRUE)) and c_SwordArtsID == 12 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- old hero
+                elseif (sp == 176 or (spo == 176 and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art
+                elseif (sp == 167 or (spo == 167 and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora combat art
+                else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- ???
                 end
             else
                 return ATTACK_REQUEST_BOTH_LIGHT
