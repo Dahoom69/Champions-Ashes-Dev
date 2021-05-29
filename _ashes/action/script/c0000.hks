@@ -8334,7 +8334,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge
     if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 53 then r1 = "W_AttackRightLight1" end
 
     if (sp_m == 614) then r1 = "W_AttackRightLight3" end
-    if sp_m == 609 or (sp_m == 612) or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 609 or sp_m == 612 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 658 and env(1116, 100801) == TRUE ) then r1 = "W_AttackRightLight2" end
 
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
@@ -8524,7 +8524,7 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
             act(2002, 622)
         end
         return 
-    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE and (sp_m ~= 646) then
+    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE and (sp_m ~= 609 or sp_m ~= 612 or sp_m ~= 646) then
         ExecEventAllBody("W_AttackRightHeavySpecial1End")
         return 
     else
@@ -9464,7 +9464,7 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
         if (sp_m == 643) then b1 = "W_AttackBothLight2" 
             l1  = "W_AttackBothLeft3" end
         if (sp_m == 624) then b2 = "W_AttackRightHeavy1SubStart" end
-        if  sp_m == 609 or (sp_m == 612) or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
+        if  sp_m == 609 or sp_m == 612 or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
 
 --        if 20 > env(2016) and sp_m == 624 then  ExecEventHalfBlend(Event_MagicInvalidRight, ALLBODY) end
         if 10 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end  -- get fp
@@ -9631,7 +9631,7 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
             act(2002, 622)
         end
         return 
-    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
+    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE and (sp_m ~= 609 or sp_m ~= 612 or sp_m ~= 646) then
         ExecEventAllBody("W_AttackBothHeavySpecial1End")
         return 
     else
