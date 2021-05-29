@@ -8396,6 +8396,7 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge
 
     if sp_m == 658 or sp_m == 646 then r1 = "W_AttackRightLight2" end 
     if sp_m == 658 and env(1116, 100801) == TRUE  then r1 = "W_AttackRightLight1" end
+    if sp_m == 605 or sp_m == 620 then r1 = "W_AttackRightLight3" end 
 
     local is_pyro = FALSE
     if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
