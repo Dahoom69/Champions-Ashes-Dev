@@ -14,3 +14,17 @@ _ashes/param/drawparam/
 _ashes/map/m[0-9][0-9]/
 _ashes/map/m[0-9][0-9]_[0-9][0-9]_[0-9][0-9]_[0-9][0-9]/*.btl*
 _ashes/map/mapstudio/
+
+# Old emevds
+_ashes/event/old_m30_00_00_00.emevd
+_ashes/event/old_m30_01_00_00.emevd
+_ashes/event/old_m33_00_00_00.emevd
+_ashes/event/old_m34_01_00_00.emevd
+_ashes/event/old_m35_00_00_00.emevd
+_ashes/event/old_m37_00_00_00.emevd
+_ashes/event/old_m38_00_00_00.emevd
+_ashes/event/old_m39_00_00_00.emevd
+_ashes/event/old_m45_00_00_00.emevd
+_ashes/event/old_m50_00_00_00.emevd
+_ashes/event/old_m51_00_00_00.emevd
+_ashes/event/old_m51_01_00_00.emevd
