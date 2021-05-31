@@ -711,44 +711,7 @@ function GetAttackRequest(is_guard)
 
             if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) or (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or sp == 167 or sp == 176 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
             if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE ) or (spo == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or spo == 167 or spo == 176 or  spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
-            
-     --[[   "0" name="RIGHTARTS" 
-            "1" name="PARRY" 
-            "2" name="STEPIN" 
-            "3" name="SPIN" 
-            "4" name="DRAW_STANCE" 
-            "5" name="STRONG_BASH" 
-            "6" name="DOUBLE_ATTACK" 
-            "7" name="DOUBLE_CAST" 
-            "8" name="CHAINSHOT" 
-            "10" name="STAMPEDE" 
-            "11" name="ATTACK_SPIN" 
-            "12" name="WARCRY" 
-            "13" name="CHARGE" 
-            "14" name="ENDURE" 
-            "16" name="MAGIC_BUFF" 
-            "17" name="SA_MAGIC" 
-            "18" name="CIRCLE_STEP" 
-            "19" name="CHARGE_SHOT" 
-            "20" name="CROSSBOW_STEP_IN" 
-            "21" name="HEADHUNT" 
-            "22" name="ONESHOT" 
-            "23" name="ONESHOT_FULL" 
-            "24" name="ONESHOT_NOGENTRANS" 
-            "25" name="STORM_STANCE" 
-            "26" name="STRONG_SHOT" 
-            "27" name="SA_MAGIC_MEDIUM" 
-            "28" name="SA_MAGIC_STRONG" 
-            "29" name="WIDE_SHOT" 
-            "30" name="MAGIC_BUFF_PRAY" 
-            "31" name="FOUR_WAY_ATTACK" 
-            "32" name="FOUR_WAY_DRAW_STANCE" 
-            "33" name="GATLING_STANCE" 
-            "34" name="RANDOM_ONE_SHOT" 
-            "35" name="MAGIC_BUFF_ATTACK" 
-            "36" name="DAGGER_STANCE" 
-            "99" name="INVALID" --]] 
-            
+
             if is_arrow == TRUE then
                 act("弓矢スロット選択", 0)
                 return ATTACK_REQUEST_ARROW_FIRE_RIGHT
