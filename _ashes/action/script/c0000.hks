@@ -2461,6 +2461,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_FourWayAttackStartRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
+            if GetEquipType(HAND_RIGHT, 30) == TRUE then ExecEventAllBody("W_Warcry")
+            else 
             if IsNodeActive("FourWayAttackStart_CMSG") == FALSE then
                 if 0 <= angle then
                     SetVariable("FourWayAttackStartDirection", 1)
@@ -2477,6 +2479,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 end
                 SetVariable("FourWayAttackStartAngle_SelfTrans", angle)
                 ExecEventAllBody("W_FourWayAttackStart_SelfTrans")
+            end
             end
         else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
         end
