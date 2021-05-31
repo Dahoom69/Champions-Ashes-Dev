@@ -2461,7 +2461,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_FourWayAttackStartRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-            if GetEquipType(HAND_RIGHT, 30) == TRUE then ExecEventAllBody("W_Warcry")
+            if      GetEquipType(HAND_RIGHT, 30) == TRUE and GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
+            elseif  GetEquipType(HAND_RIGHT, 30) == TRUE and GetVariable("MoveDirection") == 0 and 0.5 < GetVariable("MoveSpeedLevel") then ExecEventHalfBlend(Event_Endure, ALLBODY)
+               
             else 
             if IsNodeActive("FourWayAttackStart_CMSG") == FALSE then
                 if 0 <= angle then
@@ -12319,6 +12321,9 @@ function Endure_Upper_onUpdate()
         SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
     end
     if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l2, "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+        return 
+    elseif env(1116, 100460) == TRUE and env(1108, ACTION_ARM_L2) <= 0 then
+        ExecEventAllBody("W_WarcryCancel")
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
