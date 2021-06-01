@@ -1,6 +1,15 @@
 -- All custom edits are made by Angeluso
 -- Do NOT copy from this file and publicize without permission 
 
+-- ==============================[ Globals Beginning ]==============================
+-- description: Globals that are used for multiple different "features"
+-- =================================================================================
+
+DASH_STARTING_SPEED = 1.60000002384186
+
+-- =================================[ Globals end ]=================================
+
+
 -- =========================[ Custom Functions Beginning ]==========================
 -- Author: Halvard
 -- =================================================================================
@@ -22,6 +31,16 @@ function DBSetPhantomColor(colorString)
         BLACK = 505021
     }
     act(2002, collorToSpEffect[colorString])
+end
+
+-- ***************
+-- * General use *
+-- ***************
+
+function isDashing()
+    local speed = GetVariable("MoveSpeedLevelReal")
+    if speed > DASH_STARTING_SPEED return true
+    return false
 end
 
 -- *************
@@ -125,6 +144,23 @@ function UpdateLudwigHolyBladeBuff()
         act(9001, aboveHalfHpBuff)
         act(9001, belowHalfHpBuff)
     end
+end
+
+-- ***************************
+-- * Forward Attack Shortcut *
+-- ***************************
+
+function forwardAttackShortcutRequest()
+    if env(1106, ACTION_ARM_ACTION) == TRUE return true
+    if env(1108, ACTION_ARM_ACTION) > 0 return true
+    return false
+end
+
+function GetForwardShortcutAttack()
+    if isDashing() return ATTACK_REQUEST_INVALID
+    if env(1106, ACTION_ARM_R1) == TRUE return ATTACK_REQUEST_LIGHT_KICK
+    if env(1106, ACTION_ARM_R2) == TRUE return ATTACK_REQUEST_HEAVY_KICK
+    return ATTACK_REQUEST_INVALID
 end
 
 -- ============================[ Custom Functions end ]=============================
@@ -700,7 +736,14 @@ function GetAttackRequest(is_guard)
     local is_arrow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW, WEAPON_CATEGORY_LARGE_ARROW)
     local is_crossbow = GetEquipType(hand, WEAPON_CATEGORY_CROSSBOW)
     local is_staff = GetEquipType(hand, WEAPON_CATEGORY_STAFF)
-    if env(1106, ACTION_ARM_R1) == TRUE then 
+
+    if forwardAttackShortcutRequest() then
+        if is_arrow == TRUE return ATTACK_REQUEST_INVALID
+        if is_crossbow == TRUE return ATTACK_REQUEST_INVALID
+        if is_staff == TRUE return ATTACK_REQUEST_INVALID
+
+        return GetForwardShortcutAttack()
+    elseif env(1106, ACTION_ARM_R1) == TRUE then -- if changed to elseif ~halvard
         if is_both == TRUE then
             local sp = env(345 , HAND_RIGHT) 
             local is_gh = GetEquipType(HAND_RIGHT, 35) 
@@ -1897,7 +1940,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                         end
                     else 
                         local speed = GetVariable("MoveSpeedLevelReal")
-                        if 1.60000002384186 < speed then l2 = "W_AttackLeftHeavySp1" -- 32090	guns run
+                        if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1" -- 32090	guns run
                         elseif r1 == "W_AttackRightLightStep" then 
                             l2 = "W_AttackLeftHeavySp2" -- 32091	guns roll
                         elseif l1 == "W_AttackLeftLight1" then
@@ -1920,7 +1963,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         end
         if sp_g == 651 then 
             local speed = GetVariable("MoveSpeedLevelReal")
-            if 1.60000002384186 < speed then l2 = "W_AttackLeftHeavySp1"
+            if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
             elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"
             elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp3"
             elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
@@ -6124,7 +6167,7 @@ function MoveCommonFunction(blend_type)
     end
     local speed = GetVariable("MoveSpeedLevelReal")
     local quick_type = QUICKTYPE_NORMAL
-    if 1.60000002384186 < speed then
+    if DASH_STARTING_SPEED < speed then
         quick_type = QUICKTYPE_DASH
     end
     if ExecItem(quick_type, blend_type) == TRUE then
@@ -6147,7 +6190,7 @@ function MoveCommonFunction(blend_type)
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
 
-    if 1.60000002384186 < speed then
+    if DASH_STARTING_SPEED < speed then
         r1 = "W_AttackRightLightDash"
         b1 = "W_AttackBothDash"
         if IsArtsSpAtk() == TRUE then
