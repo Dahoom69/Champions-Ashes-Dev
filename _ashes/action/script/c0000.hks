@@ -151,15 +151,15 @@ end
 -- ***************************
 
 function forwardAttackShortcutRequest()
-    if env(1106, ACTION_ARM_ACTION) == TRUE return true
-    if env(1108, ACTION_ARM_ACTION) > 0 return true
+    if env(1106, ACTION_ARM_ACTION) == TRUE then return true end
+    if env(1108, ACTION_ARM_ACTION) > 0 then return true end
     return false
 end
 
 function GetForwardShortcutAttack()
-    if isDashing() return ATTACK_REQUEST_INVALID
-    if env(1106, ACTION_ARM_R1) == TRUE return ATTACK_REQUEST_LIGHT_KICK
-    if env(1106, ACTION_ARM_R2) == TRUE return ATTACK_REQUEST_HEAVY_KICK
+    if isDashing() then return ATTACK_REQUEST_INVALID end
+    if env(1106, ACTION_ARM_R1) == TRUE then return ATTACK_REQUEST_LIGHT_KICK end
+    if env(1106, ACTION_ARM_R2) == TRUE then return ATTACK_REQUEST_HEAVY_KICK end
     return ATTACK_REQUEST_INVALID
 end
 
@@ -738,9 +738,9 @@ function GetAttackRequest(is_guard)
     local is_staff = GetEquipType(hand, WEAPON_CATEGORY_STAFF)
 
     if forwardAttackShortcutRequest() then
-        if is_arrow == TRUE return ATTACK_REQUEST_INVALID
-        if is_crossbow == TRUE return ATTACK_REQUEST_INVALID
-        if is_staff == TRUE return ATTACK_REQUEST_INVALID
+        if is_arrow == TRUE then return ATTACK_REQUEST_INVALID end
+        if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
+        if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
 
         return GetForwardShortcutAttack()
     elseif env(1106, ACTION_ARM_R1) == TRUE then -- if changed to elseif ~halvard
