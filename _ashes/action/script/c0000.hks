@@ -39,7 +39,7 @@ end
 
 function isDashing()
     local speed = GetVariable("MoveSpeedLevelReal")
-    if speed > DASH_STARTING_SPEED return true
+    if speed > DASH_STARTING_SPEED then return true end
     return false
 end
 
