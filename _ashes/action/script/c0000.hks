@@ -2467,7 +2467,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_FourWayAttackStartRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-            if      GetEquipType(HAND_RIGHT, 30) == TRUE and GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
+            if      GetEquipType(HAND_RIGHT, 30) == TRUE and (GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")   )  ) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
             elseif  GetEquipType(HAND_RIGHT, 30) == TRUE and GetVariable("MoveDirection") == 0 and 0.5 < GetVariable("MoveSpeedLevel") then ExecEventHalfBlend(Event_Endure, ALLBODY)
                
             else 
