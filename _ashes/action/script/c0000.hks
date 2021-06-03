@@ -12268,6 +12268,10 @@ function Warcry_onUpdate() -- 037670 UT WA
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
     end
+    if env(345 , hand) == 166 then
+        r2 = "W_CrossbowStepInFire"
+        b2 = "W_CrossbowStepInFire"
+    end
     if env(345 , hand) == 656 then
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
