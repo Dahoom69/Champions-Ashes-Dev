@@ -150,17 +150,29 @@ end
 -- * Forward Attack Shortcut *
 -- ***************************
 
-function forwardAttackShortcutRequest()
+forwardAttackShortcutBlockedFramecount = 0
+
+function ForwardAttackShortcutRequest()
     if env(1106, ACTION_ARM_ACTION) == TRUE then return true end
     if env(1108, ACTION_ARM_ACTION) > 0 then return true end
     return false
 end
 
 function GetForwardShortcutAttack()
-    if isDashing() then return ATTACK_REQUEST_INVALID end
+    if forwardAttackShortcutBlockedFramecount > 0 then return ATTACK_REQUEST_INVALID end
     if env(1106, ACTION_ARM_R1) == TRUE then return ATTACK_REQUEST_LIGHT_KICK end
     if env(1106, ACTION_ARM_R2) == TRUE then return ATTACK_REQUEST_HEAVY_KICK end
     return ATTACK_REQUEST_INVALID
+end
+
+function UpdateForwardAttackShortcutBlock()
+    if isDashing() then
+        forwardAttackShortcutBlockedFramecount = 6
+    else
+        forwardAttackShortcutBlockedFramecount = forwardAttackShortcutBlockedFramecount - 1
+    end
+    -- prevent it going below 0
+    math.max(forwardAttackShortcutBlockedFramecount, 0)
 end
 
 -- ============================[ Custom Functions end ]=============================
@@ -737,7 +749,7 @@ function GetAttackRequest(is_guard)
     local is_crossbow = GetEquipType(hand, WEAPON_CATEGORY_CROSSBOW)
     local is_staff = GetEquipType(hand, WEAPON_CATEGORY_STAFF)
 
-    if forwardAttackShortcutRequest() then
+    if ForwardAttackShortcutRequest() then
         if is_arrow == TRUE then return ATTACK_REQUEST_INVALID end
         if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
         if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
@@ -18090,6 +18102,7 @@ function Update()
     UpdateDuelMode()
     UpdateSunlightBlade()
     UpdateLudwigHolyBladeBuff()
+    UpdateForwardAttackShortcutBlock()
     g_FrameCount = g_FrameCount + 1
     return 
 end
