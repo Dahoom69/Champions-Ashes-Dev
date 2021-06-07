@@ -209,7 +209,7 @@ function IsFeintAllowed(request)
     local feintLimitTwoActive   = env(1116, 100802) == TRUE
     local feintLimitThreeActive = env(1116, 100803) == TRUE
     local neverFeintToR1        = env(1116, 100820) == TRUE
-    local neverFeintToForwardR1 = env(1116, 100821) == TRUE
+    local allowFeintToForwardR1 = env(1116, 100821) == TRUE
     local neverFeintToR2        = env(1116, 100822) == TRUE
     local neverFeintToForwardR2 = env(1116, 100823) == TRUE
     local neverFeintToNonSpells = env(1116, 100824) == TRUE
@@ -219,16 +219,16 @@ function IsFeintAllowed(request)
     local isR2Request           = request == ATTACK_REQUEST_RIGHT_HEAVY or request == ATTACK_REQUEST_BOTH_HEAVY
     local isForwardR2Request    = request == ATTACK_REQUEST_HEAVY_KICK
 
-    if env(2016) < 5                                then return false end
-    if neverFeintForNPC                             then return false end
-    if feintLimitOneActive and feintCounter >= 1    then return false end
-    if feintLimitTwoActive and feintCounter >= 2    then return false end
-    if feintLimitThreeActive and feintCounter >= 3  then return false end
-    if neverFeintToR1 and isR1Request               then return false end
-    if neverFeintToForwardR1 and isForwardR1Request then return false end
-    if neverFeintToR2 and isR2Request               then return false end
-    if neverFeintToForwardR2 and isForwardR2Request then return false end
-    if neverFeintToNonSpells                        then return false end
+    if env(2016) < 5                                    then return false end
+    if neverFeintForNPC                                 then return false end
+    if feintLimitOneActive and feintCounter >= 1        then return false end
+    if feintLimitTwoActive and feintCounter >= 2        then return false end
+    if feintLimitThreeActive and feintCounter >= 3      then return false end
+    if neverFeintToR1 and isR1Request                   then return false end
+    if not allowFeintToForwardR1 and isForwardR1Request then return false end
+    if neverFeintToR2 and isR2Request                   then return false end
+    if neverFeintToForwardR2 and isForwardR2Request     then return false end
+    if neverFeintToNonSpells                            then return false end
     return true
 end
 -- ============================[ Custom Functions end ]=============================
