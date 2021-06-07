@@ -211,6 +211,9 @@ end
 function IsFeintAllowed(request)
     request = request or ATTACK_REQUEST_INVALID
 
+    local feintLimitOneActive   = env(1116, 100801) == TRUE 
+    local feintLimitTwoActive   = env(1116, 100802) == TRUE
+    local feintLimitThreeActive = env(1116, 100803) == TRUE
     local neverFeintToR1        = env(1116, 100820) == TRUE
     local neverFeintToForwardR1 = env(1116, 100821) == TRUE
     local neverFeintToR2        = env(1116, 100822) == TRUE
