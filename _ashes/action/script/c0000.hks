@@ -8071,7 +8071,8 @@ function AttackRightLight1_onUpdate() -- r11
     local is_Ao = GetEquipType(HAND_LEFT, 30) 
 
     local offhand = "W_AttackLeftLight1"
-    if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
+    if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end    
+    if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft2" end 
 
     local is_Rm = GetEquipType(HAND_RIGHT, 27) 
     local is_Ro = GetEquipType(HAND_LEFT, 27) 
@@ -8123,6 +8124,7 @@ function AttackRightLight2_onUpdate() -- r12
 
     local offhand = "W_AttackLeftLight1"
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft3" end
+    if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft3" end 
 
     local is_Rm = GetEquipType(HAND_RIGHT, 27) 
     local is_Ro = GetEquipType(HAND_LEFT, 27) 
@@ -8186,6 +8188,7 @@ function AttackRightLight3_onUpdate() -- r13
 
     local offhand = "W_AttackLeftLight1"
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
+    if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft2" end 
 
     local is_Rm = GetEquipType(HAND_RIGHT, 27) 
     local is_Ro = GetEquipType(HAND_LEFT, 27) 
@@ -9112,6 +9115,7 @@ function AttackBothLeft1_onUpdate() -- l11
     end
     local r1 = "W_AttackBothLight2"
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     if sp_m == 613  then 
         r1 = "W_AttackBothHeavy1End" 
         b1 = "W_AttackBothHeavy1End" 
