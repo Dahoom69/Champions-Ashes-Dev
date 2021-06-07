@@ -6,6 +6,13 @@
 -- =================================================================================
 
 DASH_STARTING_SPEED = 1.60000002384186
+forwardAttackShortcutBlockedFramecount = 0
+feintCounter = 0
+
+DUEL_MODE_EFFECT = 100850
+DUEL_MODE_TOGGLE_EFFECT = 100851
+DUEL_MODE_RESTORATION_TRIGGER_EFFECT = 100852
+DUEL_MODE_TEARS_EFFECT = 635
 
 -- =================================[ Globals end ]=================================
 
@@ -47,34 +54,29 @@ end
 -- * Duel Mode *
 -- *************
 
-DuelModeSpEffect = 100850
-DuelModeToggleSpEffect = 100851
-DuelModeRestorationTriggerSpEffect = 100852
-DuelModeTearsSpEffect = 635
-
 function isDuelModeActive()
-    return env(1116, DuelModeSpEffect) == TRUE
+    return env(1116, DUEL_MODE_EFFECT) == TRUE
 end
 
 function DuelModeToggleRequest()
-    return env(1116, DuelModeToggleSpEffect) == TRUE
+    return env(1116, DUEL_MODE_TOGGLE_EFFECT) == TRUE
 end
 
 function ManualDuelModeRestorationRequest()
-    return isDuelModeActive() and env(1116, DuelModeRestorationTriggerSpEffect) == TRUE
+    return isDuelModeActive() and env(1116, DUEL_MODE_RESTORATION_TRIGGER_EFFECT) == TRUE
 end
 
 function isDuelModeTearsActive()
-    return env(1116, DuelModeTearsSpEffect) == TRUE
+    return env(1116, DUEL_MODE_TEARS_EFFECT) == TRUE
 end
 
 function ToggleDuelMode()
     if isDuelModeActive() then
         act(2002, 632)
-        act(9001, DuelModeSpEffect)
+        act(9001, DUEL_MODE_EFFECT)
     else
         act(2002, 631)
-        act(2002, DuelModeSpEffect)
+        act(2002, DUEL_MODE_EFFECT)
     end
 end
 
@@ -96,9 +98,9 @@ function UpdateDuelMode()
         DuelModeRestoration()
     end
     if isDuelModeActive() == false or env(1116, 103520000) == TRUE then
-        act(9001, DuelModeTearsSpEffect)
+        act(9001, DUEL_MODE_TEARS_EFFECT)
     elseif isDuelModeTearsActive() == false then
-        act(2002, DuelModeTearsSpEffect)
+        act(2002, DUEL_MODE_TEARS_EFFECT)
     end
 end
 
@@ -150,8 +152,6 @@ end
 -- * Forward Attack Shortcut *
 -- ***************************
 
-forwardAttackShortcutBlockedFramecount = 0
-
 function ForwardAttackShortcutRequest()
     if env(1106, ACTION_ARM_ACTION) == TRUE then return true end
     if env(1108, ACTION_ARM_ACTION) > 0 then return true end
@@ -173,8 +173,69 @@ function UpdateForwardAttackShortcutBlock()
     end
     -- prevent it going below 0
     math.max(forwardAttackShortcutBlockedFramecount, 0)
+    
+    if forwardAttackShortcutBlockedFramecount > 0 then
+        DBSetPhantomColor("RED")
+    else
+        DBSetPhantomColor("BLUE")
+    end
 end
 
+-- ***************
+-- * Feint Limit *
+-- ***************
+
+function ResetFeintCounter()
+    feintCounter = 0
+end
+
+function IncrementFeintCounter()
+    feintCounter = feintCounter + 1
+end
+
+function DeductFeintCost()
+    local FEINT_FP_COST_EFFECT = 8004
+    act(2002, FEINT_FP_COST_EFFECT)
+end
+
+function IsFeintAttempt()
+    local feintLimitOneActive   = env(1116, 100801) == TRUE 
+    local feintLimitTwoActive   = env(1116, 100802) == TRUE
+    local feintLimitThreeActive = env(1116, 100803) == TRUE
+    local feintWindowActive     = feintLimitOneActive or feintLimitTwoActive or feintLimitThreeActive
+
+    if feintWindowActive then return true end
+    return false
+end
+
+function IsFeintAllowed(request)
+    request = request or ATTACK_REQUEST_INVALID
+
+    local feintLimitOneActive   = env(1116, 100801) == TRUE 
+    local feintLimitTwoActive   = env(1116, 100802) == TRUE
+    local feintLimitThreeActive = env(1116, 100803) == TRUE
+    local neverFeintToR1        = env(1116, 100820) == TRUE
+    local neverFeintToForwardR1 = env(1116, 100821) == TRUE
+    local neverFeintToR2        = env(1116, 100822) == TRUE
+    local neverFeintToForwardR2 = env(1116, 100823) == TRUE
+    local neverFeintToNonSpells = env(1116, 100824) == TRUE
+    local neverFeintForNPC      = env(1116, 100825) == TRUE
+    local isR1Request           = request == ATTACK_REQUEST_RIGHT_LIGHT or request == ATTACK_REQUEST_BOTH_LIGHT
+    local isForwardR1Request    = request == ATTACK_REQUEST_LIGHT_KICK 
+    local isR2Request           = request == ATTACK_REQUEST_RIGHT_HEAVY or request == ATTACK_REQUEST_BOTH_HEAVY
+    local isForwardR2Request    = request == ATTACK_REQUEST_HEAVY_KICK
+
+    if neverFeintForNPC                             then return false end
+    if feintLimitOneActive and feintCounter >= 1    then return false end
+    if feintLimitTwoActive and feintCounter >= 2    then return false end
+    if feintLimitThreeActive and feintCounter >= 3  then return false end
+    if neverFeintToR1 and isR1Request               then return false end
+    if neverFeintToForwardR1 and isForwardR1Request then return false end
+    if neverFeintToR2 and isR2Request               then return false end
+    if neverFeintToForwardR2 and isForwardR2Request then return false end
+    if neverFeintToNonSpells                        then return false end
+    return true
+end
 -- ============================[ Custom Functions end ]=============================
 
 function ExecEvent(state)
@@ -1717,54 +1778,16 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         return FALSE
     end
 
-    -- ==============================[ Custom Code Start ]==============================
-    -- Author: Halvard
-    -- note: Feint Limit System to prevent people from chaining feints too much
-    -- =================================================================================
-    
-    local ca_feintLimitOneActive = env(1116, 100801) == TRUE 
-    local ca_feintLimitTwoActive = env(1116, 100802) == TRUE
-    local ca_feintLimitThreeActive = env(1116, 100803) == TRUE
-    local ca_feintWindowActive = ca_feintLimitOneActive or ca_feintLimitTwoActive or ca_feintLimitThreeActive
-    local ca_alwaysAllowWaFeint = env(1116, 100810) == TRUE
-    local ca_neverFeintToR1 = env(1116, 100820) == TRUE
-    local ca_neverFeintToForwardR1 = env(1116, 100821) == TRUE
-    local ca_neverFeintToR2 = env(1116, 100822) == TRUE
-    local ca_neverFeintToForwardR2 = env(1116, 100823) == TRUE
-    local ca_neverFeintToNonSpells = env(1116, 100824) == TRUE
-    local ca_neverFeintForNPC = env(1116, 100825) == TRUE
-    local ca_isWaRequest = (request >= 100 and request <= 136) or (request >= 200 and request <= 236) 
-    local ca_isR1Request = request == ATTACK_REQUEST_RIGHT_LIGHT or request == ATTACK_REQUEST_BOTH_LIGHT
-    local ca_isForwardR1Request = request == ATTACK_REQUEST_LIGHT_KICK 
-    local ca_isR2Request = request == ATTACK_REQUEST_RIGHT_HEAVY or request == ATTACK_REQUEST_BOTH_HEAVY
-    local ca_isForwardR2Request = request == ATTACK_REQUEST_HEAVY_KICK
-    
-    if ca_feintWindowActive == false then
-        ca_feintCounter = 0
-    elseif ca_neverFeintForNPC then
-        return FALSE
-    elseif ca_alwaysAllowWaFeint and ca_isWaRequest then
-       ca_feintCounter = ca_feintCounter 
-    elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then
-        return FALSE
-    elseif ca_feintLimitTwoActive and ca_feintCounter >= 2 then
-        return FALSE
-    elseif ca_feintLimitThreeActive and ca_feintCounter >= 3 then
-        return FALSE
-    elseif ca_neverFeintToR1 and ca_isR1Request then
-       return FALSE
-    elseif ca_neverFeintToForwardR1 and ca_isForwardR1Request then
-        return FALSE
-    elseif ca_neverFeintToR2 and ca_isR2Request then
-        return FALSE
-    elseif ca_neverFeintToForwardR2 and ca_isForwardR2Request then
-        return FALSE
-    elseif ca_neverFeintToNonSpells then
-        return FALSE
-    else 
-        ca_feintCounter = ca_feintCounter + 1
-    end  
-    -- ===============================[ Custom Code end ]===============================
+    if IsFeintAttempt() then
+        if IsFeintAllowed(request) then
+            IncrementFeintCounter()
+            DeductFeintCost()
+        else
+            return FALSE
+        end
+    else
+        ResetFeintCounter()
+    end
 
     local style = c_Style
     local atk_hand = HAND_RIGHT
@@ -2902,30 +2925,21 @@ function ExecMagic(quick_type, blend_type)
         return FALSE
     end
 
-    -- ==============================[ Custom Code Start ]==============================
-    -- Author: Halvard
-    -- note: Spell Feint Limit System to prevent people from chaining feints too much
-    -- =================================================================================
-
-    local ca_feintLimitOneActive = env(1116, 100801) == TRUE
-    local ca_feintLimitTwoActive = env(1116, 100802) == TRUE
-    local ca_feintLimitThreeActive = env(1116, 100803) == TRUE
-    local ca_feintWindowActive = ca_feintLimitOneActive or ca_feintLimitTwoActive or ca_feintLimitThreeActive
-    
-    if ca_feintWindowActive == false then
-        ca_feintCounter = 0
-    elseif ca_feintLimitOneActive and ca_feintCounter >= 1 then  
-        if magic_hand == HAND_RIGHT then ExecEventHalfBlend(Event_MagicInvalidRight, blend_type)
-        else ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) end
-        return FALSE
-    elseif ca_feintLimitTwoActive and ca_feintCounter >= 2 then
-        return FALSE
-    elseif ca_feintLimitThreeActive and ca_feintCounter >= 3 then
-        return FALSE
-    else 
-        ca_feintCounter = ca_feintCounter + 1
+    if IsFeintAttempt() then
+        if IsFeintAllowed() then
+            IncrementFeintCounter()
+            DeductFeintCost()
+        else
+            if magic_hand == HAND_RIGHT then 
+                ExecEventHalfBlend(Event_MagicInvalidRight, blend_type)
+            else 
+                ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) 
+            end
+            return FALSE
+        end
+    else
+        ResetFeintCounter()
     end
-    -- ===============================[ Custom Code end ]===============================
 
     if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
         blend_type = UPPER
