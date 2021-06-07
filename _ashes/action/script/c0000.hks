@@ -173,12 +173,6 @@ function UpdateForwardAttackShortcutBlock()
     end
     -- prevent it going below 0
     math.max(forwardAttackShortcutBlockedFramecount, 0)
-    
-    if forwardAttackShortcutBlockedFramecount > 0 then
-        DBSetPhantomColor("RED")
-    else
-        DBSetPhantomColor("BLUE")
-    end
 end
 
 -- ***************
