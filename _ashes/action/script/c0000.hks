@@ -205,30 +205,37 @@ end
 function IsFeintAllowed(request)
     request = request or ATTACK_REQUEST_INVALID
 
-    local feintLimitOneActive   = env(1116, 100801) == TRUE 
-    local feintLimitTwoActive   = env(1116, 100802) == TRUE
-    local feintLimitThreeActive = env(1116, 100803) == TRUE
-    local neverFeintToR1        = env(1116, 100820) == TRUE
-    local allowFeintToForwardR1 = env(1116, 100821) == TRUE
-    local neverFeintToR2        = env(1116, 100822) == TRUE
-    local neverFeintToForwardR2 = env(1116, 100823) == TRUE
-    local neverFeintToNonSpells = env(1116, 100824) == TRUE
-    local neverFeintForNPC      = env(1116, 100825) == TRUE
+    local isFeintToSpell              = request == ATTACK_REQUEST_INVALID
+    local feintLimitOneActive         = env(1116, 100801) == TRUE 
+    local feintLimitTwoActive         = env(1116, 100802) == TRUE
+    local feintLimitThreeActive       = env(1116, 100803) == TRUE
+    local neverFeintToR1              = env(1116, 100820) == TRUE
+    local allowFeintToForwardR1       = env(1116, 100821) == TRUE
+    local neverFeintToR2              = env(1116, 100822) == TRUE
+    local neverFeintToForwardR2       = env(1116, 100823) == TRUE
+    local neverFeintToNonSpells       = env(1116, 100824) == TRUE
+    local neverFeintForNPC            = env(1116, 100825) == TRUE
+    local neverFeintToSpells          = env(1116, 100826) == TRUE
+    local neverFeintToNonSpellsForNPC = env(1116, 100827) == TRUE
+    local neverFeintToSpellsForNPC    = env(1116, 100828) == TRUE
     local isR1Request           = request == ATTACK_REQUEST_RIGHT_LIGHT or request == ATTACK_REQUEST_BOTH_LIGHT
     local isForwardR1Request    = request == ATTACK_REQUEST_LIGHT_KICK 
     local isR2Request           = request == ATTACK_REQUEST_RIGHT_HEAVY or request == ATTACK_REQUEST_BOTH_HEAVY
     local isForwardR2Request    = request == ATTACK_REQUEST_HEAVY_KICK
 
-    if env(2016) < 5                                    then return false end
-    if neverFeintForNPC                                 then return false end
-    if feintLimitOneActive and feintCounter >= 1        then return false end
-    if feintLimitTwoActive and feintCounter >= 2        then return false end
-    if feintLimitThreeActive and feintCounter >= 3      then return false end
-    if neverFeintToR1 and isR1Request                   then return false end
-    if not allowFeintToForwardR1 and isForwardR1Request then return false end
-    if neverFeintToR2 and isR2Request                   then return false end
-    if neverFeintToForwardR2 and isForwardR2Request     then return false end
-    if neverFeintToNonSpells                            then return false end
+    if env(2016) < 5                                      then return false end
+    if neverFeintForNPC                                   then return false end
+    if neverFeintToSpellsForNPC and isFeintToSpell        then return false end
+    if neverFeintToNonSpellsForNPC and not isFeintToSpell then return false end
+    if feintLimitOneActive and feintCounter >= 1          then return false end
+    if feintLimitTwoActive and feintCounter >= 2          then return false end
+    if feintLimitThreeActive and feintCounter >= 3        then return false end
+    if neverFeintToR1 and isR1Request                     then return false end
+    if not allowFeintToForwardR1 and isForwardR1Request   then return false end
+    if neverFeintToR2 and isR2Request                     then return false end
+    if neverFeintToForwardR2 and isForwardR2Request       then return false end
+    if neverFeintToNonSpells and not isFeintToSpell       then return false end
+    if neverFeintToSpells and isFeintToSpell              then return false end
     return true
 end
 -- ============================[ Custom Functions end ]=============================
