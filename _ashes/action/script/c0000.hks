@@ -12356,7 +12356,7 @@ function WarcryCancel_onUpdate()
     end
 end
 
-function Endure_Upper_onUpdate()
+function Endure_Upper_onUpdate() -- 37700
     local r2 = "W_AttackRightHeavy1Start"
     local l2 = "W_AttackLeftHeavy1"
     local b2 = "W_AttackBothHeavy1Start"
@@ -12380,8 +12380,17 @@ function Endure_Upper_onUpdate()
     end
 end
 
-function EndureRightHeavy_onUpdate()
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, FALSE) == TRUE then
+function EndureRightHeavy_onUpdate() -- 37710
+    local r2 = "W_AttackRightHeavy1Start"
+    local l2 = "W_AttackLeftHeavy1"
+    local b2 = "W_AttackBothHeavy1Start"
+    if env(1116, 100290) == TRUE then
+        r2 = "W_EndureRightHeavy"
+        l2 = "W_EndureRightHeavy"
+        b2 = "W_EndureRightHeavy"
+        SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
+    end
+    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l2, "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
