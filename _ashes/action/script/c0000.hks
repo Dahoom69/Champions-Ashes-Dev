@@ -8241,14 +8241,16 @@ end
 function AttackRightLightKick_onUpdate()
     iT = FALSE
     local r2 = "W_AttackRightHeavy1Start"
+    local r1 = "W_AttackRightLight1"
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
 
+    if (sp_m == 51 or sp_m == 166) then  r1 = "W_AttackRightLight2" end
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 68 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavyKick" end
     if sp_m == 645 then r2 = "W_AttackRightHeavy2Start" end
 
-    if AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -9964,6 +9966,10 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2
 
 function AttackBothLightKick_onUpdate()
     local b2 = "W_AttackBothHeavy1Start"
+    local b1 = "W_AttackBothLight1"
+
+    local sp_m = env(345 , HAND_RIGHT)
+    if (sp_m == 51 or sp_m == 166) and c_Style ~= HAND_LEFT_BOTH then  b1 = "W_AttackBothLight2" end
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
     if env(345 , HAND_RIGHT) == 68 and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
     if env(345 , HAND_LEFT) == 68 and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
@@ -9972,7 +9978,7 @@ function AttackBothLightKick_onUpdate()
     if GetEquipType(HAND_LEFT, 30) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
+    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
