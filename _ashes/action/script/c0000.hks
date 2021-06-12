@@ -9313,7 +9313,7 @@ function AttackBothLeft3_onUpdate()  -- l13
     end
 end
 
-function AttackBothLeftDash_onUpdate() -- bothdashleft
+function AttackBothLeftDash_onUpdate() -- bothdashleft run l1 run 33500
     local r1 = "W_AttackRightLight1"
     local l1 = "W_AttackBothLeft1"
     local b1 = "W_AttackBothLight1"
@@ -9340,7 +9340,7 @@ function AttackBothLeftDash_onUpdate() -- bothdashleft
     end
 end
 
-function AttackBothLeftStep_onUpdate()
+function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
