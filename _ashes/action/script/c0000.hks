@@ -8322,7 +8322,7 @@ function AttackRightLightDash_onUpdate() -- run r1
         end
 end
 
-function AttackRightLightDashSpecial_onUpdate() -- bs r1
+function AttackRightLightDashSpecial_onUpdate() -- bs r1 backstep r1
     local r2 = "W_AttackRightHeavy1Start" 
 
     local r1 = "W_AttackRightLight1"
@@ -8952,8 +8952,9 @@ function AttackBothLight1_onUpdate()  -- r11
     if sp_m == 613  then l1 = "W_AttackBothLight2" end
     if sp_m == 643 then 
         b2 = "W_AttackBothHeavy1Start" 
-        l1 = "W_AttackBothLeft1"
+        --l1 = "W_AttackBothLeft1"
         --l1 = "W_AttackBothLeft2"
+        l1 = "W_AttackBothLeft3"
     end
     
     --local JF = "W_RandomOneShotNext4"
@@ -9341,9 +9342,14 @@ function AttackBothLeftDash_onUpdate() -- bothdashleft run l1 run 33500
 end
 
 function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
+    local sp_m = env(345 , HAND_RIGHT)
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
+
+    local l1 = "W_AttackBothLeft1"
+    if sp_m == 643 then l1 = "W_AttackBothLeft2" end
+
+    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -9856,14 +9862,17 @@ function AttackBothDash_onUpdate() -- run r1
         r2 = "W_AttackRightHeavy1SubStart"
     end
 
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    local l1 = "W_AttackBothLeft1"
+    if sp_m == 643 then l1 = "W_AttackBothLeft2" end
+
+    if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
     end
 end
 
-function AttackBothDashSpecial_onUpdate() -- bs r1
+function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1
     local sp_m = env(345 , HAND_RIGHT)
     local b2 = "W_AttackBothHeavy1Start"
     local b1 = "W_AttackBothLight1"
@@ -9884,7 +9893,11 @@ function AttackBothDashSpecial_onUpdate() -- bs r1
     if (env(345 , HAND_RIGHT) == 614)  or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
     if (env(345 , HAND_RIGHT) == 612) then b1 = "W_AttackBothHeavySpecial1Start" end
     if (env(345 , HAND_RIGHT) == 609) then b1 = "W_AttackBothLight3" end
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+
+    local l1 = "W_AttackBothLeft1"
+    if sp_m == 643 then l1 = "W_AttackBothLeftStep" end
+
+    if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -9911,14 +9924,18 @@ function AttackBothLightStep_onUpdate() -- roll r1
 
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (sp_m == 654) and HAND_RIGHT_BOTH == c_Style )    then b1 = "W_AttackBothLight2" end
     if (sp_m == 609) or sp_m == 643 or sp_m == 614 then b1 = "W_AttackBothLight2" end
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+
+    local l1 = "W_AttackBothLeft1"
+    if sp_m == 643 then l1 = "W_AttackBothLeft2" end
+
+    if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
     end
 end
 
-function AttackBothLightStepSpecial_onUpdate() -- bs r2
+function AttackBothLightStepSpecial_onUpdate() -- bs r2 backstep r2
     local sp_m = env(345 , HAND_RIGHT)
         local b2 = "W_AttackBothHeavy1Start"
         local b1 = "W_AttackBothLight1"
@@ -10045,7 +10062,10 @@ function AttackBothHeavyKickSpecial_onUpdate() -- run r2
     if sp_m == 614  or sp_m == 645 or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 609 or sp_m == 612 then b1 = "W_AttackBothHeavySpecial1Start" end
 
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    local l1 = "W_AttackBothLeft1"
+    if sp_m == 643 then l1 = "W_AttackBothLeft2" end
+
+    if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
