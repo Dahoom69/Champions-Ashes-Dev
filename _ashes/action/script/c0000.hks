@@ -11873,15 +11873,16 @@ function StampedeRightStart_onUpdate()
     local r2 = "W_StampedeRightAttackHeavy"
     local b2 = "W_StampedeRightAttackHeavy"
     local r1 = "W_StampedeRightAttackLight"
+    local b1 = "W_StampedeRightAttackLight"
 
     if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
     end
 
-    if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" end
+    if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" r1 = "W_AttackRightLight1" b1 = "W_AttackBothLight1" end
 
-    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", r1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
@@ -11892,7 +11893,7 @@ function StampedeRightStart_onUpdate()
     end
 end
 
-function StampedeRightAttackLight_onUpdate()
+function StampedeRightAttackLight_onUpdate() -- 50037410 
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then 
