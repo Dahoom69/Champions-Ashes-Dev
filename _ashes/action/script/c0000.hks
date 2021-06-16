@@ -2512,8 +2512,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_FourWayAttackStartRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-            if      GetEquipType(HAND_RIGHT, 30) == TRUE and (GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")   )  ) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
-            elseif  GetEquipType(HAND_RIGHT, 30) == TRUE and GetVariable("MoveDirection") == 0 and 0.5 < GetVariable("MoveSpeedLevel") then ExecEventHalfBlend(Event_Endure, ALLBODY)
+            if      ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")   )  ) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
+            elseif  ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") == 0 and 0.5 < GetVariable("MoveSpeedLevel")  ) then ExecEventHalfBlend(Event_Endure, ALLBODY)
                
             else 
             if IsNodeActive("FourWayAttackStart_CMSG") == FALSE then
@@ -12334,6 +12334,21 @@ function Warcry_onUpdate() -- 037670 UT WA
     if style == HAND_LEFT_BOTH then
         hand = HAND_LEFT
     end
+
+    local is_warcryMWeapon = GetEquipType(HAND_RIGHT, 30, 32, 33, 35, 38) 
+    local is_warcryOWeapon = GetEquipType(HAND_LEFT, 30, 32, 33, 35, 38) 
+
+    if (is_warcryMWeapon == TRUE and c_Style ~= HAND_LEFT_BOTH) then 
+        r2 = "W_AttackRightHeavySpecial1Start"
+        b2 = "W_AttackBothHeavySpecial1Start"
+    elseif (is_warcryOWeapon == TRUE and c_Style == HAND_LEFT_BOTH) then 
+        r2 = "W_AttackRightHeavySpecial1Start"
+        b2 = "W_AttackBothHeavySpecial1Start"
+    else 
+        r2 = "W_AttackRightHeavy1SubStart"
+        b2 = "W_AttackBothHeavy1SubStart"
+    end
+
     if env(345 , hand) == 242 then
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
