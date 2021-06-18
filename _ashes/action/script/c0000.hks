@@ -1486,7 +1486,7 @@ function IsEnableGuard()
             return FALSE
         elseif sp == 123 then
             return TRUE
-        elseif sp == 178 or sp == 207 or (sp == 217 and not is_sl == TRUE)  or sp == 220 or sp == 234 or sp == 257 or sp == 186  or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp == 67) then
+        elseif sp == 178 or sp == 207 or (sp == 217 and not is_sl == TRUE)  or sp == 220 or sp == 234 or sp == 257 or sp == 186  or (GetEquipType(hand, 38)  == TRUE and sp == 67) then
             return FALSE
         elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or sp == 20 or  is_r == TRUE   then
             return FALSE
@@ -14768,7 +14768,7 @@ function MagicLaunchRight_Upper_onUpdate()
         end
         local sp_kind = env(345 , hand)
         local button = ACTION_ARM_R1
-        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
+        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
             button = ACTION_ARM_R2
         end
         if IsHoldMagic() == TRUE then
@@ -14845,7 +14845,7 @@ function MagicLoopRight_Upper_onUpdate()
     end
     local sp_kind = env(345 , hand)
     local button = ACTION_ARM_R1
-    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
+    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
         button = ACTION_ARM_R2
     end
     if env(1108, button) <= 0 then
@@ -14897,7 +14897,7 @@ function MagicLoopRightLvl2_Upper_onUpdate()
     end
     local sp_kind = env(345 , hand)
     local button = ACTION_ARM_R1
-    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
+    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
         button = ACTION_ARM_R2
     end
     if env(1108, button) <= 0 then
