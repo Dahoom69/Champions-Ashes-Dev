@@ -238,6 +238,23 @@ function IsFeintAllowed(request)
     if neverFeintToSpells and isFeintToSpell              then return false end
     return true
 end
+
+-- ****************************
+-- * Block Weapon/style Swaps *
+-- ****************************
+
+function IsWeaponChangeBlocked()
+    local WeaponChangeBlockSpEffect = 100860
+    if env(1116, WeaponChangeBlockSpEffect) == TRUE then return true end
+    return false
+end
+
+function IsHandChangeBlocked()
+    local HandChangeBlockSpEffect = 100861
+    if env(1116, HandChangeBlockSpEffect) == TRUE then return true end
+    return false
+end
+
 -- ============================[ Custom Functions end ]=============================
 
 function ExecEvent(state)
@@ -3631,6 +3648,8 @@ function ExecLadderItem(hand)
 end
 
 function ExecWeaponChange(blend_type)
+    if IsWeaponChangeBlocked() then return FALSE end
+
     local sp_m = env(345 , HAND_RIGHT)
     if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 ) 
     then i1BB = TRUE 
@@ -3665,6 +3684,8 @@ function ExecWeaponChange(blend_type)
 end
 
 function ExecHandChange(hand, is_force, blend_type)
+    if IsHandChangeBlocked() then return FALSE end
+
     local sp_m = env(345 , HAND_RIGHT)
     if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or  sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 ) 
     then i1BB = TRUE 
@@ -9788,13 +9809,46 @@ function AttackBothHeavySpecial2End_onUpdate()
 end
 
 function AttackBothHeavyWepBroken1Start_onUpdate()
-    AttackBothHeavy1Start_onUpdate()
-    return 
+    local sp_m = env(345, HAND_RIGHT)
+    if sp_m == 264 then -- Hunter Axe
+        local r1 = "W_AttackRightLight1"
+        local r2 = "W_AttackRightHeavy1Start"
+        local l1 = "W_AttackLeftLight1"
+        local l2 = "W_AttackLeftHeavy1"
+        local b1 = "W_AttackBothLight2"
+        local b2 = "W_AttackBothHeavy1Start"
+        if SwordArtsCommonFunction(r1, r2, l1, l2, b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
+            return
+        -- Haven't found a fitting animation yet so disabling the alternate ending to the attack
+        --elseif env(301, 1) == TRUE and env(1106, ACTION_ARM_CHANGE_STYLE) == TRUE then
+        --    ExecEventAllBody("W_AttackBothHeavyWepBroken2Start")
+        else
+            return
+        end
+    else
+        AttackBothHeavy1Start_onUpdate()
+        return
+    end 
 end
 
 function AttackBothHeavyWepBroken2Start_onUpdate()
-    AttackBothHeavy2Start_onUpdate()
-    return 
+    local sp_m = env(345, HAND_RIGHT)
+    if sp_m == 264 then -- Hunter Axe
+        local r1 = "W_AttackRightLight1"
+        local r2 = "W_AttackRightHeavy1Start"
+        local l1 = "W_AttackLeftLight1"
+        local l2 = "W_AttackLeftHeavy1"
+        local b1 = "W_AttackBothLight2"
+        local b2 = "W_AttackBothHeavy1Start"
+        if SwordArtsCommonFunction(r1, r2, l1, l2, b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
+            return
+        else
+            return
+        end
+    else
+        AttackBothHeavy2Start_onUpdate()
+        return
+    end
 end
 
 function AttackBothHeavyWepBroken1SubStart_onUpdate()
@@ -12863,11 +12917,16 @@ function OneShotFullBothStart_onUpdate() -- oneshot WA
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
 
-    if env(345 , hand) == 264 then b1 = "W_AttackBothLight2" end
-    if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
-    if env(345 , HAND_RIGHT) == 612 then b1 = "W_AttackBothLight2" end
+    local sp_m = env(345 , hand)
+
+    if sp_m == 624 then b2 = "W_AttackRightHeavy1SubStart" end
+    if sp_m == 612 then b1 = "W_AttackBothLight2" end
+
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1 , b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
-        return 
+        return
+    elseif sp_m == 264 and env(301, 1) == TRUE then
+        ExecEventAllBody("W_AttackBothHeavyWepBroken1Start")
+        return
     else
         return 
     end
