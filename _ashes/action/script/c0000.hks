@@ -9813,10 +9813,10 @@ function AttackBothHeavyWepBroken1Start_onUpdate()
     if sp_m == 264 then -- Hunter Axe
         local r1 = "W_AttackRightLight1"
         local r2 = "W_AttackRightHeavy1Start"
-        local l1 = "W_AttackLeftLight1"
+        local l1 = "W_AttackBothLeft3"
         local l2 = "W_AttackLeftHeavy1"
         local b1 = "W_AttackBothLight2"
-        local b2 = "W_AttackBothHeavy1Start"
+        local b2 = "W_AttackBothHeavy2Start"
         if SwordArtsCommonFunction(r1, r2, l1, l2, b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
             return
         -- Haven't found a fitting animation yet so disabling the alternate ending to the attack
