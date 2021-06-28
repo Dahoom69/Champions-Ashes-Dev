@@ -8407,11 +8407,11 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or 
     sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
     if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 179) or sp_m == 59 then r1 = "W_AttackRightLight3" end
-    if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 53 then r1 = "W_AttackRightLight1" end
+    if IsFeintAttempt() or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 53 then r1 = "W_AttackRightLight1" end
 
     if (sp_m == 614) then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 612 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
-    if (sp_m == 658 and env(1116, 100801) == TRUE ) then r1 = "W_AttackRightLight2" end
+    if (sp_m == 658 and IsFeintAttempt() ) then r1 = "W_AttackRightLight2" end
 
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
@@ -8435,7 +8435,7 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end -- doesn't work for 
     local sp_m = env(345 , HAND_RIGHT)
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
     if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 179) or sp_m == 59 then r1 = "W_AttackRightLight3" end
-    if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 53 then r1 = "W_AttackRightLight1" end
+    if IsFeintAttempt() or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 53 then r1 = "W_AttackRightLight1" end
     
     if sp_m == 643 then r1 = "W_AttackRightLight2" end
 
@@ -8464,15 +8464,15 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge
 
     if GetEquipType(HAND_RIGHT, 25) == TRUE then r1 =  "W_AttackRightLight2" end
 
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE then r1 =  "W_AttackRightLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 53 then  r1 =  "W_AttackRightLight1" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 38, 42) == TRUE) then  r1 =  "W_AttackRightLight3" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90 or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 51 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
+    if IsFeintAttempt() and i1BB == FALSE then r1 =  "W_AttackRightLight2" end
+    if IsFeintAttempt() and i1BB == FALSE and sp_m == 53 then  r1 =  "W_AttackRightLight1" end
+    if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 38, 42) == TRUE) then  r1 =  "W_AttackRightLight3" end
+    if IsFeintAttempt() and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
+    if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90 or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
+    if IsFeintAttempt() and i1BB == FALSE and sp_m == 51 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
 
     if sp_m == 658 or sp_m == 646 then r1 = "W_AttackRightLight2" end 
-    if sp_m == 658 and env(1116, 100801) == TRUE  then r1 = "W_AttackRightLight1" end
+    if sp_m == 658 and IsFeintAttempt()  then r1 = "W_AttackRightLight1" end
     if sp_m == 605 or sp_m == 620 then r1 = "W_AttackRightLight3" end 
 
     local is_pyro = FALSE
@@ -8517,12 +8517,12 @@ function AttackRightHeavy2End_onUpdate() -- r22 release end
     if GetEquipType(HAND_RIGHT, 38) == TRUE then r1 = "W_AttackRightLight3" end
     if ( (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 193) or sp_m == 50 or sp_m == 232) then r1 = "W_AttackRightLight2" end 
 
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE then r1 =  "W_AttackRightLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 53 then  r1 =  "W_AttackRightLight1" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 38, 42) == TRUE) then  r1 =  "W_AttackRightLight3" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90  or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and sp_m == 51  or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
+    if IsFeintAttempt() and i1BB == FALSE then r1 =  "W_AttackRightLight2" end
+    if IsFeintAttempt() and i1BB == FALSE and sp_m == 53 then  r1 =  "W_AttackRightLight1" end
+    if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 38, 42) == TRUE) then  r1 =  "W_AttackRightLight3" end
+    if IsFeintAttempt() and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
+    if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90  or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
+    if IsFeintAttempt() and i1BB == FALSE and sp_m == 51  or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
 
     local is_pyro = FALSE
     if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
@@ -9413,7 +9413,7 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or 
     sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
     if GetEquipType(HAND_RIGHT, 29) == TRUE or sp_m == 59 or sp_m == 138 or sp_m == 161 or sp_m == 261 or sp_m == 232 or sp_m == 235 or sp_m == 656 or sp_m == 146 then b1 = "W_AttackBothLight3" end
-    if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50  or sp_m == 654 or sp_m == 107 or sp_m == 142 then b1 = "W_AttackBothLight1" end
+    if IsFeintAttempt() or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50  or sp_m == 654 or sp_m == 107 or sp_m == 142 then b1 = "W_AttackBothLight1" end
 
     if sp_m  == 264 then b1 = "W_AttackBothLight3" end
     if sp_m == 164 or sp_m == 614  then b1 = "W_AttackBothLight2" end
@@ -9462,7 +9462,7 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
 
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
     if GetEquipType(HAND_RIGHT, 29) == TRUE or sp_m == 59 or sp_m == 138 or sp_m == 161 or sp_m == 261 or sp_m == 232 or sp_m == 235 or sp_m == 656 or sp_m == 146 then b1 = "W_AttackBothLight3" end
-    if env(1116, 100801) == TRUE or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50 or sp_m == 654 or sp_m == 107 then b1 = "W_AttackBothLight1" end
+    if IsFeintAttempt() or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50 or sp_m == 654 or sp_m == 107 then b1 = "W_AttackBothLight1" end
 
     if sp_m == 264 or sp_m == 164 then b1 = "W_AttackBothLight2" end
     if (sp_m == 264 and env(1116, 100281) == TRUE) or sp_m == 643 then b1 = "W_AttackBothLight3" end
@@ -9537,13 +9537,13 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge
 
         if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
 
-        if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and ((GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176)) then  b1 =  "W_AttackBothLight1" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
+        if IsFeintAttempt() and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
+        if (IsFeintAttempt() and i1BB == FALSE) and ((GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176)) then  b1 =  "W_AttackBothLight1" end
+        if (IsFeintAttempt() and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
+        if (IsFeintAttempt() and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
 
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
-        if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
+        if (IsFeintAttempt() and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
+        if (IsFeintAttempt() and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
         
         if sp_m == 614 then b1 =  "W_AttackBothLight2" end
         if (sp_m == 643) then b1 = "W_AttackBothLight2" 
@@ -9589,13 +9589,13 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
 
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
-    if (env(1116, 100801) == TRUE) and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176) then  b1 =  "W_AttackBothLight1" end
-    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
-    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
+    if IsFeintAttempt() and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
+    if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 23, 25, 29, 28, 30, 32, 33, 38) == TRUE or sp_m == 50 or sp_m == 108 or sp_m == 176) then  b1 =  "W_AttackBothLight1" end
+    if (IsFeintAttempt() and i1BB == FALSE) and (sp_m == 51 or sp_m == 179 or sp_m == 142) then  b1 =  "W_AttackBothLight2" end
+    if (IsFeintAttempt() and i1BB == FALSE) and (GetEquipType(HAND_RIGHT, 42) == TRUE or sp_m == 236  or sp_m == 145) then  b1 =  "W_AttackBothLight3" end
 
-    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
-    if ((env(1116, 100801) == TRUE) and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
+    if (IsFeintAttempt() and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
+    if (IsFeintAttempt() and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
     
     if (sp_m == 605) then 
         b1 = "W_AttackBothLight2" 
@@ -12550,13 +12550,13 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
         b1 = "W_AttackBothHeavySpecial1Start"
     end
 
-   if sp_m == 645 and env(1116, 100801) == TRUE then 
+   if sp_m == 645 and IsFeintAttempt() then 
     r1 = "W_AttackRightLight2" 
     b1 = "W_AttackRightLight2" 
     iT = FALSE
     end
 
-    if sp_m == 645 and env(1116, 100801) == FALSE then 
+    if sp_m == 645 and not IsFeintAttempt() then 
         r1 = "W_AttackBothLight1" 
         b1 = "W_AttackBothLight1" 
         iT = TRUE
