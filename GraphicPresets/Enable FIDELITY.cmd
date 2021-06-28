@@ -6,7 +6,8 @@ echo  / ___ ^|(__  ) / / /  __(__  )  / __/ / / /_/ /  __/ / / /_/ /_/ /
 echo /_/  ^|_/____/_/ /_/\___/____/  /_/   /_/\__,_/\___/_/_/\__/\__, /  
 echo                                                           /____/   
 echo.
-ECHO Amazing visuals or burning PC, you will see the light!
+ECHO [EXPERIMENTAL, SOME GLITCHES MIGHT OCCUR]
+ECHO Amazing visuals or burning PC, either way you will see the light!
 ECHO.
 ECHO Initiating Preset...
 robocopy ".\Fidelity\map" "..\_ashes\map" "*.tpf*" "*.btl*" "*.msb*" /e /z /mir >nul 2>nul
