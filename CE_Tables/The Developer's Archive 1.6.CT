@@ -3776,7 +3776,8 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337081767</ID>
                       <Description>"Item Name"</Description>
-                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">40000134:Accursed Brew
+                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">4036C964:Sunlight Blade
+40000134:Accursed Brew
 4000022B:Dark Inscribed Ember
 0225C630:Baby's Nail
 02261450:Large Sword of Searching
