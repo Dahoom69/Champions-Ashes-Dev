@@ -82,6 +82,7 @@ end
 
 function DuelModeRestoration()
     act(2002, 110)
+    act(2002, 636)
 
     if ManualDuelModeRestorationRequest() then
         act(2002, 634)
