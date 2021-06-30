@@ -3776,7 +3776,12 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337081767</ID>
                       <Description>"Item Name"</Description>
-                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">4036C964:Sunlight Blade
+                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">14EE8320:Madman's Mask
+14EE8708:Madman's Garb
+14EE8AF0:Madman's Wrap
+14EE8ED8:Madman's Leggings
+14EEAA30:Gascoigne's Hat
+4036C964:Sunlight Blade
 40000134:Accursed Brew
 4000022B:Dark Inscribed Ember
 0225C630:Baby's Nail
@@ -6197,7 +6202,7 @@ local newArmors = -- Ashes Armor
   0x13D8A650, --?ProtectorName?(Priest's Fancy Hat)
 
 -- Standalone Helmets --
-
+  0x14EEAA30, --Gascoigne's Hat
   0x13DC76E0, --Mask of the Father
   0x13DC4FD0, --Mask of the Mother
   0x13DC9DF0, --Mask of the Child
@@ -6233,7 +6238,14 @@ local newArmors = -- Ashes Armor
   0x13DB3E60, --Priest Mask
 
 -- Armor Sets --
-
+  0x15F592E0, --Ironclad Helm
+  0x15F596C8, --Ironclad Armor
+  0x15F59AB0, --Ironclad Gauntlets
+  0x15F59E98, --Ironclad Leggings
+  0x14EE8320, --Madman's Mask
+  0x14EE8708, --Madman's Garb
+  0x14EE8AF0, --Madman's Wrap
+  0x14EE8ED8, --Madman's Leggings
   0x15F3BE20, --King's Crown
   0x15F3C208, --King's Armor
   0x15F3C5F0, --King's Gauntlets
@@ -71549,7 +71561,7 @@ end
                         <CheatEntry>
                           <ID>1337080397</ID>
                           <Description>"ActionButtonParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>{$lua}
 if syntaxcheck then return end
@@ -71646,7 +71658,7 @@ end
                         <CheatEntry>
                           <ID>1337080398</ID>
                           <Description>"AiSoundParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>{$lua}
 if syntaxcheck then return end
@@ -71699,7 +71711,7 @@ end
                         <CheatEntry>
                           <ID>2</ID>
                           <Description>"AtkParam_Npc"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -72003,7 +72015,7 @@ end
                           <ID>1337080259</ID>
                           <Description>"AtkParam_Pc"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -72317,7 +72329,7 @@ if syntaxcheck then return end
                           <ID>1337080258</ID>
                           <Description>"BehaviorParam_PC"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -72393,7 +72405,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080285</ID>
                           <Description>"BonfireWarpParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -72475,7 +72487,7 @@ end
                           <ID>1337080256</ID>
                           <Description>"Bullet"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -72865,7 +72877,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080317</ID>
                           <Description>"CalcCorrectGraph"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -72966,7 +72978,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080282</ID>
                           <Description>"Ceremony"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -73025,7 +73037,7 @@ end
                         <CheatEntry>
                           <ID>1337080266</ID>
                           <Description>"CharaInitParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -73703,7 +73715,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080265</ID>
                           <Description>"ClearCountCorrectParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -73812,7 +73824,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080253</ID>
                           <Description>"EquipMtrlSetParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>{$lua}
 if syntaxcheck then return end
@@ -73895,7 +73907,7 @@ end
                         <CheatEntry>
                           <ID>1337080132</ID>
                           <Description>"EquipParamAccessory"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -74028,7 +74040,7 @@ if syntaxcheck then return end
                           <ID>1337080131</ID>
                           <Description>"EquipParamGoods"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -74455,7 +74467,7 @@ if syntaxcheck then return end
                           <ID>1337080130</ID>
                           <Description>"EquipParamProtector"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -74850,7 +74862,7 @@ if syntaxcheck then return end
                           <ID>1337080129</ID>
                           <Description>"EquipParamWeapon"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -75547,7 +75559,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080263</ID>
                           <Description>"HitEffectSfxParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -75633,7 +75645,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337099070</ID>
                           <Description>"HitMtrlParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -75767,7 +75779,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080267</ID>
                           <Description>"ItemLotParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -75889,7 +75901,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080389</ID>
                           <Description>"LodParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>{$lua}
 if syntaxcheck then return end
@@ -75966,7 +75978,7 @@ end
                           <ID>1337080255</ID>
                           <Description>"Magic"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -76402,7 +76414,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080286</ID>
                           <Description>"MapMimicryEstablishmentParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -76473,7 +76485,7 @@ end
                         <CheatEntry>
                           <ID>3</ID>
                           <Description>"NpcParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -77529,7 +77541,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080283</ID>
                           <Description>"ObjActParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -77626,7 +77638,7 @@ end
                         <CheatEntry>
                           <ID>1337080261</ID>
                           <Description>"ObjectParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -77662,7 +77674,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080269</ID>
                           <Description>"PhantomParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -77787,7 +77799,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080268</ID>
                           <Description>"RoleParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -77920,7 +77932,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080264</ID>
                           <Description>"ShopLineupParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -78024,7 +78036,7 @@ if syntaxcheck then return end
                           <ID>1337080254</ID>
                           <Description>"SpEffectParam"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -79040,7 +79052,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337033278</ID>
                           <Description>"SpEffectVfxParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -79326,7 +79338,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080270</ID>
                           <Description>"SwordArtsParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -79371,7 +79383,7 @@ if syntaxcheck then return end
                           <ID>1337080257</ID>
                           <Description>"ThrowParam"</Description>
                           <Options moHideChildren="1"/>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <Color>000000</Color>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
@@ -79491,7 +79503,7 @@ if syntaxcheck then return end
                         <CheatEntry>
                           <ID>1337080284</ID>
                           <Description>"UpperArmParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -79594,7 +79606,7 @@ end
                         <CheatEntry>
                           <ID>1337080251</ID>
                           <Description>"WetAspectParam"</Description>
-                          <LastState/>
+                          <LastState Activated="1"/>
                           <VariableType>Auto Assembler Script</VariableType>
                           <AssemblerScript>[ENABLE]
 {$lua}
@@ -89963,7 +89975,7 @@ if not syntaxcheck then disableMemrec(memrec) end
                         <CheatEntry>
                           <ID>1337098527</ID>
                           <Description>"SprjEventMan"</Description>
-                          <LastState Value="" RealAddress="00000000"/>
+                          <LastState Value="" RealAddress="14473BE40"/>
                           <Color>C0C0C0</Color>
                           <GroupHeader>1</GroupHeader>
                           <Address>DarkSoulsIII.exe+473BE40</Address>
