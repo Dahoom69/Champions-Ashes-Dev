@@ -11,6 +11,7 @@ project.json
 # folders
 _ashes/sfx/frpg_sfxbnd_commoneffects_effect-ffxbnd-dcx
 _ashes/menu/01_common-tpf-dcx
+_ashes/menu/map
 
 # Graphic preset files
 _ashes/param/drawparam/
