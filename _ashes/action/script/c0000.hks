@@ -9,6 +9,7 @@ DASH_STARTING_SPEED = 1.60000002384186
 forwardAttackShortcutBlockedFramecount = 0
 feintCounter = 0
 
+
 DUEL_MODE_EFFECT = 100850
 DUEL_MODE_TOGGLE_EFFECT = 100851
 DUEL_MODE_RESTORATION_TRIGGER_EFFECT = 100852
@@ -123,12 +124,32 @@ end
 -- ******************
 -- * Sunlight Blade *
 -- ******************
-
-function UpdateSunlightBlade()
+do
     local SunlightBladeSpEffect = 14000
-    if env(1116, SunlightBladeSpEffect) == TRUE and env(2016) < 2 then
-        --act(9001, SunlightBladeSpEffect)
+    local RemoveMainhandBuffEffect = 14001
+    local FpDrainEffect = 14002
+
+    local function UpdateFpDrainEffect(isSunlightBladeActive)
+        if isSunlightBladeActive then
+            if env(1116, FpDrainEffect) == TRUE then return end
+            act(2002, FpDrainEffect)
+        else
+            act(9001, FpDrainEffect)
+        end
     end
+
+    local function RemoveSunlightBlade()
+        act(2002, RemoveMainhandBuffEffect)
+    end
+
+    function UpdateSunlightBlade()
+        local isActive = env(1116, SunlightBladeSpEffect) == TRUE
+        UpdateFpDrainEffect(isActive)
+        if isActive and env(2016) < 2 then
+            RemoveSunlightBlade()
+        end
+    end
+
 end
 
 -- ***************************
