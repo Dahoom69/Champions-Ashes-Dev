@@ -981,7 +981,7 @@ function GetAttackRequest(is_guard)
             end
         end
         local sp_kind = env(345 , hand)
-        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67)  then 
+        if sp_kind == 178 or sp_kind == 207 or (sp_kind == 217 and env(1116, 100260) == FALSE) or sp_kind == 220 or sp_kind == 234 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67)  then 
             return ATTACK_REQUEST_INVALID
         elseif sp_kind == 257 and env(1116, 100580) == FALSE then
             return ATTACK_REQUEST_INVALID
@@ -2932,18 +2932,20 @@ function ExecMagic(quick_type, blend_type)
             return FALSE
         elseif style == HAND_LEFT_BOTH then
             local sp_kind = env(345 , HAND_LEFT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_LEFT, 38)  == FALSE or sp_kind ~= 67) then
+            if sp_kind ~= 178 and sp_kind ~= 207 and (sp_kind ~= 217 or env(1116, 100260) == TRUE) and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_LEFT, 38)  == FALSE or sp_kind ~= 67) then
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
+            elseif sp_kind == 217 and env(1116, 100260) == TRUE then return TRUE
             end
             SetAttackHand(HAND_LEFT)
         else
             local sp_kind = env(345 , HAND_RIGHT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_RIGHT, 38)  ~= TRUE or sp_kind ~= 67) then
+            if sp_kind ~= 178 and sp_kind ~= 207 and (sp_kind ~= 217 or env(1116, 100260) == TRUE) and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_RIGHT, 38)  ~= TRUE or sp_kind ~= 67) then
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
+            elseif sp_kind == 217 and env(1116, 100260) == TRUE then return TRUE
             end
             SetAttackHand(HAND_RIGHT)
         end
@@ -12415,6 +12417,8 @@ function Warcry_onUpdate() -- 037670 UT WA
 
     local is_warcryMWeapon = GetEquipType(HAND_RIGHT, 30, 32, 33, 35, 38) 
     local is_warcryOWeapon = GetEquipType(HAND_LEFT, 30, 32, 33, 35, 38) 
+    local is_CSm = GetEquipType(HAND_RIGHT, 28) 
+    local is_CSo = GetEquipType(HAND_LEFT, 28) 
 
     if (is_warcryMWeapon == TRUE and c_Style ~= HAND_LEFT_BOTH) then 
         r2 = "W_AttackRightHeavySpecial1Start"
@@ -12454,10 +12458,23 @@ function Warcry_onUpdate() -- 037670 UT WA
     local r1 = g_r1
     local b1 = g_b1
 
-    if env(345 , hand) == 217 then
+    if env(345 , hand) == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH then
         r1 = "W_AttackRightLightDash"
         b1 = "W_AttackBothDash"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_WarcryCancel"
+        b2 = "W_WarcryCancel"
+        end
     end    
+
+    if env(345 , hand) == 217 and is_CSo == TRUE  and c_Style == HAND_LEFT_BOTH then
+        r1 = "W_AttackRightLightDash"
+        b1 = "W_AttackBothDash"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_WarcryCancel"
+        b2 = "W_WarcryCancel"
+        end
+    end   
 
     if SwordArtsCommonFunction(r1, r2, g_l1, g_l2, b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
