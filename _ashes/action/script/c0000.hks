@@ -2936,7 +2936,6 @@ function ExecMagic(quick_type, blend_type)
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
-            elseif sp_kind == 217 and env(1116, 100260) == TRUE then return TRUE
             end
             SetAttackHand(HAND_LEFT)
         else
@@ -2945,7 +2944,6 @@ function ExecMagic(quick_type, blend_type)
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
-            elseif sp_kind == 217 and env(1116, 100260) == TRUE then return TRUE
             end
             SetAttackHand(HAND_RIGHT)
         end
