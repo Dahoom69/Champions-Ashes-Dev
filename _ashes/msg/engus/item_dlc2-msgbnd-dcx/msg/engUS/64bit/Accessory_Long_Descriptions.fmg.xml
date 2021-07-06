@@ -955,6 +955,8 @@ it spares.</text>
 
 The ring hums with a faint energy, and gradually restores FP. 
 
+Increase casting speed by 10 points and restore 4.95% FP every 10 seconds.
+
 The craftsman of this ring is unknown, but one could assume he was somewhat magically inclined.</text>
 <text id="20231">A special ring given to those who are deemed fit
 to undertake the journey of discovery in Vinheim,
@@ -1144,7 +1146,7 @@ great magic heritage.</text>
 <text id="20308">%null%</text>
 <text id="20309">%null%</text>
 <text id="20310">A ring bestowed upon a Carim saint.
-Allows attunement of additional spells.
+Allows attunement of additional spells and increases casting speed by 20 points.
 
 In Carim, the saints give voice to the ancient
 tales. They memorize countless cumbersome
@@ -1160,7 +1162,7 @@ a function for which they are widely renowned.</text>
 <text id="20318">%null%</text>
 <text id="20319">%null%</text>
 <text id="20320">A ring bestowed upon the Deacons of the Cathedral
-of the Deep. Allows attunement of additional spells.
+of the Deep. Allows attunement of additional spells and increases casting speed by 20 points.
 
 In the Cathedral slumber things most terrible, and as such, the deacons require a grand narrative, to ensure they do not falter in their duty.
 A philosophy, to ward away the madness beckoned
