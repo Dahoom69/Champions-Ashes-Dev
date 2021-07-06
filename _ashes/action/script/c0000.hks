@@ -12488,7 +12488,37 @@ function Warcry_onUpdate() -- 037670 UT WA
 end
 
 function WarcryCancel_onUpdate()
-    if SwordArtsCommonFunction(g_r1, "W_AttackRightHeavySpecial1Start", g_l1, g_l2, g_b1, "W_AttackBothHeavySpecial1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+
+    local r2 = "W_AttackRightHeavySpecial1Start"
+    local b2 = "W_AttackBothHeavySpecial1Start"
+    local hand = HAND_RIGHT
+    local style = c_Style
+    if style == HAND_LEFT_BOTH then
+        hand = HAND_LEFT
+    end
+
+    local is_CSm = GetEquipType(HAND_RIGHT, 28) 
+    local is_CSo = GetEquipType(HAND_LEFT, 28) 
+
+    if env(345 , hand) == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH then
+        g_r1 = "W_AttackRightLight2"
+        g_b1 = "W_AttackBothLight2"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_EndureRightHeavy"
+        b2 = "W_EndureRightHeavy"
+        end
+    end   
+
+    if env(345 , hand) == 217 and is_CSo == TRUE  and c_Style == HAND_LEFT_BOTH then
+        g_r1 = "W_AttackRightLight2"
+        g_b1 = "W_AttackBothLight2"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_EndureRightHeavy"
+        b2 = "W_EndureRightHeavy"
+        end
+    end   
+
+    if SwordArtsCommonFunction(g_r1, r2, g_l1, g_l2, g_b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         ExecEventAllBody("W_Idle")
@@ -12526,13 +12556,43 @@ function EndureRightHeavy_onUpdate() -- 37710
     local r2 = "W_AttackRightHeavy1Start"
     local l2 = "W_AttackLeftHeavy1"
     local b2 = "W_AttackBothHeavy1Start"
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    local hand = HAND_RIGHT
+    local style = c_Style
+    if style == HAND_LEFT_BOTH then
+        hand = HAND_LEFT
+    end
+
+    local is_CSm = GetEquipType(HAND_RIGHT, 28) 
+    local is_CSo = GetEquipType(HAND_LEFT, 28) 
+
+    if env(345 , hand) == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH then
+        r1 = "W_AttackRightLight2"
+        b1 = "W_AttackBothLight2"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_EndureRightHeavy"
+        b2 = "W_EndureRightHeavy"
+        end
+    end   
+
+    if env(345 , hand) == 217 and is_CSo == TRUE  and c_Style == HAND_LEFT_BOTH then
+        r1 = "W_AttackRightLight2"
+        b1 = "W_AttackBothLight2"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_EndureRightHeavy"
+        b2 = "W_EndureRightHeavy"
+        end
+    end   
+
     if env(1116, 100290) == TRUE then
         r2 = "W_EndureRightHeavy"
         l2 = "W_EndureRightHeavy"
         b2 = "W_EndureRightHeavy"
         SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
     end
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l2, "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", l2, b1, b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
