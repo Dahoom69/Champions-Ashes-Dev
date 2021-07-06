@@ -12503,6 +12503,9 @@ function WarcryCancel_onUpdate()
     if env(345 , hand) == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH then
         g_r1 = "W_AttackRightLight2"
         g_b1 = "W_AttackBothLight2"
+        SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
+        --if sp_m == 101 and env(1001) > 0  then 
+            SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         if  env(1116, 100260) == TRUE then
         r2 = "W_EndureRightHeavy"
         b2 = "W_EndureRightHeavy"
@@ -12512,6 +12515,9 @@ function WarcryCancel_onUpdate()
     if env(345 , hand) == 217 and is_CSo == TRUE  and c_Style == HAND_LEFT_BOTH then
         g_r1 = "W_AttackRightLight2"
         g_b1 = "W_AttackBothLight2"
+        SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
+        --if sp_m == 101 and env(1001) > 0  then 
+            SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         if  env(1116, 100260) == TRUE then
         r2 = "W_EndureRightHeavy"
         b2 = "W_EndureRightHeavy"
@@ -12571,6 +12577,9 @@ function EndureRightHeavy_onUpdate() -- 37710
     if env(345 , hand) == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH then
         r1 = "W_AttackRightLight2"
         b1 = "W_AttackBothLight2"
+        SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
+        --if sp_m == 101 and env(1001) > 0  then 
+            SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         if  env(1116, 100260) == TRUE then
         r2 = "W_EndureRightHeavy"
         b2 = "W_EndureRightHeavy"
@@ -12580,6 +12589,9 @@ function EndureRightHeavy_onUpdate() -- 37710
     if env(345 , hand) == 217 and is_CSo == TRUE  and c_Style == HAND_LEFT_BOTH then
         r1 = "W_AttackRightLight2"
         b1 = "W_AttackBothLight2"
+        SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
+        --if sp_m == 101 and env(1001) > 0  then 
+            SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
         if  env(1116, 100260) == TRUE then
         r2 = "W_EndureRightHeavy"
         b2 = "W_EndureRightHeavy"
