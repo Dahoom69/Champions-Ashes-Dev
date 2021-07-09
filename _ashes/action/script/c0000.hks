@@ -10182,6 +10182,24 @@ function AttackArrowRight_Activate()
 end
 
 function AttackArrowRightStart_Upper_onUpdate()
+
+    local style = c_Style
+    local is_both = FALSE
+    local is_both_right = FALSE
+    if HAND_LEFT_BOTH <= style then
+        is_both = TRUE
+    end
+    if style == HAND_RIGHT_BOTH then
+        is_both_right = TRUE
+    end
+    local hand = HAND_RIGHT
+    if style == HAND_LEFT_BOTH then
+        hand = HAND_LEFT
+    end
+
+    local is_bow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW)
+    local is_greatbow = GetEquipType(hand, WEAPON_CATEGORY_LARGE_ARROW)
+
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
     if ArrowCommonFunction(blend_type, FALSE, FALSE) == TRUE then
@@ -10192,14 +10210,16 @@ function AttackArrowRightStart_Upper_onUpdate()
                 ExecEventHalfBlend(Event_AttackArrowRightLoop, blend_type)
                 return 
             else
-                ExecEventAllBody("W_AttackArrowRightFire")
+                if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+                else ExecEventAllBody("W_AttackArrowRightFire") end
                 return 
             end
         elseif 0 < env(1108, ACTION_ARM_R2) then
             ExecEventHalfBlend(Event_AttackArrowRightLoop, blend_type)
             return 
         else
-            ExecEventAllBody("W_AttackArrowRightFire")
+            if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+            else ExecEventAllBody("W_AttackArrowRightFire") end
             return 
         end
     elseif ArrowLowerCommonFunction(Event_AttackArrowRightStartMirror, lower_state, FALSE, FALSE) == TRUE then
@@ -10210,6 +10230,25 @@ function AttackArrowRightStart_Upper_onUpdate()
 end
 
 function AttackArrowRightLoop_Upper_onUpdate()
+
+    local style = c_Style
+    local is_both = FALSE
+    local is_both_right = FALSE
+    if HAND_LEFT_BOTH <= style then
+        is_both = TRUE
+    end
+    if style == HAND_RIGHT_BOTH then
+        is_both_right = TRUE
+    end
+    local hand = HAND_RIGHT
+    if style == HAND_LEFT_BOTH then
+        hand = HAND_LEFT
+    end
+
+    local is_bow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW)
+    local is_greatbow = GetEquipType(hand, WEAPON_CATEGORY_LARGE_ARROW)
+
+
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
     if lower_state == LOWER_IDLE then
@@ -10219,12 +10258,16 @@ function AttackArrowRightLoop_Upper_onUpdate()
         return 
     elseif env("弓矢スロット取得", 0) == 0 then
         if env(1108, ACTION_ARM_R1) <= 0 then
-            ExecEventAllBody("W_AttackArrowRightFire")
+            if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+            else ExecEventAllBody("W_AttackArrowRightFire") end
             return 
         end
     elseif env(1108, ACTION_ARM_R2) <= 0 then
-        ExecEventAllBody("W_AttackArrowRightFire")
+        if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+        else ExecEventAllBody("W_AttackArrowRightFire") end
         return 
+    elseif is_bow == TRUE and env(1001) < STAMINA_MINIMUM then 
+        ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) 
     end
     if ArrowLowerCommonFunction(Event_AttackArrowRightLoop, lower_state, FALSE, TRUE) == TRUE then
         return 
