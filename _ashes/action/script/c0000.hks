@@ -10200,7 +10200,8 @@ function AttackArrowRightStart_Upper_onUpdate()
                 ExecEventHalfBlend(Event_AttackArrowRightLoop, blend_type)
                 return 
             else
-                if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+                if is_bow == TRUE and hand == HAND_RIGHT then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+                elseif is_bow == TRUE and hand == HAND_LEFT then ExecEventHalfBlend(Event_AttackCrossbowLeftEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
                 else ExecEventAllBody("W_AttackArrowRightFire") end
                 return 
             end
@@ -10208,7 +10209,8 @@ function AttackArrowRightStart_Upper_onUpdate()
             ExecEventHalfBlend(Event_AttackArrowRightLoop, blend_type)
             return 
         else
-            if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+            if is_bow == TRUE and hand == HAND_RIGHT then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+            elseif is_bow == TRUE and hand == HAND_LEFT then ExecEventHalfBlend(Event_AttackCrossbowLeftEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
             else ExecEventAllBody("W_AttackArrowRightFire") end
             return 
         end
@@ -10237,12 +10239,14 @@ function AttackArrowRightLoop_Upper_onUpdate()
         return 
     elseif env("弓矢スロット取得", 0) == 0 then
         if env(1108, ACTION_ARM_R1) <= 0 then
-            if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+            if is_bow == TRUE and hand == HAND_RIGHT then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+            elseif is_bow == TRUE and hand == HAND_LEFT then ExecEventHalfBlend(Event_AttackCrossbowLeftEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
             else ExecEventAllBody("W_AttackArrowRightFire") end
             return 
         end
     elseif env(1108, ACTION_ARM_R2) <= 0 then
-        if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+        if is_bow == TRUE and hand == HAND_RIGHT then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
+        elseif is_bow == TRUE and hand == HAND_LEFT then ExecEventHalfBlend(Event_AttackCrossbowLeftEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
         else ExecEventAllBody("W_AttackArrowRightFire") end
         return 
     elseif is_bow == TRUE and env(1001) < STAMINA_MINIMUM then 
