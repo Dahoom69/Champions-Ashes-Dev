@@ -10390,6 +10390,10 @@ function AttackCrossbowRightLoop_Upper_onUpdate()
         ExecEventHalfBlend(Event_AttackCrossbowRightFire, blend_type)
         return 
     end
+    if env(1001) < STAMINA_MINIMUM then 
+        ExecEventHalfBlend(Event_AttackCrossbowRightFire, blend_type)
+        return
+    end
     if HalfBlendLowerCommonFunction(Event_AttackCrossbowRightLoop, lower_state, FALSE, TRUE) == TRUE then
         return 
     else
@@ -10537,6 +10541,9 @@ function AttackCrossbowLeftLoop_Upper_onUpdate()
             ExecEventHalfBlend(Event_AttackCrossbowLeftFire, blend_type)
             return 
         end
+        if env(1001) < STAMINA_MINIMUM then
+            ExecEventHalfBlend(Event_AttackCrossbowLeftFire, blend_type)
+        end
             if  --(env(345 , HAND_LEFT) ~= 650) and 
             HalfBlendLowerCommonFunction(Event_AttackCrossbowLeftLoop, lower_state, FALSE, TRUE) == TRUE then
                 return 
@@ -10647,6 +10654,9 @@ function AttackCrossbowBothLeftLoop_Upper_onUpdate()
         ExecEventHalfBlend(Event_AttackCrossbowBothLeftFire, blend_type)
         return 
     end
+    if env(1001) < STAMINA_MINIMUM then 
+        ExecEventHalfBlend(Event_AttackCrossbowBothLeftFire, blend_type)
+    end
     if HalfBlendLowerCommonFunction(Event_AttackCrossbowBothLeftLoop, lower_state, FALSE, TRUE) == TRUE then
         return 
     else
@@ -10743,6 +10753,9 @@ function AttackCrossbowBothRightLoop_Upper_onUpdate()
     elseif env(1108, ACTION_ARM_R2) <= 0 then
         ExecEventHalfBlend(Event_AttackCrossbowBothRightFire, blend_type)
         return 
+    end
+    if env(1001) < STAMINA_MINIMUM then 
+        ExecEventHalfBlend(Event_AttackCrossbowBothRightFire, blend_type)
     end
     if HalfBlendLowerCommonFunction(Event_AttackCrossbowBothRightLoop, lower_state, FALSE, TRUE) == TRUE then
         return 
