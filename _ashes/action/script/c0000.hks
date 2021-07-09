@@ -10182,23 +10182,13 @@ function AttackArrowRight_Activate()
 end
 
 function AttackArrowRightStart_Upper_onUpdate()
-
     local style = c_Style
-    local is_both = FALSE
-    local is_both_right = FALSE
-    if HAND_LEFT_BOTH <= style then
-        is_both = TRUE
-    end
-    if style == HAND_RIGHT_BOTH then
-        is_both_right = TRUE
-    end
     local hand = HAND_RIGHT
     if style == HAND_LEFT_BOTH then
         hand = HAND_LEFT
     end
 
     local is_bow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW)
-    local is_greatbow = GetEquipType(hand, WEAPON_CATEGORY_LARGE_ARROW)
 
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
@@ -10230,24 +10220,13 @@ function AttackArrowRightStart_Upper_onUpdate()
 end
 
 function AttackArrowRightLoop_Upper_onUpdate()
-
     local style = c_Style
-    local is_both = FALSE
-    local is_both_right = FALSE
-    if HAND_LEFT_BOTH <= style then
-        is_both = TRUE
-    end
-    if style == HAND_RIGHT_BOTH then
-        is_both_right = TRUE
-    end
     local hand = HAND_RIGHT
     if style == HAND_LEFT_BOTH then
         hand = HAND_LEFT
     end
 
     local is_bow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW)
-    local is_greatbow = GetEquipType(hand, WEAPON_CATEGORY_LARGE_ARROW)
-
 
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
