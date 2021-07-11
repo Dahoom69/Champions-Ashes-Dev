@@ -8326,6 +8326,7 @@ function AttackRightLightStepSpecial_onUpdate() -- bs r2
 
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if IsFeintAttempt() and sp_m == 264 then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 164 or sp_m == 614 or sp_m == 646 then r1 = "W_AttackRightLight2" end
     if  sp_m == 612 then r1 = "W_AttackRightLight3" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
