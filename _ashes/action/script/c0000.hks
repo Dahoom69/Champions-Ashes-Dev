@@ -12346,7 +12346,7 @@ function Charge_Upper_onUpdate() -- 6700
         return 
         
 
-    elseif (    (sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH     or (sp_o == 656 or sp_o == 72 and style == HAND_LEFT_BOTH))     and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then -- new
+    elseif (    (sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH     or ((sp_o == 656 or sp_o == 72) and style == HAND_LEFT_BOTH))     and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then -- new
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_ChargeContinue")
         return -- new
