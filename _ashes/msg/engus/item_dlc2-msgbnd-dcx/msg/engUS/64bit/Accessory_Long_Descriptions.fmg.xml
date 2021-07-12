@@ -803,9 +803,12 @@ drawn to this ring.</text>
 <text id="20150">A ring engraved with a portrait of a scholar.
 Increases intelligence.
 
+Your Champion Soul unlocks further effects, increasing Magic and Dark Absorptions by 2%.
+
 In Lothric, the Scholar has long been considered
-one of the Three Pillars of the king's rule,
-and is therefore master of the Grand Archives.</text>
+one of the Three Pillars of the king's rule.
+Vast knowledge can be gained from the ancient tomes that line the archive's walls.
+But not all knowledge is meant to have light shed upon them.</text>
 <text id="20151">%null%</text>
 <text id="20152">%null%</text>
 <text id="20153">%null%</text>
@@ -818,10 +821,11 @@ and is therefore master of the Grand Archives.</text>
 <text id="20160">A ring engraved with a portrait of the High Priestess.
 Increases faith.
 
+Your Champion Soul unlocks further effects, increasing Fire and Lightning Absorptions by 2%.
+
 In Lothric, the High Priestess has long been
 considered one of the Three Pillars of the king's
-rule. The High Priestess also served as
-the prince's wet nurse.</text>
+rule. Many have the utmost respect for the High Priestess, seeing as she served the roles of both protector and wet nurse to the Lothric heirs.</text>
 <text id="20161">%null%</text>
 <text id="20162">%null%</text>
 <text id="20163">%null%</text>
@@ -1146,7 +1150,9 @@ great magic heritage.</text>
 <text id="20308">%null%</text>
 <text id="20309">%null%</text>
 <text id="20310">A ring bestowed upon a Carim saint.
-Allows attunement of additional spells and increases casting speed by 20 points.
+Allows attunement of additional spells.
+
+Your Champion Soul unlocks further effects, increasing the casting speed of all spells by 20 points.
 
 In Carim, the saints give voice to the ancient
 tales. They memorize countless cumbersome
@@ -1161,12 +1167,13 @@ a function for which they are widely renowned.</text>
 <text id="20317">%null%</text>
 <text id="20318">%null%</text>
 <text id="20319">%null%</text>
-<text id="20320">A ring bestowed upon the Deacons of the Cathedral
-of the Deep. Allows attunement of additional spells and increases casting speed by 20 points.
+<text id="20320">A ring bestowed upon the Deacons of the Cathedral of the Deep.
+Allows attunement of additional spells.
+
+Your Champion Soul unlocks further effects, increasing the casting speed of all spells by 20 points.
 
 In the Cathedral slumber things most terrible, and as such, the deacons require a grand narrative, to ensure they do not falter in their duty.
-A philosophy, to ward away the madness beckoned
-by the grotesqueries at hand.</text>
+A philosophy, to ward away the madness beckoned by the grotesqueries at hand.</text>
 <text id="20321">%null%</text>
 <text id="20322">%null%</text>
 <text id="20323">%null%</text>
@@ -1357,6 +1364,8 @@ perhaps it is time for some old-fashioned greed.</text>
 The ring is vaguely warm, like a beam of sunlight,
 and gradually restores HP.
 
+Your Champion Soul unlocks further effects, increasing the effect of any burst healing sources by 20%.
+
 Gwynevere left her home with a great many
 other deities, and became a wife and mother,
 raising several heavenly children.</text>
@@ -1444,10 +1453,12 @@ of most kingdoms known to their people.</text>
 <text id="20460">Ring engraved with a portrait of a knight.
 Increases strength.
 
+Your Champion Soul unlocks further effects, increasing Physical Absorptions by 2%.
+
 In Lothric, the Knight has long been considered
-one of the Three Pillars of the king's rule,
-they were the heros who brought the kindom victorys.
-but their leader's name has been long forgotten.</text>
+one of the Three Pillars of the king's rule.
+Once heroes who brought the kingdom victories,
+the band of knights is now split asunder with the civil war.</text>
 <text id="20461">%null%</text>
 <text id="20462">%null%</text>
 <text id="20463">%null%</text>
@@ -1460,10 +1471,11 @@ but their leader's name has been long forgotten.</text>
 <text id="20470">Ring engraved with a portrait of a hunter.
 Increases dexterity.
 
+Your Champion Soul unlocks further effects, increasing the rate of your stamina regeneration by 5%.
+
 The hunters serve Lothric on the fringes and
 in the shadows. For generations, rulers of Lothric
-have relied especially upon the Black Hand hunters 
-to punish enemies in ways that the king's
+have relied upon the Black Hand hunters to punish enemies in ways that the king's
 Three Pillars cannot.</text>
 <text id="20471">%null%</text>
 <text id="20472">%null%</text>

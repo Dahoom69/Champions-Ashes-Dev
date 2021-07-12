@@ -290,7 +290,7 @@
 <text id="20147">%null%</text>
 <text id="20148">%null%</text>
 <text id="20149">%null%</text>
-<text id="20150">Increases intelligence</text>
+<text id="20150">Increases intelligence and magic/dark absorptions</text>
 <text id="20151">%null%</text>
 <text id="20152">%null%</text>
 <text id="20153">%null%</text>
@@ -300,7 +300,7 @@
 <text id="20157">%null%</text>
 <text id="20158">%null%</text>
 <text id="20159">%null%</text>
-<text id="20160">Increases faith</text>
+<text id="20160">Increases faith and lightning/fire absorptions</text>
 <text id="20161">%null%</text>
 <text id="20162">%null%</text>
 <text id="20163">%null%</text>
@@ -550,7 +550,7 @@
 <text id="20407">%null%</text>
 <text id="20408">%null%</text>
 <text id="20409">%null%</text>
-<text id="20410">Gradually restores HP</text>
+<text id="20410">Gradually restores HP and gain more healing</text>
 <text id="20411">%null%</text>
 <text id="20412">%null%</text>
 <text id="20413">%null%</text>
@@ -600,7 +600,7 @@
 <text id="20457">%null%</text>
 <text id="20458">%null%</text>
 <text id="20459">%null%</text>
-<text id="20460">Increases strength</text>
+<text id="20460">Increases strength and physical absorptions</text>
 <text id="20461">%null%</text>
 <text id="20462">%null%</text>
 <text id="20463">%null%</text>
@@ -610,7 +610,7 @@
 <text id="20467">%null%</text>
 <text id="20468">%null%</text>
 <text id="20469">%null%</text>
-<text id="20470">Increases dexterity</text>
+<text id="20470">Increases dexterity and stamina recovery speed</text>
 <text id="20471">%null%</text>
 <text id="20472">%null%</text>
 <text id="20473">%null%</text>
