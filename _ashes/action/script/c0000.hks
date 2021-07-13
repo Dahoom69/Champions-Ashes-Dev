@@ -2440,6 +2440,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     else
                         SetVariable("CircleStepDirectionSelftrans", 0)
                     end
+                        if back == true then angle = 180
+                        elseif right == true then angle = 90
+                        elseif left == true then angle = -90
+                        else angle = 0 end
                     SetVariable("CircleStepAngleSelftrans", angle)
                     ExecEventAllBody("W_CircleStepStartSelftrans")
                 else
@@ -2448,6 +2452,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     else
                         SetVariable("CircleStepDirection", 0)
                     end
+                        if back == true then angle = 180
+                        elseif right == true then angle = 90
+                        elseif left == true then angle = -90
+                        else angle = 0 end
                     SetVariable("CircleStepAngle", angle)
                     ExecEventAllBody("W_CircleStepStart")
                 end
