@@ -2440,24 +2440,32 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     else
                         SetVariable("CircleStepDirectionSelftrans", 0)
                     end
-                        if back == true then angle = 180
+                        if back == true then angle = 180 -- bow WA when doing WA into WA
                         elseif right == true then angle = 90
                         elseif left == true then angle = -90
                         else angle = 0 end
-                    SetVariable("CircleStepAngleSelftrans", angle)
-                    ExecEventAllBody("W_CircleStepStartSelftrans")
+                    if IsExistArrow() == TRUE then
+                        ExecEventAllBody("W_NoArrow") 
+                    else
+                        SetVariable("CircleStepAngleSelftrans", angle)
+                        ExecEventAllBody("W_CircleStepStartSelftrans")
+                    end
                 else
                     if 0 <= angle then
                         SetVariable("CircleStepDirection", 1)
                     else
                         SetVariable("CircleStepDirection", 0)
                     end
-                        if back == true then angle = 180
+                        if back == true then angle = 180 -- bow WA in neutral and locked on
                         elseif right == true then angle = 90
                         elseif left == true then angle = -90
                         else angle = 0 end
-                    SetVariable("CircleStepAngle", angle)
-                    ExecEventAllBody("W_CircleStepStart")
+                    if IsExistArrow() == TRUE then
+                        ExecEventAllBody("W_NoArrow") 
+                    else
+                        SetVariable("CircleStepAngle", angle)
+                        ExecEventAllBody("W_CircleStepStart")
+                    end
                 end
             else 
                 if (style == HAND_RIGHT_BOTH or style == HAND_LEFT_BOTH or style == HAND_BOTH) then ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) 
