@@ -1042,7 +1042,7 @@ function GetAttackRequest(is_guard)
             elseif  (   (spm == 162)                                                    and    (sp == 154)                                                              and     (is_both == FALSE)                  )   then return ATTACK_REQUEST_BOTH_LEFT
             elseif ((is_m == TRUE) and (sp ~= 99 and sp ~= 101 and sp ~= 137 and sp ~= 151)) then
                 return ATTACK_REQUEST_LEFT_HEAVY
-            elseif sp == 178 or sp == 207 or sp == 217 or sp == 220 or sp == 234 or sp == 257 or sp == 186 or sp == 20 or (is_d == TRUE and sp == 150) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp == 67) then
+            elseif sp == 178 or sp == 207 or (sp == 217 and not (is_sl == TRUE and IsNodeActive("Rolling_CMSG") == TRUE)  ) or sp == 220 or sp == 234 or sp == 257 or sp == 186 or sp == 20 or (is_d == TRUE and sp == 150) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp == 67) then
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or is_r == TRUE then
                 return ATTACK_REQUEST_LEFT_HEAVY_SP -- ATTACK_REQUEST_LIGHT_KICK
