@@ -8774,7 +8774,7 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2
     if i1BB == TRUE then r1 = "W_AttackRightLight1" end
     
     local sp_m = env(345 , HAND_RIGHT)
-    if sp_m == 264 or sp_m == 609 or sp_m == 646 then r1 = "W_AttackRightLight2" end
+    if sp_m == 264 or sp_m == 609 or sp_m == 646 or sp_m == 610 then r1 = "W_AttackRightLight2" end
     if sp_m == 164 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 614  or sp_m == 612 or sp_m == 645 or sp_m == 621 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
@@ -9967,7 +9967,7 @@ function AttackBothDash_onUpdate() -- run r1
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 643 or env(345 , HAND_RIGHT) == 614) or sp_m == 646 or sp_m == 621 then b1 = "W_AttackBothLight2" end
     if ((env(345 , HAND_RIGHT) == 643) and env(1116, 100281) == TRUE)  then b1 = "W_AttackBothLight1" end
-    if  (env(345 , HAND_RIGHT) == 609) or (env(345 , HAND_RIGHT) == 612) then b1 = "W_AttackBothHeavySpecial1Start" end
+    if  (env(345 , HAND_RIGHT) == 609) or (env(345 , HAND_RIGHT) == 612) or sp_m == 610 then b1 = "W_AttackBothHeavySpecial1Start" end
 
     local r1 = "W_AttackRightLight1" 
     local r2 = "W_AttackRightHeavy1Start"
@@ -10175,6 +10175,7 @@ function AttackBothHeavyKickSpecial_onUpdate() -- run r2
         r2 = "W_AttackRightHeavy1SubStart"
     end
 
+    if sp_m == 610 then b1 = "W_AttackBothLight2" end
     if sp_m == 614  or sp_m == 645 or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 609 or sp_m == 612 then b1 = "W_AttackBothHeavySpecial1Start" end
 
