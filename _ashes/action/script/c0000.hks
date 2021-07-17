@@ -10283,6 +10283,7 @@ function AttackArrowRightLoop_Upper_onUpdate()
     end
 
     local is_bow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW)
+    local is_gbow = GetEquipType(hand, WEAPON_CATEGORY_LARGE_ARROW)
 
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
@@ -10291,6 +10292,9 @@ function AttackArrowRightLoop_Upper_onUpdate()
     end
     if ArrowCommonFunction(blend_type, FALSE, FALSE) == TRUE then
         return 
+    elseif env(1001) < STAMINA_MINIMUM then 
+        if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) 
+        else ExecEventAllBody("W_AttackArrowRightFire") end
     elseif env("弓矢スロット取得", 0) == 0 then
         if env(1108, ACTION_ARM_R1) <= 0 then
             if is_bow == TRUE and hand == HAND_RIGHT then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
@@ -10303,8 +10307,6 @@ function AttackArrowRightLoop_Upper_onUpdate()
         elseif is_bow == TRUE and hand == HAND_LEFT then ExecEventHalfBlend(Event_AttackCrossbowLeftEmpty, ALLBODY) -- replaces  ExecEventAllBody("W_AttackArrowRightFire")
         else ExecEventAllBody("W_AttackArrowRightFire") end
         return 
-    elseif is_bow == TRUE and env(1001) < STAMINA_MINIMUM then 
-        ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) 
     end
     if ArrowLowerCommonFunction(Event_AttackArrowRightLoop, lower_state, FALSE, TRUE) == TRUE then
         return 
@@ -12938,6 +12940,8 @@ function ChargeShotRightHoldLoop_Upper_onUpdate()
     end
     if SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
         return 
+    elseif env(1001) < STAMINA_MINIMUM then 
+         ExecEventAllBody("W_ChargeShotRightFire") 
     elseif env("弓矢スロット取得", 0) == 0 then
         if env(1108, ACTION_ARM_R1) <= 0 then
             ExecEventAllBody("W_ChargeShotRightFire")
