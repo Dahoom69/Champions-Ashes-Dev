@@ -903,7 +903,7 @@ function GetAttackRequest(is_guard)
 
             local is_gh = GetEquipType(HAND_RIGHT, 35) 
 
-            if is_s == TRUE or is_r == TRUE or (is_h == TRUE and sp == 108) then 
+            if is_s == TRUE or is_r == TRUE or (is_h == TRUE and (sp == 108 or sp == 67) then 
                 if 0 < env(1108, ACTION_ARM_L1) then
                     return ATTACK_REQUEST_ATTACK_WHILE_GUARD
                 end
