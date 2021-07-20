@@ -8718,6 +8718,7 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack
     if sp_m == 614 then b1 = "W_AttackBothLight3" end
     if  sp_m == 609 or sp_m == 612 then b1 = "W_AttackBothLight3" end
     if sp_m == 610 then b1 = "W_AttackBothHeavySpecial1Start" end
+    if sp_m == 610 then b2 = "W_AttackRightHeavy1SubStart" end
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
 
