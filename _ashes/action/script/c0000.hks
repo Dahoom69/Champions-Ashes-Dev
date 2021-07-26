@@ -8500,9 +8500,10 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end -- doesn't work for 
     
     if sp_m == 643 then r1 = "W_AttackRightLight2" end
 
-    if sp_m == 614 or sp_m == 609 or sp_m == 612 or sp_m == 646 or sp_m == 610 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 614 or sp_m == 609 or sp_m == 612 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 264 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 642 then r2 = "W_AttackRightHeavy1SubStart" end
+    if sp_m == 610 then r1 = "W_AttackRightLight2" end
     if sp_m == 610 and IsFeintAttempt() then r1 = "W_AttackRightLight3" end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
