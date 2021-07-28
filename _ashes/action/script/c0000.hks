@@ -8168,8 +8168,8 @@ function AttackRightLight1_onUpdate() -- r11
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
     if (sp_m == 658) then r2 = "W_AttackRightHeavy1Start" end
 
-    if env(1116, 698) and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
-    if env(1116, 698) and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
 
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -8652,8 +8652,8 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14
     if (sp_m == 264 or sp_m == 164 or sp_m == 614) then r1 = "W_AttackRightLight3" end
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
 
-    if env(1116, 698) and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
-    if env(1116, 698) and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
     
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
@@ -8744,8 +8744,8 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack
         b2 = "W_AttackBothHeavy1SubStart"
     end
 
-    if env(1116, 698) and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
-    if env(1116, 698) and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9083,8 +9083,8 @@ function AttackBothLight1_onUpdate()  -- r11
         r2 = "W_AttackRightHeavy2Start"
     end
 
-    if env(1116, 698) and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
-    if env(1116, 698) and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
     if sp_m == 610 then l1 = "W_AttackBothLeft1" end
 
