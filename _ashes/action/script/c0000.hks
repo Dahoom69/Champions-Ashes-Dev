@@ -956,12 +956,19 @@ function GetAttackRequest(is_guard)
             else
                 return ATTACK_REQUEST_ARROW_BOTH_RIGHT
             end
-        elseif (     (is_unfaltering_prayer == TRUE and ( style == HAND_LEFT or style == HAND_LEFT_BOTH))   or   ((sp_c == 185 or sp_c == 127 or sp_c == 267) and style ~= HAND_LEFT_BOTH)   or  ((sp_lb == 185 or sp_lb == 127 or sp_lb == 267) and style == HAND_LEFT_BOTH)       ) then
-            if is_both == TRUE then               
-                return ATTACK_REQUEST_INVALID
-            else
-                return ATTACK_REQUEST_INVALID
-            end
+            -- base for all catalysts = 41
+            -- talisman = 127
+            -- pyro flame = 149
+            -- chime = 185
+            -- pyro parting = 239
+            -- murky long staff = 266
+            -- sacred c of fili = 267 
+        --elseif (     (is_unfaltering_prayer == TRUE and ( style == HAND_LEFT or style == HAND_LEFT_BOTH))   or   ((sp_c == 185 or sp_c == 127 or sp_c == 267) and style ~= HAND_LEFT_BOTH)   or  ((sp_lb == 185 or sp_lb == 127 or sp_lb == 267) and style == HAND_LEFT_BOTH)       ) then
+          --  if is_both == TRUE then               
+            --    return ATTACK_REQUEST_INVALID
+           -- else
+             --   return ATTACK_REQUEST_INVALID
+           -- end
         elseif is_crossbow == TRUE then
             if is_both == TRUE then
                 if style == HAND_LEFT_BOTH then
