@@ -10145,11 +10145,17 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2 backstep r2
 
          local r1 = "W_AttackRightLight1" 
          local r2 = "W_AttackRightHeavy1Start"
-         if (sp_m == 645) then  
-             iT = FALSE  
-             r1 = "W_AttackRightHeavySpecial1Start" 
-             r2 = "W_AttackRightHeavy2Start"
-         end
+
+         if sp_m == 645 and IsFeintAttempt() then 
+            r1 = "W_AttackBothDash" 
+            b1 = "W_AttackBothDash" 
+            end
+        
+        if sp_m == 645 and not IsFeintAttempt() then 
+            iT = FALSE  
+            r1 = "W_AttackRightHeavySpecial1Start" 
+            r2 = "W_AttackRightHeavy2Start"
+        end
 
          if sp_m == 646 then b1 = "W_AttackBothLight1" end
          if sp_m == 610 then b1 = "W_AttackBothLight3" end
@@ -12825,9 +12831,9 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
     end
 
    if sp_m == 645 and IsFeintAttempt() then 
-    r1 = "W_AttackRightLight2" 
-    b1 = "W_AttackRightLight2" 
-    iT = FALSE
+    r1 = "W_AttackBothDash" 
+    b1 = "W_AttackBothDash" 
+    iT = TRUE
     end
 
     if sp_m == 645 and not IsFeintAttempt() then 
