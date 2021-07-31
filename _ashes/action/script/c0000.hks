@@ -9550,6 +9550,14 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge
         r2 = "W_AttackRightHeavy1SubStart"
     end
 
+    if sp_m == 645 and IsFeintAttempt() then 
+        iT = TRUE
+        r1 = "W_AttackBothLight1" 
+        b1 = "W_AttackBothLight1" 
+        r2 = "W_AttackBothHeavy2Start"
+        b2 = "W_AttackBothHeavy2Start"
+    end
+
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
@@ -9602,13 +9610,22 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
     end
 
     local r1 = "W_AttackRightLight1" 
-    if (sp_m == 645) then  
+    local b2 = "W_AttackBothHeavy2Start"
+
+    if sp_m == 645 and IsFeintAttempt() then 
+        iT = TRUE
+        r1 = "W_AttackBothLight1" 
+        b1 = "W_AttackBothLight1" 
+        r2 = "W_AttackBothHeavy2Start"
+        b2 = "W_AttackBothHeavy2Start"
+    end
+
+    if sp_m == 645 and not IsFeintAttempt() then  
         iT = FALSE  
         r1 = "W_AttackRightHeavySpecial1Start" 
         r2 = "W_AttackRightHeavy2Start"
     end
-        
-    local b2 = "W_AttackBothHeavy2Start"
+
     if sp_m == 610 then b2 = "W_AttackBothHeavySpecial1End" end
 
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
@@ -10147,9 +10164,12 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2 backstep r2
          local r2 = "W_AttackRightHeavy1Start"
 
          if sp_m == 645 and IsFeintAttempt() then 
+            iT = TRUE
             r1 = "W_AttackBothDash" 
             b1 = "W_AttackBothDash" 
-            end
+            r2 = "W_AttackBothHeavy2Start"
+            b2 = "W_AttackBothHeavy2Start"
+        end
         
         if sp_m == 645 and not IsFeintAttempt() then 
             iT = FALSE  
