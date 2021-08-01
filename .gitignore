@@ -5,8 +5,13 @@ project.json
 # Windows shortcuts
 *.lnk
 
-# unpacked descriptions
+# Unpacked descriptions
 *.fmg
+
+# ParamStudio place holders
+*.prev
+*.temp
+_ashes/param/gameparam/stayparam.parambnd.dcx
 
 # folders
 _ashes/sfx/frpg_sfxbnd_commoneffects_effect-ffxbnd-dcx
