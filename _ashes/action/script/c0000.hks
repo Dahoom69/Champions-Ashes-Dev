@@ -1589,8 +1589,8 @@ function IsWarcrySpAtk()
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
-    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140 or sp_m == 127) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
+    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140 or sp_o == 127) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
 
     return FALSE
 end
@@ -1973,7 +1973,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         else 
 
         if HAND_LEFT_BOTH <= style or iT == TRUE then
-            if IsArtsSpAtk() == TRUE or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE and env(1116, 100289) == FALSE) or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE and env(1116, 100289) == FALSE)   then
+            if IsArtsSpAtk() == TRUE or (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE and env(1116, 100289) == FALSE) 
+            or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE and env(1116, 100289) == FALSE)
+            or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 127) and c_Style ~= HAND_LEFT_BOTH)
+            or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH)  then
                 ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             elseif                      (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE and env(1116, 100289) == TRUE)  or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE  and env(1116, 100289) == TRUE)   then
                 ExecEventAllBody("W_CrossbowStepInReload") 
@@ -1982,6 +1985,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         elseif IsArtsSpAtk() == TRUE then
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 127) and c_Style ~= HAND_LEFT_BOTH)
+        or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == FALSE then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == TRUE then  ExecEventAllBody("W_CrossbowStepInFire")
         else
@@ -6321,6 +6326,11 @@ function MoveCommonFunction(blend_type)
         elseif IsEnableJumpAtk() == TRUE then
             r2 = "W_AttackRightHeavyKick"
             b2 = "W_AttackBothHeavyKick"
+            if (env(1116, 698) and IsWarcrySpAtk() == TRUE and (env(345 , HAND_RIGHT) == 127) and c_Style ~= HAND_LEFT_BOTH)
+            or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (env(345 , HAND_LEFT) == 127) and c_Style == HAND_LEFT_BOTH) then 
+                r2 = "W_AttackRightHeavyKickSpecial"
+                b2 = "W_AttackBothHeavyKickSpecial"     
+            end
             if i1BB == TRUE and (env(345 , HAND_RIGHT) ~= 609)  then 
                 r2 = "W_AttackRightHeavyKickSpecial"
                 b2 = "W_AttackBothHeavyKickSpecial"          
