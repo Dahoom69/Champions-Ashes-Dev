@@ -854,7 +854,7 @@ function GetAttackRequest(is_guard)
     if ForwardAttackShortcutRequest() then
         if is_arrow == TRUE then return ATTACK_REQUEST_INVALID end
         if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
-        if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
+        --if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
 
         return GetForwardShortcutAttack()
     elseif env(1106, ACTION_ARM_R1) == TRUE then -- if changed to elseif ~halvard
