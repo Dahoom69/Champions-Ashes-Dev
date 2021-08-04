@@ -2676,10 +2676,48 @@ who believe it carries words of forgiveness.
 Cursed journeys, too, must ultimately come to an end.</text>
 <text id="5050000">A tasteless substance, sometimes carried by Undead. 
 
+This small pouch is weighed with what would be its contents, but upon opening the pouch for inspection,
+it appears to be empty.
+
 Restores appearance to original state.</text>
 <text id="5050001">A flavoured substance, sometimes carried by Undead. 
 
+The soft candies emit a warm, comforting aroma. Nostalgic visions of a home gently embrace the mind
+when the candy is consumed.
+
 Assume human appearance while in another world.</text>
+<text id="5050002">A waxy resin used for armor upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+While copper may not be as "noble" as higher metals, there is pride to be held in a grounded, earthly metal.  
+
+Add a copper sheen to currently equipped gear.</text>
+<text id="5050003">A waxy resin used for armor upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+Silver beckons imagery of those who are pure and incorruptible, gleaming as brightly as the day they are made, forevermore. 
+
+Add a silver sheen to currently equipped gear.</text>
+<text id="5050004">A waxy resin used for armor upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+Gold is a symbol of wealth, and for others, a symbol of power. This lustrous metal has seen the rise and fall of many an empire.
+
+Add a golden sheen to currently equipped gear.</text>
+<text id="5050005">A waxy resin used for armor upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+Gems and jewels all have their own intrinsic value, but none are as coveted as that of a diamond. 
+
+Add a peculiar cyan sheen to currently equipped gear.</text>
 <text id="5050035">A flavoured substance, sometimes carried by Undead. 
 
 Assume a luminous orange appearance.</text>
@@ -2730,25 +2768,33 @@ Those with the stomach to keep the liquid down find that it quells the effects o
 This lightly enchanted candy is shaped with an uncanny likeness to an eyeball,
 doubtlessly based on the old rumor that undead consume the flesh of their kin.
 
-Thankfully, its taste does not match its appearance.</text>
+Thankfully, its taste does not match its appearance.
+
+Emit blue light from the eyes.</text>
 <text id="5050112">A grotesque, yet curious delicacy.
 
 This lightly enchanted candy is shaped with an uncanny likeness to an eyeball,
 doubtlessly based on the old rumor that undead consume the flesh of their kin.
 
-Thankfully, its taste does not match its appearance.</text>
+Thankfully, its taste does not match its appearance.
+
+Emit yellow light from the eyes.</text>
 <text id="5050113">A grotesque, yet curious delicacy.
 
 This lightly enchanted candy is shaped with an uncanny likeness to an eyeball,
 doubtlessly based on the old rumor that undead consume the flesh of their kin.
 
-Thankfully, its taste does not match its appearance.</text>
+Thankfully, its taste does not match its appearance.
+
+Emit white light from the eyes.</text>
 <text id="5050114">A grotesque, yet curious delicacy.
 
 This lightly enchanted candy is shaped with an uncanny likeness to an eyeball,
 doubtlessly based on the old rumor that undead consume the flesh of their kin.
 
-Thankfully, its taste does not match its appearance.</text>
+Thankfully, its taste does not match its appearance.
+
+Emit red light from the eyes.</text>
 <text id="5050201">A flavoured substance, sometimes carried by Undead. 
 
 Assume an abyssal appearance.</text>
