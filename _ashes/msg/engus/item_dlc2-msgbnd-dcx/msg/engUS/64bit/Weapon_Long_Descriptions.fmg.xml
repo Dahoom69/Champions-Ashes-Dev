@@ -10335,8 +10335,8 @@ Masterfully fires off a great arrow that pierces through all enemies in its path
 
 Arrows must be equipped in order to use bows. Up to two kinds of arrow can be equipped at a time, and these can be switched between as necessary.
 
-Skill: Rapid Fire
-Swiftly nocks arrows with finesse after drawing the bow, allowing for consecutive shots.</text>
+Skill: Evasive Fire
+In one swift action, fire an arrow and preform an evasive maneuver. Especially effective when locked on to target, granting more options of evasion.</text>
 <text id="14010100">Small bow. Standard projectile weapon.
 Equip arrows to use.
 
@@ -10431,8 +10431,8 @@ Press &lt;?platmsg@10003?&gt;/&lt;?platmsg@10004?&gt; to change type of arrows.<
 
 Though more powerful than standard bows, it also requires more strength of the user, and its range is short.
 
-Skill: Rapid Fire
-Swiftly nocks arrows with finesse after drawing the bow, allowing for consecutive shots.</text>
+Skill: Evasive Fire
+In one swift action, fire an arrow and preform an evasive maneuver. Especially effective when locked on to target, granting more options of evasion.</text>
 <text id="14020100">Composite bow emphasizing power.
 Requires more strength than standard bows.
 
@@ -10659,8 +10659,8 @@ Press &lt;?platmsg@10003?&gt;/&lt;?platmsg@10004?&gt; to change type of bolt.</t
 
 Arrows must be equipped in order to use bows. Up to two kinds of arrow can be equipped at a time, and these can be switched as necessary.
 
-Skill: Puncture
-Pull the arrow even further back for a more powerful shot that can also pierce shields.</text>
+Skill: Evasive Fire
+In one swift action, fire an arrow and preform an evasive maneuver. Especially effective when locked on to target, granting more options of evasion.</text>
 <text id="14060100">Large bow. Projectile weapon for experienced
 hunters. Equip arrows to use.
 
@@ -10756,8 +10756,8 @@ Press &lt;?platmsg@10003?&gt;/&lt;?platmsg@10004?&gt; to change type of arrows.<
 The Dragonriders were the Old King's royal guard, and great strength was demanded of them. Merely drawing this bow calls for inhuman strength.
 The worthy few who can master this bow, however, use it to devastating effect.
 
-Skill: Puncture
-Pull the arrow even further back for a more powerful shot that can also pierce shields.</text>
+Skill: Evasive Fire
+In one swift action, fire an arrow and preform an evasive maneuver. Especially effective when locked on to target, granting more options of evasion.</text>
 <text id="14070100">Longbow of the Dragonriders, who served the Old King of Want.
 
 The Dragonriders were the Old King's royal guard, and great strength was demanded of them. Merely drawing this bow calls for inhuman strength.
@@ -11112,8 +11112,8 @@ A fine weapon with both high precision and power.</text>
 
 This golden bow is imbued with powerful magic and is most impressive with Moonlight Arrows.
 
-Skill: Darkmoon Arrow
-Infuse a readied arrow with Darkmoon essence, granting it magic damage and the ability to pierce shields.</text>
+Skill: Evasive Fire
+In one swift action, fire an arrow and preform an evasive maneuver. Especially effective when locked on to target, granting more options of evasion.</text>
 <text id="14140000">A unique greatbow handed down in an eastern land, where tales are told of its use in slaying giant horned oni.
 
 Drawing a bow of this size takes time, and leaves the user vulnerable. Only specialized great arrows can be fired from the bow.
@@ -11124,8 +11124,8 @@ Masterfully fires off a great arrow that pierces through all enemies in its path
 
 Has a longer range than standard bows, but successful usage requires a trained, dexterous hand.
 
-Skill: Pharis Triple-shot
-Swiftly nocks three arrows with finesse after drawing the bow, firing them simultaneously.</text>
+Skill: Evasive Fire
+In one swift action, fire an arrow and preform an evasive maneuver. Especially effective when locked on to target, granting more options of evasion.</text>
 <text id="14150100">The preferred black bow of the heroic
 archer Pharis.
 
