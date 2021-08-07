@@ -8414,7 +8414,7 @@ function AttackRightLightDash_onUpdate() -- run r1
     if (sp_m == 643) or sp_m == 609 then r1 = "W_AttackRightLight2" end
     if (sp_m == 643 and env(1116, 100281) == TRUE) then r1 = "W_AttackRightLight1" end
     if sp_m == 614 or sp_m == 645 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
-
+    if IsFeintAttempt() and sp_m == 259 then r2 = "W_AttackRightHeavy2Start" end
     
         if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return 
@@ -8437,6 +8437,7 @@ function AttackRightLightDashSpecial_onUpdate() -- bs r1 backstep r1
     if sp_m == 264 then r1 = "W_AttackRightLight2" end
     if sp_m == 609 or sp_m == 164 or sp_m == 610 then r1 = "W_AttackRightLight3" end
     if sp_m == 614 or sp_m == 612 or sp_m == 645 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if IsFeintAttempt() and sp_m == 259 then r2 = "W_AttackRightHeavySpecial2Start" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
@@ -10070,6 +10071,7 @@ function AttackBothDash_onUpdate() -- run r1
     if (env(345 , HAND_RIGHT) == 643 or env(345 , HAND_RIGHT) == 614) or sp_m == 646 or sp_m == 621 then b1 = "W_AttackBothLight2" end
     if ((env(345 , HAND_RIGHT) == 643) and env(1116, 100281) == TRUE)  then b1 = "W_AttackBothLight1" end
     if  (env(345 , HAND_RIGHT) == 609) or (env(345 , HAND_RIGHT) == 612) or sp_m == 610 then b1 = "W_AttackBothHeavySpecial1Start" end
+    if IsFeintAttempt() and (   (sp_m == 259 and is_both_right == TRUE) or (sp_ugso == 259 and is_both_right == FALSE) ) then b2 = "W_AttackBothHeavy2Start" end
 
     local r1 = "W_AttackRightLight1" 
     local r2 = "W_AttackRightHeavy1Start"
@@ -10091,10 +10093,13 @@ end
 
 function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local b2 = "W_AttackBothHeavy1Start"
     local b1 = "W_AttackBothLight1"
     local is_Um = GetEquipType(HAND_RIGHT, 26, 35) 
     local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
+    local is_both_right = FALSE
+    if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
     if (is_Um == TRUE or is_Uo == TRUE) then b1= "W_AttackBothLight2" end
 
     local r1 = "W_AttackRightLight1" 
@@ -10114,6 +10119,7 @@ function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1
 
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeftStep" end
+    if IsFeintAttempt() and (   (sp_m == 259 and is_both_right == TRUE) or (sp_o == 259 and is_both_right == FALSE) ) then b2 = "W_AttackBothHeavySpecial2Start" end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
