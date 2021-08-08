@@ -9161,7 +9161,7 @@ function AttackBothLight2_onUpdate()  -- r12
         r2 = "W_AttackRightHeavy1SubStart"
     end
     
-    if (sp_m == 160) then  b1 = "W_AttackBothLight1" end
+    if sp_m == 160 or (sp_o == 160 and HAND_LEFT_BOTH == c_Style) then  b1 = "W_AttackBothLight1" end
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then return
