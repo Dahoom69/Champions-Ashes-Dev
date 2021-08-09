@@ -705,11 +705,15 @@ The sharp edge is on the inside of the weapon, itself designed for cutting and p
 
 Skill: Grasping Slash
 Viciously lash at your foe, pulling them closer to continue your onslaught.</text>
-<text id="1060200">The large sickle-shaped body, used for severing corpses, is a worker's tool in the Undead Settlement.he inside of the weapon, itself designed for cutting and pulling, thus allowing for good damage against shielded foes.
+<text id="1060200">The large sickle-shaped body, used for severing corpses, is a worker's tool in the Undead Settlement.
+
+The sharp edge is on the inside of the weapon, itself designed for cutting and pulling, thus allowing for good damage against shielded foes.
 
 Skill: Grasping Slash
 Viciously lash at your foe, pulling them closer to continue your onslaught.</text>
-<text id="1060300">The large sickle-shaped body, used for severing corpses, is a worker's tool in the Undead Settlement.he inside of the weapon, itself designed for cutting and pulling, thus allowing for good damage against shielded foes.
+<text id="1060300">The large sickle-shaped body, used for severing corpses, is a worker's tool in the Undead Settlement.
+
+The sharp edge is on the inside of the weapon, itself designed for cutting and pulling, thus allowing for good damage against shielded foes.
 
 Skill: Grasping Slash
 Viciously lash at your foe, pulling them closer to continue your onslaught.</text>
@@ -4615,7 +4619,9 @@ Inhuman strength is required to wield this hefty curved greatsword.
 
 Skill: Spin Slash 
 Slice into foes with a large spinning motion, and continue spinning to transition into a strong attack.</text>
-<text id="6170000">A ceremonial sword, held in Pontiff Sulyvahn's left hand, representing the judgment of the moon, but with magic far closer to sorcery than any existing lunar power. Its dark blue hues, deeper than the darkest moon, reflect sorcerer Sulyvahn's true nature.
+<text id="6170000">A ceremonial sword, held in Pontiff Sulyvahn's left hand, representing the judgment of the moon, but with magic far closer to sorcery than any existing lunar power.
+
+Its dark blue hues, deeper than the darkest moon, reflect sorcerer Sulyvahn's true nature.
 
 Skill: Stance of Judgment
 Assume stance to unleash dark magic. Use normal attack for a lunging thrust, and strong attack to emit side-sweeping wave.</text>
@@ -7219,7 +7225,9 @@ Temporarily boost stamina recovery speed by sheer force of will, which an old mi
 Left by Havel himself, along with his boulder-like great shield. Grants its wielder resistance to magic and fire, as well as increased poise.
 
 Skill: Stomp
-Use one's weight to lunge forward with a low stance and increased poise, launching a boulder into the air that falls to earth. Follow with light attack for an upward slash or strong attack for a spinning slash. If timed appropriately, the follow up attacks will shatter the boulder and send forth a hail of debris.</text>
+Use one's weight to lunge forward with a low stance and increased poise, launching a boulder into the air that falls to earth. 
+Follow with light attack for an upward slash or strong attack for a spinning slash. 
+If timed appropriately, the follow up attacks will shatter the boulder and send forth a hail of debris.</text>
 <text id="8270000">Twisted great Hammer associated with Smough, the last knight to remain at his post, guarding the ruined cathedral.
 
 Restore HP while attacking or strong attack for lightning blast, a carryover from Smough's past as an executioner.
@@ -18135,7 +18143,7 @@ Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
 <text id="30070000">A bladeless, thick mass of iron used for smashing.
 
-Its existence is enigmatic because of its supposed use for dragon slaying, before the First Lord came to be.
+Its existence is enigmatic because of its supposed use for dragon slaying, before the First Lords came to be.
 This crude slab is not an illusion, infused with fire resistance magic predating the first flame. 
 
 Take care of that "sword", will you?
@@ -18168,7 +18176,8 @@ Equipping this in the left hand allows one to perform the Skill of the right han
 </text>
 <text id="30110000">Talisman made from a lock of black hair.
 
-A casting tool fashioned by a chaos witch from long ago. It has been passed down as an heirloom of witches, its many masters filling the dark locks with their emotions and strength. As a result, an aura of anguish emanates from the talisman, provoking emotions in the wielder when held. 
+A casting tool fashioned by a chaos witch from long ago. It has been passed down as an heirloom of witches, its many masters filling the dark locks with their emotions and strength.
+As a result, an aura of anguish emanates from the talisman, provoking emotions in the wielder when held. 
 
 Boosts the strength of all types of magic by 20%, but lowers casting speed by 50 points.
 
@@ -18281,13 +18290,21 @@ Combat Art: Falling Bolt
 Hold swordspear high in the air to summon fierce lightning that descends upon distant foes.</text>
 <text id="30140000">The Lords of Cinder linked the First Flame, and this Lance was wielded by their deific manifestation.
 
-This long coiled spear, capable of casting miracles, is another manifestation of those who have linked the First Flame, not unlike the apparition that stands as its guardian.
+This long coiled spear draws from the First Flame to empower miracles, the memory of the Great Lords forever inscribed into the First Flame.
+
+Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
+
+Recite the tales of the gods and unleash miracles with strong attack.
 
 Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
 <text id="30150000">The Lords of Cinder linked the First Flame, and this Curved Sword was wielded by their deific manifestation.
 
-This coiled blade, capable of casting pyromancies, is another manifestation of those who have linked the First Flame, not unlike the apparition that stands as its guardian.
+This coiled blade draws power from the first flame to channel powerful pyromancy, the art of fire originating from one of the great Lord Souls.
+
+Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
+
+Channel the art of fire and perform pyromancies with strong attack.
 
 Skill: Agile Retreat
 Quickly backflip, avoiding all danger.</text>
@@ -18318,9 +18335,14 @@ Its powerful one-handed attack imitates the golem's blade of wind, but the heavy
 
 Skill: Iron Grab
 Reach out and grab the opponent. Can only be used against humans.</text>
-<text id="35020000">Sword wielded only by servants of the Gravelord, the first of the dead. Crafted from the bones of the fallen.
+<text id="35020000">Sword allegedly wielded by servants of the Gravelord.
 
-The miasma of death exudes from the sword, a veritable toxin to any living being.
+Numerous ancient skeletons cling to the blade, melded into a macabre exhibition of the Old Dead One's might.
+
+Primordial tales tell of one of the first Great Lords, Nito, the First of the Dead. Waves of lethal miasma would emanate from his blade, granting all it touched death and decay.
+The same miasma, however thinned, exudes from this blade.
+ 
+Lord Wolnir sought to control this power, yearning to find the secret of immortality within the cloud of death. His desire was ultimately fulfilled, but the price, ironically, was a fate worse than death.
 
 Weapon Skill: Gravelord Sword Storm
 Thrust weapon into earth to emit a series of giant Gravelord swords from the ground.</text>
@@ -18340,7 +18362,7 @@ The weapon primarily draws its power from Luck, and improves the wielder's resis
 
 Weapon Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
-<text id="36050000">A large, curved sword made of crystal, with an enormous crescent blade. It was forged from the soul of an old hero from ages past, if the stories are to be believed. The rickety blade has become severely weathered.
+<text id="36050000">An enormous crystal sword with a crescent blade. It was forged from the soul of an old hero from ages past, if the stories are to be believed. The rickety blade has become severely weathered.
 
 The blade appears to double as a lucky charm, bringing the wielder good fortune in obtaining more items. Perhaps as a result of this, it also improves in ferocity with the wielder's Luck.
 
@@ -18366,7 +18388,9 @@ The cruel blade invigorates the user as it is soaked in fresh blood, allowing th
 Skill: Beast Roar/Spin Slash
 Invoke a sense of inner ferocity and emit a terrible roar, further strengthening the healing effect. When transformed, swing the axe horizontally in a slashing motion.</text>
 <text id="41040000">Rifle Spear</text>
-<text id="41050000">A sanctified weapon typically used by pious warriors. On the one side, an easily handled silver sword. On the other, a giant obtuse stone weapon, characterized by a blunt strike and extreme force of impact.
+<text id="41050000">A sanctified weapon typically used by pious warriors.
+
+When untransformed, an easily handled silver sword. When transformed, a giant obtuse stone maul, characterized by blunt strikes and extreme force of impact.
 
 Those who wielded this most symbolic weapon took a blunt approach to justice, an irony that stayed with them until their final days.
 
@@ -18551,7 +18575,8 @@ Skill: Sever/Chain Lash
 Hold the cleaver with both hands and slash repeatedly at the foe's feet. When transformed, spin the whip around the wielder and transition to a powerful thrust with the blunt of the whip.</text>
 <text id="41420000">A uniquely grotesque and brutal instrument.
 
-The Amygdalan Arm earned its name from the madmen who wielded it, drawing etymological inspiration from the amygdala, an area of the brain associated with primitive emotions, and its heretical severance from an entity considered sacred.
+The Amygdalan Arm earned its name from the madmen who wielded it, drawing etymological inspiration from the amygdala, an area of the brain associated with primitive emotions.
+The heretical severance from an entity considered sacred led to the creation of this venerated tool of the divine.
 
 It can be wielded as a blunt club of sorts, but when extended the entity within stirs, yearning to spread its influence in the world of men.
 
@@ -18559,7 +18584,8 @@ Skill: Nightmare Serpent
 Thrust the weapon before you, drawing on the wielder's faith to let forth a shockwave of energy.</text>
 <text id="41420500">A uniquely grotesque and brutal instrument.
 
-The Amygdalan Arm earned its name from the madmen who wielded it, drawing etymological inspiration from the amygdala, an area of the brain associated with primitive emotions, and its unsavoury severance from the carcass of some horrible beast best forgotten.
+The Amygdalan Arm earned its name from the madmen who wielded it, drawing etymological inspiration from the amygdala, an area of the brain associated with primitive emotions.
+The unsavoury severance from the carcass of some horrible beast best forgotten led to the creation of this abominable instrument.
 
 It can be wielded as a blunt club of sorts, but when extended the beast within stirs, quivering as if yet still living.
 
