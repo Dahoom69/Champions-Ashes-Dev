@@ -5213,37 +5213,11 @@ Charge forward, sword held high, and slam down with a thunderous strike.</text>
 
 This coiled sword, found thrust in the bonfire, existed long before the throneless lords themselves.
 
-The warped metal of the blade remembers the forms it took while in service of the Soul of Cinder.
-Surely, a skilled craftsman may shape the blade into different forms...
+The warped metal remembers the forms it took while in service of the Soul of Cinder.
+Surely, a skilled craftsman may meld it into its other forms...
 
 Skill: Ember
 The fading flame momentarily illuminates and launches itself forward.</text>
-<text id="6340200">The Lords of Cinder linked the First Flame, and this Curved Sword was wielded by their deific manifestation.
-
-This coiled blade draws power from the first flame to channel pyromancyies, the art of fire originating from one of the great Lord Souls.
-
-Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
-
-Channel the art of fire and perform pyromancies with strong attack.
-
-The warped metal of the blade remembers the forms it took while in service of the Soul of Cinder.
-Surely, a skilled craftsman may shape the blade into different forms...
-
-Skill: Agile Retreat
-Quickly backflip, avoiding all danger.</text>
-<text id="6341400">The Lords of Cinder linked the First Flame, and this Lance was wielded by their deific manifestation.
-
-This long coiled spear draws from the First Flame to empower miracles, the memory of the Great Lords forever inscribed into the First Flame.
-
-Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
-
-Recite the tales of the gods and unleash miracles with strong attack.
-
-The warped metal of the blade remembers the forms it took while in service of the Soul of Cinder.
-Surely, a skilled craftsman may shape the blade into different forms...
-
-Skill: Shield Splitter
-Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
 <text id="6350000">This twisted sword, one of the heaviest of all ultra greatswords, resembles black slate.
 
 This weapon, said to belong to a traitor from long ago, was so heavy that it found no owner, and became a forgotten relic of history.
@@ -18317,7 +18291,32 @@ Take to the air, unshackling the might of the Sun. Lunge forward and unleash the
 
 Combat Art: Falling Bolt
 Hold swordspear high in the air to summon fierce lightning that descends upon distant foes.</text>
+<text id="30140000">The Lords of Cinder linked the First Flame, and this Lance was wielded by their deific manifestation.
 
+This long coiled spear draws from the First Flame to empower miracles, the memory of the Great Lords forever inscribed into the First Flame.
+
+Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
+
+Recite the tales of the gods and unleash miracles with strong attack.
+
+The warped metal remembers the forms it took while in service of the Soul of Cinder.
+Surely, a skilled craftsman may meld it into its other forms...
+
+Skill: Shield Splitter
+Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
+<text id="30150000">The Lords of Cinder linked the First Flame, and this Curved Sword was wielded by their deific manifestation.
+
+This coiled blade draws power from the first flame to channel pyromancyies, the art of fire originating from one of the great Lord Souls.
+
+Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
+
+Channel the art of fire and perform pyromancies with strong attack.
+
+The warped metal remembers the forms it took while in service of the Soul of Cinder.
+Surely, a skilled craftsman may meld it into its other forms...
+
+Skill: Agile Retreat
+Quickly backflip, avoiding all danger.</text>
 <text id="30190000">Shield of Lorian, Prince Lothric's older brother.
 
 Before Lorian embraced his brother's curse, he was a knight who single handedly slayed the demon prince, but the victory eternally scorched his shield.
