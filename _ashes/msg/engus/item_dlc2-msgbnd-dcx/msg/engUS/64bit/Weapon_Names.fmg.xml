@@ -921,6 +921,8 @@
 <text id="6331400">Sacred Drakeblood Greatsword</text>
 <text id="6331500">Hollow Drakeblood Greatsword</text>
 <text id="6340000">Firelink Greatsword</text>
+<text id="6340200">Firelink Curved Sword</text>
+<text id="6341400">Firelink Lance</text>
 <text id="6350000">Fume Ultra Greatsword</text>
 <text id="6360000">Old Wolf Curved Sword</text>
 <text id="6370000">Storm Ruler</text>
@@ -2966,8 +2968,6 @@
 <text id="30121400">Sacred Demon Great Machete</text>
 <text id="30121500">Hollow Demon Great Machete</text>
 <text id="30130000">Dragonslayer Swordspear (Sword)</text>
-<text id="30140000">Firelink Lance</text>
-<text id="30150000">Firelink Curved Sword</text>
 <text id="30190000">Lorian's Shield</text>
 <text id="30200000">Coiled Stake</text>
 <text id="35000000">Moonlight Butterfly Horn</text>
