@@ -1589,10 +1589,61 @@ function IsWarcrySpAtk()
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140 or sp_m == 127) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
-    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140 or sp_o == 127) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
+    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+
+    if env(1116, 698) == TRUE and (sp_m == 127) and style ~= HAND_LEFT_BOTH then  -- coiled stake
+        if sp_o == 127 then
+            if c_SwordArtsID == SWORDARTS_RIGHTARTS then return TRUE
+            elseif  c_SwordArtsHand ~= 1 then return TRUE
+            else return FALSE end
+        end
+        return TRUE
+    end 
+    if (    env(1116, 698) == TRUE and (sp_o == 127 and c_SwordArtsID == SWORDARTS_RIGHTARTS)     )  and style == HAND_LEFT_BOTH then return TRUE end -- coiled stake
 
     return FALSE
+
+    --[[  
+    arts_id or c_SwordArtsID list and c_SwordArtsHand
+
+     "0" name="RIGHTARTS" 
+	 "1" name="PARRY" 
+	 "2" name="STEPIN" 
+	 "3" name="SPIN" 
+	 "4" name="DRAW_STANCE" 
+	 "5" name="STRONG_BASH" 
+	 "6" name="DOUBLE_ATTACK" 
+	 "7" name="DOUBLE_CAST" 
+	 "8" name="CHAINSHOT" 
+	 "10" name="STAMPEDE" 
+	 "11" name="ATTACK_SPIN" 
+	 "12" name="WARCRY" 
+	 "13" name="CHARGE" 
+	 "14" name="ENDURE" 
+	 "16" name="MAGIC_BUFF" 
+	 "17" name="SA_MAGIC" 
+	 "18" name="CIRCLE_STEP" 
+	 "19" name="CHARGE_SHOT" 
+	 "20" name="CROSSBOW_STEP_IN" 
+	 "21" name="HEADHUNT" 
+	 "22" name="ONESHOT" 
+	 "23" name="ONESHOT_FULL" 
+	 "24" name="ONESHOT_NOGENTRANS" 
+	 "25" name="STORM_STANCE" 
+	 "26" name="STRONG_SHOT" 
+	 "27" name="SA_MAGIC_MEDIUM" 
+	 "28" name="SA_MAGIC_STRONG" 
+	 "29" name="WIDE_SHOT" 
+	 "30" name="MAGIC_BUFF_PRAY" 
+	 "31" name="FOUR_WAY_ATTACK" 
+	 "32" name="FOUR_WAY_DRAW_STANCE" 
+	 "33" name="GATLING_STANCE" 
+	 "34" name="RANDOM_ONE_SHOT" 
+	 "35" name="MAGIC_BUFF_ATTACK" 
+	 "36" name="DAGGER_STANCE" 
+	 "99" name="INVALID" 
+     ]]
 end
 
 function IsArtsSpAtk()
@@ -2512,7 +2563,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, FALSE)
         ExecEventHalfBlend(Event_OneShot, ALLBODY)
     else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
-    elseif request == SWORDARTS_REQUEST_RIGHT_ONESHOTFULL then
+    elseif request == SWORDARTS_REQUEST_RIGHT_ONESHOTFULL then 
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
         
