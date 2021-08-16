@@ -18,12 +18,15 @@ _ashes/sfx/frpg_sfxbnd_commoneffects_resource-ffxbnd-dcx
 _ashes/sfx/frpg_sfxbnd_commoneffects_effect-ffxbnd-dcx
 _ashes/menu/01_common-tpf-dcx
 _ashes/menu/map
+_ashes/param/stayparam
 
 # Graphic preset files
 _ashes/param/drawparam/
 _ashes/map/m[0-9][0-9]/
 _ashes/map/m[0-9][0-9]_[0-9][0-9]_[0-9][0-9]_[0-9][0-9]/*.btl*
 _ashes/map/mapstudio/
+_ashes/menu/01_000_fe.gfx
+_ashes/menu/01_001_fe_soul.gfx
 
 # Old emevds
 _ashes/event/old_m30_00_00_00.emevd
