@@ -10,7 +10,7 @@
 <text id="90000">Torch</text>
 <text id="110000">Fists</text>
 <text id="400000">Standard Arrow</text>
-<text id="400100">Fire Arrow</text>
+<text id="400100">Chaos Arrow</text>
 <text id="400200">Poison Arrow</text>
 <text id="400300">Large Arrow</text>
 <text id="400400">Feather Arrow</text>
@@ -105,7 +105,7 @@
 <text id="1000300">Refined Dagger</text>
 <text id="1000400">Arcane Dagger</text>
 <text id="1000500">Crystal Dagger</text>
-<text id="1000600">Fire Dagger</text>
+<text id="1000600">Seething Dagger</text>
 <text id="1000700">Chaos Dagger</text>
 <text id="1000800">Lightning Dagger</text>
 <text id="1000900">Deep Dagger</text>
@@ -121,7 +121,7 @@
 <text id="1010300">Refined Bandit's Knife</text>
 <text id="1010400">Arcane Bandit's Knife</text>
 <text id="1010500">Crystal Bandit's Knife</text>
-<text id="1010600">Fire Bandit's Knife</text>
+<text id="1010600">Seething Bandit's Knife</text>
 <text id="1010700">Chaos Bandit's Knife</text>
 <text id="1010800">Lightning Bandit's Knife</text>
 <text id="1010900">Deep Bandit's Knife</text>
@@ -137,7 +137,7 @@
 <text id="1020300">Refined Parrying Dagger</text>
 <text id="1020400">Arcane Parrying Dagger</text>
 <text id="1020500">Crystal Parrying Dagger</text>
-<text id="1020600">Fire Parrying Dagger</text>
+<text id="1020600">Seething Parrying Dagger</text>
 <text id="1020700">Chaos Parrying Dagger</text>
 <text id="1020800">Lightning Parrying Dagger</text>
 <text id="1020900">Deep Parrying Dagger</text>
@@ -153,7 +153,7 @@
 <text id="1040300">Refined Rotten Ghru Dagger</text>
 <text id="1040400">Arcane Rotten Ghru Dagger</text>
 <text id="1040500">Crystal Rotten Ghru Dagger</text>
-<text id="1040600">Fire Rotten Ghru Dagger</text>
+<text id="1040600">Seething Rotten Ghru Dagger</text>
 <text id="1040700">Chaos Rotten Ghru Dagger</text>
 <text id="1040800">Lightning Rotten Ghru Dagger</text>
 <text id="1040900">Deep Rotten Ghru Dagger</text>
@@ -169,7 +169,7 @@
 <text id="1050300">Refined Blood-stained Short Sword</text>
 <text id="1050400">Sacred Blood-stained Short Sword</text>
 <text id="1050500">Crystal Blood-stained Short Sword</text>
-<text id="1050600">Fire Blood-stained Short Sword</text>
+<text id="1050600">Seething Blood-stained Short Sword</text>
 <text id="1050700">Chaos Blood-stained Short Sword</text>
 <text id="1050800">Lightning Blood-stained Short Sword</text>
 <text id="1050900">Deep Blood-stained Short Sword</text>
@@ -185,7 +185,7 @@
 <text id="1060300">Refined Harpe</text>
 <text id="1060400">Arcane Harpe</text>
 <text id="1060500">Crystal Harpe</text>
-<text id="1060600">Fire Harpe</text>
+<text id="1060600">Seething Harpe</text>
 <text id="1060700">Chaos Harpe</text>
 <text id="1060800">Lightning Harpe</text>
 <text id="1060900">Deep Harpe</text>
@@ -201,7 +201,7 @@
 <text id="1070300">Refined Dripping Candle Stick</text>
 <text id="1070400">Arcane Dripping Candle Stick</text>
 <text id="1070500">Crystal Dripping Candle Stick</text>
-<text id="1070600">Fire Dripping Candle Stick</text>
+<text id="1070600">Seething Dripping Candle Stick</text>
 <text id="1070700">Chaos Dripping Candle Stick</text>
 <text id="1070800">Lightning Dripping Candle Stick</text>
 <text id="1070900">Deep Dripping Candle Stick</text>
@@ -217,7 +217,7 @@
 <text id="1080300">Refined Tailbone Short Sword</text>
 <text id="1080400">Arcane Tailbone Short Sword</text>
 <text id="1080500">Crystal Tailbone Short Sword</text>
-<text id="1080600">Fire Tailbone Short Sword</text>
+<text id="1080600">Seething Tailbone Short Sword</text>
 <text id="1080700">Chaos Tailbone Short Sword</text>
 <text id="1080800">Lightning Tailbone Short Sword</text>
 <text id="1080900">Deep Tailbone Short Sword</text>
@@ -233,7 +233,7 @@
 <text id="1090300">Refined Corvian Greatknife</text>
 <text id="1090400">Arcane Corvian Greatknife</text>
 <text id="1090500">Crystal Corvian Greatknife</text>
-<text id="1090600">Fire Corvian Greatknife</text>
+<text id="1090600">Seething Corvian Greatknife</text>
 <text id="1090700">Chaos Corvian Greatknife</text>
 <text id="1090800">Lightning Corvian Greatknife</text>
 <text id="1090900">Deep Corvian Greatknife</text>
@@ -250,7 +250,7 @@
 <text id="2000300">Refined Shortsword</text>
 <text id="2000400">Arcane Shortsword</text>
 <text id="2000500">Crystal Shortsword</text>
-<text id="2000600">Fire Shortsword</text>
+<text id="2000600">Seething Shortsword</text>
 <text id="2000700">Chaos Shortsword</text>
 <text id="2000800">Lightning Shortsword</text>
 <text id="2000900">Deep Shortsword</text>
@@ -266,7 +266,7 @@
 <text id="2010300">Refined Longsword</text>
 <text id="2010400">Arcane Longsword</text>
 <text id="2010500">Crystal Longsword</text>
-<text id="2010600">Fire Longsword</text>
+<text id="2010600">Seething Longsword</text>
 <text id="2010700">Chaos Longsword</text>
 <text id="2010800">Lightning Longsword</text>
 <text id="2010900">Deep Longsword</text>
@@ -282,7 +282,7 @@
 <text id="2020300">Refined Broadsword</text>
 <text id="2020400">Arcane Broadsword</text>
 <text id="2020500">Crystal Broadsword</text>
-<text id="2020600">Fire Broadsword</text>
+<text id="2020600">Seething Broadsword</text>
 <text id="2020700">Chaos Broadsword</text>
 <text id="2020800">Lightning Broadsword</text>
 <text id="2020900">Deep Broadsword</text>
@@ -298,7 +298,7 @@
 <text id="2030300">Broken Refined Straight Sword</text>
 <text id="2030400">Broken Arcane Straight Sword</text>
 <text id="2030500">Broken Crystal Straight Sword</text>
-<text id="2030600">Broken Fire Straight Sword</text>
+<text id="2030600">Broken Seething Straight Sword</text>
 <text id="2030700">Broken Chaos Straight Sword</text>
 <text id="2030800">Broken Lightning Straight Sword</text>
 <text id="2030900">Broken Deep Straight Sword</text>
@@ -314,7 +314,7 @@
 <text id="2060300">Refined Lothric Sword</text>
 <text id="2060400">Arcane Lothric Sword</text>
 <text id="2060500">Crystal Lothric Sword</text>
-<text id="2060600">Fire Lothric Sword</text>
+<text id="2060600">Seething Lothric Sword</text>
 <text id="2060700">Chaos Lothric Sword</text>
 <text id="2060800">Lightning Lothric Sword</text>
 <text id="2060900">Deep Lothric Sword</text>
@@ -330,7 +330,7 @@
 <text id="2110300">Refined Sunlight Straight Sword</text>
 <text id="2110400">Arcane Sunlight Straight Sword</text>
 <text id="2110500">Crystal Sunlight Straight Sword</text>
-<text id="2110600">Fire Sunlight Straight Sword</text>
+<text id="2110600">Seething Sunlight Straight Sword</text>
 <text id="2110700">Chaos Sunlight Straight Sword</text>
 <text id="2110800">Lightning Sunlight Straight Sword</text>
 <text id="2110900">Deep Sunlight Straight Sword</text>
@@ -346,7 +346,7 @@
 <text id="2120300">Refined Rotten Ghru Sword</text>
 <text id="2120400">Arcane Rotten Ghru Sword</text>
 <text id="2120500">Crystal Rotten Ghru Sword</text>
-<text id="2120600">Fire Rotten Ghru Sword</text>
+<text id="2120600">Seething Rotten Ghru Sword</text>
 <text id="2120700">Chaos Rotten Ghru Sword</text>
 <text id="2120800">Lightning Rotten Ghru Sword</text>
 <text id="2120900">Deep Rotten Ghru Sword</text>
@@ -365,7 +365,7 @@
 <text id="2200300">Refined Astora Sword</text>
 <text id="2200400">Arcane Astora Sword</text>
 <text id="2200500">Crystal Astora Sword</text>
-<text id="2200600">Fire Astora Sword</text>
+<text id="2200600">Seething Astora Sword</text>
 <text id="2200700">Chaos Astora Sword</text>
 <text id="2200800">Lightning Astora Sword</text>
 <text id="2200900">Deep Astora Sword</text>
@@ -381,7 +381,7 @@
 <text id="2210300">Refined Barbed Sword</text>
 <text id="2210400">Arcane Barbed Sword</text>
 <text id="2210500">Crystal Barbed Sword</text>
-<text id="2210600">Fire Barbed Sword</text>
+<text id="2210600">Seething Barbed Sword</text>
 <text id="2210700">Chaos Barbed Sword</text>
 <text id="2210800">Lightning Barbed Sword</text>
 <text id="2210900">Deep Barbed Sword</text>
@@ -397,7 +397,7 @@
 <text id="2220300">Refined Executioner's Straight Sword</text>
 <text id="2220400">Arcane Executioner's Straight Sword</text>
 <text id="2220500">Crystal Executioner's Straight Sword</text>
-<text id="2220600">Fire Executioner's Straight Sword</text>
+<text id="2220600">Seething Executioner's Straight Sword</text>
 <text id="2220700">Chaos Executioner's Straight Sword</text>
 <text id="2220800">Lightning Executioner's Straight Sword</text>
 <text id="2220900">Deep Executioner's Straight Sword</text>
@@ -414,7 +414,7 @@
 <text id="3000300">Refined Estoc</text>
 <text id="3000400">Arcane Estoc</text>
 <text id="3000500">Crystal Estoc</text>
-<text id="3000600">Fire Estoc</text>
+<text id="3000600">Seething Estoc</text>
 <text id="3000700">Chaos Estoc</text>
 <text id="3000800">Lightning Estoc</text>
 <text id="3000900">Deep Estoc</text>
@@ -430,7 +430,7 @@
 <text id="3010300">Refined Mail Breaker</text>
 <text id="3010400">Arcane Mail Breaker</text>
 <text id="3010500">Crystal Mail Breaker</text>
-<text id="3010600">Fire Mail Breaker</text>
+<text id="3010600">Seething Mail Breaker</text>
 <text id="3010700">Chaos Mail Breaker</text>
 <text id="3010800">Lightning Mail Breaker</text>
 <text id="3010900">Deep Mail Breaker</text>
@@ -446,7 +446,7 @@
 <text id="3020300">Refined Rapier</text>
 <text id="3020400">Arcane Rapier</text>
 <text id="3020500">Crystal Rapier</text>
-<text id="3020600">Fire Rapier</text>
+<text id="3020600">Seething Rapier</text>
 <text id="3020700">Chaos Rapier</text>
 <text id="3020800">Lightning Rapier</text>
 <text id="3020900">Deep Rapier</text>
@@ -462,7 +462,7 @@
 <text id="3030300">Ricard's Refined Rapier</text>
 <text id="3030400">Ricard's Arcane Rapier</text>
 <text id="3030500">Ricard's Crystal Rapier</text>
-<text id="3030600">Ricard's Fire Rapier</text>
+<text id="3030600">Ricard's Seething Rapier</text>
 <text id="3030700">Ricard's Chaos Rapier</text>
 <text id="3030800">Ricard's Lightning Rapier</text>
 <text id="3030900">Ricard's Deep Rapier</text>
@@ -478,7 +478,7 @@
 <text id="3040300">Refined Crystal Rapier</text>
 <text id="3040400">Arcane Crystal Rapier</text>
 <text id="3040500">Reinforced Crystal Rapier</text>
-<text id="3040600">Fire Crystal Rapier</text>
+<text id="3040600">Seething Crystal Rapier</text>
 <text id="3040700">Chaos Crystal Rapier</text>
 <text id="3040800">Lightning Crystal Rapier</text>
 <text id="3040900">Deep Crystal Rapier</text>
@@ -495,7 +495,7 @@
 <text id="4010300">Refined Shotel</text>
 <text id="4010400">Arcane Shotel</text>
 <text id="4010500">Crystal Shotel</text>
-<text id="4010600">Fire Shotel</text>
+<text id="4010600">Seething Shotel</text>
 <text id="4010700">Chaos Shotel</text>
 <text id="4010800">Lightning Shotel</text>
 <text id="4010900">Deep Shotel</text>
@@ -511,7 +511,7 @@
 <text id="4030300">Refined Scimitar</text>
 <text id="4030400">Arcane Scimitar</text>
 <text id="4030500">Crystal Scimitar</text>
-<text id="4030600">Fire Scimitar</text>
+<text id="4030600">Seething Scimitar</text>
 <text id="4030700">Chaos Scimitar</text>
 <text id="4030800">Lightning Scimitar</text>
 <text id="4030900">Deep Scimitar</text>
@@ -527,7 +527,7 @@
 <text id="4040300">Refined Falchion</text>
 <text id="4040400">Arcane Falchion</text>
 <text id="4040500">Crystal Falchion</text>
-<text id="4040600">Fire Falchion</text>
+<text id="4040600">Seething Falchion</text>
 <text id="4040700">Chaos Falchion</text>
 <text id="4040800">Lightning Falchion</text>
 <text id="4040900">Deep Falchion</text>
@@ -543,7 +543,7 @@
 <text id="4050300">Refined Carthus Sword</text>
 <text id="4050400">Arcane Carthus Sword</text>
 <text id="4050500">Crystal Carthus Sword</text>
-<text id="4050600">Fire Carthus Sword</text>
+<text id="4050600">Seething Carthus Sword</text>
 <text id="4050700">Chaos Carthus Sword</text>
 <text id="4050800">Lightning Carthus Sword</text>
 <text id="4050900">Deep Carthus Sword</text>
@@ -559,7 +559,7 @@
 <text id="4060300">Refined Carthus Greatsword</text>
 <text id="4060400">Arcane Carthus Greatsword</text>
 <text id="4060500">Crystal Carthus Greatsword</text>
-<text id="4060600">Fire Carthus Greatsword</text>
+<text id="4060600">Seething Carthus Greatsword</text>
 <text id="4060700">Chaos Carthus Greatsword</text>
 <text id="4060800">Lightning Carthus Greatsword</text>
 <text id="4060900">Deep Carthus Greatsword</text>
@@ -577,7 +577,7 @@
 <text id="4090300">Painting Guardian's Refined Sword</text>
 <text id="4090400">Painting Guardian's Arcane Sword</text>
 <text id="4090500">Painting Guardian's Crystal Sword</text>
-<text id="4090600">Painting Guardian's Fire Sword</text>
+<text id="4090600">Painting Guardian's Seething Sword</text>
 <text id="4090700">Painting Guardian's Chaos Sword</text>
 <text id="4090800">Painting Guardian's Lightning Sword</text>
 <text id="4090900">Painting Guardian's Deep Sword</text>
@@ -594,7 +594,7 @@
 <text id="4110300">Refined Carthus Shotel</text>
 <text id="4110400">Arcane Carthus Shotel</text>
 <text id="4110500">Crystal Carthus Shotel</text>
-<text id="4110600">Fire Carthus Shotel</text>
+<text id="4110600">Seething Carthus Shotel</text>
 <text id="4110700">Chaos Carthus Shotel</text>
 <text id="4110800">Lightning Carthus Shotel</text>
 <text id="4110900">Deep Carthus Shotel</text>
@@ -610,7 +610,7 @@
 <text id="5000300">Refined Uchigatana</text>
 <text id="5000400">Arcane Uchigatana</text>
 <text id="5000500">Crystal Uchigatana</text>
-<text id="5000600">Fire Uchigatana</text>
+<text id="5000600">Seething Uchigatana</text>
 <text id="5000700">Chaos Uchigatana</text>
 <text id="5000800">Lightning Uchigatana</text>
 <text id="5000900">Deep Uchigatana</text>
@@ -626,7 +626,7 @@
 <text id="5010300">Refined Washing Pole</text>
 <text id="5010400">Arcane Washing Pole</text>
 <text id="5010500">Crystal Washing Pole</text>
-<text id="5010600">Fire Washing Pole</text>
+<text id="5010600">Seething Washing Pole</text>
 <text id="5010700">Chaos Washing Pole</text>
 <text id="5010800">Lightning Washing Pole</text>
 <text id="5010900">Deep Washing Pole</text>
@@ -643,7 +643,7 @@
 <text id="5030300">Refined Black Blade</text>
 <text id="5030400">Arcane Black Blade</text>
 <text id="5030500">Crystal Black Blade</text>
-<text id="5030600">Fire Black Blade</text>
+<text id="5030600">Seething Black Blade</text>
 <text id="5030700">Chaos Black Blade</text>
 <text id="5030800">Lightning Black Blade</text>
 <text id="5030900">Deep Black Blade</text>
@@ -661,7 +661,7 @@
 <text id="6000300">Refined Bastard Sword</text>
 <text id="6000400">Arcane Bastard Sword</text>
 <text id="6000500">Crystal Bastard Sword</text>
-<text id="6000600">Fire Bastard Sword</text>
+<text id="6000600">Seething Bastard Sword</text>
 <text id="6000700">Chaos Bastard Sword</text>
 <text id="6000800">Lightning Bastard Sword</text>
 <text id="6000900">Deep Bastard Sword</text>
@@ -677,7 +677,7 @@
 <text id="6020300">Refined Claymore</text>
 <text id="6020400">Arcane Claymore</text>
 <text id="6020500">Crystal Claymore</text>
-<text id="6020600">Fire Claymore</text>
+<text id="6020600">Seething Claymore</text>
 <text id="6020700">Chaos Claymore</text>
 <text id="6020800">Lightning Claymore</text>
 <text id="6020900">Deep Claymore</text>
@@ -693,7 +693,7 @@
 <text id="6040300">Refined Zweihander</text>
 <text id="6040400">Arcane Zweihander</text>
 <text id="6040500">Crystal Zweihander</text>
-<text id="6040600">Fire Zweihander</text>
+<text id="6040600">Seething Zweihander</text>
 <text id="6040700">Chaos Zweihander</text>
 <text id="6040800">Lightning Zweihander</text>
 <text id="6040900">Deep Zweihander</text>
@@ -709,7 +709,7 @@
 <text id="6050300">Refined Greatsword</text>
 <text id="6050400">Arcane Greatsword</text>
 <text id="6050500">Crystal Greatsword</text>
-<text id="6050600">Fire Greatsword</text>
+<text id="6050600">Seething Greatsword</text>
 <text id="6050700">Chaos Greatsword</text>
 <text id="6050800">Lightning Greatsword</text>
 <text id="6050900">Deep Greatsword</text>
@@ -725,7 +725,7 @@
 <text id="6070300">Refined Astora Greatsword</text>
 <text id="6070400">Arcane Astora Greatsword</text>
 <text id="6070500">Crystal Astora Greatsword</text>
-<text id="6070600">Fire Astora Greatsword</text>
+<text id="6070600">Seething Astora Greatsword</text>
 <text id="6070700">Chaos Astora Greatsword</text>
 <text id="6070800">Lightning Astora Greatsword</text>
 <text id="6070900">Deep Astora Greatsword</text>
@@ -741,7 +741,7 @@
 <text id="6080300">Refined Murakumo</text>
 <text id="6080400">Arcane Murakumo</text>
 <text id="6080500">Crystal Murakumo</text>
-<text id="6080600">Fire Murakumo</text>
+<text id="6080600">Seething Murakumo</text>
 <text id="6080700">Chaos Murakumo</text>
 <text id="6080800">Lightning Murakumo</text>
 <text id="6080900">Deep Murakumo</text>
@@ -757,7 +757,7 @@
 <text id="6100300">Refined Lothric Greatsword</text>
 <text id="6100400">Arcane Lothric Greatsword</text>
 <text id="6100500">Crystal Lothric Greatsword</text>
-<text id="6100600">Fire Lothric Greatsword</text>
+<text id="6100600">Seething Lothric Greatsword</text>
 <text id="6100700">Chaos Lothric Greatsword</text>
 <text id="6100800">Lightning Lothric Greatsword</text>
 <text id="6100900">Deep Lothric Greatsword</text>
@@ -773,7 +773,7 @@
 <text id="6130300">Refined Black Knight Greatsword</text>
 <text id="6130400">Arcane Black Knight Greatsword</text>
 <text id="6130500">Crystal Black Knight Greatsword</text>
-<text id="6130600">Fire Black Knight Greatsword</text>
+<text id="6130600">Seething Black Knight Greatsword</text>
 <text id="6130700">Chaos Black Knight Greatsword</text>
 <text id="6130800">Lightning Black Knight Greatsword</text>
 <text id="6130900">Deep Black Knight Greatsword</text>
@@ -789,7 +789,7 @@
 <text id="6140300">Refined Flamberge</text>
 <text id="6140400">Arcane Flamberge</text>
 <text id="6140500">Crystal Flamberge</text>
-<text id="6140600">Fire Flamberge</text>
+<text id="6140600">Seething Flamberge</text>
 <text id="6140700">Chaos Flamberge</text>
 <text id="6140800">Lightning Flamberge</text>
 <text id="6140900">Deep Flamberge</text>
@@ -805,7 +805,7 @@
 <text id="6150300">Refined Exile Greatsword</text>
 <text id="6150400">Arcane Exile Greatsword</text>
 <text id="6150500">Crystal Exile Greatsword</text>
-<text id="6150600">Fire Exile Greatsword</text>
+<text id="6150600">Seething Exile Greatsword</text>
 <text id="6150700">Chaos Exile Greatsword</text>
 <text id="6150800">Lightning Exile Greatsword</text>
 <text id="6150900">Deep Exile Greatsword</text>
@@ -823,7 +823,7 @@
 <text id="6190300">Refined Cathedral Greatsword</text>
 <text id="6190400">Arcane Cathedral Greatsword</text>
 <text id="6190500">Crystal Cathedral Greatsword</text>
-<text id="6190600">Fire Cathedral Greatsword</text>
+<text id="6190600">Seething Cathedral Greatsword</text>
 <text id="6190700">Chaos Cathedral Greatsword</text>
 <text id="6190800">Lightning Cathedral Greatsword</text>
 <text id="6190900">Deep Cathedral Greatsword</text>
@@ -841,7 +841,7 @@
 <text id="6240300">Refined Dark Sword</text>
 <text id="6240400">Arcane Dark Sword</text>
 <text id="6240500">Crystal Dark Sword</text>
-<text id="6240600">Fire Dark Sword</text>
+<text id="6240600">Seething Dark Sword</text>
 <text id="6240700">Chaos Dark Sword</text>
 <text id="6240800">Lightning Dark Sword</text>
 <text id="6240900">Deep Dark Sword</text>
@@ -857,7 +857,7 @@
 <text id="6250300">Refined Black Knight Sword</text>
 <text id="6250400">Arcane Black Knight Sword</text>
 <text id="6250500">Crystal Black Knight Sword</text>
-<text id="6250600">Fire Black Knight Sword</text>
+<text id="6250600">Seething Black Knight Sword</text>
 <text id="6250700">Chaos Black Knight Sword</text>
 <text id="6250800">Lightning Black Knight Sword</text>
 <text id="6250900">Deep Black Knight Sword</text>
@@ -893,7 +893,7 @@
 <text id="6310300">Refined Hollowslayer Greatsword</text>
 <text id="6310400">Arcane Hollowslayer Greatsword</text>
 <text id="6310500">Crystal Hollowslayer Greatsword</text>
-<text id="6310600">Fire Hollowslayer Greatsword</text>
+<text id="6310600">Seething Hollowslayer Greatsword</text>
 <text id="6310700">Chaos Hollowslayer Greatsword</text>
 <text id="6310800">Lightning Hollowslayer Greatsword</text>
 <text id="6310900">Deep Hollowslayer Greatsword</text>
@@ -910,7 +910,7 @@
 <text id="6330300">Refined Drakeblood Greatsword</text>
 <text id="6330400">Arcane Drakeblood Greatsword</text>
 <text id="6330500">Crystal Drakeblood Greatsword</text>
-<text id="6330600">Fire Drakeblood Greatsword</text>
+<text id="6330600">Seething Drakeblood Greatsword</text>
 <text id="6330700">Chaos Drakeblood Greatsword</text>
 <text id="6330800">Lightning Drakeblood Greatsword</text>
 <text id="6330900">Deep Drakeblood Greatsword</text>
@@ -930,7 +930,7 @@
 <text id="7000300">Refined Hand Axe</text>
 <text id="7000400">Arcane Hand Axe</text>
 <text id="7000500">Crystal Hand Axe</text>
-<text id="7000600">Fire Hand Axe</text>
+<text id="7000600">Seething Hand Axe</text>
 <text id="7000700">Chaos Hand Axe</text>
 <text id="7000800">Lightning Hand Axe</text>
 <text id="7000900">Deep Hand Axe</text>
@@ -946,7 +946,7 @@
 <text id="7010300">Refined Battle Axe</text>
 <text id="7010400">Arcane Battle Axe</text>
 <text id="7010500">Crystal Battle Axe</text>
-<text id="7010600">Fire Battle Axe</text>
+<text id="7010600">Seething Battle Axe</text>
 <text id="7010700">Chaos Battle Axe</text>
 <text id="7010800">Lightning Battle Axe</text>
 <text id="7010900">Deep Battle Axe</text>
@@ -962,7 +962,7 @@
 <text id="7020300">Refined Brigand Axe</text>
 <text id="7020400">Arcane Brigand Axe</text>
 <text id="7020500">Crystal Brigand Axe</text>
-<text id="7020600">Fire Brigand Axe</text>
+<text id="7020600">Seething Brigand Axe</text>
 <text id="7020700">Chaos Brigand Axe</text>
 <text id="7020800">Lightning Brigand Axe</text>
 <text id="7020900">Deep Brigand Axe</text>
@@ -978,7 +978,7 @@
 <text id="7040300">Refined Crescent Axe</text>
 <text id="7040400">Arcane Crescent Axe</text>
 <text id="7040500">Crystal Crescent Axe</text>
-<text id="7040600">Fire Crescent Axe</text>
+<text id="7040600">Seething Crescent Axe</text>
 <text id="7040700">Chaos Crescent Axe</text>
 <text id="7040800">Lightning Crescent Axe</text>
 <text id="7040900">Deep Crescent Axe</text>
@@ -994,7 +994,7 @@
 <text id="7050300">Refined Greataxe</text>
 <text id="7050400">Arcane Greataxe</text>
 <text id="7050500">Crystal Greataxe</text>
-<text id="7050600">Fire Greataxe</text>
+<text id="7050600">Seething Greataxe</text>
 <text id="7050700">Chaos Greataxe</text>
 <text id="7050800">Lightning Greataxe</text>
 <text id="7050900">Deep Greataxe</text>
@@ -1010,7 +1010,7 @@
 <text id="7070300">Refined Butcher Knife</text>
 <text id="7070400">Arcane Butcher Knife</text>
 <text id="7070500">Crystal Butcher Knife</text>
-<text id="7070600">Fire Butcher Knife</text>
+<text id="7070600">Seething Butcher Knife</text>
 <text id="7070700">Chaos Butcher Knife</text>
 <text id="7070800">Lightning Butcher Knife</text>
 <text id="7070900">Deep Butcher Knife</text>
@@ -1026,7 +1026,7 @@
 <text id="7080300">Refined Dragonslayer's Axe</text>
 <text id="7080400">Arcane Dragonslayer's Axe</text>
 <text id="7080500">Crystal Dragonslayer's Axe</text>
-<text id="7080600">Fire Dragonslayer's Axe</text>
+<text id="7080600">Seething Dragonslayer's Axe</text>
 <text id="7080700">Chaos Dragonslayer's Axe</text>
 <text id="7080800">Lightning Dragonslayer's Axe</text>
 <text id="7080900">Deep Dragonslayer's Axe</text>
@@ -1042,7 +1042,7 @@
 <text id="7090300">Refined Missionary's Axe</text>
 <text id="7090400">Arcane Missionary's Axe</text>
 <text id="7090500">Crystal Missionary's Axe</text>
-<text id="7090600">Fire Missionary's Axe</text>
+<text id="7090600">Seething Missionary's Axe</text>
 <text id="7090700">Chaos Missionary's Axe</text>
 <text id="7090800">Lightning Missionary's Axe</text>
 <text id="7090900">Deep Missionary's Axe</text>
@@ -1058,7 +1058,7 @@
 <text id="7100300">Refined Thrall Axe</text>
 <text id="7100400">Arcane Thrall Axe</text>
 <text id="7100500">Crystal Thrall Axe</text>
-<text id="7100600">Fire Thrall Axe</text>
+<text id="7100600">Seething Thrall Axe</text>
 <text id="7100700">Chaos Thrall Axe</text>
 <text id="7100800">Lightning Thrall Axe</text>
 <text id="7100900">Deep Thrall Axe</text>
@@ -1077,7 +1077,7 @@
 <text id="7150300">Refined Serpent Hatchet</text>
 <text id="7150400">Arcane Serpent Hatchet</text>
 <text id="7150500">Crystal Serpent Hatchet</text>
-<text id="7150600">Fire Serpent Hatchet</text>
+<text id="7150600">Seething Serpent Hatchet</text>
 <text id="7150700">Chaos Serpent Hatchet</text>
 <text id="7150800">Lightning Serpent Hatchet</text>
 <text id="7150900">Deep Serpent Hatchet</text>
@@ -1094,7 +1094,7 @@
 <text id="8000300">Refined Club</text>
 <text id="8000400">Arcane Club</text>
 <text id="8000500">Crystal Club</text>
-<text id="8000600">Fire Club</text>
+<text id="8000600">Seething Club</text>
 <text id="8000700">Chaos Club</text>
 <text id="8000800">Lightning Club</text>
 <text id="8000900">Deep Club</text>
@@ -1110,7 +1110,7 @@
 <text id="8010300">Refined Mace</text>
 <text id="8010400">Arcane Mace</text>
 <text id="8010500">Crystal Mace</text>
-<text id="8010600">Fire Mace</text>
+<text id="8010600">Seething Mace</text>
 <text id="8010700">Chaos Mace</text>
 <text id="8010800">Lightning Mace</text>
 <text id="8010900">Deep Mace</text>
@@ -1126,7 +1126,7 @@
 <text id="8020300">Refined Morning Star</text>
 <text id="8020400">Arcane Morning Star</text>
 <text id="8020500">Crystal Morning Star</text>
-<text id="8020600">Fire Morning Star</text>
+<text id="8020600">Seething Morning Star</text>
 <text id="8020700">Chaos Morning Star</text>
 <text id="8020800">Lightning Morning Star</text>
 <text id="8020900">Deep Morning Star</text>
@@ -1142,7 +1142,7 @@
 <text id="8030300">Refined Reinforced Club</text>
 <text id="8030400">Arcane Reinforced Club</text>
 <text id="8030500">Crystal Reinforced Club</text>
-<text id="8030600">Fire Reinforced Club</text>
+<text id="8030600">Seething Reinforced Club</text>
 <text id="8030700">Chaos Reinforced Club</text>
 <text id="8030800">Lightning Reinforced Club</text>
 <text id="8030900">Deep Reinforced Club</text>
@@ -1158,7 +1158,7 @@
 <text id="8060300">Refined Large Club</text>
 <text id="8060400">Arcane Large Club</text>
 <text id="8060500">Crystal Large Club</text>
-<text id="8060600">Fire Large Club</text>
+<text id="8060600">Seething Large Club</text>
 <text id="8060700">Chaos Large Club</text>
 <text id="8060800">Lightning Large Club</text>
 <text id="8060900">Deep Large Club</text>
@@ -1174,7 +1174,7 @@
 <text id="8080300">Refined Great Club</text>
 <text id="8080400">Arcane Great Club</text>
 <text id="8080500">Crystal Great Club</text>
-<text id="8080600">Fire Great Club</text>
+<text id="8080600">Seething Great Club</text>
 <text id="8080700">Chaos Great Club</text>
 <text id="8080800">Lightning Great Club</text>
 <text id="8080900">Deep Great Club</text>
@@ -1190,7 +1190,7 @@
 <text id="8110300">Refined Great Mace</text>
 <text id="8110400">Arcane Great Mace</text>
 <text id="8110500">Crystal Great Mace</text>
-<text id="8110600">Fire Great Mace</text>
+<text id="8110600">Seething Great Mace</text>
 <text id="8110700">Chaos Great Mace</text>
 <text id="8110800">Lightning Great Mace</text>
 <text id="8110900">Deep Great Mace</text>
@@ -1206,7 +1206,7 @@
 <text id="8160300">Refined Wooden Hammer</text>
 <text id="8160400">Arcane Wooden Hammer</text>
 <text id="8160500">Crystal Wooden Hammer</text>
-<text id="8160600">Fire Wooden Hammer</text>
+<text id="8160600">Seething Wooden Hammer</text>
 <text id="8160700">Chaos Wooden Hammer</text>
 <text id="8160800">Lightning Wooden Hammer</text>
 <text id="8160900">Deep Wooden Hammer</text>
@@ -1228,7 +1228,7 @@
 <text id="8240300">Refined Warpick</text>
 <text id="8240400">Arcane Warpick</text>
 <text id="8240500">Crystal Warpick</text>
-<text id="8240600">Fire Warpick</text>
+<text id="8240600">Seething Warpick</text>
 <text id="8240700">Chaos Warpick</text>
 <text id="8240800">Lightning Warpick</text>
 <text id="8240900">Deep Warpick</text>
@@ -1244,7 +1244,7 @@
 <text id="8250300">Refined Pickaxe</text>
 <text id="8250400">Arcane Pickaxe</text>
 <text id="8250500">Crystal Pickaxe</text>
-<text id="8250600">Fire Pickaxe</text>
+<text id="8250600">Seething Pickaxe</text>
 <text id="8250700">Chaos Pickaxe</text>
 <text id="8250800">Lightning Pickaxe</text>
 <text id="8250900">Deep Pickaxe</text>
@@ -1263,7 +1263,7 @@
 <text id="8280300">Refined Blacksmith Hammer</text>
 <text id="8280400">Arcane Blacksmith Hammer</text>
 <text id="8280500">Crystal Blacksmith Hammer</text>
-<text id="8280600">Fire Blacksmith Hammer</text>
+<text id="8280600">Seething Blacksmith Hammer</text>
 <text id="8280700">Chaos Blacksmith Hammer</text>
 <text id="8280800">Lightning Blacksmith Hammer</text>
 <text id="8280900">Deep Blacksmith Hammer</text>
@@ -1279,7 +1279,7 @@
 <text id="8290300">Morne's Refined Hammer</text>
 <text id="8290400">Morne's Arcane Hammer</text>
 <text id="8290500">Morne's Crystal Hammer</text>
-<text id="8290600">Morne's Fire Hammer</text>
+<text id="8290600">Morne's Seething Hammer</text>
 <text id="8290700">Morne's Chaos Hammer</text>
 <text id="8290800">Morne's Lightning Hammer</text>
 <text id="8290900">Morne's Deep Hammer</text>
@@ -1295,7 +1295,7 @@
 <text id="8300300">Refined Spiked Mace</text>
 <text id="8300400">Arcane Spiked Mace</text>
 <text id="8300500">Crystal Spiked Mace</text>
-<text id="8300600">Fire Spiked Mace</text>
+<text id="8300600">Seething Spiked Mace</text>
 <text id="8300700">Chaos Spiked Mace</text>
 <text id="8300800">Lightning Spiked Mace</text>
 <text id="8300900">Deep Spiked Mace</text>
@@ -1311,7 +1311,7 @@
 <text id="9000300">Refined Spear</text>
 <text id="9000400">Arcane Spear</text>
 <text id="9000500">Crystal Spear</text>
-<text id="9000600">Fire Spear</text>
+<text id="9000600">Seething Spear</text>
 <text id="9000700">Chaos Spear</text>
 <text id="9000800">Lightning Spear</text>
 <text id="9000900">Deep Spear</text>
@@ -1327,7 +1327,7 @@
 <text id="9010300">Refined Winged Spear</text>
 <text id="9010400">Arcane Winged Spear</text>
 <text id="9010500">Crystal Winged Spear</text>
-<text id="9010600">Fire Winged Spear</text>
+<text id="9010600">Seething Winged Spear</text>
 <text id="9010700">Chaos Winged Spear</text>
 <text id="9010800">Lightning Winged Spear</text>
 <text id="9010900">Deep Winged Spear</text>
@@ -1343,7 +1343,7 @@
 <text id="9030300">Refined Partizan</text>
 <text id="9030400">Arcane Partizan</text>
 <text id="9030500">Crystal Partizan</text>
-<text id="9030600">Fire Partizan</text>
+<text id="9030600">Seething Partizan</text>
 <text id="9030700">Chaos Partizan</text>
 <text id="9030800">Lightning Partizan</text>
 <text id="9030900">Deep Partizan</text>
@@ -1359,7 +1359,7 @@
 <text id="9080300">Refined Greatlance</text>
 <text id="9080400">Arcane Greatlance</text>
 <text id="9080500">Crystal Greatlance</text>
-<text id="9080600">Fire Greatlance</text>
+<text id="9080600">Seething Greatlance</text>
 <text id="9080700">Chaos Greatlance</text>
 <text id="9080800">Lightning Greatlance</text>
 <text id="9080900">Deep Greatlance</text>
@@ -1375,7 +1375,7 @@
 <text id="9090300">Refined Lothric Long Spear</text>
 <text id="9090400">Arcane Lothric Long Spear</text>
 <text id="9090500">Crystal Lothric Long Spear</text>
-<text id="9090600">Fire Lothric Long Spear</text>
+<text id="9090600">Seething Lothric Long Spear</text>
 <text id="9090700">Chaos Lothric Long Spear</text>
 <text id="9090800">Lightning Lothric Long Spear</text>
 <text id="9090900">Deep Lothric Long Spear</text>
@@ -1391,7 +1391,7 @@
 <text id="9100300">Refined Four-Pronged Plow</text>
 <text id="9100400">Arcane Four-Pronged Plow</text>
 <text id="9100500">Crystal Four-Pronged Plow</text>
-<text id="9100600">Fire Four-Pronged Plow</text>
+<text id="9100600">Seething Four-Pronged Plow</text>
 <text id="9100700">Chaos Four-Pronged Plow</text>
 <text id="9100800">Lightning Four-Pronged Plow</text>
 <text id="9100900">Deep Four-Pronged Plow</text>
@@ -1408,7 +1408,7 @@
 <text id="9120300">Refined Rotten Ghru Spear</text>
 <text id="9120400">Arcane Rotten Ghru Spear</text>
 <text id="9120500">Crystal Rotten Ghru Spear</text>
-<text id="9120600">Fire Rotten Ghru Spear</text>
+<text id="9120600">Seething Rotten Ghru Spear</text>
 <text id="9120700">Chaos Rotten Ghru Spear</text>
 <text id="9120800">Lightning Rotten Ghru Spear</text>
 <text id="9120900">Deep Rotten Ghru Spear</text>
@@ -1425,7 +1425,7 @@
 <text id="9140300">Refined Soldering Iron</text>
 <text id="9140400">Arcane Soldering Iron</text>
 <text id="9140500">Crystal Soldering Iron</text>
-<text id="9140600">Fire Soldering Iron</text>
+<text id="9140600">Seething Soldering Iron</text>
 <text id="9140700">Chaos Soldering Iron</text>
 <text id="9140800">Lightning Soldering Iron</text>
 <text id="9140900">Deep Soldering Iron</text>
@@ -1443,7 +1443,7 @@
 <text id="9180300">Refined Saint Bident</text>
 <text id="9180400">Arcane Saint Bident</text>
 <text id="9180500">Crystal Saint Bident</text>
-<text id="9180600">Fire Saint Bident</text>
+<text id="9180600">Seething Saint Bident</text>
 <text id="9180700">Chaos Saint Bident</text>
 <text id="9180800">Lightning Saint Bident</text>
 <text id="9180900">Deep Saint Bident</text>
@@ -1460,7 +1460,7 @@
 <text id="9200300">Refined Pike</text>
 <text id="9200400">Arcane Pike</text>
 <text id="9200500">Crystal Pike</text>
-<text id="9200600">Fire Pike</text>
+<text id="9200600">Seething Pike</text>
 <text id="9200700">Chaos Pike</text>
 <text id="9200800">Lightning Pike</text>
 <text id="9200900">Deep Pike</text>
@@ -1476,7 +1476,7 @@
 <text id="9210300">Refined Four-pronged Plow</text>
 <text id="9210400">Arcane Four-pronged Plow</text>
 <text id="9210500">Crystal Four-pronged Plow</text>
-<text id="9210600">Fire Four-pronged Plow</text>
+<text id="9210600">Seething Four-pronged Plow</text>
 <text id="9210700">Chaos Four-pronged Plow</text>
 <text id="9210800">Lightning Four-pronged Plow</text>
 <text id="9210900">Deep Four-pronged Plow</text>
@@ -1493,7 +1493,7 @@
 <text id="10000300">Refined Great Scythe</text>
 <text id="10000400">Arcane Great Scythe</text>
 <text id="10000500">Crystal Great Scythe</text>
-<text id="10000600">Fire Great Scythe</text>
+<text id="10000600">Seething Great Scythe</text>
 <text id="10000700">Chaos Great Scythe</text>
 <text id="10000800">Lightning Great Scythe</text>
 <text id="10000900">Deep Great Scythe</text>
@@ -1509,7 +1509,7 @@
 <text id="10010300">Refined Lucerne</text>
 <text id="10010400">Arcane Lucerne</text>
 <text id="10010500">Crystal Lucerne</text>
-<text id="10010600">Fire Lucerne</text>
+<text id="10010600">Seething Lucerne</text>
 <text id="10010700">Chaos Lucerne</text>
 <text id="10010800">Lightning Lucerne</text>
 <text id="10010900">Deep Lucerne</text>
@@ -1525,7 +1525,7 @@
 <text id="10020300">Refined Glaive</text>
 <text id="10020400">Arcane Glaive</text>
 <text id="10020500">Crystal Glaive</text>
-<text id="10020600">Fire Glaive</text>
+<text id="10020600">Seething Glaive</text>
 <text id="10020700">Chaos Glaive</text>
 <text id="10020800">Lightning Glaive</text>
 <text id="10020900">Deep Glaive</text>
@@ -1541,7 +1541,7 @@
 <text id="10030300">Refined Halberd</text>
 <text id="10030400">Arcane Halberd</text>
 <text id="10030500">Crystal Halberd</text>
-<text id="10030600">Fire Halberd</text>
+<text id="10030600">Seething Halberd</text>
 <text id="10030700">Chaos Halberd</text>
 <text id="10030800">Lightning Halberd</text>
 <text id="10030900">Deep Halberd</text>
@@ -1557,7 +1557,7 @@
 <text id="10050300">Refined Black Knight Greataxe</text>
 <text id="10050400">Arcane Black Knight Greataxe</text>
 <text id="10050500">Crystal Black Knight Greataxe</text>
-<text id="10050600">Fire Black Knight Greataxe</text>
+<text id="10050600">Seething Black Knight Greataxe</text>
 <text id="10050700">Chaos Black Knight Greataxe</text>
 <text id="10050800">Lightning Black Knight Greataxe</text>
 <text id="10050900">Deep Black Knight Greataxe</text>
@@ -1574,7 +1574,7 @@
 <text id="10080300">Refined Corvian Scythe</text>
 <text id="10080400">Arcane Corvian Scythe</text>
 <text id="10080500">Crystal Corvian Scythe</text>
-<text id="10080600">Fire Corvian Scythe</text>
+<text id="10080600">Seething Corvian Scythe</text>
 <text id="10080700">Chaos Corvian Scythe</text>
 <text id="10080800">Lightning Corvian Scythe</text>
 <text id="10080900">Deep Corvian Scythe</text>
@@ -1590,7 +1590,7 @@
 <text id="10090300">Refined Winged Knight Halberd</text>
 <text id="10090400">Arcane Winged Knight Halberd</text>
 <text id="10090500">Crystal Winged Knight Halberd</text>
-<text id="10090600">Fire Winged Knight Halberd</text>
+<text id="10090600">Seething Winged Knight Halberd</text>
 <text id="10090700">Chaos Winged Knight Halberd</text>
 <text id="10090800">Lightning Winged Knight Halberd</text>
 <text id="10090900">Deep Winged Knight Halberd</text>
@@ -1610,7 +1610,7 @@
 <text id="10140300">Refined Red Halberd</text>
 <text id="10140400">Arcane Red Halberd</text>
 <text id="10140500">Crystal Red Halberd</text>
-<text id="10140600">Fire Red Halberd</text>
+<text id="10140600">Seething Red Halberd</text>
 <text id="10140700">Chaos Red Halberd</text>
 <text id="10140800">Lightning Red Halberd</text>
 <text id="10140900">Deep Red Halberd</text>
@@ -1626,7 +1626,7 @@
 <text id="10150300">Refined Black Knight Glaive</text>
 <text id="10150400">Arcane Black Knight Glaive</text>
 <text id="10150500">Crystal Black Knight Glaive</text>
-<text id="10150600">Fire Black Knight Glaive</text>
+<text id="10150600">Seething Black Knight Glaive</text>
 <text id="10150700">Chaos Black Knight Glaive</text>
 <text id="10150800">Lightning Black Knight Glaive</text>
 <text id="10150900">Deep Black Knight Glaive</text>
@@ -1643,7 +1643,7 @@
 <text id="11000300">Refined Claw</text>
 <text id="11000400">Arcane Claw</text>
 <text id="11000500">Crystal Claw</text>
-<text id="11000600">Fire Claw</text>
+<text id="11000600">Seething Claw</text>
 <text id="11000700">Chaos Claw</text>
 <text id="11000800">Lightning Claw</text>
 <text id="11000900">Deep Claw</text>
@@ -1659,7 +1659,7 @@
 <text id="11010300">Refined Caestus</text>
 <text id="11010400">Arcane Caestus</text>
 <text id="11010500">Crystal Caestus</text>
-<text id="11010600">Fire Caestus</text>
+<text id="11010600">Seething Caestus</text>
 <text id="11010700">Chaos Caestus</text>
 <text id="11010800">Lightning Caestus</text>
 <text id="11010900">Deep Caestus</text>
@@ -1675,7 +1675,7 @@
 <text id="11020300">Refined Manikin Claws</text>
 <text id="11020400">Arcane Manikin Claws</text>
 <text id="11020500">Crystal Manikin Claws</text>
-<text id="11020600">Fire Manikin Claws</text>
+<text id="11020600">Seething Manikin Claws</text>
 <text id="11020700">Chaos Manikin Claws</text>
 <text id="11020800">Lightning Manikin Claws</text>
 <text id="11020900">Deep Manikin Claws</text>
@@ -1693,7 +1693,7 @@
 <text id="12000300">Refined Whip</text>
 <text id="12000400">Arcane Whip</text>
 <text id="12000500">Crystal Whip</text>
-<text id="12000600">Fire Whip</text>
+<text id="12000600">Seething Whip</text>
 <text id="12000700">Chaos Whip</text>
 <text id="12000800">Lightning Whip</text>
 <text id="12000900">Deep Whip</text>
@@ -1710,7 +1710,7 @@
 <text id="12050300">Refined Notched Whip</text>
 <text id="12050400">Arcane Notched Whip</text>
 <text id="12050500">Crystal Notched Whip</text>
-<text id="12050600">Fire Notched Whip</text>
+<text id="12050600">Seething Notched Whip</text>
 <text id="12050700">Chaos Notched Whip</text>
 <text id="12050800">Lightning Notched Whip</text>
 <text id="12050900">Deep Notched Whip</text>
@@ -1757,7 +1757,7 @@
 <text id="14010300">Refined Short Bow</text>
 <text id="14010400">Arcane Short Bow</text>
 <text id="14010500">Crystal Short Bow</text>
-<text id="14010600">Fire Short Bow</text>
+<text id="14010600">Seething Short Bow</text>
 <text id="14010700">Chaos Short Bow</text>
 <text id="14010800">Lightning Short Bow</text>
 <text id="14010900">Deep Short Bow</text>
@@ -1773,7 +1773,7 @@
 <text id="14020300">Refined Composite Bow</text>
 <text id="14020400">Arcane Composite Bow</text>
 <text id="14020500">Crystal Composite Bow</text>
-<text id="14020600">Fire Composite Bow</text>
+<text id="14020600">Seething Composite Bow</text>
 <text id="14020700">Chaos Composite Bow</text>
 <text id="14020800">Lightning Composite Bow</text>
 <text id="14020900">Deep Composite Bow</text>
@@ -1789,7 +1789,7 @@
 <text id="14040300">Refined Soldier's Crossbow</text>
 <text id="14040400">Arcane Soldier's Crossbow</text>
 <text id="14040500">Crystal Soldier's Crossbow</text>
-<text id="14040600">Fire Soldier's Crossbow</text>
+<text id="14040600">Seething Soldier's Crossbow</text>
 <text id="14040700">Chaos Soldier's Crossbow</text>
 <text id="14040800">Lightning Soldier's Crossbow</text>
 <text id="14040900">Deep Soldier's Crossbow</text>
@@ -1805,7 +1805,7 @@
 <text id="14050300">Refined Heavy Crossbow</text>
 <text id="14050400">Arcane Heavy Crossbow</text>
 <text id="14050500">Crystal Heavy Crossbow</text>
-<text id="14050600">Fire Heavy Crossbow</text>
+<text id="14050600">Seething Heavy Crossbow</text>
 <text id="14050700">Chaos Heavy Crossbow</text>
 <text id="14050800">Lightning Heavy Crossbow</text>
 <text id="14050900">Deep Heavy Crossbow</text>
@@ -1821,7 +1821,7 @@
 <text id="14060300">Refined Longbow</text>
 <text id="14060400">Arcane Longbow</text>
 <text id="14060500">Crystal Longbow</text>
-<text id="14060600">Fire Longbow</text>
+<text id="14060600">Seething Longbow</text>
 <text id="14060700">Chaos Longbow</text>
 <text id="14060800">Lightning Longbow</text>
 <text id="14060900">Deep Longbow</text>
@@ -1837,7 +1837,7 @@
 <text id="14070300">Refined Dragonrider Bow</text>
 <text id="14070400">Arcane Dragonrider Bow</text>
 <text id="14070500">Crystal Dragonrider Bow</text>
-<text id="14070600">Fire Dragonrider Bow</text>
+<text id="14070600">Seething Dragonrider Bow</text>
 <text id="14070700">Chaos Dragonrider Bow</text>
 <text id="14070800">Lightning Dragonrider Bow</text>
 <text id="14070900">Deep Dragonrider Bow</text>
@@ -1853,7 +1853,7 @@
 <text id="14090300">Refined Avelyn</text>
 <text id="14090400">Arcane Avelyn</text>
 <text id="14090500">Crystal Avelyn</text>
-<text id="14090600">Fire Avelyn</text>
+<text id="14090600">Seething Avelyn</text>
 <text id="14090700">Chaos Avelyn</text>
 <text id="14090800">Lightning Avelyn</text>
 <text id="14090900">Deep Avelyn</text>
@@ -1869,7 +1869,7 @@
 <text id="14100300">Refined Knight's Crossbow</text>
 <text id="14100400">Arcane Knight's Crossbow</text>
 <text id="14100500">Crystal Knight's Crossbow</text>
-<text id="14100600">Fire Knight's Crossbow</text>
+<text id="14100600">Seething Knight's Crossbow</text>
 <text id="14100700">Chaos Knight's Crossbow</text>
 <text id="14100800">Lightning Knight's Crossbow</text>
 <text id="14100900">Deep Knight's Crossbow</text>
@@ -1885,7 +1885,7 @@
 <text id="14110300">Refined Temple Knight's Crossbow</text>
 <text id="14110400">Arcane Temple Knight's Crossbow</text>
 <text id="14110500">Crystal Temple Knight's Crossbow</text>
-<text id="14110600">Fire Temple Knight's Crossbow</text>
+<text id="14110600">Seething Temple Knight's Crossbow</text>
 <text id="14110700">Chaos Temple Knight's Crossbow</text>
 <text id="14110800">Lightning Temple Knight's Crossbow</text>
 <text id="14110900">Deep Temple Knight's Crossbow</text>
@@ -1903,7 +1903,7 @@
 <text id="14150300">Refined Bow of Pharis</text>
 <text id="14150400">Arcane Bow of Pharis</text>
 <text id="14150500">Crystal Bow of Pharis</text>
-<text id="14150600">Fire Bow of Pharis</text>
+<text id="14150600">Seething Bow of Pharis</text>
 <text id="14150700">Chaos Bow of Pharis</text>
 <text id="14150800">Lightning Bow of Pharis</text>
 <text id="14150900">Deep Bow of Pharis</text>
@@ -1920,7 +1920,7 @@
 <text id="14170300">Refined Sniper Crossbow</text>
 <text id="14170400">Arcane Sniper Crossbow</text>
 <text id="14170500">Crystal Sniper Crossbow</text>
-<text id="14170600">Fire Sniper Crossbow</text>
+<text id="14170600">Seething Sniper Crossbow</text>
 <text id="14170700">Chaos Sniper Crossbow</text>
 <text id="14170800">Lightning Sniper Crossbow</text>
 <text id="14170900">Deep Sniper Crossbow</text>
@@ -1936,7 +1936,7 @@
 <text id="16000300">Refined Sellsword Twinblades</text>
 <text id="16000400">Arcane Sellsword Twinblades</text>
 <text id="16000500">Crystal Sellsword Twinblades</text>
-<text id="16000600">Fire Sellsword Twinblades</text>
+<text id="16000600">Seething Sellsword Twinblades</text>
 <text id="16000700">Chaos Sellsword Twinblades</text>
 <text id="16000800">Lightning Sellsword Twinblades</text>
 <text id="16000900">Deep Sellsword Twinblades</text>
@@ -1952,7 +1952,7 @@
 <text id="16020300">Refined Warden Twinblades</text>
 <text id="16020400">Arcane Warden Twinblades</text>
 <text id="16020500">Crystal Warden Twinblades</text>
-<text id="16020600">Fire Warden Twinblades</text>
+<text id="16020600">Seething Warden Twinblades</text>
 <text id="16020700">Chaos Warden Twinblades</text>
 <text id="16020800">Lightning Warden Twinblades</text>
 <text id="16020900">Deep Warden Twinblades</text>
@@ -1968,7 +1968,7 @@
 <text id="16030300">Refined Winged Knight Twinaxes</text>
 <text id="16030400">Arcane Winged Knight Twinaxes</text>
 <text id="16030500">Crystal Winged Knight Twinaxes</text>
-<text id="16030600">Fire Winged Knight Twinaxes</text>
+<text id="16030600">Seething Winged Knight Twinaxes</text>
 <text id="16030700">Chaos Winged Knight Twinaxes</text>
 <text id="16030800">Lightning Winged Knight Twinaxes</text>
 <text id="16030900">Deep Winged Knight Twinaxes</text>
@@ -1985,7 +1985,7 @@
 <text id="16050300">Refined Great Machete</text>
 <text id="16050400">Arcane Great Machete</text>
 <text id="16050500">Crystal Great Machete</text>
-<text id="16050600">Fire Great Machete</text>
+<text id="16050600">Seething Great Machete</text>
 <text id="16050700">Chaos Great Machete</text>
 <text id="16050800">Lightning Great Machete</text>
 <text id="16050900">Deep Great Machete</text>
@@ -2001,7 +2001,7 @@
 <text id="16060300">Refined Brigand Twindaggers</text>
 <text id="16060400">Arcane Brigand Twindaggers</text>
 <text id="16060500">Crystal Brigand Twindaggers</text>
-<text id="16060600">Fire Brigand Twindaggers</text>
+<text id="16060600">Seething Brigand Twindaggers</text>
 <text id="16060700">Chaos Brigand Twindaggers</text>
 <text id="16060800">Lightning Brigand Twindaggers</text>
 <text id="16060900">Deep Brigand Twindaggers</text>
@@ -2017,7 +2017,7 @@
 <text id="16070300">Refined Gotthard Twinswords</text>
 <text id="16070400">Arcane Gotthard Twinswords</text>
 <text id="16070500">Crystal Gotthard Twinswords</text>
-<text id="16070600">Fire Gotthard Twinswords</text>
+<text id="16070600">Seething Gotthard Twinswords</text>
 <text id="16070700">Chaos Gotthard Twinswords</text>
 <text id="16070800">Lightning Gotthard Twinswords</text>
 <text id="16070900">Deep Gotthard Twinswords</text>
@@ -2034,7 +2034,7 @@
 <text id="16090300">Refined Onikiri and Ubadachi</text>
 <text id="16090400">Arcane Onikiri and Ubadachi</text>
 <text id="16090500">Crystal Onikiri and Ubadachi</text>
-<text id="16090600">Fire Onikiri and Ubadachi</text>
+<text id="16090600">Seething Onikiri and Ubadachi</text>
 <text id="16090700">Chaos Onikiri and Ubadachi</text>
 <text id="16090800">Lightning Onikiri and Ubadachi</text>
 <text id="16090900">Deep Onikiri and Ubadachi</text>
@@ -2050,7 +2050,7 @@
 <text id="16100300">Refined Drang Twinspears</text>
 <text id="16100400">Arcane Drang Twinspears</text>
 <text id="16100500">Crystal Drang Twinspears</text>
-<text id="16100600">Fire Drang Twinspears</text>
+<text id="16100600">Seething Drang Twinspears</text>
 <text id="16100700">Chaos Drang Twinspears</text>
 <text id="16100800">Lightning Drang Twinspears</text>
 <text id="16100900">Deep Drang Twinspears</text>
@@ -2066,7 +2066,7 @@
 <text id="16130300">Refined Drang Hammers</text>
 <text id="16130400">Arcane Drang Hammers</text>
 <text id="16130500">Crystal Drang Hammers</text>
-<text id="16130600">Fire Drang Hammers</text>
+<text id="16130600">Seething Drang Hammers</text>
 <text id="16130700">Chaos Drang Hammers</text>
 <text id="16130800">Lightning Drang Hammers</text>
 <text id="16130900">Deep Drang Hammers</text>
@@ -2082,7 +2082,7 @@
 <text id="20000300">Refined Buckler</text>
 <text id="20000400">Arcane Buckler</text>
 <text id="20000500">Crystal Buckler</text>
-<text id="20000600">Fire Buckler</text>
+<text id="20000600">Seething Buckler</text>
 <text id="20000700">Chaos Buckler</text>
 <text id="20000800">Lightning Buckler</text>
 <text id="20000900">Deep Buckler</text>
@@ -2098,7 +2098,7 @@
 <text id="20010300">Refined Small Leather Shield</text>
 <text id="20010400">Arcane Small Leather Shield</text>
 <text id="20010500">Crystal Small Leather Shield</text>
-<text id="20010600">Fire Small Leather Shield</text>
+<text id="20010600">Seething Small Leather Shield</text>
 <text id="20010700">Chaos Small Leather Shield</text>
 <text id="20010800">Lightning Small Leather Shield</text>
 <text id="20010900">Deep Small Leather Shield</text>
@@ -2114,7 +2114,7 @@
 <text id="20030300">Refined Round Shield</text>
 <text id="20030400">Arcane Round Shield</text>
 <text id="20030500">Crystal Round Shield</text>
-<text id="20030600">Fire Round Shield</text>
+<text id="20030600">Seething Round Shield</text>
 <text id="20030700">Chaos Round Shield</text>
 <text id="20030800">Lightning Round Shield</text>
 <text id="20030900">Deep Round Shield</text>
@@ -2130,7 +2130,7 @@
 <text id="20040300">Refined Large Leather Shield</text>
 <text id="20040400">Arcane Large Leather Shield</text>
 <text id="20040500">Crystal Large Leather Shield</text>
-<text id="20040600">Fire Large Leather Shield</text>
+<text id="20040600">Seething Large Leather Shield</text>
 <text id="20040700">Chaos Large Leather Shield</text>
 <text id="20040800">Lightning Large Leather Shield</text>
 <text id="20040900">Deep Large Leather Shield</text>
@@ -2146,7 +2146,7 @@
 <text id="20070300">Hawkwood's Refined Shield</text>
 <text id="20070400">Hawkwood's Arcane Shield</text>
 <text id="20070500">Hawkwood's Crystal Shield</text>
-<text id="20070600">Hawkwood's Fire Shield</text>
+<text id="20070600">Hawkwood's Seething Shield</text>
 <text id="20070700">Hawkwood's Chaos Shield</text>
 <text id="20070800">Hawkwood's Lightning Shield</text>
 <text id="20070900">Hawkwood's Deep Shield</text>
@@ -2162,7 +2162,7 @@
 <text id="20080300">Refined Iron Shield</text>
 <text id="20080400">Arcane Iron Shield</text>
 <text id="20080500">Crystal Iron Shield</text>
-<text id="20080600">Fire Iron Shield</text>
+<text id="20080600">Seething Iron Shield</text>
 <text id="20080700">Chaos Iron Shield</text>
 <text id="20080800">Lightning Iron Shield</text>
 <text id="20080900">Deep Iron Shield</text>
@@ -2178,7 +2178,7 @@
 <text id="20110300">Refined Wooden Shield</text>
 <text id="20110400">Arcane Wooden Shield</text>
 <text id="20110500">Crystal Wooden Shield</text>
-<text id="20110600">Fire Wooden Shield</text>
+<text id="20110600">Seething Wooden Shield</text>
 <text id="20110700">Chaos Wooden Shield</text>
 <text id="20110800">Lightning Wooden Shield</text>
 <text id="20110900">Deep Wooden Shield</text>
@@ -2194,7 +2194,7 @@
 <text id="20120300">Refined Drangleic Shield</text>
 <text id="20120400">Arcane Drangleic Shield</text>
 <text id="20120500">Crystal Drangleic Shield</text>
-<text id="20120600">Fire Drangleic Shield</text>
+<text id="20120600">Seething Drangleic Shield</text>
 <text id="20120700">Chaos Drangleic Shield</text>
 <text id="20120800">Lightning Drangleic Shield</text>
 <text id="20120900">Deep Drangleic Shield</text>
@@ -2210,7 +2210,7 @@
 <text id="20130300">Refined Ghru Rotshield</text>
 <text id="20130400">Arcane Ghru Rotshield</text>
 <text id="20130500">Crystal Ghru Rotshield</text>
-<text id="20130600">Fire Ghru Rotshield</text>
+<text id="20130600">Seething Ghru Rotshield</text>
 <text id="20130700">Chaos Ghru Rotshield</text>
 <text id="20130800">Lightning Ghru Rotshield</text>
 <text id="20130900">Deep Ghru Rotshield</text>
@@ -2227,7 +2227,7 @@
 <text id="20160300">Refined Target Shield</text>
 <text id="20160400">Arcane Target Shield</text>
 <text id="20160500">Crystal Target Shield</text>
-<text id="20160600">Fire Target Shield</text>
+<text id="20160600">Seething Target Shield</text>
 <text id="20160700">Chaos Target Shield</text>
 <text id="20160800">Lightning Target Shield</text>
 <text id="20160900">Deep Target Shield</text>
@@ -2243,7 +2243,7 @@
 <text id="20170300">Refined Elkhorn Shield</text>
 <text id="20170400">Arcane Elkhorn Shield</text>
 <text id="20170500">Crystal Elkhorn Shield</text>
-<text id="20170600">Fire Elkhorn Shield</text>
+<text id="20170600">Seething Elkhorn Shield</text>
 <text id="20170700">Chaos Elkhorn Shield</text>
 <text id="20170800">Lightning Elkhorn Shield</text>
 <text id="20170900">Deep Elkhorn Shield</text>
@@ -2259,7 +2259,7 @@
 <text id="20180300">Refined Warrior's Shield</text>
 <text id="20180400">Arcane Warrior's Shield</text>
 <text id="20180500">Crystal Warrior's Shield</text>
-<text id="20180600">Fire Warrior's Shield</text>
+<text id="20180600">Seething Warrior's Shield</text>
 <text id="20180700">Chaos Warrior's Shield</text>
 <text id="20180800">Lightning Warrior's Shield</text>
 <text id="20180900">Deep Warrior's Shield</text>
@@ -2275,7 +2275,7 @@
 <text id="20190300">Refined Caduceus Shield</text>
 <text id="20190400">Arcane Caduceus Shield</text>
 <text id="20190500">Crystal Caduceus Shield</text>
-<text id="20190600">Fire Caduceus Shield</text>
+<text id="20190600">Seething Caduceus Shield</text>
 <text id="20190700">Chaos Caduceus Shield</text>
 <text id="20190800">Lightning Caduceus Shield</text>
 <text id="20190900">Deep Caduceus Shield</text>
@@ -2291,7 +2291,7 @@
 <text id="20200300">Refined Red and White Shield</text>
 <text id="20200400">Arcane Red and White Shield</text>
 <text id="20200500">Crystal Red and White Shield</text>
-<text id="20200600">Fire Red and White Shield</text>
+<text id="20200600">Seething Red and White Shield</text>
 <text id="20200700">Chaos Red and White Shield</text>
 <text id="20200800">Lightning Red and White Shield</text>
 <text id="20200900">Deep Red and White Shield</text>
@@ -2307,7 +2307,7 @@
 <text id="20210300">Refined Plank Shield</text>
 <text id="20210400">Arcane Plank Shield</text>
 <text id="20210500">Crystal Plank Shield</text>
-<text id="20210600">Fire Plank Shield</text>
+<text id="20210600">Seething Plank Shield</text>
 <text id="20210700">Chaos Plank Shield</text>
 <text id="20210800">Lightning Plank Shield</text>
 <text id="20210900">Deep Plank Shield</text>
@@ -2323,7 +2323,7 @@
 <text id="20220300">Refined Leather Shield</text>
 <text id="20220400">Arcane Leather Shield</text>
 <text id="20220500">Crystal Leather Shield</text>
-<text id="20220600">Fire Leather Shield</text>
+<text id="20220600">Seething Leather Shield</text>
 <text id="20220700">Chaos Leather Shield</text>
 <text id="20220800">Lightning Leather Shield</text>
 <text id="20220900">Deep Leather Shield</text>
@@ -2339,7 +2339,7 @@
 <text id="20230300">Refined Crimson Parma</text>
 <text id="20230400">Arcane Crimson Parma</text>
 <text id="20230500">Crystal Crimson Parma</text>
-<text id="20230600">Fire Crimson Parma</text>
+<text id="20230600">Seething Crimson Parma</text>
 <text id="20230700">Chaos Crimson Parma</text>
 <text id="20230800">Lightning Crimson Parma</text>
 <text id="20230900">Deep Crimson Parma</text>
@@ -2355,7 +2355,7 @@
 <text id="20240300">Refined Eastern Shield</text>
 <text id="20240400">Arcane Eastern Shield</text>
 <text id="20240500">Crystal Eastern Shield</text>
-<text id="20240600">Fire Eastern Shield</text>
+<text id="20240600">Seething Eastern Shield</text>
 <text id="20240700">Chaos Eastern Shield</text>
 <text id="20240800">Lightning Eastern Shield</text>
 <text id="20240900">Deep Eastern Shield</text>
@@ -2371,7 +2371,7 @@
 <text id="20250300">Refined Llewellyn Shield</text>
 <text id="20250400">Arcane Llewellyn Shield</text>
 <text id="20250500">Crystal Llewellyn Shield</text>
-<text id="20250600">Fire Llewellyn Shield</text>
+<text id="20250600">Seething Llewellyn Shield</text>
 <text id="20250700">Chaos Llewellyn Shield</text>
 <text id="20250800">Lightning Llewellyn Shield</text>
 <text id="20250900">Deep Llewellyn Shield</text>
@@ -2387,7 +2387,7 @@
 <text id="20260300">Refined Cleric's Parma</text>
 <text id="20260400">Arcane Cleric's Parma</text>
 <text id="20260500">Crystal Cleric's Parma</text>
-<text id="20260600">Fire Cleric's Parma</text>
+<text id="20260600">Seething Cleric's Parma</text>
 <text id="20260700">Chaos Cleric's Parma</text>
 <text id="20260800">Lightning Cleric's Parma</text>
 <text id="20260900">Deep Cleric's Parma</text>
@@ -2403,7 +2403,7 @@
 <text id="20270300">Refined Falcon Shield</text>
 <text id="20270400">Arcane Falcon Shield</text>
 <text id="20270500">Crystal Falcon Shield</text>
-<text id="20270600">Fire Falcon Shield</text>
+<text id="20270600">Seething Falcon Shield</text>
 <text id="20270700">Chaos Falcon Shield</text>
 <text id="20270800">Lightning Falcon Shield</text>
 <text id="20270900">Deep Falcon Shield</text>
@@ -2420,7 +2420,7 @@
 <text id="20290300">Refined Ancient Dragon Great Shield</text>
 <text id="20290400">Arcane Ancient Dragon Great Shield</text>
 <text id="20290500">Crystal Ancient Dragon Great Shield</text>
-<text id="20290600">Fire Ancient Dragon Great Shield</text>
+<text id="20290600">Seething Ancient Dragon Great Shield</text>
 <text id="20290700">Chaos Ancient Dragon Great Shield</text>
 <text id="20290800">Lightning Ancient Dragon Great Shield</text>
 <text id="20290900">Deep Ancient Dragon Great Shield</text>
@@ -2436,7 +2436,7 @@
 <text id="21010300">Refined Lothric Shield</text>
 <text id="21010400">Arcane Lothric Shield</text>
 <text id="21010500">Crystal Lothric Shield</text>
-<text id="21010600">Fire Lothric Shield</text>
+<text id="21010600">Seething Lothric Shield</text>
 <text id="21010700">Chaos Lothric Shield</text>
 <text id="21010800">Lightning Lothric Shield</text>
 <text id="21010900">Deep Lothric Shield</text>
@@ -2452,7 +2452,7 @@
 <text id="21040300">Refined Knight Shield</text>
 <text id="21040400">Arcane Knight Shield</text>
 <text id="21040500">Crystal Knight Shield</text>
-<text id="21040600">Fire Knight Shield</text>
+<text id="21040600">Seething Knight Shield</text>
 <text id="21040700">Chaos Knight Shield</text>
 <text id="21040800">Lightning Knight Shield</text>
 <text id="21040900">Deep Knight Shield</text>
@@ -2468,7 +2468,7 @@
 <text id="21060300">Refined Pontiff Knight Shield</text>
 <text id="21060400">Arcane Pontiff Knight Shield</text>
 <text id="21060500">Crystal Pontiff Knight Shield</text>
-<text id="21060600">Fire Pontiff Knight Shield</text>
+<text id="21060600">Seething Pontiff Knight Shield</text>
 <text id="21060700">Chaos Pontiff Knight Shield</text>
 <text id="21060800">Lightning Pontiff Knight Shield</text>
 <text id="21060900">Deep Pontiff Knight Shield</text>
@@ -2484,7 +2484,7 @@
 <text id="21070300">Refined Carthus Shield</text>
 <text id="21070400">Arcane Carthus Shield</text>
 <text id="21070500">Crystal Carthus Shield</text>
-<text id="21070600">Fire Carthus Shield</text>
+<text id="21070600">Seething Carthus Shield</text>
 <text id="21070700">Chaos Carthus Shield</text>
 <text id="21070800">Lightning Carthus Shield</text>
 <text id="21070900">Deep Carthus Shield</text>
@@ -2500,7 +2500,7 @@
 <text id="21100300">Refined Black Knight Shield</text>
 <text id="21100400">Arcane Black Knight Shield</text>
 <text id="21100500">Crystal Black Knight Shield</text>
-<text id="21100600">Fire Black Knight Shield</text>
+<text id="21100600">Seething Black Knight Shield</text>
 <text id="21100700">Chaos Black Knight Shield</text>
 <text id="21100800">Lightning Black Knight Shield</text>
 <text id="21100900">Deep Black Knight Shield</text>
@@ -2517,7 +2517,7 @@
 <text id="21120300">Refined Silver Knight Shield</text>
 <text id="21120400">Arcane Silver Knight Shield</text>
 <text id="21120500">Crystal Silver Knight Shield</text>
-<text id="21120600">Fire Silver Knight Shield</text>
+<text id="21120600">Seething Silver Knight Shield</text>
 <text id="21120700">Chaos Silver Knight Shield</text>
 <text id="21120800">Lightning Silver Knight Shield</text>
 <text id="21120900">Deep Silver Knight Shield</text>
@@ -2533,7 +2533,7 @@
 <text id="21130300">Refined Spiked Shield</text>
 <text id="21130400">Arcane Spiked Shield</text>
 <text id="21130500">Crystal Spiked Shield</text>
-<text id="21130600">Fire Spiked Shield</text>
+<text id="21130600">Seething Spiked Shield</text>
 <text id="21130700">Chaos Spiked Shield</text>
 <text id="21130800">Lightning Spiked Shield</text>
 <text id="21130900">Deep Spiked Shield</text>
@@ -2549,7 +2549,7 @@
 <text id="21140300">Refined Pierce Shield</text>
 <text id="21140400">Arcane Pierce Shield</text>
 <text id="21140500">Crystal Pierce Shield</text>
-<text id="21140600">Fire Pierce Shield</text>
+<text id="21140600">Seething Pierce Shield</text>
 <text id="21140700">Chaos Pierce Shield</text>
 <text id="21140800">Lightning Pierce Shield</text>
 <text id="21140900">Deep Pierce Shield</text>
@@ -2565,7 +2565,7 @@
 <text id="21150300">Refined East-West Shield</text>
 <text id="21150400">Arcane East-West Shield</text>
 <text id="21150500">Crystal East-West Shield</text>
-<text id="21150600">Fire East-West Shield</text>
+<text id="21150600">Seething East-West Shield</text>
 <text id="21150700">Chaos East-West Shield</text>
 <text id="21150800">Lightning East-West Shield</text>
 <text id="21150900">Deep East-West Shield</text>
@@ -2581,7 +2581,7 @@
 <text id="21160300">Refined Sunlight Shield</text>
 <text id="21160400">Arcane Sunlight Shield</text>
 <text id="21160500">Crystal Sunlight Shield</text>
-<text id="21160600">Fire Sunlight Shield</text>
+<text id="21160600">Seething Sunlight Shield</text>
 <text id="21160700">Chaos Sunlight Shield</text>
 <text id="21160800">Lightning Sunlight Shield</text>
 <text id="21160900">Deep Sunlight Shield</text>
@@ -2597,7 +2597,7 @@
 <text id="21170300">Refined Crest Shield</text>
 <text id="21170400">Arcane Crest Shield</text>
 <text id="21170500">Crystal Crest Shield</text>
-<text id="21170600">Fire Crest Shield</text>
+<text id="21170600">Seething Crest Shield</text>
 <text id="21170700">Chaos Crest Shield</text>
 <text id="21170800">Lightning Crest Shield</text>
 <text id="21170900">Deep Crest Shield</text>
@@ -2613,7 +2613,7 @@
 <text id="21180300">Refined Dragon Crest Shield</text>
 <text id="21180400">Arcane Dragon Crest Shield</text>
 <text id="21180500">Crystal Dragon Crest Shield</text>
-<text id="21180600">Fire Dragon Crest Shield</text>
+<text id="21180600">Seething Dragon Crest Shield</text>
 <text id="21180700">Chaos Dragon Crest Shield</text>
 <text id="21180800">Lightning Dragon Crest Shield</text>
 <text id="21180900">Deep Dragon Crest Shield</text>
@@ -2629,7 +2629,7 @@
 <text id="21190300">Refined Spider Shield</text>
 <text id="21190400">Arcane Spider Shield</text>
 <text id="21190500">Crystal Spider Shield</text>
-<text id="21190600">Fire Spider Shield</text>
+<text id="21190600">Seething Spider Shield</text>
 <text id="21190700">Chaos Spider Shield</text>
 <text id="21190800">Lightning Spider Shield</text>
 <text id="21190900">Deep Spider Shield</text>
@@ -2645,7 +2645,7 @@
 <text id="21200300">Refined Grass Crest Shield</text>
 <text id="21200400">Arcane Grass Crest Shield</text>
 <text id="21200500">Crystal Grass Crest Shield</text>
-<text id="21200600">Fire Grass Crest Shield</text>
+<text id="21200600">Seething Grass Crest Shield</text>
 <text id="21200700">Chaos Grass Crest Shield</text>
 <text id="21200800">Lightning Grass Crest Shield</text>
 <text id="21200900">Deep Grass Crest Shield</text>
@@ -2661,7 +2661,7 @@
 <text id="21210300">Refined Sunset Shield</text>
 <text id="21210400">Arcane Sunset Shield</text>
 <text id="21210500">Crystal Sunset Shield</text>
-<text id="21210600">Fire Sunset Shield</text>
+<text id="21210600">Seething Sunset Shield</text>
 <text id="21210700">Chaos Sunset Shield</text>
 <text id="21210800">Lightning Sunset Shield</text>
 <text id="21210900">Deep Sunset Shield</text>
@@ -2677,7 +2677,7 @@
 <text id="21220300">Refined Golden Wing Crest Shield</text>
 <text id="21220400">Arcane Golden Wing Crest Shield</text>
 <text id="21220500">Crystal Golden Wing Crest Shield</text>
-<text id="21220600">Fire Golden Wing Crest Shield</text>
+<text id="21220600">Seething Golden Wing Crest Shield</text>
 <text id="21220700">Chaos Golden Wing Crest Shield</text>
 <text id="21220800">Lightning Golden Wing Crest Shield</text>
 <text id="21220900">Deep Golden Wing Crest Shield</text>
@@ -2693,7 +2693,7 @@
 <text id="21230300">Refined Blue Shield</text>
 <text id="21230400">Arcane Blue Shield</text>
 <text id="21230500">Crystal Blue Shield</text>
-<text id="21230600">Fire Blue Shield</text>
+<text id="21230600">Seething Blue Shield</text>
 <text id="21230700">Chaos Blue Shield</text>
 <text id="21230800">Lightning Blue Shield</text>
 <text id="21230900">Deep Blue Shield</text>
@@ -2709,7 +2709,7 @@
 <text id="21240300">Refined Eagle Kite Shield</text>
 <text id="21240400">Arcane Eagle Kite Shield</text>
 <text id="21240500">Crystal Eagle Kite Shield</text>
-<text id="21240600">Fire Eagle Kite Shield</text>
+<text id="21240600">Seething Eagle Kite Shield</text>
 <text id="21240700">Chaos Eagle Kite Shield</text>
 <text id="21240800">Lightning Eagle Kite Shield</text>
 <text id="21240900">Deep Eagle Kite Shield</text>
@@ -2725,7 +2725,7 @@
 <text id="21250300">Refined Stone Parma</text>
 <text id="21250400">Arcane Stone Parma</text>
 <text id="21250500">Crystal Stone Parma</text>
-<text id="21250600">Fire Stone Parma</text>
+<text id="21250600">Seething Stone Parma</text>
 <text id="21250700">Chaos Stone Parma</text>
 <text id="21250800">Lightning Stone Parma</text>
 <text id="21250900">Deep Stone Parma</text>
@@ -2741,7 +2741,7 @@
 <text id="21260300">Refined Sacred Wood Crest Shield</text>
 <text id="21260400">Arcane Sacred Wood Crest Shield</text>
 <text id="21260500">Crystal Sacred Wood Crest Shield</text>
-<text id="21260600">Fire Sacred Wood Crest Shield</text>
+<text id="21260600">Seething Sacred Wood Crest Shield</text>
 <text id="21260700">Chaos Sacred Wood Crest Shield</text>
 <text id="21260800">Lightning Sacred Wood Crest Shield</text>
 <text id="21260900">Deep Sacred Wood Crest Shield</text>
@@ -2757,7 +2757,7 @@
 <text id="21270300">Refined Porcine Shield</text>
 <text id="21270400">Arcane Porcine Shield</text>
 <text id="21270500">Crystal Porcine Shield</text>
-<text id="21270600">Fire Porcine Shield</text>
+<text id="21270600">Seething Porcine Shield</text>
 <text id="21270700">Chaos Porcine Shield</text>
 <text id="21270800">Lightning Porcine Shield</text>
 <text id="21270900">Deep Porcine Shield</text>
@@ -2774,7 +2774,7 @@
 <text id="21290300">Refined Wargod Shield</text>
 <text id="21290400">Arcane Wargod Shield</text>
 <text id="21290500">Crystal Wargod Shield</text>
-<text id="21290600">Fire Wargod Shield</text>
+<text id="21290600">Seething Wargod Shield</text>
 <text id="21290700">Chaos Wargod Shield</text>
 <text id="21290800">Lightning Wargod Shield</text>
 <text id="21290900">Deep Wargod Shield</text>
@@ -2791,7 +2791,7 @@
 <text id="22010300">Refined Lothric Greatshield</text>
 <text id="22010400">Arcane Lothric Greatshield</text>
 <text id="22010500">Crystal Lothric Greatshield</text>
-<text id="22010600">Fire Lothric Greatshield</text>
+<text id="22010600">Seething Lothric Greatshield</text>
 <text id="22010700">Chaos Lothric Greatshield</text>
 <text id="22010800">Lightning Lothric Greatshield</text>
 <text id="22010900">Deep Lothric Greatshield</text>
@@ -2807,7 +2807,7 @@
 <text id="22020300">Refined Cathedral Greatshield</text>
 <text id="22020400">Arcane Cathedral Greatshield</text>
 <text id="22020500">Crystal Cathedral Greatshield</text>
-<text id="22020600">Fire Cathedral Greatshield</text>
+<text id="22020600">Seething Cathedral Greatshield</text>
 <text id="22020700">Chaos Cathedral Greatshield</text>
 <text id="22020800">Lightning Cathedral Greatshield</text>
 <text id="22020900">Deep Cathedral Greatshield</text>
@@ -2827,7 +2827,7 @@
 <text id="22080300">Refined Black Iron Greatshield</text>
 <text id="22080400">Arcane Black Iron Greatshield</text>
 <text id="22080500">Crystal Black Iron Greatshield</text>
-<text id="22080600">Fire Black Iron Greatshield</text>
+<text id="22080600">Seething Black Iron Greatshield</text>
 <text id="22080700">Chaos Black Iron Greatshield</text>
 <text id="22080800">Lightning Black Iron Greatshield</text>
 <text id="22080900">Deep Black Iron Greatshield</text>
@@ -2844,7 +2844,7 @@
 <text id="22100300">Refined Twin Dragon Greatshield</text>
 <text id="22100400">Arcane Twin Dragon Greatshield</text>
 <text id="22100500">Crystal Twin Dragon Greatshield</text>
-<text id="22100600">Fire Twin Dragon Greatshield</text>
+<text id="22100600">Seething Twin Dragon Greatshield</text>
 <text id="22100700">Chaos Twin Dragon Greatshield</text>
 <text id="22100800">Lightning Twin Dragon Greatshield</text>
 <text id="22100900">Deep Twin Dragon Greatshield</text>
@@ -2860,7 +2860,7 @@
 <text id="22110300">Refined Greatshield of Glory</text>
 <text id="22110400">Arcane Greatshield of Glory</text>
 <text id="22110500">Crystal Greatshield of Glory</text>
-<text id="22110600">Fire Greatshield of Glory</text>
+<text id="22110600">Seething Greatshield of Glory</text>
 <text id="22110700">Chaos Greatshield of Glory</text>
 <text id="22110800">Lightning Greatshield of Glory</text>
 <text id="22110900">Deep Greatshield of Glory</text>
@@ -2876,7 +2876,7 @@
 <text id="22120300">Refined Curse Ward Greatshield</text>
 <text id="22120400">Arcane Curse Ward Greatshield</text>
 <text id="22120500">Crystal Curse Ward Greatshield</text>
-<text id="22120600">Fire Curse Ward Greatshield</text>
+<text id="22120600">Seething Curse Ward Greatshield</text>
 <text id="22120700">Chaos Curse Ward Greatshield</text>
 <text id="22120800">Lightning Curse Ward Greatshield</text>
 <text id="22120900">Deep Curse Ward Greatshield</text>
@@ -2892,7 +2892,7 @@
 <text id="22130300">Refined Bonewheel Shield</text>
 <text id="22130400">Arcane Bonewheel Shield</text>
 <text id="22130500">Crystal Bonewheel Shield</text>
-<text id="22130600">Fire Bonewheel Shield</text>
+<text id="22130600">Seething Bonewheel Shield</text>
 <text id="22130700">Chaos Bonewheel Shield</text>
 <text id="22130800">Lightning Bonewheel Shield</text>
 <text id="22130900">Deep Bonewheel Shield</text>
@@ -2908,7 +2908,7 @@
 <text id="22140300">Refined Stone Greatshield</text>
 <text id="22140400">Arcane Stone Greatshield</text>
 <text id="22140500">Crystal Stone Greatshield</text>
-<text id="22140600">Fire Stone Greatshield</text>
+<text id="22140600">Seething Stone Greatshield</text>
 <text id="22140700">Chaos Stone Greatshield</text>
 <text id="22140800">Lightning Stone Greatshield</text>
 <text id="22140900">Deep Stone Greatshield</text>
@@ -2927,7 +2927,7 @@
 <text id="30010300">Refined Salvation Axes</text>
 <text id="30010400">Arcane Salvation Axes</text>
 <text id="30010500">Crystal Salvation Axes</text>
-<text id="30010600">Fire Salvation Axes</text>
+<text id="30010600">Seething Salvation Axes</text>
 <text id="30010700">Chaos Salvation Axes</text>
 <text id="30010800">Lightning Salvation Axes</text>
 <text id="30010900">Deep Salvation Axes</text>
@@ -2955,7 +2955,7 @@
 <text id="30120300">Refined Demon Great Machete</text>
 <text id="30120400">Arcane Demon Great Machete</text>
 <text id="30120500">Crystal Demon Great Machete</text>
-<text id="30120600">Fire Demon Great Machete</text>
+<text id="30120600">Seething Demon Great Machete</text>
 <text id="30120700">Chaos Demon Great Machete</text>
 <text id="30120800">Lightning Demon Great Machete</text>
 <text id="30120900">Deep Demon Great Machete</text>
