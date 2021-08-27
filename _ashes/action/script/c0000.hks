@@ -12762,6 +12762,10 @@ function Warcry_onUpdate() -- 037670 UT WA
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
     end
+    if env(345 , hand) == 671 then
+        r2 = "W_AttackRightHeavy1Start"
+        b2 = "W_AttackBothHeavy2Start"
+    end
 
     local r1 = g_r1
     local b1 = g_b1
@@ -12984,6 +12988,10 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
         b2 = "W_AttackBothHeavy1Start"
      end
 
+     if sp_m == 671 then
+        r2 = "W_AttackRightHeavy1SubStart"
+        b2 = "W_AttackBothHeavy2Start"
+     end
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1Start") return
