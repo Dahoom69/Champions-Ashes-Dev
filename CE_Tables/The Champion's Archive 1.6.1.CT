@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 1.7 08/31/2021"</Description>
+      <Description>"Open - The Champion's Archive 1.6.1 07/06/2021"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -2874,11 +2874,6 @@ CREATETHREAD(ItemGib)
 404D0F00:Candied Ochre Eyeball
 404D0F01:Candied Cataract
 404D0F02:Candied Crimson Eyeball
-404D0E92:Copper Polish
-404D0E93:Silver Polish
-404D0E94:Gold Polish
-404D0E95:Diamond Polish
-404D0E9C:Mossy Dye
 404D0E90:Tasteless Sherbet
 404D0E91:Vanilla Sherbet
 404D0EB3:Pumpkin Sherbet
@@ -3077,8 +3072,6 @@ CREATETHREAD(ItemGib)
 403642A0:Way of White Corona
 40358B08:Lightning Arrow
 40359AA8:Holy Bident
-4035A278:Divine Spears of Judgement
-40359E90:Divine Bolt
 40362B30:Lightning Spear
 40362F18:Great Lightning Spear
 40363300:Sunlight Spear
@@ -3140,7 +3133,6 @@ CREATETHREAD(ItemGib)
 005DB060:Flamberge
 00609690:Drakeblood Greatsword
 0021DFE0:Executioner's Greatsword
-0021E044:Settlement Greatsword
 005F5E10:Black Knight Sword
 00222E00:Onyx Blade
 00604870:Hollowslayer Greatsword
@@ -3349,7 +3341,6 @@ CREATETHREAD(ItemGib)
 00CCECF0:Sacred Chime of Filianore
 01CB7130:Black Hair Talisman
 01CB4A20:Deep Chime
-01CCD0C0:Coiled Stake
 015EF3C0:Torch
 015F1AD0:Follower Torch
 015F41E0:Hunter's Torch
@@ -3370,7 +3361,6 @@ CREATETHREAD(ItemGib)
 0278EF40:Whirligig Saw
 02787A10:Boom Hammer
 0278A120:Bloodletter
-027322E0:Logarious Wheel
 0271EA60:Hunter Blunderbuss
 02743450:Hunter Pistol
 02745B60:Cannon
@@ -3450,7 +3440,6 @@ CREATETHREAD(ItemGib)
 0150C2F0:Yhorm's Greatshield
 01452A30:Dragonhead Greatshield
 00F5F8C0:Giant Door Shield
-01CCF7D0:Guardian Door Shields
 1470C7A0:Standard Helm
 1470CB88:Hard Leather Armor
 1470CF70:Hard Leather Gauntlets
@@ -3671,10 +3660,6 @@ CREATETHREAD(ItemGib)
 157BD2E8:Wolf Knight Armor
 157BD6D0:Wolf Knight Gauntlets
 157BDAB8:Wolf Knight Leggings
-117EFEE0:Academy Exile Hat
-117F02C8:Academy Exile Garb
-117F06B0:Academy Exile Gauntlets
-117F0A98:Academy Exile Leggings
 159A5380:Smough's Helm
 159A5768:Smough's Armor
 159A5B50:Smough's Gauntlets
@@ -4362,11 +4347,6 @@ local newWeapons =
 {
 
 -- weapons
-  0x01CCD0C0, --Coiled Stake
-  0x0021E044, --Settlement Greatsword
-  0x01CCF7D0, --Guardian Shields
-  0x027322E0, --Logarious Wheel
-  0x01CCF7D0, --Guardian Shields
   0x0225C630, --Baby's Nail
   0x02261450, --Large Sword of Searching
   0x0225ED40, --Mercury Spiral Rapier
@@ -5112,10 +5092,6 @@ local newArmors = -- Ashes Armor
   0x13DB3E60, --Priest Mask
 
 -- Armor Sets --
-  0x117EFEE0, --Academy Exile Hat
-  0x117F02C8, --Academy Exile Garb
-  0x117F06B0, --Academy Exile Gauntlets
-  0x117F0A98, --Academy Exile Leggings
   0x14EE8320, --Madman's Mask
   0x14EE8708, --Madman's Garb
   0x14EE8AF0, --Madman's Wrap
@@ -5942,8 +5918,6 @@ Spawn()
 local newMagic =
   {
   0x4036C964, --Sunlight Blade
-  0x4035A278, --Divine Spears of Judgement
-  0x40359E90, --Divine Bolt
   }
 
 function InitialiseForm()
@@ -6219,11 +6193,6 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newItems =
   {
-  0x404D0E92, --Copper Polish
-  0x404D0E93, --Silver Polish
-  0x404D0E94, --Gold Polish
-  0x404D0E95, --Diamond Polish
-  0x404D0E9C, --Mossy Dye
   0x40000133, --Rope Lightning Urn
   0x404D0EFE, --Cleansing Agent
   0x404D0EFF, --Candied Azure Eyeball
