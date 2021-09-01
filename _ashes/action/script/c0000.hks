@@ -9947,7 +9947,7 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
     else 
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
-        elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100280) == TRUE then  ExecEventAllBody("W_AttackBothHeavy2End") return 
+        elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and ( env(1001) > STAMINA_MINIMUM ) and env(1116, 100280) == TRUE then  ExecEventAllBody("W_AttackBothHeavy2End") return 
         else
             return 
         end
