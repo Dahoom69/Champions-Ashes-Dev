@@ -1772,6 +1772,7 @@ The deacons, under the guidance of Archdeacon McDonnell, became both clergymen a
 Skill: Sweeping Light 
 Advance forward with sweeping strikes, illuminating the blade with a fiery hue.</text>
 <text id="2180000">A twisted sword resembling the towers of Londor's Sable Church. Eight branching blades and thorns induce bleeding.
+
 The Church's blessing makes the weapon revel in the agony of its owner. Heavy losses of HP boost attack, a curse most befitting its deformed appearance.
 
 Skill: Stance
@@ -7014,10 +7015,11 @@ This weapon has survived since old Izalith, and is imbued with remnants of the C
 
 Skill: Molten Perseverance
 Anchor weapon in earth to temporarily boost poise, and use strong attack to repeatedly stab earth to trigger molten explosions.</text>
-<text id="8210000">Hammer of the Four Knights, writhing in dark.
+<text id="8210000">Hammer and catalyst of Ansgar the Watchman, one of Londor's Four Knights. 
 
-This hammer was made for battle using a mysterious metal, its sharp edge capable of piercing shields and armor easily.
-Used to mercilessly crush enemies before one's eyes.
+This hammer, made from rare, incredibly sharp geisteel, is easily capable of piercing armor and shields.
+
+Ansgar, tasked with eliminating spies and other enemies of the kingdom, served as the vanguard of Londor.
 
 Skill: Chant from the Depths
 Briefly boosts the strength of dark miracles.</text>
@@ -18306,7 +18308,7 @@ Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
 <text id="30150000">The Lords of Cinder linked the First Flame, and this Curved Sword was wielded by their deific manifestation.
 
-This coiled blade draws power from the first flame to channel pyromancyies, the art of fire originating from one of the great Lord Souls.
+This coiled blade draws power from the first flame to channel pyromancies, the art of fire originating from one of the great Lord Souls.
 
 Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
 
