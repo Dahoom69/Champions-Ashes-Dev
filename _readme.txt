@@ -40,4 +40,3 @@ LINKS
 Changelog:	https://bit.ly/ashes-changelog 
 Nexus Page:	https://www.nexusmods.com/darksouls3/mods/488
 Discord:	https://discord.gg/TQy6ubN
-Twitter:	https://twitter.com/championsashes
