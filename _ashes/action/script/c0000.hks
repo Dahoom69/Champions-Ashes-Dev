@@ -6051,6 +6051,7 @@ end
 function DamageCommonFunction(guardcondition, estep, fall_type)
     act(147)
     local style = c_Style
+    local isGuardianShield = FALSE
     if style == HAND_LEFT_BOTH then
         if GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW, WEAPON_CATEGORY_LARGE_ARROW, WEAPON_CATEGORY_CROSSBOW) == TRUE then
             act("精密射撃可能か")
@@ -6065,7 +6066,7 @@ function DamageCommonFunction(guardcondition, estep, fall_type)
     local b2 = "W_AttackBothHeavy1SubStart"
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
-    if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
+    if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" isGuardianShield = TRUE end
 
     local is_usechainrecover = GetVariable("UseChainRecover")
     if ExecEvasion(TRUE, estep, is_usechainrecover) == TRUE then
@@ -6079,7 +6080,7 @@ function DamageCommonFunction(guardcondition, estep, fall_type)
     elseif ExecMagic(QUICKTYPE_NORMAL, ALLBODY) == TRUE then
         ResetDamageCount()
         return TRUE
-    elseif i1BB == TRUE and ExecAttack("W_AttackRightLight1", "W_AttackRightHeavy1SubStart", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, guardcondition, ALLBODY, FALSE, FALSE) == TRUE then
+    elseif (i1BB == TRUE or isGuardianShield == TRUE)  and ExecAttack("W_AttackRightLight1", "W_AttackRightHeavy1SubStart", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, guardcondition, ALLBODY, FALSE, FALSE) == TRUE then
         ResetDamageCount()   
         return TRUE
     elseif ExecAttack("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", guardcondition, ALLBODY, FALSE, FALSE) == TRUE then
