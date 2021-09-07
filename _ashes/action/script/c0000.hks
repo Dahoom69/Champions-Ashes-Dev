@@ -1192,6 +1192,11 @@ function SetEvasionStaminaCost()
         c_StaminaCostBackStep = -11
         c_StaminaCostJump = -16
     end
+
+    if env(1116, 100292) == TRUE then 
+        c_StaminaCostRolling = c_StaminaCostRolling*4  
+        c_StaminaCostBackStep = c_StaminaCostBackStep*4  
+    end
     return 
 end
 
