@@ -798,6 +798,13 @@ function GetSwordArtsInfo()
             arts_id = SWORDARTS_MAGICBUFF
         end
 
+          -- blood bullet technique
+        if (sp == 602 or sp == 617 or sp == 618 or sp == 667 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
+        (env(225, HAND_LEFT) == 33 or  env(225, HAND_LEFT) == 25 )  then 
+            arts_hand = HAND_LEFT   
+            arts_id = SWORDARTS_MAGICBUFF
+        end
+        
 
     end
     return arts_id, arts_hand
