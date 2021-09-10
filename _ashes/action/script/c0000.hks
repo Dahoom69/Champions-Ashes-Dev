@@ -4134,6 +4134,16 @@ function ExecEvasion(backstep_limit, estep, is_usechainrecover)
         else
             front = true
         end
+
+        if (sp_m == 666 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 666 and c_Style == HAND_LEFT_BOTH) then
+            if back == true then rollingangle = 180 -- bow WA when doing WA into WA
+            elseif right == true then rollingangle = 90
+            elseif left == true then rollingangle = -90
+            else rollingangle = 0 end
+            SetVariable("RollingAngleRealSelftrans", rollingangle)
+            SetVariable("RollingAngleReal", rollingangle)
+            SetVariable("TurnAngleReal", rollingangle)
+        end
  
         SetVariable("EnableTAE_RollingFront", front)
         SetVariable("EnableTAE_RollingBack", back)
