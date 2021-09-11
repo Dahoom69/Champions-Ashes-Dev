@@ -18412,6 +18412,14 @@ The impact of this highly-effective weapon counters swift movements, and its wid
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41020100">A blunderbuss created by the craftsman Edmond.
+
+His firearms are specially crafted to employ the wielder’s Focus as ammunition, an evolution of his previous work on the exploding bolt. 
+
+The impact of this highly-effective weapon counters swift movements, and its wide spread is nigh-on guaranteed to hit the mark.
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41030000">A brutal weapon employed by mercenaries and madmen.
 
 Retains the qualities of an axe, but offers a wider palette of attacks by transforming. Boasts a heavy blunt attack and crude slashes.
@@ -18523,6 +18531,13 @@ The pistol is a quicker draw than the blunderbuss, allowing for speedier respons
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41170100">Pistol made by the craftsman Edmond. 
+His firearms are specially crafted to employ the wielder’s Focus as ammunition, an evolution of his previous work on the exploding bolt. 
+
+The pistol is a quicker draw than the blunderbuss, allowing for speedier responses to attacks.
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41180000">A large prototype weapon, an attempt at combining an exploding bolt and a ballista. 
 
 Use of this weapon is equivalent to toting a Greatbow on one arm, complete with its ridiculous weight, staggering kick, and lavish use of Focus, into battle. 
@@ -18533,6 +18548,16 @@ Yet, against impossibly gigantic foes, it might be just the thing, provided you 
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41180100">A large prototype weapon, an attempt at combining an exploding bolt and a ballista. 
+
+Use of this weapon is equivalent to toting a Greatbow on one arm, complete with its ridiculous weight, staggering kick, and lavish use of Focus, into battle. 
+
+Such a monstrosity was doomed from the start, and indeed its development was cut short. 
+
+Yet, against impossibly gigantic foes, it might be just the thing, provided you have the Strength to use it effectively of course. 
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41200000">A sanctified weapon first wielded by Ludwig, figurehead of a group of pious warriors. On the one side, an easily handled silver sword. When transformed, it combines with its sheath to form a greatsword.
 
 It exhibits several departures from other traditional holy weapons, suggesting Ludwig anticipated a different approach to adversity than his peers.
@@ -18573,6 +18598,16 @@ It’s name resembles that of a noblewoman, and the mist it expels has been like
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41230100">A special weapon created by a Vinheim craftsman.
+
+Draws upon the wielders Intelligence to spray a cloud of magical mist, using Focus as a medium.
+
+It’s name resembles that of a noblewoman, and the mist it expels has been likened to tears. 
+
+"Oh, fair maiden, why is it that you weep?”
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41240000">A mysterious and marvelous weapon combining a sword and a peculiar firing mechanism, created with craftsmanship far beyond the limits of any known artisan today. 
 
 It synergises practical matters of short and long ranged combat while retaining the wielder’s elegance and respectability. 
@@ -18590,6 +18625,14 @@ Lovingly named after a woman and graced with an intricate design, its attacks ar
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41280100">Special and rare pistol used by a nobleman from Astora. 
+
+The nobleman paid an exorbitant sum for its creation, and no other copies of the Evelyn were ever made. A sum well spent, for the Evelyn is of extreme quality. 
+
+Lovingly named after a woman and graced with an intricate design, its attacks are boosted by that elusive, essential property unique to humans: luck.
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41290000">A pistol typically used by a group of pious warriors.
 
 Crafted with mostly metal parts and exhibiting a complex design, the repeating pistol fires two shots at once, making it a ravenous consumer of Focus. 
@@ -18600,6 +18643,16 @@ Should be used sparingly, as the trump card in one's arsenal or else face the ri
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41290100">A pistol typically used by a group of pious warriors.
+
+Crafted with mostly metal parts and exhibiting a complex design, the repeating pistol fires two shots at once, making it a ravenous consumer of Focus. 
+
+Its volatile and experimental design lends the weapon to scale with the wielder’s Luck. 
+
+Should be used sparingly, as the trump card in one's arsenal or else face the risk of being depleted of Focus very quickly. 
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41300000">A rifle typically used by a group of pious warriors.
 
 It is said that this rifle was employed by Ludwig, figurehead of the group. Its long, heavy barrel makes up in range for what it lacks in reload speed.
@@ -18608,6 +18661,14 @@ Ludwig's Rifle exhibits some departures from Edmond’s design, suggesting that 
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41300100">A rifle typically used by a group of pious warriors.
+
+It is said that this rifle was employed by Ludwig, figurehead of the group. Its long, heavy barrel makes up in range for what it lacks in reload speed.
+
+Ludwig's Rifle exhibits some departures from Edmond’s design, suggesting that Ludwig anticipated a different approach to adversity than his peers.
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41400000">Beasthunter Saif</text>
 <text id="41410000">A brutal trick weapon used by thugs and butchers.
 
@@ -18709,6 +18770,12 @@ The Gatling Gun boasts exceptional rapid-firing functionality, but is considered
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41500100">A large, unwieldy device that appears to be the result of trying to fix the issue of the need to reload with conventional crossbows. 
+
+The Gatling Gun boasts exceptional rapid-firing functionality, but is considered a cumbersome weapon, due to its excessive weight and insatiable consumption of Focus and stamina. 
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41510000">A chunk of iron fitted with left handed finger holes. 
 
 A blunt instrument ideal for those that lack the technique to properly handle more conventional weapons. 
@@ -18724,6 +18791,16 @@ As such, it was quietly ushered into permanent storage as a failed experiment in
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41520100">An oversized weapon, by human standards, created by the Giant Blacksmith of Anor Londo. 
+
+A type of cannon that fires with a curved trajectory and creates an explosion of lightning upon impact, drawing upon the wielder’s Faith. 
+
+Originally designed for use against dragons, but its bombastic design lacked the piercing precision found in the existing Silver Knight weapons. 
+
+As such, it was quietly ushered into permanent storage as a failed experiment in dragon hunting weaponry. 
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41530000">An early prototype rifle engineered by a Carim weaponsmith, creator of the sniper crossbow.
 
 This weapon has been optimized to cause perforation wounds, but it's cumbersome firing rate makes it poor at stopping an aggressive target despite demanding Dexterity of the wielder. 
@@ -18732,6 +18809,14 @@ Perhaps this limitation inspired Edmond to later invent pistols and blunderbusse
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41530100">An early prototype rifle engineered by a Carim weaponsmith, creator of the sniper crossbow.
+
+This weapon has been optimized to cause perforation wounds, but it's cumbersome firing rate makes it poor at stopping an aggressive target despite demanding Dexterity of the wielder. 
+
+Perhaps this limitation inspired Edmond to later invent pistols and blunderbusses. 
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41540000">A curious mechanical invention of unclear origin.  
 
 Spits searing flames using Focus as a medium.
@@ -18742,6 +18827,16 @@ Its design suggests a more clinical approach, perhaps used by healers to burn aw
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="41540100">A curious mechanical invention of unclear origin.  
+
+Spits searing flames using Focus as a medium.
+
+Despite its pyrokinetic inclination, this device would be considered heresy by the naturalistic sages of the Great Swamp. 
+
+Its design suggests a more clinical approach, perhaps used by healers to burn away rotted flesh. 
+
+Skill: Blood Bullet Technique
+Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
 <text id="41550000">Beastly weapon wielded by the Madman Chieftan.
 Those who tame the lycan are revered by the dungeon-dwelling clan, proclaiming them as their leader.
 
