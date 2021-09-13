@@ -1690,6 +1690,14 @@
 <text id="1001000">Dragon Body</text>
 <text id="1002000">Dragon Arms</text>
 <text id="1003000">Dragon Legs</text>
+<text id="1010000">Skeleton Head</text>
+<text id="1011000">Skeleton Body</text>
+<text id="1012000">Skeleton Arms</text>
+<text id="1013000">Skeleton Legs</text>
+<text id="1020000">Demon Head</text>
+<text id="1021000">Demon Body</text>
+<text id="1022000">Demon Arms</text>
+<text id="1023000">Demon Legs</text>
 <text id="9000000">%null%</text>
 <text id="9010000">%null%</text>
 <text id="9020000">%null%</text>
@@ -2225,6 +2233,8 @@
 <text id="99761000">Brushwood Armor</text>
 <text id="99762000">Brushwood Gauntlets</text>
 <text id="99763000">Brushwood Leggings</text>
+<text id="99770000">Skeleton Head</text>
+<text id="99771000">Skeleton Body</text>
 <text id="99780000">Penetrator Helm</text>
 <text id="99781000">Penetrator Armor</text>
 <text id="99782000">Penetrator Gauntlets</text>
@@ -2237,6 +2247,8 @@
 <text id="99801000">Bone Ash Armor</text>
 <text id="99802000">Bone Ash Gauntlets</text>
 <text id="99803000">Bone Ash Leggings</text>
+<text id="99810000">Demon Head</text>
+<text id="99811000">Demon Body</text>
 <text id="99820000">Tower Knight Helm</text>
 <text id="99821000">Tower Knight Armor</text>
 <text id="99822000">Tower Knight Gauntlets</text>
