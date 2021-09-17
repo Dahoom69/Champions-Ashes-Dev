@@ -9862,10 +9862,13 @@ end
 
 function AttackBothHeavy2Start_onUpdate()  -- r22 charge
     local is_catalysts = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
-    --local is_catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
+    local is_catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
 
-    if (    (is_catalysto == TRUE and HAND_LEFT_BOTH == c_Style) or is_catalysts == TRUE) then  
-        if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightLight1", FALSE, TRUE) == TRUE then
+    local staffR2 = "W_AttackRightLight1"
+    if is_catalysto == TRUE and HAND_LEFT_BOTH == c_Style then staffR2 = "W_AttackBothHeavy1Start" end
+
+    if (is_catalysts == TRUE) then  
+        if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", staffR2, FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
             ExecEventAllBody("W_AttackBothHeavy2End")
