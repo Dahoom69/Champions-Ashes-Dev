@@ -240,6 +240,7 @@ function IsFeintAllowed(request)
     local neverFeintToSpells          = env(1116, 100826) == TRUE
     local neverFeintToNonSpellsForNPC = env(1116, 100827) == TRUE
     local neverFeintToSpellsForNPC    = env(1116, 100828) == TRUE
+    local neverFeintToForwardR1       = env(1116, 100829) == TRUE
     local isR1Request           = request == ATTACK_REQUEST_RIGHT_LIGHT or request == ATTACK_REQUEST_BOTH_LIGHT
     local isForwardR1Request    = request == ATTACK_REQUEST_LIGHT_KICK 
     local isR2Request           = request == ATTACK_REQUEST_RIGHT_HEAVY or request == ATTACK_REQUEST_BOTH_HEAVY
@@ -254,6 +255,7 @@ function IsFeintAllowed(request)
     if feintLimitThreeActive and feintCounter >= 3        then return false end
     if neverFeintToR1 and isR1Request                     then return false end
     if not allowFeintToForwardR1 and isForwardR1Request   then return false end
+    if neverFeintToForwardR1 and isForwardR1Request       then return false end
     if neverFeintToR2 and isR2Request                     then return false end
     if neverFeintToForwardR2 and isForwardR2Request       then return false end
     if neverFeintToNonSpells and not isFeintToSpell       then return false end
