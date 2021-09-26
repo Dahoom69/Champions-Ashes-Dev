@@ -9726,6 +9726,7 @@ function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
+    local b21 = "W_AttackBothHeavy1Start"
 
     if sp_m == 264 or sp_m == 612 or sp_m == 610 then b1 = "W_AttackBothLight3" end
     if sp_m == 164 or sp_m == 614  then b1 = "W_AttackBothLight2" end
@@ -9735,33 +9736,20 @@ function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
 
     if ((sp_m == 272 or sp_m == 664 or sp_m == 666 or sp_m == 667) and c_Style ~= HAND_LEFT_BOTH) -- W_AttackBothHeavy1Start2 extra r2
     or ((sp_o == 272 or sp_o == 664 or sp_o == 666 or sp_o == 667) and c_Style == HAND_LEFT_BOTH)
-    then 
-        if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
-            ExecEventAllBody("W_AttackBothHeavy1End")
-             end
-        if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
-            return 
-        elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
-            act("特殊補間設定", 0, TRUE)
-            ExecEventAllBody("W_AttackBothHeavy1Start2")
-            return 
-        else
-            return 
+    then b21 = "W_AttackBothHeavy1Start2" end
+        
+    if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
+        ExecEventAllBody("W_AttackBothHeavy1End")
         end
+    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+        return 
+    elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody(b21) return
+    elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
+        act("特殊補間設定", 0, TRUE)
+        ExecEventAllBody(b21)
+        return 
     else
-        if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
-            ExecEventAllBody("W_AttackBothHeavy1End")
-            end
-        if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
-            return 
-        elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1Start") return
-        elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
-            act("特殊補間設定", 0, TRUE)
-            ExecEventAllBody("W_AttackBothHeavy1Start")
-            return 
-        else
-            return 
-        end
+        return 
     end
 end
 
