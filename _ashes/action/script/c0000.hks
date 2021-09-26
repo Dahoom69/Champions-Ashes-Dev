@@ -2240,6 +2240,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 elseif b2 == "W_AttackBothHeavy2Start" then
                     b2 = "W_AttackBothHeavySpecial2Start"
                 end
+            elseif ((sp_m == 272 or sp_m == 664 or sp_m == 666 or sp_m == 667) and c_Style ~= HAND_LEFT_BOTH) -- W_AttackBothHeavy1Start2 extra r2
+                or ((sp_o == 272 or sp_o == 664 or sp_o == 666 or sp_o == 667) and c_Style == HAND_LEFT_BOTH)
+            then 
+                if b2 == "W_AttackBothHeavy1Start" then
+                    b2 = "W_AttackBothHeavy1Start2"
+                end
             elseif IsWepBrokenHeavyAtk() == TRUE then
                 if b2 == "W_AttackBothHeavy1Start" then
                     b2 = "W_AttackBothHeavyWepBroken1Start"
@@ -9719,27 +9725,103 @@ function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
     local b2 = "W_AttackBothHeavy2Start"
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
 
     if sp_m == 264 or sp_m == 612 or sp_m == 610 then b1 = "W_AttackBothLight3" end
     if sp_m == 164 or sp_m == 614  then b1 = "W_AttackBothLight2" end
     if sp_m == 643 then b1 = "W_AttackBothLight2" l1 = "W_AttackBothLeft2" end
     if sp_m == 609 then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 610 then b2 = "W_AttackBothHeavy1Start" end
-    
-    if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
-        ExecEventAllBody("W_AttackBothHeavy1End")
-         end
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+
+    if ((sp_m == 272 or sp_m == 664 or sp_m == 666 or sp_m == 667) and c_Style ~= HAND_LEFT_BOTH) -- W_AttackBothHeavy1Start2 extra r2
+    or ((sp_o == 272 or sp_o == 664 or sp_o == 666 or sp_o == 667) and c_Style == HAND_LEFT_BOTH)
+    then 
+        if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
+            ExecEventAllBody("W_AttackBothHeavy1End")
+             end
+        if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+            return 
+        elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
+            act("特殊補間設定", 0, TRUE)
+            ExecEventAllBody("W_AttackBothHeavy1Start2")
+            return 
+        else
+            return 
+        end
+    else
+        if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
+            ExecEventAllBody("W_AttackBothHeavy1End")
+            end
+        if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+            return 
+        elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1Start") return
+        elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
+            act("特殊補間設定", 0, TRUE)
+            ExecEventAllBody("W_AttackBothHeavy1Start")
+            return 
+        else
+            return 
+        end
+    end
+end
+
+
+function AttackBothHeavy1Start2_onUpdate()  -- r21 charge extra 034319
+    local b1 = "W_AttackBothLight1"
+    local b2 = "W_AttackBothHeavy2Start"
+    local l1 = "W_AttackBothLeft1"
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or 
+    sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
+    if GetEquipType(HAND_RIGHT, 29) == TRUE or sp_m == 59 or sp_m == 138 or sp_m == 161 or sp_m == 261 or sp_m == 232 or sp_m == 235 or sp_m == 656 or sp_m == 146 then b1 = "W_AttackBothLight3" end
+    if IsFeintAttempt() or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 50  or sp_m == 654 or sp_m == 107 or sp_m == 142 then b1 = "W_AttackBothLight1" end
+
+    if sp_m  == 264 or sp_m == 610 then b1 = "W_AttackBothLight3" end
+    if sp_m == 164 or sp_m == 614  then b1 = "W_AttackBothLight2" end
+    if sp_m == 643 then b1 = "W_AttackBothLight2" end
+    if sp_m == 609 or sp_m == 612 then b1 = "W_AttackBothHeavySpecial1Start" end
+    if sp_m == 610 then b2 = "W_AttackBothHeavy1End" end
+
+    act("特殊補間設定", 0, FALSE)
+    local r2 = "W_AttackRightHeavy1Start"
+    if env(345 , hand) == 101 then r2 = "W_AttackRightHeavy1SubStart" end
+
+    if env(345 , hand) == 643 then 
+        --l1 = "W_AttackBothLeft2" 
+        l1 = "W_AttackBothLeft3" 
+    end
+
+    local r1 = "W_AttackRightLight1" 
+    if (sp_m == 645) then  
+        r2 = "W_AttackRightHeavy1SubStart"
+    end
+
+    if sp_m == 645 and IsFeintAttempt() then 
+        iT = TRUE
+        r1 = "W_AttackBothLight1" 
+        b1 = "W_AttackBothLight1" 
+        r2 = "W_AttackBothHeavy2Start"
+        b2 = "W_AttackBothHeavy2Start"
+    end
+
+    if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
+
+    if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1Start") return
-    elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
-        act("特殊補間設定", 0, TRUE)
-        ExecEventAllBody("W_AttackBothHeavy1Start")
+    elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100281) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1End") return
+    elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
+        ExecEventAllBody("W_AttackBothHeavy1End")
+        return 
+    elseif env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100281) == TRUE then
+        ExecEventAllBody("W_AttackBothHeavySpecial1End") 
         return 
     else
         return 
     end
 end
+
 
 function AttackBothHeavy1Start_onUpdate()  -- r21 charge
     local b1 = "W_AttackBothLight1"
