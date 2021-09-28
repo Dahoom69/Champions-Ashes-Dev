@@ -7363,6 +7363,7 @@ function Rolling_onUpdate()
     local endratio = 1
     act(2001, math.abs(1 + addratio * math.abs(math.sin(math.rad(2 * rolling_angle)))))
     local b2 = "W_AttackBothHeavy2Start"
+    if env(345 , HAND_RIGHT) == 649 then b2 = "W_AttackBothHeavy1SubStart" end
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
     if EvasionCommonFunction(FALL_TYPE_DEFAULT, "W_AttackRightLightStep", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLightStep", b2) == TRUE then
         return 
@@ -9309,6 +9310,7 @@ function AttackBothLight1_onUpdate()  -- r11
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
     if sp_m == 610 then l1 = "W_AttackBothLeft1" end
+    if sp_m == 649 then b1 = "W_AttackBothLight1" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9365,6 +9367,7 @@ function AttackBothLight2_onUpdate()  -- r12
         r1 = "W_AttackRightHeavySpecial1Start" 
         r2 = "W_AttackRightHeavy1SubStart"
     end
+    if sp_m == 649 then b1 = "W_AttackBothLight1" end
     
     if sp_m == 160 or (sp_o == 160 and HAND_LEFT_BOTH == c_Style) then  b1 = "W_AttackBothLight1" end
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
@@ -9500,6 +9503,8 @@ function AttackBothLeft1_onUpdate() -- l11
     local offhand = "W_AttackLeftHeavy1"
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
 
+    if sp_m == 649 then r1 = "W_AttackBothLight1" b1 = "W_AttackBothLeft1" end
+
     local is_Rm = GetEquipType(HAND_RIGHT, 27) 
     local is_Ro = GetEquipType(HAND_LEFT, 27) 
     if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
@@ -9574,6 +9579,8 @@ function AttackBothLeft2_onUpdate()  -- l12
  
      local offhand = "W_AttackLeftHeavy1"
      if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft3" end
+
+     if sp_m == 649 then b1 = "W_AttackBothLight1" offhand = "W_AttackBothLeft1" end
 
      local is_Rm = GetEquipType(HAND_RIGHT, 27) 
      local is_Ro = GetEquipType(HAND_LEFT, 27) 
