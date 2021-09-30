@@ -8507,7 +8507,7 @@ function AttackRightLightStep_onUpdate() -- roll r1
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 264 or sp_m == 164 or sp_m == 643 or sp_m == 614 or sp_m == 646 or sp_m == 610 then r1 = "W_AttackRightLight2" end
     if sp_m == 612 then r1 = "W_AttackRightLight3" end
-    if sp_m == 609 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 609 or sp_m == 645 or sp_m == 649 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy2Start" end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
@@ -8709,7 +8709,7 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end -- doesn't work for 
     end
 end
 
-function AttackRightHeavy2Start_onUpdate()  -- r22 charge
+function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2
     local is_catalysts = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) 
     local sp_m = env(345 , HAND_RIGHT)
 
@@ -8733,7 +8733,7 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge
 
     if sp_m == 658 or sp_m == 646 then r1 = "W_AttackRightLight2" end 
     if sp_m == 658 and IsFeintAttempt()  then r1 = "W_AttackRightLight1" end
-    if sp_m == 605 or sp_m == 620 then r1 = "W_AttackRightLight3" end 
+    if sp_m == 605 or sp_m == 620 or sp_m == 649 then r1 = "W_AttackRightLight3" end 
 
     local is_pyro = FALSE
     if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
@@ -8961,6 +8961,11 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
         r2 = "W_AttackRightHeavy1SubStart"
         b2 = "W_AttackBothHeavy1SubStart"
     end
+
+    if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+         then 
+             act(2002, 625)
+         end
 
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
@@ -9315,6 +9320,11 @@ function AttackBothLight1_onUpdate()  -- r11
 
     if sp_m == 610 then l1 = "W_AttackBothLeft1" end
     if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" end
+
+    if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9909,7 +9919,7 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
     end
 
     
-    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if sp_m == 643 or sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
     end
@@ -10196,7 +10206,7 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
 
     if (sp_m == 612) then b1 = "W_AttackBothHeavySpecial1Start" end
 
-    if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if sp_m == 643  or sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
     end
@@ -10249,7 +10259,7 @@ function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
         end
 
     if sp_m == 614 then r1 = "W_AttackRightLight3" end
-    if  sp_m == 609 or sp_m == 612 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if  sp_m == 609 or sp_m == 612 or sp_m == 649 then r1 = "W_AttackRightHeavySpecial1Start" end
 
 
 
@@ -10385,6 +10395,11 @@ function AttackBothDash_onUpdate() -- run r1
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeft2" end
 
+    if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
+
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
@@ -10423,6 +10438,11 @@ function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1
     if sp_m == 643 then l1 = "W_AttackBothLeftStep" end
     if IsFeintAttempt() and (   (sp_m == 259 and is_both_right == TRUE) or (sp_o == 259 and is_both_right == FALSE) ) then b2 = "W_AttackBothHeavySpecial2Start" end
 
+    if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
+
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
@@ -10455,6 +10475,11 @@ function AttackBothLightStep_onUpdate() -- roll r1
 
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeft2" end
+
+    if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 625)
+    end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -10537,6 +10562,8 @@ function AttackBothLightKick_onUpdate()
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
+    if sp_m == 649 then  b2 = "W_AttackBothHeavy1SubStart" end
+    
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
