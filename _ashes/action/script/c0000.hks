@@ -9372,7 +9372,7 @@ function AttackBothLight2_onUpdate()  -- r12
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
     local b1 = "W_AttackBothLight3"
 
-    if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b1 = "W_AttackBothLight1" end
+    if (    (sp_o == 654 or sp_o == 676) and HAND_LEFT_BOTH == c_Style  )      or   ( (sp_m == 654 or sp_m == 676) and HAND_RIGHT_BOTH == c_Style )    then b1 = "W_AttackBothLight1" end
 
     local r1 = "W_AttackRightLight3" 
     local r2 = "W_AttackRightHeavy1Start"
