@@ -8963,9 +8963,9 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     end
 
     if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
-         then 
-             act(2002, 625)
-         end
+    then 
+        act(2002, 625)
+    end
 
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
@@ -9919,7 +9919,7 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end
     end
 
     
-    if sp_m == 643 or sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if (sp_m == 643 or sp_m == 649) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
     end
@@ -10206,7 +10206,7 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
 
     if (sp_m == 612) then b1 = "W_AttackBothHeavySpecial1Start" end
 
-    if sp_m == 643  or sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if (sp_m == 643 or sp_m == 649) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
     end
