@@ -695,7 +695,7 @@ end
 
 function GetWeaponChangeType(hand)
     local sp_m = env(345 , HAND_RIGHT)
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667) 
     then i1BB = TRUE 
     else i1BB = FALSE end
 
@@ -719,7 +719,7 @@ end
 
 function GetHandChangeType(hand)
     local sp_m = env(345 , HAND_RIGHT)
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or  sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 ) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or  sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE 
     else i1BB = FALSE end
 
@@ -801,7 +801,7 @@ function GetSwordArtsInfo()
         end
 
           -- blood bullet technique
-        if (sp == 602 or sp == 617 or sp == 618 or sp == 667 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
+        if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
         (env(225, HAND_LEFT) == 33 or  env(225, HAND_LEFT) == 25 )  then 
             arts_hand = HAND_LEFT   
             arts_id = SWORDARTS_MAGICBUFF
@@ -1258,7 +1258,7 @@ function SetSwordArtsPointInfo(button, is_point_consume)
     end
 
     local sp = env(345 , HAND_LEFT)
-    if (sp == 602 or sp == 617 or sp == 618 or sp == 667 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
+    if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
     (env(225, HAND_LEFT) == 33 or  env(225, HAND_LEFT) == 25 ) and c_Style ~= HAND_RIGHT_BOTH   then sel = 0 end
 
     local val = "IsEnoughArtPointsL2"
@@ -1548,7 +1548,7 @@ function IsEnableGuard()
     end
     local sp = env(345 , hand)
 
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 ) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE 
     else i1BB = FALSE end
 
@@ -3793,7 +3793,7 @@ function ExecWeaponChange(blend_type)
     if IsWeaponChangeBlocked() then return FALSE end
 
     local sp_m = env(345 , HAND_RIGHT)
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667) 
     then i1BB = TRUE 
     else i1BB = FALSE end
 
@@ -3829,7 +3829,7 @@ function ExecHandChange(hand, is_force, blend_type)
     if IsHandChangeBlocked() then return FALSE end
 
     local sp_m = env(345 , HAND_RIGHT)
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or  sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or  sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667) 
     then i1BB = TRUE 
     else i1BB = FALSE end
 
@@ -3988,7 +3988,7 @@ function ExecHandChange(hand, is_force, blend_type)
         elseif (style == HAND_RIGHT_BOTH or style == HAND_BOTH) then ExecEventAllBody("W_AttackBothLightKick")
     end
     
-    elseif (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) then 
+    elseif (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667) then 
         if (style == HAND_RIGHT and iT == FALSE) then 
             if env(1001) <= 0 then
                 return FALSE 
@@ -5514,7 +5514,7 @@ function IdleCommonFunction()
     else iT = TRUE end
 
     local sp_m = env(345 , HAND_RIGHT)
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 ) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE end
 
     local r2 = "W_AttackRightHeavy1Start"
@@ -8443,6 +8443,7 @@ function AttackRightLight3_onUpdate() -- r13
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
 
     if (sp_m == 643) then r2 = "W_AttackRightHeavy2Start" end
+    if (sp_m == 667) then r1 = "W_AttackRightLight1" end
     if (sp_m == 672) then r1 = "W_AttackRightHeavySpecial1Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
 
@@ -8850,7 +8851,7 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14 030350
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy2Start"
     --if (i1BB == TRUE and (sp_m ~= 264 or sp_m ~= 612) ) then r1 = "W_AttackRightLight2" end
-    if (sp_m == 195 or sp_m == 613 or sp_m == 667 or sp_m == 271 or sp_m == 643 or sp_m == 609 or sp_m == 612 or sp_m == 621 or sp_m == 624 or sp_m == 643 or sp_m == 101 or sp_m == 605  or sp_m == 620 or sp_m == 645 ) then r1 = "W_AttackRightLight3" end
+    if (sp_m == 195 or sp_m == 613 or sp_m == 664 or sp_m == 667 or sp_m == 271 or sp_m == 643 or sp_m == 609 or sp_m == 612 or sp_m == 621 or sp_m == 624 or sp_m == 643 or sp_m == 101 or sp_m == 605  or sp_m == 620 or sp_m == 645 ) then r1 = "W_AttackRightLight3" end
     if (sp_m == 641) then r1 = "W_AttackRightLight1" end
     if (sp_m == 646 or sp_m == 610 or sp_m == 649) then r1 = "W_AttackRightLight2" end
     if (sp_m == 264 or sp_m == 164 or sp_m == 614) then r1 = "W_AttackRightLight3" end
@@ -9119,7 +9120,7 @@ function AttackLeftHeavy1_onUpdate()
     local iG = FALSE
     local sp_o = env(345 , HAND_LEFT)
     local l1 = "W_AttackLeftHeavy2"
-    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 667 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then 
+    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then 
         l1 = "W_AttackLeftHeavy1" 
         iG = TRUE
     end
@@ -9429,7 +9430,7 @@ function AttackBothLight3_onUpdate()  -- r13
     local l1 = "W_AttackBothLeft2"
     if sp_m == 613  then l1 = "W_AttackBothLeft2" end
 
-    if  (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 404 or sp_m == 605 or sp_m == 406 or sp_m == 409 or sp_m == 410 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 642 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 or sp_m == 271 ) 
+    if  (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 404 or sp_m == 605 or sp_m == 406 or sp_m == 409 or sp_m == 410 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 642 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 or sp_m == 271 ) 
     then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 643 then 
         b2 = "W_AttackBothHeavy1Start"
@@ -10148,7 +10149,7 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
     end
 
     if sp_m == 195 or sp_m == 621 then b1 = "W_AttackBothLight2" end
-    if sp_m == 641 or sp_m == 605 or sp_m == 667 or sp_m == 609 or sp_m == 643 or sp_m == 612 or sp_m == 624 or sp_m == 101  or sp_m == 645 or sp_m == 646 or sp_m == 610  then b1 = "W_AttackBothLight3" end
+    if sp_m == 641 or sp_m == 605 or sp_m == 664 or sp_m == 667 or sp_m == 609 or sp_m == 643 or sp_m == 612 or sp_m == 624 or sp_m == 101  or sp_m == 645 or sp_m == 646 or sp_m == 610  then b1 = "W_AttackBothLight3" end
 
     if (sp_m == 643) then 
         l1  = "W_AttackBothLeft2"
@@ -10190,7 +10191,7 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
     local sp_m = env(345 , HAND_RIGHT)
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy2Start"
-    if (sp_m == 101 or sp_m == 667 or sp_m == 645) then   
+    if (sp_m == 101 or sp_m == 645) then   
         iT = FALSE 
         r2 = "W_AttackRightHeavy1SubStart"
     end
