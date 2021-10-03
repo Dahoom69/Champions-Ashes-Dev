@@ -2404,6 +2404,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         is_atk_auto_aim = FALSE
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then ExecEventAllBody("W_Warcry")
+        elseif (sp_kind_right == 664) then ExecEventAllBody("W_Warcry")
         else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
     elseif request == SWORDARTS_REQUEST_RIGHT_CHARGE or request == SWORDARTS_REQUEST_LEFT_CHARGE then
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)
