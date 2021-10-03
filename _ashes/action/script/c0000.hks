@@ -1261,6 +1261,9 @@ function SetSwordArtsPointInfo(button, is_point_consume)
     if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
     (env(225, HAND_LEFT) == 33 or  env(225, HAND_LEFT) == 25 ) and c_Style ~= HAND_RIGHT_BOTH   then sel = 0 end
 
+    local sp_m = env(345 , HAND_RIGHT)
+    if sp_m == 649 then sel = 0 end 
+
     local val = "IsEnoughArtPointsL2"
     if button == ACTION_ARM_R1 then
         if IsNodeActive("DrawStanceRightAttackLight_Selector") == TRUE then
@@ -2404,7 +2407,6 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         is_atk_auto_aim = FALSE
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then ExecEventAllBody("W_Warcry")
-        elseif (sp_kind_right == 664) then ExecEventAllBody("W_Warcry")
         else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
     elseif request == SWORDARTS_REQUEST_RIGHT_CHARGE or request == SWORDARTS_REQUEST_LEFT_CHARGE then
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)
@@ -2432,38 +2434,38 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
     elseif request == SWORDARTS_REQUEST_RIGHT_MAGICBUFFATTACK then
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-        local sp_kind_left = env(345 , HAND_LEFT)
-        local sp_kind_right = env(345 , HAND_RIGHT)
-        local dual = FALSE
-        local style = c_Style
-        if (sp_kind_left == 265 or sp_kind_left == 665) and (sp_kind_right == 265 or sp_kind_right == 665) then
-            dual = TRUE
-        end
-        if dual == TRUE and style == HAND_RIGHT then
-            if IsNodeActive("MagicBuffRight_Upper_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffLeft3")
-            elseif IsNodeActive("MagicBuffRight2_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffLeft2")
-            elseif IsNodeActive("MagicBuffRight3_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffLeft3")
-            elseif IsNodeActive("MagicBuffLeft_Upper_Selector") == TRUE then
-                ExecEventAllBody("W_MagicBuffRight3")
-            elseif IsNodeActive("MagicBuffLeft2_Selector") == TRUE then
+            local sp_kind_left = env(345 , HAND_LEFT)
+            local sp_kind_right = env(345 , HAND_RIGHT)
+            local dual = FALSE
+            local style = c_Style
+            if (sp_kind_left == 265 or sp_kind_left == 665) and (sp_kind_right == 265 or sp_kind_right == 665) then
+                dual = TRUE
+            end
+            if dual == TRUE and style == HAND_RIGHT then
+                if IsNodeActive("MagicBuffRight_Upper_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffLeft3")
+                elseif IsNodeActive("MagicBuffRight2_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffLeft2")
+                elseif IsNodeActive("MagicBuffRight3_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffLeft3")
+                elseif IsNodeActive("MagicBuffLeft_Upper_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffRight3")
+                elseif IsNodeActive("MagicBuffLeft2_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffRight2")
+                elseif IsNodeActive("MagicBuffLeft3_Selector") == TRUE then
+                    ExecEventAllBody("W_MagicBuffRight3")
+                else
+                    ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
+                end
+            elseif IsNodeActive("MagicBuffRight_Upper_Selector") == TRUE then
                 ExecEventAllBody("W_MagicBuffRight2")
-            elseif IsNodeActive("MagicBuffLeft3_Selector") == TRUE then
+            elseif IsNodeActive("MagicBuffRight2_Selector") == TRUE then
                 ExecEventAllBody("W_MagicBuffRight3")
+            elseif IsNodeActive("MagicBuffRight3_Selector") == TRUE then
+                ExecEventAllBody("W_MagicBuffRight2")
             else
                 ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
             end
-        elseif IsNodeActive("MagicBuffRight_Upper_Selector") == TRUE then
-            ExecEventAllBody("W_MagicBuffRight2")
-        elseif IsNodeActive("MagicBuffRight2_Selector") == TRUE then
-            ExecEventAllBody("W_MagicBuffRight3")
-        elseif IsNodeActive("MagicBuffRight3_Selector") == TRUE then
-            ExecEventAllBody("W_MagicBuffRight2")
-        else
-            ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
-        end
     else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
     elseif request == SWORDARTS_REQUEST_LEFT_DAGGERSTANCE or request == SWORDARTS_REQUEST_RIGHT_DAGGERSTANCE then
         if IsNodeActive("AttackRight_Script") == TRUE or IsNodeActive("AttackBoth_Script") == TRUE then
