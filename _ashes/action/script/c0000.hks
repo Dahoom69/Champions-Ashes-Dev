@@ -13277,7 +13277,12 @@ end
 
 function MagicBuffRight_Upper_onUpdate()
     local blend_type, lower_state = GetHalfBlendInfo()
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, FALSE) == TRUE then
+    local sp_m = env(345 , HAND_RIGHT)
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+    if sp_m == 649 then r2 = "W_AttackRightHeavy1SubStart" b2 = "W_AttackBothHeavy1SubStart" end
+
+    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif HalfBlendLowerCommonFunction(Event_MagicBuffRightMirror, lower_state, FALSE, FALSE) == TRUE then
         return 
