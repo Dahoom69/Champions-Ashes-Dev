@@ -8984,13 +8984,15 @@ end
 
 function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 030370
     -- tR1
-    iT = TRUE
+
     
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
+
+    if (sp_m ~= 624) then  iT = TRUE end
                   
     if sp_m == 605 or sp_m == 620 then 
         r1 = "W_AttackRightHeavy2End" 
@@ -9012,9 +9014,6 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     if sp_m == 672 then r1 = "W_AttackRightLight2" end
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
-
-    if 10 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
-
     
     if (sp_m == 645) then 
         iT = TRUE
@@ -10289,14 +10288,14 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
 end
 
 function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
-
-    if (sp_m ~= 645) then   iT = FALSE
-    else iT = TRUE end
-
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
+    local b2 = "W_AttackBothHeavy1Start"
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
+
+    if (sp_m ~= 645 and sp_m ~= 624) then   iT = FALSE
+    else iT = TRUE end
                   
     if sp_m == 605 or sp_m == 620 then 
         r1 = "W_AttackRightHeavy2End" 
@@ -10327,9 +10326,10 @@ function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
     if sp_m == 614 then r1 = "W_AttackRightLight3" end
     if  sp_m == 609 or sp_m == 612 or sp_m == 649 then r1 = "W_AttackRightHeavySpecial1Start" end
 
+    if 10 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
+    if sp_m == 624 then b2 = "W_AttackBothHeavy2Start" end
 
-
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackBothHeavySpecial2End")
