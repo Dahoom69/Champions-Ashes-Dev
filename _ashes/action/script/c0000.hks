@@ -2234,6 +2234,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
         else 
 
+            EXR2 = FALSE
+
             if artsr2 == TRUE then
                 SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
             end
@@ -2250,6 +2252,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif ((sp_m == 272 or sp_m == 663 or sp_m == 664 or sp_m == 666 or sp_m == 667 or sp_m == 668 or sp_m == 670 or sp_m == 672 or sp_m == 674 or sp_m == 676) and c_Style ~= HAND_LEFT_BOTH) -- W_AttackBothHeavy1Start2 extra r2
                 or ((sp_o == 272 or sp_o == 663 or sp_o == 664 or sp_o == 666 or sp_o == 667 or sp_o == 668 or sp_o == 670 or sp_o == 672 or sp_o == 674 or sp_o == 676) and c_Style == HAND_LEFT_BOTH)
             then 
+                EXR2 = TRUE
                 if b2 == "W_AttackBothHeavy1Start" then -- r21 charge extra 034345
                     b2 = "W_AttackBothHeavyWepBroken2Start"
                 end
@@ -9820,11 +9823,8 @@ function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
     if sp_m == 643 then b1 = "W_AttackBothLight2" l1 = "W_AttackBothLeft2" end
     if sp_m == 609 then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 610 then b2 = "W_AttackBothHeavy1Start" end
+    if EXR2 == TRUE then b21 = "W_AttackBothHeavyWepBroken2Start" end
 
-    if ((sp_m == 272 or sp_m == 663 or sp_m == 664 or sp_m == 666 or sp_m == 667 or sp_m == 668 or sp_m == 670) and c_Style ~= HAND_LEFT_BOTH) -- W_AttackBothHeavy1Start2 extra r2
-    or ((sp_o == 272 or sp_o == 663 or sp_o == 664 or sp_o == 666 or sp_o == 667 or sp_o == 668 or sp_o == 670) and c_Style == HAND_LEFT_BOTH)
-    then b21 = "W_AttackRightCounter" end
-        
     if env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackBothHeavy1End")
         end
