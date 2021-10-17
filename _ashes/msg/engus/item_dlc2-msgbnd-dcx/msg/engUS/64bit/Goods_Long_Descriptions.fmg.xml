@@ -1965,15 +1965,12 @@ This key was once used to seal away an malicious entity, but seeing as how it lo
 This key was once used to aid gangs of theives spring their cohorts free from the cells of the High Wall of Lothric.
 
 Alas, it seems this key has been used one too many times, as the teeth have either snapped off or become warped, rendering it useless.</text>
-
 <text id="9036">Gesture that displays a peculiar level of gratitude. 
 
 Often seen as a sign of comradery among northern warriors, this seems to come off as brutish and uncultured for others.</text>
-
 <text id="9037">Gesture that acts as communion with a bewildering power.
 
 A strange gesture employed by the people of a foreign land. When used, a sense of loss tinged with hope fogs over the mind, allowing the user to wipe away the past and begin anew.</text>
-
 <text id="1200000">Variation of Soul Arrow developed
 by sorcerers of the Undead Legion of Farron.
 
@@ -2706,7 +2703,7 @@ The soft candies emit a warm, comforting aroma. Nostalgic visions of a home gent
 when the candy is consumed.
 
 Assume human appearance while in another world.</text>
-<text id="5050002">A waxy resin used for armor upkeep.
+<text id="5050002">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
@@ -2714,7 +2711,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 While copper may not be as "noble" as higher metals, there is pride to be held in a grounded, earthly metal.  
 
 Add a copper sheen to currently equipped gear.</text>
-<text id="5050003">A waxy resin used for armor upkeep.
+<text id="5050003">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
@@ -2722,7 +2719,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 Silver beckons imagery of those who are pure and incorruptible, gleaming as brightly as the day they are made, forevermore. 
 
 Add a silver sheen to currently equipped gear.</text>
-<text id="5050004">A waxy resin used for armor upkeep.
+<text id="5050004">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
@@ -2730,7 +2727,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 Gold is a symbol of wealth, and for others, a symbol of power. This lustrous metal has seen the rise and fall of many an empire.
 
 Add a golden sheen to currently equipped gear.</text>
-<text id="5050005">A waxy resin used for armor upkeep.
+<text id="5050005">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
@@ -2738,6 +2735,20 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 Gems and jewels all have their own intrinsic value, but none are as coveted as that of a diamond. 
 
 Add a peculiar cyan sheen to currently equipped gear.</text>
+<text id="5050006">A draught of liquid with mysterious properties.
+
+When the bottle is shaken, liquid can be heard sloshing inside. Inspecting the bottle's contents reveals it to be seemingly empty.
+Perhaps, believing is enough for the effects to be seen.
+
+Conceal grime and stains on equipped gear.</text>
+<text id="5050008">A waxy resin used for armor and weapon upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+Jasper is believed to be the blood of the ancient stone-scaled dragons, as fields where their corpses lie are often rife with the red stone.
+
+Add a crimson sheen to currently equipped gear.</text>
 <text id="5050012">An enchanted vial of distinctly colored liquid.
 
 Dye cloth and skin with a green hue.</text>
