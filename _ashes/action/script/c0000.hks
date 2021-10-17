@@ -34,6 +34,7 @@ function DBSetPhantomColor(colorString)
         WHITE = 5050080,
         RED = 5050081,
         BLUE = 5050083,
+        DBLUE = 5050082,
         YELLOW = 5050085,
         PURPLE = 5050088,
         BLACK = 505021
@@ -4727,19 +4728,26 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
 
     if env(1116, HITSTUN_RING_EFFECT) == TRUE then
             local damagecount = GetVariable("DamageCount")
-            if damagecount >= 3 then
+            if damagecount >= 4 then
                 DBSetPhantomColor("RED")
+            elseif damagecount == 3 then
+                if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("PURPLE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("DBLUE")  
+                elseif env(301, 2) == FALSE then  DBSetPhantomColor("RED")
+                elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
+                end
             elseif damagecount == 2 then
                 if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
                 elseif env(301, 4) == FALSE then DBSetPhantomColor("PURPLE") 
-                elseif env(301, 3) == FALSE then  DBSetPhantomColor("PURPLE")  
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("DBLUE")  
                 elseif env(301, 2) == FALSE then  DBSetPhantomColor("RED")
                 elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
                 end
             elseif damagecount <= 1 then
                 if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
-                elseif env(301, 4) == FALSE then DBSetPhantomColor("PURPLE") 
-                elseif env(301, 3) == FALSE then  DBSetPhantomColor("PURPLE")  
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("DBLUE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("DBLUE")  
                 elseif env(301, 2) == FALSE then  DBSetPhantomColor("BLUE")
                 elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
                 end
