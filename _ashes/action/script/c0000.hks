@@ -14,7 +14,7 @@ DUEL_MODE_EFFECT = 100850
 DUEL_MODE_TOGGLE_EFFECT = 100851
 DUEL_MODE_RESTORATION_TRIGGER_EFFECT = 100852
 DUEL_MODE_TEARS_EFFECT = 635
-
+HITSTUN_RING_EFFECT = 100853
 -- =================================[ Globals end ]=================================
 
 
@@ -4724,6 +4724,27 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
     elseif damage_type == DAMAGE_TYPE_GUARD and env(334, 4) == TRUE then
         damage_type = DAMAGE_TYPE_GUARDBREAK
     end
+
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then
+            local damagecount = GetVariable("DamageCount")
+            if damagecount >= 3 then
+                DBSetPhantomColor("RED")
+            elseif damagecount == 2 then
+                if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("PURPLE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("PURPLE")  
+                elseif env(301, 2) == FALSE then  DBSetPhantomColor("RED")
+                elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
+                end
+            elseif damagecount <= 1 then
+                if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("PURPLE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("PURPLE")  
+                elseif env(301, 2) == FALSE then  DBSetPhantomColor("BLUE")
+                elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
+                end
+            end
+        end
     
     if DAMAGE_TYPE_GUARDED <= damage_type and damage_type <= DAMAGE_TYPE_WALL_LEFT then
         Replanning()
@@ -5409,6 +5430,8 @@ end
 
 function IdleCommonFunction()
         
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
+
     --if env(1116, 103590001) == TRUE and 9 > env(2016) then act(2002, 627) end -- if sunlight blade speffect has 0 fp deactive it
 
     --local LeftWeaponSP = env(345 , HAND_LEFT) -- gunz
