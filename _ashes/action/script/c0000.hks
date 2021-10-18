@@ -5619,6 +5619,7 @@ function IdleCommonFunction()
 end
 
 function AttackCommonFunction(r1, r2, l1, l2, b1, b2, guardcondition, use_atk_queue)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     if env(1116, 100380) == FALSE then
         SetThrowAtkInvalid()
     end
@@ -6094,6 +6095,7 @@ function CrossbowCommonFunction(blend_type)
 end
 
 function EvasionCommonFunction(fall_type, r1, r2, l1, l2, b1, b2)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     SetAIActionState()
     local style = c_Style
     if style == HAND_LEFT_BOTH then
@@ -6264,6 +6266,7 @@ function LandCommonFunction()
 end
 
 function ItemCommonFunction(blend_type)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if iTC ~= TRUE and i1BB == TRUE then 
@@ -6311,6 +6314,7 @@ function ItemCommonFunction(blend_type)
 end
 
 function QuickItemCommonFunction(g_r1, g_r2, g_l1, g_l2, g_b1, g_b2, blend_type, quick_type)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     if g_ItemFirstFrame == 1 then
         g_ItemFirstFrame = 0
     elseif env(1116, 100560) == TRUE then
@@ -6416,6 +6420,7 @@ function StopCommonFunction(is_dash_stop)
 end
 
 function MoveCommonFunction(blend_type)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     act(9100)
     local style = c_Style
     if style == HAND_LEFT_BOTH then
@@ -6509,6 +6514,7 @@ function MoveCommonFunction(blend_type)
 end
 
 function GuardCommonFunction(is_guard_end, blend_type)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     enableShieldStrike = FALSE 
     local weight = env(257)
     if weight == WEIGHT_HEAVY then act(2002, 660) end -- fatroll stamina regen buff
@@ -6682,6 +6688,7 @@ function SwordArtsParryCommonFunction()
 end
 
 function SwordArtsStanceCommonFunction(r1, r2, l1, l2, b1, b2, blend_type, artsr1, artsr2, is_stance_end)
+    if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     if is_stance_end == FALSE then
         SetThrowAtkInvalid()
     end

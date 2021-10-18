@@ -974,5 +974,6 @@
 <text id="20840">Allows full movement regardless of environment</text>
 <text id="20850">It becomes harder for enemies to detect you</text>
 <text id="20860">No longer flinch from attacks, but is extremely heavy</text>
+<text id="22000">Emit light when struck by attacks</text>
 </entries>
 </fmg>

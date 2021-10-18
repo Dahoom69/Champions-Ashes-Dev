@@ -2071,5 +2071,14 @@ The thief gang thriving in lothric seems to value the ring a lot.</text>
 This ring embodies the unwavering resolve of giants, enabling the wielder to endure blows without flinching.
 
 Such power comes at a heavy price.</text>
+<text id="22000">No Lore. Let me just explain how this thing works for PvP.
+
+In Dark Souls some attack strings are inescapable. For most weapon classes for example, the first light attack (R1) into the second light attack is a guaranteed string on hit. 
+Meaning you can't roll the second hit after being hit by the first. This is what's usually referred to as a true combo.
+
+So how does this ring work? When you're hit, your character will emit different colors of light.
+YELLOW is the initial hitstun.
+RED means the last hit could be escaped. 
+BLUE means the last hit was a true combo.</text>
 </entries>
 </fmg>
