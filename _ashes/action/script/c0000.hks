@@ -4732,22 +4732,22 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
                 DBSetPhantomColor("RED")
             elseif damagecount == 3 then
                 if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
-                elseif env(301, 4) == FALSE then DBSetPhantomColor("DBLUE") 
-                elseif env(301, 3) == FALSE then  DBSetPhantomColor("DBLUE")  
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("BLUE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("BLUE")  
                 elseif env(301, 2) == FALSE then  DBSetPhantomColor("RED")
                 elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
                 end
             elseif damagecount == 2 then
                 if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
-                elseif env(301, 4) == FALSE then DBSetPhantomColor("DBLUE") 
-                elseif env(301, 3) == FALSE then  DBSetPhantomColor("DBLUE")  
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("BLUE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("BLUE")  
                 elseif env(301, 2) == FALSE then  DBSetPhantomColor("RED")
                 elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
                 end
             elseif damagecount <= 1 then
                 if env(301, 5) == FALSE then  DBSetPhantomColor("YELLOW")
-                elseif env(301, 4) == FALSE then DBSetPhantomColor("DBLUE") 
-                elseif env(301, 3) == FALSE then  DBSetPhantomColor("DBLUE")  
+                elseif env(301, 4) == FALSE then DBSetPhantomColor("BLUE") 
+                elseif env(301, 3) == FALSE then  DBSetPhantomColor("BLUE")  
                 elseif env(301, 2) == FALSE then  DBSetPhantomColor("BLUE")
                 elseif env(301, 1) == FALSE then  DBSetPhantomColor("RED") 
                 end
