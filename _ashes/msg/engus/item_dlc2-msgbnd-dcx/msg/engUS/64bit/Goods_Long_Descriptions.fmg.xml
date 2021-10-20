@@ -1100,6 +1100,30 @@ Crushing the coin Increases soul absorption from defeated enemies, but curses yo
 Attracts more attention from foes.
 
 Doubles stamina consumption for x1.25 soul gain</text>
+<text id="610">An orb that changes your character tendency.
+
+Praying to this orb changes the difficulty of your journey.
+
+Pure White provides the following buffs:
+- Any form of healing is 20% more effective.
+- Increases armor absorption by 30%
+- Increases damage inflicted by 30%
+
+Pure White provides the following penalties:
+- You gain no Souls
+- Nerfed absorption and damage in PvP</text>
+<text id="611">An orb that changes your character tendency.
+
+This orb neutralizes White or Black tendency and returns the difficulty back to normal.</text>
+<text id="612">An orb that changes your character tendency.
+
+Praying to this orb changes the difficulty of your journey.
+
+Pure Black provides the following buffs:
+- Increases souls absorbed by 50%
+
+Pure Black provides the following penalties:
+- Decreases armor absorption by 50%</text>
 <text id="712">Soul of the champion Gundyr.
 One of the twisted souls, steeped in strength.
 
