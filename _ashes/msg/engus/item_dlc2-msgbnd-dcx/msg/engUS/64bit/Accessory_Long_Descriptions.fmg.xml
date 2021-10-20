@@ -775,7 +775,9 @@ on its surface. Slows equipment degradation.
 Wielders of swords originating in the same region
 follow a practice of inscribing special words
 on the blades of their swords, and are naturally
-drawn to this ring.</text>
+drawn to this ring.
+
+Your Champion Soul unlocks further effects, increasing the your maximum stamina by 3%.</text>
 <text id="20141">This special ring crafted in an Eastern land
 is made of metal, but with a wood grain crest
 on its surface. Slows equipment degradation.
@@ -783,7 +785,9 @@ on its surface. Slows equipment degradation.
 Wielders of swords originating in the same region
 follow a practice of inscribing special words
 on the blades of their swords, and are naturally
-drawn to this ring.</text>
+drawn to this ring.
+
+Your Champion Soul unlocks further effects, increasing the your maximum stamina by 4%.</text>
 <text id="20142">This special ring crafted in an Eastern land
 is made of metal, but with a wood grain crest
 on its surface. Slows equipment degradation.
@@ -791,7 +795,9 @@ on its surface. Slows equipment degradation.
 Wielders of swords originating in the same region
 follow a practice of inscribing special words
 on the blades of their swords, and are naturally
-drawn to this ring.</text>
+drawn to this ring.
+
+Your Champion Soul unlocks further effects, increasing the your maximum stamina by 5%.</text>
 <text id="20143">%null%</text>
 <text id="20144">%null%</text>
 <text id="20145">%null%</text>
@@ -2070,7 +2076,7 @@ The thief gang thriving in lothric seems to value the ring a lot.</text>
 
 This ring embodies the unwavering resolve of giants, enabling the wielder to endure blows without flinching.
 
-Such power comes at a heavy price.</text>
+Such power comes at a heavy price, both in weight and damage absorption.</text>
 <text id="22000">No Lore. Let me just explain how this thing works for PvP.
 
 In Dark Souls some attack strings are inescapable. For most weapon classes for example, the first light attack (R1) into the second light attack is a guaranteed string on hit. 

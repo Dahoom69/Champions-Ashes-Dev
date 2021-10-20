@@ -280,9 +280,9 @@
 <text id="20137">%null%</text>
 <text id="20138">%null%</text>
 <text id="20139">%null%</text>
-<text id="20140">Slows equipment degradation</text>
-<text id="20141">Slows equipment degradation</text>
-<text id="20142">Slows equipment degradation</text>
+<text id="20140">Slows equipment degradation and raises max stamina</text>
+<text id="20141">Slows equipment degradation and raises max stamina</text>
+<text id="20142">Slows equipment degradation and raises max stamina</text>
 <text id="20143">%null%</text>
 <text id="20144">%null%</text>
 <text id="20145">%null%</text>
@@ -973,7 +973,7 @@
 <text id="20830">Reduces damage from backstabs</text>
 <text id="20840">Allows full movement regardless of environment</text>
 <text id="20850">It becomes harder for enemies to detect you</text>
-<text id="20860">No longer flinch from attacks, but is extremely heavy</text>
+<text id="20860">Become unwavering at the cost of damage absorption</text>
 <text id="22000">Emit light when struck by attacks</text>
 </entries>
 </fmg>
