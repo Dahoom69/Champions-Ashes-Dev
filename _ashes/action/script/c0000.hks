@@ -9420,7 +9420,7 @@ function AttackBothLight1_onUpdate()  -- r11
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
-    if sp_m == 610 then l1 = "W_AttackBothLeft1" end
+    if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft1" end
     if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" end
 
     if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
@@ -9464,7 +9464,7 @@ function AttackBothLight2_onUpdate()  -- r12
         l1 = "W_AttackBothLeft2"
     end
 
-    if sp_m == 610 then l1 = "W_AttackBothLeft2" end
+    if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft2" end
 
     --local JF = "W_RandomOneShotNext2"
     --if IsDualBlade() == TRUE then JF = "W_RandomOneShotNext1" end
@@ -9539,7 +9539,7 @@ function AttackBothLight3_onUpdate()  -- r13
         --l1 = "W_AttackBothHeavySpecial1Start"
         l1 = "W_AttackBothLeft3"
     end
-    if sp_m == 610 then l1 = "W_AttackBothLeft3" end
+    if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft3" end
     if sp_m == 664 then b1 = "W_AttackBothLight1" end
 
     if sp_m == 232 or sp_m == 242  then b1 = "W_AttackBothLight1" end
@@ -10186,6 +10186,8 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end
 
     if sp_m == 610 then b2 = "W_AttackBothHeavy2End" end
 
+    if sp_m == 667 then b1 = "W_AttackBothHeavySpecial1Start" b2 = "W_AttackRightHeavy1SubStart" end 
+
     if (is_catalysts == TRUE ) then  
         if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightLight1", FALSE, TRUE) == TRUE then
             return 
@@ -10257,7 +10259,8 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
         l1  = "W_AttackBothLeft2"
     end
 
-    if sp_m == 610 then l1 = "W_AttackBothLeft3" end
+    if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft3" end
+    if sp_m == 667 then b1 = "W_AttackBothHeavy2End" end
 
     if (sp_m == 621) then l1 = "W_AttackBothHeavy2Start" end
 
