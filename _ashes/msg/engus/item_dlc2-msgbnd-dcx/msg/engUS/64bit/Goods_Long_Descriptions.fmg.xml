@@ -1485,10 +1485,9 @@ intelligence.</text>
 <text id="1150">A gem of infused titanite.
 Found in rare cases inside demons.
 
-Used in infusion to create fire weapons.
+Used in infusion to create seething weapons.
 
-Fire weapons inflict fire damage,
-but lose scaling effects.</text>
+Seething weapons inflict fire damage and boost fire damage on successful attack, but lose scaling effects.</text>
 <text id="1151">%null%</text>
 <text id="1152">%null%</text>
 <text id="1153">%null%</text>
@@ -1535,8 +1534,7 @@ Found in the dregs of the Cathedral of the Deep.
 
 Used in infusion to create deep weapons.
 
-Deep weapons inflict dark damage,
-but lose scaling effects.
+Deep weapons inflict dark damage and boost dark damage on successful attack, but lose scaling effects.
 
 There is a darkness that lies beyond human ken.</text>
 <text id="1181">%null%</text>
