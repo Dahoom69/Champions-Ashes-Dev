@@ -8980,8 +8980,8 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14 030350
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
     if (sp_m == 672) then r1 = "W_AttackRightHeavySpecial1End" end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140 or sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140 or sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140 or sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140 or sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
     
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -9034,8 +9034,8 @@ function AttackRightHeavySpecial1End_onUpdate() -- r23 r2 charged super -- 03035
         r1 = "W_AttackRightLight2"
     end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
 
     if sp_m == 614 or sp_m == 609 or sp_m == 612 or sp_m == 610  then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 672 or sp_m == 649 then  r1 = "W_AttackRightLight3" end
@@ -10300,8 +10300,8 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
 
     if (sp_m == 621) then l1 = "W_AttackBothHeavy2Start" end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
 
 
     act("特殊補間設定", 0, FALSE)
@@ -10359,8 +10359,8 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
     if sp_m == 610 then b2 = "W_AttackBothHeavy2End" end
     if sp_m == 649 then b2 = "W_AttackBothHeavy1SubStart" end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
 
     if AttackCommonFunction("W_AttackRightLight1", r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
