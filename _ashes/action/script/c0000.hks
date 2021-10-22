@@ -879,8 +879,8 @@ function GetAttackRequest(is_guard)
             local is_rightHandCA = FALSE
             local is_leftHandCA = FALSE
 
-            if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) or (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or (is_r == TRUE) or sp == 167 or sp == 147 or sp == 668 or sp == 673 or sp == 176 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
-            if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE ) or (spo == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or (is_ro == TRUE) or spo == 167 or spo == 147 or  spo == 668 or  spo == 673 or spo == 176 or  spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
+            if (    ((is_gh == TRUE and sp == 655) or (sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) or (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or (is_r == TRUE) or sp == 103 or sp == 167 or sp == 147 or sp == 668 or sp == 673 or sp == 176 or sp == 231) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
+            if (    ((is_gho == TRUE and spo == 655) or (spo == 72  and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE ) or (spo == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or (is_ro == TRUE) or spo == 103 or spo == 167 or spo == 147 or  spo == 668 or  spo == 673 or spo == 176 or  spo == 231) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
 
             if is_arrow == TRUE then
                 act("弓矢スロット選択", 0)
@@ -902,7 +902,7 @@ function GetAttackRequest(is_guard)
                 elseif ((sp == 72 or (spo == 72 and is_leftHandCA == TRUE)) and c_SwordArtsID ~= 24 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
                 elseif ((sp == 166 or (spo == 166 and is_leftHandCA == TRUE)) and c_SwordArtsID == 12 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- old hero
                 elseif ((sp == 176 or sp == 668) or ((spo == 176 or spo == 668)  and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art     
-                elseif ((sp == 167 or sp == 673) or ((spo == 167 or spo == 673) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora or bloodlust combat art
+                elseif ((sp == 103 or sp == 167 or sp == 673) or ((spo == 103 or spo == 167 or spo == 673) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora or bloodlust combat art
                 elseif (sp == 147 or (spo == 147 and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
                 elseif ((is_r == TRUE) or ((is_ro == TRUE) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_PARRY -- thrusting sword combat art   
                 else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- ???
@@ -935,7 +935,7 @@ function GetAttackRequest(is_guard)
                 act(2002, 626)
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
             elseif sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
-            elseif sp == 167 or sp == 673 then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora or bloodlust
+            elseif sp == 103 or sp == 167 or sp == 673 then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora or bloodlust
             elseif (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- hero
             elseif sp == 176 or sp == 668 then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS 
             elseif sp == 147 then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
@@ -1613,7 +1613,7 @@ function IsWarcrySpAtk()
     if style == HAND_LEFT_BOTH then
         offset = 50
     end
-    local buff = {1062301, 1062311, 1070101, 1070111, 1070401, 1070411, 1070501, 1070511, 1080001, 1080011, 1080601, 1080611, 1083201, 1092401, 1092411}
+    local buff = {1062301, 1062311, 1070101, 1070111, 1070401, 1070411, 1070501, 1070511, 1080001, 1080011, 1080601, 1080611, 1083201, 1092401, 1092411, 130070720, 130070770}
     for local0 = 1, #buff, 1 do
         if env(1116, buff[local0] + offset) == TRUE then
             return TRUE
@@ -8980,8 +8980,8 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14 030350
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
     if (sp_m == 672) then r1 = "W_AttackRightHeavySpecial1End" end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140 or sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140 or sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
     
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -9022,6 +9022,7 @@ end
 
 function AttackRightHeavySpecial1End_onUpdate() -- r23 r2 charged super -- 030351
     local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
     local sp_m = env(345 , HAND_RIGHT)
 
     if sp_m == 264 or sp_m == 646 then 
@@ -9033,10 +9034,13 @@ function AttackRightHeavySpecial1End_onUpdate() -- r23 r2 charged super -- 03035
         r1 = "W_AttackRightLight2"
     end
 
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+
     if sp_m == 614 or sp_m == 609 or sp_m == 612 or sp_m == 610  then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 672 or sp_m == 649 then  r1 = "W_AttackRightLight3" end
     
-    if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -10296,6 +10300,9 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
 
     if (sp_m == 621) then l1 = "W_AttackBothHeavy2Start" end
 
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+
 
     act("特殊補間設定", 0, FALSE)
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
@@ -10351,6 +10358,9 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
 
     if sp_m == 610 then b2 = "W_AttackBothHeavy2End" end
     if sp_m == 649 then b2 = "W_AttackBothHeavy1SubStart" end
+
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
 
     if AttackCommonFunction("W_AttackRightLight1", r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
