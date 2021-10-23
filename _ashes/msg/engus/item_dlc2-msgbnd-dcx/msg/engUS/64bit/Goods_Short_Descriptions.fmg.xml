@@ -400,7 +400,7 @@
 <text id="1147">%null%</text>
 <text id="1148">%null%</text>
 <text id="1149">%null%</text>
-<text id="1150">Infuse to create fire weapon</text>
+<text id="1150">Infuse to create seething weapon</text>
 <text id="1151">%null%</text>
 <text id="1152">%null%</text>
 <text id="1153">%null%</text>
@@ -696,6 +696,9 @@
 <text id="5050005">Apply a peculiar cyan sheen to equipped gear</text>
 <text id="5050006">Conceal grime and stains on equipped gear</text>
 <text id="5050008">Apply a crimson sheen to equipped gear</text>
+<text id="5050009">Apply a verdant sheen to equipped gear</text>
+<text id="5050010">Apply an azure sheen to equipped gear</text>
+<text id="5050011">Apply a black sheen to equipped gear</text>
 <text id="5050012">Apply a green hue to equipped gear</text>
 <text id="5050013">Apply a violet hue to equipped gear</text>
 <text id="5050014">Apply a scarlet hue to equipped gear</text>
