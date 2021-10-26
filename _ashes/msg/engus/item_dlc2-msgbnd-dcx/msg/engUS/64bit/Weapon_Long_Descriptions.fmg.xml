@@ -18351,12 +18351,6 @@ A well-crafted sword designed for thrusting attacks, though it is worn beyond re
 
 Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
-<text id="30060300">Greatsword wielded by knights of a frozen city.
-
-The knights who wielded these were commanded to strike down each malformed terror that arose from chaos, and they would not hesitate even if it were their own king.
-
-Skill: Ivory Knight's Stance
-Stand ready with the ivory blade and from this stance transition to normal or strong attack, wielding the sword with the finesse and agility of an Eleum Loyce knight.</text>
 <text id="30070000">A bladeless, thick mass of iron used for smashing.
 
 Its existence is enigmatic because of its supposed use for dragon slaying, before the First Lords came to be.
@@ -18530,6 +18524,12 @@ Surely, a skilled craftsman may meld it into its other forms...
 
 Skill: Agile Retreat
 Quickly backflip, avoiding all danger.</text>
+<text id="30170000">Greatsword wielded by knights of a frozen city.
+
+The knights who wielded these were commanded to strike down each malformed terror that arose from chaos, and they would not hesitate even if it were their own king.
+
+Skill: Ivory Knight's Stance
+Stand ready with the ivory blade and from this stance transition to normal or strong attack, wielding the sword with the finesse and agility of an Eleum Loyce knight.</text>
 <text id="30190000">Shield of Lorian, Prince Lothric's older brother.
 
 Before Lorian embraced his brother's curse, he was a knight who single handedly slayed the demon prince, but the victory eternally scorched his shield.
