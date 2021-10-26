@@ -2728,6 +2728,7 @@ Assume human appearance while in another world.</text>
 <text id="5050002">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 Copper may not be as "noble" as higher metals, but there is pride to be held in a grounded, earthly metal.  
@@ -2736,6 +2737,7 @@ Add a copper sheen to currently equipped gear.</text>
 <text id="5050003">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 Silver beckons imagery of those who are pure and incorruptible, gleaming as brightly as the day they are made, forevermore. 
@@ -2744,6 +2746,7 @@ Add a silver sheen to currently equipped gear.</text>
 <text id="5050004">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 Gold is a symbol of wealth, and for others, a symbol of power. This lustrous metal has seen the rise and fall of many an empire.
@@ -2752,6 +2755,7 @@ Add a golden sheen to currently equipped gear.</text>
 <text id="5050005">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 Gems and jewels all have their own intrinsic value, but none are as coveted as that of a diamond. 
@@ -2760,12 +2764,14 @@ Add a peculiar cyan sheen to currently equipped gear.</text>
 <text id="5050006">A draught of liquid with mysterious properties.
 
 When the bottle is shaken, liquid can be heard sloshing inside. Inspecting the bottle's contents reveals it to be seemingly empty.
-Perhaps, believing is enough for the effects to be seen.
+
+Perhaps believing is enough for the effects to be seen?
 
 Conceal grime and stains on equipped gear.</text>
 <text id="5050008">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 Cinnabar is believed to be the blood of the ancient stone-scaled dragons, as fields where their corpses lie are often rife with the red stone.
@@ -2774,6 +2780,7 @@ Add a crimson sheen to currently equipped gear.</text>
 <text id="5050009">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 The distant land of Zena regards jade as a material with healing properties, making the gem highly sought after.
@@ -2782,6 +2789,7 @@ Add a verdant sheen to currently equipped gear.</text>
 <text id="5050010">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
 Crystal Lizards are adept excavators, as gems are their sole food source. They have a particular attraction to pure kyanite.
@@ -2790,18 +2798,38 @@ Add an azure sheen to currently equipped gear.</text>
 <text id="5050011">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
 This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
 
-Vinheim expeditions into areas near sources of the Abyss have found deposits of the black gem known as obsidian. Care must be taken when handling obsidian, as it is extraordinarily keen.
+Vinheim expeditions into areas near sources of the Abyss have found deposits of the black mineral known as obsidian. Care must be taken when handling obsidian, as it is extraordinarily keen.
 
 Add a black sheen to currently equipped gear.</text>
 <text id="5050012">An enchanted vial of distinctly colored liquid.
 
+Dyemaking is a very old and rare trade, with few beings able to call themselves masters.
+
+Those that do, however, are able to capture the colors and hues of the world, infusing cloth (and in clumsy hands, skin) with magnificent vibrancy.
+
+In an old neighboring land, there existed a black cave wherein the air hung heavy with poisonous vapors and weathered statues lined the walls and floors.
+Due to the noxious mist, a rare moss grew along the walls, which is what gives this dye its unique color.
+
 Dye cloth and skin with a green hue.</text>
 <text id="5050013">An enchanted vial of distinctly colored liquid.
 
+Dyemaking is a very old and rare trade, with few beings able to call themselves masters. Those that do, however,
+are able to extract the colors and hues of the world, infusing cloth (and with accidental spills, skin) with magnificent vibrancy.
+
+A common pest, poison hornbugs can often be seen feasting on decaying vegetation. A byproduct of their diet is a noxious liquid which they store in sacs adorning their backs.
+If this liquid is extracted before being expelled from the insect, it makes the base for a particularly vibrant violet shade.
+
 Dye cloth and skin with a violet hue.</text>
 <text id="5050014">An enchanted vial of distinctly colored liquid.
+
+Dyemaking is a very old and rare trade, with few beings able to call themselves masters. Those that do, however,
+are able to extract the colors and hues of the world, infusing cloth (and with accidental spills, skin) with magnificent vibrancy.
+
+Within the Kiln of the First Flame, a crimson flower sprouts from the remains of those who have linked the fire.
+This is the only area in which this flower can seemingly be found, leading to it being named as the Ashen Lotus.
 
 Dye cloth and skin with a scarlet hue.</text>
 <text id="5050035">A flavoured substance, sometimes carried by Undead. 
