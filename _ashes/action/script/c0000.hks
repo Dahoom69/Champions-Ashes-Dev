@@ -9462,6 +9462,11 @@ function AttackBothLight1_onUpdate()  -- r11
         act(2002, 625)
     end
 
+    if ((sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) ) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
+        act("特殊補間設定", 0, TRUE)
+        ExecEventAllBody("W_AttackBothDashSpecial")
+        end -- new
+
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then return
@@ -10648,6 +10653,8 @@ function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1
     if (env(345 , HAND_RIGHT) == 614)  or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
     if (env(345 , HAND_RIGHT) == 612) then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 609 or sp_m == 664 then b1 = "W_AttackBothLight3" end
+
+    if (sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
 
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeftStep" end
