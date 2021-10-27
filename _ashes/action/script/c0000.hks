@@ -9086,6 +9086,7 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     if sp_m == 610 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 672 then r1 = "W_AttackRightLight2" end
+    
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     
@@ -10431,6 +10432,7 @@ function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
 
     if 10 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
     if sp_m == 624 then b2 = "W_AttackBothHeavy2Start" end
+    if sp_m == 664 then r1 = "W_AttackRightLightDashSpecial" end
 
     if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
