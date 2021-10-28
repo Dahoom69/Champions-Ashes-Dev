@@ -2240,8 +2240,11 @@
 <text id="99761000">Brushwood Armor</text>
 <text id="99762000">Brushwood Gauntlets</text>
 <text id="99763000">Brushwood Leggings</text>
-<text id="99770000">Skeleton Head</text>
-<text id="99771000">Skeleton Body</text>
+<text id="99770000">Skeleton Head - Head</text>
+<text id="99771000">Skeleton Body - Torso</text>
+<text id="99772000">Skeleton Body - Arms</text>
+<text id="99773000">Skeleton Body - Legs</text>
+<text id="99774000">Skeleton Head - Arms</text>
 <text id="99780000">Penetrator Helm</text>
 <text id="99781000">Penetrator Armor</text>
 <text id="99782000">Penetrator Gauntlets</text>
@@ -2255,7 +2258,9 @@
 <text id="99802000">Bone Ash Gauntlets</text>
 <text id="99803000">Bone Ash Leggings</text>
 <text id="99810000">Demon Head</text>
-<text id="99811000">Demon Body</text>
+<text id="99811000">Demon Body - Torso</text>
+<text id="99812000">Demon Body - Arms</text>
+<text id="99813000">Demon Body - Legs</text>
 <text id="99820000">Tower Knight Helm</text>
 <text id="99821000">Tower Knight Armor</text>
 <text id="99822000">Tower Knight Gauntlets</text>
