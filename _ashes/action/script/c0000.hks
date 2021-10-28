@@ -10515,6 +10515,8 @@ function AttackBothHeavyWepBroken2Start_onUpdate()
         b2 = "W_AttackBothHeavy2Start"
     end
 
+    if ((sp_m == 663 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 663 and c_Style == HAND_LEFT_BOTH)) and IsFeintAttempt() then b1 = "W_AttackBothLight2" end
+
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
