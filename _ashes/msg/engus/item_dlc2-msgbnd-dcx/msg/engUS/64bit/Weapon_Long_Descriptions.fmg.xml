@@ -3749,12 +3749,15 @@ The swordsman was a master of a rare technique, traces of which can be observed 
 
 Skill: Hold
 Assume a holding stance to rapidly execute a lunging slash with normal attack, or a deflecting parry with strong attack.</text>
-<text id="5040000">Katana of the old Mound-maker.
+<text id="5040000">Katana of the first Mound-maker.
 
 The Mound-maker piled sacrifices upon the altar, but became the final offering himself, leaving this katana as a gift for his dear family.
 
-Skill: Shield Splitter
-Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
+Skill: Bloodlust
+Stain blade with one’s own blood to temporarily grant uncanny sharpness and reach. For one driven by bloodlust, nothing deserves to remain standing.
+
+Combat Art: Sanguine Strike
+Thrust the weapon into the oneself in a damaging display of blood, for both the opponent and the wielder.</text>
 <text id="5050000">A cursed sword with an unseen blade,
 the choice weapon of Yuria of Londor.
 
@@ -7277,8 +7280,11 @@ Skill: Steady Chant
 For a short moment, boost the strength of sorceries. </text>
 <text id="8230000">Hammer crafted from the trunk of a great tree that has survived for an overwhelmingly long time.
 
-It was said that the old tree posessed thought, and became an object of worship for citizens of the Undead Commune.
-With a density and strength unthinkable for wood, it boasts power that can stand up against any metallic weapon.</text>
+It was said that the old tree posessed thought, and became an object of worship for citizens of the Undead Settlement.
+With a density and strength unthinkable for wood, it boasts power that can stand up against any metallic weapon.
+
+Skill: Spin Bash
+Bash foes with a large spinning motion, and utilize momentum to transition into an overhanded strong attack smash.</text>
 <text id="8240000">A war hammer with a hard pronged head. Was originally a pickaxe, but was refitted for battle.
 
 This simple but deadly weapon hits heavily with thrust damage, easily puncturing metal armor.
