@@ -2733,7 +2733,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Copper may not be as "noble" as higher metals, but there is pride to be held in a grounded, earthly metal.  
 
-Add a copper sheen to currently equipped gear.</text>
+Add a copper sheen to equipped gear.</text>
 <text id="5050003">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2742,7 +2742,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Silver beckons imagery of those who are pure and incorruptible, gleaming as brightly as the day they are made, forevermore. 
 
-Add a silver sheen to currently equipped gear.</text>
+Add a silver sheen to equipped gear.</text>
 <text id="5050004">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2751,7 +2751,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Gold is a symbol of wealth, and for others, a symbol of power. This lustrous metal has seen the rise and fall of many an empire.
 
-Add a golden sheen to currently equipped gear.</text>
+Add a golden sheen to equipped gear.</text>
 <text id="5050005">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2760,14 +2760,10 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Gems and jewels all have their own intrinsic value, but none are as coveted as that of a diamond. 
 
-Add a peculiar cyan sheen to currently equipped gear.</text>
-<text id="5050006">A draught of liquid with mysterious properties.
+Add a peculiar cyan sheen to equipped gear.</text>
+<text id="5050006">A flavoured substance, sometimes carried by Undead. 
 
-When the bottle is shaken, liquid can be heard sloshing inside. Inspecting the bottle's contents reveals it to be seemingly empty.
-
-Perhaps believing is enough for the effects to be seen?
-
-Conceal grime and stains on equipped gear.</text>
+Assume a luminous pink appearance.</text>
 <text id="5050008">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2824,8 +2820,8 @@ Dye cloth and skin with a violet hue.</text>
 
 Dyemaking is a very old and rare trade, with few being able to call themselves masters. Those that do, however, are able to extract the colors and hues of the world, infusing cloth (and in clumsy hands, skin) with magnificent vibrancy.
 
-Within the Kiln of the First Flame, a crimson flower sprouts from the remains of those who have linked the fire.
-This is the only area in which this flower can seemingly be found, leading to it being named as the Ashen Lotus.
+Within the Kiln of the First Flame, a scarlet flower sprouts from the remains of those who have linked the fire.
+This is the only area in which this flower can be found, leading to it being named as the Ash Lotus.
 
 Dye cloth and skin with a scarlet hue.</text>
 <text id="5050035">A flavoured substance, sometimes carried by Undead. 
