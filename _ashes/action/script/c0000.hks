@@ -9927,7 +9927,9 @@ function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
     elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody(b21) return
     elseif env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE then
         act("特殊補間設定", 0, TRUE)
-        ExecEventAllBody(b21)
+        if sp_m == 627 then ExecEventAllBody("W_AttackBothHeavyWepBroken2Start")
+        else ExecEventAllBody(b21)
+        end
         return 
     else
         return 
