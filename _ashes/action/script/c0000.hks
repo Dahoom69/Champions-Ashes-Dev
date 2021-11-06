@@ -1907,7 +1907,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
 
     local sp_BB = env(345 , tHand)
 
-    if ( sp_BB ~= 101 and sp_BB ~= 612 and sp_BB ~= 627 and sp_BB ~= 624 and sp_BB ~= 641 and sp_BB ~= 642 and sp_BB ~= 645) then iT = FALSE end
+    if ( sp_BB ~= 101 and sp_BB ~= 612 and sp_BB ~= 627 and sp_BB ~= 640 and sp_BB ~= 624 and sp_BB ~= 641 and sp_BB ~= 642 and sp_BB ~= 645) then iT = FALSE end
 
     if c_HasActionRequest == FALSE then
         return FALSE
@@ -3831,7 +3831,7 @@ function ExecWeaponChange(blend_type)
 
     local sp_m = env(345 , HAND_RIGHT)
 
-    if (sp_m ~= 101 and sp_m ~= 612 and sp_m ~= 627 and sp_m ~= 641 and sp_m ~= 624 and sp_m ~= 642 and sp_m ~= 645 ) then iT = FALSE end
+    if (sp_m ~= 101 and sp_m ~= 612 and sp_m ~= 627 and sp_m ~= 640 and sp_m ~= 641 and sp_m ~= 624 and sp_m ~= 642 and sp_m ~= 645 ) then iT = FALSE end
     ExecEventHalfBlend(Event_WeaponChangeStart, blend_type)
     SetAIActionState()
     return TRUE
