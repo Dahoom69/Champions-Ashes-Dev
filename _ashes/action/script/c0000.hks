@@ -1058,7 +1058,7 @@ function GetAttackRequest(is_guard)
             if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) then is_gun = TRUE end
 
             if (   (sp ~= 50 and sp ~= 179 and sp ~= 232 and sp ~= 264 and sp ~= 164 and sp ~= 107)         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
-            if (   (spm ~= 50 and spm ~= 179 and spm ~= 232 and spm ~= 264 and spm ~= 164 and spm ~= 107 and spm ~= 621 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
+            if (   (spm ~= 50 and spm ~= 179 and spm ~= 232 and spm ~= 264 and spm ~= 164 and spm ~= 107 and spm ~= 621 and spm ~= 640 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
             
             -- powerstance
             if      (   (is_am == TRUE and spm ~= 102)                                  and    (is_a == TRUE and is_gun == FALSE and sp ~= 102) and     (is_both == FALSE and spm ~= 138)   )   then return ATTACK_REQUEST_BOTH_LEFT
