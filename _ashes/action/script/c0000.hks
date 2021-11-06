@@ -13841,6 +13841,7 @@ function OneShotFullRightStart_onUpdate()
 
     local r2 = "W_AttackRightHeavy1Start"
     local b2 =  "W_AttackBothHeavy1Start"
+    local b1 = "W_AttackBothLight1"
     if i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -13849,8 +13850,14 @@ function OneShotFullRightStart_onUpdate()
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if env(345 , HAND_RIGHT) == 612 or sp_m == 627 or sp_m == 640  then r1 = "W_AttackRightLight3" end
-    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
+    if env(345 , HAND_RIGHT) == 612 or sp_m == 640  then r1 = "W_AttackRightLight3" end
+    if sp_m == 627 then  
+        r1 = "W_AttackRightLightDash"
+        r2 = "W_AttackRightHeavy2Start"
+        b1 = "W_AttackBothDash"
+        b2 = "W_AttackBothHeavy2Start"
+    end
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     else
         return 
