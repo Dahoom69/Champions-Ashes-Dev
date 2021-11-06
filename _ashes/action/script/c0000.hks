@@ -13886,7 +13886,7 @@ function OneShotFullBothStart_onUpdate() -- oneshot WA
     if sp_m == 612 then b1 = "W_AttackBothLight2" end
 
     if sp_m == 640 then  
-        b1 = "W_AttackRightHeavySpecial1Start"
+        b1 = "W_AttackBothLight3"
         b2 = "W_AttackBothLightStepSpecial"
     end
 
