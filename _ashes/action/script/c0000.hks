@@ -2618,7 +2618,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             local sp_m = env(345 , c_SwordArtsHand)
             if style == HAND_RIGHT then
 
-                if (env(345 , c_SwordArtsHand) == 612) then
+                if (env(345 , c_SwordArtsHand) == 612) or (env(345 , c_SwordArtsHand) == 640) then
                     if iT ~= TRUE then ExecEventAllBody("W_OneShotFullRightStart") 
                     else  ExecEventAllBody("W_OneShotFullBothStart") end
 
@@ -13857,6 +13857,10 @@ function OneShotFullRightStart_onUpdate()
         b1 = "W_AttackBothDash"
         b2 = "W_AttackBothHeavy2Start"
     end
+    if sp_m == 640 then  
+        r1 = "W_AttackRightLightStep"
+        r2 = "W_AttackRightLightStepSpecial"
+    end
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     else
@@ -13879,7 +13883,12 @@ function OneShotFullBothStart_onUpdate() -- oneshot WA
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if sp_m == 612 or sp_m == 627 or sp_m == 640 then b1 = "W_AttackBothLight2" end
+    if sp_m == 612 then b1 = "W_AttackBothLight2" end
+
+    if sp_m == 640 then  
+        b1 = "W_AttackRightHeavySpecial1Start"
+        b2 = "W_AttackBothLightStepSpecial"
+    end
 
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1 , b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return
