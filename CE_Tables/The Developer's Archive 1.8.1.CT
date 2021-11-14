@@ -8,7 +8,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Developer's Archive 1.7 09/04/2021"</Description>
+      <Description>"Open - The Developer's Archive 1.8.1 11/14/2021"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -3574,8 +3574,8 @@ CREATETHREAD(ItemGib)
 404D0E9A:Kyanite Polish [Red Phantom 2]
 404D0E9B:Obsidian Polish [Black Phantom]
 404D0E9C:Mossy Dye [Dragon Spirit Phantom]
-404D0E9D:Violet Dye [The Abyss Phantom]
-404D0E9E:Poinsettia Dye [Servant Phantom]
+404D0E9D:Poisonhorn Dye [The Abyss Phantom]
+404D0E9E:Ash Lotus Dye [Servant Phantom]
 404D0E9F:[Ghost Phantom usually]
 404D0EA0:[Bonfire Ghost Phantom]
 404D0EA1:[Tomb Ghost Phantom]
@@ -3854,6 +3854,8 @@ CREATETHREAD(ItemGib)
 403642A0:Way of White Corona
 40358B08:Lightning Arrow
 40359AA8:Holy Bident
+4035A278:Divine Spears of Judgement
+40359E90:Divine Bolt
 40362B30:Lightning Spear
 40362F18:Great Lightning Spear
 40363300:Sunlight Spear
@@ -3863,8 +3865,8 @@ CREATETHREAD(ItemGib)
 40395F80:Blessed Weapon
 4036C770:Lightning Blade
 4036CB58:Darkmoon Blade
-40365240:Magic Barrier
 4036C964:Sunlight Blade
+40365240:Magic Barrier
 40365628:Great Magic Barrier
 40378AC0:Dark Blade
 4036A448:Vow of Silence
@@ -3916,6 +3918,7 @@ CREATETHREAD(ItemGib)
 005DB060:Flamberge
 00609690:Drakeblood Greatsword
 0021DFE0:Executioner's Greatsword
+0021E044:Settlement Greatsword
 005F5E10:Black Knight Sword
 00222E00:Onyx Blade
 00604870:Hollowslayer Greatsword
@@ -4012,7 +4015,7 @@ CREATETHREAD(ItemGib)
 007D9470:Hammer of the Great Tree
 007DBB80:Warpick
 007E57C0:Blacksmith Hammer
-007D4650:Four Knight's Hammer (NotImplemented) !NI!
+007D4650:Four Knight's Hammer
 007D6D60:Heysel Pick
 00F61FD0:Drang Hammers
 007AFC60:Large Club
@@ -4133,13 +4136,14 @@ CREATETHREAD(ItemGib)
 00CCECF0:Sacred Chime of Filianore
 01CB4A20:Deep Chime
 01CB7130:Black Hair Talisman
+01CCD0C0:Coiled Stake
 015EF3C0:Torch
 015F1AD0:Follower Torch
 015F41E0:Hunter's Torch
 0262CF30:?WeaponName? (InfusedHunterAxe) !NI!
 030AA7F0:?WeaponName? (HunterAxe) !NI!
 02721170:Hunter Axe
-027322E0:Logarius Wheel (BonewheelShield) !NI!
+027322E0:Logarius Wheel
 030AF610:?WeaponName? (Kirkhammer) !NI!
 02725F90:Kirkhammer
 02737100:Saw Cleaver
@@ -4224,6 +4228,7 @@ CREATETHREAD(ItemGib)
 01450320:Ethereal Oak Shield
 0144B500:Shield of Want
 01455140:King's Shield
+01CCA9B0:Lorian's Shield
 01513820:Twin Dragon Greatshield
 0150EA00:Black Iron Greatshield
 014FD890:Lothric Knight Greatshield
@@ -4241,6 +4246,7 @@ CREATETHREAD(ItemGib)
 0150C2F0:Yhorm's Greatshield
 01452A30:Dragonhead Greatshield
 00F5F8C0:Giant Door Shield
+01CCF7D0:Guardian Door Shields
 055DE6C0:?WeaponName? (BrigandDaggers) !NI!
 055E0DD0:?WeaponName? (BrigandDaggers) !NI!
 10061A80:Dingy Hood (Vilhelm'sHead) !NI!
@@ -4506,7 +4512,7 @@ CREATETHREAD(ItemGib)
 14B575A8:Mirrah Chain Mail
 14B57990:Mirrah Chain Gloves
 14B57D78:Mirrah Chain Leggings
-12B275D0: One-Eyed Iron Helm
+12B275D0:One-Eyed Iron Helm
 152F83C0:Iron Helm
 152F87A8:Armor of the Sun
 152F8B90:Iron Bracelets
@@ -5015,10 +5021,10 @@ CREATETHREAD(ItemGib)
 00022AB0:Crimson Gloves (CrimsonArms?) !NI!
 00022E98:Crimson Waistcloth (CrimsonLegs?) !NI!
 00020B70:?ProtectorName? (PresumedToBeCrimsonHead?) !NI!
-15EF9F70:Old Giant Helm
-15EFA358:Old Giant Armor
-15EFA740:Old Giant Gauntlets
-15EFAB28:Old Giant Leggings
+15EF9F70:Giant Helm
+15EFA358:Giant Armor
+15EFA740:Giant Gauntlets
+15EFAB28:Giant Leggings
 15F21070:Iron Golem Helm
 15F21458:Iron Golem Armor
 15F21840:Iron Golem Gauntlets
@@ -5888,6 +5894,7 @@ local weaponsBase = -- Base Weapons
   0x01504DC0, --Dragonslayer Greatshield
   0x015074D0, --Moaning Shield
   0x013599D0, --Ancient Dragon Great Shield
+  0x01515F30, --Greatshield of Glory
   0x0150C2F0, --Yhorm's Greatshield
   0x0150EA00, --Black Iron Greatshield
   0x01511110, --Wolf Knight's Greatshield
