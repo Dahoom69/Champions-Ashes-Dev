@@ -130,12 +130,24 @@ do
     local RemoveMainhandBuffEffect = 14001
     local FpDrainEffect = 14002
 
+    local CrystalBladeSpEffect = 14010
+    local FpDrainEffect2 = 14012
+
     local function UpdateFpDrainEffect(isSunlightBladeActive)
         if isSunlightBladeActive then
             if env(1116, FpDrainEffect) == TRUE then return end
             act(2002, FpDrainEffect)
         else
             act(9001, FpDrainEffect)
+        end
+    end
+
+    local function UpdateFpDrainEffect2(isCrystalBladeActive)
+        if isCrystalBladeActive then
+            if env(1116, FpDrainEffect2) == TRUE then return end
+            act(2002, FpDrainEffect2)
+        else
+            act(9001, FpDrainEffect2)
         end
     end
 
@@ -146,6 +158,14 @@ do
     function UpdateSunlightBlade()
         local isActive = env(1116, SunlightBladeSpEffect) == TRUE
         UpdateFpDrainEffect(isActive)
+        if isActive and env(2016) < 2 then
+            RemoveSunlightBlade()
+        end
+    end
+
+    function UpdateCrystalBlade()
+        local isActive = env(1116, CrystalBladeSpEffect) == TRUE
+        UpdateFpDrainEffect2(isActive)
         if isActive and env(2016) < 2 then
             RemoveSunlightBlade()
         end
@@ -19295,6 +19315,7 @@ function Update()
     UpdateWristTwist()
     UpdateDuelMode()
     UpdateSunlightBlade()
+    UpdateCrystalBlade()
     UpdateLudwigHolyBladeBuff()
     UpdateForwardAttackShortcutBlock()
     g_FrameCount = g_FrameCount + 1
