@@ -3833,7 +3833,7 @@ function ExecWeaponChange(blend_type)
 
     local sp_m = env(345 , HAND_RIGHT)
 
-    if (sp_m ~= 101 and sp_m ~= 612 and sp_m ~= 627 and sp_m ~= 640 and sp_m ~= 641 and sp_m ~= 624 and sp_m ~= 642 and sp_m ~= 645 ) then iT = FALSE end
+    if (sp_m ~= 101 and sp_m ~= 612 and sp_m ~= 627 and sp_m ~= 640 and sp_m ~= 641 and sp_m ~= 624 and sp_m ~= 642 and sp_m ~= 645 ) then iT = FALSE EXR2 = FALSE end
     ExecEventHalfBlend(Event_WeaponChangeStart, blend_type)
     SetAIActionState()
     return TRUE
@@ -9913,7 +9913,7 @@ function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
     end
 end
 
-function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition
+function AttackBothHeavy1SubStart_onUpdate()  -- r21 transition 034330
     local b1 = "W_AttackBothLight1"
     local l1 = "W_AttackBothLeft1"
     local b2 = "W_AttackBothHeavy2Start"
