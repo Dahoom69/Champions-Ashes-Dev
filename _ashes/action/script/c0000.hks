@@ -8805,6 +8805,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
     act("特殊補間設定", 0, FALSE)
     
     local r1 = "W_AttackRightLight1"
+    local r2 = "W_AttackRightHeavy2Start"
     local b2 = "W_AttackBothHeavy2Start"
 
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or 
@@ -8815,14 +8816,14 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
     if (sp_m == 614 or sp_m == 610) then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 612 or sp_m == 627 or sp_m == 640 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 658 and IsFeintAttempt() or sp_m == 677 ) then r1 = "W_AttackRightLight2" end
-    if (sp_m == 677 and IsFeintAttempt() ) then r1 = "W_AttackRightLight3" end
+    if (sp_m == 677 and IsFeintAttempt() ) then r1 = "W_AttackRightLight3" r2 = "W_AttackRightHeavyKick" end
 
     if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 627)
     end
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavyKickSpecial" end
-    if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackRightHeavy1End")
@@ -9506,7 +9507,7 @@ function AttackBothLight1_onUpdate()  -- r11
 
     if ((sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) ) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
         act("特殊補間設定", 0, TRUE)
-        ExecEventAllBody("W_AttackBothDashSpecial")
+        ExecEventAllBody("W_AttackBothLightStepSpecial")
         end -- new
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
@@ -10818,6 +10819,8 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2 backstep r2 034910
          if ((sp_m == 683 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 683 and c_Style == HAND_LEFT_BOTH)) then 
             b1 = "W_AttackBothLight3" 
         end
+
+        if (sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
 
          if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
          if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
