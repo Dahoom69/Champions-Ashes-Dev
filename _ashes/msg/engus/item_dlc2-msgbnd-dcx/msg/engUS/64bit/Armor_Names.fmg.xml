@@ -1798,6 +1798,10 @@
 <text id="33001000">Grotto Robe</text>
 <text id="33002000">Grotto Wrap</text>
 <text id="33003000">Grotto Trousers</text>
+<text id="34000000">Stone Dragon Head</text>
+<text id="34001000">Stone Dragon Body - Torso</text>
+<text id="34002000">Stone Dragon Body - Arms</text>
+<text id="34003000">Stone Dragon Body - Legs</text>
 <text id="40000000">Steel Soldier Helm</text>
 <text id="40001000">Deserter Armor</text>
 <text id="40002000">Soldier's Gauntlets</text>
@@ -2305,9 +2309,9 @@
 <text id="99941000">Okami Garb</text>
 <text id="99943000">Okami Leggings</text>
 <text id="99950000">Dragon Head</text>
-<text id="99951000">Dragon Body</text>
-<text id="99952000">Dragon Arms</text>
-<text id="99953000">Dragon Legs</text>
+<text id="99951000">Dragon Body - Torso</text>
+<text id="99952000">Dragon Body - Arms</text>
+<text id="99953000">Dragon Body - Legs</text>
 <text id="99960000">Old Hunter Top Hat</text>
 <text id="99980000">Ironclad Helm</text>
 <text id="99981000">Ironclad Armor</text>
