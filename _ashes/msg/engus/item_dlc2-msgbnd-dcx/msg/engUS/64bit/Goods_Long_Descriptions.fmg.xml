@@ -2739,7 +2739,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Copper may not be as "noble" as higher metals, but there is pride to be held in a grounded, earthly metal.  
 
-Add a copper sheen to equipped gear.</text>
+Apply a copper sheen to equipped gear.</text>
 <text id="5050003">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2748,7 +2748,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Silver beckons imagery of those who are pure and incorruptible, gleaming as brightly as the day they are made, forevermore. 
 
-Add a silver sheen to equipped gear.</text>
+Apply a silver sheen to equipped gear.</text>
 <text id="5050004">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2757,7 +2757,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Gold is a symbol of wealth, and for others, a symbol of power. This lustrous metal has seen the rise and fall of many an empire.
 
-Add a golden sheen to equipped gear.</text>
+Apply a golden sheen to equipped gear.</text>
 <text id="5050005">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2766,7 +2766,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Gems and jewels all have their own intrinsic value, but none are as coveted as that of a diamond. 
 
-Add a peculiar cyan sheen to equipped gear.</text>
+Apply a peculiar cyan sheen to equipped gear.</text>
 <text id="5050006">A flavoured substance, sometimes carried by Undead. 
 
 Assume a luminous pink appearance.</text>
@@ -2778,7 +2778,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Cinnabar is believed to be the blood of the ancient stone-scaled dragons, as fields where their corpses lie are often rife with the red stone.
 
-Add a crimson sheen to currently equipped gear.</text>
+Apply a crimson sheen to currently equipped gear.</text>
 <text id="5050009">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2787,7 +2787,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 The distant land of Zena regards jade as a material with healing properties, making the gem highly sought after.
 
-Add a verdant sheen to currently equipped gear.</text>
+Apply a verdant sheen to currently equipped gear.</text>
 <text id="5050010">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2796,7 +2796,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Crystal Lizards are adept excavators, as gems are their sole food source. They have a particular attraction to pure kyanite.
 
-Add an azure sheen to currently equipped gear.</text>
+Apply an azure sheen to currently equipped gear.</text>
 <text id="5050011">A waxy resin used for armor and weapon upkeep.
 
 Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
@@ -2805,7 +2805,7 @@ This polish has been lightly enchanted, no doubt due to the small flecks of shim
 
 Vinheim expeditions into areas near sources of the Abyss have found deposits of the black mineral known as obsidian. Care must be taken when handling obsidian, as it is extraordinarily keen.
 
-Add a black sheen to currently equipped gear.</text>
+Apply a black sheen to currently equipped gear.</text>
 <text id="5050012">An enchanted vial of distinctly colored liquid.
 
 Dyemaking is a very old and rare trade, with few being able to call themselves masters. Those that do, however, are able to extract the colors and hues of the world, infusing cloth (and in clumsy hands, skin) with magnificent vibrancy.
@@ -2830,6 +2830,29 @@ Within the Kiln of the First Flame, a scarlet flower sprouts from the remains of
 This is the only area in which this flower can be found, leading to it being named as the Ash Lotus.
 
 Dye cloth and skin with a scarlet hue.</text>
+<text id="5050015">A waxy resin used for armor and weapon upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+Deep within the swamps of the Ringed City lie the Abyss Crystals, monolithic gems of condensed abyssal energy.
+
+When these structures are harvested and tempered, a dazzling light can be seen shimmering throughout the core of the jewel which it is then renamed as a Spirit Crystal.
+
+Apply a violet sheen to currently equipped gear.</text>
+<text id="5050016">A waxy resin used for armor and weapon upkeep.
+
+Equipment becomes marred by the undertaking of arduous journeys, which Undead and Ashen alike are no strangers to.
+
+This polish has been lightly enchanted, no doubt due to the small flecks of shimmering powder in the residue.
+
+Seath the Scaleless was an archdragon who was given dukedom for his service in the war between the archdragons and the gods.
+In the lands he was bequeathed, he carved out a vast network of caves where he kept his most prized possession and the source of his immortality, the Primordial Crystal.
+
+In an effort to hide his treasure, he cultured and grew crystals of all colors and shapes throughout the caves, one particular offshoot holding what is now known as Rose Quartz.
+
+Apply a pink sheen to currently equipped gear.</text>
 <text id="5050035">A flavoured substance, sometimes carried by Undead. 
 
 Assume a luminous orange appearance.</text>
