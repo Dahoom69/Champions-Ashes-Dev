@@ -2086,5 +2086,12 @@ So how does this ring work? When you're hit, your character will emit different 
 YELLOW is the initial hitstun.
 RED means the last hit could be escaped. 
 BLUE means the last hit was a true combo.</text>
+<text id="23000">Malformed ring of unknown origin, engraved with a seal corroded beyond recognition.
+
+Boosts sorceries, miracles and pyromancies.
+
+Time is influenced by light, and light springs forth from fire. With the twisting and churning of the First Flame, time itself becomes convoluted.
+
+Many have attempted to peer through the flames to catch a glimpse of what lies beyond but the only knowledge to be gained beyond the scope of time is the view of a great grey serpent resting peacefully upon a beach.</text>
 </entries>
 </fmg>
