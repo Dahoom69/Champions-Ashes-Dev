@@ -10592,7 +10592,14 @@ Creates a powerful flame in the wielder's hand. One of the most basic pyromancie
 Pyromancers rouse this flame to wield various fire arts.
 
 This flickering flame grows in power the closer one is to their target, intensifying the impact of a pyromancy.</text>
-<text id="13460000">Clandestine Catalyst</text>
+<text id="13460000">Short staff originating from the Dragon School of Vinheim, typically used by those valuing mobility and discretion.
+
+Made out of a supposedly magical wood from the trees in Vinheim's forests, for which it is most known for apart from its magic schools. This small wand was typically used by novice sorcerers, easy to use, difficult to master, but not any less powerful than more sophisticated staves.
+
+Most students move on to more recognizable catalysts once their knowledge has increased, but an assassin can recognize its true value as an easily concealed and exceptionally fast method of sorcery--making it especially deadly in the right hands.
+
+Skill: Weapon Skill
+Equipping this staff in the left hand allows one to perform the Skill of the right hand weapon.</text>
 <text id="13500000">A flame catalyst used by pyromancers.
 Pyromancers rouse this flame to wield various fire arts.
 
@@ -18624,9 +18631,11 @@ Use one's weight to lunge forward with a low stance and increased poise, and fol
 Skill: Cross Counter
 Assume a defensive stance, ready to counter incoming attacks with a devastating slash. </text>
 
-<text id="30250000">A greatsword belonging to the Old King of Carthus, the kingdom of blood and sand.
+<text id="30250000">A greatsword belonging to the champion and former warlord of Carthus, the kingdom of blood and sand.
+ 
+Running and backstep attacks have special follow-up attacks that do extra damage.
 
-A lost relic from earlier days, this wicked curved greatsword belonged to the Old King of Carthus, known only as a conqueror and warmonger. Its bloodied and ancient edge has an air of death about it, no doubt from Carthus' endless warring, which it continued until its destruction.
+A lost relic from earlier days, this wicked curved greatsword retains the previous owner's undying resolve. Its bloodied and ancient edge has an air of death about it, no doubt from Carthus' endless warring, which it continued until its destruction. 
 
 The knights still roam the endless tombs, attacking anything near. It is to be wondered--is what animates them fury or loyalty?
 
