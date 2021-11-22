@@ -14,7 +14,7 @@ Loyal spirits summoned as Spears of the Church are granted a blessing of protect
 <text id="20013">This old ring is named for its decorative green
 blossom, but its luster is long since faded.
 
-Raises stamina recovery speed.</text>
+Raises stamina recovery speed by 15 stamina per second.</text>
 <text id="20014">%null%</text>
 <text id="20015">%null%</text>
 <text id="20016">%null%</text>
@@ -25,7 +25,7 @@ Raises stamina recovery speed.</text>
 <text id="20021">%null%</text>
 <text id="20022">%null%</text>
 <text id="20023">A ring for warriors keen on heavy accoutrements.
-Increases maximum equip load.
+Increases maximum equip load by 19%.
 
 This ring was named after Havel the Rock,
 the battlefield compatriot of Gwyn, the First Lord.
@@ -46,7 +46,7 @@ are no fewer now than in his own day.</text>
 whose "fateful beauty" is mentioned in legend.
 
 True to the fickle nature of Fina's favor, her ring
-increases max HP, stamina, and maximum equip load.</text>
+increases max HP by 6%, stamina by 12%, and maximum equip load by 8%.</text>
 <text id="20034">%null%</text>
 <text id="20035">%null%</text>
 <text id="20036">%null%</text>
@@ -57,15 +57,14 @@ increases max HP, stamina, and maximum equip load.</text>
 <text id="20041">%null%</text>
 <text id="20042">%null%</text>
 <text id="20043">Ring of the Knight King of ancient legend.
-Increases physical damage absorption.
-
+Increases physical damage absorption by 17% (5% in PvP).
 The Knight King was said to be lined with steel
 on the inside, such that even the talons of
 mighty dragons did him little harm.</text>
 <text id="20193">Ring associated with Abysswalker Artorias,
 one of the Four Knights of Gwyn, the First Lord.
 
-Increases poise.
+Increases poise by 18 points.
 
 Artorias had an unbendable will of steel,
 and was unmatched with a greatsword.
@@ -74,6 +73,8 @@ and was unmatched with a greatsword.
 <text id="20393">A gold ring depicting a snake that could have been,
 but never was, a dragon. Fallen foes are more likely
 to drop items.
+
+Grants 175 item discovery. 
 
 Snakes are known as creatures of great avarice,
 devouring prey even larger than themselves
@@ -91,7 +92,7 @@ perhaps it is time for some old-fashioned greed.</text>
 <text id="20401">%null%</text>
 <text id="20402">%null%</text>
 <text id="20403">A silver ring depicting a snake that could have been,
-but never was, a dragon. Fallen foes yield more
+but never was, a dragon. Fallen foes yield 35% more
 souls.
 
 Snakes are known as creatures of great avarice,
@@ -103,7 +104,7 @@ perhaps it is time for some old-fashioned greed.</text>
 <text id="20593">This ring captured the foul spirit of an evil eye,
 a creature that ravaged Astora.
 
-Absorb HP from each defeated foe.
+Absorb 250 HP from each defeated foe.
 
 The horrid spirit nearly destroyed Astora,
 but was eventually defeated by "the sword
