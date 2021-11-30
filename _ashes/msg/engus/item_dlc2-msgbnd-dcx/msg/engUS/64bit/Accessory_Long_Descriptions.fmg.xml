@@ -2082,6 +2082,14 @@ The thief gang thriving in lothric seems to value the ring a lot.</text>
 This ring embodies the unwavering resolve of giants, enabling the wielder to endure blows without flinching.
 
 Such power comes at a heavy price, lowering absorption by 300% in PvP interactions.</text>
+
+<text id="20880">A heavy metallic ring inscribed with what may be seen as a crow talon.
+
+Increases Maximum FP, Spell Cast Cost, Weapon Art Cost by 30% and decrease Maximum HP by 15%.
+
+In the land of beasts, terrible monstrosities destroy towns and devour the townsfolk. To combat this menace, enclaves of warriors willing to hunt these beasts joined together.
+Whether driven by bravery, vengeance, or simply glory, these warriors all abide by one rule. Use what is at hand to the fullest of effect.
+These warriors developed many tools for their hunts, as "prey" of such ferocity would be best dealt with from a safe distance.</text>
 <text id="22000">No Lore. Let me just explain how this thing works for PvP.
 
 In Dark Souls some attack strings are inescapable. For most weapon classes for example, the first light attack (R1) into the second light attack is a guaranteed string on hit. 
@@ -2093,7 +2101,7 @@ RED means the last hit could be escaped.
 BLUE means the last hit was a true combo.</text>
 <text id="23000">Malformed ring of unknown origin, engraved with a seal corroded beyond recognition.
 
-Boosts offensive sorceries, miracles and pyromancies miracle damage by 30%.
+Boosts offensive sorcery, pyromancy and miracle damage by 30%.
 
 Time is influenced by light, and light springs forth from fire. With the twisting and churning of the First Flame, time itself becomes convoluted.
 

@@ -18625,12 +18625,17 @@ The dagger is utilized as a wedge in the left hand while the greatsword is held 
 
 Skill: Legion Stomp
 Use one's weight to lunge forward with a low stance and increased poise, and follow with a strong attack for an advancing thrust.</text>
+<text id="30240000">A ceremonial sword and sheath.
 
-<text id="30240000">No lore. This is actually Yamato.
+An ancient relic passed down from captain to captain of the Darkmoon Covenant, its use was in rites of knighting, but also duels to the death.
+
+As the ever-lasting sun of Anor Londo was extinguished, a deep chill began to emanate from the blade.
+
+A sheath was meticulously forged to contain the icy power, though one wonders if the sheath is there to protect the wielder, or the wielder's foes.
  
-Skill: Cross Counter
-Assume a defensive stance, ready to counter incoming attacks with a devastating slash. </text>
-
+Skill: Darkmoon Spiral
+Release the blade's icy energy with blinding speed in a wide circle around you. If facing away, the range of the slash is even greater.
+Follow up with strong attack to cleave a path forwards, sending nearby foes flying.</text>
 <text id="30250000">Large curved sword wielded by the mightiest champion of Carthus.
 
 That's about all the lore you'll get. Running and backstep attacks have special follow-up attacks that do extra damage. 
@@ -18638,7 +18643,16 @@ This weapon is slightly bigger than carthus curved greatsword and has relatively
 
 Skill: Turbulent Wind 
 Like a sandstorm, roll into foes with a large spinning motion while obscured.</text>
+<text id="30270000">Magnificent blade wielded by the champion of old Lothric.
 
+Among the old order of Dragonslaying Knights, there was one who stood taller than the rest, able to brandish her blade with such prowess and strength that some thought she was the second coming of the old Londian God of War.
+
+Alas, the noble champion found herself in trying times as the execution of dragons was outlawed and Lothric began their next chapter as a kingdom who fought alongside their former foe.
+
+Left without purpose, the champion stoically retired her blade to the halls of Lothric Castle and set out into the world, in search of lands yet unknown.
+
+Skill: Stomp
+Use one's weight to lunge forward with a low stance and increased poise, and follow with strong attack for an upward slash.</text>
 <text id="35000000">A lance born from the horns of a forest-dwelling magical beast from ages past.
 
 Imbued with magic, it is said that the butterflies were created through the twisted experiments of an insane duke. Inside the quivering horns lies potent magic, never fading.
@@ -19275,21 +19289,37 @@ As flesh and blood is spread across the battlefield, the wielder of this weapon 
 
 Skill: Bestial Embrace
 Let out a bestial roar, allowing the regeneration of health as claws tear through flesh.</text>
-<text id="41560000">An atypical weapon only described by sickly, inhuman sounds.
+<text id="41560000">A pale parasite found within the Deep.
 
-Once from a body of an unfortunate undead burst open, the consuming corruption manifesting itself as Abyss incarnate.
+After a feast, Aldrich's leftovers were often discarded into the nearby lake, if not left to openly rot.
+Untended corpses are breeding grounds for carrion feeders, a rule that the Deep is not exempt from.
 
-The parasite aged and growing a sickly blue suggests control from a host, although taking characteristics from its former beastly form.
+Pale parasites that infest the murky lake make their homes in the discarded remains, some corpses bloating to such sizes that they to float to the surface.
+Now under the harsh light of the sun, the parasites seek shelter not in the shade of the trees surrounding the lake, but in fresh hosts who are unfortunate enough to cross their paths.
 
-Skill: Celestial Yearning
-Wrap yourself in abyssal tendrils, launching an explosive crescendo of arcane power.</text>
-<text id="41561400">An atypical weapon only described by sickly, inhuman sounds.
+Skill: Call of the Deep
+Wrap yourself in pale tendrils, before launching an explosive crescendo of murk.</text>
+<text id="41561400">A pale parasite found within the Deep.
 
-Once from a body of an unfortunate undead burst open, the consuming corruption manifesting itself as Abyss incarnate.
+After a feast, Aldrich's leftovers were often discarded into the nearby lake, if not left to openly rot.
 
-The parasite aged and growing a sickly blue suggests control from a host, although taking characteristics from its former beastly form.
+Untended corpses are breeding grounds for carrion feeders, a rule that the Deep is not exempt from.
 
-Skill: Celestial Yearning
-Wrap yourself in abyssal tendrils, launching an explosive crescendo of arcane power.</text>
+Pale parasites that infest the murky lake make their homes in the discarded remains, some corpses bloating to such sizes that they to float to the surface.
+
+Now under the harsh light of the sun, the parasites seek shelter not in the shade of the trees surrounding the lake, but in fresh hosts who are unfortunate enough to cross their paths.
+
+Skill: Call of the Deep
+Wrap yourself in pale tendrils, before launching an explosive crescendo of murk..</text>
+<text id="51500000">Twin daggers of ornate design.
+
+These daggers sport a peculiar construction, the metal of the grip tapers away to a nearly invisible crystalline edge.
+
+Further inspection reveal the crystals to be marred with specks of dried blood and missing chips, as if this weapon was fended off numerous times over many lengthy battles.
+
+If light catches precisely along the crystals, phantasmal forms flutter about in the air.
+
+Skill: Butterfly Rush
+Slash at your opponents shins. Followup with strong attack to give chase to your opponent while keeping a low stance.</text>
 </entries>
 </fmg>
