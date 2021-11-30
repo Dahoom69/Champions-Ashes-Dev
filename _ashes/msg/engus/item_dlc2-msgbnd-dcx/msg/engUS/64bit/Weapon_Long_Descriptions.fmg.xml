@@ -7688,7 +7688,7 @@ Skill: Morne's Rage
 Stick weapon into earth and emit a powerful shockwave. Also, similar to Perseverance, temporarily boosts poise and reduces damage received.</text>
 <text id="8291500">Great Hammer bestowed upon Carim Knights with demonstrate outstanding strength and unwavering faith.
 
-Decorated by a warding charm of Carim Temple, and imbued with the twisted rage of Apostle Morne.
+Decorated by a warding charm of Carim Temple, and imbued with the twisted rage of Apostle Morne, allowing the casting of miracles with the same steadfastness of a great hammer.
 
 Skill: Morne's Rage
 Stick weapon into earth and emit a powerful shockwave. Also, similar to Perseverance, temporarily boosts poise and reduces damage received.</text>
@@ -10452,8 +10452,8 @@ Absorb additional souls from fallen foes.
 The staff's history is unclear. It may be a relic of an ancient serpent's greed,
 or a ritual artifact used to summon souls.
 
-Skill: Steady Chant
-Boost the strength of sorceries for a very short period. Works while equipped in either hand.</text>
+Skill: Steady Ancient Chant
+Boost the strength of sorceries for a very short period, and summon  ancient art of homing soulmass. Works while equipped in either hand.</text>
 <text id="13100000">Staff of the man-grubs who guard Rosaria's Bed Chamber. Their holy symbol is formed at the tip. Wielder's luck strengthens effects of sorceries.
 
 The man-grubs have clearly been reborn, but as what?
@@ -18553,7 +18553,7 @@ Smash foes in a large spinning motion, and continue spinning to chop them in two
 Its owner was the Nameless King, a deific hunter of dragons. The swordspear is imbued with lightning, of which he was the heir.
 
 Skill: Wrath of the War God
-Take to the air, unshackling the might of the Sun. Lunge forward and unleash the wrath of the forgotten god upon earth and foe.
+Stomp the earth with mighty strength and send forth furious bolts of lightning that spread in all directions. 
 
 Combat Art: Falling Bolt
 Hold swordspear high in the air to summon fierce lightning that descends upon distant foes.</text>
@@ -18645,11 +18645,11 @@ Skill: Turbulent Wind
 Like a sandstorm, roll into foes with a large spinning motion while obscured.</text>
 <text id="30270000">Magnificent blade wielded by the champion of old Lothric.
 
-Among the old order of Dragonslaying Knights, there was one who stood taller than the rest, able to brandish her blade with such prowess and strength that some thought she was the second coming of the old Londian God of War.
+Among the ancient order of Lothric Dragonslayers, there was one who stood taller than the rest, brandishing this massive weapon with unrivaled prowess. Some say she was the second coming of the old Lodran Wargod.
 
-Alas, the noble champion found herself in trying times as the execution of dragons was outlawed and Lothric began their next chapter as a kingdom who fought alongside their former foe.
+Alas, the champion found herself in trying times as the kingdom of Lothric traded the role of the executioners to tame their former foes. Without purpose, she set out in search of lands yet unknown.
 
-Left without purpose, the champion stoically retired her blade to the halls of Lothric Castle and set out into the world, in search of lands yet unknown.
+This greatsword she left behind became the symbol of a true champion, that the most elite of Lothric Knights aspire to become.
 
 Skill: Stomp
 Use one's weight to lunge forward with a low stance and increased poise, and follow with strong attack for an upward slash.</text>
@@ -19291,23 +19291,17 @@ Skill: Bestial Embrace
 Let out a bestial roar, allowing the regeneration of health as claws tear through flesh.</text>
 <text id="41560000">A pale parasite found within the Deep.
 
-After a feast, Aldrich's leftovers were often discarded into the nearby lake, if not left to openly rot.
-Untended corpses are breeding grounds for carrion feeders, a rule that the Deep is not exempt from.
+After a feast, Aldrich's leftovers were discarded into the deep water beneath the Cathedral, if not left to openly rot. Pale parasites that infest the murky lake make their homes in these discarded remains, causing corpses to bloat to such sizes that they float to the surface.
 
-Pale parasites that infest the murky lake make their homes in the discarded remains, some corpses bloating to such sizes that they to float to the surface.
-Now under the harsh light of the sun, the parasites seek shelter not in the shade of the trees surrounding the lake, but in fresh hosts who are unfortunate enough to cross their paths.
+Now under the harsh sunlight, the parasites seek not to return to their embracing deep water, but are drawn toward any life unfortunate enough to cross their paths.
 
 Skill: Deep Yearning
 Wrap yourself in pale tendrils, before launching an explosive crescendo of murk.</text>
 <text id="41561400">A pale parasite found within the Deep.
 
-After a feast, Aldrich's leftovers were often discarded into the nearby lake, if not left to openly rot.
+After a feast, Aldrich's leftovers were discarded into the deep water beneath the Cathedral, if not left to openly rot. Pale parasites that infest the murky lake make their homes in these discarded remains, causing corpses to bloat to such sizes that they float to the surface.
 
-Untended corpses are breeding grounds for carrion feeders, a rule that the Deep is not exempt from.
-
-Pale parasites that infest the murky lake make their homes in the discarded remains, some corpses bloating to such sizes that they to float to the surface.
-
-Now under the harsh light of the sun, the parasites seek shelter not in the shade of the trees surrounding the lake, but in fresh hosts who are unfortunate enough to cross their paths.
+Now under the harsh sunlight, the parasites seek not to return to their embracing deep water, but are drawn toward any life unfortunate enough to cross their paths.
 
 Skill: Deep Yearning
 Wrap yourself in pale tendrils, before launching an explosive crescendo of murk.</text>
