@@ -5,7 +5,7 @@
       <ID>249</ID>
       <Description>"Open - The Champion's Archive 1.9 12.3.2021"</Description>
       <Options moHideChildren="1"/>
-      <LastState Activated="1"/>
+      <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
 {$asm}
@@ -3357,6 +3357,7 @@ CREATETHREAD(ItemGib)
 00C7E3E0:Man-grub's Staff
 00CD1400:Preacher's Right Arm
 00C8CE40:Sage's Crystal Staff
+00CD6220:Clandestine Catalyst
 00CC77C0:Pyromancy Flame
 00CC9ED0:Pyromancer's Parting Flame
 00C72090:Talisman
@@ -3398,6 +3399,8 @@ CREATETHREAD(ItemGib)
 0278EF40:Whirligig Saw
 027A27C0:Kos Parasite
 02791650:Simon's Bowblade
+0277B6C0:Beasthunter Saif
+0275BAF0:Threaded Cane
 0271EA60:Hunter Blunderbuss
 02743450:Hunter Pistol
 02745B60:Cannon
@@ -4361,7 +4364,6 @@ CREATETHREAD(ItemGib)
                     <CheatEntry>
                       <ID>1337099163</ID>
                       <Description>"Mass ItemGib"</Description>
-                      <Options moHideChildren="1"/>
                       <LastState/>
                       <Color>6A0035</Color>
                       <VariableType>Auto Assembler Script</VariableType>
