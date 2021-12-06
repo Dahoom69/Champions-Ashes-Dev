@@ -9110,7 +9110,7 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
 
-    if (sp_m == 643 or sp_m == 646) then 
+    if (sp_m == 643 or sp_m == 646 or sp_m == 647) then 
         b1  = "W_AttackBothLight2"
          r1 = "W_AttackRightLight2" end
 
@@ -9214,7 +9214,7 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2
     
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264 or sp_m == 609 or sp_m == 646 or sp_m == 610 then r1 = "W_AttackRightLight2" end
-    if sp_m == 649 or sp_m == 664 then r1 = "W_AttackRightLight3" end
+    if sp_m == 649 or sp_m == 664 or sp_m == 647 then r1 = "W_AttackRightLight3" end
     if sp_m == 164 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 614  or sp_m == 612 or sp_m == 627 or sp_m == 645 or sp_m == 621 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
@@ -10408,7 +10408,7 @@ function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
             r2 = "W_AttackBothHeavy1SubStart"
         end
 
-    if sp_m == 614 or sp_m == 627 then r1 = "W_AttackRightLight3" end
+    if sp_m == 614 or sp_m == 627 or sp_m == 647 then r1 = "W_AttackRightLight3" end
     if  sp_m == 609 or sp_m == 612 or sp_m == 649 or sp_m == 640  then r1 = "W_AttackRightHeavySpecial1Start" end
 
     if 10 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
