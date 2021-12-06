@@ -2646,6 +2646,18 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     if iT ~= TRUE then ExecEventHalfBlend(Event_AttackSpinStart, ALLBODY)         
                     else ExecEventHalfBlend(Event_Charge, ALLBODY) end
                     
+                elseif sp_m == 647 then 
+                    if iT ~= TRUE then 
+                        if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
+                            blend_type = UPPER
+                        end
+                        if env(1116, 100490) == TRUE then
+                            ExecEventHalfBlend(Event_DrawStanceRightLoop, blend_type)
+                        else
+                            ExecEventHalfBlend(Event_DrawStanceRightStart, blend_type)
+                        end      
+                    else ExecEventHalfBlend(Event_Charge, ALLBODY) end
+
                 else ExecEventAllBody("W_OneShotFullRightStart") end
             else
                 if (env(345 , c_SwordArtsHand) == 643) then 
@@ -11943,7 +11955,7 @@ function DrawStanceRightEnd_Upper_onUpdate()
     end
 end
 
-function DrawStanceRightAttackLight_onUpdate()
+function DrawStanceRightAttackLight_onUpdate() -- 036230
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local b1 = "W_AttackBothLight1"
@@ -11982,6 +11994,11 @@ function DrawStanceRightAttackLight_onUpdate()
         r2 = "W_AttackRightHeavy1SubStart"
         b2 = "W_AttackBothHeavy1SubStart"
     end
+    if (sp_kind == 647) then
+        r1 = "W_AttackRightLight2"
+        r2 = "W_AttackRightHeavy1SubStart"
+    end
+
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, is_artsr1, is_artsr2, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -12223,7 +12240,7 @@ function DrawStanceRightAttackLight3_onUpdate()
     end
 end
 
-function DrawStanceRightAttackHeavy_onUpdate()
+function DrawStanceRightAttackHeavy_onUpdate() -- 036240
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local b1 = "W_AttackBothLight1"
@@ -12267,6 +12284,11 @@ function DrawStanceRightAttackHeavy_onUpdate()
     if (sp_kind == 164) then
         r2 = "W_AttackRightHeavy1SubStart"
         b2 = "W_AttackBothHeavy1SubStart"
+    end
+
+    if (sp_kind == 647) then
+        r1 = "W_AttackRightLight2"
+        r2 = "W_AttackRightHeavy1SubStart"
     end
 
     if env(1116, 100700) == TRUE then
