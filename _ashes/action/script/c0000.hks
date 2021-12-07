@@ -1051,7 +1051,7 @@ function GetAttackRequest(is_guard)
         end
         if is_both == TRUE then
 
-            if c_SwordArtsID ~= 32 then
+            if (c_SwordArtsID ~= 32 and env(345 , HAND_RIGHT) ~= 685 and env(345 , HAND_LEFT) ~= 685 )  then
                 if IsDualBlade() == TRUE then
                     return ATTACK_REQUEST_BOTH_LEFT
                 end
@@ -1602,7 +1602,7 @@ function IsEnableGuard()
         return TRUE
     elseif IsWeaponCanGuard() == FALSE then
         return FALSE
-    elseif c_SwordArtsID ~= 32 and HAND_LEFT_BOTH <= style and IsDualBlade() == TRUE then
+    elseif (c_SwordArtsID ~= 32 and env(345 , HAND_RIGHT) ~= 685 and env(345 , HAND_LEFT) ~= 685 ) and HAND_LEFT_BOTH <= style and IsDualBlade() == TRUE then
         return FALSE
     else
         return TRUE
@@ -8639,7 +8639,7 @@ function AttackRightCounter_onUpdate()
     --end
 end
 
-function AttackRightLightKick_onUpdate()
+function AttackRightLightKick_onUpdate() -- 030100
     iT = FALSE
     local r2 = "W_AttackRightHeavy1Start"
     local r1 = "W_AttackRightLight1"
@@ -8652,6 +8652,7 @@ function AttackRightLightKick_onUpdate()
     if sp_m == 645 then r2 = "W_AttackRightHeavy2Start" end 
     if sp_m == 664 then r2 ="W_AttackRightLightStepSpecial" end
     if sp_m == 649 then r1 = "W_AttackRightLight3" end
+    if sp_m == 685 then r2 = "W_AttackRightHeavyKick" end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -10806,7 +10807,7 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2 backstep r2 034910
         end
     end
 
-function AttackBothLightKick_onUpdate() -- 04100
+function AttackBothLightKick_onUpdate() -- 034100
     local b2 = "W_AttackBothHeavy1Start"
     local b1 = "W_AttackBothLight1"
 
