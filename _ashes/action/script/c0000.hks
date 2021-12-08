@@ -8905,8 +8905,10 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2
     if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90 or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
     if IsFeintAttempt() and i1BB == FALSE and sp_m == 51 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
 
-    if sp_m == 658 or sp_m == 646 or sp_m == 664 then r1 = "W_AttackRightLight2" end 
-    if sp_m == 658 and IsFeintAttempt()  then r1 = "W_AttackRightLight1" end
+    if sp_m == 685 and IsFeintAttempt() then r1 = "W_AttackRightLight3" end
+    if sp_m == 685 and not IsFeintAttempt() then r1 = "W_AttackRightLight2" end
+
+    if sp_m == 646 or sp_m == 664 then r1 = "W_AttackRightLight2" end 
     if sp_m == 605 or sp_m == 620 or sp_m == 649 or sp_m == 677 or sp_m == 647 then r1 = "W_AttackRightLight3" end 
 
     local is_pyro = FALSE
