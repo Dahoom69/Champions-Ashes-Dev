@@ -1587,7 +1587,7 @@ Event(870, Default, function(X0_1, X4_4) {
 
 Event(14334, Restart, function() {
     IfCharacterHasSpEffect(MAIN, 10000, 94510000, true, ComparisonType.Equal, 1);
-    IfCharacterHasSpEffect(AND_01, 10000, 31, true, ComparisonType.Equal, 1);
+    IfCharacterHasSpEffect(AND_01, 10000, 94510001, true, ComparisonType.Equal, 1);
     IfConditionGroup(MAIN, PASS, AND_01);
     PlaySE(10000, SoundType.c_CharacterMotion, 4334);
     WaitFixedTimeSeconds(0.7);
