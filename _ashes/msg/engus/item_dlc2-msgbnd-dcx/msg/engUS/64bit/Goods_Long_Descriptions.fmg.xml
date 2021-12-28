@@ -725,12 +725,26 @@ Yet true imitation will require a dragon head, as well.</text>
 This Fire Keeper preserves the bonfire, and serves its champion. She is said to have soothed and accepted the dark sigil, which has tainted her soul.
 
 And yet, her soul will one day embed itself in the bosom of another Fire Keeper.</text>
-<text id="391">%null%</text>
-<text id="392">%null%</text>
-<text id="393">%null%</text>
-<text id="394">%null%</text>
-<text id="395">%null%</text>
-<text id="396">%null%</text>
+<text id="391">Extension skipping allows the use of followups to certain weapon arts from neutral through inputting them as the weapon art begins. Doing so will immediately transition to the followup.
+
+Certain weapon arts can not be extension skipped to one or more followups.</text>
+<text id="392">Feints allow the user to cancel the startup of certain attacks into other attacks in order to throw off the opponent, or to execute an attack without fully committing to a previous move.
+
+Feints are performed by inputting the corresponding move during the startup of the attack.</text>
+<text id="393">Just frames regenerate stamina upon the succesful timing of an input, instead of buffering. The activation of just frames is indicated by a yellow glow and sound effect.
+
+The window to activate just frames is larger on slower weapons, with 2 frames, and smaller on faster weapons, with 1 frame. Just frames will only occur on Neutral R1s and Forward R1s.</text>
+<text id="394">Upon carry weight exceeding 70% of your total load, your rolls will change to be heavier. Rolling in this state will grant a briefer period of invincibility, but landing will emit shockwaves that stagger and knock back enemies.
+
+The Carthus Bloodring has been changed to only increase iframes during this state.</text>
+<text id="395">Perfect blocks mitigate damage taken upon succesfully timing a block. The equipped shield will gain 30% to all guard absorptions and 18 stability for a brief period after raising the shield, equivalent to two frames, and is indicated by a yellow glow and sound effect.
+
+Attacks with block frames can not perform perfect blocks.</text>
+<text id="396">Certain weapons allow for the use of powerstances when equipping two weapons of the same class, introducing new movesets. These movesets modify Neutral, Running, and Rollings L1s.
+
+Powerstances solely use the properties and AR of the weapon in the right hand. In addition, certain weapons may not be used to powerstance with the same weapon class.
+
+Current inclusions are axes, halberds, thrusting swords, and ultra greatswords.</text>
 <text id="397">Stone imbued with the power of the everlasting dragons, although tainted by darkness.
 
 Gain the head of a dragon and emit tainted breath. The transformation is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith. 
