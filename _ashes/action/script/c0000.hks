@@ -1051,7 +1051,7 @@ function GetAttackRequest(is_guard)
         end
         if is_both == TRUE then
 
-            if (c_SwordArtsID ~= 32 and env(345 , HAND_RIGHT) ~= 685 and env(345 , HAND_LEFT) ~= 685 )  then
+            if (c_SwordArtsID ~= 32 and (env(345 , HAND_RIGHT) ~= 685 or c_Style ~= HAND_RIGHT_BOTH) and ( env(345 , HAND_LEFT) ~= 685 or c_Style ~= HAND_LEFT_BOTH)  )  then
                 if IsDualBlade() == TRUE then
                     return ATTACK_REQUEST_BOTH_LEFT
                 end
