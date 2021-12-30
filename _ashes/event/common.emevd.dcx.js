@@ -1589,7 +1589,7 @@ Event(14334, Restart, function() {
     IfCharacterHasSpEffect(MAIN, 10000, 94510000, true, ComparisonType.Equal, 1);
     IfCharacterHasSpEffect(AND_01, 10000, 94510001, true, ComparisonType.Equal, 1);
     IfConditionGroup(MAIN, PASS, AND_01);
-    SetSpEffect(10000, 94510001);
+    SetSpEffect(10000, 94510002);
     EndUnconditionally(EventEndType.Restart);
 });
 
