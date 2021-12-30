@@ -886,6 +886,10 @@ function GetAttackRequest(is_guard)
         if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
         --if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
         if env(1116, 100260) == TRUE then return ATTACK_REQUEST_INVALID end
+        
+        local spm = env(345 , HAND_RIGHT) 
+        local spo = env(345 , HAND_LEFT) 
+        if (spm == 248 or spo == 248) and env(1116, 100140) == TRUE then return ATTACK_REQUEST_INVALID end
 
         return GetForwardShortcutAttack()
     elseif env(1106, ACTION_ARM_R1) == TRUE then -- if changed to elseif ~halvard
