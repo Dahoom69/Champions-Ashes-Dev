@@ -9,12 +9,6 @@ Warning: QPainter::setBrush: Painter not active
 Warning: QPainter::setRenderHint: Painter must be active to set rendering hints
 Warning: QPainter::setPen: Painter not active
 Warning: libpng warning: Interlace handling should be turned on when using png_read_image
-Debug: "02:25:32 c:\jk\workspace\build__4.44__designer_win\fmod4\tools\fmod_designer\src\sounddefform.ui.h:2856 HG: Add Sound File" 
-Debug: "02:25:41 c:\jk\workspace\build__4.44__designer_win\fmod4\tools\fmod_designer\src\sounddefform.ui.h:2159 FR: Delete Sound Def Item" 
-Warning: QColor::setHsv: HSV parameters out of range
-Debug: "02:26:09 ..\..\src\eventlayerstackwidget.cpp:1402 CW: Replace sound" 
-Warning: QColor::setHsv: HSV parameters out of range
-Debug: "02:26:18 c:\jk\workspace\build__4.44__designer_win\fmod4\tools\fmod_designer\src\sounddefform.ui.h:2159 FR: Delete Sound Def Item" 
 Debug: 
 Building project 'fdp_main_dlc1'...
 Debug: Building project D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\fdp_main_dlc1.fev...
@@ -194,14 +188,14 @@ Debug: D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ash
 Debug: D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\w_whip_swing03.wav
 Debug: D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\s000004334.wav
 Debug: Building 'fdp_main_dlc1.fsb'
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001043.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001043b.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001043.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001043c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001043d.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001044.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001044b.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001044c.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001044.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001044d.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001044c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001045.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001045b.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\c000001045c.wav
@@ -251,14 +245,14 @@ Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProj
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000400205.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000400205b.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000400205c.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402101.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402101b.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402101.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402102.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402102b.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402102c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440420.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440421.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000402102c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440421b.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440421.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440421c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440430.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000440431.wav
@@ -272,22 +266,22 @@ Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProj
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528101.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528112.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528114b1.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528114b3.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528120.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528114b3.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528121.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528122.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528123.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000528124.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660010.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660010a.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660011.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660010a.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660011b.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660011c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660011d.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660011e.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660011f.wav
-Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660013.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660013b.wav
+Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660013.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660013c.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660013d.wav
 Debug: Encoded C:\ReplaceThisWithTheSoundsFolderInTheFMODProjectFolderInsideProjectProperties\..\users\19513\downloads\darksouls3restoredsoundprojects-1.0.0.1\fdp_main_dlc1\sounds\s000660013e.wav
@@ -337,12 +331,12 @@ Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncher
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_b_at02.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_b_at03.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_change.wav
-Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_change_short2.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_reflec.wav
+Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_change_short2.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_s_at01.wav
-Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_s_at03.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_s_at02.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_s_at04.wav
+Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\beast_s_at03.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\finger.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\hebi_hue.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\juuka0.wav
@@ -361,11 +355,9 @@ Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncher
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\\w_whip_swing03.wav
 Debug: Encoded D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\AshesSounds\s000004334.wav
 Debug: Writing FSB...
-Debug: Error : Failed to build wave bank 'D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\fdp_main_dlc1.fsb'. Build cancelled.
+Debug: Finished building FSB
 Debug: 
-The following errors and warnings were detected:
-Error : Failed to build wave bank 'D:\Games\Steam\steamapps\common\DARK SOULS III\Game\AshesLauncherDev\_ashes\sound\fdp_main_dlc1.fsb'. Build cancelled.
 Debug: 
 Summary of build:
 SUCCESS: D:/Games/Steam/steamapps/common/DARK SOULS III/Game/AshesLauncherDev/_ashes/sound/fdp_main_dlc1.fev
-FAIL   : D:/Games/Steam/steamapps/common/DARK SOULS III/Game/AshesLauncherDev/_ashes/sound/fdp_main_dlc1.fsb
+SUCCESS: fdp_main_dlc1.fsb
