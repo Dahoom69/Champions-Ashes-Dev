@@ -10321,10 +10321,12 @@ function AttackBothHeavySpecial1SubStart_onUpdate()
     end
 end
 
-function AttackBothHeavySpecial1Start_onUpdate()  -- r14
+function AttackBothHeavySpecial1Start_onUpdate()  -- r14 034350
     local b1 = "W_AttackBothLight1"
     local l1 = "W_AttackBothLeft1"
+    local b2 = "W_AttackBothHeavy2Start"
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     if sp_m == 613  then 
         b1 = "W_AttackBothHeavy1End" 
         l1 = "W_AttackBothHeavy1End" 
@@ -10348,13 +10350,14 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
 
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- butcher
+    if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then   b1 = "W_AttackBothHeavySpecial1Start" b2 = "W_AttackBothHeavySpecial1End" end
 
 
     act("特殊補間設定", 0, FALSE)
-    if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then return
-    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
@@ -10371,6 +10374,9 @@ function AttackBothHeavySpecial1Start_onUpdate()  -- r14
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE and (sp_m ~= 609 and sp_m ~= 612 and sp_m ~= 646) then
         ExecEventAllBody("W_AttackBothHeavySpecial1End")
+        return 
+    elseif env(1116, 100281) == TRUE and ((sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)) then
+        ExecEventAllBody("W_AttackBothHeavySpecial1End") 
         return 
     else
         return 
@@ -10548,6 +10554,8 @@ function AttackBothHeavyWepBroken2Start_onUpdate() -- r21 034345 "W_AttackBothHe
     if ((sp_m == 663 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 663 and c_Style == HAND_LEFT_BOTH)) and IsFeintAttempt() then b1 = "W_AttackBothLight2" end
 
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
+    if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then   b1 = "W_AttackBothHeavySpecial1Start" end
+
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -12042,7 +12050,15 @@ function DrawStanceRightAttackLight_onUpdate() -- 036230
     if (sp_kind == 647) then
         r1 = "W_AttackRightLight2"
         r2 = "W_AttackRightHeavy1SubStart"
-    end
+    end   
+
+    if (sp_kind == 681) then
+        r1 = "W_DrawStanceRightAttackLight"
+        r2 = "W_DrawStanceRightAttackHeavy"
+        b1 = "W_DrawStanceRightAttackLight"
+        b2 = "W_DrawStanceRightAttackHeavy"
+    end   
+
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, is_artsr1, is_artsr2, GEN_TRANS_LEFT) == TRUE then
         return 
