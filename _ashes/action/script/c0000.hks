@@ -7477,7 +7477,7 @@ function Rolling_onUpdate()
         b2 = "W_AttackBothHeavyWepBroken2Start" 
     end
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
-    if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  b2 = "W_CrossbowStepInReload" end
+    if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  b2 = "W_AttackBothLightStepSpecial" end
     
     
     if EvasionCommonFunction(FALL_TYPE_DEFAULT, "W_AttackRightLightStep", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLightStep", b2) == TRUE then
@@ -11762,7 +11762,7 @@ function DrawStanceRightNoSync_Activate()
     return 
 end
 
-function DrawStanceRightStart_Upper_onUpdate()
+function DrawStanceRightStart_Upper_onUpdate() -- 36200
     local blend_type, lower_state = GetHalfBlendInfo()
     local r1 = "W_DrawStanceRightAttackLight"
     local r2 = "W_DrawStanceRightAttackHeavy"
@@ -11842,7 +11842,7 @@ function DrawStanceStartRolling_onUpdate()
     end
 end
 
-function DrawStanceRightLoop_Upper_onUpdate()
+function DrawStanceRightLoop_Upper_onUpdate() -- 36210
     local blend_type, lower_state = GetHalfBlendInfo()
     if lower_state == LOWER_IDLE then
         act("ロックオン時システム旋回不可角度", 90, 90)
