@@ -2013,6 +2013,27 @@ Often seen as a sign of comradery among northern warriors, this seems to come of
 <text id="9037">Gesture that acts as communion with a bewildering power.
 
 A strange gesture employed by the people of a foreign land. When used, a sense of loss tinged with hope fogs over the mind, allowing the user to wipe away the past and begin anew.</text>
+<text id="9038">mald gesture desc</text>
+<text id="9100">At 70% equip load or below, backsteps grant brief invincibility while locked onto a target, from frames 2 to 8. Above 70% equip load, the backstep changes, and hyper armor is granted instead.
+
+Backsteps have the same recovery as rolls, and can be followed up into a heavy attack.</text>
+<text id="9101">Virtual dexterity affects the startup of spells and is calculated as the sum of the caster's dexterity and the amount given through certain equipment.
+
+Certain spells reach their maximum casting speed at 40 virtual dexterity, while others are not influenced by it.</text>
+<text id="9102">Poison, on top of steadily reducing HP, decreases resistances to other status ailments by 50, as well as decreases health restored from Estus Flasks by 50%.
+
+Toxic reduces HP by a larger amount per tick and decreases health restored from Estus Flasks by 75%.
+
+Certain weapons may inflict a unique form of poison.</text>
+<text id="9103">Frostbite decreases stamina regeneration by 66%, reduces absorptions by 7%, and reduces health slightly upon fully building up. Frostbite can be reset upon being hit with fire damage.
+
+Blood loss, upon fully building up, will rapidly reduce health over a few seconds, and can not be built up again until after all ticks have passed.</text>
+<text id="9104">Combat arts are special weapon arts on certain weapons that can be performed with a light attack while blocking.
+
+Combat arts serve a variety of purposes and the specifics of a certain combat art can be found in the weapon's description.</text>
+<text id="9105">Dashing is an evasive maneuver that replaces rolls while at 30% equip load or below and locked onto an enemy.
+
+Dashes provide a further distance than rolls, but improper timing of an evade will result in drastically more damage taken.</text>
 <text id="1200000">Variation of Soul Arrow developed
 by sorcerers of the Undead Legion of Farron.
 
