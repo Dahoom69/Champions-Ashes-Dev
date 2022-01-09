@@ -921,13 +921,13 @@ function GetAttackRequest(is_guard)
             elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
                 return ATTACK_REQUEST_LIGHT_KICK
             elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
-                if (sp == 655 or (spo == 655 and is_leftHandCA == TRUE) ) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
-                elseif (sp == 231 or (spo == 231 and is_leftHandCA == TRUE)) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
-                elseif ((sp == 72 or (spo == 72 and is_leftHandCA == TRUE)) and c_SwordArtsID ~= 24 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
-                elseif ((sp == 166 or (spo == 166 and is_leftHandCA == TRUE)) and c_SwordArtsID == 12 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- old hero
-                elseif ((sp == 176 or sp == 668 or sp == 681) or ((spo == 176 or spo == 668 or spo == 681)  and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art     
-                elseif ((sp == 103 or sp == 167 or sp == 673) or ((spo == 103 or spo == 167 or spo == 673) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora or bloodlust combat art
-                elseif (sp == 147 or (spo == 147 and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
+                if ((sp == 655 and c_Style == HAND_RIGHT_BOTH) or (spo == 655 and is_leftHandCA == TRUE) ) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
+                elseif (    (sp == 231 and c_Style == HAND_RIGHT_BOTH) or (spo == 231 and is_leftHandCA == TRUE)) then SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE) return ExecEventAllBody("W_DrawStanceRightAttackHeavy")   -- astora combat art
+                elseif ((   (sp == 72 and c_Style == HAND_RIGHT_BOTH) or (spo == 72 and is_leftHandCA == TRUE)) and c_SwordArtsID ~= 24 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky combat art
+                elseif ((   (sp == 166 and c_Style == HAND_RIGHT_BOTH) or (spo == 166 and is_leftHandCA == TRUE)) and c_SwordArtsID == 12 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- old hero
+                elseif (    ((sp == 176 or sp == 668 or sp == 681) and c_Style == HAND_RIGHT_BOTH) or ((spo == 176 or spo == 668 or spo == 681)  and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS combat art     
+                elseif (    ((sp == 103 or sp == 167 or sp == 673) and c_Style == HAND_RIGHT_BOTH) or ((spo == 103 or spo == 167 or spo == 673) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- eleonora or bloodlust combat art
+                elseif (    (sp == 147 and c_Style == HAND_RIGHT_BOTH) or (spo == 147 and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
                 elseif ((is_r == TRUE) or ((is_ro == TRUE) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_PARRY -- thrusting sword combat art   
                 else return SWORDARTS_REQUEST_RIGHT_ONESHOT -- ???
                 end
