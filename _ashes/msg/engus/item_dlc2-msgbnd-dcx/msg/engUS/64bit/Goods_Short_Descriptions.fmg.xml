@@ -705,9 +705,17 @@
 <text id="5050015">Apply a violet sheen to equipped gear</text>
 <text id="5050016">Apply a pink sheen to equipped gear</text>
 <text id="5050017">Assume the appearance of a Pilgrim of Dark</text>
+<text id="5050018">Apply an olive sheen to equipped gear</text>
+<text id="5050019">Apply a dark red sheen to equipped gear</text>
+<text id="5050020">Apply a corroded green sheen to equipped gear</text>
+<text id="5050021">Apply a dark brown sheen to equipped gear</text>
 <text id="5050027">Drench yourself in a dark red liquid</text>
 <text id="5050028">Drench yourself in a dark liquid</text>
 <text id="5050035">Assume a luminous orange appearance</text>
+<text id="5050036">Assume a luminous purple appearance</text>
+<text id="5050040">Assume a luminous blue appearance</text>
+<text id="5050041">Assume a luminous red appearance</text>
+<text id="5050042">Assume a luminous green appearance</text>
 <text id="5050043">Assume a dark appearance</text>
 <text id="5050064">Assume a brilliant golden appearance</text>
 <text id="5050067">Assume a vivid pink appearance</text>
