@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 1.9 12.3.2021"</Description>
+      <Description>"Open - The Champion's Archive 1.9.1 01.17.2022"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -9415,7 +9415,7 @@ CE1:isConsume (0)
 local CE2 = SpEffectParam:new("CosmeticEnchants",3880) --Rusted Coin Effect ID
 CE2:iconId(10021)
 CE2:effectEndurance (60) --How long the effect lasts for
-CE2:effectSfx () --Paste EffectSfx ID here
+CE2:effectSfx (5050017) --Paste EffectSfx ID here
 CE2:itemDiscovery (0)
 
 
@@ -10870,6 +10870,314 @@ dealloc(PopupMsgInvade)
                       </CheatEntries>
                     </CheatEntry>
                   </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337159115</ID>
+                  <Description>"Personal Phantom Pigmenter+"</Description>
+                  <Options moHideChildren="1"/>
+                  <LastState/>
+                  <VariableType>Auto Assembler Script</VariableType>
+                  <AssemblerScript>[ENABLE]
+alloc(PhanParAdd,8)
+registersymbol(PhanParAdd)
+PhanParAdd:
+dd #2584
+[DISABLE]
+dealloc(PhanParAdd)
+unregistersymbol(PhanParAdd)
+</AssemblerScript>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>1337159142</ID>
+                      <Description>"How To Use"</Description>
+                      <LastState/>
+                      <Color>FF0000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if syntaxcheck then return end
+
+[ENABLE]
+disableMemrec(memrec)
+showText([[
+Select the Phantom Color you want to edit by highlighting "Currently Selected" and pressing Enter, this will open a small list to choose from.
+
+Check the box to the left of "&lt; - Open me" to load the values for your Currently Selected phantom.
+
+Outline is the color of the lines that define your character.
+
+Overlay is the "sheet" of color that applies to ALL aspects of your gear.
+
+Fill is the non-reflective parts of your gear.
+
+Edge is the reflective parts of your gear.
+
+Shine can only be seen if Fill or Edge are present, it acts like a light illuminating your character from below.
+
+Intensity is your alpha channel, the higher the value, the brighter it gets. Accepts both positive and negative values.
+
+Red, Green, and Blue are all your color values. Black is 0 and White is 255. Only positive values may be used.
+
+Transparency affects how transparent your character becomes. Keep in mind, if you are submitting your Phantom Color for review, Transparency MUST be set to 1!
+
+Ghost Type affects how your character is rendered, a lot of it is unknown on how it works! If you are submitting your Phantom Color for review, this MUST be set to None.
+]])
+
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337159143</ID>
+                      <Description>"Rules For Submissions"</Description>
+                      <LastState/>
+                      <Color>FF0000</Color>
+                      <VariableType>Auto Assembler Script</VariableType>
+                      <AssemblerScript>{$lua}
+if syntaxcheck then return end
+
+[ENABLE]
+disableMemrec(memrec)
+showText([[
+In order for your Phantom Color to be considered as an addition to the mod, it must follow these rules:
+
+1. Transparency must be set to 1.
+
+2. GhostType must be set to either None or Thick Edged.
+
+3. Colors should not radiate out from the character. (No glow, basically)
+
+4. Colors should not obscure or hide textures on similarly shaped weapons. (Compare Crest Shield with Dragon Crest Shield for example.)
+
+Submissions can be made to the Suggestions channel in the Champion's Ashes Discord. Please provide a screenshot that shows the Phantom Param Pigmenter and how the colors look in-game.
+]])
+
+[DISABLE]
+</AssemblerScript>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337159144</ID>
+                      <Description>"Currently Selected"</Description>
+                      <DropDownList DescriptionOnly="1" DisplayValueAsItem="1">2584:Vanilla Sherbet
+2632:Copper Polish
+2680:Silver Polish
+2728:Gold Polish
+2776:Diamond Polish
+2824:Frosting Sherbet
+2920:Cinnabar Polish
+2968:Jade Polish
+3016:Kyanite Polish
+3064:Obsidian Polish
+3112:Moss Dye
+3160:Poisonhorn Dye
+3208:Ash Lotus Dye
+3256:Spirit Amethyst Polish
+3304:Rose Quartz Polish
+4168:Pumpkin Sherbet
+4408:Liquorice Sherbet
+5128:Lemon Sherbet
+5272:Fig Sherbet
+5368:Tomato Sherbet
+5752:Sugar Sherbet
+5800:Strawberry Sherbet
+5848:Bilberry Sherbet
+5896:Blueberry Sherbet
+5992:Honey Sherbet
+6040:Orange Sherbet
+6136:Lavender Sherbet
+6280:Fusion Sherbet
+6328:Peach Sherbet
+7048:Drop Sherbet
+7192:Liquid Light
+7240:Red Phantom 0-time left-small
+7288:Red Phantom 1-time left-small
+7336:Red Phantom 2-time left-small
+7384:Red Phantom 3-time left-small
+7432:Oil Laquer [Black Phantom-Time left-small]
+7480:Marshmallow Sherbet
+7576:Herb Sherbet
+</DropDownList>
+                      <VariableType>4 Bytes</VariableType>
+                      <Address>PhanParAdd</Address>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>1337159079</ID>
+                      <Description>"&lt; - Open me, please read the How To Use!"</Description>
+                      <Options moHideChildren="1"/>
+                      <LastState Value="" RealAddress="00000000"/>
+                      <ShowAsSigned>0</ShowAsSigned>
+                      <GroupHeader>1</GroupHeader>
+                      <Address>DarkSoulsIII.exe+4782838</Address>
+                      <Offsets>
+                        <Offset>readInteger("PhanParAdd")</Offset>
+                        <Offset>68</Offset>
+                        <Offset>068</Offset>
+                        <Offset>10c0</Offset>
+                      </Offsets>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>1337159078</ID>
+                          <Description>"Outline Intensity"</Description>
+                          <ShowAsSigned>0</ShowAsSigned>
+                          <VariableType>Float</VariableType>
+                          <Address>+0</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159118</ID>
+                          <Description>"Overlay Intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+4</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159119</ID>
+                          <Description>"Fill Intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+8</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159120</ID>
+                          <Description>"Edge Intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+C</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159121</ID>
+                          <Description>"Shine Intensity"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+10</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159122</ID>
+                          <Description>"Outline Red"</Description>
+                          <Color>0000FF</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+14</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159123</ID>
+                          <Description>"Outline Green"</Description>
+                          <Color>008000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+15</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159124</ID>
+                          <Description>"Outline Blue"</Description>
+                          <Color>FF0000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+16</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159125</ID>
+                          <Description>"Overlay Red"</Description>
+                          <Color>0000FF</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+17</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159126</ID>
+                          <Description>"Overlay Green"</Description>
+                          <Color>008000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+18</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159127</ID>
+                          <Description>"Overlay Blue"</Description>
+                          <Color>FF0000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+19</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159128</ID>
+                          <Description>"Fill Red"</Description>
+                          <Color>0000FF</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1A</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159129</ID>
+                          <Description>"Fill Green"</Description>
+                          <Color>008000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1B</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159130</ID>
+                          <Description>"Fill Blue"</Description>
+                          <Color>FF0000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1C</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159131</ID>
+                          <Description>"Edge Red"</Description>
+                          <Color>0000FF</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1D</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159132</ID>
+                          <Description>"Edge Green"</Description>
+                          <Color>008000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1E</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159133</ID>
+                          <Description>"Edge Blue"</Description>
+                          <Color>FF0000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+1F</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159134</ID>
+                          <Description>"Shine Red"</Description>
+                          <Color>0000FF</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+20</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159135</ID>
+                          <Description>"Shine Green"</Description>
+                          <Color>008000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+21</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159136</ID>
+                          <Description>"Shine Blue"</Description>
+                          <Color>FF0000</Color>
+                          <VariableType>Byte</VariableType>
+                          <Address>+22</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159138</ID>
+                          <Description>"Transparency"</Description>
+                          <VariableType>Float</VariableType>
+                          <Address>+24</Address>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>1337159140</ID>
+                          <Description>"GhostType"</Description>
+                          <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:None
+1:Thick Edged
+2:Black Ghost
+3:White Ghost
+</DropDownList>
+                          <VariableType>Byte</VariableType>
+                          <Address>+2C</Address>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>1337140553</ID>
+                  <Description>"Hitbox Viewer (set to 1 to activate)"</Description>
+                  <VariableType>Byte</VariableType>
+                  <Address>DarkSoulsIII.exe+4766B80</Address>
+                  <Offsets>
+                    <Offset>30</Offset>
+                  </Offsets>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
@@ -80001,250 +80309,6 @@ unregistersymbol(teleportsave5)
                       <Address>teleportsave5</Address>
                     </CheatEntry>
                   </CheatEntries>
-                </CheatEntry>
-              </CheatEntries>
-            </CheatEntry>
-          </CheatEntries>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>1337159115</ID>
-          <Description>"Personal Phantom Pigmenter "</Description>
-          <Options moHideChildren="1"/>
-          <LastState/>
-          <VariableType>Auto Assembler Script</VariableType>
-          <AssemblerScript>[ENABLE]
-alloc(PhanParAdd,8)
-registersymbol(PhanParAdd)
-PhanParAdd:
-dd #7192
-[DISABLE]
-dealloc(PhanParAdd)
-unregistersymbol(PhanParAdd)
-</AssemblerScript>
-          <CheatEntries>
-            <CheatEntry>
-              <ID>1337159142</ID>
-              <Description>"How To Use"</Description>
-              <LastState/>
-              <Color>FF0000</Color>
-              <VariableType>Auto Assembler Script</VariableType>
-              <AssemblerScript>{$lua}
-if syntaxcheck then return end
-
-[ENABLE]
-disableMemrec(memrec)
-showText([[
-Outline is the color of the lines that define your character.
-
-Overlay is the "sheet" of color that applies to ALL aspects of your gear.
-
-Fill is the non-reflective parts of your gear.
-
-Edge is the reflective parts of your gear.
-
-Shine can only be seen if Fill or Edge are present, it acts like a light illuminating your character from below.
-
-Intensity is your alpha channel, the higher the value, the brighter it gets. Accepts both positive and negative values.
-
-Red, Green, and Blue are all your color values. Black is 0 and White is 255. Only positive values may be used.
-
-Transparency affects how transparent your character becomes under the effect of Liquid Light. Keep in mind, if you are submitting your Phantom Color for review, Transparency MUST be set to 1!
-
-Ghost Type affects how your character is rendered, a lot of it is unknown on how it works! If you are submitting your Phantom Color for review, this MUST be set to None.
-]])
-
-[DISABLE]
-</AssemblerScript>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>1337159143</ID>
-              <Description>"Rules For Submissions"</Description>
-              <LastState/>
-              <Color>FF0000</Color>
-              <VariableType>Auto Assembler Script</VariableType>
-              <AssemblerScript>{$lua}
-if syntaxcheck then return end
-
-[ENABLE]
-disableMemrec(memrec)
-showText([[
-In order for your Phantom Color to be considered as an addition to the mod, it must follow these rules:
-
-1. Transparency must be set to 1.
-
-2. GhostType must be set to either None or Thick Edged.
-
-3. Colors should not radiate out from the character. (No glow, basically)
-
-4. Colors should not obscure or hide textures on similarly shaped weapons. (Compare Crest Shield with Dragon Crest Shield for example.)
-
-Submissions can be made to the Suggestions channel in the Champion's Ashes Discord. Please provide a screenshot that shows the Phantom Param Pigmenter and how the colors look in-game.
-]])
-
-[DISABLE]
-</AssemblerScript>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>1337159117</ID>
-              <Description>"Currently Selected "</Description>
-              <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">7192:Liquid Light
-</DropDownList>
-              <ShowAsSigned>0</ShowAsSigned>
-              <VariableType>4 Bytes</VariableType>
-              <Address>PhanParAdd</Address>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>1337159079</ID>
-              <Description>"&lt; - Open me, please read the How To Use!"</Description>
-              <Options moHideChildren="1"/>
-              <LastState Value="" RealAddress="00000000"/>
-              <ShowAsSigned>0</ShowAsSigned>
-              <GroupHeader>1</GroupHeader>
-              <Address>DarkSoulsIII.exe+4782838</Address>
-              <Offsets>
-                <Offset>readInteger("PhanParAdd")</Offset>
-                <Offset>68</Offset>
-                <Offset>068</Offset>
-                <Offset>10c0</Offset>
-              </Offsets>
-              <CheatEntries>
-                <CheatEntry>
-                  <ID>1337159078</ID>
-                  <Description>"Outline Intensity"</Description>
-                  <ShowAsSigned>0</ShowAsSigned>
-                  <VariableType>Float</VariableType>
-                  <Address>+0</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159118</ID>
-                  <Description>"Overlay Intensity"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>+4</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159119</ID>
-                  <Description>"Fill Intensity"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>+8</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159120</ID>
-                  <Description>"Edge Intensity"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>+C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159121</ID>
-                  <Description>"Shine Intensity"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>+10</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159122</ID>
-                  <Description>"Outline Red"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+14</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159123</ID>
-                  <Description>"Outline Green"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+15</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159124</ID>
-                  <Description>"Outline BLue"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+16</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159125</ID>
-                  <Description>"Overlay Red"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+17</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159126</ID>
-                  <Description>"Overlay Green"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+18</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159127</ID>
-                  <Description>"Overlay Blue"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+19</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159128</ID>
-                  <Description>"Fill Red"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+1A</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159129</ID>
-                  <Description>"Fill Green"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+1B</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159130</ID>
-                  <Description>"Fill Blue"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+1C</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159131</ID>
-                  <Description>"Edge Red"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+1D</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159132</ID>
-                  <Description>"Edge Green"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+1E</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159133</ID>
-                  <Description>"Edge Blue"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+1F</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159134</ID>
-                  <Description>"Shine Red"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+20</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159135</ID>
-                  <Description>"Shine Green"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+21</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159136</ID>
-                  <Description>"Shine Blue"</Description>
-                  <VariableType>Byte</VariableType>
-                  <Address>+22</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159138</ID>
-                  <Description>"Transparency"</Description>
-                  <VariableType>Float</VariableType>
-                  <Address>+24</Address>
-                </CheatEntry>
-                <CheatEntry>
-                  <ID>1337159140</ID>
-                  <Description>"GhostType"</Description>
-                  <DropDownList ReadOnly="1" DescriptionOnly="1" DisplayValueAsItem="1">0:None
-1:Thick Edged
-2:Black Ghost
-3:White Ghost
-</DropDownList>
-                  <VariableType>Byte</VariableType>
-                  <Address>+2C</Address>
                 </CheatEntry>
               </CheatEntries>
             </CheatEntry>
