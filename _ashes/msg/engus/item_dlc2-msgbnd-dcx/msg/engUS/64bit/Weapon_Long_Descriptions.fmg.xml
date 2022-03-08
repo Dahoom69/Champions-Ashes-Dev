@@ -18709,6 +18709,13 @@ Perhaps only when free of their shackles can bearers of the dark soul achieve th
 
 Skill: Berserker Barrage 
 Unleash the wrath of a true hollow, executing relentless consecutive attacks. Quickly depletes stamina.</text>
+<text id="30290000">A great scythe wielded by Sister Elfriede, with a curved blade thinly coated by Painted World frost.
+
+An heirloom of Elfriede's distant past, this scythe crossed into the Painted World, transforming from a tool of death to a graceful defender. Though the blade now serves a different role, it is still capable of bringing a cold and gentle end.
+
+Skill: Snowstep
+
+Brandish the scythe with a unique stance. Close the distance with light attack, and release a graceful circular slash with strong attack.</text>
 <text id="35000000">A lance born from the horns of a forest-dwelling magical beast from ages past.
 
 Imbued with magic, it is said that the butterflies were created through the twisted experiments of an insane duke. Inside the quivering horns lies potent magic, never fading.
@@ -19343,12 +19350,11 @@ Its design suggests a more clinical approach, perhaps used by healers to burn aw
 
 Skill: Blood Bullet Technique
 Impale the left leg with a blood draining needle, replenishing Focus at the cost of ones Vigor.</text>
-<text id="41550000">Beastly weapon wielded by the Madman Chieftan.
-Those who tame the lycan are revered by the dungeon-dwelling clan, proclaiming them as their leader.
+<text id="41550000">Beastly weapon wielded by the clan of madmen prowling Irithyll Dungeon.
 
 Crafted by chiseling the long bones of an undead lycan and fastening them to the weapon. The bones are still alive, and when unleashed, grant its wielder a spurt of beastly power.
 
-As flesh and blood is spread across the battlefield, the wielder of this weapon surges with strength at the cost of resilience.
+Wielders of this weapon will experience an insatiable bloodlust as they ruthlessly rend the flesh of their enemies. Boosts attack and restores HP with each consecutive hit. Transform attacks along with the Weapon Skill boost this the most. 
 
 Skill: Bestial Embrace
 Let out a bestial roar, allowing the regeneration of health as claws tear through flesh.</text>
