@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 2.1 03.18.2022"</Description>
+      <Description>"Open - The Champion's Archive 2.1 03.19.2022"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -3301,6 +3301,7 @@ CREATETHREAD(ItemGib)
 009A4430:Lothric's Great Scythe
 009A4494:Lothric's War Scythe
 0216F920:Chosen Undead's Scythe
+01CE3050:Blade of Ariandel
 00B71B00:Whip
 00B7DE50:Notched Whip
 00B80560:Spotted Whip
@@ -3388,6 +3389,7 @@ CREATETHREAD(ItemGib)
 0277B6C0:Beasthunter Saif
 0275BAF0:Threaded Cane
 0278C830:Church Pick
+027A00B0:Beast Claw
 0271EA60:Hunter Blunderbuss
 02743450:Hunter Pistol
 02745B60:Cannon
@@ -4411,6 +4413,8 @@ local newWeapons =
 {
 
 -- weapons
+  0x027A00B0, --Beast Claw
+  0x01CE3050, --Blade of Ariandel
   0x01CE0940, --Deserter's Sword and Shield
   0x0278C830, --Church Pick
   0x02B66D70, --Parrying Gun
