@@ -13409,6 +13409,10 @@ function Warcry_onUpdate() -- 037670 UT WA
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy2Start"
     end
+    if env(345 , hand) == 604 then
+        r2 = "W_WarcryCancel"
+        b2 = "W_WarcryCancel"
+    end
 
     local r1 = g_r1
     local b1 = g_b1
@@ -13444,7 +13448,7 @@ function Warcry_onUpdate() -- 037670 UT WA
     end
 end
 
-function WarcryCancel_onUpdate()
+function WarcryCancel_onUpdate() -- 037680 
 
     local r2 = "W_AttackRightHeavySpecial1Start"
     local b2 = "W_AttackBothHeavySpecial1Start"
@@ -13456,6 +13460,8 @@ function WarcryCancel_onUpdate()
 
     local is_CSm = GetEquipType(HAND_RIGHT, 28) 
     local is_CSo = GetEquipType(HAND_LEFT, 28) 
+
+    local sp_m = env(345 , HAND_RIGHT)
 
     if env(345 , hand) == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH then
         g_r1 = "W_AttackRightLight2"
@@ -13478,6 +13484,13 @@ function WarcryCancel_onUpdate()
         b2 = "W_EndureRightHeavy"
         end
     end   
+
+    if sp_m == 604 then 
+        r2 = "W_WarcryCancel"
+        b2 = "W_WarcryCancel"
+    end
+
+    if 10 > env(2016) and sp_m == 604 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
 
     if SwordArtsCommonFunction(g_r1, r2, g_l1, g_l2, g_b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
