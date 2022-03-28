@@ -9168,6 +9168,8 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
         b2 = "W_AttackBothHeavy1SubStart"
     end
 
+    if 10 > env(2016) and sp_m == 604 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
+
     if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
@@ -10445,7 +10447,7 @@ function AttackBothHeavySpecial1End_onUpdate() -- r23 r2 charge super 034351
     end
 end
 
-function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack
+function AttackBothHeavySpecial2Start_onUpdate() -- T TA Transform Attack 034370
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
     local b2 = "W_AttackBothHeavy1Start"
@@ -12918,7 +12920,7 @@ function StampedeRightAttackLight_onUpdate() -- 50037410
     end
 end
 
-function StampedeRightAttackHeavy_onUpdate()
+function StampedeRightAttackHeavy_onUpdate() -- 037420
     local sp_m = env(345 , HAND_RIGHT)
 
     local r2 = "W_AttackRightHeavy1Start"
