@@ -13409,7 +13409,7 @@ function Warcry_onUpdate() -- 037670 UT WA
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy2Start"
     end
-    if env(345 , hand) == 604 then
+    if env(345 , hand) == 604 or env(345 , hand) == 658 then
         r2 = "W_WarcryCancel"
         b2 = "W_WarcryCancel"
     end
