@@ -8491,7 +8491,7 @@ function AttackRightLight2_onUpdate() -- r12
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
 
 
-    if (sp_m == 654 or sp_m == 658 or sp_m == 676) then r1 = "W_AttackRightLight1" end
+    if (sp_m == 654 or sp_m == 676) then r1 = "W_AttackRightLight1" end
     if (sp_m == 658) then r2 = "W_AttackRightHeavy2Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
 
@@ -8847,7 +8847,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
 
     if (sp_m == 614 or sp_m == 610) then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 612 or sp_m == 627 or sp_m == 640 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
-    if (sp_m == 658 and IsFeintAttempt() or sp_m == 677 ) then r1 = "W_AttackRightLight2" end
+    if (sp_m == 658 and IsFeintAttempt() or sp_m == 677 ) then r1 = "W_AttackRightLight3" end
     if (sp_m == 677 and IsFeintAttempt() ) then r1 = "W_AttackRightLight3" r2 = "W_AttackRightHeavyKick" end
 
     if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
@@ -13490,6 +13490,11 @@ function WarcryCancel_onUpdate() -- 037680
         b2 = "W_WarcryCancel"
     end
 
+    if sp_m == 658 then 
+        r2 = "W_AttackRightHeavy1Start"
+        b2 = "W_AttackBothHeavy1Start"
+    end
+    
     if 10 > env(2016) and sp_m == 604 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
 
     if SwordArtsCommonFunction(g_r1, r2, g_l1, g_l2, g_b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
