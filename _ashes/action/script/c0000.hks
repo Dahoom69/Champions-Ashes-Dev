@@ -2062,6 +2062,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 r2 = "W_AttackRightHeavySpecial2Start"
 
             end
+            --xxxxxx--
+
+        elseif (sp_m == 689) -- W_AttackBothHeavy1Start2 extra r2
+        then 
+        EXR2 = TRUE
+            if r2 == "W_AttackRightHeavy1Start" then -- r21 charge extra 030345
+                r2 = "W_AttackRightHeavyWepBroken2Start"
+            end
         elseif IsWepBrokenHeavyAtk() == TRUE then
             if r2 == "W_AttackRightHeavy1Start" then
                 r2 = "W_AttackRightHeavyWepBroken1Start"
@@ -7591,6 +7599,9 @@ function BackStep_onUpdate()
         rr2 = "W_AttackRightLightStepSpecial"
         br2 = "W_AttackBothLightStepSpecial"
     end
+
+    if (sp == 689 and c_Style == HAND_RIGHT_BOTH) or (osp == 689 and c_Style == HAND_LEFT_BOTH)  then  br1 = "W_AttackBothDashSpecial" end
+    if (sp == 689) then  rr1 = "W_AttackRightLightDashSpecial" end
 
 
     if (sp == 681 and c_Style == HAND_RIGHT_BOTH) or (osp == 681 and c_Style == HAND_LEFT_BOTH)  then  br1 = "W_AttackBothDashSpecial" end
