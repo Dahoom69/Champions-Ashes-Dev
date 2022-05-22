@@ -9223,8 +9223,12 @@ function AttackRightHeavyWepBroken1Start_onUpdate()
     return 
 end
 
-function AttackRightHeavyWepBroken2Start_onUpdate()
-    AttackRightHeavy2Start_onUpdate()
+function AttackRightHeavyWepBroken2Start_onUpdate() -- r21 030345 "W_AttackBothHeavyWepBroken2Start"
+    local sp_m = env(345 , HAND_RIGHT)
+    if sp_m == 689 and c_Style ~= HAND_LEFT_BOTH then  AttackRightHeavy1Start_onUpdate()
+    else 
+        AttackRightHeavy2Start_onUpdate() 
+    end
     return 
 end
 
