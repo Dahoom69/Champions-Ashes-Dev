@@ -10914,7 +10914,7 @@ function AttackBothLightKick_onUpdate() -- 034100
     if env(345 , HAND_RIGHT) == 68 and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
     if env(345 , HAND_LEFT) == 68 and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
 
-    if GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SHIELD) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
+    if GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SHIELD) == TRUE and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
     if GetEquipType(HAND_LEFT, WEAPON_CATEGORY_LARGE_SHIELD) == TRUE and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
 
     if GetEquipType(HAND_RIGHT, 30) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
