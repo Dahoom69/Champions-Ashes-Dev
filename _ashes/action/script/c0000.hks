@@ -10240,6 +10240,7 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2
         if (sp_m == 667) then b2 = "W_AttackRightHeavy1SubStart"  l1 = "W_AttackBothLeftStep" end
         if (sp_m == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
         if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_AttackBothLight2" end
+        if sp_m == 666 then b2 =  "W_AttackBothLeft3" end
 
 --        if 20 > env(2016) and sp_m == 624 then  ExecEventHalfBlend(Event_MagicInvalidRight, ALLBODY) end
         if 10 > env(2016) and sp_m == 624 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end  -- get fp
