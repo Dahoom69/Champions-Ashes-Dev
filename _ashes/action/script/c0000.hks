@@ -8241,8 +8241,8 @@ end
 
 function GuardDamageSmall_onUpdate()
     act(110)
-    if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 33, 35, 36, 38, 42, 47, 48) == TRUE 
-    or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH)    )
+    if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE 
+    or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH)    )
     and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
@@ -8253,8 +8253,8 @@ end
 
 function GuardDamageMiddle_onUpdate()
     act(110)
-    if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 33, 35, 36, 38, 42, 47, 48) == TRUE 
-    or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH)    )
+    if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE 
+    or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH)    )
     and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
@@ -8265,8 +8265,8 @@ end
 
 function GuardDamageLarge_onUpdate()
     act(110)
-    if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 33, 35, 36, 38, 42, 47, 48) == TRUE 
-    or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH)    )
+    if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE 
+    or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH)    )
     and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
