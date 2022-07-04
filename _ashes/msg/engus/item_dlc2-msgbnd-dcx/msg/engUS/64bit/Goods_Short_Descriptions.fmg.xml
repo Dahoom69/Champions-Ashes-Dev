@@ -103,7 +103,7 @@
 <text id="288">%null%</text>
 <text id="289">%null%</text>
 <text id="290">Throwing knife. Causes bleed damage.</text>
-<text id="291">%null%</text>
+<text id="291">Projectile that reduces the fire resistance of enemies in a small area.</text>
 <text id="292">Explodes, inflicting fire damage</text>
 <text id="293">Turns enemy toxic, but also affects user</text>
 <text id="294">Attracts certain types of enemies</text>
@@ -603,6 +603,7 @@
 <text id="1355000">Transform into something inconspicuous</text>
 <text id="1356000">Distract foes with a distant sound</text>
 <text id="1370000">Emit crystal breath of Seath the Scaleless</text>
+<text id="1371000">Summons rocks from the earth and sends them flying</text>
 <text id="1372000">Fire cascade of soul darts</text>
 <text id="1373000">Cast cascade of small crystal soulmasses from sky</text>
 <text id="1374000">Attack with a greatsword formed from souls</text>
