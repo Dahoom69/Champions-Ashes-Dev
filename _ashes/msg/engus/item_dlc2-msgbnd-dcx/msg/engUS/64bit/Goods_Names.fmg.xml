@@ -178,7 +178,7 @@
 <text id="379">%null%</text>
 <text id="380">Rubbish</text>
 <text id="381">Dungeon Riddle Note</text>
-<text id="382">%null%</text>
+<text id="382">Lantern</text>
 <text id="383">%null%</text>
 <text id="384">%null%</text>
 <text id="385">Dried Finger</text>
@@ -665,6 +665,7 @@
 <text id="1374000">Soul Greatsword</text>
 <text id="1375000">Farron Flashsword</text>
 
+<text id="1377000">Glintstone Arc</text>
 <text id="1472000">Gravity Well</text>
 <text id="1472100">Collapsing Stars</text>
 
@@ -699,6 +700,7 @@
 <text id="2600000">Dark Orb</text>
 <text id="2610000">Black Fire Orb</text>
 <text id="2620000">Bursting Fireball</text>
+<text id="2625000">Black Flame Ritual</text>
 <text id="2630000">Boulder Heave</text>
 <text id="2640000">Sacred Flame</text>
 <text id="2650000">Carthus Beacon</text>

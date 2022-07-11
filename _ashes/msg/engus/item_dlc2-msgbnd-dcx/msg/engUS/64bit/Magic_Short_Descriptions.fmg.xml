@@ -510,6 +510,7 @@
 <text id="1374000">Attack with a greatsword formed from souls</text>
 <text id="1375000">Attack with a sword formed from souls</text>
 
+<text id="1377000">Fires a horizontally-widening magic arc</text>
 <text id="1472000">Pulls foes toward caster with gravity projectile</text>
 <text id="1472100">Pulls foes toward caster with gravity projectile volley</text>
 
@@ -549,6 +550,7 @@
 <text id="2600000">Fire dark orb</text>
 <text id="2610000">Hurl a black fireball</text>
 <text id="2620000">Hurl a bursting fireball</text>
+<text id="2625000">Summons circle of black flame pillars around caster.</text>
 <text id="2630000">Spew a boulder from one's mouth</text>
 <text id="2640000">Flame burrows inside foes and ignites</text>
 <text id="2650000">Damage increases with consecutive attacks</text>
