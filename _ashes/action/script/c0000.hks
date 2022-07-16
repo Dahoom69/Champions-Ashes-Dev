@@ -8569,12 +8569,11 @@ function AttackRightLight3_onUpdate() -- r13
     local leftoffhand = "W_AttackLeftHeavy1"
     if (sp_o == 656) then leftoffhand = "W_AttackLeftHeavy2" end
                   
-    if (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 604 or sp_m == 605 or sp_m == 606 or  sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 624 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 or sp_m == 689) 
+    if (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 604 or sp_m == 605 or sp_m == 606 or  sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 624 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) 
         then r1 = "W_AttackRightHeavySpecial1Start" end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and sp_m == 689 then r1 = "W_AttackRightHeavyWepBroken1Start" end -- eleonora
-
-        if sp_m == 264 then r2 = "W_AttackRightHeavy2Start" end
+    if sp_m == 689 then r1 = "W_AttackRightHeavyWepBroken1Start" end -- eleonora
+    if sp_m == 264 then r2 = "W_AttackRightHeavy2Start" end
         
     local is_Am = GetEquipType(HAND_RIGHT, 30) -- powerstance 
     local is_Ao = GetEquipType(HAND_LEFT, 30) 
@@ -9235,11 +9234,37 @@ function AttackRightHeavySpecial2End_onUpdate() -- 030371
 end
 
 function AttackRightHeavyWepBroken1Start_onUpdate() -- r14 eleonora
+    local sp_m = env(345, HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    if sp_m == 689 then -- eleonora
+        r1 = "W_AttackRightBackstep" -- r15
+        if env(1116, 100283) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+            return
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and sp_m == 689 then r1 = "W_AttackRightBackstep" end -- eleonora
-
-    AttackRightHeavy1Start_onUpdate()
-    return 
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE  then return
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE  then
+            if env(1106, ACTION_ARM_R1) == TRUE then
+                    local staminaRegen = 0
+                    if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                    elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
+                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                    elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
+                    elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
+                    else staminaRegen = 15 end
+                    
+                    AddStamina(staminaRegen)
+                    act(2002, 621)
+                    act(2002, 622)
+            end
+            return 
+            
+        else
+            return
+        end
+    else
+        AttackRightHeavy1Start_onUpdate()
+        return 
+    end
 end
 
 function AttackRightHeavyWepBroken2Start_onUpdate() -- r21 030345 "W_AttackBothHeavyWepBroken2Start"
@@ -9298,11 +9323,33 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2
     end
 end
 
-function AttackRightBackstep_onUpdate()
+function AttackRightBackstep_onUpdate() -- r15
+    local sp_m = env(345, HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
-    if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
-    if AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
+    if sp_m == 689 then r1 = "W_AttackRightLight1" end
+
+        if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+            return
+
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE  then return
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+            if env(1106, ACTION_ARM_R1) == TRUE then
+                    local staminaRegen = 0
+                    if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                    elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
+                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                    elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
+                    elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
+                    else staminaRegen = 15 end
+                    
+                    AddStamina(staminaRegen)
+                    act(2002, 621)
+                    act(2002, 622)
+            end 
+
         return 
     else
         return 
@@ -9698,7 +9745,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     local l1 = "W_AttackBothLeft2"
     if sp_m == 613  then l1 = "W_AttackBothLeft2" end
 
-    if  (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 404 or sp_m == 604 or sp_m == 605 or sp_m == 406 or sp_m == 409 or sp_m == 410 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 642 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 or sp_m == 689 ) 
+    if  (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 404 or sp_m == 604 or sp_m == 605 or sp_m == 406 or sp_m == 409 or sp_m == 410 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 642 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) 
     then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 643 then 
         b2 = "W_AttackBothHeavy1Start"
@@ -9707,6 +9754,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     end
     if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft3" end
     if sp_m == 664 then b1 = "W_AttackBothLight1" end
+    if sp_m == 689 then b1 = "W_AttackBothHeavyWepBroken1Start" end
 
     if sp_m == 232 or sp_m == 242  then b1 = "W_AttackBothLight1" end
     if env(1116, 100440) == TRUE then
@@ -10552,8 +10600,11 @@ function AttackBothHeavySpecial2End_onUpdate()
     end
 end
 
-function AttackBothHeavyWepBroken1Start_onUpdate()  
+function AttackBothHeavyWepBroken1Start_onUpdate()  -- r14
     local sp_m = env(345, HAND_RIGHT)
+    local sp_o = env(345, HAND_LEFT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
     if sp_m == 264 then -- Hunter Axe
         local r1 = "W_AttackRightLight1"
         local r2 = "W_AttackRightHeavy1Start"
@@ -10569,6 +10620,31 @@ function AttackBothHeavyWepBroken1Start_onUpdate()
         else
             return
         end
+    elseif  (sp_m == 689 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH) then -- eleonora
+            b1 = "W_AttackBothBackstep" -- r15
+                if env(1116, 100283) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+                    return 
+            
+                    elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE  then return
+                    elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE  then
+                        if env(1106, ACTION_ARM_R1) == TRUE then
+                                local staminaRegen = 0
+                                if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
+                                elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 22
+                                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 28
+                                elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 36
+                                elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 44
+                                else staminaRegen = 19 end
+                                
+                                AddStamina(staminaRegen)
+                                act(2002, 621)
+                                act(2002, 622)
+                        end
+
+                return
+            else
+                return
+            end
     else
         AttackBothHeavy1Start_onUpdate()
         return
@@ -11045,8 +11121,9 @@ function AttackBothHeavyKickSpecial_onUpdate() -- run r2 034610
     end
 end
 
-function AttackBothBackstep_onUpdate()
+function AttackBothBackstep_onUpdate() -- r15 eleonora
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -11062,8 +11139,30 @@ function AttackBothBackstep_onUpdate()
         r2 = "W_AttackRightHeavy1SubStart"
     end
 
-    if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
+    local b1 = "W_AttackBothLight1"
+    if (sp_m == 689 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH) then 
+        b1 = "W_AttackBothHeavyWepBroken1Start" end -- eleonora r14
+
+    if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
+
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE  then return
+        elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE  then
+            if env(1106, ACTION_ARM_R1) == TRUE then
+                    local staminaRegen = 0
+                    if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 12
+                    elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 22
+                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 28
+                    elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 36
+                    elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 44
+                    else staminaRegen = 19 end
+                    
+                    AddStamina(staminaRegen)
+                    act(2002, 621)
+                    act(2002, 622)
+            end
+            return 
+
     else
         return 
     end
