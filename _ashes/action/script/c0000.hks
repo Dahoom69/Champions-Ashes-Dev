@@ -1654,8 +1654,8 @@ function IsWarcrySpAtk()
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
-    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140 or sp_m == 689) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
+    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140 or sp_o == 689) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
 
     if env(1116, 698) == TRUE and (sp_m == 127) and style ~= HAND_LEFT_BOTH then  -- coiled stake
         if sp_o == 127 then
@@ -8572,6 +8572,8 @@ function AttackRightLight3_onUpdate() -- r13
     if (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 604 or sp_m == 605 or sp_m == 606 or  sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 624 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667 or sp_m == 689) 
         then r1 = "W_AttackRightHeavySpecial1Start" end
 
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and sp_m == 689 then r1 = "W_AttackRightHeavyWepBroken1Start" end -- eleonora
+
         if sp_m == 264 then r2 = "W_AttackRightHeavy2Start" end
         
     local is_Am = GetEquipType(HAND_RIGHT, 30) -- powerstance 
@@ -9232,7 +9234,10 @@ function AttackRightHeavySpecial2End_onUpdate() -- 030371
     end
 end
 
-function AttackRightHeavyWepBroken1Start_onUpdate()
+function AttackRightHeavyWepBroken1Start_onUpdate() -- r14 eleonora
+
+    if env(1116, 698) and IsWarcrySpAtk() == TRUE and sp_m == 689 then r1 = "W_AttackRightBackstep" end -- eleonora
+
     AttackRightHeavy1Start_onUpdate()
     return 
 end
