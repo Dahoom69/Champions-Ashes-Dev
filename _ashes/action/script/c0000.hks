@@ -8822,7 +8822,7 @@ function AttackRightWhileGuard_onUpdate()
     local b2 = "W_AttackBothHeavy1Start" 
     if (env(345 , HAND_RIGHT) == 604) then r2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
-    if (env(345 , HAND_RIGHT) == 622) then r2 = "W_AttackRightHeavy1SubStart" b2 = "W_AttackRightHeavy1SubStart" end
+    if (env(345 , HAND_RIGHT) == 622) then r2 = "W_AttackRightHeavy1SubStart" b2 = "W_AttackBothHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 624) then r2 = "W_AttackRightHeavy1SubStart" b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 647) then r2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
