@@ -9754,7 +9754,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     end
     if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft3" end
     if sp_m == 664 then b1 = "W_AttackBothLight1" end
-    if sp_m == 689 then b1 = "W_AttackBothHeavyWepBroken1Start" end
+    if sp_m == 689 then b1 = "W_AttackBothHeavyWepBroken1Start" end -- (sp_m == 689 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)
 
     if sp_m == 232 or sp_m == 242  then b1 = "W_AttackBothLight1" end
     if env(1116, 100440) == TRUE then
