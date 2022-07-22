@@ -19098,12 +19098,15 @@ Tainted by the poison gem within, the spectres emit virulent gasses instead of t
 Skill: Wheel of Vengeance
 Spin the wheel up to five times to increase damage dealt, at the cost of leeched vigor.
 The grinding of flesh and bones appease the spirits, and allow the blood of foes to invigorate the user.</text>
-<text id="41120000">This saw, effective at drawing the blood of beasts, transforms into a long cleaver that makes use of centrifugal force.
+<text id="41120000">A brutal yet simple weapon used by crafty peasants and various hunters.
 
-With its set of blood-letting teeth, has become a symbol of those who hunt beasts, and only grows in effectiveness the more grotesquely transformed the creature.
+This saw makes use of centrifugal force to transform into a long cleaver that provides longer reaching and violent strikes.
 
-Skill: Beast Leap/Titchy Slash
-Slash the saw across the ground in a backwards motion. When transformed, move forward while slicing low to the ground before ending with a slam.</text>
+Made for adaptability over all, the weapon is meant for the average, yet trained individual. 
+The blood-letting teeth are functional, though they are largely an intimidating gesture.
+
+Skill: Beast Leap / Titchy Slash
+Slash and backflip in one swift motion. When transformed, lunge and flail the cleaver around before slamming it into the floor.</text>
 <text id="41130000">A rare weapon passed down among those who hunt men. Splits into two when activated.
 
 The weapon's warped blades are forged with a rare mineral of the heavens. Most effective with swift attacks, such as after dodging.
@@ -19192,17 +19195,15 @@ But, such accolades may simply be the words of an unscrupulous merchant hoping t
 
 Skill: Spinning Motion/Reaping Slashes
 Execute a deliberate horizontal attack. When transformed, perform two powerful slashes in rapid succession.</text>
-<text id="41220000">One of the trick weapons of the workshop, commonly used by those who dedicate themselves to the hunt.
+<text id="41220000">A brutal yet simple weapon used by crafty peasants and various hunters.
 
-This saw, effective at drawing the blood of beasts, transforms into a medium-range spear.
+This saw makes use of centrifugal force to transform into a long spear to provide more precise strikes.
 
-The saw, with its set of blood-letting teeth, has become a symbol of the hunt, and only grows in effectiveness the more grotesquely transformed the beast.
+Made for adaptability over all, the weapon is meant for the average, yet trained individual. 
+The blood-letting teeth are functional, though they are largely an intimidating gesture.
 
-
-Normal Mode: When compared to transform mode, the attacks are all slightly faster and cost less stamina. They are also weaker, though. If you are able to strike an enemy multiple times at close range, normal mode is better.
-
-Transformed Mode: The Saw Spear is great in transformed mode for its range and versatility. If you need to hit groups or move around and hit hard with single strikes, transformed mode is much better than normal mode.
-</text>
+Skill: Beast Leap / Titchy Slash
+Slash and backflip in one swift motion. When transformed, lunge and flail the spear around before slamming it into the floor.</text>
 <text id="41230000">A special weapon created by a Vinheim craftsman.
 
 Draws upon the wielders Intelligence to spray a cloud of magical mist, using Focus as a medium.
