@@ -2003,7 +2003,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
+        if (  (    (is_Um == FALSE and (sp_m == 163 or sp_m == 140)  and is_both_right == TRUE)    or      (is_Uo == FALSE and (sp_o == 163 or sp_o == 140)  and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
         else 
 
             
@@ -2095,7 +2095,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
 
         if (is_Um == FALSE and sp_m == 163 and is_both_right == FALSE and c_Style ~= HAND_LEFT_BOTH)  and env(1116, 100289) == TRUE then -- dbs
-        elseif (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
+        elseif (  (    (is_Um == FALSE and (sp_m == 163 or sp_m == 140)  and is_both_right == TRUE)    or      (is_Uo == FALSE and (sp_o == 163 or sp_o == 140) and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
         else 
 
         if HAND_LEFT_BOTH <= style or iT == TRUE then
@@ -2224,7 +2224,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
+        if (  (    (is_Um == FALSE and (sp_m == 163 or sp_m == 140)  and is_both_right == TRUE)    or      (is_Uo == FALSE and (sp_o == 163 or sp_o == 140) and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
         else 
 
             if artsr1 == TRUE then
@@ -2274,7 +2274,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
-        if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
+        if (  (    (is_Um == FALSE and (sp_m == 163 or sp_m == 140)  and is_both_right == TRUE)    or      (is_Uo == FALSE and (sp_o == 163 or sp_o == 140) and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
         else 
 
             EXR2 = FALSE
