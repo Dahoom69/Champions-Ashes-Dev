@@ -2038,11 +2038,17 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\tae\a688.tae</path>
     </file>
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>5000689</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\tae\a689.tae</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>5000690</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\tae\a690.tae</path>
     </file>
     <file>
       <flags>0x40</flags>
