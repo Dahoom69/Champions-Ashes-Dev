@@ -1806,6 +1806,10 @@
 <text id="34001000">Tainted Dragon Body - Torso</text>
 <text id="34002000">Tainted Dragon Body - Arms</text>
 <text id="34003000">Tainted Dragon Body - Legs</text>
+<text id="35000000">Abyssal Dragon Head</text>
+<text id="35001000">Abyssal Dragon Body - Torso</text>
+<text id="35002000">Abyssal Dragon Body - Arms</text>
+<text id="35003000">Abyssal Dragon Body - Legs</text>
 <text id="40000000">Steel Soldier Helm</text>
 <text id="40001000">Deserter Armor</text>
 <text id="40002000">Deserter Gloves</text>
@@ -2158,6 +2162,10 @@
 <text id="99410000">Enraged Smelter Demon Armor</text>
 <text id="99420000">Enraged Smelter Demon Gauntlets</text>
 <text id="99430000">Enraged Smelter Demon Leggings</text>
+<text id="99490000">Black Dragon Helm</text>
+<text id="99491000">Black Dragon Armor</text>
+<text id="99492000">Black Dragon Gauntlets</text>
+<text id="99493000">Black Dragon Leggings</text>
 <text id="99500000">Burial Knight Helm</text>
 <text id="99501000">Burial Knight Armor</text>
 <text id="99502000">Burial Knight Gauntlets</text>
@@ -2192,9 +2200,9 @@
 <text id="99592000">Giant Gauntlets</text>
 <text id="99593000">Giant Leggings</text>
 <text id="99600000">Twinkling Dragon Helm</text>
-<text id="99601000">Twinkling Dragon Armor</text>
-<text id="99602000">Twinkling Dragon Gauntlets</text>
-<text id="99603000">Twinkling Dragon Leggings</text>
+<text id="99601000">Twinkling Dragon Body - Torso</text>
+<text id="99602000">Twinkling Dragon Body - Arms</text>
+<text id="99603000">Twinkling Dragon Body - Legs</text>
 <text id="99610000">Dragonrider Helm</text>
 <text id="99611000">Dragonrider Armor</text>
 <text id="99612000">Dragonrider Gauntlets</text>
@@ -2327,5 +2335,9 @@
 <text id="99981000">Ironclad Armor</text>
 <text id="99982000">Ironclad Gauntlets</text>
 <text id="99983000">Ironclad Leggings</text>
+<text id="99990000">Gravel Dragon Head</text>
+<text id="99991000">Gravel Dragon Body - Torso</text>
+<text id="99992000">Gravel Dragon Body - Arms</text>
+<text id="99993000">Gravel Dragon Body - Legs</text>
 </entries>
 </fmg>
