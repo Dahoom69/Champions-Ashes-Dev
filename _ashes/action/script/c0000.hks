@@ -1136,12 +1136,22 @@ function GetAttackRequest(is_guard)
         end
         if c_IsEnableSwordArts == TRUE then
             local swordartrequest = GetSwordArtsRequest()
+
+            local sp_m = env(345 , HAND_RIGHT)
+            local sp_o = env(345 , HAND_LEFT)
+
+
             if (swordartrequest == SWORDARTS_REQUEST_LEFT_CHARGESHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_CHAINSHOT or swordartrequest == SWORDARTS_REQUEST_LEFT_CHAINSHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_CHARGESHOT or swordartrequest == SWORDARTS_REQUEST_LEFT_STRONGSHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_STRONGSHOT or swordartrequest == SWORDARTS_REQUEST_LEFT_WIDESHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_WIDESHOT) and is_both == FALSE then
                 local arts_hand = c_SwordArtsHand
-                if arts_hand == HAND_RIGHT then
-                    return ATTACK_REQUEST_ARROW_BOTH_RIGHT
+                if arts_hand == HAND_RIGHT then                       
+                    if ((sp_m == 689 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)) then 
+                        return swordartrequest
+                    else return ATTACK_REQUEST_ARROW_BOTH_RIGHT 
+                    end
                 else
-                    return ATTACK_REQUEST_ARROW_BOTH_LEFT
+                    if ((sp_m == 689 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)) then return swordartrequest
+                    else return ATTACK_REQUEST_ARROW_BOTH_LEFT
+                    end
                 end
             else
                 return swordartrequest
@@ -2628,9 +2638,28 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         end
     elseif request == SWORDARTS_REQUEST_RIGHT_CHARGESHOT or request == SWORDARTS_REQUEST_LEFT_CHARGESHOT then
-        is_find_atk = FALSE
-        is_atk_auto_aim = FALSE
-        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+
+        local hand = HAND_RIGHT
+        local style = c_Style
+        if style == HAND_LEFT_BOTH then
+            hand = HAND_LEFT
+        end
+        local sp_m = env(345 , hand)
+    
+        if ((sp_m == 689 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)) then
+
+            SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)    
+
+            if (faultyWA ~= TRUE) then
+                is_find_atk = FALSE
+                is_atk_auto_aim = FALSE
+                ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+            else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
+        else
+            is_find_atk = FALSE
+            is_atk_auto_aim = FALSE
+            ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        end
     elseif request == SWORDARTS_REQUEST_RIGHT_CROSSBOWSTEPIN then
         is_find_atk = FALSE
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
@@ -13904,29 +13933,65 @@ function ChargeShotRight_Upper_Activate()
 end
 
 function ChargeShotRightStart_Upper_onUpdate()
-    act("精密射撃可能か")
-    local blend_type, lower_state = GetHalfBlendInfo()
-    if SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
-        return 
-    else
-        local request = GetAttackRequest(FALSE)
-        if (request == ATTACK_REQUEST_ARROW_FIRE_RIGHT or request == ATTACK_REQUEST_ARROW_FIRE_RIGHT2) and 0 < env(1001) then
-            if IsExistArrow() == TRUE then
-                ExecEventAllBody("W_NoArrow")
-                return 
-            else
-                SetSwordArtsPointInfo(ACTION_ARM_R1, TRUE)
-                ExecEventHalfBlend(Event_ChargeShotRightHoldStart, ALLBODY)
-                return 
-            end
-        elseif env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) <= 0 then
-            ExecEventHalfBlend(Event_ChargeShotRightEnd, ALLBODY)
+
+    local hand = HAND_RIGHT
+    local style = c_Style
+    if style == HAND_LEFT_BOTH then
+        hand = HAND_LEFT
+    end
+    local sp_m = env(345 , hand)
+
+    if sp_m == 689 then
+        local r1 = "W_AttackRightLight1"
+        local r2 = "W_AttackRightHeavy1Start"
+        local b1 = "W_AttackBothLight1"
+        local b2 = "W_AttackBothHeavy1Start"
+
+        if env(1116, 100250) == TRUE then
+            SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
+            r2 = "W_ChargeShotRightFire"
+            b2 = "W_ChargeShotRightFire"
+        end
+    
+        if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 625)
+        end
+
+        if 10 > env(2016) then ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end 
+
+        if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
             return 
-        elseif env("アニメ終了か", 1) == TRUE then
-            ExecEventHalfBlend(Event_ChargeShotRightLoop, ALLBODY)
-            return 
+        elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1Start") return
         else
             return 
+        end
+
+    else
+        act("精密射撃可能か")
+        local blend_type, lower_state = GetHalfBlendInfo()
+        if SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
+            return 
+        else
+            local request = GetAttackRequest(FALSE)
+            if (request == ATTACK_REQUEST_ARROW_FIRE_RIGHT or request == ATTACK_REQUEST_ARROW_FIRE_RIGHT2) and 0 < env(1001) then
+                if IsExistArrow() == TRUE then
+                    ExecEventAllBody("W_NoArrow")
+                    return 
+                else
+                    SetSwordArtsPointInfo(ACTION_ARM_R1, TRUE)
+                    ExecEventHalfBlend(Event_ChargeShotRightHoldStart, ALLBODY)
+                    return 
+                end
+            elseif env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) <= 0 then
+                ExecEventHalfBlend(Event_ChargeShotRightEnd, ALLBODY)
+                return 
+            elseif env("アニメ終了か", 1) == TRUE then
+                ExecEventHalfBlend(Event_ChargeShotRightLoop, ALLBODY)
+                return 
+            else
+                return 
+            end
         end
     end
 end
