@@ -13054,10 +13054,24 @@ end
 
 function StampedeRightStart_onUpdate()
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local r2 = "W_StampedeRightAttackHeavy"
     local b2 = "W_StampedeRightAttackHeavy"
     local r1 = "W_StampedeRightAttackLight"
     local b1 = "W_StampedeRightAttackLight"
+       
+    if ((sp_m == 689 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_AttackRightLight1"
+        b1 = "W_AttackBothLight1"
+
+        if env(1116, 100260) == TRUE then
+            r2 = "W_StampedeRightAttackHeavy"
+            b2 = "W_StampedeRightAttackHeavy"
+        else 
+            r2 = "W_AttackRightHeavy1Start"
+            b2 = "W_AttackBothHeavy1Start"
+        end
+    end
 
     if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
