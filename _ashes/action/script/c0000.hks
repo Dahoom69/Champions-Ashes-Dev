@@ -1225,32 +1225,50 @@ end
 
 function SetEvasionStaminaCost()
     local weight = env(257)
+    local c_StaminaCostRollingBU
+    local c_StaminaCostBackStepBU
     if weight == WEIGHT_LIGHT then
         c_StaminaCostRolling = -16
         c_StaminaCostBackStep = -11
         c_StaminaCostJump = -16
+        c_StaminaCostRollingBU = -16
+        c_StaminaCostBackStepBU = -11
     elseif weight == WEIGHT_NORMAL then
         c_StaminaCostRolling = -16
         c_StaminaCostBackStep = -11
         c_StaminaCostJump = -16
+        c_StaminaCostRollingBU = -16
+        c_StaminaCostBackStepBU = -11
     elseif weight == WEIGHT_HEAVY then
         c_StaminaCostRolling = -30
         c_StaminaCostBackStep = -14
         c_StaminaCostJump = -16
+        c_StaminaCostRollingBU = -30
+        c_StaminaCostBackStepBU = -14
         act(2002, 660)
     elseif weight == WEIGHT_OVERWEIGHT then
         c_StaminaCostRolling = -26
         c_StaminaCostBackStep = -18
         c_StaminaCostJump = -26
+        c_StaminaCostRollingBU = -26
+        c_StaminaCostBackStepBU = -18
     else
         --c_StaminaCostRolling = -16
         c_StaminaCostBackStep = -11
         c_StaminaCostJump = -16
+        c_StaminaCostRollingBU = -16
+        c_StaminaCostBackStepBU = -11
     end
 
     if env(1116, 100292) == TRUE then 
-        c_StaminaCostRolling = c_StaminaCostRolling*4  
-        c_StaminaCostBackStep = c_StaminaCostBackStep*4  
+        c_StaminaCostRolling = -64
+        c_StaminaCostBackStep = -44
+    elseif env(1116, 100294) == TRUE then 
+        c_StaminaCostRolling = -48
+        c_StaminaCostBackStep = -33
+    else 
+        c_StaminaCostRolling = c_StaminaCostRollingBU
+        c_StaminaCostBackStep = c_StaminaCostBackStepBU
     end
     return 
 end
