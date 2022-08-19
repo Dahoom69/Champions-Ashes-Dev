@@ -14119,14 +14119,17 @@ function ChargeShotRightFire_onUpdate()
     end
 end
 
-function CrossbowStepInRightStart_Upper_onUpdate()
+function CrossbowStepInRightStart_Upper_onUpdate() -- 038200
     act("精密射撃可能か")
     if SwordArtsCrossbowStepInFunction() == TRUE then
         return 
     end
     local request = GetAttackRequest(FALSE)
     if 0 < env(1001) then
-        if request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then
+        if env(1116, 100285) == TRUE and env(1108, ACTION_ARM_L2) <= 0 then
+        ExecEventAllBody("W_EndureRightHeavy")
+        return 
+        elseif request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then
             if IsExistBolt(HAND_RIGHT) == TRUE then
                 ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY)
                 return 
