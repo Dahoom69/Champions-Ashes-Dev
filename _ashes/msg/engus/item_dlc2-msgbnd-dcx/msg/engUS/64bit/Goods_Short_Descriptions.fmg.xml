@@ -631,7 +631,7 @@
 <text id="2416000">%null%</text>
 <text id="2420000">Create poison mist</text>
 <text id="2421000">Create intense poison mist</text>
-<text id="2422000">Emit acid which corrodes weapons and armor</text>
+<text id="2422000">Emit an acid orb that weakens armors</text>
 <text id="2430000">Boost absorption/resistances, but increase weight</text>
 <text id="2431000">Intense sweating increases fire damage absorption</text>
 <text id="2435000">Reinforce right weapon with flame</text>
@@ -661,7 +661,7 @@
 <text id="3504000">Gradually restore HP</text>
 <text id="3505000">Gradually restore high HP for self and broad area</text>
 <text id="3507000">Gradually restore high HP</text>
-<text id="3508000">Cure ailments for self and vicinity</text>
+<text id="3508000">Boost all resistance, cure ailments for self and vicinity</text>
 <text id="3513000">Fire holy spear projectile</text>
 <text id="3514000">Fire a quick, sharp projectile</text>
 <text id="3515000">Release cascading trail of divine spears</text>
