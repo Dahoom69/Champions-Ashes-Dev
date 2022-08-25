@@ -3697,7 +3697,7 @@ Attacks also damage its wielder.
 
 The sword is not unlike a thing misshapen, granted life, but never welcome in this world. In other words, chaos itself.
 
-Ironically, despite harming the user, the sword can chain additional strikes faster than others through the use of its Skill. 
+Ironically, despite harming the user, the sword can chain additional strikes faster than others through the use of it's Skill. 
 
 Skill: Hold
 Assume a holding stance to rapidly execute a lunging slash with normal attack, or a deflecting parry with strong attack.</text>
@@ -9741,8 +9741,8 @@ It has a sharp edge that contains a hard alloy and can rip through anything like
 
 Skill: Dimensional Strike
 Assume an invisible form and warp towards the target, striking down in a smash of sacred light.</text>
-<text id="10120000">Rare halberd supposedly made from part of an immortal dragon. Even if its form is yet flawed, the Ancient Wyvern carries the power of a genuine dragon. 
- 
+<text id="10120000">Rare halberd supposedly made from part of an immortal dragon.
+
 The scarcity of the material is matched by its strength, and it will not falter when exchanging blows with any sort of weapon.
 The halberd's rarity has precipitated the giving and taking of countless lives.
 
@@ -18479,8 +18479,6 @@ Reverse the blade and plunge into oneself. Imbibes the blade with deadlier bleed
 </text>
 <text id="30090000">A fistfighting style used by Blacksmith Andre of Astora.
 
-Andre is but a humble blacksmith, yet employs quite impressive technique for someone who is no warrior. Boasts not merely skillful movement, but also unthinkable strength within each punch, rivaling any well-forged weapon. Perhaps it is owing to this extraordinary power that the blacksmith could craft weapons of great potential.
-
 When two-handed, both hands use this technique.
 
 Skill: Cross Counter
@@ -18669,10 +18667,9 @@ The name Kusabimaru beseeches, "A shinobi's role is to kill, but even a shinobi 
 
 Skill: Whirlwind Slash
 A spinning attack that can hit several enemies at once. The sharp cut combined with the force of the spin can strike multiple foes, and deal damage even when guarded.</text>
-<text id="30230000">Greatsword and dagger of the Lord of Cinder known collectively as the Abyss Watchers, enveloped by ember. 
-The full Farron fighting style can be replicated by two-handing this weapon.
+<text id="30230000">Greatsword of the Abyss Watchers which is atypically paired with an unusual dagger.
 
-The fight against the Abyss is unending, the Watchers know this better than anyone, thus they vow themselves lord, to link the fire, to banish dark and the Abyss which stem from within. This raging fire is the mark of their vow, their lordship as well as the one and only reward their sacrifice has ever attained.
+The dagger is utilized as a wedge in the left hand while the greatsword is held in the right, a unique technique that was synonymous with the Undead Legion. Confounds foes in the manner of wolves hunting prey.
 
 Skill: Legion Stomp
 Use one's weight to lunge forward with a low stance and increased poise, and follow with a strong attack for an advancing thrust.</text>
@@ -19456,7 +19453,7 @@ Gratia was a simple woman, with simple tastes, such as knocking the lights out o
 
 A type of cannon that fires with a curved trajectory and creates an explosion of lightning upon impact, drawing upon the wielder’s Faith. 
 
-Originally designed for use against dragons, but its bombastic design lacked the piercing precision found in the existing dragonslaying weapons. 
+Originally designed for use against dragons, but its bombastic design lacked the piercing precision found in the existing Silver Knight weapons. 
 
 As such, it was quietly ushered into permanent storage as a failed experiment in dragon hunting weaponry. 
 
@@ -19466,7 +19463,7 @@ Equipping this in the left hand allows one to perform the Skill of the right han
 
 A type of cannon that fires with a curved trajectory and creates an explosion of lightning upon impact, drawing upon the wielder’s Faith. 
 
-Originally designed for use against dragons, but its bombastic design lacked the piercing precision found in the existing dragonslaying weapons. 
+Originally designed for use against dragons, but its bombastic design lacked the piercing precision found in the existing Silver Knight weapons. 
 
 As such, it was quietly ushered into permanent storage as a failed experiment in dragon hunting weaponry. 
 

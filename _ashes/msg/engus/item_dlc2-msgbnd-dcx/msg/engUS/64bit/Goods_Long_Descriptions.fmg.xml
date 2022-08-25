@@ -1349,7 +1349,8 @@ One of the twisted souls, steeped in strength.
 Use to acquire numerous souls, or transpose
 to extract its true strength.
 
-The Ancient Wyvern's origin is long forgotten, despite not quite being a true everlasting dragon, its form demonstrates the pinnacle of the path of the dragon that many strive to achieve. Although the existence of this very soul proves the shortcoming of this ancient being.</text>
+The Ancient Wyvern's origin is long forgotten,
+despite not quite being a dragon, it still found worship at Archdragon Peak.</text>
 <text id="753">Soul of a suffering knight.
 One of the twisted souls, steeped in strength.
 
@@ -2130,7 +2131,7 @@ Only sorcerer-swordsmen with special duties
 are permitted the use of this spell. The azure blade
 is said to cut down heavily armored knights with ease.</text>
 <text id="1312000">Further sharpens Magic Weapon via crystallization.
-Reinforces right weapon with crystal, wear down magic protection with each attack.
+Reinforces right weapon with crystal.
 
 After much experimentation, Logan found the
 crystal medium facilitated a stronger bond
@@ -2212,11 +2213,11 @@ Seath's research seemed to strike a chord with
 old Big Hat who, in his mad, disrobed state,
 made divine works such as this, his own.
 Oceiros was no doubt edified by this.</text>
-<text id="1371000">Sorcery developed from the exceptional research of gravitational forces.
+<text id="1371000">One of the glintstone sorceries that manipulates gravitational forces. 
 
 Pulls a clump of rocks from the earth and sends them flying.
 
-Most elementary form of gravity sorcery, tapping upon the residual force of soulless matters and control their movement. The first step toward the great understanding of the might resides within primordial beings.</text>
+A gravitational technique studied by the young Radahn. His master was an Alabaster Lord with skin of stone.</text>
 <text id="1372000">Sorcery which improves upon Farron Dart.
 Fires a cascade of soul darts.
 
@@ -2253,16 +2254,16 @@ Fires a horizontal arc of magic that spreads outward.
 Granted to sorcererers who depart from the academy to embark on
 journeys, in order to fend off large groups of would-be adversaries.
 Fools often roam in packs.</text>
-<text id="1472000">Sorcery developed from the exceptional research of gravitational forces.
+<text id="1472000">One of the glintstone sorceries that manipulates gravitational forces.
 
 Fires a projectile of condensed gravitational force. Those struck by it will be pulled toward the caster.
 
-If strength truly comes from souls, then what of this extraordinary force which converges the lands together?</text>
-<text id="1472100">Sorcery which improves upon Gravity Well, result of advanced gravitational research.
+A gravitational technique studied by the young Radahn. His master was an Alabaster Lord with skin of stone.</text>
+<text id="1472100">One of the glintstone sorceries that manipulates gravitational forces.
 
 Fires numerous gravitational projectiles. Any foes struck will be pulled toward the caster.
 
-As the scholar witnesses all lands collapse into each other at the world’s end, there comes the moment of revelation. The will which exists within all things, yearning for the eventual union of all, calls upon the return to their purest primeval form.</text>
+A gravitational technique mastered by the young Radahn. "I thank you for your tutelage, for now I can challenge the stars."</text>
 
 <text id="1603000">A forbidden dark sorcery.
 Casts a dark manifestation of humanity.
@@ -2364,7 +2365,7 @@ Driven from the Great Swamp, they say that at the
 end of his journey, Eingyi happened upon a
 virulent poison and a young lady.</text>
 <text id="2422000">Pyromancy of Carthus of the Sands.
-Emits a damaging acid spit which weaken armors and creates a brief pool of acid on impact.
+Emits an acid which corrodes weapons and armor.
 
 Carthus' swordsmen attached great value to victory,
 and would not shun the use of such pyromancies.
@@ -2486,11 +2487,11 @@ Hurls an exploding fireball.
 A rare technique that undergoes change after
 leaving the caster's hand, making this a spell
 renowned for its difficulty.</text>
-<text id="2625000">A forbidden ritual practiced by grave wardens of High Lord Wolnir.
+<text id="2625000">Superior black flame incantation of the Godskin Apostles. 
 
-Summons a circle of black flame pillars around the caster, damages and drains HP of anyone comes into contact.
+Summons a circle of black flame pillars around the caster.
 
-After Wolnir’s fall to the Abyss, the two most loyal pyromancers gave their lives to become their lord’s Grave Wardens, and soon discovered the shadowless Black Flame. The secret rite reveals its life draining nature, a power to bring vengeance upon the gods themselves.</text>
+The Gloam-Eyed Queen led the apostles. It is said that she was an Empyrean chosen by the Fingers.</text>
 <text id="2630000">Art of a stray demon of stifled flame.
 
 Spews a boulder from one's mouth.
@@ -2564,7 +2565,7 @@ The Heavenly Daughter is said to be
 the Queen's child.</text>
 <text id="3508000">Miracle taught by Morne, the Archbishop's apostle.
 
-Heals a small amount of HP, temporarily increases all status resistance, cures bleeding, toxic, poison and frost for self and those in the vicinity.
+Cures bleeding, poison and frost for self and those in the vicinity.
 
 Caressing Tears is a tale of the many deaths
 surrounding the goddess Caitha, of whom
@@ -2706,7 +2707,7 @@ Tales of dragonslayers are now a rare thing, told
 only in fragments and whispers in remote regions.</text>
 <text id="3590500">Ancient miracle evoked from the memory of the Nameless King, returned to its original radiant form.
  
-Boosts right weapon with rays of sunlight, wear down lightning protection with each attack.
+Boost right weapon with rays of sunlight, wear down lightning protection with each attack.
  
 In the age of fire, sunlight bathed the lands with its warm presence. Any warmth from this miracle is now irrevocably clouded with grief and remorse.
 
@@ -2770,7 +2771,7 @@ before continuing to erode everything in the vicinity.</text>
 <text id="3760000">Miracle taught to Lothric Knights.
 
 Blesses right weapon, increasing attack power,
-as well as restoring HP from consecutive attacks.
+as well as gradually restoring HP.
 
 The Knight is one of the Three Pillars of Lothric,
 said to have strengthened ties with the High Priestess
