@@ -19544,85 +19544,185 @@ Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="42100200">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Impaling Thrust
+Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
 <text id="42100300">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Storm Stomp
+Stomp hard on the ground to summon a momentary storm.</text>
 <text id="42100400">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Flaming Strike
+Send flame in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in flame.</text>
 <text id="42100500">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Black Flame Tornado
+Spin twinblade overhead and then thrust it into the ground to summon a raging vortex of sapping black flames. Hold to keep the whirlwind spinning.</text>
 <text id="42100600">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Thunderbolt
+Raise armament overhead to call down lightning. Can be fired in rapid succession.</text>
 <text id="42100700">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Sacred Order
+Raise the sword aloft to boost attack and damage absorption for self and allies in vicinity.</text>
 <text id="42100800">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Glintstone Pebble
+Utilizes a technique of a distant land of the same name, though using Farron Dart. Follow up with a heavy attack to perform a lunging thrust.</text>
 <text id="42100900">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Chilling Mist
+Send frost in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in ice.</text>
 <text id="42101000">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Poison Moth Flight
+Send poisonous mist in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in poison.</text>
 <text id="42101100">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
-Skill: Spin Slash
-Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+Skill: Bloody Mist
+Send volatile blood in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in blood.</text>
 <text id="42101200">A sword with blades on each end of the hilt.
 Made from a rare, foreign steel and difficult to use, it demands high dexterity.
 
 Can be wielded with one hand, though its true strength is found with two-handed spinning attacks.
 
+Skill: Lifesteal Fist
+Embrace the victim and steal their HP. Can only be used against humans.</text>
+<text id="42110000">A unique twinblade wielded by the Grave Wardens, characterized by its abnormal design.
+
+After Wolnir's fall to the Abyss, the two most loyal pyromancers gave their lives to become their lord's Grave Wardens, and soon discovered the shadowless Black Flame.
+
+The gods took notice and saw the dark of humanity within the flame.
+Remembering the primordial Dark, they quickly set waste to the remains of the Carthus Empire, reducing all to sand and bone.
+
+Skill: Black Flame Whirlwind
+Spin and engulf armament with black flame. Drains HP for a short time.</text>
+<text id="42120000">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Impaling Thrust
+Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
+<text id="42120100">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
+<text id="42120200">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
 Skill: Spin Slash
 Slash foes as your body spins. This momentum can connect into a final heavy attack.</text>
+<text id="42120300">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Charge
+Hold twinblade at waist and charge at foe. Use strong attack while charging to extend the length of the charge.</text>
+<text id="42120400">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Flaming Strike
+Send flame in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in flame.</text>
+<text id="42120500">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Black Flame Tornado
+Spin twinblade overhead and then thrust it into the ground to summon a raging vortex of sapping black flames. Hold to keep the whirlwind spinning.</text>
+<text id="42120600">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Thunderbolt
+Raise armament overhead to call down lightning. Can be fired in rapid succession.</text>
+<text id="42120700">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Sacred Order
+Raise the sword aloft to boost attack and damage absorption for self and allies in vicinity.</text>
+<text id="42120800">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Glintstone Pebble
+Utilizes a technique of a distant land of the same name, though using Farron Dart. Follow up with a heavy attack to perform a lunging thrust.</text>
+<text id="42120900">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Hoarfrost Stomp
+Stomp hard on the ground to summon pillars of ice.</text>
+<text id="42121000">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Poison Moth Flight
+Send poisonous mist in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in poison.</text>
+<text id="42121100">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Bloody Mist
+Send volatile blood in a forward arc. Follow up with a strong attack to do a horizontal swipe, coating it in blood.</text>
+<text id="42121200">Twinblade forged by welding two broadswords together.
+Given as a prize for a great battle in a futile war.
+
+The cup-hilted blades are reminiscent of Mirrah and their chivalry, and the exquisite craftsmanship made it a good trophy for the warriors it fell to in conquest. 
+
+Skill: Lifesteal Fist
+Embrace the victim and steal their HP. Can only be used against humans.</text>
 <text id="42130000">A strange double-sided naginata that ignites the blood it draws.
 
 Said to be used by the oracle of the Profaned Capital, a relative of the capital's malformed residents.
@@ -19631,6 +19731,20 @@ The oracle's mastery of the twinblade was such that her onslaught was likened to
 
 Skill: Bloodblade Dance
 Leap at foe to perform a flurry of tornado-like attacks. Follow up with a heavy attack to perform an attack that ends in an evasive maneuver.</text>
+<text id="42140000">Gargoyle's Twinblade</text>
+<text id="42140100">Heavy Gargoyle's Twinblade</text>
+<text id="42140200">Keen Gargoyle's Twinblade</text>
+<text id="42140300">Quality Gargoyle's Twinblade</text>
+<text id="42140400">Fire Gargoyle's Twinblade</text>
+<text id="42140500">Flame Gargoyle's Twinblade</text>
+<text id="42140600">Lightning Gargoyle's Twinblade</text>
+<text id="42140700">Sacred Gargoyle's Twinblade</text>
+<text id="42140800">Magic Gargoyle's Twinblade</text>
+<text id="42140900">Cold Gargoyle's Twinblade</text>
+<text id="42141000">Poison Gargoyle's Twinblade</text>
+<text id="42141100">Blood Gargoyle's Twinblade</text>
+<text id="42141200">Occult Gargoyle's Twinblade</text>
+<text id="42150000">Gargoyle's Black Blades</text>
 <text id="45510000">A blunderbuss created by the craftsman Edmond, later altered by one of his disciples.
 
 The crude armament launches flathead pellets that are able to counter attacks easily.
