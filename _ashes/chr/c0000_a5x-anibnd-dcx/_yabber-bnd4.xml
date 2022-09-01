@@ -1606,6 +1606,18 @@
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_138700.hkx</path>
     </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1689036500</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a689\a689_036500.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1689050000</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a689\a689_050000.hkx</path>
+    </file>
 	
 	<file>
       <flags>0x40</flags>
