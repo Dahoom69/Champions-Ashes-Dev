@@ -10712,6 +10712,7 @@ function AttackBothHeavyWepBroken2Start_onUpdate() -- r21 034345 "W_AttackBothHe
     local l1 = "W_AttackBothLeft1"
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
 
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or 
     sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
@@ -10759,7 +10760,8 @@ function AttackBothHeavyWepBroken2Start_onUpdate() -- r21 034345 "W_AttackBothHe
         return 
     elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100281) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1End") return
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
-        if sp_m == 685 or sp_m == 664 or (sp_m == 609 and c_Style == HAND_RIGHT_BOTH) then ExecEventAllBody("W_AttackRightHeavy1End")
+        if sp_m == 664 or (sp_m == 609 and c_Style == HAND_RIGHT_BOTH) then ExecEventAllBody("W_AttackRightHeavy1End")
+        elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackBothHeavySpecial1End")
         else  ExecEventAllBody("W_AttackBothHeavy1End") end
         return 
     elseif env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100281) == TRUE then
