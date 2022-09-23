@@ -4,7 +4,7 @@
 // @game    DarkSouls3
 // @string    
 // @linked    []
-// @version    3.2.1
+// @version    3.3.2
 // ==/EMEVD==
 
 Event(20005110, Restart, function(X0_4, X4_4) {
@@ -4402,4 +4402,34 @@ Event(20006040, Default, function(X0_4, X4_4, X8_4) {
     EndUnconditionally(EventEndType.Restart);
 });
 
-
+//<event flag> <entityId>
+Event(20006100, Default, function(X0_4, X4_4) {
+    SetNetworkSyncState(Disabled);
+    EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, OFF, TargetEventFlagType.EventFlag, 50004030); //Check for Research Note
+    EndIfEventFlag(EventEndType.End, ON, TargetEventFlagType.EventFlag, X0_4);
+    CreateObjectfollowingSFX(X4_4, 90, 525570);
+    IfActionButtonInArea(MAIN, 4010, X4_4);
+    ForceAnimationPlayback(10000, 69030, false, false, false, 0, 1);
+    WaitFixedTimeSeconds(0.6);
+    DeleteObjectfollowingSFX(X4_4, true);
+   // Check if award last gravity note
+    SkipIfEventFlag(5, OFF, TargetEventFlagType.EventFlag, 53100920); //Check for Rock Sling
+    SkipIfEventFlag(4, OFF, TargetEventFlagType.EventFlag, 53900780); //Check for Gravity Well
+    SkipIfEventFlag(3, ON, TargetEventFlagType.EventFlag, 55000630); //Check for Collapsing Star
+    AwardItemLot(5000630); //Award Collapsing Star
+    AwardItemLot(4050); //Award Gravity Research Journal
+    RemoveItemFromPlayer(ItemType.Goods, 2602, 1); ////Remove Gravity Research Notes
+    // Check if award second gravity note
+    SkipIfEventFlag(4, OFF, TargetEventFlagType.EventFlag, 53100920); //Check for Rock Sling
+    SkipIfEventFlag(3, ON, TargetEventFlagType.EventFlag, 53900780); //Check for Gravity Well
+    AwardItemLot(3900780); //Award Gravity Well
+    AwardItemLot(4050); //Award Gravity Research Notes
+    RemoveItemFromPlayer(ItemType.Goods, 2601, 1); //Remove Gravity Research Note
+    // Check if award first gravity note
+    SkipIfEventFlag(3, ON, TargetEventFlagType.EventFlag, 53100920); //Check for Rock Sling
+    AwardItemLot(3100920); //Award Rock Sling
+    AwardItemLot(4040); //Award Gravity Research Note
+    RemoveItemFromPlayer(ItemType.Goods, 2600, 1); //Remove Research Note
+    SetEventFlag(X0_4, ON);
+});
