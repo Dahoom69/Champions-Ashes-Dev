@@ -4409,16 +4409,22 @@ Event(20006100, Default, function(X0_4, X4_4) {
     CreateObjectfollowingSFX(X4_4, 90, 525570);
     IfActionButtonInArea(MAIN, 4010, X4_4);
     ForceAnimationPlayback(10000, 90280, false, false, false, 0, 1);
-    WaitFixedTimeSeconds(2.1)
-    ForceAnimationPlayback(10000, 90960, true, false, false, 0, 1);  
-    SkipIfEventFlag(5, ON, TargetEventFlagType.EventFlag, 50004030); //Check for Research Note
-    WaitFixedTimeSeconds(0.1)
-    DisplayGenericDialog(10010145, PromptType.OKCANCEL, NumberofOptions.NoButtons, X4_4, 3)
-    WaitFixedTimeSeconds(1.8)
+    SetSpEffect(10000, 1060); 
+    WaitFixedTimeSeconds(2.3);
+    ForceAnimationPlayback(10000, 90960, true, false, false, 0, 1);
+    SkipIfEventFlag(7, ON, TargetEventFlagType.EventFlag, 50004030); //Check for Research Note
+    WaitFixedTimeSeconds(0.1);
+    DisplayGenericDialog(10010145, PromptType.OKCANCEL, NumberofOptions.OneButton, X4_4, 3)
+    WaitFixedTimeSeconds(1.8);
     ForceAnimationPlayback(10000, 91012, false, false, false, 0, 1);  
+    WaitFixedTimeSeconds(0.1);
+    ClearSpEffect(10000, 1060);
     EndUnconditionally(EventEndType.Restart);
     EndIfEventFlag(EventEndType.End, ON, TargetEventFlagType.EventFlag, X0_4);
-    WaitFixedTimeSeconds(0.6)
+    WaitFixedTimeSeconds(1.8);
+    ForceAnimationPlayback(10000, 91012, false, false, false, 0, 1);  
+    WaitFixedTimeSeconds(0.1);
+    ClearSpEffect(10000, 1060);
     DeleteObjectfollowingSFX(X4_4, true);
 
 // Check if award first gravity note
