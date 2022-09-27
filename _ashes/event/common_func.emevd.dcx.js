@@ -4406,6 +4406,7 @@ Event(20006040, Default, function(X0_4, X4_4, X8_4) {
 Event(20006100, Default, function(X0_4, X4_4) {
     SetNetworkSyncState(Disabled);
     EndIfPlayerIsNotInOwnWorldExcludesArena(EventEndType.End, true);
+    EndIfEventFlag(EventEndType.End, ON, TargetEventFlagType.EventFlag, X0_4);
     CreateObjectfollowingSFX(X4_4, 90, 525570);
     IfActionButtonInArea(MAIN, 4010, X4_4);
     ForceAnimationPlayback(10000, 90280, false, false, false, 0, 1);
@@ -4420,7 +4421,6 @@ Event(20006100, Default, function(X0_4, X4_4) {
     WaitFixedTimeSeconds(0.1);
     ClearSpEffect(10000, 1060);
     EndUnconditionally(EventEndType.Restart);
-    EndIfEventFlag(EventEndType.End, ON, TargetEventFlagType.EventFlag, X0_4);
     WaitFixedTimeSeconds(1.8);
     ForceAnimationPlayback(10000, 91012, false, false, false, 0, 1);  
     WaitFixedTimeSeconds(0.1);
