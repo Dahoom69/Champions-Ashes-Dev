@@ -608,8 +608,17 @@ Can be used repeatedly.
 
 Bonfires are linked to one another irreversibly,
 retaining their affinity long after their purpose
-is exhausted.
-</text>
+is exhausted.</text>
+<text id="352">Stone imbued with the power of the everlasting dragons, polluted by the Londor warlock Magnus.
+
+Gain the head of an abyssal dragon and emit breath alongside a draconic mirage. The transformation is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith.
+
+Using his knowledge as a devout in the path of the dragon, he preached of power beyond the Gods. Attempting to combine the essence of the human spirit and draconic energy, he doomed his own patients to witness the devastation of the city they held dear.</text>
+<text id="353">Stone imbued with the power of the everlasting dragons, polluted by the Londor warlock Magnus.
+
+Gain the torso of an abyssal dragon and roar alongside a draconic mirage. The transformation is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith.
+
+In the Ringed City, there was a foreign sorcerer who looked to mass produce the power of the dragons. With the power taken from the collective test subjects, the stone ruptured, birthing the tainted condition the walled-off burg.</text>
 <text id="366">A leaf signifying a duty fulfilled by the Watchdogs of Farron, who stand beside the old wolf to ensure the serenity of those at rest. Depicts a swordgrass leaf stained with dried blood.
 
 Long ago, the swordgrass leaf quietly identified members of the Undead Legion. In the rotted forest rest the spirits of warriors past, their acceptance of and gratitude toward their guardians is expressed eloquently by the humble leaf.</text>
@@ -753,20 +762,16 @@ Attacks with block frames can not perform perfect blocks.</text>
 Powerstances solely use the properties and AR of the weapon in the right hand. In addition, certain weapons may not be used to powerstance with the same weapon class.
 
 Current inclusions are axes, halberds, thrusting swords, and ultra greatswords.</text>
-<text id="397">Stone imbued with the power of the everlasting dragons, although tainted by darkness.
+<text id="397">Stone imbued with the power of the everlasting dragons, polluted by disciples of a warlock.
 
-Gain the head of a dragon and emit tainted breath. The transformation is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith. 
+Gain the head of a tainted dragon and emit dragon breath, a transformation that is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith. 
 
-Once the likeness of a true everlasting dragon, whose existence served as the foundation of the Path of the Dragon. Through many ages, countless undeads seek this precious treasure to free themselves from their accursed fate, yet their imitation tragically tainted the stone with the corrosive dark of humanity. 
+In Lothric Castle, there was a small group of abyssal dragon cultists who gave up their humanity to better attune themselves to their greater draconic forms. Their research and consistent sacrifice corrupted the royal garden into a realm consumed by the impurity of man.</text>
+<text id="398">Stone imbued with the power of the everlasting dragons, polluted by disciples of the Londor warlock.
 
-In the end, mankind cannot escape their true nature.</text>
-<text id="398">Stone imbued with the power of the everlasting dragons, although tainted by darkness.
+Gain the torso of an tainted dragon and a dragon's roar, a transformation that is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith. 
 
-Gain the torso of a dragon and a dragon's roar. The transformation is irreversible until death. In contrast to other transformations, this form favors intelligence more than faith. 
-
-Once the likeness of a true everlasting dragon, whose existence served as the foundation of the Path of the Dragon. Through many ages, countless undeads seek this precious treasure to free themselves from their accursed fate, yet their imitation tragically tainted the stone with the corrosive dark of humanity. 
-
-In the end, mankind cannot escape their true nature.</text>
+The greater sacrifice and research of the warlock's disciples led them into an unlit shrine, where they would then grow beyond the corruption of man. With roots sprouting from their feet, into trees they grew, thus ending their search for inner peace.</text>
 <text id="399">%null%</text>
 <text id="400">The fading soul of a corpse.
 
