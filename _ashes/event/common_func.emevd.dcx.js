@@ -4445,7 +4445,7 @@ Event(20006100, Default, function(X0_4, X4_4) {
 
 // Check if award last gravity note
     SkipIfEventFlag(5, ON, TargetEventFlagType.EventFlag, 55000630); //Check for Collapsing Star
-    AwardItemLot(55000630); //Award Collapsing Star
+    AwardItemLot(5000630); //Award Collapsing Star
     AwardItemLot(4060); //Award Gravity Research Journal
     RemoveItemFromPlayer(ItemType.Goods, 2602, 1); ////Remove Gravity Research Notes
     SetEventFlag(X0_4, ON);
