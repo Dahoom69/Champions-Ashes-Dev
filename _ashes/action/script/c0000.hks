@@ -12917,7 +12917,12 @@ function StrongBashRight_onUpdate()
     end
 end
 
-function ParryRightStart_onUpdate()
+function ParryRightStart_onUpdate() -- 036900
+    if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 628)
+    end
+
     if SwordArtsParryCommonFunction() == TRUE then
         return 
     else
