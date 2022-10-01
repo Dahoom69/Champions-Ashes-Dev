@@ -9134,7 +9134,7 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14 030350
     if (sp_m == 646 or sp_m == 610 or sp_m == 649) then r1 = "W_AttackRightLight2" end
     if (sp_m == 264 or sp_m == 164 or sp_m == 614) then r1 = "W_AttackRightLight3" end
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
-    if (sp_m == 672 or sp_m == 689 or sp_m == 690) then r1 = "W_AttackRightHeavySpecial1End" end
+    if (sp_m == 672) then r1 = "W_AttackRightHeavySpecial1End" end
 
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140 or sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
     if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140 or sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
