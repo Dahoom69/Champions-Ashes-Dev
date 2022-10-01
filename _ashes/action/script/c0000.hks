@@ -3026,8 +3026,14 @@ function ExecSwordArtsStance(blend_type)
             ExecEventHalfBlend(Event_DrawStanceRightStart, blend_type)
         end
     elseif arts_id == SWORDARTS_STORMSTANCE then
-        if IsNodeActive("StormStanceEnd_Upper_CMSG", "StormStanceFullEnd_Upper_CMSG", "StormStanceLight_CMSG", "StormStanceFullLight_CMSG", "StormStanceHeavy_CMSG", "StormStanceFullHeavy_CMSG") ~= TRUE and IsNodeActive("StormStanceChange_Upper_CMSG") == FALSE then
-            SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, FALSE)
+        local sp_m = env(345 , HAND_RIGHT)
+        local sp_o = env(345 , HAND_LEFT)
+
+        if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then
+        else
+            if IsNodeActive("StormStanceEnd_Upper_CMSG", "StormStanceFullEnd_Upper_CMSG", "StormStanceLight_CMSG", "StormStanceFullLight_CMSG", "StormStanceHeavy_CMSG", "StormStanceFullHeavy_CMSG") ~= TRUE and IsNodeActive("StormStanceChange_Upper_CMSG") == FALSE then
+                SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, FALSE)
+            end
         end
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
             blend_type = UPPER
@@ -3041,9 +3047,6 @@ function ExecSwordArtsStance(blend_type)
             stormstancefull = TRUE
         end
         if stormstancefull == FALSE then
-            local sp_m = env(345 , HAND_RIGHT)
-            local sp_o = env(345 , HAND_LEFT)
-        
             if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then ExecEventHalfBlend(Event_StormStanceStart, ALLBODY)
             else ExecEventHalfBlend(Event_StormStanceStart, blend_type) end
         else
@@ -14612,7 +14615,7 @@ function StormStanceRight_Activate()
     return 
 end
 
-function StormStanceStart_Upper_onUpdate()
+function StormStanceStart_Upper_onUpdate() -- 038800
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
