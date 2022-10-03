@@ -4451,3 +4451,11 @@ Event(20006100, Default, function(X0_4, X4_4) {
     SetEventFlag(X0_4, ON);
     EndUnconditionally(EventEndType.End);
 });
+
+// <entityID> <Animation ID> - Force a npc in an animation
+Event(20006110, Restart, function(X0_4, X4_4) {
+    ChangeCharacterEnableState(X0_4, Enabled);
+    SetCharacterAnimationState(X0_4, Disabled);
+    ForceAnimationPlayback(X0_4, X4_4, true, false, true, 0, 1);
+});
+
