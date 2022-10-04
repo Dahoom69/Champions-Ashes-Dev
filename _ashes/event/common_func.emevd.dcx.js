@@ -4456,6 +4456,6 @@ Event(20006100, Default, function(X0_4, X4_4) {
 Event(20006110, Restart, function(X0_4, X4_4) {
     ChangeCharacterEnableState(X0_4, Enabled);
     SetCharacterAnimationState(X0_4, Disabled);
-    ForceAnimationPlayback(X0_4, X4_4, true, false, true, 0, 1);
+    SetCharacterTeamType(X0_4, TeamType.Object);
+    ForceAnimationPlayback(X0_4, X4_4, false, false, true, 0, 1);
 });
-
