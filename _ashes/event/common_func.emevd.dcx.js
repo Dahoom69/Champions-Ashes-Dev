@@ -4459,3 +4459,15 @@ Event(20006110, Restart, function(X0_4, X4_4) {
     SetCharacterTeamType(X0_4, TeamType.Object);
     ForceAnimationPlayback(X0_4, X4_4, false, false, true, 0, 1);
 });
+
+//PvP safezone <EntityId>
+Event(20006120, Restart, function(X0_4) {
+    EndIfNumberOfClientsOfType(0, ClientType.Coop, ComparisonType.Greater, 0);
+    IfInoutsideArea(MAIN, InsideOutsideState.Inside, 10000, X0_4, 1); // If player in zone
+    SetSpEffect(10000, 99900);
+    WaitFixedTimeSeconds(0.5);
+    IfInoutsideArea(AND_01, InsideOutsideState.Inside, 10000, X0_4, 1); 
+    IfConditionGroup(MAIN, FAIL, AND_01);                            // If player not in zone
+    ClearSpEffect(10000, 99900);
+    EndUnconditionally(EventEndType.Restart);
+});
