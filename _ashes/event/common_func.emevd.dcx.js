@@ -4094,20 +4094,16 @@ $Event(20006110, Restart, function(X0_4, X4_4) {
 //PvP safezone <EntityId>
 $Event(20006120, Restart, function(X0_4) {
     WaitFor(InArea(10000, X0_4)); // If player in zone
-    SkipIfNumberOfClientsOfType(1, ClientType.Coop, ComparisonType.Equal, 0)
-    RestartEvent();    
-    SkipIfNumberOfClientsOfType(1, ClientType.Invader, ComparisonType.NotEqual, 0)
-    RestartEvent();
     SetCharacterTeamType(10000, TeamType.Object);
     SetSpEffect(10000, 3040);
     WaitFixedTimeSeconds(0.5);
     WaitFor(!InArea(10000, X0_4)); // If player not in zone
     ClearSpEffect(10000, 3040);
     
-    if (PlayerIsNotInOwnWorld){
-    SetCharacterTeamType(10000, TeamType.BlackPhantom);}
+    if (!PlayerIsNotInOwnWorld){
+    SetCharacterTeamType(10000, 16);}
     
-    else {
+    if (PlayerIsNotInOwnWorld){
     SetCharacterTeamType(10000, TeamType.Human);}
     
     RestartEvent();
