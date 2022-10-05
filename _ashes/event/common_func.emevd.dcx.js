@@ -4098,7 +4098,7 @@ $Event(20006120, Restart, function(X0_4) {
     RestartEvent();    
     SkipIfNumberOfClientsOfType(1, ClientType.Invader, ComparisonType.NotEqual, 0)
     RestartEvent();
-    SetCharacterTeamType(10000, TeamType.FriendlyNPC);
+    SetCharacterTeamType(10000, TeamType.Object);
     SetSpEffect(10000, 3040);
     WaitFixedTimeSeconds(0.5);
     WaitFor(!InArea(10000, X0_4)); // If player not in zone
