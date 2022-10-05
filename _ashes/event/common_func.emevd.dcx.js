@@ -4096,9 +4096,7 @@ $Event(20006120, Restart, function(X0_4) {
     
 
     WaitFor(InArea(10000, X0_4)); // If player in zone
-    if (NumberOfClientsOfType(ClientType.Coop) != 0) {
-        RestartEvent();
-    }
+
     
     SetCharacterTeamType(10000, TeamType.Object);
     SetSpEffect(10000, 3040);
