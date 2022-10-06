@@ -4091,7 +4091,7 @@ $Event(20006110, Restart, function(X0_4, X4_4) {
     ForceAnimationPlayback(X0_4, X4_4, false, false, true, 0, 1);
 });
 
-//PvP safezone <EntityId>
+//PvP safezone <EntityId> NOT WORKING
 $Event(20006120, Restart, function(X0_4) {
     
 
