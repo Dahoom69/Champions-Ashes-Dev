@@ -4083,11 +4083,14 @@ $Event(20006100, Default, function(X0_4, X4_4) {
     }
 });
 
-// <entityID> <Animation ID> - Force a npc in an animation
-$Event(20006110, Restart, function(X0_4, X4_4) {
-    ChangeCharacterEnableState(X0_4, Enabled);
+// <entityID> <AnimationID> <SpEffecID - Phantom color> - NPC Phantom in an animation, appear when get closed (similar to gael message)
+$Event(20006110, Restart, function(X0_4, X4_4, X8_4) {
+    SetNetworkSyncState(Disabled);
+    EndIf(PlayerIsNotInOwnWorld());
+    SetSpEffect(X0_4, 17500);
+    SetSpEffect(X0_4, X8_4);
+    SetCharacterAIState(X0_4, Disabled);
     SetCharacterAnimationState(X0_4, Disabled);
-    SetCharacterTeamType(X0_4, TeamType.Object);
     ForceAnimationPlayback(X0_4, X4_4, false, false, true, 0, 1);
 });
 
