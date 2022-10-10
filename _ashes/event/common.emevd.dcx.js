@@ -156,8 +156,9 @@ Event(0, Default, function() {
     InitializeEvent(2, 9020, 14500161, 14500162, 14500162, 6952, 45);
     InitializeEvent(0, 90000000, 0);
     InitializeEvent(0, 234, 0);
+    InitializeEvent(0, 234, 0);
     InitializeEvent(0, 236, 0);
-    InitializeEvent(0, 14334, 0);
+    InitializeEvent(0, 90009, 0);
 });
 
 Event(50, Default, function() {
@@ -1628,4 +1629,8 @@ Event(234, Restart, function() {
     IfConditionGroup(MAIN, PASS, AND_01);
     SetMapCeremony(50, 0, 10);
     SetEventFlag(235, ON);
+});
+
+Event(90009, Default, function() {
+    SetSpEffect(10000, 8005);
 });
