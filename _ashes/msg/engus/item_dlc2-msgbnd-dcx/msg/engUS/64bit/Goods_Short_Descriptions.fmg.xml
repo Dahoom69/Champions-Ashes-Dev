@@ -146,6 +146,8 @@
 <text id="349">%null%</text>
 <text id="350">Return to last bonfire rested at, or to shrine</text>
 <text id="351">Return to last bonfire rested at, or to shrine</text>
+<text id="352">Gain dragon head and breathe until death</text>
+<text id="353">Gain dragon torso and roar until death</text>
 <text id="366">Proves a Watchdog of Farron has met their duty</text>
 <text id="367">Proves an Aldrich Faithful has met their duty</text>
 <text id="368">Proves a blue spirit has been fended off</text>
@@ -578,7 +580,7 @@
 <text id="2601">Note detailing the foundations of gravity sorcery</text>
 <text id="2602">Notes detailing the foundations of gravity sorcery</text>
 <text id="2604">Journal detailing gravity sorcery</text>
-<text id="3000">Use at the Altar of Penance to revive bosses</text>
+<text id="3000">Use in front of the Altar of Penance to revive bosses</text>
 <text id="9036">A gesture, quite disrespectful</text>
 <text id="9037">A gesture, used to reallocate attributes</text>
 <text id="9038">A gesture, express an acute amount of anger</text>

@@ -8,17 +8,17 @@
 <text id="400000">Standard arrows used with bows.
 
 Simultaneously equip up to two types of arrows, and switch between them as needed.</text>
-<text id="400100">Shoot arrows with burning tips dealing fire damage.
+<text id="400100">Shoot arrows with burning tips dealing fire damage, leaving a pool of lava upon impact.
 
 Simultaneously equip up to two types of arrows, and switch between them as needed.</text>
 <text id="400200">Arrows with poisoned tips.
 
-Inflict poison damage that gradually wears down foes.</text>
-<text id="400300">Large, more powerful arrows with a shorter range due to their weight.
+Inflict poison damage that gradually wears down foes, and release a cloud of poison upon impact.</text>
+<text id="400300">Large, more powerful arrows with a shorter range due to their weight, effective at breaking guard and stance.
 
 Simultaneously equip up to two types of arrows, and switch between them as needed.</text>
 <text id="400400">Red feathered arrows used by hunters.
-Their long range makes them ideal for distant targets.
+Their long range makes them ideal for distant targets, and slipping past guard.
 
 Simultaneously equip up to two types of arrows, and switch between them as needed.</text>
 <text id="400500">Magical arrows said to have been used by the Darkmoon Knights.
@@ -30,21 +30,21 @@ Weaker arrows that can be easily purchased in bulk.
 
 Simultaneously equip up to two types of arrows, and switch between them as needed.</text>
 <text id="400700">Ritual arrows said to have been used by savage hunters.
-Inflict dark damage.
+Inflict dark damage and chase after their target.
 
 It is said that these arrows scrape out death from their targets, but savages are known to tell tall tales.</text>
-<text id="402000">Large spear-like arrows created by the giant blacksmith of the gods.
+<text id="402000">Large spear-like arrows created by the giant blacksmith of the gods. Powerul yet agile, suitable for quick shootng. 
 
 Can only be used with greatbows.
 
 These large arrows were said to have been used by dragon hunters during the age of the gods. Easily pierces human flesh.</text>
 <text id="402100">%null%</text>
-<text id="402200">Large spear-like arrows enveloped in lightning created by the giant blacksmith of the gods.
+<text id="402200">Large spear-like arrows enveloped in lightning created by the giant blacksmith of the gods. Slower than their physical counterpart, but can chase the target and further weaken their lightning protection. 
 
 Can only be used with greatbows.
 
-Lightning has been a weapon of dragonslayers ever since the time of Gwyn, the First Lord.</text>
-<text id="402300">Large arrows used to destroy giant horned oni in an eastern land.
+Lightning has been a weapon of dragonslayers ever since the time of Gwyn, the First Lord. </text>
+<text id="402300">Large arrows used to destroy giant horned oni in an eastern land. Boasts great range and can penetrate guards. 
 
 Can only be used with greatbows.
 
@@ -52,18 +52,18 @@ Made from the feathers of an aged crow, it is said that these arrows fly as stra
 <text id="404000">Standard bolts used with crossbows.
 
 Simultaneously equip up to two types of bolts, and switch between them as needed.</text>
-<text id="404100">Large, more powerful bolts with a shorter range due to their weight.
+<text id="404100">Large, more powerful bolts with a shorter range due to their weight, effetive at breaking guard and stance.
 
 Simultaneously equip up to two types of bolts, and switch between them as needed.</text>
 <text id="404200">Red feathered bolts used by snipers of Carim.
-Their long range makes them ideal for distant targets.
+Their long range makes them ideal for distant targets, and slipping past guard.
 
 Though typically used with Sniper Crossbows in Carim, these arrows can still be used with any kind of crossbow.</text>
 <text id="404300">Inexpensive wooden bolts.
 Weaker bolts that can be easily purchased in bulk.
 
 Simultaneously equip up to two types of bolts, and switch between them as needed.</text>
-<text id="404400">Bolts imbued with lightning created by the giant blacksmith of the gods.
+<text id="404400">Bolts imbued with lightning created by the giant blacksmith of the gods, chase after their target.
 
 However, the gods never used crossbows.
 These bolts are likely artifacts of the dragonless era, when the pact between gods and humans was upheld.</text>
@@ -10658,9 +10658,9 @@ Pyromancers rouse this flame to wield various fire arts.
 
 This dark, stagnant flame follows a system that differs from ordinary techniques.
 The effects of this are manifested in full when used with dark pyromancies.</text>
-<text id="13600000">Greatbow used by the Dragonslayers during the age of gods. Far greater in size than any normal bow, and far more devastating.
+<text id="13600000">Greatbow used by the Dragonslayers during the age of gods. Far greater in size than any normal bow, and far more devastating. Only specialized great arrows can be fired from the bow.
 
-The bow must be anchored to the ground when fired, a time-consuming operation that leaves the user vulnerable. Only specialized great arrows can be fired from the bow.
+The bow must be anchored to the ground when fired, a time-consuming operation that leaves the user vulnerable. It has been blessed with the power of lightning, most potent with the use of Dragonslayer Lightning Arrow.
 
 Skill: Puncturing Arrow
 Masterfully fires off a great arrow that pierces through all enemies in its path, inflicting damage.</text>
