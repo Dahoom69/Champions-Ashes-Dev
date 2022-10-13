@@ -705,10 +705,12 @@ A figure striking a curious pose has been hastily drawn on the decaying parchmen
 
 "Though a sudden fright, it's not one to fight.
 Give it a pray instead of a slay!"</text>
-<text id="382">A stone radiant with the light of Souls. 
+<text id="382">Ancient luminous crystal found along the banks of the Deep.
 
-It was made by Geri, a friend of Sage Freke, who is known for his magical crafts.
-Since it's light and easy to handle, it's widely used by travellers.</text>
+Attach to the hip to brighten your surroundings.
+
+On nights when the moon pierces the murk of the lake, faint shimmering can be seen beneath the water's surface.
+Are these lights the fading torches of a kingdom ruined by sorcery? Perhaps they are stars, twinkling in their own night sky.</text>
 <text id="383">Stone imbued with the power of the everlasting dragons, used in a secret rite by dragon worshippers.
 
 Gain the head of a dragon and emit breath alongside an archdragon mirage. The transformation is irreversible until death.
@@ -2034,11 +2036,12 @@ Additional research may be found at a similar stone, pulsating with the very sam
 The content has been partially recovered, revealing the secret gravitational research. Further inspections of the mysterious phenomenon will yield the knowledge of newfound sorcery.
 
 Additional research may be found at a similar stone, pulsating with the very same dim light.</text>
-<text id="2603">A stack of tablets made of strange, stone-like material detailing the unprecedented research of a phenomenon called gravity.
+<text id="2604">A stack of tablets made of strange, stone-like material detailing the unprecedented research of a phenomenon called gravity.
 
 In the Age of Ancients, a primeval force existed before the emergence of souls, empowering the everlasting dragons and the great archtrees. 
 
 To prove its existence is to sabotage thievery foundation of soul sorcery, it is no wonder this research was kept well hidden, away from the prying eyes of Vinheim scholars.</text>
+<text id="3000"></text>
 <text id="9036">Gesture that displays a peculiar level of gratitude. 
 
 Often seen as a sign of comradery among northern warriors, this seems to come off as brutish and uncultured for others.</text>
@@ -2270,7 +2273,6 @@ by sorcerers of the Undead Legion of Farron.
 The Legion has a tendency to emphasize speed
 over power, and this practical alteration of
 an existing sorcery is no exception.</text>
-
 <text id="1377000">One of the glintstone sorceries of the Academy of Raya Lucaria.
 
 Fires a horizontal arc of magic that spreads outward.
@@ -2288,7 +2290,6 @@ If strength truly comes from souls, then what of this extraordinary force which 
 Fires numerous gravitational projectiles. Any foes struck will be pulled toward the caster.
 
 As the scholar witnesses all lands collapse into each other at the world’s end, there comes the moment of revelation. The will which exists within all things, yearning for the eventual union of all, calls upon the return to their purest primeval form.</text>
-
 <text id="1603000">A forbidden dark sorcery.
 Casts a dark manifestation of humanity.
 
@@ -3100,9 +3101,9 @@ Thankfully, its taste does not match its appearance.
 Gain frenzied eyes like Sulyvahn's Beasts</text>
 <text id="5050201">A flavoured substance, sometimes carried by Undead. 
 
-<text id="5050204">A large flask of swirling colors.
+A large flask of swirling colors.
 
-No lore, just use the Personal Phantom Pigmenter entry in your Cheat Engine Table.</text>
+No lore, just use the Personal Phantom Pigmenter entry in your Cheat Engine Table.
 
 Assume an abyssal appearance.</text>
 <text id="5050500">A flavoured substance, sometimes carried by Undead. 

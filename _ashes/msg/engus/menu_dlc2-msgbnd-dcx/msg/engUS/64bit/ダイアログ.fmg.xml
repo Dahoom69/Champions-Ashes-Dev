@@ -139,6 +139,8 @@ to &lt;?itemNameAfterForge?&gt;.</text>
 ascended to &lt;?itemNameAfterForge?&gt;.</text>
 <text id="32023">&lt;?itemNameBeforeForge?&gt;
 reinforced into &lt;?itemNameAfterForge?&gt;.</text>
+<text id="33000">Resurrect Vordt of the Boreal Valley?</text>
+<text id="34000">Revived</text>
 <text id="41000">&lt;?sysmsg@41000?&gt;</text>
 <text id="42000">Cancel character creation and return to title screen?</text>
 <text id="42001">Character name required</text>

@@ -594,6 +594,7 @@
 <text id="2601">Gravity Research Note</text>
 <text id="2602">Gravity Research Notes</text>
 <text id="2603">Gravity Research Journal</text>
+<text id="3000">Boss Effigy</text>
 <text id="9000">Beckon</text>
 <text id="9001">Point forward</text>
 <text id="9002">Hurrah!</text>
@@ -670,11 +671,9 @@
 <text id="1373000">Crystal Hail</text>
 <text id="1374000">Soul Greatsword</text>
 <text id="1375000">Farron Flashsword</text>
-
 <text id="1377000">Glintstone Arc</text>
 <text id="1472000">Gravity Well</text>
 <text id="1472100">Collapsing Stars</text>
-
 <text id="1603000">Affinity</text>
 <text id="1613000">Dark Edge</text>
 <text id="1620000">Soul Stream</text>
