@@ -8829,12 +8829,14 @@ Hold spear at waist and charge at foe. Use strong attack while charging to exten
 Skill: Charge
 Hold spear at waist and charge at foe. Use strong attack while charging to extend distance.
 </text>
-<text id="9210000">Four-pronged Plow wielded by the wooden
-scarecrows, serfs of the forest Sanctuary.
+<text id="9210000">A pitchfork used by settlement workers and placed on scarecrows.
 
-The scarecrow serfs would not normally use
-these four-pronged plows as weapons, but
-their sharpness makes them very deadly.</text>
+Not intended for battle, but it serves as a deadly weapon due to its weight and sharp points.
+
+Some say this weapon belonged to serfs of an age long gone, but its true origins are uncertain.
+
+Skill: Scarecrow Charge
+Hold spear at waist and charge at foe. Only, it is important to have good footing.</text>
 <text id="9210100">Four-pronged Plow wielded by the wooden
 scarecrows, serfs of the forest Sanctuary.
 
@@ -8919,12 +8921,14 @@ scarecrows, serfs of the forest Sanctuary.
 The scarecrow serfs would not normally use
 these four-pronged plows as weapons, but
 their sharpness makes them very deadly.</text>
-<text id="9211500">Four-pronged Plow wielded by the wooden
-scarecrows, serfs of the forest Sanctuary.
+<text id="9211500">A pitchfork used by settlement workers and placed on scarecrows.
 
-The scarecrow serfs would not normally use
-these four-pronged plows as weapons, but
-their sharpness makes them very deadly.</text>
+Not intended for battle, but it serves as a deadly weapon due to its weight and sharp points.
+
+Some say this weapon belonged to serfs of an age long gone, but its true origins are uncertain.
+
+Skill: Scarecrow Charge
+Hold spear at waist and charge at foe. Only, it is important to have good footing.</text>
 <text id="9220000">Cross spear associated with Ornstein the Dragonslayer. A weapon of the gods imbued with the strength of lightning.
 
 Two-handed thrust utilizes the support of the cross and requires great might, but can pierce deep into the flesh of dragons, and send mere men flying.
