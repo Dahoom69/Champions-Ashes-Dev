@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 2.1 03.19.2022"</Description>
+      <Description>"Open - The Champion's Archive 2.3 10.14.2022"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -2715,6 +2715,7 @@ CREATETHREAD(ItemGib)
 40000131:Rock
 40000132:Executioner's Gloves
 40000134:Accursed Brew
+40000123:Oil Urn
 400001C7:Rusted Coin
 400001C9:Rusted Gold Coin
 4000022B:Dark Inscribed Ember
@@ -2726,6 +2727,7 @@ CREATETHREAD(ItemGib)
 4000015E:Homeward Bone
 4000015F:Coiled Sword Fragment
 40000173:Binoculars
+4000017E:Crystal Lantern
 40000846:Loretta's Bone
 40000179:Dragon Head Stone
 4000017A:Dragon Torso Stone
@@ -2896,6 +2898,7 @@ CREATETHREAD(ItemGib)
 404D1084:Marshmallow Sherbet
 404D1086:Lime Sherbet
 404D0EA1:Elderberry Sherbet
+404D0EA6:Truffle Sherbet
 404D0F5C:Liquid Light
 404D0EAB:Blood Lacquer
 404D0EAC:Oil Lacquer
@@ -2958,6 +2961,10 @@ CREATETHREAD(ItemGib)
 40000855:Logan's Scroll
 40000856:Crystal Scroll
 4000085C:Golden Scroll
+40000A28:Research Notes 0
+40000A29:Research Notes 1
+40000A2A:Research Notes 2
+40000A2B:Research Notes 3
 4000084F:Great Swamp Pyromancy Tome
 40000850:Carthus Pyromancy Tome
 40000851:Izalith Pyromancy Tome
@@ -3022,6 +3029,10 @@ CREATETHREAD(ItemGib)
 40147648:Hidden Body
 4014ACF8:Chameleon
 40193138:Twisted Wall of Light
+401502E8:Glintstone Arc
+4014EB78:Rock Sling
+40167600:Gravity Well
+40167664:Collapsing Stars
 4013F560:Deep Soul
 4013F948:Great Deep Soul
 401879A0:Great Soul Dregs
@@ -3282,6 +3293,7 @@ CREATETHREAD(ItemGib)
 008D24D0:Lothric War Banner
 008CFDC0:Ringed Knight Spear
 01CBE660:Firelink Lance
+008C8890:Scarecrow Pitchfork
 00990BB0:Halberd
 009AB960:Red Hilted Halberd
 0098BD90:Lucerne
@@ -3294,6 +3306,7 @@ CREATETHREAD(ItemGib)
 009A6B40:Ancient Dragon Halberd
 009B0780:Immolation Tinder
 009A1D20:Gundyr's Halberd
+0216AB00:Gargoyle Halberd
 00989680:Great Scythe
 0099CF00:Great Corvian Scythe
 0099A7F0:Pontiff Knight Great Scythe
@@ -3390,6 +3403,7 @@ CREATETHREAD(ItemGib)
 0275BAF0:Threaded Cane
 0278C830:Church Pick
 027A00B0:Beast Claw
+0274F7A0:Saw Spear
 0271EA60:Hunter Blunderbuss
 02743450:Hunter Pistol
 02745B60:Cannon
@@ -3403,6 +3417,12 @@ CREATETHREAD(ItemGib)
 02796470:Fist of Gracia
 0279B290:Piercing Rifle
 02B66D70:Parrying Gun
+02826520:Twinblade
+02828C30:Godskin Peeler
+0282B340:Twinned Knights Sword
+0282DA50:Eleonora's Twinblade
+02830160:Gargoyle's Twinblade
+02832870:Gargoyle's Black Blades
 01312D00:Buckler
 01339E00:Target Shield
 01315410:Small Leather Shield
@@ -4413,6 +4433,14 @@ local newWeapons =
 {
 
 -- weapons
+  0x02826520, --Twinblade
+  0x02828C30, --Godskin Peeler
+  0x0282B340, --Twinned Knights Sword
+  0x0282DA50, --Eleonora's Twinblade
+  0x02830160, --Gargoyle's Twinblade
+  0x02832870, --Gargoyle's Black Blades
+  0x0216AB00, --Gargoyle Halberd
+  0x0274F7A0, --Saw Spear
   0x027A00B0, --Beast Claw
   0x01CE3050, --Blade of Ariandel
   0x01CE0940, --Deserter's Sword and Shield
@@ -4911,6 +4939,10 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newWeapons =
 {
+  0x0216AB00, --Gargoyle Halberd
+  0x02830160, --Gargoyle's Twinblade
+  0x0282B340, --Twinned Knights Sword
+  0x02826520, --Twinblade
   0x0216F920, --Chosen Undead's Scythe
   0x01C9EA90, --Salvation Axes
   0x01CB9840, --Paired Demon Great Machetes
@@ -6038,6 +6070,10 @@ Spawn()
                           <AssemblerScript>{$lua}
 local newMagic =
   {
+  0x401502E8, --Glintstone Arc
+  0x4014EB78, --Rock Sling
+  0x40167600, --Gravity Well
+  0x40167664, --Collapsing Stars
   0x4036C964, --Sunlight Blade
   0x4035A278, --Divine Spears of Judgement
   0x40359E90, --Divine Bolt
@@ -6315,6 +6351,9 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newItems =
   {
+  0x40000123, --Oil Urn
+  0x4000017E, --Crystal Lantern
+  0x404D0EA6, --Truffle Sherbet
   0x404D0EA1, --Elderberry Sherbet
   0x404D0EAB, --Blood Lacquer
   0x404D0EAC, --Oil Lacquer
@@ -6842,7 +6881,6 @@ function Spawn()
 
   if next(newItems) then itemsSpawnCount = itemsSpawnCount + WriteByte(newItems,nonUnique) end -- add newItems if not empty; change "nonUnique" to unique or custom value(ex:10) to change quantity
   WriteInteger(getAddress('ItemArray'),itemsSpawnCount)
-
   autoAssemble("CreateThread(MassItemGib)")
   form.close()
 end
@@ -7145,7 +7183,7 @@ unregisterSymbol(TargetBonfireId)
 3902950:Irithyll Dungeon
 3902952:Profaned Capital
 3902951:Yhorm The Giant
-3012950:Lothric Castle
+3012950:Sparring Ground
 3012952:Dragon Barracks
 3012951:Sunlight Altar
 3412951:Grand Archives
