@@ -3756,7 +3756,6 @@ function ExecItem(quick_type, blend_type)
         end
         
     elseif item_type == ITEM_BACK_BOTTLE then
-        AddStamina(-7)
         ExecEventHalfBlend(Event_ItemBackBottle, blend_type)
     elseif item_type == ITEM_DRINK_SAKE then
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
