@@ -331,7 +331,11 @@ a gift:
 
 "Good-bye, dear Grandmother.
 I will visit Grandfather, in the Pit of Hollows."</text>
-<text id="263">%null%</text>
+<text id="263">A medicinal herb used by the soldiers and doctors of Londor, named after the lunar phase.
+
+Recovers 5% +120 HP, increasing stamina regeneration by 30 for ten seconds.
+
+Often mass produced, it is taken and sold by nomadic merchants to other armies.</text>
 <text id="264">%null%</text>
 <text id="265">%null%</text>
 <text id="266">%null%</text>
@@ -519,6 +523,12 @@ Throw at enemies to inflict poison damage.
 
 Used by assassins of Londor, land of Hollows.
 The poison is jokingly known as Hollow's blood.</text>
+<text id="312">Throwing knife chiseled from glintstone, an otherworldly material.
+
+Consumes FP. Throw at enemies to deal magic damage.
+
+Used by warlocks who are unable to attune to their glintstone catalysts.
+Jokingly called an "improvised sorcery", along with the rocks they throw with reckless abandon.</text>
 <text id="330">Black charcoal-like pine resin.
 Temporarily applies fire to right-hand weapon.
 

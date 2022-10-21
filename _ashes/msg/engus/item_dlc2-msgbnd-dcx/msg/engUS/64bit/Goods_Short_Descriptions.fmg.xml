@@ -75,7 +75,7 @@
 <text id="260">Temporary boost to stamina recovery speed</text>
 <text id="261">Large temporary boost to stamina recovery speed</text>
 <text id="262">Large temporary boost to stamina recovery speed</text>
-<text id="263">%null%</text>
+<text id="263">Restores HP and temporarily boosts stamina recovery speed</text>
 <text id="264">%null%</text>
 <text id="265">%null%</text>
 <text id="266">%null%</text>
@@ -124,6 +124,7 @@
 <text id="309">%null%</text>
 <text id="310">Throw at foes to inflict damage</text>
 <text id="311">Throw at foes to inflict damage and poison</text>
+<text id="311">Throw at foes to inflict magic damage</text>
 <text id="330">Applies fire to right-hand weapon</text>
 <text id="331">Applies lightning to right-hand weapon</text>
 <text id="332">%null%</text>
