@@ -3644,6 +3644,12 @@ function ExecItem(quick_type, blend_type)
             ExecEventHalfBlend(Event_ItemMeganeStart, ALLBODY)
         end
     elseif item_type == ITEM_REPAIR then
+        if env(1001) <= 0 then
+            ResetRequest()
+            return FALSE
+        end
+        AddStamina(-7)
+
         ExecEventHalfBlend(Event_ItemWeaponRepair, blend_type)
     elseif item_type == ITEM_PRAY then
         ExecEventHalfBlend(Event_ItemPray, blend_type)
@@ -3750,6 +3756,12 @@ function ExecItem(quick_type, blend_type)
         end
         
     elseif item_type == ITEM_BACK_BOTTLE then
+        if env(1001) <= 0 then
+            ResetRequest()
+            return FALSE
+        end
+        AddStamina(-7)
+
         ExecEventHalfBlend(Event_ItemBackBottle, blend_type)
     elseif item_type == ITEM_DRINK_SAKE then
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
