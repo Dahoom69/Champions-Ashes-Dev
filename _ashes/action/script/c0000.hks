@@ -12326,6 +12326,10 @@ function DrawStanceRightAttackLight_onUpdate() -- 036230
         b2 = "W_DrawStanceRightAttackHeavy"
     end   
 
+    if (sp_kind == 688) then
+        r2 = "W_DrawStanceRightAttackHeavy"
+    end   
+
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, is_artsr1, is_artsr2, GEN_TRANS_LEFT) == TRUE then
         return 
@@ -12618,6 +12622,10 @@ function DrawStanceRightAttackHeavy_onUpdate() -- 036240
         r1 = "W_AttackRightLight2"
         r2 = "W_AttackRightHeavy1SubStart"
     end
+
+    if (sp_kind == 688) then
+        r2 = "W_AttackRightLightStepSpecial"
+    end   
 
     if env(1116, 100700) == TRUE then
         r1 = "W_DrawStanceRightAttackLight"
