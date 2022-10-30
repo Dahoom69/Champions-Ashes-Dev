@@ -8783,7 +8783,7 @@ function AttackRightLightStep_onUpdate() -- roll r1 030900
     if sp_m == 612 or sp_m == 622 or sp_m == 604 or sp_m == 640 or sp_m == 647 then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 645 or sp_m == 649 or sp_m == 627  then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy2Start" end
-    if sp_m == 688 then r1 = "W_AttackRightLightKick" end
+    if sp_m == 688 then r1 = "W_AttackRightLightKick" r2 = "W_CrossbowStepInFire" end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
