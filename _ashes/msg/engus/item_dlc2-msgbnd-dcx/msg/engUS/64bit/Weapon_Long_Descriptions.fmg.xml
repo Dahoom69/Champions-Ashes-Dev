@@ -18690,12 +18690,13 @@ A sheath was meticulously forged to contain the icy power, though one wonders if
 Skill: Darkmoon Spiral
 Release the blade's icy energy with blinding speed in a wide circle around you. If facing away, the range of the slash is even greater.
 Follow up with strong attack to cleave a path forwards, sending nearby foes flying.</text>
-<text id="30250000">Large curved sword wielded by the mightiest champion of Carthus.
+<text id="30250000">A greatsword belonging to one of the champions of Carthus, the kingdom of blood and sand.
 
-That's about all the lore you'll get. Running and backstep attacks have special follow-up attacks that do extra damage. 
-This weapon is slightly bigger than carthus curved greatsword and has relatively high luck scaling that increases bleed build-up.
+A relic made from the same crowns that Wolnir used to make his own, this wicked curved greatsword retains its sanguine edge that crushed the very kingdoms it was made from.
 
-Skill: Turbulent Wind 
+Running and backstep attacks have special follow-up attacks, along with the weapon having relatively high luck scaling that increases bleed build-up.
+
+Skill: Turbulent Wind
 Like a sandstorm, roll into foes with a large spinning motion while obscured.</text>
 <text id="30270000">Magnificent blade wielded by the dragonslayer champion of ancient Lothric.
 
@@ -18722,6 +18723,15 @@ An heirloom of Elfriede's distant past, this scythe crossed into the Painted Wor
 Skill: Snowstep
 
 Brandish the scythe with a unique stance. Close the distance with light attack, and release a graceful circular slash with strong attack.</text>
+<text id="34000000">A double-headed glaive from the far east, often used by warrior monks.
+
+Before Lothric converged, these monks travelled to the west to find inner peace. They almost instantly proved their combative prowess to the army, comparable to whirlwinds of blades.
+
+Their purity of mind, body and soul were never found, however. Some say it was the very waters that held together their temple that lead them to their eventual demise.
+
+Skill: Monastic Stance
+Enter a stance that deflects projectiles.
+While in stance, use normal attack release a barrage of slashes, and strong attack to launch yourself in a spinning motion at your enemy, knocking them back.</text>
 <text id="35000000">A lance born from the horns of a forest-dwelling magical beast from ages past.
 
 Imbued with magic, it is said that the butterflies were created through the twisted experiments of an insane duke. Inside the quivering horns lies potent magic, never fading.
