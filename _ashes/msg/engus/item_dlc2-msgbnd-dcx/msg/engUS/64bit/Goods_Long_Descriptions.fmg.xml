@@ -405,10 +405,20 @@ As long as a weapon is not broken, its durability can be restored at a bonfire, 
 <text id="282">%null%</text>
 <text id="283">%null%</text>
 <text id="284">%null%</text>
-<text id="285">%null%</text>
-<text id="286">%null%</text>
-<text id="287">%null%</text>
-<text id="288">%null%</text>
+<text id="285">A special Carcosan molotov that when thrown wedges itself into an object. Explodes on a timed delay.
+
+What's made notable by this tool is its complex timer mechanism being wasted after each use. It is a shame to know that what could have been a technological marvel is used simply for bombs.</text>
+<text id="286">A special Carcosan molotov that when thrown from behind wedges itself into an object. Explodes on a timed delay.
+
+What's made notable by this tool is its complex timer mechanism being wasted after each use. It is a shame to know that what could have been a technological marvel is used simply for bombs.</text>
+<text id="287">Explodes in raging flames when thrown against an object. One of the oldest ways to fight various beasts.
+
+Since the tragedy of Carcosa, a neighbor to Lothric, its refugees came bearing gifts such as these marvelous yet simple explosives.</text>
+<text id="288">Exploding Molotov cocktail that is thrown behind.
+
+Allows for more maneuvering compared to an ordinary Molotov cocktail, and can catch foes off guard.
+
+Since the tragedy of Carcosa, a neighbor to Lothric, its refugees came bearing gifts such as these marvelous yet simple explosives.</text>
 <text id="289">%null%</text>
 <text id="290">Small throwing machete.
 Throw at enemies to cause bleeding damage.
