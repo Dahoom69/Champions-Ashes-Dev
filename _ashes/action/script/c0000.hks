@@ -1684,8 +1684,21 @@ function IsWarcrySpAtk()
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140 or sp_m == 689 or sp_m == 690) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
-    if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140 or sp_o == 689 or sp_o == 690) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+
+    if env(1116, 701) == TRUE and (sp_m == 140) and style ~= HAND_LEFT_BOTH then return TRUE end -- demon g machete
+    if env(1116, 701) == TRUE and (sp_o == 140) and style == HAND_LEFT_BOTH then return TRUE end -- demon g machete
+
+    if env(1116, 702) == TRUE and (sp_m == 166) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+    if env(1116, 702) == TRUE and (sp_o == 166) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
+
+    if env(1116, 703) == TRUE and (sp_m == 689) and style ~= HAND_LEFT_BOTH then return TRUE end -- twinblade
+    if env(1116, 703) == TRUE and (sp_o == 689) and style == HAND_LEFT_BOTH then return TRUE end -- twinblade
+
+    if env(1116, 704) == TRUE and (sp_m == 690) and style ~= HAND_LEFT_BOTH then return TRUE end -- twinned knight
+    if env(1116, 704) == TRUE and (sp_o == 690) and style == HAND_LEFT_BOTH then return TRUE end -- twinned knight
+
+    --if env(1116, 698) == TRUE and (sp_m == 166 or sp_m == 140 or sp_m == 689 or sp_m == 690) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato or demon g machete
+    --if env(1116, 698) == TRUE and (sp_o == 166 or sp_o == 140 or sp_o == 689 or sp_o == 690) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
 
     if env(1116, 698) == TRUE and (sp_m == 127) and style ~= HAND_LEFT_BOTH then  -- coiled stake
         if sp_o == 127 then
@@ -2086,8 +2099,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 r2 = "W_AttackRightHeavySpecial1Start"
             elseif r2 == "W_AttackRightHeavy1SubStart" then
                 r2 = "W_AttackRightHeavySpecial1SubStart"
-            elseif env(1116, 698) and (sp_m == 166) and c_Style ~= HAND_LEFT_BOTH and r2 == "W_AttackRightHeavy2Start" then r2 = "W_AttackRightHeavySpecial1Start" -- gravelord neato
-            elseif env(1116, 698) and (sp_o == 166) and c_Style == HAND_LEFT_BOTH and r2 == "W_AttackRightHeavy2Start" then r2 = "W_AttackRightHeavySpecial1Start" -- gravelord neato
+            elseif env(1116, 702) and (sp_m == 166) and c_Style ~= HAND_LEFT_BOTH and r2 == "W_AttackRightHeavy2Start" then r2 = "W_AttackRightHeavySpecial1Start" -- gravelord neato
+            elseif env(1116, 702) and (sp_o == 166) and c_Style == HAND_LEFT_BOTH and r2 == "W_AttackRightHeavy2Start" then r2 = "W_AttackRightHeavySpecial1Start" -- gravelord neato
             elseif r2 == "W_AttackRightHeavy2Start" then
                 r2 = "W_AttackRightHeavySpecial2Start"
 
@@ -2319,8 +2332,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     b2 = "W_AttackBothHeavySpecial1Start"
                 elseif b2 == "W_AttackBothHeavy1SubStart" then
                     b2 = "W_AttackBothHeavySpecial1SubStart"
-                elseif env(1116, 698) and sp_m == 166 and c_Style ~= HAND_LEFT_BOTH and b2 == "W_AttackBothHeavy2Start" then b2 = "W_AttackBothHeavySpecial1Start"
-                elseif env(1116, 698) and sp_o == 166 and c_Style == HAND_LEFT_BOTH and b2 == "W_AttackBothHeavy2Start" then b2 = "W_AttackBothHeavySpecial1Start"
+                elseif env(1116, 702) and sp_m == 166 and c_Style ~= HAND_LEFT_BOTH and b2 == "W_AttackBothHeavy2Start" then b2 = "W_AttackBothHeavySpecial1Start"
+                elseif env(1116, 702) and sp_o == 166 and c_Style == HAND_LEFT_BOTH and b2 == "W_AttackBothHeavy2Start" then b2 = "W_AttackBothHeavySpecial1Start"
                 elseif b2 == "W_AttackBothHeavy2Start" then
                     b2 = "W_AttackBothHeavySpecial2Start"
                 end
@@ -8511,8 +8524,8 @@ function AttackRightLight1_onUpdate() -- r11
     if (sp_m == 658) then r2 = "W_AttackRightHeavy1Start" end
     if sp_m == 688  then r2 = "W_CrossbowStepInFire" end 
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
@@ -9153,8 +9166,8 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14 030350
     if (sp_m == 643) then r2 = "W_AttackRightHeavy1SubStart" end
     if (sp_m == 672) then r1 = "W_AttackRightHeavySpecial1End" end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140 or sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140 or sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_m == 140 or sp_m == 103 or sp_m == 102) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_o == 140 or sp_o == 103 or sp_o == 102) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLight2" r1 = "W_AttackRightLight2" end -- demon g machete
     
     if IsFeintAttempt() and (sp_m == 102 or sp_m == 103) then r1 =  "W_AttackRightLight3" end
 
@@ -9277,8 +9290,8 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
         act(2002, 625)
     end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial1Start" r1 = "W_AttackRightLight1" b2 = "W_AttackBothHeavySpecial2Start" end -- demon g machete
 
     if IsFeintAttempt() and (sp_m == 102  or sp_m == 103) and c_Style ~= HAND_LEFT_BOTH then r1 =  "W_AttackRightLight2" end
     if IsFeintAttempt() and (sp_o == 102  or sp_o == 103) and c_Style == HAND_LEFT_BOTH then r1 =  "W_AttackRightLight2" end
@@ -9695,8 +9708,8 @@ function AttackBothLight1_onUpdate()  -- r11
         r2 = "W_AttackRightHeavy2Start"
     end
 
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
-    if env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
+    if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
     if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft1" end
     if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" end
