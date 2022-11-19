@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tpf>
+  <filename>WP_A_0731.tpf</filename>
+  <compression>None</compression>
+  <encoding>0x01</encoding>
+  <flag2>0x03</flag2>
+  <textures>
+    <texture>
+      <name>WP_A_0731_a.dds</name>
+      <format>0x01</format>
+      <flags1>0x00</flags1>
+      <flags2>0x00000000</flags2>
+    </texture>
+    <texture>
+      <name>WP_A_0731_Lv2_a.dds</name>
+      <format>0x00</format>
+      <flags1>0x00</flags1>
+      <flags2>0x00000000</flags2>
+    </texture>
+    <texture>
+      <name>WP_A_0731_Lv2_m.dds</name>
+      <format>0x67</format>
+      <flags1>0x00</flags1>
+      <flags2>0x00000000</flags2>
+    </texture>
+    <texture>
+      <name>WP_A_0731_Lv2_n.dds</name>
+      <format>0x6A</format>
+      <flags1>0x00</flags1>
+      <flags2>0x00000000</flags2>
+    </texture>
+    <texture>
+      <name>WP_A_0731_m.dds</name>
+      <format>0x67</format>
+      <flags1>0x00</flags1>
+      <flags2>0x00000000</flags2>
+    </texture>
+    <texture>
+      <name>WP_A_0731_n.dds</name>
+      <format>0x6A</format>
+      <flags1>0x00</flags1>
+      <flags2>0x00000000</flags2>
+    </texture>
+  </textures>
+</tpf>
