@@ -2241,11 +2241,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if (sp_g == 691) then 
             local speed = GetVariable("MoveSpeedLevelReal")
             if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
-            elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"
+            elseif r1 == "W_AttackRightLightStep" then 
+                if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then l2 = "W_AttackLeftHeavySp2"
+                else  l2 = "W_AttackLeftHeavy2" end
             elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp2"
             elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
-            elseif l1 == "W_AttackLeftLight2" then l2 = "W_AttackLeftHeavy2"
-            elseif l1 == "W_AttackLeftHeavy2" then l2 = "W_AttackLeftHeavy2"             
+            elseif l1 == "W_AttackLeftLight2" then l2 = "W_AttackLeftHeavy2"           
             end
         end
 
@@ -9588,7 +9589,10 @@ function AttackLeftHeavy2_onUpdate()
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp3" end
     if sp_o == 691 then 
         l1 = "W_AttackLeftHeavy2" 
-        if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  r1 = "W_AttackLeftHeavySp2" end
+        if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then 
+            if env(1116, 100341) == TRUE then r1 = "W_AttackLeftHeavySp2" 
+            else r1 = "W_AttackRightLight2" end
+        end
     end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
