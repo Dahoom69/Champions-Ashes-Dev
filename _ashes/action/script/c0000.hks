@@ -2227,7 +2227,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     l2 = "W_AttackLeftHeavySp3" -- 32092    guns out of ammo
                 end
         end
-        if sp_g == 651 then 
+        if (sp_g == 651) then 
             local speed = GetVariable("MoveSpeedLevelReal")
             if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
             elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"
@@ -2235,6 +2235,17 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
             elseif l1 == "W_AttackLeftLight2" then l2 = "W_AttackLeftHeavySp3"
             elseif l1 == "W_AttackLeftHeavy2" then l2 = "W_AttackLeftHeavySp3"             
+            end
+        end
+
+        if (sp_g == 691) then 
+            local speed = GetVariable("MoveSpeedLevelReal")
+            if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
+            elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"
+            elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp2"
+            elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
+            elseif l1 == "W_AttackLeftLight2" then l2 = "W_AttackLeftHeavy2"
+            elseif l1 == "W_AttackLeftHeavy2" then l2 = "W_AttackLeftHeavy2"             
             end
         end
 
@@ -7742,6 +7753,11 @@ function BackStep_onUpdate()
         lh1 = "W_AttackLeftHeavySp3"
     end
 
+    if (osp == 691 and  (c_Style == HAND_LEFT or c_Style == HAND_RIGHT) ) then 
+        ll1 = "W_AttackLeftHeavySp1"
+        lh1 = "W_AttackLeftHeavySp1"
+    end
+
     if (    (osp == 602 or osp == 617 or osp == 618 or osp == 628 or osp == 629 or osp == 630 or osp == 652 or osp == 653)   and  (c_Style == HAND_LEFT or c_Style == HAND_RIGHT)  ) then 
         ll1 = "W_AttackLeftHeavy1"
         lh1 = "W_AttackLeftHeavy1"
@@ -9515,13 +9531,24 @@ function AttackLeftHeavy1_onUpdate()
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight3" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
+    if sp_o == 691 then  l1 = "W_AttackLeftHeavy2" end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
+    
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
 
+    elseif sp_o == 691 and (c_Style == HAND_LEFT or c_Style == HAND_RIGHT) then
+        if AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy2Start", "W_AttackLeftHeavy2", "W_AttackLeftHeavy2", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+            return 
+        elseif env(1108, ACTION_ARM_L1) <= 0 and env(1116, 100343) == TRUE then
+            ExecEventAllBody("W_AttackLeftHeavy3")
+            return 
+        else
+            return 
+        end   
     elseif AttackCommonFunction(r1, r2, nil, l1, "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         return 
     else
@@ -9556,6 +9583,7 @@ function AttackLeftHeavy2_onUpdate()
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp3" end
+    if sp_o == 691 then  l1 = "W_AttackLeftHeavy2" end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -9604,7 +9632,7 @@ function AttackLeftHeavy3_onUpdate()
 
     local sp_o = env(345 , HAND_LEFT)
     local l1 = "W_AttackLeftHeavy2"
-    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 651 or sp_o == 652 or sp_o == 653 or is_sls == TRUE) then 
+    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or (sp_o == 651 or sp_o == 691) or sp_o == 652 or sp_o == 653 or is_sls == TRUE) then 
         l1 = "W_AttackLeftHeavy1" 
     end
 
@@ -9615,6 +9643,7 @@ function AttackLeftHeavy3_onUpdate()
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
+    if sp_o == 691 then l1 = "W_AttackLeftHeavy2" end
     
         if AttackCommonFunction(r1, r2, nil, l1, "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
             return 
