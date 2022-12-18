@@ -1071,6 +1071,7 @@ function GetAttackRequest(is_guard)
             local sp = env(345 , HAND_LEFT)
             local spm = env(345 , HAND_RIGHT)
             local is_sl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD, WEAPON_CATEGORY_LARGE_SHIELD, WEAPON_CATEGORY_TORCH) 
+            local is_Gsl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_LARGE_SHIELD) 
             local is_catalysts = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) 
             local is_m = GetEquipType(HAND_LEFT, 20, 23, 25, 26, 28, 29, 30, 32, 33, 35, 36, 38) 
             local is_gs = GetEquipType(HAND_LEFT, 25, 26) 
@@ -1101,7 +1102,7 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or is_r == TRUE then
                 return ATTACK_REQUEST_LEFT_HEAVY_SP -- ATTACK_REQUEST_LIGHT_KICK
-            elseif is_sl == TRUE and not (IsNodeActive("Rolling_CMSG") == TRUE)  and c_SwordArtsHand == HAND_LEFT and (c_SwordArtsID ~= SWORDARTS_PARRY) and (c_SwordArtsID ~= SWORDARTS_RIGHTARTS) then -- shields that can attack after R1 shieldstrikes
+            elseif is_sl == TRUE and is_Gsl == FALSE or (is_Gsl == TRUE and sp == 225) and not (IsNodeActive("Rolling_CMSG") == TRUE)  and c_SwordArtsHand == HAND_LEFT and (c_SwordArtsID ~= SWORDARTS_PARRY) and (c_SwordArtsID ~= SWORDARTS_RIGHTARTS) then -- shields that can attack after R1 shieldstrikes
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif is_sl == TRUE then
                 return ATTACK_REQUEST_INVALID
@@ -1443,7 +1444,7 @@ function IsEnableSwordArts()
     local arts_id = c_SwordArtsID
     local sp_kind = env(345 , HAND_LEFT)
     if style ~= HAND_LEFT_BOTH and c_SwordArtsHand == 0 then
-        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (enableShieldStrike == TRUE and sp_kind == 225)  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67)  then
+        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67)  then
             return FALSE
         elseif arts_id == SWORDARTS_PARRY or arts_id == SWORDARTS_SPIN or arts_id == SWORDARTS_STRONGBASH or arts_id == SWORDARTS_CHAINSHOT or arts_id == SWORDARTS_MAGICBUFF or arts_id == SWORDARTS_SAMAGIC or arts_id == SWORDARTS_CHARGESHOT or arts_id == SWORDARTS_ONESHOTFULL or arts_id == SWORDARTS_STRONGSHOT or arts_id == SWORDARTS_SAMAGICMEDIUM or arts_id == SWORDARTS_SAMAGICSTRONG or arts_id == SWORDARTS_WIDESHOT or arts_id == SWORDARTS_MAGICBUFFPRAY or arts_id == SWORDARTS_MAGICBUFFATTACK then
             return TRUE
@@ -8592,6 +8593,7 @@ function AttackRightLight2_onUpdate() -- r12
     local sp_o = env(345 , HAND_LEFT)
     local leftoffhand = "W_AttackLeftHeavy1"
     if (sp_o == 656) then leftoffhand = "W_AttackLeftHeavy3" end
+    if sp_o == 225 then leftoffhand = "W_AttackLeftHeavy2" end
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
@@ -9647,6 +9649,8 @@ function AttackLeftHeavy3_onUpdate()
     if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 651 or sp_o == 652 or sp_o == 653 or is_sls == TRUE) then 
         l1 = "W_AttackLeftHeavy1" 
     end
+
+    if sp_o == 225 then l1 = "W_AttackLeftHeavy1" end
 
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
 
@@ -14678,6 +14682,7 @@ end
 
 function OneShotFullLeftStart_onUpdate()
     SetVariable("IndexThrowHand", HAND_LEFT)
+    local l1 = "W_AttackLeftHeavy1"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
@@ -14685,11 +14690,12 @@ function OneShotFullLeftStart_onUpdate()
         b2 = "W_AttackBothHeavy1SubStart"
     end
 
+    if env(345 , HAND_LEFT) == 150 then l1 = "W_AttackLeftHeavy2" end
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
+    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l1, "W_AttackBothLight1", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     else
         return 
