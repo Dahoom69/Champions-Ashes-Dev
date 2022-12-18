@@ -1102,7 +1102,7 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or is_r == TRUE then
                 return ATTACK_REQUEST_LEFT_HEAVY_SP -- ATTACK_REQUEST_LIGHT_KICK
-            elseif is_sl == TRUE and is_Gsl == FALSE or (is_Gsl == TRUE and sp == 225) and not (IsNodeActive("Rolling_CMSG") == TRUE)  and c_SwordArtsHand == HAND_LEFT and (c_SwordArtsID ~= SWORDARTS_PARRY) and (c_SwordArtsID ~= SWORDARTS_RIGHTARTS) then -- shields that can attack after R1 shieldstrikes
+            elseif ((is_sl == TRUE and is_Gsl == FALSE) or (is_Gsl == TRUE and sp == 225)) and not (IsNodeActive("Rolling_CMSG") == TRUE)  and c_SwordArtsHand == HAND_LEFT and (c_SwordArtsID ~= SWORDARTS_PARRY) and (c_SwordArtsID ~= SWORDARTS_RIGHTARTS) then -- shields that can attack after R1 shieldstrikes
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif is_sl == TRUE then
                 return ATTACK_REQUEST_INVALID
