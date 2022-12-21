@@ -18729,6 +18729,14 @@ Their purity of mind, body and soul were never found, however. Some say it was t
 Skill: Monastic Stance
 Enter a stance that deflects projectiles.
 While in stance, use normal attack release a barrage of slashes, and strong attack to launch yourself in a spinning motion at your enemy, knocking them back.</text>
+<text id="34010000">A heavy, black iron axe used by eastern mercenaries and assassins. Has an attached percussion hammer to create fire.
+
+The strength of the axe lies in its weight, which easily splinters shields. Hitting the sparking hammer causes a violent eruption of flame which increases the area of the attack.
+
+Once the favoured weapon of a mercenary known as "Yoshimitsu", it was lost along with his left arm.
+
+Skill: Weapon Skill
+Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
 <text id="35000000">A lance born from the horns of a forest-dwelling magical beast from ages past.
 
 Imbued with magic, it is said that the butterflies were created through the twisted experiments of an insane duke. Inside the quivering horns lies potent magic, never fading.
@@ -18750,7 +18758,7 @@ The same miasma, however thinned, exudes from this blade.
  
 Lord Wolnir sought to control this power, yearning to find the secret of immortality within the cloud of death. His desire was ultimately fulfilled, but the price, ironically, was a fate worse than death.
 
-Weapon Skill: Gravelord Sword Storm
+Skill: Gravelord Sword Storm
 Thrust weapon into earth to emit a series of giant Gravelord swords from the ground.</text>
 <text id="35040000">Bronze halberd of the enchanted gargoyle guarding an ancient church, slaying countless champions of old. Trace of divine protection against various status effects yet remains.
 
@@ -18982,7 +18990,7 @@ The weapon draws its power from Luck, perhaps an ode to the nature of children t
 
 The faint poison lining the blade is uniquely deadly, also reducing the restorative properties of healing items.
 
-Weapon Skill: Bile Spit
+Skill: Bile Spit
 Release a corrosive vomit projectile.</text>
 <text id="36040000">A rare rapier with spiral grooves carved into the blade.
 
@@ -18990,7 +18998,7 @@ It is meant to inflict pain, causing both bleeding and poison rather than deal d
 
 The weapon primarily draws its power from Luck, and improves the wielder's resistance to ailments.
 
-Weapon Skill: Shield Splitter
+Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.
 
 Combat Art: Parry
