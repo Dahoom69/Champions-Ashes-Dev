@@ -14308,7 +14308,7 @@ function CrossbowStepInFire_onUpdate() -- 038210 bs r2 for vanilla weapons
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if sp_m == 67 or sp_m == 177 or sp_m == 252 or sp_m == 260 then r1 = "W_AttackRightLight3" end
-    if sp_m == 688 then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightHeavyKickSpecial" end
+    if sp_m == 688 then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
     act("精密射撃可能か")
