@@ -14391,7 +14391,7 @@ function OneShotFull_Activate()
     return 
 end
 
-function OneShotFullRightStart_onUpdate()
+function OneShotFullRightStart_onUpdate() -- 038500
     SetVariable("IndexThrowHand", HAND_RIGHT)
 
     local r1 = "W_AttackRightLight1"
@@ -14407,6 +14407,8 @@ function OneShotFullRightStart_onUpdate()
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
     end
+
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -14429,7 +14431,7 @@ function OneShotFullRightStart_onUpdate()
     end
 end
 
-function OneShotFullBothStart_onUpdate() -- oneshot WA
+function OneShotFullBothStart_onUpdate() -- oneshot WA 038510
     SetVariable("IndexThrowHand", HAND_RIGHT)
 
     local b1 = "W_AttackBothLight1"
@@ -14439,6 +14441,8 @@ function OneShotFullBothStart_onUpdate() -- oneshot WA
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
 
     local sp_m = env(345 , hand)
+
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     if sp_m == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
