@@ -9719,6 +9719,8 @@ function AttackBothLight1_onUpdate()  -- r11
     -- added exceptions for:
     -- dark sword, hollowslayer, lothric knight ss, old wolf, ledo, GL, whip, BB weapons
 
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
+
     if env(345 , hand) == 232 then
         b2 = "W_AttackBothHeavy2Start"
     end
@@ -9810,6 +9812,7 @@ function AttackBothLight2_onUpdate()  -- r12
     end
 
     if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft2" end
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     --local JF = "W_RandomOneShotNext2"
     --if IsDualBlade() == TRUE then JF = "W_RandomOneShotNext1" end
@@ -9879,6 +9882,8 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     
     -- added exceptions for:
     -- dark sword, hollowslayer, lothric knight ss, old wolf, ledo, GL, whip, BB weapons
+
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     local l1 = "W_AttackBothLeft2"
     if sp_m == 613  then l1 = "W_AttackBothLeft2" end
@@ -10428,6 +10433,8 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2
         if (IsFeintAttempt() and i1BB == FALSE) and sp_m == 142 then l1 = "W_AttackBothLeft2" end
         if (IsFeintAttempt() and i1BB == FALSE) and sp_m == 145 then l1 = "W_AttackBothLeft3" end
         
+        if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
+
         if sp_m == 614 then b1 =  "W_AttackBothLight2" end
         if (sp_m == 643) then b1 = "W_AttackBothLight2" 
             l1  = "W_AttackBothLeft3" end
@@ -10946,6 +10953,7 @@ function AttackBothDash_onUpdate() -- run r1 034500
     if sp_m == 643 then l1 = "W_AttackBothLeft2" end
     if sp_m == 664 or sp_m == 604  or sp_m == 640 then b1 = "W_AttackBothLight3" end
     if sp_m == 647  then b1 = "W_AttackBothHeavySpecial1Start" end
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
@@ -11049,6 +11057,8 @@ function AttackBothLightStep_onUpdate() -- roll r1 034900
 
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeft2" end
+
+    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     local sp_o = env(345 , HAND_LEFT)
     if (sp_m == 677 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677 and c_Style == HAND_LEFT_BOTH)  then b1 = "W_AttackBothLight3" end
