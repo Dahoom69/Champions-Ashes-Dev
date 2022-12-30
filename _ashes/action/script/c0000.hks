@@ -1086,6 +1086,9 @@ function GetAttackRequest(is_guard)
             local is_gun = FALSE
             if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) then is_gun = TRUE end
 
+            local isFUGS = FALSE
+            if (GetEquipType(HAND_LEFT, 26) == TRUE and sp == 163 and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE) then isFUGS = TRUE else isFUGS = FALSE end
+
             if (   (sp ~= 50 and sp ~= 179 and sp ~= 232 and sp ~= 264 and sp ~= 164 and sp ~= 107 and sp ~= 663 and sp ~= 674 and sp ~= 681 )         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
             if (   (spm ~= 50 and spm ~= 179 and spm ~= 232 and spm ~= 264 and spm ~= 164 and spm ~= 107 and spm ~= 621 and spm ~= 640 and spm ~= 663 and spm ~= 674 and spm ~= 681 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
             
@@ -1096,7 +1099,7 @@ function GetAttackRequest(is_guard)
             elseif  (   (is_ugsm == TRUE and spm ~= 162 and spm ~= 161 and spm ~= 253 and spm ~= 666  )  and    (is_gs == TRUE and is_gun == FALSE and (sp ~= 161 and sp ~= 253 and sp ~= 666))        and     (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (spm == 162)                                                    and    (sp == 154)                                                              and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (GetEquipType(HAND_RIGHT, 38) == TRUE and spm == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp == 50)                       and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif ((is_m == TRUE) and (sp ~= 99 and sp ~= 101 and sp ~= 137 and sp ~= 151)) then
+            elseif ((is_m == TRUE and isFUGS == FALSE) and (sp ~= 99 and sp ~= 101 and sp ~= 137 and sp ~= 151))  then
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif sp == 178 or sp == 207 or (sp == 217 and not (is_sl == TRUE and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE)  ) or sp == 220 or sp == 234 or sp == 257 or sp == 186 or sp == 20 or (is_d == TRUE and sp == 150) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp == 67) then
                 return ATTACK_REQUEST_LEFT_HEAVY
@@ -1625,7 +1628,7 @@ function IsEnableGuard()
     local is_r = GetEquipType(HAND_LEFT, 27) 
     
     local isFUGS = FALSE
-    if (GetEquipType(HAND_LEFT, 26) == TRUE and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG") == FALSE and sp == 163) then isFUGS = TRUE else isFUGS = FALSE end
+    if (GetEquipType(HAND_LEFT, 26) == TRUE and sp == 163) then isFUGS = TRUE else isFUGS = FALSE end
 
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)    
