@@ -1623,6 +1623,9 @@ function IsEnableGuard()
     local is_sl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD, WEAPON_CATEGORY_LARGE_SHIELD, WEAPON_CATEGORY_TORCH) 
     local is_m = GetEquipType(HAND_LEFT, 20, 23, 25, 26, 28, 29, 30, 32, 33, 35, 36, 38) 
     local is_r = GetEquipType(HAND_LEFT, 27) 
+    
+    local isFUGS = FALSE
+    if (GetEquipType(HAND_LEFT, 26) == TRUE and sp == 163) then isFUGS = TRUE else isFUGS = FALSE end
 
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)    
@@ -1630,7 +1633,7 @@ function IsEnableGuard()
     if style == HAND_RIGHT then
         if GetEquipType(hand, WEAPON_CATEGORY_STAFF) == TRUE then
             return FALSE
-        elseif is_m == TRUE then 
+        elseif is_m == TRUE and isFUGS == FALSE   then 
             return FALSE
         elseif sp == 123 then
             return TRUE
