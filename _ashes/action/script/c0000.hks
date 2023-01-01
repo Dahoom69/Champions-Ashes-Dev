@@ -1652,7 +1652,7 @@ function IsEnableGuard()
         return TRUE
     elseif IsWeaponCanGuard() == FALSE then
         return FALSE
-    elseif (c_SwordArtsID ~= 32 and (sp_m ~= 685 or c_Style ~= HAND_RIGHT_BOTH) and (sp_o ~= 685 or c_Style ~= HAND_LEFT_BOTH) and IsDualBlade() == TRUE )  then
+    elseif (c_SwordArtsID ~= 32 and (sp_m ~= 685 or c_Style ~= HAND_RIGHT_BOTH) and (sp_o ~= 685 or c_Style ~= HAND_LEFT_BOTH) and (isFUGS == FALSE and IsDualBlade() == TRUE )  )  then
         return FALSE
     else
         return TRUE
