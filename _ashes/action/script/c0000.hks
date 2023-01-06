@@ -7965,6 +7965,14 @@ function Guard_Activate()
 end
 
 function GuardStart_Upper_onActivate()
+    local sp_m = env(345 , HAND_RIGHT)
+    if sp_m == 672 and c_Style == HAND_RIGHT_BOTH then
+        --act(2002, 621) -- set speffect 621 xxxxxxx
+        --act(2002, 622)
+        act(2002, 629)
+        act(2002, 910)
+    end
+
     if IsNodeActive("GuardStart_Upper Selector") == FALSE then
         act(9100)
     end
