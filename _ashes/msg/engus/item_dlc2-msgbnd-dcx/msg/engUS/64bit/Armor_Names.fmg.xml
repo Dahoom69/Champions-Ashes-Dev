@@ -1694,10 +1694,12 @@
 <text id="1011000">Skeleton Body</text>
 <text id="1012000">Skeleton Arms</text>
 <text id="1013000">Skeleton Legs</text>
+<text id="1015000">Skeleton Head</text>
 <text id="1020000">Demon Head</text>
 <text id="1021000">Demon Body</text>
 <text id="1022000">Demon Arms</text>
 <text id="1023000">Demon Legs</text>
+<text id="1025000">Demon Head</text>
 <text id="9000000">%null%</text>
 <text id="9010000">%null%</text>
 <text id="9020000">%null%</text>

@@ -1630,6 +1630,9 @@ This class provides more stamina regen (+10), a bonus to your bow range, but als
 <text id="1013000">Former servant of the gravelord.
 
 This class provides more stamina regen (+10), a bonus to your bow range, but also deals less stamina damage (-15%). </text>
+<text id="1015000">Former servant of the gravelord.
+
+This class provides more stamina regen (+4), a bonus to your bow range, but also deals less stamina damage (-4%). </text>
 <text id="1020000">One of the last lesser demons of Izalith.
 
 This class provides more stamina damage (+15%), lowers pyromancy FP cost (-25%), but also provides less stamina regen (-15). </text>
@@ -1642,6 +1645,9 @@ This class provides more stamina damage (+15%), lowers pyromancy FP cost (-25%),
 <text id="1023000">One of the last lesser demons of Izalith.
 
 This class provides more stamina damage (+15%), lowers pyromancy FP cost (-25%), but also provides less stamina regen (-15). </text>
+<text id="1025000">One of the last lesser demons of Izalith.
+
+This class provides more stamina damage (+3%), lowers pyromancy FP cost (-10%), but also provides less stamina regen (-3). </text>
 <text id="9000000">%null%</text>
 <text id="9010000">%null%</text>
 <text id="9020000">%null%</text>
