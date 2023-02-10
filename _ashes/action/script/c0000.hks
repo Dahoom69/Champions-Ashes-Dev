@@ -19918,30 +19918,59 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
 	local arm_twist_front_l = GetVariable("UpperArmTwistFrontL")
     local arm_twist_side_l = GetVariable("UpperArmTwistSideL")
 	
-	local max_wrist_front_right = 0
-	local max_wrist_front_left = 0
-	local max_wrist_side_right = 0
-	local max_wrist_side_left = 0
-	local max_arm_front_right = 0
-	local max_arm_front_left = 0
-	local max_arm_side_right = 0
-	local max_arm_side_left = 0
+	local max_wrist_front_m = 0
+	local max_wrist_front_o = 0
+	local max_wrist_side_m = 0
+	local max_wrist_side_o = 0
+	local max_arm_front_m = 0
+	local max_arm_front_o = 0
+	local max_arm_side_m = 0
+	local max_arm_side_o = 0
 
-    local is_ss = GetEquipType(HAND_LEFT, 23)
+    local style = c_Style
+    local is_both = FALSE
+    local is_both_right = FALSE
+    if HAND_LEFT_BOTH <= style then
+        is_both = TRUE
+    end
+    if style == HAND_RIGHT_BOTH then
+        is_both_right = TRUE
+    end
+
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    local is_pyro_m = FALSE
+    local is_pyro_o = FALSE
+    local is_gun = FALSE
+
+    if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then is_gun = TRUE end
+    if (sp_m == 149 or sp_m == 239) then is_pyro_m = TRUE end
+    if (sp_o == 149 or sp_o == 239) then is_pyro_o = TRUE end
 	
 	-- Do logic for twist values here
 	--
 
-	   -- if IsStraightSword(HAND_RIGHT) == TRUE then
-       if GetEquipType(HAND_LEFT, 23) == TRUE then
-		max_wrist_front_right = 40
-        max_wrist_front_left = 20
+        if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102 and sp_m ~= 138 ) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and is_both == FALSE
+        then   
+            max_arm_front_m = -10
+            max_arm_front_o = 10
+            max_wrist_front_m = -30
+            max_wrist_front_o = 30
 
-       elseif GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) == TRUE then
-        max_arm_front_left = -20
-        max_wrist_side_left = 35
-        max_wrist_front_left = -40
+        elseif GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) == TRUE and is_pyro_m == FALSE and is_both == FALSE  then
+            max_arm_front_m = -30
+            max_wrist_front_m = -33
+            max_arm_side_m = -0
+            max_wrist_side_m = 26
+        elseif GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) == TRUE and is_pyro_o == FALSE and is_both == FALSE  then
+            max_arm_front_o = -30
+            max_wrist_front_o = -33
+            max_arm_side_o = -0
+            max_wrist_side_o = 26
 	    end
+
+
+
 	--
 	
 	local wrist_front_r = 0
@@ -19954,23 +19983,23 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
 	local arm_side_l = 0
 
     if 0 < g_TimeActEditor_00 then
-		wrist_front_r = max_wrist_front_right * g_TimeActEditor_00
-        wrist_side_r = max_wrist_side_right * g_TimeActEditor_00
-		wrist_front_l = max_wrist_front_left * g_TimeActEditor_00
-        wrist_side_l = max_wrist_side_left * g_TimeActEditor_00
-        arm_front_r = max_arm_front_right * g_TimeActEditor_00
-        arm_side_r = max_arm_side_right * g_TimeActEditor_00
-		arm_front_l = max_arm_front_left * g_TimeActEditor_00
-        arm_side_l = max_arm_side_left * g_TimeActEditor_00
+		wrist_front_r = max_wrist_front_m * g_TimeActEditor_00
+        wrist_side_r = max_wrist_side_m * g_TimeActEditor_00
+		wrist_front_l = max_wrist_front_o * g_TimeActEditor_00
+        wrist_side_l = max_wrist_side_o * g_TimeActEditor_00
+        arm_front_r = max_arm_front_m * g_TimeActEditor_00
+        arm_side_r = max_arm_side_m * g_TimeActEditor_00
+		arm_front_l = max_arm_front_o * g_TimeActEditor_00
+        arm_side_l = max_arm_side_o * g_TimeActEditor_00
     elseif 0 < g_TimeActEditor_02 then
-		wrist_front_r = max_wrist_front_right * g_TimeActEditor_02
-        wrist_side_r = max_wrist_side_right * g_TimeActEditor_02
-		wrist_front_l = max_wrist_front_left * g_TimeActEditor_02
-        wrist_side_l = max_wrist_side_left * g_TimeActEditor_02
-        arm_front_r = max_arm_front_right * g_TimeActEditor_02
-        arm_side_r = max_arm_side_right * g_TimeActEditor_02
-		arm_front_l = max_arm_front_left * g_TimeActEditor_02
-        arm_side_l = max_arm_side_left * g_TimeActEditor_02
+		wrist_front_r = max_wrist_front_m * g_TimeActEditor_02
+        wrist_side_r = max_wrist_side_m * g_TimeActEditor_02
+		wrist_front_l = max_wrist_front_o * g_TimeActEditor_02
+        wrist_side_l = max_wrist_side_o * g_TimeActEditor_02
+        arm_front_r = max_arm_front_m * g_TimeActEditor_02
+        arm_side_r = max_arm_side_m * g_TimeActEditor_02
+		arm_front_l = max_arm_front_o * g_TimeActEditor_02
+        arm_side_l = max_arm_side_o * g_TimeActEditor_02
     end
 	
 	local maxconvergerate = 240 -- Higher means faster
@@ -19983,22 +20012,22 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
 	local convergerate_arm_front_l = maxconvergerate
     local convergerate_arm_side_l = maxconvergerate
 	
-	if max_wrist_side_right < max_wrist_front_right and max_wrist_side_right > 0 then
-        convergerate_wrist_side_r = max_wrist_side_right / max_wrist_front_right * maxconvergerate
-    elseif max_wrist_front_right < max_wrist_side_right and max_wrist_front_right > 0 then
-        convergerate_wrist_front_r = max_wrist_front_right / max_wrist_side_right * maxconvergerate
-	elseif max_wrist_side_left < max_wrist_front_left and max_wrist_side_left > 0 then
-        convergerate_wrist_side_l = max_wrist_side_left / max_wrist_front_left * maxconvergerate
-    elseif max_wrist_front_left < max_wrist_side_left and max_wrist_front_left > 0 then
-        convergerate_wrist_front_l = max_wrist_front_left / max_wrist_side_left * maxconvergerate
-	elseif max_arm_side_right < max_arm_front_right and max_arm_side_right > 0 then
-        convergerate_arm_side_r = max_arm_side_right / max_arm_front_right * maxconvergerate
-    elseif max_arm_front_right < max_arm_side_right and max_arm_front_right > 0 then
-        convergerate_arm_front_r = max_arm_front_right / max_arm_side_right * maxconvergerate
-	elseif max_arm_side_left < max_arm_front_left and max_arm_side_left > 0 then
-        convergerate_arm_side_l = max_arm_side_left / max_arm_front_left * maxconvergerate
-    elseif max_arm_front_left < max_arm_side_left and max_arm_front_left > 0 then
-        convergerate_arm_front_l = max_arm_front_left / max_arm_side_left * maxconvergerate
+	if max_wrist_side_m < max_wrist_front_m and max_wrist_side_m > 0 then
+        convergerate_wrist_side_r = max_wrist_side_m / max_wrist_front_m * maxconvergerate
+    elseif max_wrist_front_m < max_wrist_side_m and max_wrist_front_m > 0 then
+        convergerate_wrist_front_r = max_wrist_front_m / max_wrist_side_m * maxconvergerate
+	elseif max_wrist_side_o < max_wrist_front_o and max_wrist_side_o > 0 then
+        convergerate_wrist_side_l = max_wrist_side_o / max_wrist_front_o * maxconvergerate
+    elseif max_wrist_front_o < max_wrist_side_o and max_wrist_front_o > 0 then
+        convergerate_wrist_front_l = max_wrist_front_o / max_wrist_side_o * maxconvergerate
+	elseif max_arm_side_m < max_arm_front_m and max_arm_side_m > 0 then
+        convergerate_arm_side_r = max_arm_side_m / max_arm_front_m * maxconvergerate
+    elseif max_arm_front_m < max_arm_side_m and max_arm_front_m > 0 then
+        convergerate_arm_front_r = max_arm_front_m / max_arm_side_m * maxconvergerate
+	elseif max_arm_side_o < max_arm_front_o and max_arm_side_o > 0 then
+        convergerate_arm_side_l = max_arm_side_o / max_arm_front_o * maxconvergerate
+    elseif max_arm_front_o < max_arm_side_o and max_arm_front_o > 0 then
+        convergerate_arm_front_l = max_arm_front_o / max_arm_side_o * maxconvergerate
     end
 	
 	local converge_wrist_twist_front_r = ConvergeValue(wrist_front_r, wrist_twist_front_r, convergerate_wrist_front_r, convergerate_wrist_front_r)
