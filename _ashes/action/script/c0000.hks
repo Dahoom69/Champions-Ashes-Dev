@@ -19898,7 +19898,7 @@ function Update()
     SetTimeActEditorVariable()
     UpdateFemaleBlend()
     UpdateShoulderTwist()
-    UpdateWristTwist()
+    UpdateWristTwistNew()
     UpdateDuelMode()
     UpdateSunlightBlade()
     UpdateCrystalBlade()
@@ -19906,6 +19906,123 @@ function Update()
     UpdateForwardAttackShortcutBlock()
     g_FrameCount = g_FrameCount + 1
     return 
+end
+
+function UpdateWristTwistNew()	-- credits to El Fonzo 
+ 	local wrist_twist_front_r = GetVariable("WristTwistFrontR")
+    local wrist_twist_side_r = GetVariable("WristTwistSideR")
+	local wrist_twist_front_l = GetVariable("WristTwistFrontL")
+    local wrist_twist_side_l = GetVariable("WristTwistSideL")
+	local arm_twist_front_r = GetVariable("UpperArmTwistFrontR")
+    local arm_twist_side_r = GetVariable("UpperArmTwistSideR")
+	local arm_twist_front_l = GetVariable("UpperArmTwistFrontL")
+    local arm_twist_side_l = GetVariable("UpperArmTwistSideL")
+	
+	local max_wrist_front_right = 0
+	local max_wrist_front_left = 0
+	local max_wrist_side_right = 0
+	local max_wrist_side_left = 0
+	local max_arm_front_right = 0
+	local max_arm_front_left = 0
+	local max_arm_side_right = 0
+	local max_arm_side_left = 0
+
+    local is_ss = GetEquipType(HAND_LEFT, 23)
+	
+	-- Do logic for twist values here
+	--
+
+	   -- if IsStraightSword(HAND_RIGHT) == TRUE then
+       if GetEquipType(HAND_LEFT, 23) == TRUE then
+		max_wrist_front_right = 40
+        max_wrist_front_left = 20
+
+       elseif GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) == TRUE then
+        max_arm_front_left = -20
+        max_wrist_side_left = 35
+        max_wrist_front_left = -40
+	    end
+	--
+	
+	local wrist_front_r = 0
+	local wrist_side_r = 0
+	local wrist_front_l = 0
+	local wrist_side_l = 0
+	local arm_front_r = 0
+	local arm_side_r = 0
+	local arm_front_l = 0
+	local arm_side_l = 0
+
+    if 0 < g_TimeActEditor_00 then
+		wrist_front_r = max_wrist_front_right * g_TimeActEditor_00
+        wrist_side_r = max_wrist_side_right * g_TimeActEditor_00
+		wrist_front_l = max_wrist_front_left * g_TimeActEditor_00
+        wrist_side_l = max_wrist_side_left * g_TimeActEditor_00
+        arm_front_r = max_arm_front_right * g_TimeActEditor_00
+        arm_side_r = max_arm_side_right * g_TimeActEditor_00
+		arm_front_l = max_arm_front_left * g_TimeActEditor_00
+        arm_side_l = max_arm_side_left * g_TimeActEditor_00
+    elseif 0 < g_TimeActEditor_02 then
+		wrist_front_r = max_wrist_front_right * g_TimeActEditor_02
+        wrist_side_r = max_wrist_side_right * g_TimeActEditor_02
+		wrist_front_l = max_wrist_front_left * g_TimeActEditor_02
+        wrist_side_l = max_wrist_side_left * g_TimeActEditor_02
+        arm_front_r = max_arm_front_right * g_TimeActEditor_02
+        arm_side_r = max_arm_side_right * g_TimeActEditor_02
+		arm_front_l = max_arm_front_left * g_TimeActEditor_02
+        arm_side_l = max_arm_side_left * g_TimeActEditor_02
+    end
+	
+	local maxconvergerate = 240 -- Higher means faster
+	local convergerate_wrist_front_r = maxconvergerate
+    local convergerate_wrist_side_r = maxconvergerate
+	local convergerate_wrist_front_l = maxconvergerate
+    local convergerate_wrist_side_l = maxconvergerate
+    local convergerate_arm_front_r = maxconvergerate
+    local convergerate_arm_side_r = maxconvergerate
+	local convergerate_arm_front_l = maxconvergerate
+    local convergerate_arm_side_l = maxconvergerate
+	
+	if max_wrist_side_right < max_wrist_front_right and max_wrist_side_right > 0 then
+        convergerate_wrist_side_r = max_wrist_side_right / max_wrist_front_right * maxconvergerate
+    elseif max_wrist_front_right < max_wrist_side_right and max_wrist_front_right > 0 then
+        convergerate_wrist_front_r = max_wrist_front_right / max_wrist_side_right * maxconvergerate
+	elseif max_wrist_side_left < max_wrist_front_left and max_wrist_side_left > 0 then
+        convergerate_wrist_side_l = max_wrist_side_left / max_wrist_front_left * maxconvergerate
+    elseif max_wrist_front_left < max_wrist_side_left and max_wrist_front_left > 0 then
+        convergerate_wrist_front_l = max_wrist_front_left / max_wrist_side_left * maxconvergerate
+	elseif max_arm_side_right < max_arm_front_right and max_arm_side_right > 0 then
+        convergerate_arm_side_r = max_arm_side_right / max_arm_front_right * maxconvergerate
+    elseif max_arm_front_right < max_arm_side_right and max_arm_front_right > 0 then
+        convergerate_arm_front_r = max_arm_front_right / max_arm_side_right * maxconvergerate
+	elseif max_arm_side_left < max_arm_front_left and max_arm_side_left > 0 then
+        convergerate_arm_side_l = max_arm_side_left / max_arm_front_left * maxconvergerate
+    elseif max_arm_front_left < max_arm_side_left and max_arm_front_left > 0 then
+        convergerate_arm_front_l = max_arm_front_left / max_arm_side_left * maxconvergerate
+    end
+	
+	local converge_wrist_twist_front_r = ConvergeValue(wrist_front_r, wrist_twist_front_r, convergerate_wrist_front_r, convergerate_wrist_front_r)
+    local converge_wrist_twist_side_r = ConvergeValue(wrist_side_r, wrist_twist_side_r, convergerate_wrist_side_r, convergerate_wrist_side_r)
+	local converge_wrist_twist_front_l = ConvergeValue(wrist_front_l, wrist_twist_front_l, convergerate_wrist_front_l, convergerate_wrist_front_l)
+    local converge_wrist_twist_side_l = ConvergeValue(wrist_side_l, wrist_twist_side_l, convergerate_wrist_side_l, convergerate_wrist_side_l)
+	local converge_arm_twist_front_r = ConvergeValue(arm_front_r, arm_twist_front_r, convergerate_arm_front_r, convergerate_arm_front_r)
+    local converge_arm_twist_side_r = ConvergeValue(arm_side_r, arm_twist_side_r, convergerate_arm_side_r, convergerate_arm_side_r)
+	local converge_arm_twist_front_l = ConvergeValue(arm_front_l, arm_twist_front_l, convergerate_arm_front_l, convergerate_arm_front_l)
+    local converge_arm_twist_side_l = ConvergeValue(arm_side_l, arm_twist_side_l, convergerate_arm_side_l, convergerate_arm_side_l)
+	
+	SetVariable("WristTwistFrontR", converge_wrist_twist_front_r)
+	SetVariable("WristTwistFrontL", converge_wrist_twist_front_l)
+    SetVariable("WristTwistSideR", converge_wrist_twist_side_r)
+    SetVariable("WristTwistSideL", converge_wrist_twist_side_l)
+	SetVariable("UpperArmTwistFrontR", converge_arm_twist_front_r)
+	SetVariable("UpperArmTwistFrontL", converge_arm_twist_front_l)
+    SetVariable("UpperArmTwistSideR", converge_arm_twist_side_r)
+	SetVariable("UpperArmTwistSideL", converge_arm_twist_side_l)
+
+    SetVariable("IsEnableArmTwistFrontR", true)
+	SetVariable("IsEnableArmTwistSideR", true)
+	SetVariable("IsEnableArmTwistFrontL", true)
+	SetVariable("IsEnableArmTwistSideL", true)
 end
 
 function ModifiersLayer_onGenerate()
