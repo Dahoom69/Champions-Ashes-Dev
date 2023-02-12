@@ -887,9 +887,9 @@ function GetAttackRequest(is_guard)
         --if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
         if env(1116, 100260) == TRUE then return ATTACK_REQUEST_INVALID end
         
-        local spm = env(345 , HAND_RIGHT) 
+        local sp_m = env(345 , HAND_RIGHT) 
         local spo = env(345 , HAND_LEFT) 
-        if (spm == 248 or spo == 248) and env(1116, 100140) == TRUE then return ATTACK_REQUEST_INVALID end
+        if (sp_m == 248 or spo == 248) and env(1116, 100140) == TRUE then return ATTACK_REQUEST_INVALID end
 
         return GetForwardShortcutAttack()
     elseif env(1106, ACTION_ARM_R1) == TRUE then -- if changed to elseif ~halvard
@@ -1068,8 +1068,8 @@ function GetAttackRequest(is_guard)
             end
         end
         if is_both == FALSE then
-            local sp = env(345 , HAND_LEFT)
-            local spm = env(345 , HAND_RIGHT)
+            local sp_o = env(345 , HAND_LEFT)
+            local sp_m = env(345 , HAND_RIGHT)
             local is_sl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD, WEAPON_CATEGORY_LARGE_SHIELD, WEAPON_CATEGORY_TORCH) 
             local is_Gsl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_LARGE_SHIELD) 
             local is_catalysts = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) 
@@ -1084,28 +1084,28 @@ function GetAttackRequest(is_guard)
             local is_gm = FALSE
             local is_go = FALSE
             local is_gun = FALSE
-            if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) then is_gun = TRUE end
+            if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then is_gun = TRUE end
 
             local isFUGS = FALSE
-            if (GetEquipType(HAND_LEFT, 26) == TRUE and sp == 163 and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE) then isFUGS = TRUE else isFUGS = FALSE end
+            if (GetEquipType(HAND_LEFT, 26) == TRUE and sp_o == 163 and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE) then isFUGS = TRUE else isFUGS = FALSE end
 
-            if (   (sp ~= 50 and sp ~= 179 and sp ~= 232 and sp ~= 264 and sp ~= 164 and sp ~= 107 and sp ~= 663 and sp ~= 674 and sp ~= 681 )         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
-            if (   (spm ~= 50 and spm ~= 179 and spm ~= 232 and spm ~= 264 and spm ~= 164 and spm ~= 107 and spm ~= 621 and spm ~= 640 and spm ~= 663 and spm ~= 674 and spm ~= 681 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
+            if (   (sp_o ~= 50 and sp_o ~= 179 and sp_o ~= 232 and sp_o ~= 264 and sp_o ~= 164 and sp_o ~= 107 and sp_o ~= 663 and sp_o ~= 674 and sp_o ~= 681 )         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
+            if (   (sp_m ~= 50 and sp_m ~= 179 and sp_m ~= 232 and sp_m ~= 264 and sp_m ~= 164 and sp_m ~= 107 and sp_m ~= 621 and sp_m ~= 640 and sp_m ~= 663 and sp_m ~= 674 and sp_m ~= 681 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
             
             -- powerstance
-            if      (   (is_am == TRUE and spm ~= 102)                                  and    (is_a == TRUE and is_gun == FALSE and sp ~= 102 and sp ~= 691) and     (is_both == FALSE and spm ~= 138)   )                                       then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (is_rm == TRUE and spm ~= 624)                                  and    (is_r == TRUE)                                                           and                                    (is_both == FALSE and spm ~= 237)) then return ATTACK_REQUEST_BOTH_LEFT
+            if      (   (is_am == TRUE and sp_m ~= 102)                                  and    (is_a == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and     (is_both == FALSE and sp_m ~= 138)   )                                       then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  (   (is_rm == TRUE and sp_m ~= 624)                                  and    (is_r == TRUE)                                                           and                                    (is_both == FALSE and sp_m ~= 237)) then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (is_gm == TRUE)                                                 and    (is_go == TRUE)                                                          and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (is_ugsm == TRUE and spm ~= 162 and spm ~= 161 and spm ~= 253 and spm ~= 666  )  and    (is_gs == TRUE and is_gun == FALSE and (sp ~= 161 and sp ~= 253 and sp ~= 666))        and     (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (spm == 162)                                                    and    (sp == 154)                                                              and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (GetEquipType(HAND_RIGHT, 38) == TRUE and spm == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp == 50)                       and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif ((is_m == TRUE and isFUGS == FALSE) and (sp ~= 99 and sp ~= 101 and sp ~= 137 and sp ~= 151))  then
+            elseif  (   (is_ugsm == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (is_gs == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666))        and     (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  (   (sp_m == 162)                                                    and    (sp_o == 154)                                                              and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  (   (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50)                       and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
+            elseif ((is_m == TRUE and isFUGS == FALSE) and (sp_o ~= 99 and sp_o ~= 101 and sp_o ~= 137 and sp_o ~= 151))  then
                 return ATTACK_REQUEST_LEFT_HEAVY
-            elseif sp == 178 or sp == 207 or (sp == 217 and not (is_sl == TRUE and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE)  ) or sp == 220 or sp == 234 or sp == 257 or sp == 186 or sp == 20 or (is_d == TRUE and sp == 150) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp == 67) then
+            elseif sp_o == 178 or sp_o == 207 or (sp_o == 217 and not (is_sl == TRUE and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE)  ) or sp_o == 220 or sp_o == 234 or sp_o == 257 or sp_o == 186 or sp_o == 20 or (is_d == TRUE and sp_o == 150) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_o == 67) then
                 return ATTACK_REQUEST_LEFT_HEAVY
-            elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or is_r == TRUE then
+            elseif sp_o == 99 or sp_o == 101 or sp_o == 137 or sp_o == 151 or sp_o == 218 or is_r == TRUE then
                 return ATTACK_REQUEST_LEFT_HEAVY_SP -- ATTACK_REQUEST_LIGHT_KICK
-            elseif ((is_sl == TRUE and is_Gsl == FALSE) or (is_Gsl == TRUE and sp == 225)) and not (IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE)  and c_SwordArtsHand == HAND_LEFT and (c_SwordArtsID ~= SWORDARTS_PARRY) and (c_SwordArtsID ~= SWORDARTS_RIGHTARTS) then -- shields that can attack after R1 shieldstrikes
+            elseif ((is_sl == TRUE and is_Gsl == FALSE) or (is_Gsl == TRUE and sp_o == 225)) and not (IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE)  and c_SwordArtsHand == HAND_LEFT and (c_SwordArtsID ~= SWORDARTS_PARRY) and (c_SwordArtsID ~= SWORDARTS_RIGHTARTS) then -- shields that can attack after R1 shieldstrikes
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif is_sl == TRUE then
                 return ATTACK_REQUEST_INVALID
@@ -19943,6 +19943,14 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
     local is_pyro_o = FALSE
     local is_gun = FALSE
 
+    local is_gm = FALSE
+    local is_go = FALSE
+    local isFUGS = FALSE
+    if (GetEquipType(HAND_LEFT, 26) == TRUE and sp_o == 163 and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE) then isFUGS = TRUE else isFUGS = FALSE end
+
+    if (   (sp_o ~= 50 and sp_o ~= 179 and sp_o ~= 232 and sp_o ~= 264 and sp_o ~= 164 and sp_o ~= 107 and sp_o ~= 663 and sp_o ~= 674 and sp_o ~= 681 )         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
+    if (   (sp_m ~= 50 and sp_m ~= 179 and sp_m ~= 232 and sp_m ~= 264 and sp_m ~= 164 and sp_m ~= 107 and sp_m ~= 621 and sp_m ~= 640 and sp_m ~= 663 and sp_m ~= 674 and sp_m ~= 681 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
+    
     if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then is_gun = TRUE end
     if (sp_m == 149 or sp_m == 239) then is_pyro_m = TRUE end
     if (sp_o == 149 or sp_o == 239) then is_pyro_o = TRUE end
@@ -19950,13 +19958,48 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
 	-- Do logic for twist values here
 	--
 
-        if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102 and sp_m ~= 138 ) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and is_both == FALSE
-        then   
-            max_arm_front_m = -10
-            max_arm_front_o = 10
+        if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and (is_both == FALSE and sp_m ~= 138) then   
             max_wrist_front_m = -30
             max_wrist_front_o = 30
+            max_arm_front_m = -10
+            max_arm_front_o = 10
+        elseif  (   (GetEquipType(HAND_RIGHT, 27) == TRUE and sp_m ~= 624) and (GetEquipType(HAND_LEFT, 27) == TRUE) and (is_both == FALSE and sp_m ~= 237)) then 
+            max_wrist_front_m = 40
+            max_wrist_front_o = 40
+            max_arm_front_m = 10
+            max_arm_front_o = 10
+        elseif  (   (is_gm == TRUE) and (is_go == TRUE) and (is_both == FALSE)) then  -- glaives
+            max_wrist_front_m = 0
+            max_wrist_front_o = 30
+            max_arm_front_m = 10
+            max_arm_front_o = 10            
+        elseif  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (GetEquipType(HAND_LEFT, 25, 26)  == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666)) and (is_both == FALSE)) then 
+            max_wrist_front_m = 10
+            max_wrist_front_o = 20
+            max_arm_front_m = -60
+            max_arm_front_o = 20
+        elseif  (   (sp_m == 162) and (sp_o == 154) and (is_both == FALSE)) then 
 
+--[[             max_arm_front_m = -10
+            max_arm_side_m = -30
+            max_wrist_front_m = 30
+            max_wrist_side_m = -80
+
+            max_arm_front_o = -30
+            max_arm_side_o = 10
+            max_wrist_front_o = 0
+            max_wrist_side_o = -80 ]]
+
+            max_wrist_front_m = 10
+            max_wrist_front_o = 20
+            max_arm_front_m = 20
+            max_arm_front_o = -30
+            max_wrist_side_o = -80
+        elseif     (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then
+            max_wrist_front_m = 20
+            max_wrist_front_o = 20
+            max_arm_front_m = -20
+            max_arm_front_o = -20               
         elseif GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) == TRUE and is_pyro_m == FALSE and is_both == FALSE  then
             max_arm_front_m = -30
             max_wrist_front_m = -33
