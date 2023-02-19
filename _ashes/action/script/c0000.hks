@@ -19943,6 +19943,9 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
     local is_pyro_o = FALSE
     local is_gun = FALSE
 
+    local isStance = FALSE
+    if IsNodeActive("DrawStanceRightLoopMove_Upper_CMSG", "DrawStanceRightLoopMoveNoSync_Upper_CMSG", "DrawStanceRightLoopNoSync_CMSG","DrawStanceRightStart_CMSG","DrawStanceRightStart_Upper_CMSG","DrawStanceRightEnd_CMSG", "DrawStanceRightLoop_CMSG", "DrawStanceRightLoop_Upper_CMSG") == TRUE then isStance = TRUE else isStance = FALSE end     
+
     local is_gm = FALSE
     local is_go = FALSE
     local isFUGS = FALSE
@@ -19958,6 +19961,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
 	-- Do logic for twist values here
 	--
 
+    if isStance == FALSE then
         if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and (is_both == FALSE and sp_m ~= 138) then   
             max_wrist_front_m = -30
             max_wrist_front_o = 30
@@ -20011,7 +20015,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
             max_arm_side_o = -0
             max_wrist_side_o = 26
 	    end
-
+    end
 
 
 	--
