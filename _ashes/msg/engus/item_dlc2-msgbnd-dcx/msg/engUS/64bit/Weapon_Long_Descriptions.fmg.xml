@@ -18723,8 +18723,7 @@ Unleash the wrath of a true hollow, executing relentless consecutive attacks. Qu
 
 An heirloom of Elfriede's distant past, this scythe crossed into the Painted World, transforming from a tool of death to a graceful defender. Though the blade now serves a different role, it is still capable of bringing a cold and gentle end.
 
-Skill: Snowstep
-
+Skill: Stance
 Brandish the scythe with a unique stance. Close the distance with light attack, and release a graceful circular slash with strong attack.</text>
 <text id="34000000">A double-headed glaive from the far east, often used by warrior monks. Best used at 45 dexterity.
 
@@ -18732,14 +18731,12 @@ Before Lothric converged, these monks travelled to the west to find inner peace.
 
 Their purity of mind, body and soul were never found, however. Some say it was the very waters that held together their temple that lead them to their eventual demise.
 
-Skill: Monastic Stance
-Enter a stance that deflects projectiles.
+Skill: Stance
+Enter a monastic stance that deflects projectiles.
 While in stance, use normal attack release a barrage of slashes, and strong attack to launch yourself in a spinning motion at your enemy, knocking them back.</text>
-<text id="34010000">A heavy, black iron axe used by eastern mercenaries and assassins. Has an attached percussion hammer to create fire.
+<text id="34010000">A heavy, black iron axe used by eastern mercenaries and monks attached to the left forearm. Has a percussion hammer to create fire.
 
 The strength of the axe lies in its weight, which easily splinters shields. Hitting the sparking hammer causes a violent eruption of flame which increases the area of the attack.
-
-Once the favoured weapon of a mercenary known as "Yoshimitsu", it was lost along with his left arm.
 
 Skill: Weapon Skill
 Equipping this in the left hand allows one to perform the Skill of the right hand weapon.</text>
