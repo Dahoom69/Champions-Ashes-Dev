@@ -240,8 +240,8 @@
 <text id="20097">%null%</text>
 <text id="20098">%null%</text>
 <text id="20099">%null%</text>
-<text id="20100">Increases bleed resistance</text>
-<text id="20101">Increases bleed resistance</text>
+<text id="20100">Increases bleed resistance and bleed proc damage</text>
+<text id="20101">Increases bleed resistance and bleed proc damage</text>
 <text id="20102">%null%</text>
 <text id="20103">%null%</text>
 <text id="20104">%null%</text>
@@ -250,8 +250,8 @@
 <text id="20107">%null%</text>
 <text id="20108">%null%</text>
 <text id="20109">%null%</text>
-<text id="20110">Increases poison resistance</text>
-<text id="20111">Increases poison resistance</text>
+<text id="20110">Increases poison resistance and gives poison aura</text>
+<text id="20111">Increases poison resistance and gives poison aura</text>
 <text id="20112">%null%</text>
 <text id="20113">%null%</text>
 <text id="20114">%null%</text>
@@ -260,7 +260,7 @@
 <text id="20117">%null%</text>
 <text id="20118">%null%</text>
 <text id="20119">%null%</text>
-<text id="20120">Increases curse resistance</text>
+<text id="20120">Increases curse resistance and boosts Luck</text>
 <text id="20121">%null%</text>
 <text id="20122">%null%</text>
 <text id="20123">%null%</text>
@@ -270,8 +270,8 @@
 <text id="20127">%null%</text>
 <text id="20128">%null%</text>
 <text id="20129">%null%</text>
-<text id="20130">Raises poison, bleed, curse and frost resist</text>
-<text id="20131">Raises poison, bleed, curse and frost resist</text>
+<text id="20130">Raises poison, bleed, curse and frost resist among other things</text>
+<text id="20131">Raises poison, bleed, curse and frost resist among other things</text>
 <text id="20132">%null%</text>
 <text id="20133">%null%</text>
 <text id="20134">%null%</text>

@@ -694,13 +694,13 @@ and dark damage absorption by 7% (3% in PvP).</text>
 <text id="20098">%null%</text>
 <text id="20099">%null%</text>
 <text id="20100">One of the bite rings native to Carim.
-Increases bleed resistance by 90 units.
+Increases bleed resistance by 90 and increases bleed proc damage by x1.2.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.
 Clerics, however, dabble freely in the art.</text>
 <text id="20101">One of the bite rings native to Carim.
-Increases bleed resistance by 140 units.
+Increases bleed resistance by 140 and increases bleed proc damage by x1.2.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.
@@ -714,13 +714,13 @@ Clerics, however, dabble freely in the art.</text>
 <text id="20108">%null%</text>
 <text id="20109">%null%</text>
 <text id="20110">One of the bite rings native to Carim.
-Increases poison resistance by 90 units.
+Increases poison resistance by 90 and gives the user a poisonous aura.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.
 Clerics, however, dabble freely in the art.</text>
 <text id="20111">One of the bite rings native to Carim.
-Increases poison resistance by 140 units.
+Increases poison resistance by 140 and gives the user a poisonous aura.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.
@@ -734,7 +734,7 @@ Clerics, however, dabble freely in the art.</text>
 <text id="20118">%null%</text>
 <text id="20119">%null%</text>
 <text id="20120">One of the bite rings native to Carim.
-Increases curse resistance by 150 units.
+Increases curse resistance by 150 and increases Luck by 5.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.
@@ -749,13 +749,15 @@ Clerics, however, dabble freely in the art.</text>
 <text id="20128">%null%</text>
 <text id="20129">%null%</text>
 <text id="20130">One of the bite rings native to Carim.
-Raises poison, bleed, frost and curse resist by 40 units.
+Raises poison, bleed, frost and curse resist by 40.
+Raises frost proc damage by x1.2, bleed proc damage by x1.1 and gives the user a small poisonous aura.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.
 Clerics, however, dabble freely in the art.</text>
 <text id="20131">One of the bite rings native to Carim.
-Raises poison, bleed, frost and curse resist by 60 units.
+Raises poison, bleed, frost and curse resist by 60.
+Raises frost proc damage by x1.2, bleed proc damage by x1.1 and gives the user a small poisonous aura.
 
 The crafting of these rings is forbidden,
 perhaps owing to a fear of malleable stone.

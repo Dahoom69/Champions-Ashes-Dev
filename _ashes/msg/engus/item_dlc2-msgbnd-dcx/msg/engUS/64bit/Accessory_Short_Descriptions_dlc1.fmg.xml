@@ -4,6 +4,6 @@
 <version>DarkSouls3</version>
 <bigendian>False</bigendian>
 <entries>
-<text id="21000">Increases frost resistance</text>
+<text id="21000">Increases frost resistance and frost proc damage</text>
 </entries>
 </fmg>
