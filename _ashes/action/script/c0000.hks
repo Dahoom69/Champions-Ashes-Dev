@@ -19908,7 +19908,7 @@ function Update()
     return 
 end
 
-function UpdateWristTwistNew()	-- credits to El Fonzo 
+function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
  	local wrist_twist_front_r = GetVariable("WristTwistFrontR")
     local wrist_twist_side_r = GetVariable("WristTwistSideR")
 	local wrist_twist_front_l = GetVariable("WristTwistFrontL")
@@ -20003,7 +20003,17 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
             max_wrist_front_m = 20
             max_wrist_front_o = 20
             max_arm_front_m = -20
-            max_arm_front_o = -20               
+            max_arm_front_o = -20              
+        elseif sp_m == 641 then 
+            if iT == TRUE then
+                max_wrist_front_m = 25
+                max_arm_front_m = -30
+                max_arm_side_m = 15
+            else
+                max_wrist_front_m = -15
+                max_arm_front_m = -10
+                max_arm_side_m = 15
+            end
         elseif GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) == TRUE and is_pyro_m == FALSE and is_both == FALSE  then
             max_arm_front_m = -30
             max_wrist_front_m = -33
@@ -20014,6 +20024,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo
             max_wrist_front_o = -33
             max_arm_side_o = -0
             max_wrist_side_o = 26
+
 	    end
     end
 
