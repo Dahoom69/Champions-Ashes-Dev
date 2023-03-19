@@ -20026,6 +20026,18 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
                 max_arm_front_m = -10
                 max_arm_side_m = 15
             end
+        elseif sp_m == 642 then 
+            if iT == TRUE then
+                max_wrist_front_m = 35
+                max_arm_front_m = -30
+                max_arm_side_m = 35
+                max_wrist_side_m = 10
+            else
+                max_wrist_front_m = -15
+                max_arm_front_m = -40
+                max_arm_side_m = 15
+                max_wrist_side_m = 20
+            end
         end
     end
 
