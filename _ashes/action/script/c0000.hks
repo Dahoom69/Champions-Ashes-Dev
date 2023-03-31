@@ -1074,10 +1074,12 @@ function GetAttackRequest(is_guard)
             local is_Gsl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_LARGE_SHIELD) 
             local is_catalysts = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) 
             local is_m = GetEquipType(HAND_LEFT, 20, 23, 25, 26, 28, 29, 30, 32, 33, 35, 36, 38) 
+            local is_ss = GetEquipType(HAND_LEFT, 23)
             local is_gs = GetEquipType(HAND_LEFT, 25, 26) 
             local is_r = GetEquipType(HAND_LEFT, 27) 
             local is_a = GetEquipType(HAND_LEFT, 30)
             local is_d = GetEquipType(HAND_LEFT, 20) 
+            local is_ssm = GetEquipType(HAND_RIGHT, 23) 
             local is_ugsm = GetEquipType(HAND_RIGHT, 26) 
             local is_rm = GetEquipType(HAND_RIGHT, 27) 
             local is_am = GetEquipType(HAND_RIGHT, 30)
@@ -1094,6 +1096,7 @@ function GetAttackRequest(is_guard)
             
             -- powerstance
             if      (   (is_am == TRUE and sp_m ~= 102)                                  and    (is_a == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and     (is_both == FALSE and sp_m ~= 138)   )                                       then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  (   (is_ssm == TRUE and sp_m ~= 685 and sp_m ~= 236)                                                 and    (is_ss == TRUE and is_gun == FALSE and sp_o ~= 651)                and     (is_both == FALSE and sp_m ~= 142))                                          then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (is_rm == TRUE and sp_m ~= 624)                                  and    (is_r == TRUE)                                                           and                                    (is_both == FALSE and sp_m ~= 237)) then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (is_gm == TRUE)                                                 and    (is_go == TRUE)                                                          and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (is_ugsm == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (is_gs == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666))        and     (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
@@ -2327,14 +2330,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local sp_m = env(345 , HAND_RIGHT)
         local sp_o = env(345 , HAND_LEFT)
         if r1 == "W_AttackRightLightDash" then
-            if  (GetEquipType(HAND_RIGHT, 30) == TRUE and GetEquipType(HAND_LEFT, 30) == TRUE)  or  (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE) or (sp_m == 162 and sp_o == 154) or (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft3" -- powerstance
+            if  (GetEquipType(HAND_RIGHT, 30) == TRUE and GetEquipType(HAND_LEFT, 30) == TRUE)  or (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE) or (sp_m == 162 and sp_o == 154) or (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft3" -- powerstance
             elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeft1" 
             elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then l1 = "W_AttackBothLeft3" 
             elseif sp_m == 649 then l1 = "W_AttackBothLeft1" 
             elseif sp_m == 664 then l1 = "W_AttackBothHeavyKickSpecial" 
             else l1 = "W_AttackBothLeftDash" end
         elseif r1 == "W_AttackRightLightStep" then
-            if          (GetEquipType(HAND_RIGHT, 30) == TRUE and GetEquipType(HAND_LEFT, 30) == TRUE)  or  (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE)  then l1 = "W_AttackBothLeft3"
+            if          (GetEquipType(HAND_RIGHT, 30) == TRUE and GetEquipType(HAND_LEFT, 30) == TRUE) or  (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE)  then l1 = "W_AttackBothLeft3"
             elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeft1" 
             elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then l1 = "W_AttackBothLeft2" 
             elseif (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft2" 
@@ -8580,7 +8583,8 @@ function AttackRightLight1_onUpdate() -- r11
     local is_Ao = GetEquipType(HAND_LEFT, 30) 
 
     local offhand = "W_AttackLeftLight1"
-    if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end    
+    if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
+    if (GetEquipType(HAND_RIGHT, 23) == TRUE and GetEquipType(HAND_LEFT, 23)  == TRUE) then offhand = "W_AttackBothLeft2" end     
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253))) then offhand = "W_AttackBothLeft2" end
     if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft2" end 
 
