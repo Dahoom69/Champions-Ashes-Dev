@@ -1095,11 +1095,11 @@ function GetAttackRequest(is_guard)
             if (   (sp_m ~= 50 and sp_m ~= 179 and sp_m ~= 232 and sp_m ~= 264 and sp_m ~= 164 and sp_m ~= 107 and sp_m ~= 621 and sp_m ~= 640 and sp_m ~= 663 and sp_m ~= 674 and sp_m ~= 681 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
             
             -- powerstance
-            if      (   (is_am == TRUE and sp_m ~= 102)                                  and    (is_a == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and     (is_both == FALSE and sp_m ~= 138)   )                                   then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (is_ssm == TRUE and sp_m ~= 685 and sp_m ~= 236 and sp_m ~= 612 and sp_m ~= 101 and sp_m ~= 649 and sp_m ~= 627) and (is_ss == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)) then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (is_rm == TRUE and sp_m ~= 624)                                  and    (is_r == TRUE)                                                           and                                    (is_both == FALSE and sp_m ~= 237)) then return ATTACK_REQUEST_BOTH_LEFT
+            if      is_axe_ps == TRUE   then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  is_ss_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  is_ts_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (is_gm == TRUE)                                                 and    (is_go == TRUE)                                                          and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (is_ugsm == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (is_gs == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666))        and     (is_both == FALSE))         then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  is_ugs_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (sp_m == 162)                                                    and    (sp_o == 154)                                                              and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50)                       and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif ((is_m == TRUE and isFUGS == FALSE) and (sp_o ~= 99 and sp_o ~= 101 and sp_o ~= 137 and sp_o ~= 151))  then
@@ -8650,18 +8650,12 @@ function AttackRightLight2_onUpdate() -- r12
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
-    
-    local is_Am = GetEquipType(HAND_RIGHT, 30) -- powerstance
-    local is_Ao = GetEquipType(HAND_LEFT, 30) 
-
     local offhand = "W_AttackLeftLight1"
-    if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft3" end
+    if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
+    if is_ss_ps == TRUE then offhand = "W_AttackBothLeft3" end
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253))) then offhand = "W_AttackBothLeft3" end
     if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft3" end 
-
-    local is_Rm = GetEquipType(HAND_RIGHT, 27) 
-    local is_Ro = GetEquipType(HAND_LEFT, 27) 
-    if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft3" end
+    if is_ts_ps == TRUE then offhand = "W_AttackBothLeft3" end
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
 
 
@@ -10099,6 +10093,7 @@ function AttackBothLeft1_onUpdate() -- l11
 end
 
 function AttackBothLeft2_onUpdate()  -- l12
+    local r1 = "W_AttackRightLight1"
     local b2 = "W_AttackBothHeavy1Start"
     local r2 = "W_AttackRightHeavy1Start"
     if i1BB == TRUE then 
@@ -10106,46 +10101,42 @@ function AttackBothLeft2_onUpdate()  -- l12
         b2 = "W_AttackBothHeavy1SubStart" 
     end
 
-    local r1 = "W_AttackBothLight3"
+    local b1 = "W_AttackBothLight3"
     local sp_m = env(345 , HAND_RIGHT)
-    if sp_m == 613  then r1 = "W_AttackBothLeft3" end
+    if sp_m == 613  then b1 = "W_AttackBothLeft3" end
 
     if sp_m == 643 then 
         b2 = "W_AttackBothHeavy1Start"
-        r1 = "W_AttackBothLight3" 
-        --r1 = "W_AttackBothHeavySpecial1Start" 
+        b1 = "W_AttackBothLight3" 
+        --b1 = "W_AttackBothHeavySpecial1Start" 
      end
 
-    if sp_m == 667 then r1 = "W_AttackBothHeavySpecial1Start" end
+    if sp_m == 667 then b1 = "W_AttackBothHeavySpecial1Start" end
 
      if sp_m == 264 then 
-        r1 = "W_AttackBothLight1" 
+        b1 = "W_AttackBothLight1" 
      end
 
-     if sp_m == 610 then r1 =  "W_AttackBothHeavySpecial1Start" end
+     if sp_m == 610 then b1 =  "W_AttackBothHeavySpecial1Start" end
      if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
      if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
      if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-
-     local is_Am = GetEquipType(HAND_RIGHT, 30) -- powerstance
-     local is_Ao = GetEquipType(HAND_LEFT, 30) 
  
      local offhand = "W_AttackLeftHeavy1"
-     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft3" end
+     if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
+     if is_ss_ps == TRUE then r1 = "W_AttackRightLight3" end
 
      local b1 = "W_AttackBothLeft3"
-     if sp_m == 649 then r1 = "W_AttackBothLight1" b1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
-     if sp_m == 664 then  b1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
+     if sp_m == 649 then b1 = "W_AttackBothLight1" b1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
+     if sp_m == 664 then b1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
 
-     local is_Rm = GetEquipType(HAND_RIGHT, 27) 
-     local is_Ro = GetEquipType(HAND_LEFT, 27) 
-     if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft3" end
+     if is_ts_ps == TRUE then offhand = "W_AttackBothLeft3" end
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
 
-     if env(1116, 100283) == FALSE  and AttackCommonFunction("W_AttackRightLight1", r2, b1, offhand, r1, b2, FALSE, TRUE) == TRUE then
+     if env(1116, 100283) == FALSE  and AttackCommonFunction(r1, r2, b1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
-    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE and AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackBothLeft3", offhand, r1, b2, FALSE, TRUE) == TRUE then return
-    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight1", r2, "W_AttackBothLeft3", offhand, r1, b2, FALSE, TRUE) == TRUE then
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, "W_AttackBothLeft3", offhand, b1, b2, FALSE, TRUE) == TRUE then return
+    elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, "W_AttackBothLeft3", offhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
@@ -19961,35 +19952,37 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
     if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then is_gun = TRUE end
     if (sp_m == 149 or sp_m == 239) then is_pyro_m = TRUE end
     if (sp_o == 149 or sp_o == 239) then is_pyro_o = TRUE end
-	
+
+    if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and (is_both == FALSE and sp_m ~= 138)                                                                              then is_axe_ps = TRUE else is_axe_ps = FALSE end
+    if (GetEquipType(HAND_RIGHT, 23) == TRUE and sp_m ~= 685 and sp_m ~= 236 and sp_m ~= 612 and sp_m ~= 101 and sp_m ~= 649 and sp_m ~= 627) and (GetEquipType(HAND_LEFT, 23) == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)   then is_ss_ps = TRUE else is_ss_ps = FALSE end
+	if (GetEquipType(HAND_RIGHT, 27) == TRUE and sp_m ~= 624) and (GetEquipType(HAND_LEFT, 27) == TRUE) and (is_both == FALSE and sp_m ~= 237)                                                                                                                                  then is_ts_ps = TRUE else is_ts_ps = FALSE end
+    if (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (GetEquipType(HAND_LEFT, 25, 26)  == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666)) and (is_both == FALSE)                 then is_ugs_ps = TRUE else is_ugs_ps = FALSE end
+
 	-- Do logic for twist values here
 	--
 
     if isStance == FALSE then
-        if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and (is_both == FALSE and sp_m ~= 138) then   
+        if is_axe_ps == TRUE  then   
             max_wrist_front_m = -30
             max_wrist_front_o = 30
             max_arm_front_m = -10
             max_arm_front_o = 10
-
-        elseif  (   (GetEquipType(HAND_RIGHT, 23) == TRUE and sp_m ~= 685 and sp_m ~= 236 and sp_m ~= 612 and sp_m ~= 101 and sp_m ~= 649 and sp_m ~= 627) and (GetEquipType(HAND_LEFT, 23) == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)) then
+        elseif is_ss_ps == TRUE then
             max_wrist_front_m = 40
             max_wrist_front_o = 40
             max_arm_front_m = 10
             max_arm_front_o = 10
-        
-        elseif  (   (GetEquipType(HAND_RIGHT, 27) == TRUE and sp_m ~= 624) and (GetEquipType(HAND_LEFT, 27) == TRUE) and (is_both == FALSE and sp_m ~= 237)) then 
+        elseif is_ts_ps == TRUE  then 
             max_wrist_front_m = 40
             max_wrist_front_o = 40
             max_arm_front_m = 10
             max_arm_front_o = 10
-
         elseif  (   (is_gm == TRUE) and (is_go == TRUE) and (is_both == FALSE)) then  -- glaives
             max_wrist_front_m = 0
             max_wrist_front_o = 30
             max_arm_front_m = 10
             max_arm_front_o = 10            
-        elseif  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (GetEquipType(HAND_LEFT, 25, 26)  == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666)) and (is_both == FALSE)) then 
+        elseif is_ugs_ps == TRUE then 
             max_wrist_front_m = 10
             max_wrist_front_o = 20
             max_arm_front_m = -60
