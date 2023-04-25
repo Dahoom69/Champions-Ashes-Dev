@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 2.3 10.14.2022"</Description>
+      <Description>"Open - The Champion's Archive 2.4 4.25.2023"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -2674,7 +2674,12 @@ CREATETHREAD(ItemGib)
 40000104:Green Blossom
 40000105:Budding Green Blossom
 40000106:Budding Green Blossom (Message)
+40000107:Crescent Moon Grass
 40000118:Repair Powder
+4000011F:Molotov Cocktail
+40000120:Rope Molotov Cocktail
+4000011D:Timed Molotov
+4000011E:Rope Timed Molotov
 400001CA:Blue Bug Pellet
 400001CB:Red Bug Pellet
 400001CC:Yellow Bug Pellet
@@ -2687,6 +2692,7 @@ CREATETHREAD(ItemGib)
 40000112:Purging Stone
 40000136:Throwing Knife
 40000137:Poison Throwing Knife
+40000138:Crystal Dart
 40000122:Kukri
 4000013B:Church Guardian Shiv
 40000124:Firebomb
@@ -3068,6 +3074,7 @@ CREATETHREAD(ItemGib)
 40256E08:Black Flame
 4027D350:Black Fire Orb
 4024BA58:Black Serpent
+40280DE8:Black Flame Ritual
 403540D0:Heal Aid
 403567E0:Heal
 40356BC8:Med Heal
@@ -3320,6 +3327,7 @@ CREATETHREAD(ItemGib)
 00B80560:Spotted Whip
 00B7B740:Witch's Locks
 00B82C70:Rose of Ariandel
+00B85380:Allfather's Morningstar
 0001ADB0:Fists
 00A7FFD0:Caestus
 01CB2310:Andre's Technique
@@ -3417,12 +3425,14 @@ CREATETHREAD(ItemGib)
 02796470:Fist of Gracia
 0279B290:Piercing Rifle
 02B66D70:Parrying Gun
+0206F390:Loaded Axe
 02826520:Twinblade
 02828C30:Godskin Peeler
 0282B340:Twinned Knights Sword
 0282DA50:Eleonora's Twinblade
 02830160:Gargoyle's Twinblade
 02832870:Gargoyle's Black Blades
+0206CC80:Glaive Adept Twinblade
 01312D00:Buckler
 01339E00:Target Shield
 01315410:Small Leather Shield
@@ -4285,6 +4295,18 @@ CREATETHREAD(ItemGib)
 20004EF2:Ring of Sacrifice
 200055F0:Combo Ring
 200059D8:Demon's Seal
+20005A3C:Hunter's Signet Ring
+20005A3D:Hunter's Signet Ring +1
+20005A3E:Hunter's Signet Ring +2
+20005A3F:Hunter's Signet Ring +3
+20005A46:Archmage's Pendant
+20005A47:Archmage's Pendant +1
+20005A48:Archmage's Pendant +2
+20005A49:Archmage's Pendant +3
+20005A50:Shinobi's Charm
+20005A51:Shinobi's Charm +1
+20005A52:Shinobi's Charm +2
+20005A53:Shinobi's Charm +3
 20002710:Blade of the Darkmoon
 20002724:Watchdogs of Farron
 2000272E:Aldrich Faithful
@@ -4433,6 +4455,9 @@ local newWeapons =
 {
 
 -- weapons
+  0x0206CC80, --Glaive Adept Twinblade
+  0x00B85380, --Allfather's Morningstar
+  0x0206F390, --Loaded Axe Test Up
   0x02826520, --Twinblade
   0x02828C30, --Godskin Peeler
   0x0282B340, --Twinned Knights Sword
@@ -5881,6 +5906,18 @@ Spawn()
                           <AssemblerScript>{$lua}
 local newRings =
   {
+  0x20005A3C, --Bold Hunter's Mark
+  0x20005A3D, --Bold Hunter's Mark +1
+  0x20005A3E, --Bold Hunter's Mark +2
+  0x20005A3F, --Bold Hunter's Mark +3
+  0x20005A46, --Archmage's Mark
+  0x20005A47, --Archmage's Mark +1
+  0x20005A48, --Archmage's Mark +2
+  0x20005A49, --Archmage's Mark +3
+  0x20005A50, --Shinobi's Mark
+  0x20005A51, --Shinobi's Mark +1
+  0x20005A52, --Shinobi's Mark +2
+  0x20005A53, --Shinobi's Mark +3
   0x200059D8, --Demon's Seal
   0x200055F0, --Combo Ring
   0x20004F1A, --Ring of the Unburdened
@@ -6070,6 +6107,7 @@ Spawn()
                           <AssemblerScript>{$lua}
 local newMagic =
   {
+  0x40280DE8, --Black Flame Ritual
   0x401502E8, --Glintstone Arc
   0x4014EB78, --Rock Sling
   0x40167600, --Gravity Well
@@ -6351,6 +6389,12 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newItems =
   {
+  0x40000138, --Crystal Dart
+  0x40000107, --Crescent Moon Grass
+  0x4000011F, --Molotov Cocktail
+  0x40000120, --Rope Molotov Cocktail
+  0x4000011D, --Timed Molotov
+  0x4000011E, --Rope Timed Molotov
   0x40000123, --Oil Urn
   0x4000017E, --Crystal Lantern
   0x404D0EA6, --Truffle Sherbet
@@ -7179,6 +7223,7 @@ unregisterSymbol(TargetBonfireId)
 3702956:Water Reserve
 3702953:Anor Londo
 3702958:Prison Tower
+3702959:Abandoned Terrace
 3702952:Chamber of the Princess
 3902950:Irithyll Dungeon
 3902952:Profaned Capital
