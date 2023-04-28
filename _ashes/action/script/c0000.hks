@@ -2257,7 +2257,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             local speed = GetVariable("MoveSpeedLevelReal")
             if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
             elseif r1 == "W_AttackRightLightStep" then 
-                if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then l2 = "W_AttackLeftHeavySp2"
+                if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) and sp_m ~= 679 then l2 = "W_AttackLeftHeavySp2"
                 else  l2 = "W_AttackLeftHeavy2" end
             elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp2"
             elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
@@ -9607,6 +9607,7 @@ function AttackLeftHeavy1_onUpdate()
     if sp_o == 691 then 
         l1 = "W_AttackLeftHeavy2" 
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  r1 = "W_AttackLeftHeavySp2" end
+        if sp_m == 679 then r1 = "W_AttackRightLight1" end
     end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -9665,6 +9666,7 @@ function AttackLeftHeavy2_onUpdate()
             if env(1116, 100341) == TRUE then r1 = "W_AttackLeftHeavySp2" 
             else r1 = "W_AttackRightLight2" end
         end
+        if sp_m == 679 then r1 = "W_AttackRightLight1" end
     end
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -9730,6 +9732,7 @@ function AttackLeftHeavy3_onUpdate()
     if sp_o == 691 then 
         l1 = "W_AttackLeftHeavy2" 
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  r1 = "W_AttackLeftHeavySp2" end
+        if sp_m == 679 then r1 = "W_AttackRightLight1" end
     end
     
         if AttackCommonFunction(r1, r2, nil, l1, "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
