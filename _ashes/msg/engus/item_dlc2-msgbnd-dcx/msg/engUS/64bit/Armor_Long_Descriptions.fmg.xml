@@ -3154,11 +3154,14 @@ In Lothric, she served as the prince's wet nurse and one of the Three Pillars of
 <text id="64921000">Garb of the High Priestess.
 
 She remains vigilant as the prince's wet nurse and one of the Three Pillars of the king's rule.</text>
-<text id="64930000">Formal hat often adorning noblemen and preachers.
+<text id="64930000">Formal hat often adorning noblemen and politicians.
 
 For the people who wore this hat, a keen fascination with beauty and denouncing brutality was commonplace.
 
 More often than not, the men and women donning this hat were the ones most brutish, largely directing their incessant malice towards workers and servants below.</text>
+<text id="64931000">Formal garb often adorning foreign beast hunters and noblemen.
+
+While this attire provides minimal defense, it is made distinct from modern coats due to the high collar and number of belts.</text>
 <text id="65000000">Crown of the old king who protected the Frigid Valley's capital.
 
 Much like its owner, this once glorious garment has suffered greatly from the encroachment of dark.</text>
@@ -4460,28 +4463,22 @@ An imposing defense behind the knight's greatshield, so reowned that replicas ha
 <text id="99823000">The thick, metal leggings of a large knight.
 
 The metal is weakest at its ankles and soaked with what feels like oil.</text>
-<text id="99830000">Peculiar hat of foreign origin.
+<text id="99830000">Peculiar hat and gaiter often adorning foreign beast hunters.
 
-A fine piece of attire that provides minimal defense; made distinct from modern caps due to the withered feathers.
+While this attire provides minimal defense, it is made distinct from modern hats due to its withered feathers.
 
-Although some think it to foretell the end of time, the origin of the garb is unknown.</text>
-<text id="99831000">Peculiar garb of foreign origin, accompanied with a short cape to wipe away blood.
+Although some think it to foretell the end of days, the origin of the hat is unknown.</text>
+<text id="99831000">Formal garb often adorning foreign beast hunters, accompanied with a short cape to wipe away blood.
 
-A fine piece of attire that provides minimal defense; made distinct from modern coats due to the high collar and numerous leather belts.
+While this attire provides minimal defense, it is made distinct from modern coats due to the high collar and number of belts.</text>
+<text id="99832000">Formal gloves often adorning foreign beast hunters.
 
-Although some think it to foretell the end of time, the origin of the garb is unknown.</text>
-<text id="99832000">Peculiar gloves of foreign origin.
+While this attire provides minimal defense, it is made distinct from modern gloves by an archaic union of bronze and coarse leather.
 
-A fine piece of attire that provides minimal defense; made distinct from modern gloves by an archaic union of bronze and coarse leather.
+The Great Swamp too uses bronze ornamentation, though their culture believes it wards off evil. Perhaps the myths are related.</text>
+<text id="99833000">Formal trousers often adorning foreign beast hunters.
 
-The Great Swamp too uses bronze ornamentation, though their culture believes it wards off evil. Perhaps the myths are related.
-
-Although some think it to foretell the end of time, the origin of the garb is unknown.</text>
-<text id="99833000">Peculiar trousers of foreign origin.
-
-A fine piece of attire that provides minimal defense; made distinct from modern leggings by the holster on the right leg.
-
-Although some think it to foretell the end of time, the origin of the garb is unknown.</text>
+While this attire provides minimal defense, it is made distinct from modern leggings by the significant amount of small holes in the right thigh.</text>
 <text id="99840000">A decorated, gold plated helm from another realm that converged into Lothric.
 
 An ever-shifting world, the elusive lands of the past and future flow out like the tide while leaving its mark behind. I doubt you can even imagine it...</text>
