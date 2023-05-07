@@ -7323,7 +7323,7 @@ Briefly boosts the strength of dark miracles.</text>
 This is both a weapon and a sorcery staff. The gold specks are remnants of lost sorceries.
 
 Skill: Steady Chant
-For a short moment, boost the strength of sorceries. </text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds.</text>
 <text id="8230000">Hammer crafted from the trunk of a great tree that has survived for an overwhelmingly long time.
 
 It was said that the old tree posessed thought, and became an object of worship for citizens of the Undead Settlement.
@@ -10521,7 +10521,7 @@ Spell Buff 197 at 40 Luck, Man-Grub Staff +5
 Spell Buff 178 at 30 Luck, Man-Grub Staff +5
 
 Skill: Steady Chant
-Boost the strength of sorceries for a very short period. Works while equipped in either hand.</text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds. Works while equipped in either hand.</text>
 <text id="13110000">Large staff bestowed upon Archdeacons
 of the Cathedral of the Deep.
 
@@ -10529,15 +10529,13 @@ The Archdeacon McDonnell's trespass,
 the sin of channeling faith for sorcery, transformed what was once merely a symbol of ecclesiastic authority into a catalyst of sorceries.
 
 Skill: Steady Chant
-Boost the strength of sorceries for
-a very short period. Works while
-equipped in either hand.</text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds.  Works while equipped in either hand.</text>
 <text id="13120000">A ritual spear presented to Darkmoon Knights before Sulyvahn claimed the title of Pontiff.
 
 Can also be used as a staff. 
 
 Skill: Steady Chant
-Boost the strength of sorceries for a very short period.</text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds.  Works while equipped in either hand.</text>
 <text id="13140000">A sacred chime belonging to Yorshka. Her brother, the former knight captain, presented her with this medium together with another gift: her name.
 
 The ringing of the chime must have done much to soothe her loneliness.
@@ -10552,7 +10550,7 @@ The beasts employed techniques from long ago, and their magical power has become
 Crystal spheres devour the will of the user, and this staff increases the potency of sorceries at the cost of increased FP consumption for Skills.
 
 Skill: Crystal Steady Chant
-Boost the strength of sorceries for a very short period. Works while equipped in either hand.</text>
+Boosts the strength of all sorceries by x1.3, and Intelligence by +10 for 15 seconds.  Works while equipped in either hand.</text>
 <text id="13170000">Catalyst used by generations of heretic sorcerers.
 
 Sorcery is a logical academic discipline, and the power of sorceries depends heavily on the caster's intelligence.
@@ -10564,19 +10562,19 @@ Equipping this staff in the left hand allows one to perform the Skill of the rig
 The court sorcerers laid claim to the legacy of the renowned Big Hat Logan, going so far as to emulate him with copies of the staff he used.
 
 Skill: Steady Chant
-Boost the strength of sorceries for a very short period. Works while equipped in either hand.</text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds.  Works while equipped in either hand.</text>
 <text id="13190000">The branch of a large, well-tended witchtree, used as a sorcery catalyst.
 
 Witchtree staves are customary in the far north, and allow for faster casting than ordinary catalysts.
 
 Skill: Steady Chant
-Boost the strength of sorceries for a very short period. Works while equipped in either hand.</text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds.  Works while equipped in either hand.</text>
 <text id="13200000">Ancient catalyst of the Witch of Izalith and her daughters, used long before the dawn of chaos and of pyromancy.
 
 With the birth of the Chaos Flame, the flame witches were at once both sorcerers and shamans. Faith adjusts the power of sorceries cast using this catalyst, and the staff also seems to boost the power of dark sorceries.
 
 Skill: Steady Chant
-Boost the strength of sorceries for a very short period. Works while equipped in either hand.</text>
+Boosts the strength of magic sorceries by x1.1, Intelligence by +5, and vdex by +10 for 15 seconds.  Works while equipped in either hand.</text>
 <text id="13210000">Sacred chime for casting miracles of the Gods. Chimes such as these are often given to clerics who become Undead.
 
 Equip a talisman or a sacred chime to cast miracles. Miracles must be attuned at a bonfire before use.
