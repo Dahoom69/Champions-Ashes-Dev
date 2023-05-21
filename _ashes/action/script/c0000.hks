@@ -10133,7 +10133,7 @@ function AttackBothLeft2_onUpdate()  -- l12
      if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
      if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
      if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
- 
+
      local offhand = "W_AttackLeftHeavy1"
      if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
      if is_ss_ps == TRUE then r1 = "W_AttackRightLight3" end
@@ -10145,6 +10145,7 @@ function AttackBothLeft2_onUpdate()  -- l12
      if is_ts_ps == TRUE then offhand = "W_AttackBothLeft3" end
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" end 
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
+     if (GetEquipType(HAND_RIGHT, 30)  == TRUE and env(345 , HAND_RIGHT) == 148  and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 30)  == TRUE and env(345 , HAND_LEFT) == 148 and c_Style == HAND_LEFT_BOTH)  then b1 = "W_AttackBothLeft1" end
 
      if env(1116, 100283) == FALSE  and AttackCommonFunction(r1, r2, b1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
