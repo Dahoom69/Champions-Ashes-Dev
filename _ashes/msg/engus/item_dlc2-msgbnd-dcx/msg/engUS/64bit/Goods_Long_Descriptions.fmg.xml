@@ -1533,9 +1533,9 @@ of infatuation for victims of stunted development.
 
 Used in infusion to create arcane weapons.
 
-Arcane weapons inflict magic damage
-and scale effectively with dexerity and
-intelligence.</text>
+Arcane weapons gradually restore FP. Deals
+physical damage that scales effectively with
+dexterity and intelligence.</text>
 <text id="1141">%null%</text>
 <text id="1142">%null%</text>
 <text id="1143">%null%</text>
