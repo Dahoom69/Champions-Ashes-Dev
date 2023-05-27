@@ -1083,7 +1083,7 @@ function GetAttackRequest(is_guard)
             local is_ugsm = GetEquipType(HAND_RIGHT, 26) 
             local is_rm = GetEquipType(HAND_RIGHT, 27) 
             local is_am = GetEquipType(HAND_RIGHT, 30)
-            local is_gm = FALSE
+            local is_gm = FALSE11111
             local is_go = FALSE
             local is_gun = FALSE
             if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then is_gun = TRUE end
@@ -10220,6 +10220,7 @@ function AttackBothLeft3_onUpdate()  -- l13
      local is_Ro = GetEquipType(HAND_LEFT, 27) 
      if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end
+     if is_ss_ps == TRUE then offhand = "W_AttackRightBackstep" l1 = "W_AttackRightBackstep" end
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
 
      if env(1116, 100283) == FALSE  and  AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
