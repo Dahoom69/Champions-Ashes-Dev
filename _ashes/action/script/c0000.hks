@@ -1083,7 +1083,7 @@ function GetAttackRequest(is_guard)
             local is_ugsm = GetEquipType(HAND_RIGHT, 26) 
             local is_rm = GetEquipType(HAND_RIGHT, 27) 
             local is_am = GetEquipType(HAND_RIGHT, 30)
-            local is_gm = FALSE11111
+            local is_gm = FALSE
             local is_go = FALSE
             local is_gun = FALSE
             if (sp_o == 602 or sp_o == 617 or sp_o == 618 or sp_o == 623 or sp_o == 628 or sp_o == 629 or sp_o == 630 or sp_o == 650 or sp_o == 652 or sp_o == 653) then is_gun = TRUE end
