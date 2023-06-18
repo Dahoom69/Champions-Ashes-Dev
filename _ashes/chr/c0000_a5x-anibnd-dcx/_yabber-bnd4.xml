@@ -1570,39 +1570,36 @@
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_030930.hkx</path>
     </file>
-	
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>1689033000</id>
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_033000.hkx</path>
     </file>
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>1689033010</id>
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_033010.hkx</path>
     </file>
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>1689033020</id>
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_033020.hkx</path>
     </file>
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>1689033500</id>
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_033500.hkx</path>
     </file>
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>1689033900</id>
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a689\a689_033900.hkx</path>
     </file>
-	
-	
     <file>
       <flags>0x40</flags>
       <id>1689034000</id>
@@ -3247,5 +3244,19 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a691\a691_410001.hkx</path>
     </file>
+	
+	    <file>
+      <flags>0x40</flags>
+      <id>1692030020</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a692\a692_030020.hkx</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
+      <id>1692030600</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a692\a692_030600.hkx</path>
+    </file>
+	
   </files>
 </bnd4>
