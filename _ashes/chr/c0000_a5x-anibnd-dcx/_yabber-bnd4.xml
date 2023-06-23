@@ -3244,8 +3244,7 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a691\a691_410001.hkx</path>
     </file>
-	
-	    <file>
+    <file>
       <flags>0x40</flags>
       <id>1692030020</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
@@ -3258,5 +3257,17 @@
       <path>chr\c0000\hkx\a692\a692_030600.hkx</path>
     </file>
 	
+	    <file>
+      <flags>0x40</flags>
+      <id>1692033500</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a692\a692_033500.hkx</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
+      <id>1692033900</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a692\a692_033900.hkx</path>
+    </file>
   </files>
 </bnd4>
