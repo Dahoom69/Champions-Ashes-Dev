@@ -24,6 +24,24 @@
     </file>
     <file>
       <flags>0x40</flags>
+      <id>1000070140</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a000\a000_070140.hkx</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
+      <id>1000070141</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a000\a000_070141.hkx</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
+      <id>1000070142</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a000\a000_070142.hkx</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
       <id>1050030000</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a050\a050_030000.hkx</path>
@@ -3256,8 +3274,7 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a692\a692_030600.hkx</path>
     </file>
-	
-	    <file>
+    <file>
       <flags>0x40</flags>
       <id>1692033500</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
