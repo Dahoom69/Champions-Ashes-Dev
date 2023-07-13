@@ -1,5 +1,5 @@
-RegisterTableGoal(GOAL_Redmane_Alt2_Battle, "Redmane")
-REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_Alt2_Battle, true)
+RegisterTableGoal(GOAL_Redmane_Archdragon_Battle, "Redmane")
+REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_Archdragon_Battle, true)
 Goal.Initialize = function (arg0, arg1, arg2, arg3)
 	--arg1:SetNumber(0, 0)
     return 
@@ -198,8 +198,8 @@ function Redmane_ActAfter_AdjustSpace(arg0, arg1, arg2)
     return
 end
 
-RegisterTableGoal(GOAL_Redmane_AfterAttackAct, "Redmane_AfterAttackAct")
-REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_AfterAttackAct, true)
+RegisterTableGoal(GOAL_Redmane_Archdragon_AfterAttackAct, "Redmane_Archdragon_AfterAttackAct")
+REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_Archdragon_AfterAttackAct, true)
 Goal.Activate = function (arg0, arg1, arg2)
     local local0 = arg1:GetHpRate(TARGET_SELF)
 	local local1 = arg1:GetRandam_Int(1, 3)

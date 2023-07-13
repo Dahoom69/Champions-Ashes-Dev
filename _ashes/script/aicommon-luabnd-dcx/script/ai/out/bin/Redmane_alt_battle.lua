@@ -1,4 +1,4 @@
-RegisterTableGoal(GOAL_Redmane_Alt_Battle, "Redmane")
+RegisterTableGoal(GOAL_Redmane_Alt_Battle, "Redmane_alt")
 REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_Alt_Battle, true)
 Goal.Initialize = function (arg0, arg1, arg2, arg3)
 	--arg1:SetNumber(0, 0)
@@ -252,8 +252,8 @@ function Redmane_ActAfter_AdjustSpace(arg0, arg1, arg2)
     return
 end
 
-RegisterTableGoal(GOAL_Redmane_AfterAttackAct, "Redmane_AfterAttackAct")
-REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_AfterAttackAct, true)
+RegisterTableGoal(GOAL_Redmane_Alt_AfterAttackAct, "Redmane_Alt_AfterAttackAct")
+REGISTER_GOAL_NO_SUB_GOAL(GOAL_Redmane_Alt_AfterAttackAct, true)
 Goal.Activate = function (arg0, arg1, arg2)
     local probabilities = arg1:GetHpRate(TARGET_SELF)
 	local acts = arg1:GetRandam_Int(1, 3)
