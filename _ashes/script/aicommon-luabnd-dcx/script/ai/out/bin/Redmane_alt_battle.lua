@@ -52,7 +52,9 @@ Goal.Activate = function (arg0, arg1, arg2)
 	probabilities[11] = SetCoolTime(arg1, arg2, 3001, 14, probabilities[11], 0)
 	probabilities[17] = SetCoolTime(arg1, arg2, 3001, 14, probabilities[17], 0)
 	probabilities[18] = SetCoolTime(arg1, arg2, 3014, 14, probabilities[18], 0) 
-	--probabilities[19] = SetCoolTime(arg1, arg2, 3025, 11, probabilities[19], 0) -- dist 4
+	probabilities[19] = SetCoolTime(arg1, arg2, 3025, 11, probabilities[19], 0) -- dist 4
+	probabilities[20] = SetCoolTime(arg1, arg2, 3025, 11, probabilities[19], 0) -- dist 4
+
 	
 	--probabilities[2] = SetCoolTime(arg1, arg2, 3000, 6, probabilities[2], 0)
     acts[1] = REGIST_FUNC(arg1, arg2, Redmane_Act01)--turn
@@ -140,7 +142,7 @@ function Redmane_Act09(arg0, arg1, arg2)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, arg1, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
 	arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3008, TARGET_ENE_0, 5, 0, 0)
-	arg1:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3015, TARGET_ENE_0, 3, 0)
+	arg1:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3006, TARGET_ENE_0, 3, 0)
 	arg1:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3003, TARGET_ENE_0, 5, 0)
 	arg1:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3005, TARGET_ENE_0, 5, 0)
 end
@@ -227,7 +229,7 @@ function Redmane_Act20(arg0, arg1, arg2)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, arg1, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	arg1:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
-	arg1:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3011, TARGET_ENE_0, 10, 0)
+	arg1:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3007, TARGET_ENE_0, 10, 0)
 end
 Goal.Update = function (arg0, arg1, arg2)
     return Update_Default_NoSubGoal(arg0, arg1, arg2)
