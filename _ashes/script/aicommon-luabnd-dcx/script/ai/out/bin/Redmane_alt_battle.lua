@@ -118,14 +118,14 @@ Goal.Activate = function (arg0, actor, goals)
 	
 	probabilities[32] = SetCoolTime(actor, goals, 3000, 14, probabilities[32], 0)
     probabilities[33] = SetCoolTime(actor, goals, 3002, 14, probabilities[33], 0)
-    probabilities[34] = SetCoolTime(actor, goals, 3011, 11, probabilities[34], 0) -- dist 4
     probabilities[37] = SetCoolTime(actor, goals, 3013, 14, probabilities[37], 0)
-    probabilities[38] = SetCoolTime(actor, goals, 3007, 11, probabilities[38], 0) -- dist 4
-	probabilities[39] = SetCoolTime(actor, goals, 3008, 11, probabilities[39], 0) -- dist 4
-	probabilities[40] = SetCoolTime(actor, goals, 3005, 11, probabilities[40], 0) -- dist 4
 	probabilities[41] = SetCoolTime(actor, goals, 3001, 14, probabilities[41], 0)
 	probabilities[47] = SetCoolTime(actor, goals, 3001, 14, probabilities[47], 0)
 	probabilities[48] = SetCoolTime(actor, goals, 3014, 14, probabilities[48], 0) 
+	probabilities[34] = SetCoolTime(actor, goals, 3011, 11, probabilities[34], 0) -- dist 4
+	probabilities[38] = SetCoolTime(actor, goals, 3007, 11, probabilities[38], 0) -- dist 4
+	probabilities[39] = SetCoolTime(actor, goals, 3008, 11, probabilities[39], 0) -- dist 4
+	probabilities[40] = SetCoolTime(actor, goals, 3005, 11, probabilities[40], 0) -- dist 4
 	probabilities[49] = SetCoolTime(actor, goals, 3025, 11, probabilities[49], 0) -- dist 4
 	probabilities[50] = SetCoolTime(actor, goals, 3025, 11, probabilities[50], 0) -- dist 4
 	
