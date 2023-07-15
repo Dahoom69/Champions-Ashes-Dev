@@ -58,13 +58,16 @@ Goal.Activate = function (arg0, actor, goals)
 	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_L, 90) and distance <=2 then
 		probabilities[6] = 100--3010
 	elseif actor:GetNpcThinkParamID() == 340001 then
-		if distance >= 4 then
-			probabilities[34] = 16--jump 3011
-			probabilities[38] = 16--atk3007,redguardrunattack
-			probabilities[39] = 16--atk3008 stepin combo
-			probabilities[40] = 16--atk3005,redguardshortjump
-			probabilities[49] = 18--3025
-			probabilities[50] = 18--3025
+		if distance >= 8 then
+			probabilities[34] = 34--jump 3011
+			probabilities[49] = 34--3025
+			probabilities[50] = 32--3025
+		elseif distance >= 4 then
+			probabilities[38] = 20--atk3007,redguardrunattack
+			probabilities[39] = 20--atk3008 stepin combo
+			probabilities[40] = 20--atk3005,redguardshortjump
+			probabilities[49] = 20--3025
+			probabilities[50] = 20--3025
 		else
 			probabilities[32] = 20--atk3000
 			probabilities[33] = 20--atk3002
@@ -460,33 +463,31 @@ function Redmane_Act48(arg0, actor, goals)
 end
 
 function Redmane_Act49(arg0, actor, goals)
-	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 20 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 20 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
-    local MaxDist = 20 - arg0:GetMapHitRadius(TARGET_SELF)
-    local spinTime = 0
-    local frontAngle = 0
+	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	local getRandom1 = arg0:GetRandam_Int(1, 100)
-    if arg0:GetRandam_Int(1, 100) <= 33 then
-        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, MaxDist, spinTime, frontAngle, 0, 0)
+    if getRandom1 <= 33 then
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
 	elseif getRandom1 <= 66 then
-	    actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, spinTime, frontAngle, 0, 0)
-        actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3025, TARGET_ENE_0, MaxDist, 0, 0)
+	    actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboFinal, 5, 3025, TARGET_ENE_0, 999, 0)
     else
-        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, spinTime, frontAngle, 0, 0)
-        actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3025, TARGET_ENE_0, 999, 0, 0)
-		actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3025, TARGET_ENE_0, 999, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3025, TARGET_ENE_0, 999, 0, 0)
+		actor:AddSubGoal(GOAL_COMMON_ComboFinal, 5, 3025, TARGET_ENE_0, 999, 0)
     end
     return 
 end
+	
 function Redmane_Act50(arg0, actor, goals)
-	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 20 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 20 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
+	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
     local MaxDist = 20 - arg0:GetMapHitRadius(TARGET_SELF)
     local spinTime = 0
     local frontAngle = 0
 	local getRandom1 = arg0:GetRandam_Int(1, 100)
-    if arg0:GetRandam_Int(1, 100) <= 50 then
-        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, MaxDist, spinTime, frontAngle, 0, 0)
+    if getRandom1 <= 50 then
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
     else
-        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, spinTime, frontAngle, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
         actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3007, TARGET_ENE_0, MaxDist, 0, 0)
     end
     return 
