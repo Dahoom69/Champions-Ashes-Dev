@@ -53,9 +53,9 @@ Goal.Activate = function (arg0, actor, goals)
         probabilities[18] = 35
 	elseif actor:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_B, 180) then
 		probabilities[1] = 100--turn
-	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 90) and dist <=2 then
+	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 90) and distance <=2 then
 		probabilities[5] = 100--3009
-	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_B, 180) and dist <=2 then
+	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_L, 90) and distance <=2 then
 		probabilities[6] = 100--3010
 	elseif actor:GetNpcThinkParamID() == 340001 then
 		if distance >= 4 then
@@ -137,10 +137,10 @@ Goal.Activate = function (arg0, actor, goals)
 	acts[39] = REGIST_FUNC(actor, goals, Redmane_Act39)
 	acts[40] = REGIST_FUNC(actor, goals, Redmane_Act40)
 	acts[41] = REGIST_FUNC(actor, goals, Redmane_Act41)
-	acts[42] = REGIST_FUNC(actor, goals, Redmane_Act42)
+
 	acts[43] = REGIST_FUNC(actor, goals, Redmane_Act43)
-	acts[44] = REGIST_FUNC(actor, goals, Redmane_Act44)
-	acts[45] = REGIST_FUNC(actor, goals, Redmane_Act45)
+
+	
 	acts[46] = REGIST_FUNC(actor, goals, Redmane_Act46)--dodge
 	acts[47] = REGIST_FUNC(actor, goals, Redmane_Act47)
 	acts[48] = REGIST_FUNC(actor, goals, Redmane_Act48)
@@ -416,18 +416,6 @@ function Redmane_Act41(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
-function Redmane_Act42(arg0, actor, goals)
-	local rand1 = arg0:GetRandam_Int(1, 100)
-	actor:ClearSubGoal()
-	if rand1 < 50 then
-		actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3016, TARGET_ENE_0, 999, 0, 0)
-	elseif rand1 >= 70 then
-		actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3017, TARGET_ENE_0, 999, 0, 0)
-	else
-		actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3018, TARGET_ENE_0, 999, 0, 0)
-	end
-end
-
 function Redmane_Act43(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	if dist0 < 1 then
@@ -438,51 +426,70 @@ function Redmane_Act43(arg0, actor, goals)
 	end
 end
 
-function Redmane_Act44(arg0, actor, goals)
-	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 2, 3020, TARGET_ENE_0, 999, 0, 0)
-end
-
-function Redmane_Act45(arg0, actor, goals)
-	if arg0:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_R, 70) then
-		actor:AddSubGoal(GOAL_COMMON_SidewayMove, 1.1, TARGET_ENE_0, 0, 60, true, true, -1)
-	elseif arg0:GetDist(TARGET_ENE_0) < 1 then
-		actor:AddSubGoal(GOAL_COMMON_LeaveTarget, 1.1, TARGET_ENE_0, 1, TARGET_ENE_0, true, 0)
-	else
-		Approach_Act_Flex(arg0, actor, 3 - arg0:GetMapHitRadius(TARGET_SELF), 3 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
-		actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3021, TARGET_ENE_0, 999, 0, 0)
-	end
-end
-
 function Redmane_Act46(arg0, actor, goals)
 	--arg0:SetNumber(0, 0)
 	actor:AddSubGoal(GOAL_COMMON_SpinStep, 0.1, 2001, TARGET_ENE_0, 0, AI_DIR_TYPE_B, 0)
 end
 
 function Redmane_Act47(arg0, actor, goals)
-	local dist0 = arg0:GetDist(TARGET_ENE_0)
-	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
-	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3001, TARGET_ENE_0, 999, 0, 0)
-	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3004, TARGET_ENE_0, 5, 0)
-	actor:AddSubGoal(GOAL_COMMON_ComboFinal, 5, 3002, TARGET_ENE_0, 5, 0)
+	Approach_Act_Flex(arg0, actor, 4 - arg0:GetMapHitRadius(TARGET_SELF), 4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 4 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
+    local MaxDist2 = 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1
+    local MaxDist = 5 - arg0:GetMapHitRadius(TARGET_SELF)
+    local spinTime = 0
+    local frontAngle = 0
+    local getRandom1 = arg0:GetRandam_Int(1, 100)
+    if getRandom1 <= 35 then
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3001, TARGET_ENE_0, MaxDist, spinTime, frontAngle, 0, 0)
+    elseif getRandom1 <= 75 then
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3001, TARGET_ENE_0, MaxDist2, spinTime, frontAngle, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3004, TARGET_ENE_0, MaxDist, 0, 0)
+    else
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3001, TARGET_ENE_0, MaxDist2, spinTime, frontAngle, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3004, TARGET_ENE_0, 3.9 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3002, TARGET_ENE_0, MaxDist, 0, 0)
+    end
+    GetWellSpace_Odds = 100
+    return GetWellSpace_Odds
 end
 
 function Redmane_Act48(arg0, actor, goals)
-	local dist0 = arg0:GetDist(TARGET_ENE_0)
-	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
-	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3014, TARGET_ENE_0, 999, 0, 0)
+	Approach_Act_Flex(arg0, actor, 3.5 - arg0:GetMapHitRadius(TARGET_SELF), 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
+    actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3014, TARGET_ENE_0, 5 - arg0:GetMapHitRadius(TARGET_SELF), 0, 0, 0, 0)
+    GetWellSpace_Odds = 100
+    return GetWellSpace_Odds
 end
 
 function Redmane_Act49(arg0, actor, goals)
-	local dist0 = arg0:GetDist(TARGET_ENE_0)
-	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
-	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
-	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 5, 3025, TARGET_ENE_0, 999, 0)
+	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 20 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 20 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
+    local MaxDist = 20 - arg0:GetMapHitRadius(TARGET_SELF)
+    local spinTime = 0
+    local frontAngle = 0
+	local getRandom1 = arg0:GetRandam_Int(1, 100)
+    if arg0:GetRandam_Int(1, 100) <= 33 then
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, MaxDist, spinTime, frontAngle, 0, 0)
+	elseif getRandom1 <= 66 then
+	    actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, spinTime, frontAngle, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3025, TARGET_ENE_0, MaxDist, 0, 0)
+    else
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, spinTime, frontAngle, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3025, TARGET_ENE_0, 999, 0, 0)
+		actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3025, TARGET_ENE_0, 999, 0, 0)
+    end
+    return 
 end
 function Redmane_Act50(arg0, actor, goals)
-	local dist0 = arg0:GetDist(TARGET_ENE_0)
-	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
-	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3025, TARGET_ENE_0, 999, 0, 0)
-	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3007, TARGET_ENE_0, 10, 0)
+	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 20 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 20 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
+    local MaxDist = 20 - arg0:GetMapHitRadius(TARGET_SELF)
+    local spinTime = 0
+    local frontAngle = 0
+	local getRandom1 = arg0:GetRandam_Int(1, 100)
+    if arg0:GetRandam_Int(1, 100) <= 50 then
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, MaxDist, spinTime, frontAngle, 0, 0)
+    else
+        actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, spinTime, frontAngle, 0, 0)
+        actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3007, TARGET_ENE_0, MaxDist, 0, 0)
+    end
+    return 
 end
 
 -- dragon
