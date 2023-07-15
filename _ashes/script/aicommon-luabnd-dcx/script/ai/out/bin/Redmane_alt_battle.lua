@@ -37,11 +37,8 @@ Goal.Activate = function (arg0, actor, goals)
     elseif actor:GetNpcThinkParamID() == 110009 or actor:GetNpcThinkParamID() == 110085 or actor:GetNpcThinkParamID() == 144001 then
         GetNpcThinkParamID_11 = 1
     end
-    if actor:GetEventRequest(0) == 100 then
-        probabilities[17] = 100
-    elseif actor:GetEventRequest(1) == 100 then
-        probabilities[20] = 100
-    elseif getthinkAttrDoAdmirerTeamEffectivity == 1 and actor:GetTeamOrder(ORDER_TYPE_Role) == ROLE_TYPE_Kankyaku then
+
+    if getthinkAttrDoAdmirerTeamEffectivity == 1 and actor:GetTeamOrder(ORDER_TYPE_Role) == ROLE_TYPE_Kankyaku then
         probabilities[11] = 60
         probabilities[12] = 40
     elseif getthinkAttrDoAdmirerTeamEffectivity == 1 and actor:GetTeamOrder(ORDER_TYPE_Role) == ROLE_TYPE_Torimaki then
@@ -51,49 +48,76 @@ Goal.Activate = function (arg0, actor, goals)
         probabilities[11] = 3
         probabilities[17] = 50
         probabilities[18] = 35
-	elseif actor:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_B, 180) then
-		probabilities[1] = 100--turn
-	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 90) and distance <=2 then
-		probabilities[5] = 100--3009
-	elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_L, 90) and distance <=2 then
-		probabilities[6] = 100--3010
 	elseif actor:GetNpcThinkParamID() == 340001 then
 		if distance >= 8 then
+			if actor:GetHpRate(TARGET_SELF) <= 0.4 then
+				probabilities[42] = 100--3019
+			end
 			probabilities[34] = 34--jump 3011
 			probabilities[49] = 34--3025
 			probabilities[50] = 32--3025
 		elseif distance >= 4 then
+			if actor:GetHpRate(TARGET_SELF) <= 0.4 then
+				probabilities[42] = 100--3019
+			end
 			probabilities[38] = 20--atk3007,redguardrunattack
 			probabilities[39] = 20--atk3008 stepin combo
 			probabilities[40] = 20--atk3005,redguardshortjump
 			probabilities[49] = 20--3025
 			probabilities[50] = 20--3025
 		else
-			probabilities[32] = 20--atk3000
-			probabilities[33] = 20--atk3002
-			probabilities[37] = 20--atk3013,redguardflurry
-			probabilities[41] = 10--atk3001-1
-			probabilities[47] = 10--atk3001-2
-			probabilities[48] = 20--grab 3014
+			if actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_L, 120) and distance <=2 then
+				probabilities[5] = 100--3010
+				probabilities[44] = 100
+			elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 120) and distance <=2 then
+				probabilities[6] = 100--3009
+				probabilities[44] = 100
+			else
+				if actor:GetHpRate(TARGET_SELF) <= 0.4 then
+					probabilities[42] = 100--3019
+				end
+				probabilities[32] = 20--atk3000
+				probabilities[33] = 20--atk3002
+				probabilities[37] = 20--atk3013,redguardflurry
+				probabilities[41] = 10--atk3001-1
+				probabilities[47] = 10--atk3001-2
+				probabilities[48] = 20--grab 3014
+			end
 		end
 	elseif actor:GetNpcThinkParamID() == 340002 then
-			probabilities[62] = 10--atk3000
-	else
-		if distance >= 6 then
-			probabilities[8] = 70--atk3007,redguardrunattack
-			probabilities[20] = 70--atk3016comborunning
-			probabilities[19] = 60--spit
-			probabilities[4] = 70--jump
+		if actor:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_B, 180) then
+			probabilities[1] = 10--turn
+		elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 90) and distance <=2 then
+			probabilities[5] = 90--3009
+		elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_B, 180) and distance <=2 then
+			probabilities[6] = 90--3010
 		else
-			probabilities[2] = 10--atk3000
-			probabilities[3] = 10--atk3002
-			probabilities[7] = 13--atk3013,redguardflurry
-			probabilities[9] = 10--atk3008combo
-			probabilities[10] = 10--atk3005,redguardshortjump
-			probabilities[11] = 10--atk3001
-			probabilities[17] = 10--atk3001-2
-			probabilities[18] = 7--grab
-			probabilities[21] = 10--atk3017
+			probabilities[62] = 10--atk3000
+		end
+	else
+		if actor:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_B, 180) then
+			probabilities[1] = 10--turn
+		elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 90) and distance <=2 then
+			probabilities[5] = 90--3009
+		elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_B, 180) and distance <=2 then
+			probabilities[6] = 90--3010
+		else
+			if distance >= 6 then
+				probabilities[8] = 70--atk3007,redguardrunattack
+				probabilities[20] = 70--atk3016comborunning
+				probabilities[19] = 60--spit
+				probabilities[4] = 70--jump
+			else
+				probabilities[2] = 10--atk3000
+				probabilities[3] = 10--atk3002
+				probabilities[7] = 13--atk3013,redguardflurry
+				probabilities[9] = 10--atk3008combo
+				probabilities[10] = 10--atk3005,redguardshortjump
+				probabilities[11] = 10--atk3001
+				probabilities[17] = 10--atk3001-2
+				probabilities[18] = 7--grab
+				probabilities[21] = 10--atk3017
+			end
 		end
 	end
 	
@@ -119,6 +143,8 @@ Goal.Activate = function (arg0, actor, goals)
 	
 	-- altmane
 	
+	probabilities[42] = SetCoolTime(actor, goals, 3019, 60, probabilities[42], 0)
+	
 	probabilities[32] = SetCoolTime(actor, goals, 3000, 14, probabilities[32], 0)
     probabilities[33] = SetCoolTime(actor, goals, 3002, 14, probabilities[33], 0)
     probabilities[37] = SetCoolTime(actor, goals, 3013, 14, probabilities[37], 0)
@@ -140,9 +166,9 @@ Goal.Activate = function (arg0, actor, goals)
 	acts[39] = REGIST_FUNC(actor, goals, Redmane_Act39)
 	acts[40] = REGIST_FUNC(actor, goals, Redmane_Act40)
 	acts[41] = REGIST_FUNC(actor, goals, Redmane_Act41)
-
+	acts[42] = REGIST_FUNC(actor, goals, Redmane_Act42)
 	acts[43] = REGIST_FUNC(actor, goals, Redmane_Act43)
-
+	acts[44] = REGIST_FUNC(actor, goals, Redmane_Act44)
 	
 	acts[46] = REGIST_FUNC(actor, goals, Redmane_Act46)--dodge
 	acts[47] = REGIST_FUNC(actor, goals, Redmane_Act47)
@@ -419,6 +445,11 @@ function Redmane_Act41(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
+function Redmane_Act42(arg0, actor, goals)
+	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3019, TARGET_ENE_0, 999, 0, 0)
+    return
+end
+
 function Redmane_Act43(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	if dist0 < 1 then
@@ -427,6 +458,12 @@ function Redmane_Act43(arg0, actor, goals)
 		Approach_Act_Flex(arg0, actor, 2.5 - arg0:GetMapHitRadius(TARGET_SELF), 2.5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 		actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3019, TARGET_ENE_0, 999, 0, 0)
 	end
+end
+
+function Redmane_Act44(arg0, actor, goals)
+    actor:AddSubGoal(GOAL_COMMON_LeaveTarget, 1, TARGET_ENE_0, 5, TARGET_ENE_0, true, -1)
+    GetWellSpace_Odds = 0
+    return GetWellSpace_Odds
 end
 
 function Redmane_Act46(arg0, actor, goals)
