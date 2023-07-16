@@ -7,8 +7,8 @@ end
 Goal.Activate = function (arg0, actor, goals)
     local probabilities = {}
     local acts = {}
-    local localUnknown = {}
-    Common_Clear_Param(probabilities, acts, localUnknown)
+    local defFuncParamTbl = {}
+    Common_Clear_Param(probabilities, acts, defFuncParamTbl)
     Init_Pseudo_Global(actor, goals)
     actor:SetStringIndexedNumber("Dist_SideStep", 2.7 + 1)
     actor:SetStringIndexedNumber("Dist_BackStep", 2.5 + 1)
@@ -179,7 +179,7 @@ Goal.Activate = function (arg0, actor, goals)
 	--dragon
 	acts[62] = REGIST_FUNC(actor, goals, Redmane_Act62)
 	
-    Common_Battle_Activate(actor, goals, probabilities, acts, REGIST_FUNC(actor, goals, Redmane_ActAfter_AdjustSpace), localUnknown)
+    Common_Battle_Activate(actor, goals, probabilities, acts, REGIST_FUNC(actor, goals, Redmane_ActAfter_AdjustSpace), defFuncParamTbl)
     return 
 end
 
