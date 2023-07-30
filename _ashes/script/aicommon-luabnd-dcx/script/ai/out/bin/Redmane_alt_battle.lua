@@ -145,24 +145,24 @@ Goal.Activate = function (arg0, actor, goals)
 	
 	
 	
-    acts[1] = REGIST_FUNC(actor, goals, Redmane_Act01)--turn
+    acts[1] = REGIST_FUNC(actor, goals, Redmane_Alt_Act01)--turn
 	
 	-- base redmane start
-	acts[2] = REGIST_FUNC(actor, goals, Redmane_Act02)
-	acts[3] = REGIST_FUNC(actor, goals, Redmane_Act03)
-	acts[4] = REGIST_FUNC(actor, goals, Redmane_Act04)
-	acts[5] = REGIST_FUNC(actor, goals, Redmane_Act05)
-	acts[6] = REGIST_FUNC(actor, goals, Redmane_Act06)
-	acts[7] = REGIST_FUNC(actor, goals, Redmane_Act07)
-	acts[8] = REGIST_FUNC(actor, goals, Redmane_Act08)
-	acts[9] = REGIST_FUNC(actor, goals, Redmane_Act09)
-	acts[10] = REGIST_FUNC(actor, goals, Redmane_Act10)
-	acts[11] = REGIST_FUNC(actor, goals, Redmane_Act11)
-	acts[12] = REGIST_FUNC(actor, goals, Redmane_Act12)
-	acts[13] = REGIST_FUNC(actor, goals, Redmane_Act13)
-	acts[14] = REGIST_FUNC(actor, goals, Redmane_Act14)
-	acts[15] = REGIST_FUNC(actor, goals, Redmane_Act15)
-	acts[16] = REGIST_FUNC(actor, goals, Redmane_Act16)--dodge
+	acts[2] = REGIST_FUNC(actor, goals, Redmane_Alt_Act02)
+	acts[3] = REGIST_FUNC(actor, goals, Redmane_Alt_Act03)
+	acts[4] = REGIST_FUNC(actor, goals, Redmane_Alt_Act04)
+	acts[5] = REGIST_FUNC(actor, goals, Redmane_Alt_Act05)
+	acts[6] = REGIST_FUNC(actor, goals, Redmane_Alt_Act06)
+	acts[7] = REGIST_FUNC(actor, goals, Redmane_Alt_Act07)
+	acts[8] = REGIST_FUNC(actor, goals, Redmane_Alt_Act08)
+	acts[9] = REGIST_FUNC(actor, goals, Redmane_Alt_Act09)
+	acts[10] = REGIST_FUNC(actor, goals, Redmane_Alt_Act10)
+	acts[11] = REGIST_FUNC(actor, goals, Redmane_Alt_Act11)
+	acts[12] = REGIST_FUNC(actor, goals, Redmane_Alt_Act12)
+	acts[13] = REGIST_FUNC(actor, goals, Redmane_Alt_Act13)
+	acts[14] = REGIST_FUNC(actor, goals, Redmane_Alt_Act14)
+	acts[15] = REGIST_FUNC(actor, goals, Redmane_Alt_Act15)
+	acts[16] = REGIST_FUNC(actor, goals, Redmane_Alt_Act16)--dodge
 	-- base redmane end
 	
 	
@@ -187,25 +187,25 @@ Goal.Activate = function (arg0, actor, goals)
 	probabilities[49] = SetCoolTime(actor, goals, 3025, 11, probabilities[49], 0) -- dist 4
 	probabilities[50] = SetCoolTime(actor, goals, 3025, 11, probabilities[50], 0) -- dist 4
 	
-	acts[32] = REGIST_FUNC(actor, goals, Redmane_Act32)
-	acts[33] = REGIST_FUNC(actor, goals, Redmane_Act33)
-	acts[34] = REGIST_FUNC(actor, goals, Redmane_Act34)
-	acts[35] = REGIST_FUNC(actor, goals, Redmane_Act35)
-	acts[36] = REGIST_FUNC(actor, goals, Redmane_Act36)
-	acts[37] = REGIST_FUNC(actor, goals, Redmane_Act37)
-	acts[38] = REGIST_FUNC(actor, goals, Redmane_Act38)
-	acts[39] = REGIST_FUNC(actor, goals, Redmane_Act39)
-	acts[40] = REGIST_FUNC(actor, goals, Redmane_Act40)
-	acts[41] = REGIST_FUNC(actor, goals, Redmane_Act41)
-	acts[42] = REGIST_FUNC(actor, goals, Redmane_Act42)
-	acts[43] = REGIST_FUNC(actor, goals, Redmane_Act43)
-	acts[44] = REGIST_FUNC(actor, goals, Redmane_Act44)
+	acts[32] = REGIST_FUNC(actor, goals, Redmane_Alt_Act32)
+	acts[33] = REGIST_FUNC(actor, goals, Redmane_Alt_Act33)
+	acts[34] = REGIST_FUNC(actor, goals, Redmane_Alt_Act34)
+	acts[35] = REGIST_FUNC(actor, goals, Redmane_Alt_Act35)
+	acts[36] = REGIST_FUNC(actor, goals, Redmane_Alt_Act36)
+	acts[37] = REGIST_FUNC(actor, goals, Redmane_Alt_Act37)
+	acts[38] = REGIST_FUNC(actor, goals, Redmane_Alt_Act38)
+	acts[39] = REGIST_FUNC(actor, goals, Redmane_Alt_Act39)
+	acts[40] = REGIST_FUNC(actor, goals, Redmane_Alt_Act40)
+	acts[41] = REGIST_FUNC(actor, goals, Redmane_Alt_Act41)
+	acts[42] = REGIST_FUNC(actor, goals, Redmane_Alt_Act42)
+	acts[43] = REGIST_FUNC(actor, goals, Redmane_Alt_Act43)
+	acts[44] = REGIST_FUNC(actor, goals, Redmane_Alt_Act44)
 	
-	acts[46] = REGIST_FUNC(actor, goals, Redmane_Act46)--dodge
-	acts[47] = REGIST_FUNC(actor, goals, Redmane_Act47)
-	acts[48] = REGIST_FUNC(actor, goals, Redmane_Act48)
-	acts[49] = REGIST_FUNC(actor, goals, Redmane_Act49)
-	acts[50] = REGIST_FUNC(actor, goals, Redmane_Act50)
+	acts[46] = REGIST_FUNC(actor, goals, Redmane_Alt_Act46)--dodge
+	acts[47] = REGIST_FUNC(actor, goals, Redmane_Alt_Act47)
+	acts[48] = REGIST_FUNC(actor, goals, Redmane_Alt_Act48)
+	acts[49] = REGIST_FUNC(actor, goals, Redmane_Alt_Act49)
+	acts[50] = REGIST_FUNC(actor, goals, Redmane_Alt_Act50)
 	
 	-- alt mane end
 	
@@ -213,16 +213,16 @@ Goal.Activate = function (arg0, actor, goals)
 	
 	
 	--dragon start
-	acts[62] = REGIST_FUNC(actor, goals, Redmane_Act62)
+	acts[62] = REGIST_FUNC(actor, goals, Redmane_Alt_Act62)
 	--dragon end
 	
-    Common_Battle_Activate(actor, goals, probabilities, acts, REGIST_FUNC(actor, goals, Redmane_ActAfter_AdjustSpace), defFuncParamTbl)
+    Common_Battle_Activate(actor, goals, probabilities, acts, REGIST_FUNC(actor, goals, Redmane_Alt_ActAfter_AdjustSpace), defFuncParamTbl)
     return 
 end
 
 
 
-function Redmane_Act01(arg0, actor, goals)
+function Redmane_Alt_Act01(arg0, actor, goals)
 	if arg0:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_B, 90) then
 		actor:AddSubGoal(GOAL_COMMON_Turn, 2, TARGET_ENE_0, 0, 0, 0)--turn180
 	else
@@ -233,7 +233,7 @@ end
 
 -- base
 
-function Redmane_Act02(arg0, actor, goals)
+function Redmane_Alt_Act02(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	local rand1 = arg0:GetRandam_Int(1, 100)
 	Approach_Act_Flex(arg0, actor, 3 - arg0:GetMapHitRadius(TARGET_SELF), 3 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
@@ -243,45 +243,45 @@ function Redmane_Act02(arg0, actor, goals)
     return 
 end
 
-function Redmane_Act03(arg0, actor, goals)
+function Redmane_Alt_Act03(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3002, TARGET_ENE_0, 5, 0, 0)
 	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3003, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act04(arg0, actor, goals)
+function Redmane_Alt_Act04(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 9 - arg0:GetMapHitRadius(TARGET_SELF), 10 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3011, TARGET_ENE_0, 999, 0, 0)
 	actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3012, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act05(arg0, actor, goals)
+function Redmane_Alt_Act05(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3009, TARGET_ENE_0, 999, 0, 0)
 	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3015, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act06(arg0, actor, goals)
+function Redmane_Alt_Act06(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3010, TARGET_ENE_0, 999, 0, 0)
 	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3015, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act07(arg0, actor, goals)
+function Redmane_Alt_Act07(arg0, actor, goals)
 	arg0:SetTimer(1, 5)
 	Approach_Act_Flex(arg0, actor, 2.1 - arg0:GetMapHitRadius(TARGET_SELF), 2.1 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3013, TARGET_ENE_0, 999, 0, 0)
 end
 
-function Redmane_Act08(arg0, actor, goals)
+function Redmane_Alt_Act08(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 4 - arg0:GetMapHitRadius(TARGET_SELF), 4.49 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3007, TARGET_ENE_0, 999, 0, 0)
 end
 
-function Redmane_Act09(arg0, actor, goals)
+function Redmane_Alt_Act09(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 2 - arg0:GetMapHitRadius(TARGET_SELF), 2 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3008, TARGET_ENE_0, 999, 0, 0)
@@ -289,14 +289,14 @@ function Redmane_Act09(arg0, actor, goals)
 	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3002, TARGET_ENE_0, 7, 0)
 end
 
-function Redmane_Act10(arg0, actor, goals)
+function Redmane_Alt_Act10(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 2 - arg0:GetMapHitRadius(TARGET_SELF), 2 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3005, TARGET_ENE_0, 999, 0, 0)
 	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3006, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act11(arg0, actor, goals)
+function Redmane_Alt_Act11(arg0, actor, goals)
 	localdist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 2 - arg0:GetMapHitRadius(TARGET_SELF), 2 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3001, TARGET_ENE_0, 999, 0, 0)
@@ -305,7 +305,7 @@ function Redmane_Act11(arg0, actor, goals)
 
 end
 
-function Redmane_Act12(arg0, actor, goals)
+function Redmane_Alt_Act12(arg0, actor, goals)
 	local rand1 = arg0:GetRandam_Int(1, 100)
 	actor:ClearSubGoal()
 	if rand1 < 50 then
@@ -317,7 +317,7 @@ function Redmane_Act12(arg0, actor, goals)
 	end
 end
 
-function Redmane_Act13(arg0, actor, goals)
+function Redmane_Alt_Act13(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	if dist0 < 1 then
 		actor:AddSubGoal(GOAL_COMMON_SpinStep, 1.5, 6001, TARGET_ENE_0, 0, AI_DIR_TYPE_B, 0)
@@ -327,11 +327,11 @@ function Redmane_Act13(arg0, actor, goals)
 	end
 end
 
-function Redmane_Act14(arg0, actor, goals)
+function Redmane_Alt_Act14(arg0, actor, goals)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 2, 3020, TARGET_ENE_0, 999, 0, 0)
 end
 
-function Redmane_Act15(arg0, actor, goals)
+function Redmane_Alt_Act15(arg0, actor, goals)
 	if arg0:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_R, 70) then
 		actor:AddSubGoal(GOAL_COMMON_SidewayMove, 1.1, TARGET_ENE_0, 0, 60, true, true, -1)
 	elseif arg0:GetDist(TARGET_ENE_0) < 1 then
@@ -342,12 +342,12 @@ function Redmane_Act15(arg0, actor, goals)
 	end
 end
 
-function Redmane_Act16(arg0, actor, goals)
+function Redmane_Alt_Act16(arg0, actor, goals)
 	--arg0:SetNumber(0, 0)
 	actor:AddSubGoal(GOAL_COMMON_SpinStep, 0.1, 6001, TARGET_ENE_0, 0, AI_DIR_TYPE_B, 0)
 end
 
-function Redmane_Act17(arg0, actor, goals)
+function Redmane_Alt_Act17(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3001, TARGET_ENE_0, 999, 0, 0)
@@ -355,24 +355,24 @@ function Redmane_Act17(arg0, actor, goals)
 	actor:AddSubGoal(GOAL_COMMON_ComboFinal, 10, 3002, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act18(arg0, actor, goals)
+function Redmane_Alt_Act18(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3014, TARGET_ENE_0, 999, 0, 0)
 end
 
-function Redmane_Act19(arg0, actor, goals)
+function Redmane_Alt_Act19(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 13 - arg0:GetMapHitRadius(TARGET_SELF), 10 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3025, TARGET_ENE_0, 999, 0, 0)
 end
-function Redmane_Act20(arg0, actor, goals)
+function Redmane_Alt_Act20(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 2 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3016, TARGET_ENE_0, 999, 0, 0)
 	actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3017, TARGET_ENE_0, 5, 0)
 end
-function Redmane_Act21(arg0, actor, goals)
+function Redmane_Alt_Act21(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 5 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3017, TARGET_ENE_0, 999, 0, 0)
@@ -383,7 +383,7 @@ end
 
 -- Altmane
 
-function Redmane_Act32(arg0, actor, goals)
+function Redmane_Alt_Act32(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 3.2 - arg0:GetMapHitRadius(TARGET_SELF), 3.2 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 3.2 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
     local MaxDist2 = 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1
     local MaxDist = 5 - arg0:GetMapHitRadius(TARGET_SELF)
@@ -404,7 +404,7 @@ function Redmane_Act32(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
-function Redmane_Act33(arg0, actor, goals)
+function Redmane_Alt_Act33(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 3.5 - arg0:GetMapHitRadius(TARGET_SELF), 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
 	local getRandom1 = arg0:GetRandam_Int(1, 100)
 	if getRandom1 <= 49 then
@@ -418,7 +418,7 @@ function Redmane_Act33(arg0, actor, goals)
 	
 end
 
-function Redmane_Act34(arg0, actor, goals)
+function Redmane_Alt_Act34(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 12 - arg0:GetMapHitRadius(TARGET_SELF), 12 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 12 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
     local MaxDist = 5 - arg0:GetMapHitRadius(TARGET_SELF)
     local spinTime = 0
@@ -432,17 +432,17 @@ function Redmane_Act34(arg0, actor, goals)
     return 
 end
 
-function Redmane_Act35(arg0, actor, goals)
+function Redmane_Alt_Act35(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3009, TARGET_ENE_0, 999, 0, 0)
 end
 
-function Redmane_Act36(arg0, actor, goals)
+function Redmane_Alt_Act36(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3010, TARGET_ENE_0, 999, 0, 0)
 end
 
-function Redmane_Act37(arg0, actor, goals)
+function Redmane_Alt_Act37(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 3.5 - arg0:GetMapHitRadius(TARGET_SELF), 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
 	arg0:SetTimer(1, 5)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3013, TARGET_ENE_0, 999, 0, 0)
@@ -450,12 +450,12 @@ function Redmane_Act37(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
-function Redmane_Act38(arg0, actor, goals)
+function Redmane_Alt_Act38(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 8 - arg0:GetMapHitRadius(TARGET_SELF), 8 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 8 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3007, TARGET_ENE_0, 5 - arg0:GetMapHitRadius(TARGET_SELF), 0, 0)
 end
 
-function Redmane_Act39(arg0, actor, goals)
+function Redmane_Alt_Act39(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 6 - arg0:GetMapHitRadius(TARGET_SELF), 6 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 6 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
     local MaxDist = 6 - arg0:GetMapHitRadius(TARGET_SELF)
     local spinTime = 0
@@ -469,14 +469,14 @@ function Redmane_Act39(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
-function Redmane_Act40(arg0, actor, goals)
+function Redmane_Alt_Act40(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	Approach_Act_Flex(arg0, actor, 6 - arg0:GetMapHitRadius(TARGET_SELF), 6 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 3)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 5, 3005, TARGET_ENE_0, 999, 0, 0)
 	--actor:AddSubGoal(GOAL_COMMON_ComboRepeat, 10, 3006, TARGET_ENE_0, 5, 0)
 end
 
-function Redmane_Act41(arg0, actor, goals)
+function Redmane_Alt_Act41(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 2.3 - arg0:GetMapHitRadius(TARGET_SELF), 2.3 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 2.3 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
     local getRandom1 = arg0:GetRandam_Int(1, 100)
 	--if getRandom1 <= 30 then
@@ -491,12 +491,12 @@ function Redmane_Act41(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
-function Redmane_Act42(arg0, actor, goals)
+function Redmane_Alt_Act42(arg0, actor, goals)
 	actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3019, TARGET_ENE_0, 999, 0, 0)
     return
 end
 
-function Redmane_Act43(arg0, actor, goals)
+function Redmane_Alt_Act43(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	if dist0 < 1 then
 		actor:AddSubGoal(GOAL_COMMON_SpinStep, 1.5, 6001, TARGET_ENE_0, 0, AI_DIR_TYPE_B, 0)
@@ -506,18 +506,18 @@ function Redmane_Act43(arg0, actor, goals)
 	end
 end
 
-function Redmane_Act44(arg0, actor, goals)
+function Redmane_Alt_Act44(arg0, actor, goals)
     actor:AddSubGoal(GOAL_COMMON_LeaveTarget, 1, TARGET_ENE_0, 5, TARGET_ENE_0, true, -1)
     GetWellSpace_Odds = 0
     return GetWellSpace_Odds
 end
 
-function Redmane_Act46(arg0, actor, goals)
+function Redmane_Alt_Act46(arg0, actor, goals)
 	--arg0:SetNumber(0, 0)
 	actor:AddSubGoal(GOAL_COMMON_SpinStep, 0.1, 2001, TARGET_ENE_0, 0, AI_DIR_TYPE_B, 0)
 end
 
-function Redmane_Act47(arg0, actor, goals)
+function Redmane_Alt_Act47(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 4 - arg0:GetMapHitRadius(TARGET_SELF), 4 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 4 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
     local MaxDist2 = 2.4 - arg0:GetMapHitRadius(TARGET_SELF) + 1
     local MaxDist = 3 - arg0:GetMapHitRadius(TARGET_SELF)
@@ -538,14 +538,14 @@ function Redmane_Act47(arg0, actor, goals)
     return GetWellSpace_Odds
 end
 
-function Redmane_Act48(arg0, actor, goals)
+function Redmane_Alt_Act48(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 3.5 - arg0:GetMapHitRadius(TARGET_SELF), 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 1, 3.5 - arg0:GetMapHitRadius(TARGET_SELF) + 10, 50, 0, 4, 8)
     actor:AddSubGoal(GOAL_COMMON_ComboAttackTunableSpin, 10, 3014, TARGET_ENE_0, 5 - arg0:GetMapHitRadius(TARGET_SELF), 0, 0, 0, 0)
     GetWellSpace_Odds = 100
     return GetWellSpace_Odds
 end
 
-function Redmane_Act49(arg0, actor, goals)
+function Redmane_Alt_Act49(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
 	local getRandom1 = arg0:GetRandam_Int(1, 100)
     if getRandom1 <= 33 then
@@ -561,7 +561,7 @@ function Redmane_Act49(arg0, actor, goals)
     return 
 end
 	
-function Redmane_Act50(arg0, actor, goals)
+function Redmane_Alt_Act50(arg0, actor, goals)
 	Approach_Act_Flex(arg0, actor, 20 - arg0:GetMapHitRadius(TARGET_SELF), 5 - arg0:GetMapHitRadius(TARGET_SELF), 999, 100, 0, 3, 5)
     local MaxDist = 20 - arg0:GetMapHitRadius(TARGET_SELF)
     local spinTime = 0
@@ -578,7 +578,7 @@ end
 
 -- dragon
 
-function Redmane_Act62(arg0, actor, goals)
+function Redmane_Alt_Act62(arg0, actor, goals)
 	local dist0 = arg0:GetDist(TARGET_ENE_0)
 	local rand1 = arg0:GetRandam_Int(1, 100)
 	Approach_Act_Flex(arg0, actor, 3 - arg0:GetMapHitRadius(TARGET_SELF), 3 - arg0:GetMapHitRadius(TARGET_SELF), 999, 50, 0, 3, 5)
@@ -586,7 +586,7 @@ function Redmane_Act62(arg0, actor, goals)
     return
 end
 
-function Redmane_ActAfter_AdjustSpace(arg0, actor, goals)
+function Redmane_Alt_ActAfter_AdjustSpace(arg0, actor, goals)
     actor:AddSubGoal(GOAL_Redmane_Alt_AfterAttackAct, 10)
     return 
 end
