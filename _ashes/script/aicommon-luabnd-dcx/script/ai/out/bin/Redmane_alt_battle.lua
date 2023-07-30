@@ -55,14 +55,14 @@ Goal.Activate = function (arg0, actor, goals)
 		-- alt redmane start
 	elseif actor:GetNpcThinkParamID() == 340001 then
 		if distance >= 8 then
-			if actor:GetHpRate(TARGET_SELF) <= 0.4 then
+			if actor:GetHpRate(TARGET_SELF) <= 0.6 then
 				probabilities[42] = 100--3019
 			end
 			probabilities[34] = 34--jump 3011
 			probabilities[49] = 34--3025
 			probabilities[50] = 32--3025
 		elseif distance >= 4 then
-			if actor:GetHpRate(TARGET_SELF) <= 0.4 then
+			if actor:GetHpRate(TARGET_SELF) <= 0.6 then
 				probabilities[42] = 100--3019
 			end
 			probabilities[38] = 20--atk3007,redguardrunattack
@@ -71,16 +71,15 @@ Goal.Activate = function (arg0, actor, goals)
 			probabilities[49] = 20--3025
 			probabilities[50] = 20--3025
 		else
-			if actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_L, 120) and distance <=2 then
+			if actor:GetHpRate(TARGET_SELF) <= 0.6 then
+				probabilities[42] = 100--3019
+			elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_L, 120) and distance <=2 then
 				probabilities[35] = 100--3010
 				probabilities[44] = 100
 			elseif actor:IsInsideTarget (TARGET_ENE_0, AI_DIR_TYPE_R, 120) and distance <=2 then
 				probabilities[36] = 100--3009
 				probabilities[44] = 100
 			else
-				if actor:GetHpRate(TARGET_SELF) <= 0.4 then
-					probabilities[42] = 100--3019
-				end
 				probabilities[32] = 11--atk3000
 				probabilities[33] = 11--atk3002
 				probabilities[37] = 20--atk3013,redguardflurry
