@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 2.4 4.25.2023"</Description>
+      <Description>"Open - The Champion's Archive 2.4.3 8.4.2023"</Description>
       <Options moHideChildren="1"/>
       <VariableType>Auto Assembler Script</VariableType>
       <AssemblerScript>[ENABLE]
@@ -2908,6 +2908,8 @@ CREATETHREAD(ItemGib)
 404D0F5C:Liquid Light
 404D0EAB:Blood Lacquer
 404D0EAC:Oil Lacquer
+404D1087:Illusion Scroll - Sister Friede
+404D1088:Illusion Scroll - Hide Helmet
 40000178:Pendant
 400003E8:Titanite Shard
 400003E9:Large Titanite Shard
@@ -3206,6 +3208,7 @@ CREATETHREAD(ItemGib)
 00F42400:Sellsword Twinblades
 00F47220:Warden Twinblades
 00F4C040:Dancer's Enchanted Swords
+00F6BC10:Red Rust Swords
 005CC600:Murakumo
 003DF360:Carthus Curved Greatsword
 005DD770:Exile Greatsword
@@ -4006,11 +4009,17 @@ CREATETHREAD(ItemGib)
 15EFCE50:Black Dragon Gauntlets
 15EFD238:Black Dragon Leggings
 15F51DB0:Dragon Head
-15F52198:Dragon Body
-1206CC80:Stone Dragon Head
-1206D068:Stone Dragon Torso
-1206D450:Stone Dragon Arms
-1206D838:Stone Dragon Legs
+15F52198:Dragon Body - Torso
+15F52580:Dragon Body - Arms
+15F52968:Dragon Body - Legs
+1206CC80:Tainted Dragon Head
+1206D068:Tainted Dragon Body - Torso
+1206D450:Tainted Dragon Body - Arms
+1206D838:Tainted Dragon Body - Legs
+12160EC0:Abyssal Dragon Head
+121612A8:Abyssal Dragon Body - Torso
+12161690:Abyssal Dragon Body - Arms
+12161A78:Abyssal Dragon Body - Legs
 15EFED90:Dragonrider Helm
 15EFF178:Dragonrider Armor
 15EFF560:Dragonrider Gauntlets
@@ -4087,11 +4096,12 @@ CREATETHREAD(ItemGib)
 15F2DB90:Bone Ash Gauntlets
 15F2DF78:Bone Ash Leggings
 13DEC0D0:Top Hat
-15F348F0:Hunter's Hat
+15F348F0:Hunter Hat
 15F544C0:Old Hunter Top Hat
-15F34CD8:Hunter's Coat
-15F350C0:Hunter's Gloves
-15F354A8:Hunter's Trousers
+13DEC4B8:Hunter Coat
+15F34CD8:Hunter Garb
+15F350C0:Hunter Gloves
+15F354A8:Hunter Trousers
 15A995C0:Doll's Bonnet
 15A999A8:Doll's Dress
 15A99D90:Doll's Gloves
@@ -4455,6 +4465,7 @@ local newWeapons =
 {
 
 -- weapons
+  0x00F6BC10, --Red Rust Swords
   0x0206CC80, --Glaive Adept Twinblade
   0x00B85380, --Allfather's Morningstar
   0x0206F390, --Loaded Axe Test Up
@@ -5200,12 +5211,12 @@ local newArmors = -- Ashes Armor
 
 
 -- Standalone Helmets --
+  0x13DEC0D0, --Top Hat
   0x12B275D0, --One-Eyed Iron Helm
   0x15A21BB0, --Old Bell Helm
   0x13D30100, --Lumenwood's Kin Head
   0x13DB6570, --Steel Soldier's Mask
   0x14EEAA30, --Gascoigne's Hat
-  0x15F51DB0, --Old Hunter Hat
   0x13D8A650, --Plague Mask
   0x13DC76E0, --Mask of the Father
   0x13DC4FD0, --Mask of the Mother
@@ -5246,10 +5257,18 @@ local newArmors = -- Ashes Armor
   0x11720A78, --Gladiator Armor
   0x11720E60, --Gladiator Gauntlets
   0x11721248, --Gladiator Leggings
-  0x1206CC80, --Stone Dragon Head
-  0x1206D068, --Stone Dragon Torso
-  0x1206D450, --Stone Dragon Arms
-  0x1206D838, --Stone Dragon Legs
+  0x15F51DB0, --Dragon Head
+  0x15F52198, --Dragon Body - Torso
+  0x15F52580, --Dragon Body - Arms
+  0x15F52968, --Dragon Body - Legs
+  0x1206CC80, --Tainted Dragon Head
+  0x1206D068, --Tainted Dragon Torso
+  0x1206D450, --Tainted Dragon Arms
+  0x1206D838, --Tainted Dragon Legs
+  0x12160EC0, --Abyssal Dragon Head
+  0x121612A8, --Abyssal Dragon Body - Torso
+  0x12161690, --Abyssal Dragon Body - Arms
+  0x12161A78, --Abyssal Dragon Body - Legs
   0x15F25E90, --Skeleton Head - Head
   0x15F26278, --Skeleton Body - Torso
   0x15F26660, --Skeleton Body - Arms
@@ -5282,10 +5301,10 @@ local newArmors = -- Ashes Armor
   0x15F3C208, --King's Armor
   0x15F3C5F0, --King's Gauntlets
   0x15F3C9D8, --King's Leggings
-  0x15F348F0, --Hunter's Hat
-  0x15F34CD8, --Hunter's Coat
-  0x15F350C0, --Hunter's Gloves
-  0x15F354A8, --Hunter's Trousers
+  0x15F348F0, --Hunter Hat
+  0x15F34CD8, --Hunter Coat
+  0x15F350C0, --Hunter Gloves
+  0x15F354A8, --Hunter Trousers
   0x13DCC500, --Sulyvahn's Crown
   0x13DCC8E8, --Sulyvahn's Robe
   0x13DCCCD0, --Sulyvahn's Bracelets
@@ -6389,6 +6408,8 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newItems =
   {
+  0x404D1088, --Illusion Scroll - Hide Helmet
+  0x404D1087, --Illusion Scroll - Sister Friede
   0x40000138, --Crystal Dart
   0x40000107, --Crescent Moon Grass
   0x4000011F, --Molotov Cocktail
