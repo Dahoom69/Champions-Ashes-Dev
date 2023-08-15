@@ -18,8 +18,8 @@ Goal.Activate = function (_, actor, goals)
     if actor:IsInsideTarget(TARGET_ENE_0, AI_DIR_TYPE_B, 240) then
         probabilities[20] = 100
     else
-        probabilities[1] = 20
-        probabilities[2] = 80
+        probabilities[1] = 50
+        probabilities[2] = 50
     end
     acts[1] = REGIST_FUNC(actor, goals, PoisonAngleInsect321000_Act01)
     acts[2] = REGIST_FUNC(actor, goals, PoisonAngleInsect321000_Act02)
@@ -30,7 +30,7 @@ Goal.Activate = function (_, actor, goals)
 end
 
 function PoisonAngleInsect321000_Act01(arg0, goals, _)
-    local f3_local0 = 1.5 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f3_local0 = 2 - arg0:GetMapHitRadius(TARGET_SELF)
     local f3_local1 = 999
     local f3_local2 = 999
     local f3_local3 = 0
@@ -39,7 +39,7 @@ function PoisonAngleInsect321000_Act01(arg0, goals, _)
     local f3_local6 = 0
     Approach_Act_Flex(arg0, goals, f3_local0, f3_local1, f3_local2, f3_local3, f3_local4, f3_local5, f3_local6)
     local f3_local7 = 3000
-    local f3_local8 = 1.5 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f3_local8 = 2 - arg0:GetMapHitRadius(TARGET_SELF)
     local f3_local9 = 0
     local f3_local10 = 0
     goals:AddSubGoal(GOAL_COMMON_AttackTunableSpin, 10, f3_local7, TARGET_ENE_0, f3_local8, f3_local9, f3_local10, 0, 0)
@@ -48,7 +48,7 @@ function PoisonAngleInsect321000_Act01(arg0, goals, _)
 end
 
 function PoisonAngleInsect321000_Act02(arg0, goals, _)
-    local f4_local0 = 3 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f4_local0 = 10 - arg0:GetMapHitRadius(TARGET_SELF)
     local f4_local1 = 999
     local f4_local2 = 999
     local f4_local3 = 0
@@ -57,7 +57,7 @@ function PoisonAngleInsect321000_Act02(arg0, goals, _)
     local f4_local6 = 0
     Approach_Act_Flex(arg0, goals, f4_local0, f4_local1, f4_local2, f4_local3, f4_local4, f4_local5, f4_local6)
     local f4_local7 = 3001
-    local f4_local8 = 3 - arg0:GetMapHitRadius(TARGET_SELF)
+    local f4_local8 = 10 - arg0:GetMapHitRadius(TARGET_SELF)
     local f4_local9 = 0
     local f4_local10 = 0
     goals:AddSubGoal(GOAL_COMMON_AttackTunableSpin, 10, f4_local7, TARGET_ENE_0, f4_local8, f4_local9, f4_local10, 0, 0)
