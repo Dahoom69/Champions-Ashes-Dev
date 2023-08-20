@@ -9848,6 +9848,8 @@ function AttackBothLight1_onUpdate()  -- r11
         act(2002, 625)
     end
 
+    if ((sp_m == 693  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 693  and c_Style == HAND_LEFT_BOTH) ) then l1 = "W_AttackBothLeft1" end
+
     if ((sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) ) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_AttackBothLightStepSpecial")
@@ -9916,7 +9918,7 @@ function AttackBothLight2_onUpdate()  -- r12
     
     if (sp_m == 160 and HAND_LEFT_BOTH ~= c_Style) or (sp_o == 160 and HAND_LEFT_BOTH == c_Style) then  b1 = "W_AttackBothLight1" end
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  b2 = "W_AttackBothHeavy2Start" end
-
+    if (sp_m == 693  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 693  and c_Style == HAND_LEFT_BOTH) then l1 = "W_AttackBothLeft2" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
