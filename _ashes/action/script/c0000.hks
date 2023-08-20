@@ -9998,8 +9998,8 @@ function AttackBothLight3_onUpdate()  -- r13 034020
 
     if (sp_m == 685 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 685 and c_Style == HAND_LEFT_BOTH)   then b1 = "W_AttackBothLight1" end
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_AttackBothLight1" end
-
-        if (sp_m == 621) then l1 = "W_AttackBothHeavy2Start" end
+    if (sp_m == 693  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 693  and c_Style == HAND_LEFT_BOTH) then l1 = "W_AttackBothLeft3" end
+    if (sp_m == 621) then l1 = "W_AttackBothHeavy2Start" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -10074,6 +10074,8 @@ function AttackBothLeft1_onUpdate() -- l11
     if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
     if is_tb_ps == TRUE then r1 = "W_AttackRightLight3" end 
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
+    if (sp_m == 693  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 693  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight3" end
+    
 
     if env(1116, 100283) == FALSE and  AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -10156,7 +10158,8 @@ function AttackBothLeft2_onUpdate()  -- l12
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" end 
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
      if (GetEquipType(HAND_RIGHT, 30)  == TRUE and env(345 , HAND_RIGHT) == 148  and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 30)  == TRUE and env(345 , HAND_LEFT) == 148 and c_Style == HAND_LEFT_BOTH)  then b1 = "W_AttackBothLeft1" end
-
+     if (sp_m == 693  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 693  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
+     
      if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, "W_AttackBothLeft3", offhand, b1, b2, FALSE, TRUE) == TRUE then return
@@ -19981,7 +19984,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
     if (sp_o == 149 or sp_o == 239) then is_pyro_o = TRUE end
 
     if (GetEquipType(HAND_RIGHT, 30) == TRUE and sp_m ~= 102) and (GetEquipType(HAND_LEFT, 30) == TRUE and is_gun == FALSE and sp_o ~= 102 and sp_o ~= 691) and (is_both == FALSE and sp_m ~= 138)                                                                              then is_axe_ps = TRUE else is_axe_ps = FALSE end
-    if (GetEquipType(HAND_RIGHT, 23) == TRUE and sp_m ~= 685 and sp_m ~= 236 and sp_m ~= 612 and sp_m ~= 101 and sp_m ~= 649 and sp_m ~= 627 and sp_m ~= 679) and (GetEquipType(HAND_LEFT, 23) == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)   then is_ss_ps = TRUE else is_ss_ps = FALSE end
+    if (GetEquipType(HAND_RIGHT, 23) == TRUE and sp_m ~= 685 and sp_m ~= 236 and sp_m ~= 612 and sp_m ~= 101 and sp_m ~= 649 and sp_m ~= 627 and sp_m ~= 679 and sp_m ~= 693) and (GetEquipType(HAND_LEFT, 23) == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)   then is_ss_ps = TRUE else is_ss_ps = FALSE end
 	if (GetEquipType(HAND_RIGHT, 27) == TRUE and sp_m ~= 624) and (GetEquipType(HAND_LEFT, 27) == TRUE) and (is_both == FALSE and sp_m ~= 237)                                                                                                                                  then is_ts_ps = TRUE else is_ts_ps = FALSE end
     if (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (GetEquipType(HAND_LEFT, 25, 26)  == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666)) and (is_both == FALSE)                 then is_ugs_ps = TRUE else is_ugs_ps = FALSE end
     if (sp_m == 689 or sp_m == 690) and (sp_o == 689 or sp_o == 690)                                                                                                                                                                                                            then is_tb_ps = TRUE else is_tb_ps = FALSE end
