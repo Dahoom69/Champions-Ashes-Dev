@@ -20,6 +20,12 @@
       <flags>0x40</flags>
       <id>200</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>parts\Weapon\WP_A_0201\WP_A_0201.flver</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>201</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>parts\Weapon\WP_A_0635\WP_A_0635.flver</path>
     </file>
   </files>
