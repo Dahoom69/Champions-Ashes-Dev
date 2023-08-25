@@ -14,13 +14,25 @@
       <flags>0x40</flags>
       <id>100</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
-      <path>parts\Weapon\WP_A_0635\WP_A_0635_L.tpf</path>
+      <path>parts\Weapon\WP_A_0635_EM_l\WP_A_0635_EM_l.tpf</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
+      <id>101</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>parts\Weapon\WP_A_1622_l\WP_A_1622_l.tpf</path>
     </file>
     <file>
       <flags>0x40</flags>
       <id>200</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
-      <path>parts\Weapon\WP_A_0635\WP_A_0635_L.flver</path>
+      <path>parts\Weapon\WP_A_1622_l\WP_A_1622_l.flver</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
+      <id>201</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>parts\Weapon\WP_A_0635_EM_l\WP_A_0635_EM_l.flver</path>
     </file>
   </files>
 </bnd4>
