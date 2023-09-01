@@ -1402,12 +1402,6 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>script\ai\out\bin\Redmane_alt_battle.lua</path>
     </file>
-<!--     <file>
-      <flags>0x40</flags>
-      <id>9232</id>
-      <root>N:\FDP\data\INTERROOT_win64\</root>
-      <path>script\ai\out\bin\Redmane_akuma_battle.lua</path>
-    </file> -->
     <file>
       <flags>0x40</flags>
       <id>10000</id>
