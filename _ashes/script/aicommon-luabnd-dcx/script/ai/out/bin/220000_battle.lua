@@ -20,21 +20,19 @@ Goal.Activate = function (_, actor, goals)
     actor:AddObserveSpecialEffectAttribute(TARGET_SELF, 5400)
     actor:AddObserveSpecialEffectAttribute(TARGET_SELF, 5404)
     if actor:HasSpecialEffectId(TARGET_SELF, 5404) == false then
-        if InsideRange(actor, goals, 0, 180, 43, 75) then
+        if InsideRange(actor, goals, 0, 180, 42, 75) then
             probabilities[5] = 10
-        elseif InsideRange(actor, goals, 45, 90, 25, 43) then
+        elseif InsideRange(actor, goals, 45, 90, 25, 42) then
             probabilities[1] = 10
-        elseif InsideRange(actor, goals, -45, 90, 25, 43) then
+        elseif InsideRange(actor, goals, -45, 90, 25, 42) then
             probabilities[2] = 10
         elseif InsideRange(actor, goals, 0, 90, 10, 25) then
-            probabilities[3] = 15
-            probabilities[4] = 5
+            probabilities[3] = 10
+            probabilities[4] = 10
         elseif InsideRange(actor, goals, 0, 180, -99, 10) then
-            probabilities[3] = 15
-			probabilities[32] = 5
+			probabilities[32] = 10
         else
-			probabilities[3] = 15
-            probabilities[32] = 15
+            probabilities[32] = 10
         end
     elseif InsideRange(actor, goals, 0, 360, 60, 999) then
         probabilities[30] = 10
