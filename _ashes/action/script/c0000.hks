@@ -10845,7 +10845,7 @@ function AttackBothHeavySpecial2End_onUpdate()
     end
 end
 
-function AttackBothHeavyWepBroken1Start_onUpdate()  -- r14
+function AttackBothHeavyWepBroken1Start_onUpdate()  -- r14 034325
     local sp_m = env(345, HAND_RIGHT)
     local sp_o = env(345, HAND_LEFT)
     local r1 = "W_AttackRightLight1"
@@ -12123,6 +12123,8 @@ function StepInRightStart_Upper_onUpdate() -- 036000
     end
 
     if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_AttackRightHeavyWepBroken1Start" 
+        b1 = "W_AttackBothHeavyWepBroken1Start"
         r2 = "W_AttackRightHeavy1Start" 
         b2 = "W_AttackBothHeavy1Start" 
     end
