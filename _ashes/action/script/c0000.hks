@@ -6677,8 +6677,13 @@ function MoveCommonFunction(blend_type)
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
     if DASH_STARTING_SPEED < speed then
+        local sp_m = env(345 , HAND_RIGHT)
+
         r1 = "W_AttackRightLightDash"
         b1 = "W_AttackBothDash"
+
+        if env(1116, 705) == TRUE and sp_m == 687 then r1 = "W_AttackBothDash" end
+
         if IsArtsSpAtk() == TRUE then
             r1 = "W_AttackRightLightDashSpecial"
             b1 = "W_AttackBothDashSpecial"
