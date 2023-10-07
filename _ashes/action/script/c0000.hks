@@ -2124,8 +2124,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif (sp_m == 689 or sp_m == 690 or sp_m == 687 or sp_m == 688  or sp_m == 692) then -- W_AttackRightHeavy1Start extra r2 
             EXR2 = TRUE
             if r2 == "W_AttackRightHeavy1Start" then -- r21 charge extra 030345
-                r2 = "W_AttackRightHeavyWepBroken2Start"
+                    r2 = "W_AttackRightHeavyWepBroken2Start" 
             end
+            
         elseif IsWepBrokenHeavyAtk() == TRUE then
             if r2 == "W_AttackRightHeavy1Start" then
                 r2 = "W_AttackRightHeavyWepBroken1Start"
@@ -2163,6 +2164,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif                      (GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and is_both_right == TRUE and env(1116, 100289) == TRUE)  or (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 67 and is_both_right == FALSE  and env(1116, 100289) == TRUE)   then
                 ExecEventAllBody("W_CrossbowStepInReload") 
             elseif (sp_m == 672 or sp_m == 688) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKick")
+            elseif ((sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+                or ((sp_o == 687 and env(1116, 705) == TRUE) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
             end
@@ -2172,6 +2175,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == FALSE then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == TRUE then  ExecEventAllBody("W_CrossbowStepInFire")
+        elseif (sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         else
             ExecEventAllBody("W_AttackRightHeavyKick")
         end
@@ -6678,11 +6682,12 @@ function MoveCommonFunction(blend_type)
 
     if DASH_STARTING_SPEED < speed then
         local sp_m = env(345 , HAND_RIGHT)
+        local sp_o = env(345 , HAND_LEFT)
 
         r1 = "W_AttackRightLightDash"
         b1 = "W_AttackBothDash"
 
-        if env(1116, 705) == TRUE and sp_m == 687 then r1 = "W_AttackBothDash" end
+        if env(1116, 705) == FALSE and sp_m == 687 then r1 = "W_AttackBothDash" end
 
         if IsArtsSpAtk() == TRUE then
             r1 = "W_AttackRightLightDashSpecial"
@@ -6694,6 +6699,14 @@ function MoveCommonFunction(blend_type)
         elseif IsEnableJumpAtk() == TRUE then
             r2 = "W_AttackRightHeavyKick"
             b2 = "W_AttackBothHeavyKick"
+
+            if (sp_m == 687 and env(1116, 705) == TRUE and c_Style ~= HAND_LEFT_BOTH) 
+            or (sp_o == 687 and env(1116, 705) == TRUE and c_Style == HAND_LEFT_BOTH) 
+            then 
+                r2 = "W_AttackRightHeavyKickSpecial" 
+                b2 = "W_AttackBothHeavyKickSpecial"    
+            end
+
             if (env(1116, 698) and IsWarcrySpAtk() == TRUE and (env(345 , HAND_RIGHT) == 127) and c_Style ~= HAND_LEFT_BOTH)
             or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (env(345 , HAND_LEFT) == 127) and c_Style == HAND_LEFT_BOTH) then 
                 r2 = "W_AttackRightHeavyKickSpecial"
@@ -6780,12 +6793,21 @@ function GuardCommonFunction(is_guard_end, blend_type)
 
     local guard_attack = FALSE
     if 1.10000002384186 < GetVariable("MoveSpeedLevelReal") then
+        local sp_m = env(345 , HAND_RIGHT)
+        local sp_o = env(345 , HAND_LEFT)
+        
         r1 = "W_AttackRightLightDash"
         b1 = "W_AttackBothDash"
         if IsEnableJumpAtk() == TRUE then
             if IsArtsSpAtk() == TRUE then
                 r2 = "W_AttackRightHeavyKickSpecial"
                 b2 = "W_AttackBothHeavyKickSpecial"
+
+            elseif (sp_m == 687 and env(1116, 705) == TRUE and c_Style ~= HAND_LEFT_BOTH) 
+                or (sp_o == 687 and env(1116, 705) == TRUE and c_Style == HAND_LEFT_BOTH) 
+                then 
+                    r2 = "W_AttackRightHeavyKickSpecial" 
+                    b2 = "W_AttackBothHeavyKickSpecial"    
             else
                 r2 = "W_AttackRightHeavyKick"
                 b2 = "W_AttackBothHeavyKick"
@@ -8686,6 +8708,8 @@ function AttackRightLight2_onUpdate() -- r12
     if (sp_m == 658) then r2 = "W_AttackRightHeavy2Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_CrossbowStepInFire" b2 = r2 end 
+    if sp_m == 687 and env(1116, 705) == TRUE then r1 = "W_CrossbowStepInFire" end
+
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight1", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
