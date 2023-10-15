@@ -922,6 +922,7 @@
 <text id="6331500">Hollow Drakeblood Greatsword</text>
 <text id="6340000">Firelink Greatsword</text>
 <text id="6350000">Fume Ultra Greatsword</text>
+<text id="6350100">Fume Knight's Paired Swords</text>
 <text id="6360000">Old Wolf Curved Sword</text>
 <text id="6370000">Storm Ruler</text>
 <text id="7000000">Hand Axe</text>
@@ -3019,6 +3020,8 @@
 <text id="35061300">Chosen's Raw Scythe</text>
 <text id="35061400">Chosen's Sacred Scythe</text>
 <text id="35061500">Chosen's Hollow Scythe</text>
+<text id="36000000">Tower Knight lance</text>
+<text id="36010000">Tower Knight shield</text>
 <text id="36030000">Baby's Nail</text>
 <text id="36040000">Mercury Spiral Rapier</text>
 <text id="36050000">Large Sword of Searching</text>

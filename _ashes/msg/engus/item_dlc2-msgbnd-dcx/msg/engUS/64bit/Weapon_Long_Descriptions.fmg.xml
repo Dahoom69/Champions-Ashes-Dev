@@ -5461,8 +5461,7 @@ Charge forward, sword held high, and slam down with a thunderous strike.</text>
 
 This coiled sword, found thrust in the bonfire, existed long before the throneless lords themselves.
 
-The warped metal remembers the forms it took while in service of the Soul of Cinder.
-Surely, a skilled craftsman may meld it into its other forms...
+Can be changed into its other forms through the infusion of a master blacksmith.
 
 Skill: Ember
 The fading flame momentarily illuminates and launches itself forward.</text>
@@ -5472,6 +5471,13 @@ This weapon, said to belong to a traitor from long ago, was so heavy that it fou
 
 Skill: Stomp
 Use one's weight to lunge forward with a low stance and increased poise, and follow with a crushing strong attack.
+</text>
+<text id="6350100">Straight sword and Ultra Greatsword of the Fume Knight Raime.
+
+These weapons, wielded by the spirit of Raime, were once forgotten relics of history. Your Champions Soul allows you to challenge spirits of the past, and so Raime's weapons fall into your hands.
+
+Skill: Raime's Stance
+While in stance, use light attack to thrust forward with the greatsword up, and heavy attack to send balls of fire in a circle toward your enemy.
 </text>
 <text id="6360000">Curved sword bearing the soul of the old wolf that stays with the Watchdogs of Farron.
 
@@ -12504,12 +12510,13 @@ When the Drang Knights disbanded, they scattered across the lands as sellswords.
 Skill: Spin Bash 
 Bash foes with a large spinning motion, and utilize momentum to transition into an overhanded strong attack smash.</text>
 <text id="16170000">Paired weapon consisting of a heavy broken glaive and curved sword, used by the Redmanes.
-Even while battle-worn and terribly rusted, they remain deadly due to their weight. 
+While deadly due to their weight, the real strength comes from the toxic rust that covers the blades.
 
-In a battle with a neighboring kingdom, the Redmanes gained an admiration for a ferocious man, and as a result broke their glaives to match the man in combat. It is said that the respect for this man granted him his life at the end of the battle.
+In an old war, the first of the Redmanes gained a keen respect for a Forossan mercenary who used similarly heavy weapons. Their admiration changed their fighing style to mimic the man.
 
 Skill: Spin Bash
-Bash foes with a large spinning motion, utilizing momentum to transition into a overhand strong attack smash.</text>
+Bash foes with a large spinning motion, utilizing momentum to transition into a overhand strong attack smash.
+</text>
 <text id="20000000">A very small round metal shield.
 
 It features a large central protrusion designed for parrying attacks.
@@ -18621,28 +18628,20 @@ Stomp the earth with mighty strength and send forth furious bolts of lightning t
 Combat Art: Falling Bolt
 Hold swordspear high in the air to summon fierce lightning that descends upon distant foes.</text>
 <text id="30140000">The Lords of Cinder linked the First Flame, and this Lance was wielded by their deific manifestation.
+Both a weapon and a miracle catalyst.
 
-This long coiled spear draws from the First Flame to empower miracles, the memory of the Great Lords forever inscribed into the First Flame.
+The Lords of ages past gave themselves up as kindling to the First Flame, their souls contributing to the Flame's guardian.
 
-Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
-
-Recite the tales of the gods and unleash miracles with strong attack.
-
-The warped metal remembers the forms it took while in service of the Soul of Cinder.
-Surely, a skilled craftsman may meld it into its other forms...
+Can be changed into its other forms through the infusion of a master blacksmith.
 
 Skill: Shield Splitter
 Aim carefully, and attack in a large forward lunge to pierce through enemy shields and inflict damage directly.</text>
 <text id="30150000">The Lords of Cinder linked the First Flame, and this Curved Sword was wielded by their deific manifestation.
+Both a weapon and a pyromancy flame.
 
-This coiled blade draws power from the first flame to channel pyromancies, the art of fire originating from one of the great Lord Souls.
+The Lords of ages past gave themselves up as kindling to the First Flame, their souls contributing to the Flame's guardian.
 
-Throughout the ages, Lords gave themselves as kindling, the First Flame solidifying their essence into the apparition that stands as its Guardian.
-
-Channel the art of fire and perform pyromancies with strong attack.
-
-The warped metal remembers the forms it took while in service of the Soul of Cinder.
-Surely, a skilled craftsman may meld it into its other forms...
+Can be changed into its other forms through the infusion of a master blacksmith.
 
 Skill: Agile Retreat
 Quickly backflip, avoiding all danger.</text>
@@ -18755,14 +18754,8 @@ Its powerful heavy attacks imitates the golem's blade of wind and cannot be rele
 
 Skill: Power Geyser
 Punch the ground two times, each creating a big geyser of energy, which juggles the opponent on the receiving end.</text>
-<text id="35020000">Sword allegedly wielded by servants of the Gravelord.
-
-Numerous ancient skeletons cling to the blade, melded into a macabre exhibition of the Old Dead One's might.
-
-Primordial tales tell of one of the first Great Lords, Nito, the First of the Dead. Waves of lethal miasma would emanate from his blade, granting all it touched death and decay.
-The same miasma, however thinned, exudes from this blade.
- 
-Lord Wolnir sought to control this power, yearning to find the secret of immortality within the cloud of death. His desire was ultimately fulfilled, but the price, ironically, was a fate worse than death.
+<text id="35020000">Sword wielded by servants of the Gravelord.
+A lethal miasma exudes from this blade, a veritable toxin to any living being.
 
 Skill: Gravelord Sword Storm
 Thrust weapon into earth to emit a series of giant Gravelord swords from the ground.</text>
@@ -18990,6 +18983,16 @@ Yet a champion wielded it to slay men and gods alike, for what the weapon lacks 
 
 Skill: Spin Sweep
 Sweep foes in a large spinning motion, and utilize momentum to transition into an overhanded strong attack smash.</text>
+<text id="36000000">Tower Knight lance
+
+Skill: Iron Soul lance
+turns the user's body into iron, boosts damage absorption and resistance, but significantly increases weight.
+Then throw a soul lance.</text>
+<text id="36010000">Tower Knight shield
+
+Skill: Weapon Skill / Tower Shield Strike
+Equipping this shield in the left hand allows one to perform the Skill of the right hand weapon.
+press l1 during attacks to perform Tower Shield Strikes.</text>
 <text id="36030000">A dagger treated with plague. The blade is curved like a talon, and was once used by women and children for assassination.
 
 The weapon draws its power from Luck, perhaps an ode to the nature of children to believe in such things.
@@ -19009,9 +19012,10 @@ Aim carefully, and attack in a large forward lunge to pierce through enemy shiel
 
 Combat Art: Parry
 Repel an attack at the right time to follow up with a critical hit. Exclusively works while two handing.</text>
-<text id="36050000">An enormous crystal sword with a crescent blade. It was forged from the soul of an old hero from ages past, if the stories are to be believed. The rickety blade has become severely weathered.
+<text id="36050000">An enormous crystal sword with a crescent blade, forged from the soul of an old hero from ages past.
+Increases item discovery and increases Luck by 5.
 
-The blade appears to double as a lucky charm, bringing the wielder good fortune in obtaining more items. Perhaps as a result of this, it also improves in ferocity with the wielder's Luck.
+The hero, in legend, was reduced to a blind madman after his revival.
 
 Skill: Hero's Counter
 Assume the stance of the old hero and counter incoming attacks with a jumping slash.
