@@ -9074,6 +9074,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy2Start"
     local b2 = "W_AttackBothHeavy2Start"
+    local b1 = "W_AttackBothLight1"
 
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42, 47, 48) == TRUE or sp_m == 51 or sp_m == 80 or 
     sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
@@ -9091,8 +9092,8 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
     then 
         act(2002, 627)
     end
-    if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavyKickSpecial" end
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
+    if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavyKickSpecial" b1 = r1 end
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackRightHeavy1End")
