@@ -2888,8 +2888,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 else
                     SetVariable("FourWayAttackStartDirection_SelfTrans", 0)
                 end
-                SetVariable("FourWayAttackStartAngle_SelfTrans", angle)
-                ExecEventAllBody("W_FourWayAttackStart_SelfTrans")
+
+                if ((GetEquipType(HAND_RIGHT, 28) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 28) == TRUE and c_Style == HAND_LEFT_BOTH)) then
+                    SetVariable("FourWayAttackStartAngle", angle)
+                    ExecEventAllBody("W_FourWayAttackStart")
+                else
+                    SetVariable("FourWayAttackStartAngle_SelfTrans", angle)
+                    ExecEventAllBody("W_FourWayAttackStart_SelfTrans")
+                end
             end
             end
         else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
