@@ -19975,6 +19975,7 @@ function Update()
     SetTimeActEditorVariable()
     UpdateFemaleBlend()
     UpdateShoulderTwist()
+    UpdateMomentumMultiplier()
     UpdateWristTwistNew()
     UpdateDuelMode()
     UpdateSunlightBlade()
@@ -19983,6 +19984,29 @@ function Update()
     UpdateForwardAttackShortcutBlock()
     g_FrameCount = g_FrameCount + 1
     return 
+end
+
+function UpdateMomentumMultiplier()
+    if env(1116, 100701) == TRUE then act(2001, 1.1)    end
+    if env(1116, 100702) == TRUE then act(2001, 1.2)    end
+    if env(1116, 100703) == TRUE then act(2001, 1.3)    end
+    if env(1116, 100704) == TRUE then act(2001, 1.4)    end
+    if env(1116, 100705) == TRUE then act(2001, 1.5)    end
+    if env(1116, 100706) == TRUE then act(2001, 1.6)    end
+    if env(1116, 100707) == TRUE then act(2001, 1.7)    end
+    if env(1116, 100708) == TRUE then act(2001, 1.8)    end
+    if env(1116, 100709) == TRUE then act(2001, 1.9)    end
+    if env(1116, 100710) == TRUE then act(2001, 2.0)    end
+    if env(1116, 100711) == TRUE then act(2001, 2.1)    end
+    if env(1116, 100712) == TRUE then act(2001, 2.2)    end
+    if env(1116, 100713) == TRUE then act(2001, 2.3)    end
+    if env(1116, 100714) == TRUE then act(2001, 2.4)    end
+    if env(1116, 100715) == TRUE then act(2001, 2.5)    end
+    if env(1116, 100716) == TRUE then act(2001, 2.6)    end
+    if env(1116, 100717) == TRUE then act(2001, 2.7)    end
+    if env(1116, 100718) == TRUE then act(2001, 2.8)    end
+    if env(1116, 100719) == TRUE then act(2001, 2.9)    end
+    if env(1116, 100720) == TRUE then act(2001, 3.0)    end
 end
 
 function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
