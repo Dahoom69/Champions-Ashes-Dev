@@ -783,7 +783,7 @@ function GetSwordArtsInfo()
         arts_id = env(326, arts_hand)
     else
         local sp_o = env(326, HAND_LEFT)
-        if (    (sp == 137 or sp == 237 or (is_r == TRUE) or sp == 186 or sp == 187 or sp == 20 or is_m == TRUE or sp_o == SWORDARTS_RIGHTARTS or sp_o == 1701 ) and not (sp == 115 or sp == 178 or  sp == 207 or sp == 217 or sp == 218 or sp == 220 or sp == 234 or sp == 257 or sp == 99 or sp == 101 or sp == 151 or sp == 71 or sp == 665 or (is_sh == TRUE and sp_o == 3202   ) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp == 67)      )   ) then         
+        if (    (sp == 137 or sp == 237 or (is_r == TRUE) or sp == 186 or sp == 187 or sp == 20 or is_m == TRUE or sp_o == SWORDARTS_RIGHTARTS or sp_o == 1701 ) and not (sp == 115 or sp == 178 or  sp == 207 or sp == 217 or sp == 218 or sp == 220 or (sp == 159 and c_Style == HAND_RIGHT) or sp == 234 or sp == 257 or sp == 99 or sp == 101 or sp == 151 or sp == 71 or sp == 665 or (is_sh == TRUE and sp_o == 3202   ) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp == 67)      )   ) then         
             arts_hand = HAND_RIGHT
             arts_id = env(326, HAND_RIGHT) 
         else
@@ -1029,7 +1029,7 @@ function GetAttackRequest(is_guard)
             end
         end
         local sp_kind = env(345 , hand)
-        if sp_kind == 178 or sp_kind == 207 or (sp_kind == 217 and env(1116, 100260) == FALSE) or sp_kind == 220 or sp_kind == 234 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67)  then 
+        if sp_kind == 178 or sp_kind == 207 or (sp_kind == 217 and env(1116, 100260) == FALSE) or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT) or sp_kind == 234 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67)  then 
             return ATTACK_REQUEST_INVALID
         elseif sp_kind == 257 and env(1116, 100580) == FALSE then
             return ATTACK_REQUEST_INVALID
@@ -1143,7 +1143,7 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_ARROW_BOTH_LEFT
             end
             local sp_kind = env(345 , HAND_LEFT)
-            if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
+            if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_LEFT) or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
                 return ATTACK_REQUEST_INVALID
             end
         end
@@ -1646,7 +1646,7 @@ function IsEnableGuard()
             return FALSE
         elseif sp == 123 then
             return TRUE
-        elseif sp == 178 or sp == 207 or (sp == 217 and not is_sl == TRUE)  or sp == 220 or sp == 234 or sp == 257 or sp == 186  or (GetEquipType(hand, 38)  == TRUE and sp == 67) then
+        elseif sp == 178 or sp == 207 or (sp == 217 and not is_sl == TRUE)  or sp == 220 or (sp == 159 and c_Style == HAND_RIGHT) or sp == 234 or sp == 257 or sp == 186  or (GetEquipType(hand, 38)  == TRUE and sp == 67) then
             return FALSE
         elseif sp == 99 or sp == 101 or sp == 137 or sp == 151 or sp == 218 or sp == 20 or  is_r == TRUE   then
             return FALSE
@@ -3272,7 +3272,7 @@ function ExecMagic(quick_type, blend_type)
             SetAttackHand(HAND_LEFT)
         else
             local sp_kind = env(345 , HAND_RIGHT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and (sp_kind ~= 217 or env(1116, 100260) == TRUE) and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_RIGHT, 38)  ~= TRUE or sp_kind ~= 67) then
+            if sp_kind ~= 178 and sp_kind ~= 207 and (sp_kind ~= 217 or env(1116, 100260) == TRUE) and sp_kind ~= 220 and (sp_kind ~= 159 or c_Style ~= HAND_RIGHT ) and sp_kind ~= 234 and sp_kind ~= 257 and (  GetEquipType(HAND_RIGHT, 38)  ~= TRUE or sp_kind ~= 67) then
                 return FALSE
             elseif sp_kind == 257 and env(1116, 100580) == TRUE then
                 return FALSE
@@ -3294,7 +3294,7 @@ function ExecMagic(quick_type, blend_type)
             end
         elseif style == HAND_RIGHT then
             local sp_kind = env(345 , HAND_LEFT)
-            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and sp_kind ~= 234 and sp_kind ~= 257  and (GetEquipType(HAND_LEFT, 38)  == FALSE or sp_kind ~= 67) then
+            if sp_kind ~= 178 and sp_kind ~= 207 and sp_kind ~= 217 and sp_kind ~= 220 and (sp_kind ~= 159 or c_Style ~= HAND_RIGHT ) and sp_kind ~= 234 and sp_kind ~= 257  and (GetEquipType(HAND_LEFT, 38)  == FALSE or sp_kind ~= 67) then
                 return FALSE
             end
             SetAttackHand(HAND_LEFT)
@@ -4208,7 +4208,7 @@ function ExecHandChange(hand, is_force, blend_type)
         elseif (style == HAND_RIGHT_BOTH or style == HAND_BOTH) then ExecEventAllBody("W_AttackBothLightKick")
     end
     
-    elseif (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667) then 
+    elseif ((sp_m == 159 and (c_Style == HAND_RIGHT or c_Style == HAND_RIGHT_BOTH) ) or sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667) then 
         if (style == HAND_RIGHT and iT == FALSE) then 
             if env(1001) <= 0 then
                 return FALSE 
@@ -4218,8 +4218,11 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565 = Event_AttackCrossbowRightEmpty
                 W_Event90565[0] = "W_AttackRightHeavySpecial1SubStart"      
                 W_Event90565[2] = "W_AttackRightHeavySpecial1SubStart_Upper"
-                if (env(1116, 100291) == TRUE and  env(1001) > 0) then    ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
-                elseif (hand ~= HAND_RIGHT)  then  ExecEventAllBody("W_AttackRightHeavySpecial2Start")  -- to iT -- hold transform
+                if (env(1116, 100291) == TRUE and  env(1001) > 0) then  ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
+                elseif (hand ~= HAND_RIGHT and sp_m == 159)  then 
+                    if sp_m == 159 then ExecEventHalfBlend(Event_HandChangeStart, blend_type)
+                    else ExecEventAllBody("W_AttackRightHeavySpecial2Start")  -- to iT -- hold transform 
+                    end
                 else  
                     SetVariable("MoveSpeedLevelReal", 0)
                     if (iT == FALSE) then ExecEvents(W_Event90565[1], W_Event90565[1] .. "_Upper") end -- to iT 
@@ -4243,7 +4246,9 @@ function ExecHandChange(hand, is_force, blend_type)
                     else ExecEventAllBody("W_AttackBothHeavySpecial2Start") end
                 elseif (hand ~= HAND_RIGHT)  then  
                     if sp_m == 645 then  ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
-                    else ExecEventAllBody("W_AttackBothHeavySpecial2Start") end  -- to UT
+                    elseif sp_m == 159 then ExecEventHalfBlend(Event_HandChangeStart, blend_type)
+                    else ExecEventAllBody("W_AttackBothHeavySpecial2Start") -- to UT
+                    end  
                 else 
                     SetVariable("MoveSpeedLevelReal", 0)
                     ExecEvents(W_Event90565[1], W_Event90565[1] .. "_Upper") -- to UT
@@ -16560,7 +16565,7 @@ function MagicLaunchRight_Upper_onUpdate()
         end
         local sp_kind = env(345 , hand)
         local button = ACTION_ARM_R1
-        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
+        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT) or sp_kind == 234 or sp_kind == 257 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
             button = ACTION_ARM_R2
         end
         if IsHoldMagic() == TRUE then
@@ -16637,7 +16642,7 @@ function MagicLoopRight_Upper_onUpdate()
     end
     local sp_kind = env(345 , hand)
     local button = ACTION_ARM_R1
-    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
+    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT)  or sp_kind == 234 or sp_kind == 257 or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
         button = ACTION_ARM_R2
     end
     if env(1108, button) <= 0 then
@@ -16689,7 +16694,7 @@ function MagicLoopRightLvl2_Upper_onUpdate()
     end
     local sp_kind = env(345 , hand)
     local button = ACTION_ARM_R1
-    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
+    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT) or sp_kind == 234 or sp_kind == 257  or (GetEquipType(hand, 38)  == TRUE and sp_kind == 67) then
         button = ACTION_ARM_R2
     end
     if env(1108, button) <= 0 then
@@ -16785,7 +16790,7 @@ function MagicLaunchLeft_Upper_onUpdate()
     elseif env(313) == TRUE or env("アニメ終了か", 1) == TRUE then
         local sp_kind = env(345 , HAND_LEFT)
         local button = ACTION_ARM_L1
-        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
+        if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT) or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
             button = ACTION_ARM_L2
         end
         if IsHoldMagic() == TRUE then
@@ -16857,7 +16862,7 @@ function MagicLoopLeft_Upper_onUpdate()
     end
     local sp_kind = env(345 , HAND_LEFT)
     local button = ACTION_ARM_L1
-    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
+    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT) or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67) then
         button = ACTION_ARM_L2
     end
     if env(1108, button) <= 0 then
@@ -16904,7 +16909,7 @@ function MagicLoopLeftLvl2_Upper_onUpdate()
     end
     local sp_kind = env(345 , HAND_LEFT)
     local button = ACTION_ARM_L1
-    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67)  then
+    if sp_kind == 178 or sp_kind == 207 or sp_kind == 217 or sp_kind == 220 or (sp_kind == 159 and c_Style == HAND_RIGHT) or sp_kind == 234 or sp_kind == 257  or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_kind == 67)  then
         button = ACTION_ARM_L2
     end
     if env(1108, button) <= 0 then
