@@ -12510,6 +12510,8 @@ function DrawStanceRightAttackLight_onUpdate() -- 036230
         hand = HAND_LEFT
     end
     local sp_kind = env(345 , hand)
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     if env(225, hand) == WEAPON_CATEGORY_STRAIGHT_SWORD then
         r1 = "W_AttackRightLight2"
         r2 = "W_AttackRightHeavy2Start"
@@ -12548,11 +12550,11 @@ function DrawStanceRightAttackLight_onUpdate() -- 036230
         b2 = "W_DrawStanceRightAttackHeavy"
     end   
 
-    if (sp_kind == 688 and c_Style ~= HAND_LEFT_BOTH) then
+    if ((sp_kind == 688 and c_Style ~= HAND_LEFT_BOTH) or (sp_m == 131 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 131 and c_Style == HAND_LEFT_BOTH)) then
         r2 = "W_DrawStanceRightAttackHeavy"
         b2 = r2
+        is_artsr2 = TRUE
     end   
-
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, is_artsr1, is_artsr2, GEN_TRANS_LEFT) == TRUE then
         return 
@@ -12804,6 +12806,7 @@ function DrawStanceRightAttackHeavy_onUpdate() -- 036240
     local is_artsr2 = FALSE
     local hand = HAND_RIGHT
     local style = c_Style
+    local sp_kind = env(345 , hand)
     if env(1116, 100250) == TRUE then
         r2 = "W_DrawStanceRightAttackHeavy2"
         b2 = "W_DrawStanceRightAttackHeavy2"
@@ -12811,6 +12814,11 @@ function DrawStanceRightAttackHeavy_onUpdate() -- 036240
     elseif env(1116, 100680) == TRUE then
         r2 = "W_DrawStanceRightAttackHeavy"
         b2 = "W_DrawStanceRightAttackHeavy"
+        if sp_kind == 131 then
+            r1 = "W_DrawStanceRightAttackLight"
+            b1 = r1
+            is_artsr1 = TRUE
+        end
         is_artsr2 = TRUE
     elseif env(225, hand) == WEAPON_CATEGORY_STRAIGHT_SWORD then
         r2 = "W_AttackRightHeavy2Start"
@@ -12824,7 +12832,7 @@ function DrawStanceRightAttackHeavy_onUpdate() -- 036240
     if style == HAND_LEFT_BOTH then
         hand = HAND_LEFT
     end
-    local sp_kind = env(345 , hand)
+    
     if 0 < env(1108, ACTION_ARM_L2) then
         if sp_kind == 232 or sp_kind == 256 then
             r1 = "W_DrawStanceRightAttackLight2"
