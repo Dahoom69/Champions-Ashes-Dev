@@ -2069,10 +2069,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
 
-        if (sp_m == 694 and c_Style ~= HAND_LEFT_BOTH) then 
-            if r1 == "W_AttackRightLight2" then r1 = "W_AttackRightLight3"
-            end
-        end
+        --if (sp_m == 694 and c_Style ~= HAND_LEFT_BOTH) then 
+        --    if r1 == "W_AttackRightLight2" then r1 = "W_AttackRightLight3"
+        --    end
+        --end
 
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
         if (  (    (is_Um == FALSE and (sp_m == 163 or sp_m == 140)  and is_both_right == TRUE)    or      (is_Uo == FALSE and (sp_o == 163 or sp_o == 140)  and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
@@ -2293,10 +2293,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
         local is_both_right = FALSE
 
-        if (sp_o == 694 and c_Style ~= HAND_LEFT_BOTH) then 
-            if l2 == "W_AttackLeftHeavy2" then l2 = "W_AttackLeftHeavy3"
-            end
-        end
+        --if (sp_o == 694 and c_Style ~= HAND_LEFT_BOTH) then 
+        --    if l2 == "W_AttackLeftHeavy2" then l2 = "W_AttackLeftHeavy3"
+        --    end
+        --end
 
         if c_Style == HAND_RIGHT_BOTH then is_both_right = TRUE end
         if (  (    (is_Um == FALSE and sp_m == 163 and is_both_right == TRUE)    or      (is_Uo == FALSE and sp_o == 163 and is_both_right == FALSE)    ) and env(1116, 100289) == TRUE) then 
