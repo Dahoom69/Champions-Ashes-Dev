@@ -920,7 +920,7 @@
 <text id="6331300">Raw Drakeblood Greatsword</text>
 <text id="6331400">Sacred Drakeblood Greatsword</text>
 <text id="6331500">Hollow Drakeblood Greatsword</text>
-<text id="6340000">Firelink Greatsword</text>
+<text id="6340000">Firelink Staff / Greatsword</text>
 <text id="6350000">Fume Ultra Greatsword</text>
 <text id="6350100">Fume Knight's Paired Swords</text>
 <text id="6360000">Old Wolf Curved Sword</text>
@@ -3020,8 +3020,32 @@
 <text id="35061300">Chosen's Raw Scythe</text>
 <text id="35061400">Chosen's Sacred Scythe</text>
 <text id="35061500">Chosen's Hollow Scythe</text>
-<text id="36000000">Tower Knight lance</text>
-<text id="36010000">Tower Knight shield</text>
+
+<text id="35070000">Balder Side Sword</text>
+<text id="35070100">Heavy Balder Side Sword</text>
+<text id="35070200">Sharp Balder Side Sword</text>
+<text id="35070300">Refined Balder Side Sword</text>
+<text id="35070400">Arcane Balder Side Sword</text>
+<text id="35070500">Crystal Balder Side Sword</text>
+<text id="35070600">Seething Balder Side Sword</text>
+<text id="35070700">Chaos Balder Side Sword</text>
+<text id="35070800">Lightning Balder Side Sword</text>
+<text id="35070900">Deep Balder Side Sword</text>
+<text id="35071000">Dark Balder Side Sword</text>
+<text id="35071100">Poison Balder Side Sword</text>
+<text id="35071200">Blood Balder Side Sword</text>
+<text id="35071300">Raw Balder Side Sword</text>
+<text id="35071400">Sacred Balder Side Sword</text>
+<text id="35071500">Hollow Balder Side Sword</text>
+
+<text id="36000000">Tower Knight Lance</text>
+<text id="36000300">Tower Knight Lance</text>
+<text id="36000700">Tower Knight Lance</text>
+<text id="36000800">Tower Knight Lance</text>
+<text id="36010000">Tower Knight Shield</text>
+<text id="36010300">Tower Knight Shield</text>
+<text id="36010700">Tower Knight Shield</text>
+<text id="36010800">Tower Knight Shield</text>
 <text id="36030000">Baby's Nail</text>
 <text id="36040000">Mercury Spiral Rapier</text>
 <text id="36050000">Large Sword of Searching</text>

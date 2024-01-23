@@ -5461,6 +5461,7 @@ Charge forward, sword held high, and slam down with a thunderous strike.</text>
 
 This coiled sword, found thrust in the bonfire, existed long before the throneless lords themselves.
 
+This is both a weapon and a sorcery staff.
 Can be changed into its other forms through the infusion of a master blacksmith.
 
 Skill: Ember
@@ -5685,100 +5686,180 @@ Skill: Warcry
 Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
 <text id="7020000">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020100">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020200">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020300">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020400">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020500">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020600">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020700">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020800">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7020900">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7021000">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7021100">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7021200">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7021300">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7021400">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7021500">Axe favored by brigands of a distant land.
 
-Surprisingly sturdy battle axe that requires more strength to wield than a standard axe.
+Surprisingly sturdy battle axe that requires more dexterity to wield than a standard axe.
 
-Skill: Warcry
-Let out a spirited warcry that temporarily boosts attack. When moving forward, hold the move to transition into a sprint followed by a leaping roar.</text>
+Extra notes:
+- Stamina consumption rate = 0.885
+- Boosts item discovery by 20
+- Luck adds physical damage
+
+Skill: Lion's Claw
+Leap forward in a vertically-slashing somersault.</text>
 <text id="7040000">A crescent-shaped halberd resembling a long-handled battle axe.
 
 Traditionally wielded by Way of White clerics.
@@ -18983,16 +19064,165 @@ Yet a champion wielded it to slay men and gods alike, for what the weapon lacks 
 
 Skill: Spin Sweep
 Sweep foes in a large spinning motion, and utilize momentum to transition into an overhanded strong attack smash.</text>
-<text id="36000000">Tower Knight lance
 
-Skill: Iron Soul lance
-turns the user's body into iron, boosts damage absorption and resistance, but significantly increases weight.
-Then throw a soul lance.</text>
-<text id="36010000">Tower Knight shield
 
-Skill: Weapon Skill / Tower Shield Strike
-Equipping this shield in the left hand allows one to perform the Skill of the right hand weapon.
-press l1 during attacks to perform Tower Shield Strikes.</text>
+
+<text id="35070000">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070100">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070200">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070300">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070400">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070500">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070600">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070700">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070800">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35070900">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35071000">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35071100">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35071200">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35071300">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35071400">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+<text id="35071500">The knights of the ancient kingdom of Balder wielded these rock-solid, long swords which are excellent for thrust attacks.
+
+Balder was the home of Knight King Rendal, but the kingdom was reduced to ruins after a widespread outbreak of Undead.
+
+Skill: Hold
+Assume a holding stance to rapidly execute a long range thrust with normal attack, or a deflecting parry with strong attack.</text>
+
+
+
+
+
+
+
+
+<text id="36000000">Lance used by a large knight, infused with arcane power and great poise. Charged heavy attacks shoot projectiles.
+
+The knight was cursed by an ancient demon, trapping him in a body ten times larger than normal. 
+
+Skill: Iron Soul Lance
+Gain the effects of Iron Flesh for 3 seconds as you throw a Soul Spear.
+</text>
+<text id="36000300">Lance used by a large knight, infused with arcane power and great poise. Charged heavy attacks shoot projectiles.
+
+The knight was cursed by an ancient demon, trapping him in a body ten times larger than normal. 
+
+Skill: Iron Soul Lance
+Gain the effects of Iron Flesh for 3 seconds as you throw a Soul Spear.
+</text>
+<text id="36000700">Lance used by a large knight, infused with arcane power and great poise. Charged heavy attacks shoot projectiles.
+
+The knight was cursed by an ancient demon, trapping him in a body ten times larger than normal. 
+
+Skill: Iron Soul Lance
+Gain the effects of Iron Flesh for 3 seconds as you throw a Soul Spear.
+</text>
+<text id="36000800">Lance used by a large knight, infused with arcane power and great poise. Charged heavy attacks shoot projectiles.
+
+The knight was cursed by an ancient demon, trapping him in a body ten times larger than normal. 
+
+Skill: Iron Soul Lance
+Gain the effects of Iron Flesh for 3 seconds as you throw a Soul Spear.
+</text>
+<text id="36010000">Shield used by a large knight, infused with arcane power. Blocking after attacking results in a greatshield attack.
+
+An intimidating bulwark of defense only impaired by its great weight, likened to the structure and stature of a castle tower.
+
+Skill: Weapon Skill
+Equipping this shield in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="36010300">Shield used by a large knight, infused with arcane power. Blocking after attacking results in a greatshield attack.
+
+An intimidating bulwark of defense only impaired by its great weight, likened to the structure and stature of a castle tower.
+
+Skill: Weapon Skill
+Equipping this shield in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="36010700">Shield used by a large knight, infused with arcane power. Blocking after attacking results in a greatshield attack.
+
+An intimidating bulwark of defense only impaired by its great weight, likened to the structure and stature of a castle tower.
+
+Skill: Weapon Skill
+Equipping this shield in the left hand allows one to perform the Skill of the right hand weapon.</text>
+<text id="36010800">Shield used by a large knight, infused with arcane power. Blocking after attacking results in a greatshield attack.
+
+An intimidating bulwark of defense only impaired by its great weight, likened to the structure and stature of a castle tower.
+
+Skill: Weapon Skill
+Equipping this shield in the left hand allows one to perform the Skill of the right hand weapon.</text>
 <text id="36030000">A dagger treated with plague. The blade is curved like a talon, and was once used by women and children for assassination.
 
 The weapon draws its power from Luck, perhaps an ode to the nature of children to believe in such things.
