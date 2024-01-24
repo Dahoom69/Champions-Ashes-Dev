@@ -14129,6 +14129,14 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
     if style == HAND_LEFT_BOTH then
         hand = HAND_LEFT
     end
+
+    if env(1116, 100260) == TRUE then
+        r1 = "W_OneShotNoGenTransStart"
+        b1 = "W_OneShotNoGenTransStart"
+        r2 = "W_OneShotNoGenTransStart"
+        b2 = "W_OneShotNoGenTransStart"
+    end
+
     local sp_m = env(345 , hand)
     if env(1116, 100250) == TRUE then
         SetSwordArtsPointInfo(ACTION_ARM_R2, TRUE)
@@ -14558,8 +14566,20 @@ function OneShot_Upper_Activate()
     return 
 end
 
-function OneShot_Upper_onUpdate()
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
+function OneShot_Upper_onUpdate() -- 038400 oneshot
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+
+    if env(1116, 100260) == TRUE then
+        r1 = "W_OneShotNoGenTransStart"
+        b1 = "W_OneShotNoGenTransStart"
+        r2 = "W_OneShotNoGenTransStart"
+        b2 = "W_OneShotNoGenTransStart"
+    end
+    
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
