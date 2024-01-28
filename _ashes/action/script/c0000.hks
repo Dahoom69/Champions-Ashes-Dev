@@ -8467,9 +8467,17 @@ end
 
 function GuardDamageSmall_onUpdate()
     act(110)
+
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+
     if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE  and c_Style ~= HAND_LEFT_BOTH) 
     --or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH))
-    and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
+    and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
     else
@@ -8479,9 +8487,17 @@ end
 
 function GuardDamageMiddle_onUpdate()
     act(110)
+
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+
     if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE  and c_Style ~= HAND_LEFT_BOTH) 
     --or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH))
-    and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
+    and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
     else
@@ -8491,9 +8507,17 @@ end
 
 function GuardDamageLarge_onUpdate()
     act(110)
+
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+
     if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE and c_Style ~= HAND_LEFT_BOTH) 
     --or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH))
-    and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
+    and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
     else
@@ -8511,8 +8535,16 @@ end
 
 function GuardDamageSmall_GenTrans_onUpdate()
     act(110)
+
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+
     if ((env(345 , HAND_RIGHT) == 693 or env(345 , HAND_RIGHT) == 236) and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT))
-    and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
+    and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -8526,8 +8558,16 @@ end
 
 function GuardDamageMiddle_GenTrans_onUpdate()
     act(110)
+
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+
     if ((env(345 , HAND_RIGHT) == 693 or env(345 , HAND_RIGHT) == 236) and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT))
-    and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
+    and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -8541,8 +8581,16 @@ end
 
 function GuardDamageLarge_GenTrans_onUpdate()
     act(110)
+
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+
     if ((env(345 , HAND_RIGHT) == 693 or env(345 , HAND_RIGHT) == 236) and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT))
-    and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightCounter", FALSE, TRUE) == TRUE then
+    and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
     elseif DamageCommonFunction(TO_GUARDON, ESTEP_NONE, FALL_TYPE_DEFAULT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -8855,7 +8903,7 @@ function AttackRightLight3_onUpdate() -- r13
     end
 end
 
-function AttackRightCounter_onUpdate()
+function AttackRightCounter_onUpdate() -- 030930
     local b1 = "W_AttackBothLight1"
     local b2 = "W_AttackBothHeavy2Start"
     local l1 = "W_AttackBothLeft1"
@@ -8980,6 +9028,7 @@ end
 function AttackRightLightStepSpecial_onUpdate() -- bs r2 -- 030910
     local r2 = "W_AttackRightHeavy1Start"
     local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
     local sp_m = env(345 , HAND_RIGHT)
@@ -8987,7 +9036,9 @@ function AttackRightLightStepSpecial_onUpdate() -- bs r2 -- 030910
     if IsFeintAttempt() and sp_m == 264 then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 164 or sp_m == 614 or sp_m == 646 or sp_m == 667  then r1 = "W_AttackRightLight2" end
     if sp_m == 612 or sp_m == 622 or sp_m == 604 or sp_m == 627 or sp_m == 640 or sp_m == 649 or sp_m == 647 then r1 = "W_AttackRightLight3" end
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" b1 = r1 end
+
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -9047,6 +9098,7 @@ function AttackRightLightDashSpecial_onUpdate() -- bs r1 backstep r1 -- 030510
     local r2 = "W_AttackRightHeavy1Start" 
 
     local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
     local is_Um = GetEquipType(HAND_RIGHT, 26, 35) 
     local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
     if (is_Um == TRUE or is_Uo == TRUE) then r1 = "W_AttackRightLight2" end
@@ -9057,8 +9109,11 @@ function AttackRightLightDashSpecial_onUpdate() -- bs r1 backstep r1 -- 030510
     if sp_m == 264  or sp_m == 640 or sp_m == 677 then r1 = "W_AttackRightLight2" end
     if sp_m == 609 or sp_m == 604 or sp_m == 164 or sp_m == 610 or sp_m == 649 or sp_m == 664  or sp_m == 627 or sp_m == 647 or sp_m == 667 then r1 = "W_AttackRightLight3" end
     if sp_m == 614 or sp_m == 612 or sp_m == 622  or sp_m == 645 or sp_m == 646  then r1 = "W_AttackRightHeavySpecial1Start" end
+
+    if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavySpecial1Start" b1 = r1 end
+    
     if IsFeintAttempt() and sp_m == 259 then r2 = "W_AttackRightHeavySpecial2Start" end
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
     else
         return 
