@@ -9744,7 +9744,9 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight3" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
+    
     if sp_o == 691 then 
+        if 10 > env(2016) then  act(2002, 627) end -- out of bullets or fp
         l1 = "W_AttackLeftHeavy2" 
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  r1 = "W_AttackLeftHeavySp2" end
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
@@ -9753,7 +9755,6 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-
     
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
 
@@ -9801,6 +9802,7 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
 
     if sp_o == 651 or (sp_o == 687 and env(1116, 705) == TRUE) then l1 = "W_AttackLeftHeavySp3" end
     if sp_o == 691 then 
+        if 10 > env(2016) then  act(2002, 627) end -- out of bullets or fp
         l1 = "W_AttackLeftHeavy2" 
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then 
             if env(1116, 100341) == TRUE then r1 = "W_AttackLeftHeavySp2" 
@@ -9870,6 +9872,7 @@ function AttackLeftHeavy3_onUpdate() -- 032060 AttackLeftHeavy3
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
     if sp_o == 691 then 
+        if 10 > env(2016) then  act(2002, 627) end -- out of bullets or fp
         l1 = "W_AttackLeftHeavy2" 
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  r1 = "W_AttackLeftHeavySp2" end
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
