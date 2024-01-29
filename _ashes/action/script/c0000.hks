@@ -1342,7 +1342,7 @@ function SetSwordArtsPointInfo(button, is_point_consume)
     (env(225, HAND_LEFT) == 33 or  env(225, HAND_LEFT) == 25 ) and c_Style ~= HAND_RIGHT_BOTH   then sel = 0 end
 
     local sp_m = env(345 , HAND_RIGHT)
-    if sp_m == 649 then sel = 0 end 
+    if sp_m == 649 or (sp_m == 672 and (c_Style == HAND_RIGHT or c_Style == HAND_RIGHT_BOTH)) then sel = 0 end 
 
     local val = "IsEnoughArtPointsL2"
     if button == ACTION_ARM_R1 then
