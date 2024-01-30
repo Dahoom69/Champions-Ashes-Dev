@@ -1228,6 +1228,12 @@
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a672\a672_316002.hkx</path>
     </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1672316300</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a672\a672_316300.hkx</path>
+    </file>
     <file>
       <flags>0x40</flags>
       <id>1672316000</id>
