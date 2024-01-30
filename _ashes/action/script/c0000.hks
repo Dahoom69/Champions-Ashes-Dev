@@ -10116,7 +10116,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     if sp_m == 664 then b1 = "W_AttackBothLight1" end
     if sp_m == 689 or sp_m == 690 then b1 = "W_AttackBothHeavyWepBroken1Start" end -- (sp_m == 689 or sp_m == 690 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)
 
-    if sp_m == 232 or sp_m == 242  then b1 = "W_AttackBothLight1" end
+    if sp_m == 232 or sp_m == 242 then b1 = "W_AttackBothLight1" end
     if env(1116, 100440) == TRUE then
         act(2001, 0.699999988079071)
     end
@@ -10132,6 +10132,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
     if (sp_m == 666 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 666 and c_Style == HAND_LEFT_BOTH)  then 
         l1 = "W_AttackBothLeft3" 
+        b1 = "W_AttackBothLight1"
     end
 
     if (sp_m == 685 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 685 and c_Style == HAND_LEFT_BOTH)   then b1 = "W_AttackBothLight1" end
