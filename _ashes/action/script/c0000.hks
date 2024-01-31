@@ -10214,7 +10214,7 @@ function AttackBothLeft1_onUpdate() -- l11
     if is_tb_ps == TRUE then r1 = "W_AttackRightLight3" end 
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
     if (sp_m == 693  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 693  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight3" end
-    
+    if (sp_m == 666 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 666 and c_Style == HAND_LEFT_BOTH)  then b1 = "W_AttackBothLight3" end
 
     if env(1116, 100283) == FALSE and  AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
