@@ -3261,8 +3261,8 @@ end
 function ExecMagic(quick_type, blend_type)
     if c_HasActionRequest == FALSE then
         return FALSE
-    elseif env(1001) <= 0 then
-        return FALSE
+    --elseif env(1001) <= 0 then
+      --  return FALSE
     end
     local style = c_Style
     local magic_hand = HAND_RIGHT
@@ -3358,7 +3358,7 @@ function ExecMagic(quick_type, blend_type)
     local magic_type = env(227)
     local magic_index = MAGIC_REQUEST_NOTHING
     local is_atk_auto_aim = FALSE
-    if env(232) == FALSE then
+    if env(232) == FALSE or env(1001) <= 0 then
         if magic_hand == HAND_LEFT then
             ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type)
         else
