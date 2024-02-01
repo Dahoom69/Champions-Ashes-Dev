@@ -8904,11 +8904,22 @@ function AttackRightLight3_onUpdate() -- r13
 end
 
 function AttackRightCounter_onUpdate() -- 030930
+    local r1 = "W_AttackRightLight1" 
+    local r2 = "W_AttackRightHeavy1Start"
     local b1 = "W_AttackBothLight1"
     local b2 = "W_AttackBothHeavy2Start"
     local l1 = "W_AttackBothLeft1"
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
+
+    if iTC ~= TRUE and i1BB == TRUE then 
+        r2 = "W_AttackRightHeavy1SubStart" 
+        b2 = "W_AttackBothHeavy1SubStart"
+    end
+    if (sp_m == 624) then b2 = "W_AttackRightHeavy1SubStart" end
+    if (sp_m == 610) then b2 = "W_AttackRightHeavy1SubStart" end
+    if (sp_m == 667) then b2 = "W_AttackRightHeavy1SubStart" end
+    if (sp_m == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
     if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 30, 32, 33, 35, 38, 42, 47) == TRUE or sp_m == 51 or 
     sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then b1 = "W_AttackBothLight2" end
@@ -8922,7 +8933,6 @@ function AttackRightCounter_onUpdate() -- 030930
     if sp_m == 610 then b2 = "W_AttackBothHeavy1End" end
 
     act("特殊補間設定", 0, FALSE)
-    local r2 = "W_AttackRightHeavy1Start"
     if env(345 , hand) == 101 then r2 = "W_AttackRightHeavy1SubStart" end
 
     if env(345 , hand) == 643 then 
@@ -8930,7 +8940,7 @@ function AttackRightCounter_onUpdate() -- 030930
         l1 = "W_AttackBothLeft3" 
     end
 
-    local r1 = "W_AttackRightLight1" 
+
     if (sp_m == 645) then  
         r2 = "W_AttackRightHeavy1SubStart"
     end
