@@ -4247,7 +4247,7 @@ function ExecHandChange(hand, is_force, blend_type)
                 W_Event90565[0] = "W_AttackRightHeavySpecial1SubStart"      
                 W_Event90565[2] = "W_AttackRightHeavySpecial1SubStart_Upper"
                 if (env(1116, 100291) == TRUE and  env(1001) > 0) then  ExecEventAllBody("W_AttackRightHeavySpecial2Start") 
-                elseif (hand ~= HAND_RIGHT and sp_m == 159)  then 
+                elseif (hand ~= HAND_RIGHT)  then 
                     if sp_m == 159 then ExecEventHalfBlend(Event_HandChangeStart, blend_type)
                     else ExecEventAllBody("W_AttackRightHeavySpecial2Start")  -- to iT -- hold transform 
                     end
