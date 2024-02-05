@@ -624,6 +624,13 @@ function GetWeightIndex(is_move)
         if evasion_weight < EVASION_WEIGHT_INDEX_HEAVY then
             evasion_weight = EVASION_WEIGHT_INDEX_HEAVY
         end
+    elseif env(1116, 130111) == TRUE then
+        if move_weight < MOVE_WEIGHT_HEAVY then
+            move_weight = MOVE_WEIGHT_HEAVY
+        end
+        if evasion_weight < EVASION_WEIGHT_INDEX_HEAVY then
+            evasion_weight = EVASION_WEIGHT_INDEX_HEAVY
+        end
     elseif env(305, CONDITION_TYPE_GRAVITY_MEDIUM) == TRUE then
         if move_weight < MOVE_WEIGHT_HEAVY then
             move_weight = MOVE_WEIGHT_HEAVY
