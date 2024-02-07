@@ -9482,7 +9482,6 @@ end
 function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 030370
     -- tR1
 
-    
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
     local hand = HAND_RIGHT
@@ -9509,7 +9508,7 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     if sp_m == 610 or sp_m == 667 or sp_m == 622  then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 610 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
-    if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" b1 = r1 end
+    if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" b1 = r1 r2 = "W_AttackRightHeavy2Start" b2 = r2 end
     
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -9960,7 +9959,7 @@ function AttackBothLight1_onUpdate()  -- r11
     -- added exceptions for:
     -- dark sword, hollowslayer, lothric knight ss, old wolf, ledo, GL, whip, BB weapons
 
-    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
+    if (GetEquipType(HAND_RIGHT, 48) == TRUE and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 48) == TRUE and c_Style == HAND_LEFT_BOTH) then b2 = "W_AttackBothHeavy2Start" end
 
     if env(345 , hand) == 232 then
         b2 = "W_AttackBothHeavy2Start"
@@ -10056,7 +10055,8 @@ function AttackBothLight2_onUpdate()  -- r12
     end
 
     if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft2" end
-    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
+    if (GetEquipType(HAND_RIGHT, 29, 48) == TRUE and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 29, 48) == TRUE and c_Style == HAND_LEFT_BOTH) then b2 = "W_AttackBothHeavy2Start" end
+    --if (GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
     --local JF = "W_RandomOneShotNext2"
     --if IsDualBlade() == TRUE then JF = "W_RandomOneShotNext1" end
@@ -10127,7 +10127,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     -- added exceptions for:
     -- dark sword, hollowslayer, lothric knight ss, old wolf, ledo, GL, whip, BB weapons
 
-    if GetEquipType(HAND_RIGHT, 48) == TRUE or GetEquipType(HAND_LEFT, 48) == TRUE then b2 = "W_AttackBothHeavy2Start" end
+    if (GetEquipType(HAND_RIGHT, 48) == TRUE and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 48) == TRUE and c_Style == HAND_LEFT_BOTH) then b2 = "W_AttackBothHeavy2Start" end
 
     local l1 = "W_AttackBothLeft2"
     if sp_m == 613  then l1 = "W_AttackBothLeft2" end
