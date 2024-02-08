@@ -1230,6 +1230,12 @@
     </file>
 	<file>
       <flags>0x40</flags>
+      <id>1672316003</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a672\a672_316003.hkx</path>
+    </file>
+    <file>
+      <flags>0x40</flags>
       <id>1672316300</id>
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a672\a672_316300.hkx</path>
@@ -1240,6 +1246,26 @@
       <root>N:\NTC\data\Target\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a672\a672_316000.hkx</path>
     </file>
+	
+	 <file>
+      <flags>0x40</flags>
+      <id>1672316100</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a672\a672_316100.hkx</path>
+    </file>
+	 <file>
+      <flags>0x40</flags>
+      <id>1672316660</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a672\a672_316660.hkx</path>
+    </file>
+	 <file>
+      <flags>0x40</flags>
+      <id>1672316600</id>
+      <root>N:\NTC\data\Target\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a672\a672_316600.hkx</path>
+    </file>
+	
     <file>
       <flags>0x40</flags>
       <id>1672400000</id>
