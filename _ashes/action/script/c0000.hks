@@ -980,8 +980,8 @@ function GetAttackRequest(is_guard)
             elseif (sp == 166 and env(1116, 697) == TRUE)  then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- hero
             elseif sp == 176 or sp == 242 or sp == 668 or sp == 681 then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- DSSS or Earth Seeker
             elseif (is_ga == TRUE and (sp == 998 or sp == 140)) then return SWORDARTS_REQUEST_RIGHT_ATTACKSPIN -- Great Machete or Demon Great machete or salvation axes
-            elseif ((   (sp == 672 and c_Style == HAND_RIGHT_BOTH) or (spo == 672 and is_leftHandCA == TRUE)) and c_SwordArtsID == 24)  then return SWORDARTS_REQUEST_RIGHT_RANDOMONESHOT -- Sekiro Combat Art
-            elseif ((   (sp == 672 and c_Style == HAND_RIGHT_BOTH) or (spo == 672 and is_leftHandCA == TRUE)) and c_SwordArtsID == 34)  then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
+            elseif sp == 672 and env(1116, 706) == TRUE then return SWORDARTS_REQUEST_RIGHT_RANDOMONESHOT -- Sekiro Combat Art
+            elseif sp == 672 and env(1116, 706) ~= TRUE then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
             elseif sp == 147 then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
             end
         elseif is_staff == TRUE then
