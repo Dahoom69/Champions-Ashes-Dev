@@ -9632,7 +9632,7 @@ function AttackRightHeavyKick_onUpdate() -- jump 030600
     if GetEquipType(HAND_RIGHT, 23, 29) == TRUE then r1 = "W_AttackRightLight2" end
 
     if (   (sp_m ~= 264 and sp_m ~= 164)   and GetEquipType(HAND_RIGHT, 38)  == TRUE) or sp_m == 640  then r1 = "W_AttackRightLight3" end
-    if sp_m == 614 or sp_m == 646 or sp_m == 667 then r1 = "W_AttackRightLight2" end
+    if sp_m == 614 or sp_m == 646 or sp_m == 667 or (sp_m == 162 and c_Style ~= HAND_LEFT_BOTH) then r1 = "W_AttackRightLight2" end
     if sp_m == 609 or sp_m == 612 or sp_m == 622 or sp_m == 627 or sp_m == 645 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightLightStepSpecial" b2 = r2 end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
