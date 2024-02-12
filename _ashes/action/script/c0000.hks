@@ -10537,6 +10537,7 @@ function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
     if sp_m == 162 and sp_o == 154 then 
+        l1 = "W_AttackBothLeftStep"
         if 10 > env(2016) then  act(2002, 627) end
     end
     
