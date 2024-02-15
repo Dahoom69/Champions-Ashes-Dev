@@ -9011,7 +9011,7 @@ function AttackRightLightKick_onUpdate() -- 030100
     if sp_m == 667 then r1 = "W_AttackRightLightDashSpecial" r2 = "W_AttackRightLightStepSpecial" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b1 = r1 b2 = r2 end
 
-    if sp_m == 162 and sp_o == 154 then 
+    if sp_m == 162 or sp_m == 154 then 
         if 10 > env(2016) then  act(2002, 627) end
     end
 
