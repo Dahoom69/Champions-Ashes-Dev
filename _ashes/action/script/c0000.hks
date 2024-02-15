@@ -2276,7 +2276,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     l2 = "W_AttackLeftHeavySp3" -- 32092    guns out of ammo
                 end
         end
-        if (sp_g == 651) then 
+        if (sp_g == 651) then  --651
             local speed = GetVariable("MoveSpeedLevelReal")
             if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
             elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"
@@ -2284,6 +2284,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
             elseif l1 == "W_AttackLeftLight2" then l2 = "W_AttackLeftHeavySp3"
             elseif l1 == "W_AttackLeftHeavy2" then l2 = "W_AttackLeftHeavySp3"             
+            end
+        end
+
+        if (sp_g == 154 and c_Style ~= HAND_LEFT_BOTH) then 
+            local speed = GetVariable("MoveSpeedLevelReal")
+            if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
+            elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"  
+            elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp3"         
             end
         end
 
@@ -7888,6 +7896,11 @@ function BackStep_onUpdate()
     local lh1 = "W_AttackLeftHeavy1"
 
     if (osp == 651 and  (c_Style == HAND_LEFT or c_Style == HAND_RIGHT) ) then 
+        ll1 = "W_AttackLeftHeavySp3"
+        lh1 = "W_AttackLeftHeavySp3"
+    end
+
+    if (osp == 154 and  (c_Style == HAND_LEFT or c_Style == HAND_RIGHT) ) then 
         ll1 = "W_AttackLeftHeavySp3"
         lh1 = "W_AttackLeftHeavySp3"
     end
