@@ -2581,11 +2581,16 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         is_find_atk = FALSE
         local hand = HAND_RIGHT
         local style = c_Style
+        local sp_kind_left = env(345 , HAND_LEFT)
+        local sp_kind_right = env(345 , HAND_RIGHT)
+        
         if style == HAND_LEFT_BOTH then
             hand = HAND_LEFT
         end
         if IsWepBrokenParry(hand) == TRUE then
-            ExecEventAllBody("W_ParryRightStart_WepBreak")
+            if (sp_kind_right == 690 and c_Style ~= HAND_LEFT_BOTH) or (sp_kind_left == 690 and c_Style == HAND_LEFT_BOTH) 
+            then ExecEventHalfBlend(Event_MagicInvalidRight, blend_type)
+            else ExecEventAllBody("W_ParryRightStart_WepBreak") end
         else
             ExecEventAllBody("W_ParryRightStart")
         end
