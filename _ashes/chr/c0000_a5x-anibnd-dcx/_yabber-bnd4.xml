@@ -3478,5 +3478,69 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\hkx\a692\a692_033900.hkx</path>
     </file>
+	
+	
+	
+	
+	<file>
+      <flags>0x40</flags>
+      <id>1695030030</id> 
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_030030.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695034020</id>
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_034020.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695035090</id> 
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_035090.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695030020</id>
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_030020.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695035020</id> 
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_035020.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695034030</id>
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_034030.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695035050</id> 
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_035050.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695035010</id> 
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_035010.hkx</path>
+    </file>
+	<file>
+      <flags>0x40</flags>
+      <id>1695035000</id> 
+	  <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\hkx\a695\a695_035000.hkx</path>
+    </file>
+	
+	
+	
+	
+	
+	
   </files>
 </bnd4>

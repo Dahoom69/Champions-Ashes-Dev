@@ -34,7 +34,7 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\tae\a03.tae</path>
     </file>
-	<file>
+    <file>
       <flags>0x40</flags>
       <id>5000007</id>
       <root>N:\FDP\data\INTERROOT_win64\</root>
@@ -2080,6 +2080,13 @@
       <root>N:\FDP\data\INTERROOT_win64\</root>
       <path>chr\c0000\tae\a694.tae</path>
     </file>
+	<file>
+      <flags>0x40</flags>
+      <id>5000695</id>
+      <root>N:\FDP\data\INTERROOT_win64\</root>
+      <path>chr\c0000\tae\a695.tae</path>
+    </file>
+	
     <file>
       <flags>0x40</flags>
       <id>5000803</id>
