@@ -2388,7 +2388,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         local sp_o = env(345 , HAND_LEFT)
         if r1 == "W_AttackRightLightDash" then
             if  (GetEquipType(HAND_RIGHT, 30) == TRUE and (sp_m ~= 692 and sp_m ~= 138) and  GetEquipType(HAND_LEFT, 30) == TRUE)  or (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE) or (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft3" 
-            elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeft1" 
+            elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeftDash" 
             elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then l1 = "W_AttackBothLeft3" 
             elseif (sp_m == 162 and sp_o == 154)  then l1 = "W_AttackBothLeftDash" 
             elseif sp_m == 649 then l1 = "W_AttackBothLeft1" 
@@ -2396,7 +2396,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             else l1 = "W_AttackBothLeftDash" end
         elseif r1 == "W_AttackRightLightStep" then
             if          (GetEquipType(HAND_RIGHT, 30) == TRUE and GetEquipType(HAND_LEFT, 30) == TRUE) or  (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE)  then l1 = "W_AttackBothLeft3"
-            elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeft1" 
+            elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeftStep" 
             elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then l1 = "W_AttackBothLeft2" 
             elseif (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft2" 
             elseif (sp_m == 162 and sp_o == 154)  then l1 = "W_AttackBothLeftStep" 
