@@ -2102,7 +2102,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             r1 = "W_AttackRightLightStepSpecial"
         end
 
-        if (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and style == HAND_RIGHT) then -- morning star alt moveset
+        if (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             if r1 == "W_AttackRightLightDash " then r1 = "W_AttackRightLightDashSpecial"
             elseif r1 == "W_AttackRightLightStep" then r1 = "W_AttackRightLightStepSpecial"
             elseif r2 == "W_AttackRightHeavyKick" then r2 = "W_AttackRightHeavyKickSpecial"
@@ -2210,7 +2210,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         elseif IsArtsSpAtk() == TRUE then
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
-        elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and style == HAND_RIGHT) then -- morning star alt moveset
+        elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 127) and c_Style ~= HAND_LEFT_BOTH)
         or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
@@ -6776,7 +6776,7 @@ function MoveCommonFunction(blend_type)
                 r2 = "W_AttackRightHeavyKickSpecial"
                 b2 = "W_AttackBothHeavyKickSpecial"
             end
-        elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and style == HAND_RIGHT) then -- morning star alt moveset
+        elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             r1 = "W_AttackRightLightDashSpecial"
             r2 = "W_AttackRightHeavyKick"
         elseif IsEnableJumpAtk() == TRUE then
