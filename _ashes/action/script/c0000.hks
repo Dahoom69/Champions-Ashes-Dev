@@ -8782,6 +8782,11 @@ function AttackRightLight1_onUpdate() -- r11
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight2", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
+            if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+                AddStamina(15)
+                act(2002, 621) -- set speffect 621
+                act(2002, 622)
+            end
             return 
         elseif env(1108, ACTION_ARM_R1) <= 0 and env(1116, 100338) == TRUE then
             ExecEventAllBody("W_AttackRightHeavySpecial2Start")
@@ -8849,6 +8854,11 @@ function AttackRightLight2_onUpdate() -- r12
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight1", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
+            if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+                AddStamina(15)
+                act(2002, 621) -- set speffect 621
+                act(2002, 622)
+            end
             return 
         elseif env(1108, ACTION_ARM_R1) <= 0 and env(1116, 100338) == TRUE then
             ExecEventAllBody("W_AttackRightHeavySpecial2End")
@@ -9457,6 +9467,11 @@ function AttackRightHeavySpecial1Start_onUpdate() -- r14 030350
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", r1, "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
+            if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+                AddStamina(15)
+                act(2002, 621) -- set speffect 621
+                act(2002, 622)
+            end
             return 
         elseif env(1108, ACTION_ARM_R1) <= 0 and env(1116, 100280) == TRUE then
             ExecEventAllBody("W_AttackRightHeavySpecial2End")
@@ -9518,6 +9533,11 @@ function AttackRightHeavySpecial1End_onUpdate() -- r23 r2 charged super -- 03035
     if sp_m == 647 and not IsFeintAttempt() then r1 = "W_AttackRightLight3" end
     
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
+        if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+            AddStamina(15)
+            act(2002, 621) -- set speffect 621
+            act(2002, 622)
+        end
         return 
     else
         return 
@@ -9580,6 +9600,11 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     if IsFeintAttempt() and (sp_o == 102  or sp_o == 103) and c_Style == HAND_LEFT_BOTH then r1 =  "W_AttackRightLight2" end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+        if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+            AddStamina(15)
+            act(2002, 621) -- set speffect 621
+            act(2002, 622)
+        end
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_AttackRightHeavySpecial2End")
@@ -9599,6 +9624,11 @@ function AttackRightHeavySpecial2End_onUpdate() -- 030371
     if IsFeintAttempt() and (sp_o == 102  or sp_o == 103) and c_Style == HAND_LEFT_BOTH then r1 =  "W_AttackRightLight2" end    
 
     if AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+        if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+            AddStamina(15)
+            act(2002, 621) -- set speffect 621
+            act(2002, 622)
+        end
         return 
     else
         return 
