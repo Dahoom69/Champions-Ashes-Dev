@@ -2109,8 +2109,6 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         end
 
-        if sp_m == 677 and env(1116, 705) == TRUE then r1 = "W_AttackRightHeavyKickSpecial" b1 ="W_AttackBothHeavyKickSpecial" end
-
         if (iT == TRUE) then 
             ExecEventAllBody(b1)
         else  
@@ -2362,11 +2360,6 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
             if IsArtsSpAtk() == TRUE and b1 == "W_AttackBothLightStep" then
                 b1 = "W_AttackBothLightStepSpecial"
-            end
-
-            if sp_m == 677 and env(1116, 705) == TRUE and c_Style ~= HAND_LEFT_BOTH then 
-                r1 = "W_AttackRightHeavyKickSpecial" 
-                b1 ="W_AttackBothHeavyKickSpecial" 
             end
 
             if (sp_m == 672 or sp_m == 688) and c_Style ~= HAND_LEFT_BOTH then 
@@ -8830,7 +8823,6 @@ end
 
 function AttackRightLight2_onUpdate() -- r12
     local r1 = "W_AttackRightLight3"
-    local b1 = "W_AttackBothLight3" 
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     local hand = HAND_RIGHT
@@ -8858,7 +8850,6 @@ function AttackRightLight2_onUpdate() -- r12
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_CrossbowStepInFire" b2 = r2 end 
     if sp_m == 687 and env(1116, 705) == TRUE then r1 = "W_CrossbowStepInFire" end
-    if sp_m == 677 and env(1116, 705) == TRUE then r1 = "W_AttackRightHeavyKickSpecial" b1 ="W_AttackBothHeavyKickSpecial" end
 
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
@@ -8876,9 +8867,9 @@ function AttackRightLight2_onUpdate() -- r12
             return 
         end
     else
-        if      env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then return 
-        elseif  env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then return
-        elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
+        if      env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", b2, FALSE, TRUE) == TRUE then return 
+        elseif  env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", b2, FALSE, TRUE) == TRUE then return
+        elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", b2, FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                 local staminaRegen = 0
                 if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -9542,7 +9533,7 @@ function AttackRightHeavySpecial1End_onUpdate() -- r23 r2 charged super -- 03035
     if sp_m == 647 and not IsFeintAttempt() then r1 = "W_AttackRightLight3" end
     
     if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy2Start", FALSE, TRUE) == TRUE then
-        if sp_m = 672 and env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+        if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
             AddStamina(15)
             act(2002, 621) -- set speffect 621
             act(2002, 622)
@@ -9609,7 +9600,7 @@ function AttackRightHeavySpecial2Start_onUpdate() -- UT TA Transform Attack -- 0
     if IsFeintAttempt() and (sp_o == 102  or sp_o == 103) and c_Style == HAND_LEFT_BOTH then r1 =  "W_AttackRightLight2" end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
-        if sp_m = 672 and env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+        if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
             AddStamina(15)
             act(2002, 621) -- set speffect 621
             act(2002, 622)
@@ -9633,7 +9624,7 @@ function AttackRightHeavySpecial2End_onUpdate() -- 030371
     if IsFeintAttempt() and (sp_o == 102  or sp_o == 103) and c_Style == HAND_LEFT_BOTH then r1 =  "W_AttackRightLight2" end    
 
     if AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
-        if sp_m = 672 and env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
+        if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
             AddStamina(15)
             act(2002, 621) -- set speffect 621
             act(2002, 622)
