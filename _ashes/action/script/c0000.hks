@@ -2379,6 +2379,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 end
             end
 
+            if (sp_m == 175 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 175 and c_Style == HAND_LEFT_BOTH) 
+            then 
+                if b1 == "W_AttackBothLight1" then b1 = "W_AttackRightLight1"
+                elseif b1 == "W_AttackBothLight2" then b1 = "W_AttackRightLight2"
+                elseif b1 == "W_AttackBothLight3" then b1 = "W_AttackRightLight3"
+                end
+            end
+
             if (sp_m == 672 or sp_m == 688) and c_Style ~= HAND_LEFT_BOTH then 
                 if b1 == "W_AttackBothLight1" then b1 = "W_AttackRightLight1"
                 elseif b1 == "W_AttackBothLight2" then b1 = "W_AttackRightLight2"
