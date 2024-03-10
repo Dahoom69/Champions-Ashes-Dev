@@ -8558,7 +8558,7 @@ function GuardDamageSmall_onUpdate()
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
 
-    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLight3" b1 = r1 end
 
     if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE  and c_Style ~= HAND_LEFT_BOTH) 
     --or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH))
@@ -8578,7 +8578,7 @@ function GuardDamageMiddle_onUpdate()
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
 
-    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLight3" b1 = r1 end
 
     if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE  and c_Style ~= HAND_LEFT_BOTH) 
     --or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH))
@@ -8598,7 +8598,7 @@ function GuardDamageLarge_onUpdate()
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
 
-    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLight3" b1 = r1 end
 
     if (GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE and c_Style ~= HAND_LEFT_BOTH) 
     --or ((GetEquipType(HAND_LEFT, 20, 23, 25, 26, 27, 28, 29, 30, 32, 33, 35, 36, 38, 42, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH))
@@ -8626,7 +8626,7 @@ function GuardDamageSmall_GenTrans_onUpdate()
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
 
-    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLight3" b1 = r1 end
 
     if ((env(345 , HAND_RIGHT) == 693 or env(345 , HAND_RIGHT) == 236) and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT))
     and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
@@ -8649,7 +8649,7 @@ function GuardDamageMiddle_GenTrans_onUpdate()
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
 
-    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLight3" b1 = r1 end
 
     if ((env(345 , HAND_RIGHT) == 693 or env(345 , HAND_RIGHT) == 236) and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT))
     and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
@@ -8672,7 +8672,7 @@ function GuardDamageLarge_GenTrans_onUpdate()
     local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
 
-    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLightStepSpecial" b1 = r1 end
+    if sp_m == 672 and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT) then r1 = "W_AttackRightLight3" b1 = r1 end
 
     if ((env(345 , HAND_RIGHT) == 693 or env(345 , HAND_RIGHT) == 236) and (c_Style == HAND_RIGHT_BOTH or c_Style == HAND_RIGHT))
     and AttackCommonFunction(r1, "W_AttackRightCounter", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackRightCounter", FALSE, TRUE) == TRUE then
