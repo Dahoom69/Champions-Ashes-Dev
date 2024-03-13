@@ -3064,9 +3064,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             arrow_hand = HAND_LEFT
         end
         local sp_kind = env(345 , arrow_hand)
+        local is_bow =  GetEquipType(arrow_hand, WEAPON_CATEGORY_SMALL_ARROW) 
         if IsExistArrow() == TRUE then
             ExecEventAllBody("W_NoArrow")
-        elseif sp_kind == 81 or sp_kind == 249 then
+        elseif is_bow == TRUE or sp_kind == 81 or sp_kind == 249 then
             if IsEnoughWeaponReleaseStatus(arrow_hand) == TRUE then
                 if r1 == "W_AttackRightLightStep" then
                     is_find_atk = TRUE
