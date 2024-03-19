@@ -2222,6 +2222,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then -- great mace alt fr2
+            ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 127) and c_Style ~= HAND_LEFT_BOTH)
         or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == FALSE then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
