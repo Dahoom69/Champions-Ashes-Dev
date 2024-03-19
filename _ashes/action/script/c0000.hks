@@ -2213,6 +2213,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 ExecEventAllBody("W_CrossbowStepInReload") 
             elseif (sp_m == 672 or sp_m == 688) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKick")
             elseif (sp_m == 696 and c_Style ~= HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKick")
+            elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
             elseif ((sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
                 or ((sp_o == 687 and env(1116, 705) == TRUE) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
@@ -2399,6 +2400,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 elseif b1 == "W_AttackBothLight3" then b1 = "W_AttackRightLight3"
                 elseif b1 == "W_AttackBothLightStep" then b1 = "W_AttackRightLightStep"
                 elseif b1 == "W_AttackBothDash" then b1 = "W_AttackRightLightDash"
+                end
+            end
+
+            if (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) 
+            then 
+                if b1 == "W_AttackBothLight3" then b1 = "W_AttackRightLight3"
                 end
             end
 
@@ -6842,6 +6849,7 @@ function MoveCommonFunction(blend_type)
             end
             if (env(345 , HAND_RIGHT) == 664) then b2 = "W_AttackBothLightStepSpecial" end
             if (env(345 , HAND_RIGHT) == 609) then r2 = "W_AttackRightHeavyKickSpecial" end
+            if (env(345 , HAND_RIGHT) == 686 and c_Style ~= HAND_LEFT_BOTH) then b2 = "W_AttackRightHeavyKickSpecial" b2 = r2 end
             if (env(345 , HAND_RIGHT) == 688 and c_Style ~= HAND_LEFT_BOTH) then r2 = "W_AttackRightHeavyKickSpecial" b2 = r2 end
             if (env(345 , HAND_RIGHT) == 609 and c_Style == HAND_RIGHT_BOTH) then  b2 = "W_AttackBothHeavyKickSpecial" end -- left hand both 2h offhand combat art tonitrus
 
@@ -7950,6 +7958,7 @@ function BackStep_onUpdate()
     end
 
     if sp == 621 or sp == 264 or sp == 605 or sp == 620 then br1 = "W_AttackBothLightKick" end
+    if sp == 686 and c_Style ~= HAND_LEFT_BOTH then br2 = rr2 end
 
     local ll1 = "W_AttackLeftLight1"
     local lh1 = "W_AttackLeftHeavy1"
