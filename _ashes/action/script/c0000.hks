@@ -15282,9 +15282,13 @@ function StormStanceStart_Upper_onUpdate() -- 038800
         if SwordArtsStanceCommonFunction("W_StormStanceLight", "W_StormStanceHeavy", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_StormStanceLight", "W_StormStanceHeavy", blend_type, TRUE, TRUE, FALSE) == TRUE then
             return 
         elseif style == HAND_LEFT_BOTH then
-            act(2002, 100901)
+            if (GetEquipType(HAND_LEFT_BOTH, 25) == TRUE) then 
+                act(2002, 100901) 
+            end
         else
-            act(2002, 100900)
+            if (GetEquipType(HAND_RIGHT, 25) == TRUE) then 
+                act(2002, 100900)
+            end
         end
         if env(1116, 100330) == TRUE and (env(1108, ACTION_ARM_L2) < 200 or env(1107, ACTION_ARM_L2) == TRUE) then
             ExecEventHalfBlend(Event_StormStanceEnd, blend_type)
@@ -15309,9 +15313,13 @@ function StormStanceLoop_Upper_onUpdate()
     if SwordArtsStanceCommonFunction("W_StormStanceLight", "W_StormStanceHeavy", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_StormStanceLight", "W_StormStanceHeavy", blend_type, TRUE, TRUE, FALSE) == TRUE then
         return 
     elseif style == HAND_LEFT_BOTH then
+        if (GetEquipType(HAND_LEFT_BOTH, 25) == TRUE) then 
         act(2002, 100901)
+        end
     else
+        if (GetEquipType(HAND_RIGHT, 25) == TRUE) then 
         act(2002, 100900)
+        end
     end
     if env(1108, ACTION_ARM_L2) <= 0 or env(1107, ACTION_ARM_L2) == TRUE then
         ExecEventHalfBlend(Event_StormStanceEnd, blend_type)
@@ -15320,11 +15328,15 @@ function StormStanceLoop_Upper_onUpdate()
         ExecEventHalfBlend(Event_StormStanceFullLoop, blend_type)
         local style = c_Style
         if style == HAND_LEFT_BOTH then
+            if (GetEquipType(HAND_LEFT_BOTH, 25) == TRUE) then 
             act(2002, 100911)
             act(2002, 100921)
+            end
         else
+            if (GetEquipType(HAND_RIGHT, 25) == TRUE) then 
             act(2002, 100910)
             act(2002, 100920)
+            end
         end
     end
     if HalfBlendLowerCommonFunction(Event_StormStanceLoop, lower_state, FALSE, TRUE) == TRUE then
@@ -15365,8 +15377,19 @@ function StormStanceEnd_Upper_onUpdate()
     end
 end
 
-function StormStanceLight_onUpdate()
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+function StormStanceLight_onUpdate() -- 038840
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+    if (( GetEquipType(HAND_RIGHT, 29) == TRUE  and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 29) == TRUE and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_AttackRightLight2"
+        b1 = "W_AttackBothLight2"
+        r2 = "W_StormStanceHeavy"
+        b2 = r2
+    end
+
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
@@ -15416,7 +15439,7 @@ function StormStanceFullStart_Upper_onUpdate()
     end
 end
 
-function StormStanceFullLoop_Upper_onUpdate()
+function StormStanceFullLoop_Upper_onUpdate() -- 038815
     local blend_type, lower_state = GetHalfBlendInfo()
     local r1 = "W_StormStanceFullLight_NonBoss"
     local r2 = "W_StormStanceFullHeavy_NonBoss"
@@ -15428,6 +15451,7 @@ function StormStanceFullLoop_Upper_onUpdate()
         b1 = "W_StormStanceFullLight"
         b2 = "W_StormStanceFullHeavy"
     end
+    if (( GetEquipType(HAND_RIGHT, 29) == TRUE  and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 29) == TRUE and c_Style == HAND_LEFT_BOTH)) then r1 = "W_StormStanceLight" b1 = r1 end
     if SwordArtsStanceCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, blend_type, TRUE, TRUE, FALSE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_L2) <= 0 or env(1107, ACTION_ARM_L2) == TRUE then
