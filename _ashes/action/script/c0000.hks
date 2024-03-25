@@ -828,6 +828,12 @@ function GetSwordArtsInfo()
             arts_id = SWORDARTS_MAGICBUFF
         end
 
+        -- guardian shield offhand wa 
+        if (env(225, HAND_LEFT) == 48 and sp == 671 ) then 
+            arts_hand = HAND_LEFT   
+            arts_id = SWORDARTS_MAGICBUFF
+        end
+
           -- blood bullet technique
         if (sp == 602 or sp == 617 or sp == 618 or sp == 623 or sp == 628 or sp == 629 or sp == 630 or sp == 650 or sp == 652 or sp == 653) and 
         (env(225, HAND_LEFT) == 33 or  env(225, HAND_LEFT) == 25 )  then 
@@ -5179,6 +5185,9 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
             return FALSE
         elseif env(1116, 100352) == TRUE then
             ExecEventAllBody("W_OneShotNoGenTransStart")
+            return FALSE
+        elseif env(1116, 100353) == TRUE then
+            ExecEventAllBody("W_MagicBuffLeft2")
             return FALSE
         elseif env(1116, 100700) == TRUE then
             return FALSE
@@ -15164,7 +15173,7 @@ function MagicBuffLeft_Upper_Activate()
     return 
 end
 
-function MagicBuffLeft_Upper_onUpdate()
+function MagicBuffLeft_Upper_onUpdate() -- 037910 
     local blend_type, lower_state = GetHalfBlendInfo()
 
     local r2 = "W_AttackRightHeavy1Start"
@@ -15187,7 +15196,7 @@ function MagicBuffLeft_Upper_onUpdate()
     end
 end
 
-function MagicBuffLeft2_onUpdate()
+function MagicBuffLeft2_onUpdate() -- -- 037930 ?
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
