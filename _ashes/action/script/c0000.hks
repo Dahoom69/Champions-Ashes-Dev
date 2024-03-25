@@ -896,7 +896,7 @@ function GetAttackRequest(is_guard)
 
     if ForwardAttackShortcutRequest() then
         if is_arrow == TRUE then return ATTACK_REQUEST_INVALID end
-        if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
+        --if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
         --if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
         if env(1116, 100260) == TRUE then return ATTACK_REQUEST_INVALID end
         
@@ -1037,6 +1037,13 @@ function GetAttackRequest(is_guard)
            -- else
              --   return ATTACK_REQUEST_INVALID
            -- end
+
+        elseif env(1106, ACTION_ARM_HEAVY_KICK) == TRUE then
+            local check_weapon = FALSE --GetEquipType(hand, WEAPON_CATEGORY_STAFF)
+
+            if  ((check_weapon == FALSE and env(1116, 100260) == FALSE) )  then
+                return ATTACK_REQUEST_HEAVY_KICK
+            end
         elseif is_crossbow == TRUE then
             if is_both == TRUE then
                 if style == HAND_LEFT_BOTH then
@@ -1049,12 +1056,6 @@ function GetAttackRequest(is_guard)
             else
                 act("弓矢スロット選択", 1)
                 return ATTACK_REQUEST_RIGHT_CROSSBOW2
-            end
-        elseif env(1106, ACTION_ARM_HEAVY_KICK) == TRUE then
-            local check_weapon = FALSE --GetEquipType(hand, WEAPON_CATEGORY_STAFF)
-
-            if  ((check_weapon == FALSE and env(1116, 100260) == FALSE) )  then
-                return ATTACK_REQUEST_HEAVY_KICK
             end
         end
         local sp_kind = env(345 , hand)
