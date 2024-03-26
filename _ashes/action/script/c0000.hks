@@ -895,7 +895,7 @@ function GetAttackRequest(is_guard)
     local is_staff = GetEquipType(hand, WEAPON_CATEGORY_STAFF)
 
     if ForwardAttackShortcutRequest() then
-        if is_arrow == TRUE then return ATTACK_REQUEST_INVALID end
+        --if is_arrow == TRUE then return ATTACK_REQUEST_INVALID end
         --if is_crossbow == TRUE then return ATTACK_REQUEST_INVALID end
         --if is_staff == TRUE then return ATTACK_REQUEST_INVALID end
         if env(1116, 100260) == TRUE then return ATTACK_REQUEST_INVALID end
@@ -923,13 +923,13 @@ function GetAttackRequest(is_guard)
             if (    ((is_gh == TRUE and sp == 655) or (is_ga == TRUE and c_SwordArtsID == 12) or (is_ga == TRUE and sp == 998) or (sp == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) or (sp == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or (is_r == TRUE) or sp == 103 or sp == 167 or sp == 147 or sp == 668 or sp == 673 or sp == 176 or sp == 231 or sp == 672 or sp == 681 or sp == 199 or sp == 168 or sp == 242 or sp == 140 or sp == 68) and is_both_right == TRUE) then is_rightHandCA = TRUE else is_rightHandCA = FALSE end
             if (    ((is_gho == TRUE and spo == 655) or (is_gao == TRUE and c_SwordArtsID == 12) or (is_gao == TRUE and spo == 998) or (spo == 72  and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE ) or (spo == 166 and c_SwordArtsID == 12  and env(1116, 697) == TRUE) or (is_ro == TRUE) or spo == 103 or spo == 167 or spo == 147 or  spo == 668 or  spo == 673 or spo == 176 or  spo == 231 or spo == 672 or spo == 681 or spo == 199 or spo == 168 or spo == 242 or spo == 140 or spo == 68) and is_both_right == FALSE) then is_leftHandCA = TRUE else is_leftHandCA = FALSE end
 
-            if is_arrow == TRUE then
-                act("弓矢スロット選択", 0)
-                return ATTACK_REQUEST_ARROW_FIRE_RIGHT
-            elseif is_staff == TRUE then
+            if is_staff == TRUE then
                 return ATTACK_REQUEST_INVALID
             elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
                 return ATTACK_REQUEST_LIGHT_KICK
+            elseif is_arrow == TRUE then
+                act("弓矢スロット選択", 0)
+                return ATTACK_REQUEST_ARROW_FIRE_RIGHT
             elseif is_crossbow == TRUE then
                 act("弓矢スロット選択", 0)
                 if style == HAND_LEFT_BOTH then
@@ -996,10 +996,10 @@ function GetAttackRequest(is_guard)
             end
         elseif is_staff == TRUE then
             return ATTACK_REQUEST_INVALID
-        elseif is_arrow == TRUE then
-            return ATTACK_REQUEST_ARROW_BOTH_RIGHT
         elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
             return ATTACK_REQUEST_LIGHT_KICK
+        elseif is_arrow == TRUE then
+            return ATTACK_REQUEST_ARROW_BOTH_RIGHT
         elseif is_crossbow == TRUE then
             act("弓矢スロット選択", 0)
             return ATTACK_REQUEST_RIGHT_CROSSBOW
@@ -1019,13 +1019,7 @@ function GetAttackRequest(is_guard)
             is_unfaltering_prayer = TRUE 
         end
 
-        if is_arrow == TRUE then
-            if is_both == TRUE then
-                act("弓矢スロット選択", 1)
-                return ATTACK_REQUEST_ARROW_FIRE_RIGHT2
-            else
-                return ATTACK_REQUEST_ARROW_BOTH_RIGHT
-            end
+        
             -- base for all catalysts = 41
             -- talisman = 127
             -- pyro flame = 149
@@ -1040,11 +1034,18 @@ function GetAttackRequest(is_guard)
              --   return ATTACK_REQUEST_INVALID
            -- end
 
-        elseif env(1106, ACTION_ARM_HEAVY_KICK) == TRUE then
+        if env(1106, ACTION_ARM_HEAVY_KICK) == TRUE then
             local check_weapon = FALSE --GetEquipType(hand, WEAPON_CATEGORY_STAFF)
 
             if  ((check_weapon == FALSE and env(1116, 100260) == FALSE) )  then
                 return ATTACK_REQUEST_HEAVY_KICK
+            end
+        elseif is_arrow == TRUE then
+            if is_both == TRUE then
+                act("弓矢スロット選択", 1)
+                return ATTACK_REQUEST_ARROW_FIRE_RIGHT2
+            else
+                return ATTACK_REQUEST_ARROW_BOTH_RIGHT
             end
         elseif is_crossbow == TRUE then
             if is_both == TRUE then
