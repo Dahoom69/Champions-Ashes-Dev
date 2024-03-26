@@ -3124,7 +3124,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if IsExistBolt(HAND_RIGHT) == TRUE then
             ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, blend_type)
         elseif env("ボルト装填状態取得", 1) == TRUE then
+            --if r1 == "W_AttackRightLightStep" then
+            --    is_find_atk = TRUE
+            --    ExecEventAllBody("W_AttackArrowRightFireStep")
+            --else
             ExecEventHalfBlend(Event_AttackCrossbowRightStart, blend_type)
+            --end
         else
             ExecEventHalfBlend(Event_AttackCrossbowRightReload, blend_type)
         end
