@@ -926,6 +926,10 @@ function GetAttackRequest(is_guard)
             if is_arrow == TRUE then
                 act("弓矢スロット選択", 0)
                 return ATTACK_REQUEST_ARROW_FIRE_RIGHT
+            elseif is_staff == TRUE then
+                return ATTACK_REQUEST_INVALID
+            elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
+                return ATTACK_REQUEST_LIGHT_KICK
             elseif is_crossbow == TRUE then
                 act("弓矢スロット選択", 0)
                 if style == HAND_LEFT_BOTH then
@@ -933,10 +937,6 @@ function GetAttackRequest(is_guard)
                 else
                     return ATTACK_REQUEST_BOTHRIGHT_CROSSBOW
                 end
-            elseif is_staff == TRUE then
-                return ATTACK_REQUEST_INVALID
-            elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
-                return ATTACK_REQUEST_LIGHT_KICK
             elseif (is_guard == TRUE and is_rightHandCA == TRUE) or (is_guard == TRUE and is_leftHandCA == TRUE) then
                 if ((sp == 655 and c_Style == HAND_RIGHT_BOTH) or (spo == 655 and is_leftHandCA == TRUE) ) then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt 2H combat art
                 elseif (    ((is_ga == TRUE and c_SwordArtsID == 12) and c_Style == HAND_RIGHT_BOTH) or ((is_gao == TRUE and c_SwordArtsID == 12) and is_leftHandCA == TRUE)) then return SWORDARTS_REQUEST_RIGHT_WARCRY -- Greataxe or Yhorm's Machete combat art
@@ -998,6 +998,8 @@ function GetAttackRequest(is_guard)
             return ATTACK_REQUEST_INVALID
         elseif is_arrow == TRUE then
             return ATTACK_REQUEST_ARROW_BOTH_RIGHT
+        elseif env(1106, ACTION_ARM_LIGHT_KICK) == TRUE then
+            return ATTACK_REQUEST_LIGHT_KICK
         elseif is_crossbow == TRUE then
             act("弓矢スロット選択", 0)
             return ATTACK_REQUEST_RIGHT_CROSSBOW
@@ -3121,17 +3123,15 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
             blend_type = UPPER
         end
-        if IsExistBolt(HAND_RIGHT) == TRUE then
-            ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, blend_type)
-        elseif env("ボルト装填状態取得", 1) == TRUE then
-            --if r1 == "W_AttackRightLightStep" then
-            --    is_find_atk = TRUE
-            --    ExecEventAllBody("W_AttackArrowRightFireStep")
-            --else
-            ExecEventHalfBlend(Event_AttackCrossbowRightStart, blend_type)
-            --end
+        if r1 == "W_AttackRightLightStep" then ExecEventAllBody("W_AttackRightLightStep")
         else
-            ExecEventHalfBlend(Event_AttackCrossbowRightReload, blend_type)
+            if IsExistBolt(HAND_RIGHT) == TRUE then
+                ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, blend_type)
+            elseif env("ボルト装填状態取得", 1) == TRUE then
+                ExecEventHalfBlend(Event_AttackCrossbowRightStart, blend_type)
+            else
+                ExecEventHalfBlend(Event_AttackCrossbowRightReload, blend_type)
+            end
         end
     elseif request == ATTACK_REQUEST_LEFT_CROSSBOW or request == ATTACK_REQUEST_LEFT_CROSSBOW2 then
         is_find_atk = FALSE
@@ -3158,12 +3158,15 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
             blend_type = UPPER
         end
-        if IsExistBolt(HAND_RIGHT) == TRUE then
-            ExecEventHalfBlend(Event_AttackCrossbowBothRightEmpty, blend_type)
-        elseif env("ボルト装填状態取得", 1) == TRUE then
-            ExecEventHalfBlend(Event_AttackCrossbowBothRightStart, blend_type)
+        if b1 == "W_AttackBothLightStep" then ExecEventAllBody("W_AttackBothLightStep")
         else
-            ExecEventHalfBlend(Event_AttackCrossbowBothRightReload, blend_type)
+            if IsExistBolt(HAND_RIGHT) == TRUE then
+                ExecEventHalfBlend(Event_AttackCrossbowBothRightEmpty, blend_type)
+            elseif env("ボルト装填状態取得", 1) == TRUE then
+                ExecEventHalfBlend(Event_AttackCrossbowBothRightStart, blend_type)
+            else
+                ExecEventHalfBlend(Event_AttackCrossbowBothRightReload, blend_type)
+            end
         end
     elseif request == ATTACK_REQUEST_BOTHLEFT_CROSSBOW or request == ATTACK_REQUEST_BOTHLEFT_CROSSBOW2 then
         is_find_atk = FALSE
@@ -10178,6 +10181,8 @@ function AttackBothLight1_onUpdate()  -- r11
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
+            elseif (sp_m == 671 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 671 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 32
+            
             else staminaRegen = 19 end
             
             AddStamina(staminaRegen)
@@ -10244,6 +10249,7 @@ function AttackBothLight2_onUpdate()  -- r12
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
+            elseif (sp_m == 671 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 671 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 32
             else staminaRegen = 19 end
             
             AddStamina(staminaRegen)
@@ -10329,6 +10335,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
+            elseif (sp_m == 671 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 671 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 32
             else staminaRegen = 19 end
             
             AddStamina(staminaRegen)
