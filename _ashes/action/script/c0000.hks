@@ -8124,6 +8124,18 @@ function Move_onUpdate()
     local addratio = 0
     local endratio = 1
     local ratio = 1
+
+    if env(1116, 100751) == TRUE then ratio = 1.1  end
+    if env(1116, 100752) == TRUE then ratio = 1.2  end
+    if env(1116, 100753) == TRUE then ratio = 1.3  end
+    if env(1116, 100754) == TRUE then ratio = 1.4  end
+    if env(1116, 100755) == TRUE then ratio = 1.5  end
+    if env(1116, 100756) == TRUE then ratio = 1.6  end
+    if env(1116, 100757) == TRUE then ratio = 1.7  end
+    if env(1116, 100758) == TRUE then ratio = 1.8  end
+    if env(1116, 100759) == TRUE then ratio = 1.9  end
+    if env(1116, 100760) == TRUE then ratio = 2.0  end
+
     if GetVariable("MoveDirection") == 3 or GetVariable("MoveDirection") == 2 then
         act(2001, 0.959999978542328 * ratio)
     elseif GetVariable("MoveDirection") == 1 then
