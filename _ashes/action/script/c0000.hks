@@ -13157,10 +13157,18 @@ function DrawStanceRightAttackHeavy_onUpdate() -- 036240
     local hand = HAND_RIGHT
     local style = c_Style
     local sp_kind = env(345 , hand)
+    local sp_kindo = env(345 , HAND_LEFT)
     if env(1116, 100250) == TRUE then
+        if (sp_kind == 67 and c_Style ~= HAND_LEFT_BOTH) or (sp_kindo == 67 and c_Style == HAND_LEFT_BOTH ) then
+            r2 = "W_DrawStanceRightAttackHeavy2"
+            b2 = "W_DrawStanceRightAttackHeavy2"
+            r1 = "W_DrawStanceRightAttackLight"
+            b1 = r1
+        else
         r2 = "W_DrawStanceRightAttackHeavy2"
         b2 = "W_DrawStanceRightAttackHeavy2"
         is_artsr2 = TRUE
+        end
     elseif env(1116, 100680) == TRUE then
         r2 = "W_DrawStanceRightAttackHeavy"
         b2 = "W_DrawStanceRightAttackHeavy"
@@ -14070,7 +14078,7 @@ function AttackSpinLoopEnd_onUpdate()
     end
 end
 
-function Charge_Upper_onUpdate() -- 6700
+function Charge_Upper_onUpdate() -- 036700
     local b1 = "W_AttackBothLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local l2 = "W_AttackLeftHeavy1"
