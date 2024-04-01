@@ -1124,7 +1124,7 @@ function GetAttackRequest(is_guard)
             local isFUGS = FALSE
             if (GetEquipType(HAND_LEFT, 26) == TRUE and sp_o == 163 and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE) then isFUGS = TRUE else isFUGS = FALSE end
 
-            if (   (sp_o ~= 50 and sp_o ~= 179 and sp_o ~= 232 and sp_o ~= 264 and sp_o ~= 164 and sp_o ~= 107 and sp_o ~= 663 and sp_o ~= 674 and sp_o ~= 681 )         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
+            if (   (sp_o ~= 50 and sp_o ~= 232 and sp_o ~= 264 and sp_o ~= 164 and sp_o ~= 107 and sp_o ~= 663 and sp_o ~= 674 and sp_o ~= 681 )         and GetEquipType(HAND_LEFT, 38) == TRUE)   then is_go = TRUE    else is_go = FALSE end
             if (   (sp_m ~= 50 and sp_m ~= 179 and sp_m ~= 232 and sp_m ~= 264 and sp_m ~= 164 and sp_m ~= 107 and sp_m ~= 621 and sp_m ~= 640 and sp_m ~= 663 and sp_m ~= 674 and sp_m ~= 681 )   and GetEquipType(HAND_RIGHT, 38)  == TRUE)   then is_gm = TRUE    else is_gm = FALSE end
             
             -- powerstance
@@ -1135,7 +1135,7 @@ function GetAttackRequest(is_guard)
             elseif  (   (is_gm == TRUE)                                                 and    (is_go == TRUE)                                                          and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif  is_ugs_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
             elseif  (   (sp_m == 162)                                                    and    (sp_o == 154)                                                              and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
-            elseif  (   (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50)                       and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  (   (GetEquipType(HAND_RIGHT, 38) == TRUE and (sp_m == 50 or sp_m == 179 or sp_m == 107 or sp_m == 232 or sp_m == 674 or sp_m == 663 or sp_m == 681))            and    (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681))                       and                                    (is_both == FALSE))                then return ATTACK_REQUEST_BOTH_LEFT
             elseif ((is_m == TRUE and isFUGS == FALSE) and (sp_o ~= 99 and sp_o ~= 101 and sp_o ~= 137 and sp_o ~= 151))  then
                 return ATTACK_REQUEST_LEFT_HEAVY
             elseif sp_o == 178 or sp_o == 207 or (sp_o == 217 and not (is_sl == TRUE and IsNodeActive("Rolling_CMSG", "RollingSelftrans_CMSG", "EStepDown_CMSG", "BackStepSuperlight_CMSG") == TRUE)  ) or sp_o == 220 or sp_o == 234 or sp_o == 257 or sp_o == 186 or sp_o == 20 or (is_d == TRUE and sp_o == 150) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_o == 67) then
@@ -2456,7 +2456,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if r1 == "W_AttackRightLightDash" then
             if  (GetEquipType(HAND_RIGHT, 30) == TRUE and (sp_m ~= 692 and sp_m ~= 138) and  GetEquipType(HAND_LEFT, 30) == TRUE)  or (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE) or (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft3" 
             elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeftDash" 
-            elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then l1 = "W_AttackBothLeft3" 
+            elseif (GetEquipType(HAND_RIGHT, 38) == TRUE and (sp_m == 50 or sp_m == 179 or sp_m == 107 or sp_m == 232 or sp_m == 674 or sp_m == 663 or sp_m == 681)) and (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681)) then l1 = "W_AttackBothLeft3" 
             elseif (sp_m == 162 and sp_o == 154)  then l1 = "W_AttackBothLeftDash" 
             elseif sp_m == 649 then l1 = "W_AttackBothLeft1" 
             elseif sp_m == 664 then l1 = "W_AttackBothHeavyKickSpecial" 
@@ -2464,7 +2464,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif r1 == "W_AttackRightLightStep" then
             if          (GetEquipType(HAND_RIGHT, 30) == TRUE and GetEquipType(HAND_LEFT, 30) == TRUE) or  (GetEquipType(HAND_RIGHT, 27) == TRUE and GetEquipType(HAND_LEFT, 27) == TRUE)  then l1 = "W_AttackBothLeft3"
             elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o ~= 50) then l1 = "W_AttackBothLeftStep" 
-            elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50) and (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then l1 = "W_AttackBothLeft2" 
+            elseif      (GetEquipType(HAND_RIGHT, 38) == TRUE and (sp_m == 50 or sp_m == 179 or sp_m == 107 or sp_m == 232 or sp_m == 674 or sp_m == 663 or sp_m == 681)) and (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681)) then l1 = "W_AttackBothLeft2" 
             elseif (    (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666 ) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666 ))  ) then l1 = "W_AttackBothLeft2" 
             elseif (sp_m == 162 and sp_o == 154)  then l1 = "W_AttackBothLeftStep" 
             elseif sp_m == 649 then l1 = "W_AttackBothLeft1" 
@@ -20573,7 +20573,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
             max_arm_front_m = 20
             --max_arm_front_o = -30
             --max_wrist_side_o = -80
-        elseif     (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then
+        elseif     (GetEquipType(HAND_RIGHT, 38) == TRUE and (sp_m == 50 or sp_m == 179 or sp_m == 107 or sp_m == 232 or sp_m == 674 or sp_m == 663 or sp_m == 681))            and    (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681)) then
             max_wrist_front_m = 20
             max_wrist_front_o = 20
             max_arm_front_m = -20
