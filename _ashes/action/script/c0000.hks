@@ -20524,10 +20524,12 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
     if isStance == FALSE then
 
         -- powerstance
-        if is_axe_ps == TRUE  then   
+        if is_axe_ps == TRUE then   
+            if (sp_m ~= 658 and sp_m ~= 103) then
             max_wrist_front_m = 50
-            max_wrist_front_o = 50
             max_arm_front_m = -5
+            end
+            max_wrist_front_o = 50
             max_arm_front_o = -10
         elseif is_tb_ps == TRUE then
             max_wrist_front_m = -10
@@ -20567,10 +20569,10 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
             max_wrist_side_o = -80 ]]
 
             max_wrist_front_m = 10
-            max_wrist_front_o = 20
+            --max_wrist_front_o = 20
             max_arm_front_m = 20
-            max_arm_front_o = -30
-            max_wrist_side_o = -80
+            --max_arm_front_o = -30
+            --max_wrist_side_o = -80
         elseif     (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 50)            and    (GetEquipType(HAND_LEFT, 38) == TRUE and sp_o == 50) then
             max_wrist_front_m = 20
             max_wrist_front_o = 20
