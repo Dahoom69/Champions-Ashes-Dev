@@ -9137,6 +9137,11 @@ function AttackRightLightKick_onUpdate() -- 030100
         if 10 > env(2016) then  act(2002, 627) end
     end
 
+    local request = GetAttackRequest(FALSE)
+    if 0 < env(1001) and sp_m == 85 then
+        if request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then ExecEventAllBody("W_AttackRightLightStep") return end
+    end
+
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
@@ -9159,6 +9164,11 @@ function AttackRightLightStep_onUpdate() -- roll r1 030900
     if sp_m == 609 or sp_m == 645 or sp_m == 649 or sp_m == 627  then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy2Start" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightKick" r2 = "W_CrossbowStepInFire" b1 = r1 b2 = r2 end
+
+    local request = GetAttackRequest(FALSE)
+    if 0 < env(1001) and sp_m == 85 then
+        if request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then ExecEventAllBody("W_AttackRightHeavyKick") return end
+    end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight2", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
@@ -9783,6 +9793,7 @@ function AttackRightHeavyKick_onUpdate() -- jump 030600
     local sp_m = env(345 , HAND_RIGHT)
 
     if GetEquipType(HAND_RIGHT, 23, 29) == TRUE then r1 = "W_AttackRightLight2" end
+    if sp_m == 85 then r1 = "W_AttackRightLight1" end
 
     if (   (sp_m ~= 264 and sp_m ~= 164)   and GetEquipType(HAND_RIGHT, 38)  == TRUE) or sp_m == 640  then r1 = "W_AttackRightLight3" end
     if sp_m == 614 or sp_m == 646 or sp_m == 667 or (sp_m == 162 and c_Style ~= HAND_LEFT_BOTH) then r1 = "W_AttackRightLight2" end
@@ -11557,6 +11568,11 @@ function AttackBothLightStep_onUpdate() -- roll r1 034900
         act(2002, 625)
     end
 
+    local request = GetAttackRequest(FALSE)
+    if 0 < env(1001) and sp_m == 85 then
+        if request == ATTACK_REQUEST_BOTHRIGHT_CROSSBOW or request == ATTACK_REQUEST_BOTHRIGHT_CROSSBOW2 then ExecEventAllBody("W_AttackBothHeavyKick") return end
+    end
+
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
@@ -11668,6 +11684,11 @@ function AttackBothLightKick_onUpdate() -- 034100
     end
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then   b1 = "W_AttackBothLight3" end
     
+    local request = GetAttackRequest(FALSE)
+    if 0 < env(1001) and sp_m == 85 then
+        if request == ATTACK_REQUEST_BOTHRIGHT_CROSSBOW or request == ATTACK_REQUEST_BOTHRIGHT_CROSSBOW2 then ExecEventAllBody("W_AttackBothLightStep") return end
+    end
+
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
