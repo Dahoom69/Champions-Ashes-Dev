@@ -12139,6 +12139,14 @@ function AttackCrossbowRightEmpty_Upper_onUpdate() -- neutral transform (UT > T)
         b1 = "W_AttackBothLight3" 
     end
 
+    if ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style == HAND_LEFT_BOTH)) then 
+        act("精密射撃可能か")
+        if IsExistArrow() == TRUE then
+            ExecEventAllBody("W_NoArrow")
+            return 
+        end 
+    end
+
     if sp_m == 609 or sp_m == 612 or sp_m == 622 or sp_m == 627 then b1 = "W_AttackBothLight3" end
     if sp_m == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -14552,6 +14560,15 @@ function OneShotNoGenTransStart_onUpdate() -- 038700 Transformed WA
         r2 = "W_AttackRightHeavy1SubStart"
         b2 = "W_AttackBothHeavy2Start"
      end
+
+    if ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style == HAND_LEFT_BOTH)) then 
+        act("精密射撃可能か")
+        if IsExistArrow() == TRUE then
+            ExecEventAllBody("W_NoArrow")
+            return 
+        end 
+    end
+
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100282) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1Start") return
@@ -14870,7 +14887,7 @@ function CrossbowStepInFire_onUpdate() -- 038210 bs r2 for vanilla weapons
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b2 = r2 end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
-    if (sp_m == 672 or ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW) and c_Style == HAND_LEFT_BOTH))) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if (sp_m == 672 or ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style == HAND_LEFT_BOTH))) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 627)
     end
@@ -14878,7 +14895,7 @@ function CrossbowStepInFire_onUpdate() -- 038210 bs r2 for vanilla weapons
     act("精密射撃可能か")
 
 local request = GetAttackRequest(FALSE)
-    if 0 < env(1001) and ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW) and c_Style == HAND_LEFT_BOTH)) then
+    if 0 < env(1001) and ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style == HAND_LEFT_BOTH)) then
         if request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then
             if IsExistBolt(HAND_RIGHT) == TRUE then
                 ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY)
@@ -14931,7 +14948,7 @@ function CrossbowStepInReload_onUpdate() -- 038220 bs r2 for vanilla weps
     act("精密射撃可能か")
 
     local request = GetAttackRequest(FALSE)
-    if 0 < env(1001) and ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW) and c_Style == HAND_LEFT_BOTH)) then
+    if 0 < env(1001) and ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style == HAND_LEFT_BOTH)) then
         if request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then
             if IsExistBolt(HAND_RIGHT) == TRUE then
                 ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY)
@@ -14973,6 +14990,16 @@ function HeadHunt_Activate()
 end
 
 function HeadHunt_Upper_onUpdate()
+
+    if ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style == HAND_LEFT_BOTH)) then 
+        act("精密射撃可能か")
+        if IsExistArrow() == TRUE then
+            ExecEventAllBody("W_NoArrow")
+            return 
+        end 
+    end
+
+
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -15145,6 +15172,13 @@ function RandomOneShot1_onUpdate() -- 039100
         b2 = "W_RandomOneShotNext1"
     end
 
+    if ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style == HAND_LEFT_BOTH)) then 
+        act("精密射撃可能か")
+        if IsExistArrow() == TRUE then
+            ExecEventAllBody("W_NoArrow")
+            return 
+        end 
+    end
 
     if (( sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH)) then 
         r2 = "W_AttackRightHeavy1Start" 
