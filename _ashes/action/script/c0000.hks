@@ -15125,6 +15125,8 @@ function RandomOneShot1_onUpdate() -- 039100
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
     local r2 = "W_RandomOneShotNext1"
     local b2 = "W_RandomOneShotNext1"
     local rand = math.random(0, 100)
@@ -15185,12 +15187,19 @@ function RandomOneShot1_onUpdate() -- 039100
         b2 = "W_AttackBothHeavy1Start" 
     end
 
+    if (( sp_m == 90 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 90 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_RandomOneShotNext2" 
+        b1 = r1 
+        r2 = r1 
+        b2 = r1 
+    end
+
     if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 627)
     end
 
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     elseif (env(1108, ACTION_ARM_L2) <= 0 and env(1108, ACTION_ARM_R1) <= 0 and env(1108, ACTION_ARM_R2) <= 0) and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_RandomOneShotNext1")
@@ -15208,6 +15217,8 @@ function RandomOneShotNext1_onUpdate() -- 039110
     local hand = HAND_RIGHT
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
+    local r1 = "W_AttackRightLight2"
+    local b1 = "W_AttackBothLight2"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
@@ -15215,12 +15226,19 @@ function RandomOneShotNext1_onUpdate() -- 039110
         b2 = "W_RandomOneShotNext1" 
     end
 
+    if (( sp_m == 90 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 90 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_RandomOneShotNext2" 
+        b1 = r1 
+        r2 = r1 
+        b2 = r1 
+    end
+
     if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 627)
     end
     
-    if env(1116, 100283) == FALSE and SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight2", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
+    if env(1116, 100283) == FALSE and SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE and SwordArtsCommonFunction("W_RandomOneShotNext3", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_RandomOneShotNext3", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return
@@ -15234,8 +15252,22 @@ function RandomOneShotNext1_onUpdate() -- 039110
 end
 
 function RandomOneShotNext2_onUpdate()
-    
-    if env(1116, 100283) == FALSE and SwordArtsCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", "W_AttackLeftLight2", "W_AttackLeftHeavy2", "W_AttackBothLight2", "W_AttackBothHeavy1Start", FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    local r1 = "W_AttackRightLight2"
+    local b1 = "W_AttackBothLight2"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+
+    if (( sp_m == 90 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 90 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_RandomOneShotNext3" 
+        b1 = r1 
+        r2 = r1 
+        b2 = r1 
+    end
+
+    if env(1116, 100283) == FALSE and SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight2", "W_AttackLeftHeavy2", b1, b2, FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE and SwordArtsCommonFunction("W_RandomOneShotNext4", "W_AttackRightHeavy1Start", "W_AttackLeftLight2", "W_AttackLeftHeavy2", "W_RandomOneShotNext4", "W_AttackBothHeavy1Start", FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
             return 
@@ -15249,7 +15281,21 @@ function RandomOneShotNext2_onUpdate()
 end
 
 function RandomOneShotNext3_onUpdate()
-    if env(1116, 100283) == FALSE and SwordArtsCommonFunction("W_AttackRightLight3", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, TRUE, FALSE) == TRUE then
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    local r1 = "W_AttackRightLight3"
+    local b1 = "W_AttackBothLight1"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+
+    if (( sp_m == 90 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 90 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_RandomOneShotNext4" 
+        b1 = r1 
+        r2 = r1 
+        b2 = r1 
+    end
+    if env(1116, 100283) == FALSE and SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, TRUE, FALSE) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE and SwordArtsCommonFunction("W_RandomOneShotNext1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_RandomOneShotNext1", "W_AttackBothHeavy1Start", FALSE, FALSE, TRUE, FALSE) == TRUE then
         return 
@@ -15263,7 +15309,22 @@ function RandomOneShotNext3_onUpdate()
 end
 
 function RandomOneShotNext4_onUpdate()
-        if env(1116, 100283) == FALSE and SwordArtsCommonFunction("W_AttackRightLight3", "W_AttackRightHeavy1Start", "W_AttackLeftLight3", "W_AttackLeftHeavy3", "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, FALSE, TRUE, FALSE) == TRUE then
+    local hand = HAND_RIGHT
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    local r1 = "W_AttackRightLight3"
+    local b1 = "W_AttackBothLight3"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+
+    if (( sp_m == 90 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 90 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_RandomOneShotNext4" 
+        b1 = r1 
+        r2 = r1 
+        b2 = r1 
+    end
+
+        if env(1116, 100283) == FALSE and SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight3", "W_AttackLeftHeavy3", b1, b2, FALSE, FALSE, TRUE, FALSE) == TRUE then
             return 
         elseif env(1116, 100283) == TRUE and SwordArtsCommonFunction("W_RandomOneShotNext2", "W_AttackRightHeavy1Start", "W_AttackLeftLight3", "W_AttackLeftHeavy3", "W_RandomOneShotNext2", "W_AttackBothHeavy1Start", FALSE, FALSE, TRUE, FALSE) == TRUE then
             return 
