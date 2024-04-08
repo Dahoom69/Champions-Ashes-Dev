@@ -2126,6 +2126,12 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         end
 
+        if (sp_m == 692 and c_Style ~= HAND_LEFT_BOTH) then 
+            if r1 == "W_AttackRightLightDash" then r1 = "W_AttackBothDash"
+            end
+        end
+
+
         if (iT == TRUE) then 
             ExecEventAllBody(b1)
         else  
@@ -2439,7 +2445,6 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 if b1 == "W_AttackBothLight1" then b1 = "W_AttackRightLight1"
                 elseif b1 == "W_AttackBothLight2" then b1 = "W_AttackRightLight2"
                 elseif b1 == "W_AttackBothLight3" then b1 = "W_AttackRightLight3"
-                elseif b1 == "W_AttackBothDash" then b1 = "W_AttackRightLightDash"
                 elseif b1 == "W_AttackBothLightStep" then b1 = "W_AttackRightLightStep"
                 end
             end
