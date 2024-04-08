@@ -14118,6 +14118,7 @@ end
 
 function Charge_Upper_onUpdate() -- 036700
     local b1 = "W_AttackBothLight1"
+    local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local l2 = "W_AttackLeftHeavy1"
     local b2 = "W_AttackBothHeavy1Start"
@@ -14138,6 +14139,13 @@ function Charge_Upper_onUpdate() -- 036700
         is_artsr2 = TRUE
     end
 
+    if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH) then 
+        r1 = "W_ChargeContinue"
+        b1 = "W_ChargeContinue"
+        r2 = "W_ChargeContinue"
+        b2 = "W_ChargeContinue"
+    end
+
     if sp_m == 101 and env("アニメ終了か", 1) == TRUE and env(1001) > 0 then ExecEventAllBody("W_ChargeContinue") end
     if sp_m == 101 and env("アニメ終了か", 1) == TRUE and env(1001) <= 0 then ExecEventAllBody("W_Idle") end 
     if sp_m == 641 then b1 = "W_AttackBothHeavySpecial1SubStart" end
@@ -14150,7 +14158,6 @@ function Charge_Upper_onUpdate() -- 036700
 
     local is_h = GetEquipType(hand, 33) 
 
-    local r1 = "W_AttackRightLight1"
     if is_h == TRUE then r1 = "W_AttackRightLight3" end
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", l2, b1, b2, is_artsr1, is_artsr2, TRUE, GEN_TRANS_LFET) == TRUE then
@@ -14183,7 +14190,7 @@ function Charge_Activate()
     return 
 end
 
-function ChargeContinue_onUpdate()
+function ChargeContinue_onUpdate() -- 036710
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
     if sp_m == 101 then iT = FALSE end
@@ -14222,7 +14229,14 @@ function ChargeContinue_onUpdate()
         is_artsr2 = TRUE
     end
 
-    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", l2, "W_AttackBothLight1", b2, is_artsr1, is_artsr2, TRUE, GEN_TRANS_LFET) == TRUE then
+    if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH) then 
+        r1 = "W_ChargeContinue2"
+        b1 = "W_ChargeContinue2"
+        r2 = "W_ChargeContinue2"
+        b2 = "W_ChargeContinue2"
+    end
+
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", l2, b1, b2, is_artsr1, is_artsr2, TRUE, GEN_TRANS_LFET) == TRUE then
         return 
     elseif (    (sp_m == 656 or sp_m == 72) and style ~= HAND_LEFT_BOTH     or (    (sp_o == 72 or sp_o == 656) and style == HAND_LEFT_BOTH)) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE or (env(1108, ACTION_ARM_L2) <= 0 and env(1116, 100280) == TRUE)   ) then -- new
         act("特殊補間設定", 0, TRUE)
@@ -14237,10 +14251,26 @@ function ChargeContinue_onUpdate()
     end
 end
 
-function ChargeContinue2_onUpdate()
+function ChargeContinue2_onUpdate() -- 036720
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+
+    local b1 = "W_AttackBothLight1"
+    local r1 = "W_AttackRightLight1"
+    local r2 = "W_AttackRightHeavy1Start"
+    local l2 = "W_AttackLeftHeavy1"
+    local b2 = "W_AttackBothHeavy1Start"
+
+    if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH) then         
+        r1 = "W_Charge"
+        b1 = "W_Charge"
+        r2 = "W_Charge"
+        b2 = "W_Charge"
+    end
+
+
+    
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif (sp_m == 656 or sp_m == 72 or (sp_o == 72 and c_Style == HAND_LEFT_BOTH)) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then -- new
         act("特殊補間設定", 0, TRUE)
