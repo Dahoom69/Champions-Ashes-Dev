@@ -14142,8 +14142,8 @@ function Charge_Upper_onUpdate() -- 036700
     if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH) then 
         r1 = "W_ChargeContinue"
         b1 = "W_ChargeContinue"
-        r2 = "W_ChargeContinue"
-        b2 = "W_ChargeContinue"
+        r2 = "W_ChargeContinue2"
+        b2 = "W_ChargeContinue2"
     end
 
     if sp_m == 101 and env("アニメ終了か", 1) == TRUE and env(1001) > 0 then ExecEventAllBody("W_ChargeContinue") end
@@ -14230,8 +14230,8 @@ function ChargeContinue_onUpdate() -- 036710
     end
 
     if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH) then 
-        r1 = "W_ChargeContinue2"
-        b1 = "W_ChargeContinue2"
+        r1 = "W_Charge"
+        b1 = "W_Charge"
         r2 = "W_ChargeContinue2"
         b2 = "W_ChargeContinue2"
     end
@@ -14262,13 +14262,11 @@ function ChargeContinue2_onUpdate() -- 036720
     local b2 = "W_AttackBothHeavy1Start"
 
     if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 672 and c_Style == HAND_LEFT_BOTH) then         
-        r1 = "W_Charge"
-        b1 = "W_Charge"
-        r2 = "W_Charge"
-        b2 = "W_Charge"
+        r1 = "W_ChargeContinue"
+        b1 = "W_ChargeContinue"
+        r2 = "W_ChargeContinue2"
+        b2 = "W_ChargeContinue2"
     end
-
-
     
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
