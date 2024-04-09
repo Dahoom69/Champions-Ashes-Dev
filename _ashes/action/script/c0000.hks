@@ -15688,6 +15688,10 @@ function StormStanceLight_onUpdate() -- 038840
         b1 = "W_AttackBothLight2"
         r2 = "W_StormStanceHeavy"
         b2 = r2
+        if env(1116, 1070202) == TRUE or env(1116, 1070252) == TRUE then 
+            r2 = "W_StormStanceFullHeavy"
+            b2 = "W_StormStanceFullHeavy"
+        end
     end
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
