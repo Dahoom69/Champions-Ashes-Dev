@@ -2116,9 +2116,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         end
 
         if (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
-            if r1 == "W_AttackRightLightDash " then r1 = "W_AttackRightLightDashSpecial"
-            elseif r1 == "W_AttackRightLightStep" then r1 = "W_AttackRightLightStepSpecial"
-            elseif r2 == "W_AttackRightHeavyKick" then r2 = "W_AttackRightHeavyKickSpecial"
+            if r1 == "W_AttackRightLightStep" then r1 = "W_AttackRightLightStepSpecial"
             end
         end
 
@@ -2235,6 +2233,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
             elseif ((sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
                 or ((sp_o == 687 and env(1116, 705) == TRUE) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style ~= HAND_LEFT_BOTH))
+            or     ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998) and c_Style == HAND_LEFT_BOTH)) then -- morning star alt moveset
+                    ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
             end
@@ -2409,6 +2410,13 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 if b1 == "W_AttackBothLight1" then b1 = "W_AttackRightLight1"
                 elseif b1 == "W_AttackBothLight2" then b1 = "W_AttackRightLight2"
                 elseif b1 == "W_AttackBothLight3" then b1 = "W_AttackRightLight3"
+                end
+            end
+
+            if ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998)) and c_Style ~= HAND_LEFT_BOTH)
+            or ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998)) and c_Style == HAND_LEFT_BOTH)
+            then -- morning star alt moveset
+                if b1 == "W_AttackBothLightStep" then b1 = "W_AttackBothLightStepSpecial"
                 end
             end
 
@@ -6857,6 +6865,11 @@ function MoveCommonFunction(blend_type)
         elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             r1 = "W_AttackRightLightDashSpecial"
             r2 = "W_AttackRightHeavyKick"
+        elseif ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998)) and c_Style ~= HAND_LEFT_BOTH)
+            or ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998)) and c_Style == HAND_LEFT_BOTH)
+            then -- morning star alt moveset
+            b1 = "W_AttackBothDashSpecial"
+            b2 = "W_AttackBothHeavyKick"
         elseif IsEnableJumpAtk() == TRUE then
             r2 = "W_AttackRightHeavyKick"
             b2 = "W_AttackBothHeavyKick"
