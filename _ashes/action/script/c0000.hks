@@ -1372,6 +1372,8 @@ function SetSwordArtsPointInfo(button, is_point_consume)
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 649 or (sp_m == 672 and (c_Style == HAND_RIGHT or c_Style == HAND_RIGHT_BOTH)) then sel = 0 end 
 
+    if (sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH) then sel = 0 end
+
     local val = "IsEnoughArtPointsL2"
     if button == ACTION_ARM_R1 then
         if IsNodeActive("DrawStanceRightAttackLight_Selector") == TRUE then
@@ -2111,12 +2113,22 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if artsr1 == TRUE then
             SetSwordArtsPointInfo(ACTION_ARM_R1, TRUE)
         end
+
         if IsArtsSpAtk() == TRUE and r1 == "W_AttackRightLightStep" then
             r1 = "W_AttackRightLightStepSpecial"
         end
 
         if (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             if r1 == "W_AttackRightLightStep" then r1 = "W_AttackRightLightStepSpecial"
+            end
+        end
+
+        if sp_m == 665 then
+            if r1 == "W_AttackRightLight1" then 
+                ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
+                r1 = "W_MagicBuffRight"
+            elseif r1 == "W_AttackRightLight2" then r1 = "W_MagicBuffRight2"
+            elseif r1 == "W_AttackRightLight3" then r1 = "W_MagicBuffRight3"
             end
         end
 
@@ -2335,6 +2347,15 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             if DASH_STARTING_SPEED < speed then l2 = "W_AttackLeftHeavySp1"
             elseif r1 == "W_AttackRightLightStep" then l2 = "W_AttackLeftHeavySp2"  
             elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp3"         
+            end
+        end
+        
+        if (sp_g == 665) then  --665 blacksmith
+            if l2 == "W_AttackLeftHeavy1" then 
+                ExecEventHalfBlend(Event_MagicBuffLeft, ALLBODY)
+                l2 = "W_MagicBuffLeft"
+            elseif l2 == "W_AttackLeftHeavy2" then l2 = "W_MagicBuffLeft2"
+            elseif l2 == "W_AttackLeftHeavy3" then l2 = "W_MagicBuffLeft3"              
             end
         end
 
@@ -14670,11 +14691,15 @@ end
 function MagicBuffRight_Upper_onUpdate()
     local blend_type, lower_state = GetHalfBlendInfo()
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if sp_m == 649 then r2 = "W_AttackRightHeavy1SubStart" b2 = "W_AttackBothHeavy1SubStart" end
 
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+
+    if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
+
+    if SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif HalfBlendLowerCommonFunction(Event_MagicBuffRightMirror, lower_state, FALSE, FALSE) == TRUE then
         return 
@@ -14684,7 +14709,11 @@ function MagicBuffRight_Upper_onUpdate()
 end
 
 function MagicBuffRight2_onUpdate()
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, FALSE) == TRUE then
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
+
+    if SwordArtsCommonFunction("W_AttackRightLight3", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy3", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
@@ -14692,7 +14721,11 @@ function MagicBuffRight2_onUpdate()
 end
 
 function MagicBuffRight3_onUpdate()
-    if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, FALSE) == TRUE then
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
+
+    if SwordArtsCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
@@ -15481,6 +15514,10 @@ end
 function MagicBuffLeft_Upper_onUpdate() -- 037910 
     local blend_type, lower_state = GetHalfBlendInfo()
 
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
+
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
@@ -15492,7 +15529,7 @@ function MagicBuffLeft_Upper_onUpdate() -- 037910
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif HalfBlendLowerCommonFunction(Event_MagicBuffLeftMirror, lower_state, FALSE, FALSE) == TRUE then
         return 
@@ -15502,6 +15539,10 @@ function MagicBuffLeft_Upper_onUpdate() -- 037910
 end
 
 function MagicBuffLeft2_onUpdate() -- -- 037930 ?
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
+    
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
@@ -15513,7 +15554,7 @@ function MagicBuffLeft2_onUpdate() -- -- 037930 ?
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction("W_AttackRightLight3", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy3", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
@@ -15521,6 +15562,12 @@ function MagicBuffLeft2_onUpdate() -- -- 037930 ?
 end
 
 function MagicBuffLeft3_onUpdate()
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    if 5 > env(2016) 
+    --and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) 
+    then act(2002, 121950)  end
+
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
@@ -15531,7 +15578,7 @@ function MagicBuffLeft3_onUpdate()
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
