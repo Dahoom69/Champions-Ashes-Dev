@@ -2196,7 +2196,6 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 r2 = "W_AttackRightHeavySpecial2Start"
 
             end
-            --xxxxxx--
 
         elseif (sp_m == 689 or sp_m == 690 or sp_m == 687 or sp_m == 688  or sp_m == 692) then -- W_AttackRightHeavy1Start extra r2 
             EXR2 = TRUE
@@ -2867,39 +2866,72 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_CircleStepRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
             if (faultyWA ~= TRUE) then
-                if IsNodeActive("CircleStepStart_Blend") == TRUE then
-                    if 0 <= angle then
-                        SetVariable("CircleStepDirectionSelftrans", 1)
-                    else
-                        SetVariable("CircleStepDirectionSelftrans", 0)
-                    end
-                        if back == true then angle = 180 -- bow WA when doing WA into WA
-                        elseif right == true then angle = 90
-                        elseif left == true then angle = -90
-                        else angle = 0 end
+            local is_bow = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_SMALL_ARROW)
+            local is_bowo = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW)
+
+            local sp_m = env(345 , HAND_RIGHT)
+            local sp_o = env(345 , HAND_LEFT)
+            if IsNodeActive("CircleStepStart_Blend") == TRUE then
+                if 0 <= angle then
+                    SetVariable("CircleStepDirectionSelftrans", 1)
+                else
+                    SetVariable("CircleStepDirectionSelftrans", 0)
+                end
+                -- check if bow
+                if (is_bow == TRUE and c_Style ~= HAND_LEFT_BOTH) or (is_bowo == TRUE and c_Style == HAND_LEFT_BOTH) then
+                    if back == true then angle = 180 -- bow WA when doing WA into WA
+                    elseif right == true then angle = 90
+                    elseif left == true then angle = -90
+                    else angle = 0 end
                     if IsExistArrow() == TRUE then
                         ExecEventAllBody("W_NoArrow") 
                     else
                         SetVariable("CircleStepAngleSelftrans", angle)
                         ExecEventAllBody("W_CircleStepStartSelftrans")
                     end
+                elseif ( sp_m == 217 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 217 and c_Style == HAND_LEFT_BOTH) then
+                    if front == true then angle = 0
+                    elseif right == true then angle = 90
+                    elseif left == true then angle = -90
+                    else angle = 180 end
+                    SetVariable("CircleStepAngleSelftrans", angle)
+                    ExecEventAllBody("W_CircleStepStartSelftrans")
+                    
+                else 
+                    SetVariable("CircleStepAngleSelftrans", angle)
+                    ExecEventAllBody("W_CircleStepStartSelftrans") 
+                end
+            else
+                if 0 <= angle then
+                    SetVariable("CircleStepDirection", 1)
                 else
-                    if 0 <= angle then
-                        SetVariable("CircleStepDirection", 1)
-                    else
-                        SetVariable("CircleStepDirection", 0)
-                    end
-                        if back == true then angle = 180 -- bow WA in neutral and locked on
-                        elseif right == true then angle = 90
-                        elseif left == true then angle = -90
-                        else angle = 0 end
+                    SetVariable("CircleStepDirection", 0)
+                end
+                -- check if bow
+                if (is_bow == TRUE and c_Style ~= HAND_LEFT_BOTH) or (is_bowo == TRUE and c_Style == HAND_LEFT_BOTH) then
+                    if back == true then angle = 180 -- bow WA in neutral and locked on
+                    elseif right == true then angle = 90
+                    elseif left == true then angle = -90
+                    else angle = 0 end
                     if IsExistArrow() == TRUE then
                         ExecEventAllBody("W_NoArrow") 
                     else
                         SetVariable("CircleStepAngle", angle)
                         ExecEventAllBody("W_CircleStepStart")
                     end
+                elseif ( sp_m == 217 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 217 and c_Style == HAND_LEFT_BOTH) then
+                    if front == true then angle = 0
+                    elseif right == true then angle = 90
+                    elseif left == true then angle = -90
+                    else angle = 180 end
+                    SetVariable("CircleStepAngleSelftrans", angle)
+                    ExecEventAllBody("W_CircleStepStartSelftrans")
+                    
+                else 
+                    SetVariable("CircleStepAngle", angle)
+                    ExecEventAllBody("W_CircleStepStart")
                 end
+            end
             else 
                 if (style == HAND_RIGHT_BOTH or style == HAND_LEFT_BOTH or style == HAND_BOTH) then ExecEventHalfBlend(Event_MagicInvalidLeft, blend_type) 
                 else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end 
@@ -14748,8 +14780,29 @@ function CircleStepStartSelftrans_onUpdate()
     local rolling_angle = GetVariable("CircleStepAngleSelftrans")
     local addratio = 0.300000011920929
     local endratio = 1
+
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+
+    local is_CSm = GetEquipType(HAND_RIGHT, 28) 
+    local is_CSo = GetEquipType(HAND_LEFT, 28) 
+
+    local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b2 = "W_AttackBothHeavy1Start"
+
+    if (sp_m == 217 and is_CSm == TRUE and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 217 and is_CSo == TRUE and c_Style == HAND_LEFT_BOTH) then
+        r1 = "W_CrossbowStepInFire"
+        b1 = "W_CrossbowStepInFire"
+        if  env(1116, 100260) == TRUE then
+        r2 = "W_WarcryCancel"
+        b2 = "W_WarcryCancel"
+        end
+    end    
+
     act(2001, math.abs(1 + addratio * math.abs(math.sin(math.rad(2 * rolling_angle)))))
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE) == TRUE then
         return 
     else
         return 
