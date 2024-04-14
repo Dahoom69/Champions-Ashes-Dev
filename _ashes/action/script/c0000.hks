@@ -2849,6 +2849,60 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 event = "W_RollingOverweightLeft"
             end
             ExecEventAllBody(event)
+        elseif GetWeightIndex(FALSE) == EVASION_WEIGHT_INDEX_HEAVY then
+            local rollingangle = GetVariable("RollingAngle")
+            if 0 <= rollingangle then
+                SetVariable("RollingDirection", 1)
+            else
+                SetVariable("RollingDirection", 0)
+            end
+            local event = "W_RollingHeavy"
+            local weight = GetWeightIndex(FALSE)
+            local is_selftrans = FALSE
+                if IsNodeActive("Rolling_CMSG") == TRUE then
+                    is_selftrans = TRUE
+                end
+    
+            local turn_angle_real = 200
+            if GetVariable("IsLockon") == true then
+                act("ロックオン対象へ即座に旋回")
+                turn_angle_real = math.abs(GetVariable("TurnAngle") - rollingangle)
+                if 180 < turn_angle_real then
+                    turn_angle_real = 360 - turn_angle_real
+                end
+            elseif 0.00100000004749745 < math.abs(rollingangle) then
+                SetTurnSpeed(0)
+            else
+                local move_angle = GetVariable("MoveAngle")
+                if move_angle ~= 0 then
+                    rollingangle = move_angle
+                end
+            end
+            SetVariable("TurnAngleReal", turn_angle_real)
+            if is_selftrans == TRUE then
+                event = event .. "Selftrans"
+                SetVariable("RollingAngleRealSelftrans", rollingangle)
+            else
+                SetVariable("RollingAngleReal", rollingangle)
+            end
+
+            local front, back, left, right = false
+            if 135 < math.abs(rollingangle) then
+                back = true
+            elseif 45 < rollingangle then
+                right = true
+            elseif rollingangle < -45 then
+                left = true
+            else
+                front = true
+            end
+            SetVariable("EnableTAE_RollingFront", front)
+            SetVariable("EnableTAE_RollingBack", back)
+            SetVariable("EnableTAE_RollingLeft", left)
+            SetVariable("EnableTAE_RollingRight", right)
+            AddStamina(c_StaminaCostRolling*3)
+            ExecEventAllBody(event) 
+            
         else
             local front, back, left, right = false
             if 135 < math.abs(angle) then
