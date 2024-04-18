@@ -4106,6 +4106,10 @@ function ExecItem(quick_type, blend_type)
     elseif item_type == ITEM_BACK_BOTTLE then
         ExecEventHalfBlend(Event_ItemBackBottle, blend_type)
     elseif item_type == ITEM_DRINK_SAKE then
+        if env(1001) <= 0 then
+            ResetRequest()
+            return FALSE
+        end
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
             blend_type = UPPER
         end
@@ -4138,6 +4142,11 @@ function ExecItem(quick_type, blend_type)
             ExecEventHalfBlend(Event_DragonFullEndBefore, blend_type) -- twinkling dragon body
         end
     elseif item_type == ITEM_OLDMONK then
+        if env(1001) <= 0 then
+            ResetRequest()
+            return FALSE
+        end
+
         ExecEventHalfBlend(Event_ItemOldMonk, blend_type)
     elseif item_type == ITEM_QUICK_THROW_HOMINGKNIFE then
         if env(1001) <= 0 then
