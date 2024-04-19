@@ -10936,6 +10936,11 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge 034320
 
     if (sp_m == 70 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 70 and c_Style == HAND_LEFT_BOTH)  then  b2 = "W_AttackBothHeavy1Start" end
 
+    if ((sp_m == 141 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 141 and c_Style == HAND_LEFT_BOTH)) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 627)
+    end
+
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
@@ -10988,6 +10993,11 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end 034321
         act(2002, 625)
     end
 
+    if ((sp_m == 141 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 141 and c_Style == HAND_LEFT_BOTH)) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 627)
+    end
+
     local r1 = "W_AttackRightLight1" 
     local b2 = "W_AttackBothHeavy2Start"
 
@@ -11024,7 +11034,7 @@ function AttackBothHeavy1End_onUpdate()  -- r21 release end 034321
     end
 end
 
-function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2
+function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2 034340
     local is_catalysts = GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
     local is_catalysto = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) -- 2h staff W_AttackRightHeavyWepBroken1Start
 
@@ -11093,6 +11103,11 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2
             act(2002, 625)
         end
 
+        if ((sp_m == 141 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 141 and c_Style == HAND_LEFT_BOTH)) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 627)
+        end
+
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
@@ -11151,6 +11166,11 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end 034341
     if sp_m == 643 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 625)
+    end
+
+    if ((sp_m == 141 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 141 and c_Style == HAND_LEFT_BOTH)) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 627)
     end
 
     local r1 = "W_AttackRightLight1" 
