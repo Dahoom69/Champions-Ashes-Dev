@@ -9571,7 +9571,7 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030340
     local is_pyro = FALSE
     if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
 
-    if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if (sp_m == 672 or sp_m == 688) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 627)
     end
@@ -9905,6 +9905,12 @@ end
 
 function AttackRightHeavyWepBroken2Start_onUpdate() -- r21 030345 "W_AttackRightHeavyWepBroken2Start"
     local sp_m = env(345 , HAND_RIGHT)
+
+    if sp_m == 688 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 627)
+    end
+
     if (sp_m == 689 or sp_m == 690 or sp_m == 687 or sp_m == 688 or sp_m == 692) and c_Style ~= HAND_LEFT_BOTH then  AttackRightHeavy1Start_onUpdate()
     else 
         AttackRightHeavy2Start_onUpdate() 
@@ -9960,6 +9966,12 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2 030610
     if sp_m == 614  or sp_m == 612 or sp_m == 622 or sp_m == 627 or sp_m == 645 or sp_m == 621 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then b2 = r2 end
+
+    if sp_m == 688 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 627)
+    end
+
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
             local staminaRegen = 15
@@ -15147,7 +15159,7 @@ function CrossbowStepInFire_onUpdate() -- 038210 bs r2 for vanilla weapons
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b2 = r2 end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
-    if (sp_m == 672 or ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style == HAND_LEFT_BOTH))) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    if ((sp_m == 672 or sp_m == 688) or ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW == TRUE) and c_Style == HAND_LEFT_BOTH))) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
         act(2002, 627)
     end
