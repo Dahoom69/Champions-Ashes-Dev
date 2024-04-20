@@ -1064,8 +1064,8 @@ function GetAttackRequest(is_guard)
                 return ATTACK_REQUEST_RIGHT_CROSSBOW2
             end
 
-        elseif (is_guard == TRUE and sp_m == 672) then -- Sekiro Prosthetic Art
-            if (sp_o == 691)  then return ATTACK_REQUEST_LEFT_HEAVY -- Sekiro Combat Art
+        elseif (is_guard == TRUE and (sp_m == 672 or sp_m == 688)) then -- Sekiro Prosthetic Art
+            if (sp_o == 691)  then return ATTACK_REQUEST_LEFT_HEAVY -- Sekiro Art
             else return ATTACK_REQUEST_BOTH_HEAVY
             end
         end
@@ -10117,13 +10117,13 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if (sp_o == 691 and sp_m == 672 and c_Style == HAND_RIGHT_BOTH) then 
+    if (sp_o == 691 and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- Prosthetic Art
         b1 = r1 
     end
 
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
 
-    elseif ((sp_o == 691 or sp_o == 697 or sp_o == 698) and (c_Style == HAND_LEFT or c_Style == HAND_RIGHT)) or (sp_o == 691 and sp_m == 672 and c_Style == HAND_RIGHT_BOTH) then
+    elseif ((sp_o == 691 or sp_o == 697 or sp_o == 698) and (c_Style == HAND_LEFT or c_Style == HAND_RIGHT)) or (sp_o == 691 and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- prosthetic art
         if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftHeavy2", "W_AttackLeftHeavy2", b1, b2, FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_L1) <= 0 and env(1116, 100343) == TRUE and c_Style ~= HAND_RIGHT_BOTH then
@@ -10184,7 +10184,7 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
-    if (sp_o == 691 and sp_m == 672 and c_Style == HAND_RIGHT_BOTH) then 
+    if (sp_o == 691 and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- Prosthetic Art
         b1 = r1 
     end
 
@@ -10252,7 +10252,7 @@ function AttackLeftHeavy3_onUpdate() -- 032060 AttackLeftHeavy3
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
     end
     
-    if (sp_o == 691 and sp_m == 672 and c_Style == HAND_RIGHT_BOTH) then -- prosthetic art
+    if (sp_o == 691 and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- prosthetic art
         b1 = r1 
     end
 
