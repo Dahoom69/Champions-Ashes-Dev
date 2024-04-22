@@ -3043,4 +3043,4 @@ Num  = 3041
 3039 = "Attack2BothHeavy1Start"
 3040 = "Attack2BothHeavy2"
 3041 = "Attack2BothHeavy2End"
-3041 = "Attack2BothHeavy2Start"
+3042 = "Attack2BothHeavy2Start"
