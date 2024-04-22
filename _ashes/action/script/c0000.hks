@@ -2245,6 +2245,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
 
         elseif ExtraR1R2 == TRUE then 
             if r2 == "W_AttackRightHeavy1Start" then r2 = "W_Attack2RightHeavy1Start" 
+            elseif r2 == "W_AttackRightHeavy1SubStart" then r2 = "W_Attack2RightHeavy1Start" 
             elseif r2 == "W_AttackRightHeavy2Start" then r2 = "W_Attack2RightHeavy2Start" 
             end -- followups for all attacks
             
@@ -2620,8 +2621,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     b2 = "W_AttackBothHeavyWepBroken2Start"
                 end
             elseif ExtraR1R2 == TRUE then 
-                if b2 == "W_AttackBothHeavy1Start" then r2 = "W_Attack2BothHeavyWepBroken2Start" 
-                elseif b2 == "W_AttackBothHeavy2Start" then r2 = "W_Attac2kBothHeavy2Start" 
+                if b2 == "W_AttackBothHeavy1Start" then b2 = "W_Attack2BothHeavy1Start" 
+                elseif b2 == "W_AttackBothHeavy1SubStart" then b2 = "W_Attack2BothHeavy1Start"
+                elseif b2 == "W_AttackBothHeavy2Start" then b2 = "W_Attack2BothHeavy2Start" 
                 end -- followups for all attacks
             
             elseif IsWepBrokenHeavyAtk() == TRUE then
@@ -9793,7 +9795,7 @@ function Attack2RightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030342
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
-        ExecEventAllBody("W_AttackRightHeavy2End")
+        ExecEventAllBody("W_Attack2RightHeavy2End")
         return 
     else
         return 
@@ -11432,7 +11434,7 @@ function Attack2BothHeavy2Start_onUpdate()  -- r22 charge roll r2 034342
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
-            ExecEventAllBody("W_AttackBothHeavy2End")
+            ExecEventAllBody("W_Attack2BothHeavy2End")
             return 
         else
             return 
