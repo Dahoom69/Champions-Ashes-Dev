@@ -2242,6 +2242,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             if r2 == "W_AttackRightHeavy1Start" then -- r21 charge extra 030345
                     r2 = "W_AttackRightHeavyWepBroken2Start" 
             end
+
+        elseif ExtraR1R2 == TRUE then 
+            if r2 == "W_AttackRightHeavy1Start" then r2 = "W_Attack2RightHeavy1Start" 
+            elseif r2 == "W_AttackRightHeavy2Start" then r2 = "W_Attack2RightHeavy2Start" 
+            end -- followups for all attacks
             
         elseif IsWepBrokenHeavyAtk() == TRUE then
             if r2 == "W_AttackRightHeavy1Start" then
@@ -2614,6 +2619,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 elseif b2 == "W_AttackBothHeavy2Start" then 
                     b2 = "W_AttackBothHeavyWepBroken2Start"
                 end
+            elseif ExtraR1R2 == TRUE then 
+                if b2 == "W_AttackBothHeavy1Start" then r2 = "W_Attack2BothHeavyWepBroken2Start" 
+                elseif b2 == "W_AttackBothHeavy2Start" then r2 = "W_Attac2kBothHeavy2Start" 
+                end -- followups for all attacks
+            
             elseif IsWepBrokenHeavyAtk() == TRUE then
                 if b2 == "W_AttackBothHeavy1Start" then
                     b2 = "W_AttackBothHeavyWepBroken1Start"
