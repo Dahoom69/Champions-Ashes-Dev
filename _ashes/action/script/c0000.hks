@@ -964,6 +964,7 @@ function GetAttackRequest(is_guard)
                 elseif ((   (sp_m == 672 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 672 and is_leftHandCA == TRUE)) and c_SwordArtsID == 25)  then return SWORDARTS_REQUEST_RIGHT_RANDOMONESHOT -- Sekiro Combat Art
                 elseif ((   (sp_m == 672 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 672 and is_leftHandCA == TRUE)) and c_SwordArtsID == 13)  then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
                 elseif ((   (sp_m == 672 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 672 and is_leftHandCA == TRUE)) and c_SwordArtsID == 20)  then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
+                elseif ((   (sp_m == 672 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 672 and is_leftHandCA == TRUE)) and c_SwordArtsID == 2)  then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
 
                 elseif (    (sp_m == 147 and c_Style == HAND_RIGHT_BOTH)  ) then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
                 elseif (    (sp_o == 147 and is_leftHandCA == TRUE)) then return ATTACK_REQUEST_BOTH_LIGHT -- falchion combat art
