@@ -13070,6 +13070,11 @@ function StepInRightStart_Upper_onUpdate() -- 036000
         b1 = "W_StepInRightSlash"
         r2 = "W_StepInRightSlash" 
         b2 = "W_StepInRightSlash" 
+
+        if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 627)
+        end
     end
     
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
@@ -13103,6 +13108,11 @@ function StepInRightUppercut_onUpdate() -- R1
         b1 = "W_StepInRightSlash"
         r2 = "W_StepInRightSlash" 
         b2 = "W_StepInRightSlash" 
+
+        if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 627)
+        end
     end
 
 
@@ -13118,6 +13128,15 @@ function StepInRightUppercut_onUpdate() -- R1
 end
 
 function StepInRightSlash_onUpdate() -- R2
+    local is_both_left = FALSE
+    if c_Style == HAND_LEFT_BOTH then is_both_left = TRUE end
+    if (GetEquipType(HAND_RIGHT, 29) == TRUE and is_both_left == FALSE ) or (GetEquipType(HAND_LEFT, 29) == TRUE and is_both_left == TRUE ) then
+        if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 627)
+        end
+    end
+
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif (env(1108, ACTION_ARM_L2) <= 0 and env(1108, ACTION_ARM_R1) <= 0 and env(1108, ACTION_ARM_R2) <= 0) and env(1116, 100280) == TRUE then
@@ -13133,6 +13152,15 @@ function StepInRightSlash_onUpdate() -- R2
 end
 
 function StepInRightDashStart_onUpdate()
+    local is_both_left = FALSE
+    if c_Style == HAND_LEFT_BOTH then is_both_left = TRUE end
+    if (GetEquipType(HAND_RIGHT, 29) == TRUE and is_both_left == FALSE ) or (GetEquipType(HAND_LEFT, 29) == TRUE and is_both_left == TRUE ) then
+        if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+        then 
+            act(2002, 627)
+        end
+    end
+
     if SwordArtsCommonFunction("W_AttackRightLight3", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight3", "W_AttackBothHeavy1Start", FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
