@@ -1778,6 +1778,9 @@ function IsWarcrySpAtk()
     if env(1116, 702) == TRUE and (sp_m == 166) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato
     if env(1116, 702) == TRUE and (sp_o == 166) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
 
+    if env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH then return TRUE end -- Follower Sabre
+    if env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH then return TRUE end -- Follower Sabre
+
     if env(1116, 703) == TRUE and (sp_m == 689) and style ~= HAND_LEFT_BOTH then return TRUE end -- twinblade
     if env(1116, 703) == TRUE and (sp_o == 689) and style == HAND_LEFT_BOTH then return TRUE end -- twinblade
 
@@ -2294,6 +2297,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style ~= HAND_LEFT_BOTH))
             or     ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998) and c_Style == HAND_LEFT_BOTH)) then -- morning star alt moveset
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
+            or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
+                    ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
             end
@@ -2308,6 +2314,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == FALSE then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == TRUE then  ExecEventAllBody("W_CrossbowStepInFire")
         elseif (sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif (env(1116, 702) == TRUE) and (GetEquipType(HAND_RIGHT, 28) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         else
             ExecEventAllBody("W_AttackRightHeavyKick")
         end
