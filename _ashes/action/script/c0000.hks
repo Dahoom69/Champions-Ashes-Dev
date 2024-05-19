@@ -13066,13 +13066,6 @@ function StepInRightStart_Upper_onUpdate() -- 036000
         b2 = "W_OneShotNoGenTransStart" 
     end
 
-    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
-        r1 = "W_AttackRightHeavyWepBroken1Start" 
-        b1 = "W_AttackBothHeavyWepBroken1Start"
-        r2 = "W_AttackRightHeavy1Start" 
-        b2 = "W_AttackBothHeavy1Start" 
-    end
-
     if (GetEquipType(HAND_RIGHT, 29) == TRUE and is_both_left == FALSE ) or (GetEquipType(HAND_LEFT, 29) == TRUE and is_both_left == TRUE ) then
         r1 = "W_StepInRightSlash" 
         b1 = "W_StepInRightSlash"
@@ -13084,7 +13077,14 @@ function StepInRightStart_Upper_onUpdate() -- 036000
             act(2002, 627)
         end
     end
-    
+
+    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_AttackRightHeavyWepBroken1Start" 
+        b1 = "W_AttackBothHeavyWepBroken1Start"
+        r2 = "W_AttackRightHeavy1Start" 
+        b2 = "W_AttackBothHeavy1Start" 
+    end
+
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, FALSE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif (env(1108, ACTION_ARM_L2) <= 0 and env(1108, ACTION_ARM_R1) <= 0 and env(1108, ACTION_ARM_R2) <= 0) and env(1116, 100280) == TRUE then
