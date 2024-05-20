@@ -6192,6 +6192,7 @@ function IdleCommonFunction()
 end
 
 function AttackCommonFunction(r1, r2, l1, l2, b1, b2, guardcondition, use_atk_queue)
+    --if env(329) == FALSE then act(2002, 637) end -- GetHasBrokenSA Hyper Armor Super Armor is broken
     if env(1116, HITSTUN_RING_EFFECT) == TRUE then DBSetPhantomColor("RESET") end
     if env(1116, 100380) == FALSE then
         SetThrowAtkInvalid()
@@ -16142,7 +16143,7 @@ function MagicBuffLeft3_onUpdate()
     end
 end
 
-function OneShotFullLeftStart_onUpdate()
+function OneShotFullLeftStart_onUpdate() -- 038520 038530 038540
     SetVariable("IndexThrowHand", HAND_LEFT)
     local l1 = "W_AttackLeftHeavy1"
     local r2 = "W_AttackRightHeavy1Start"
