@@ -728,8 +728,8 @@ function GetWeaponChangeType(hand)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 57) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 57) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -758,8 +758,8 @@ function GetHandChangeType(hand)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 57) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 57) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -1696,8 +1696,8 @@ function IsEnableGuard()
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 57) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 57) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -2163,6 +2163,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         end
 
+        if (GetEquipType(HAND_RIGHT, 23) == TRUE and env(1116, 707) == TRUE and c_Style == HAND_RIGHT) then -- darkwraith alt moveset
+            if r1 == "W_AttackRightLightStep" then r1 = "W_AttackRightLightStepSpecial"
+            end
+        end
+
         if sp_m == 665 then
             if r1 == "W_AttackRightLight1" then 
                 ExecEventHalfBlend(Event_MagicBuffRight, ALLBODY)
@@ -2297,6 +2302,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style ~= HAND_LEFT_BOTH))
             or     ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998) and c_Style == HAND_LEFT_BOTH)) then -- morning star alt moveset
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif ((GetEquipType(HAND_RIGHT, 23) == TRUE and env(1116, 707) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+            or     ((GetEquipType(HAND_LEFT, 23) == TRUE and env(1116, 707) == TRUE) and c_Style == HAND_LEFT_BOTH) then -- darkwraith alt moveset
+                    ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
             or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
@@ -2306,6 +2314,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif IsArtsSpAtk() == TRUE then
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
+            ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif (GetEquipType(HAND_RIGHT, 23) == TRUE and env(1116, 707) == TRUE and c_Style == HAND_RIGHT) then -- darkwraith alt moveset
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then -- great mace alt fr2
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
@@ -2490,6 +2500,13 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             if ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998)) and c_Style ~= HAND_LEFT_BOTH)
             or ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998)) and c_Style == HAND_LEFT_BOTH)
             then -- morning star alt moveset
+                if b1 == "W_AttackBothLightStep" then b1 = "W_AttackBothLightStepSpecial"
+                end
+            end
+
+            if ((GetEquipType(HAND_RIGHT, 23) == TRUE and env(1116, 707) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+            or ((GetEquipType(HAND_LEFT, 23) == TRUE and env(1116, 707) == TRUE) and c_Style == HAND_LEFT_BOTH)
+            then -- darkwraith alt moveset
                 if b1 == "W_AttackBothLightStep" then b1 = "W_AttackBothLightStepSpecial"
                 end
             end
@@ -4347,8 +4364,8 @@ function ExecWeaponChange(blend_type)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 57) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 57) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -4389,8 +4406,8 @@ function ExecHandChange(hand, is_force, blend_type)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 57) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 57) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -6117,8 +6134,8 @@ function IdleCommonFunction()
     if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 57) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 57) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -7108,6 +7125,13 @@ function MoveCommonFunction(blend_type)
                 r2 = "W_AttackRightHeavyKickSpecial"
                 b2 = "W_AttackBothHeavyKickSpecial"
             end
+        elseif ((GetEquipType(HAND_RIGHT, 23) == TRUE and env(1116, 707) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+        or ((GetEquipType(HAND_LEFT, 23) == TRUE and env(1116, 707) == TRUE) and c_Style == HAND_LEFT_BOTH)
+        then -- darkwraith alt moveset
+            r1 = "W_AttackRightLightDashSpecial"
+            r2 = "W_AttackRightHeavyKick"
+            b1 = "W_AttackBothDashSpecial"
+            b2 = "W_AttackBothHeavyKick"
         elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             r1 = "W_AttackRightLightDashSpecial"
             r2 = "W_AttackRightHeavyKick"
@@ -9314,6 +9338,7 @@ function AttackRightLight3_onUpdate() -- r13
     if (sp_m == 664) then r1 = "W_AttackRightLight1" end
     if (sp_m == 672) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavySpecial1Start" b1 = "W_AttackRightHeavySpecial1Start" b2 = r2 end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightKick" r2 = "W_CrossbowStepInFire" b2 = r2 end
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight1" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
 
         if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
@@ -13059,6 +13084,8 @@ function StepInRightStart_Upper_onUpdate() -- 036000
         r2 = "W_StepInRightSlash" 
         b2 = "W_StepInRightSlash" 
     end
+
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight1" end
 
     if env(1116, 100293) == TRUE then
         r1 = "W_StepInRightDashStart" 
