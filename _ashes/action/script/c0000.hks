@@ -9338,7 +9338,7 @@ function AttackRightLight3_onUpdate() -- r13
     if (sp_m == 664) then r1 = "W_AttackRightLight1" end
     if (sp_m == 672) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavySpecial1Start" b1 = "W_AttackRightHeavySpecial1Start" b2 = r2 end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightKick" r2 = "W_CrossbowStepInFire" b2 = r2 end
-    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight1" end
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight1" r2 = "W_AttackRightHeavy2Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
 
         if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
@@ -9523,6 +9523,7 @@ function AttackRightLightStepSpecial_onUpdate() -- bs r2 -- 030910
     if sp_m == 609 or sp_m == 164 or sp_m == 614 or sp_m == 646 or sp_m == 667  then r1 = "W_AttackRightLight2" end
     if sp_m == 612 or sp_m == 622 or sp_m == 604 or sp_m == 627 or sp_m == 640 or sp_m == 649 or sp_m == 647 then r1 = "W_AttackRightLight3" end
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" b1 = r1 end
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight3" end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         return 
@@ -9597,6 +9598,7 @@ function AttackRightLightDashSpecial_onUpdate() -- bs r1 backstep r1 -- 030510
     if sp_m == 614 or sp_m == 612 or sp_m == 622  or sp_m == 645 or sp_m == 646  then r1 = "W_AttackRightHeavySpecial1Start" end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavySpecial1Start" b1 = r1 end
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2"end
     
     if IsFeintAttempt() and sp_m == 259 then r2 = "W_AttackRightHeavySpecial2Start" end
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
@@ -10222,6 +10224,7 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2 030610
     if sp_m == 614  or sp_m == 612 or sp_m == 622 or sp_m == 627 or sp_m == 645 or sp_m == 621 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then b2 = r2 end
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight3" end
 
     if sp_m == 688 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
@@ -12057,6 +12060,7 @@ function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1 034510 "W_AttackB
     end
 
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_AttackBothLightStep" end
+    if (sp_m == 57 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 57 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_AttackBothLight2" end
 
     if sp_m == 649 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
@@ -12167,7 +12171,8 @@ function AttackBothLightStepSpecial_onUpdate() -- bs r2 backstep r2 034910
 
          if ((sp_m == 683 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 683 and c_Style == HAND_LEFT_BOTH)) then b1 = "W_AttackBothLight3" end
 
-         if (sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
+         if ((sp_m == 677 or sp_m == 57)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 677 or sp_o == 57)  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
+         
 
          if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
          if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -12314,6 +12319,8 @@ function AttackBothHeavyKickSpecial_onUpdate() -- run r2 034610
     if sp_m == 614  or sp_m == 645 or sp_m == 646 then b1 = "W_AttackBothHeavySpecial1Start" end
     if (sp_m == 609 and c_Style == HAND_RIGHT_BOTH) or sp_m == 612 or sp_m == 622 or sp_m == 627 then b1 = "W_AttackBothHeavySpecial1Start" end
     if sp_m == 622 then b2 = "W_AttackBothHeavy2Start" end
+    if (sp_m == 57 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 57  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
+         
 
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeft2" end
