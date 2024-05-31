@@ -13092,7 +13092,7 @@ function StepInRightStart_Upper_onUpdate() -- 036000
         b2 = "W_StepInRightSlash" 
     end
 
-    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight1" end
+    if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStepSpecial" end 
 
     if env(1116, 100293) == TRUE then
         r1 = "W_StepInRightDashStart" 
