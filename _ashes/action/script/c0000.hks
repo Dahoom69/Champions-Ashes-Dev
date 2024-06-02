@@ -994,7 +994,7 @@ function GetAttackRequest(is_guard)
             elseif is_crossbow == TRUE then
                 act("弓矢スロット選択", 0)
                 return ATTACK_REQUEST_RIGHT_CROSSBOW
-            elseif is_gh == TRUE and sp_m == 655 then return SWORDARTS_REQUEST_RIGHT_CHARGE -- vordt combat art
+            elseif is_gh == TRUE and sp_m == 655 then return SWORDARTS_REQUEST_RIGHT_CHARGE -- 1H vordt combat art
             elseif sp_m == 231 then 
                 act(2002, 626)
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
@@ -1009,6 +1009,7 @@ function GetAttackRequest(is_guard)
             elseif sp_m == 672 and env(1116, 706) == TRUE then return SWORDARTS_REQUEST_RIGHT_RANDOMONESHOT -- Sekiro Combat Art
             elseif sp_m == 672 and env(1116, 706) ~= TRUE then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
             elseif sp_m == 147 then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
+            elseif sp_m == 80 then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- 1h black knight sword combat art
             end
         elseif is_staff == TRUE then
             return ATTACK_REQUEST_INVALID
@@ -14553,13 +14554,23 @@ function StampedeRight_Activate()
     return 
 end
 
-function StampedeRightStart_onUpdate()
+function StampedeRightStart_onUpdate() -- 037400
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
     local r2 = "W_StampedeRightAttackHeavy"
     local b2 = "W_StampedeRightAttackHeavy"
     local r1 = "W_StampedeRightAttackLight"
     local b1 = "W_StampedeRightAttackLight"
+
+    if env(1116, 100870) == TRUE then
+        SetAttackHand(HAND_LEFT)
+    else
+        if style == HAND_RIGHT_BOTH then SetAttackHand(HAND_RIGHT)
+        elseif style == HAND_LEFT_BOTH then SetAttackHand(HAND_LEFT)
+        elseif style == HAND_RIGHT then SetAttackHand(HAND_RIGHT)
+        elseif style == HAND_LEFT then SetAttackHand(HAND_LEFT)
+        end
+    end
        
     if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
         r1 = "W_AttackRightLight1"
@@ -14580,6 +14591,7 @@ function StampedeRightStart_onUpdate()
     end
 
     if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" r1 = "W_AttackRightLight1" b1 = "W_AttackBothLight1" end
+    if sp_m == 80 then r1 = "W_Attack2RightLight3" r2 = "W_Attack2RightHeavy1Start" end
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
