@@ -9554,6 +9554,7 @@ function AttackRightLightKick_onUpdate() -- 030100
     if sp_m == 685 then r2 = "W_AttackRightHeavyKick" end
     if sp_m == 667 then r1 = "W_AttackRightLightDashSpecial" r2 = "W_AttackRightLightStepSpecial" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b1 = r1 b2 = r2 end
+    if sp_m == 107 and GetEquipType(HAND_RIGHT, 32) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavy1End" end
 
     if sp_m == 162 or sp_m == 154 then 
         if 10 > env(2016) then  act(2002, 627) end
@@ -12418,6 +12419,9 @@ function AttackBothLightKick_onUpdate() -- 034100
     if GetEquipType(HAND_RIGHT, 30) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
     if GetEquipType(HAND_LEFT, 30) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
 
+    if sp_m == 107 and GetEquipType(HAND_RIGHT, 32) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy1Start" end
+    if sp_o == 107 and GetEquipType(HAND_LEFT, 32) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy1Start" end
+
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -14952,6 +14956,11 @@ function Charge_Upper_onUpdate() -- 036700
     if ((GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 67 and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_o == 67 and c_Style == HAND_LEFT_BOTH)) then 
         r2 = "W_AttackRightHeavyKickSpecial"
         b2 = "W_AttackBothHeavyKickSpecial"
+    end
+
+    if ((GetEquipType(HAND_RIGHT, 32) == TRUE and sp_m == 107 and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 32)  == TRUE and sp_o == 107 and c_Style == HAND_LEFT_BOTH)) then 
+        r1 = "W_AttackRightLight2"
+        b1 = "W_AttackBothLight2"
     end
 
     if env(1116, 100260) == TRUE then
