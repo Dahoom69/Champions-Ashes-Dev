@@ -1009,7 +1009,7 @@ function GetAttackRequest(is_guard)
             elseif sp_m == 672 and env(1116, 706) == TRUE then return SWORDARTS_REQUEST_RIGHT_RANDOMONESHOT -- Sekiro Combat Art
             elseif sp_m == 672 and env(1116, 706) ~= TRUE then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
             elseif sp_m == 147 then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
-            elseif sp_m == 80 then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- 1h black knight sword combat art
+            elseif sp_m == 80 or sp_m == 128 then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- 1h black knight sword or black knight greatsword combat art
             end
         elseif is_staff == TRUE then
             return ATTACK_REQUEST_INVALID
@@ -14591,7 +14591,8 @@ function StampedeRightStart_onUpdate() -- 037400
     end
 
     if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" r1 = "W_AttackRightLight1" b1 = "W_AttackBothLight1" end
-    if sp_m == 80 then r1 = "W_Attack2RightLight3" r2 = "W_Attack2RightHeavy1Start" end
+    if sp_m == 80 then r1 = "W_Attack2RightLight3" r2 = "W_Attack2RightHeavy1Start" end -- black knight sword combat art
+    if sp_m == 128 then r1 = "W_StampedeRightAttackLight" r2 = "W_Attack2RightHeavy1Start" end -- black knight greatsword combat art
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
         return 
@@ -14605,13 +14606,20 @@ function StampedeRightStart_onUpdate() -- 037400
 end
 
 function StampedeRightAttackLight_onUpdate() -- 50037410 
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+    local r1 = "W_AttackRightLight1"
+
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart"
         b2 = "W_AttackBothHeavy1SubStart"
      end
-    if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
+
+     if sp_m == 128 then r1 = "W_Attack2RightLight2" end -- black knight greatsword combat art
+
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, TRUE)
