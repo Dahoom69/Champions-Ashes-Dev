@@ -9850,6 +9850,8 @@ function Attack2RightHeavy1End_onUpdate() -- r21 release end - 030323
     local r2 = "W_Attack2RightHeavy2Start"
     local b2 = "W_Attack2BothHeavy2Start"
 
+    if sp_m == 80 then r1 = "W_Attack2RightLight2" end
+
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
