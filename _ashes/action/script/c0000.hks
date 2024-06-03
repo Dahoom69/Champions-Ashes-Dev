@@ -998,7 +998,7 @@ function GetAttackRequest(is_guard)
             elseif sp_m == 231 then 
                 act(2002, 626)
                 return ExecEventAllBody("W_DrawStanceRightAttackHeavy") -- astora
-            elseif (is_ga == TRUE and (sp_m ~= 199 and sp_m ~= 168 and sp_m ~= 242 and sp_m ~= 140 and sp_m ~= 998)) then -- 998 is an empty spcategory
+            elseif (is_ga == TRUE and (sp_m ~= 199 and sp_m ~= 168 and sp_m ~= 242 and sp_m ~= 140 and sp_m ~= 998 and sp_m ~= 107)) then -- 998 is an empty spcategory
                 return SWORDARTS_REQUEST_RIGHT_WARCRY -- Greataxe or Yhorm's machete combat art
             elseif sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE  then return SWORDARTS_REQUEST_RIGHT_ENDURE -- murky
             elseif sp_m == 103 or sp_m == 167 or sp_m == 168 or sp_m == 673 or sp_m == 199 then return SWORDARTS_REQUEST_RIGHT_ONESHOT -- DSGA or Demon GA or eleonora or bloodlust
@@ -1009,7 +1009,7 @@ function GetAttackRequest(is_guard)
             elseif sp_m == 672 and env(1116, 706) == TRUE then return SWORDARTS_REQUEST_RIGHT_RANDOMONESHOT -- Sekiro Combat Art
             elseif sp_m == 672 and env(1116, 706) ~= TRUE then return SWORDARTS_REQUEST_RIGHT_ONESHOT_NOGENTRANS -- Sekiro Combat Art
             elseif sp_m == 147 then return SWORDARTS_REQUEST_RIGHT_PARRY -- falchion combat art
-            elseif sp_m == 80 or sp_m == 128 then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- 1h black knight sword or black knight greatsword combat art
+            elseif (is_ga == TRUE and sp_m == 107) or sp_m == 80 or sp_m == 128 then return SWORDARTS_REQUEST_RIGHT_STAMPEDE -- 1h black knight sword or black knight greatsword combat art
             end
         elseif is_staff == TRUE then
             return ATTACK_REQUEST_INVALID
@@ -14592,6 +14592,7 @@ function StampedeRightStart_onUpdate() -- 037400
 
     if (sp_m == 166) then r2 = "W_CrossbowStepInFire" b2 = "W_CrossbowStepInReload" r1 = "W_AttackRightLight1" b1 = "W_AttackBothLight1" end
     if sp_m == 80 then r1 = "W_Attack2RightLight3" r2 = "W_Attack2RightHeavy1Start" end -- black knight sword combat art
+    if sp_m == 107 then r1 = "W_AttackRightLight1" r2 = "W_AttackRightHeavy1End" end -- black knight greatsword combat art
     if sp_m == 128 then r1 = "W_StampedeRightAttackLight" r2 = "W_Attack2RightHeavy1Start" end -- black knight greatsword combat art
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, GEN_TRANS_LEFT) == TRUE then
