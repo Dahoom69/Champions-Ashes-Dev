@@ -15904,6 +15904,11 @@ function CrossbowStepInReload_onUpdate() -- 038220 bs r2 for vanilla weps
 
     if (sp_m == 177  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 177  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
 
+    if (sp_m == 672 and c_Style ~= HAND_LEFT_BOTH) and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
+    then 
+        act(2002, 627)
+    end
+
     act("精密射撃可能か")
 
     local request = GetAttackRequest(FALSE)
