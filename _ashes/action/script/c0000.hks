@@ -3109,10 +3109,15 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         ExecEventHalfBlend(Event_HeadHunt, ALLBODY)
     else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
     elseif request == SWORDARTS_REQUEST_RIGHT_ONESHOT or request == SWORDARTS_REQUEST_LEFT_ONESHOT then
+        local sp_m = env(345 , c_SwordArtsHand)
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
         SetArtsGeneratorTransitionIndex(GEN_TRANS_LEFT, FALSE)
-        ExecEventHalfBlend(Event_OneShot, ALLBODY)
+        if ( (sp_m == 159) and (style == HAND_RIGHT and style ~= HAND_RIGHT_BOTH  )) then 
+            ExecEventHalfBlend(Event_HeadHunt, ALLBODY) -- 1h firelink staff
+        else 
+            ExecEventHalfBlend(Event_OneShot, ALLBODY) 
+        end
     else ExecEventHalfBlend(Event_MagicInvalidRight, blend_type) end
     elseif request == SWORDARTS_REQUEST_RIGHT_ONESHOTFULL then 
         SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
