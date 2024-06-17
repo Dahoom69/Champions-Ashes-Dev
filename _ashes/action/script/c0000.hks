@@ -1717,7 +1717,7 @@ function IsEnableGuard()
     if style == HAND_RIGHT then
         if GetEquipType(hand, WEAPON_CATEGORY_STAFF) == TRUE then
             return FALSE
-        elseif is_m == TRUE and isFUGS == FALSE   then 
+        elseif is_m == TRUE and isFUGS == FALSE then 
             return FALSE
         elseif sp_kind == 123 then
             return TRUE
@@ -12487,6 +12487,7 @@ function AttackBothHeavyKick_onUpdate() -- jump 034600
     end
 
     if sp_m == 614 or sp_m == 646 or sp_m == 622 then b1 = "W_AttackBothLight2" end
+    if sp_m == 123 then b1 = "W_AttackBothLightStep" end
     if sp_m == 622 then b2 = "W_AttackBothHeavy2Start" end
     if ((sp_m == 683 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 683 and c_Style == HAND_LEFT_BOTH)) then 
         b1 = "W_AttackBothDashSpecial" 
