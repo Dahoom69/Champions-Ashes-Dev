@@ -1709,7 +1709,7 @@ function IsEnableGuard()
     local is_r = GetEquipType(HAND_LEFT, 27) 
     
     local isFUGS = FALSE
-    if (GetEquipType(HAND_LEFT, 26) == TRUE and sp_kind == 163) then isFUGS = TRUE else isFUGS = FALSE end
+    if (GetEquipType(HAND_LEFT, 26) == TRUE and sp_kind == 163) or (GetEquipType(HAND_LEFT, 33) == TRUE and sp_kind == 123) then isFUGS = TRUE else isFUGS = FALSE end
 
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)    
@@ -10531,6 +10531,8 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
     end
 
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
+
+    if sp_m == 123 then r1 = "W_Attack2RightLight2" end
 
     if sp_o == 651 or (sp_o == 687 and env(1116, 705) == TRUE) then l1 = "W_AttackLeftHeavySp3" end
     if sp_o == 691 or sp_o == 697 or sp_o == 698 then 
