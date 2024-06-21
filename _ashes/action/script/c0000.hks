@@ -9791,7 +9791,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+    if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
 
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
@@ -9922,7 +9922,7 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030340
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+    if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
 
     if is_catalysts == TRUE and is_pyro ~= TRUE then  
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightLight2", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
@@ -11473,7 +11473,7 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge 034320
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+    if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -11683,7 +11683,7 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2 034340
             act(2002, 100784)  -- slow down attackspeed 
         end 
         
-        if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+        if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
 
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
@@ -12455,8 +12455,8 @@ function AttackBothLightKick_onUpdate() -- 034100
     if env(345 , HAND_RIGHT) == 68 and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
     if env(345 , HAND_LEFT) == 68 and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavyKick" end
 
-    if GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SHIELD) == TRUE and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
-    if GetEquipType(HAND_LEFT, WEAPON_CATEGORY_LARGE_SHIELD) == TRUE and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
+    if GetEquipType(HAND_RIGHT, 47, 48) == TRUE and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
+    if GetEquipType(HAND_LEFT, 47, 48) == TRUE and c_Style == HAND_LEFT_BOTH then b1 = "W_AttackBothLightStep" end
 
     if GetEquipType(HAND_RIGHT, 30) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
     if GetEquipType(HAND_LEFT, 30) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
