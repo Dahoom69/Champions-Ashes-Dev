@@ -9567,6 +9567,8 @@ function AttackRightLightKick_onUpdate() -- 030100
         if 10 > env(2016) then  act(2002, 627) end
     end
 
+    if GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_LARGE_SHIELD) == TRUE then r1 = "W_AttackRightLightStep" end
+
     local request = GetAttackRequest(FALSE)
     if 0 < env(1001) and sp_m == 85 then
         if request == ATTACK_REQUEST_RIGHT_CROSSBOW or request == ATTACK_REQUEST_RIGHT_CROSSBOW2 then ExecEventAllBody("W_AttackRightLightStep") return end
@@ -9783,6 +9785,15 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
         act(2002, 627)
     end
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavyKickSpecial" b1 = r1 end
+
+
+    if (env(1108, ACTION_ARM_R2) >= 1 ) and env(1116, 100770) == TRUE then
+        act(2002, 100784)  -- slow down attackspeed 
+    end 
+    
+    if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+
+
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
@@ -9906,6 +9917,13 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030340
         act(2002, 627)
     end
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavyKickSpecial" b1 = r1 end
+
+    if (env(1108, ACTION_ARM_R2) >= 1) and env(1116, 100770) == TRUE then
+        act(2002, 100784)  -- slow down attackspeed 
+    end 
+    
+    if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+
     if is_catalysts == TRUE and is_pyro ~= TRUE then  
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightLight2", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
             return 
@@ -11451,6 +11469,12 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge 034320
 
     if (    (env(345 , HAND_LEFT) == 654) and HAND_LEFT_BOTH == c_Style  )      or   (  (env(345 , HAND_RIGHT) == 654) and HAND_RIGHT_BOTH == c_Style )    then b2 = "W_AttackBothHeavyKick" end
 
+    if (env(1108, ACTION_ARM_R2) >= 1) and env(1116, 100770) == TRUE then
+        act(2002, 100784)  -- slow down attackspeed 
+    end 
+    
+    if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
+
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif sp_m == 610 and env(1108, ACTION_ARM_R2) >= 1 and env(1116, 100281) == TRUE then  ExecEventAllBody("W_AttackBothHeavy1End") return
@@ -11654,6 +11678,12 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2 034340
         then 
             act(2002, 627)
         end
+
+        if (env(1108, ACTION_ARM_R2) >= 1) and env(1116, 100770) == TRUE then
+            act(2002, 100784)  -- slow down attackspeed 
+        end 
+        
+        if (env(1108, ACTION_ARM_R2) <= 1000) then act(2002, 121961)  end -- uncharged dmg boost
 
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
