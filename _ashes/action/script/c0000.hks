@@ -16051,6 +16051,14 @@ function OneShotFullRightStart_onUpdate() -- 038500
         r1 = "W_AttackRightLightStep"
         r2 = "W_AttackRightLightStepSpecial"
     end
+
+    if ((env(1108, ACTION_ARM_L2) >= 1 or env(1108, ACTION_ARM_L1) >= 1)) and env(1116, 100770) == TRUE then
+        act(2002, 100784)  -- slow down attackspeed 
+    end 
+    
+    if (env(1108, ACTION_ARM_L2) >= 1500 or env(1108, ACTION_ARM_L1) >= 1500) then act(2002, 121960)  end -- charged dmg boost
+
+
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
     else
@@ -16082,6 +16090,13 @@ function OneShotFullBothStart_onUpdate() -- oneshot WA 038510
         b1 = "W_AttackBothLight3"
         b2 = "W_AttackBothLightStepSpecial"
     end
+
+    if ((env(1108, ACTION_ARM_L2) >= 1 or env(1108, ACTION_ARM_L1) >= 1)) and env(1116, 100770) == TRUE then
+        act(2002, 100784)  -- slow down attackspeed 
+    end 
+    
+    if (env(1108, ACTION_ARM_L2) >= 1500 or env(1108, ACTION_ARM_L1) >= 1500) then act(2002, 121960)  end -- charged dmg boost
+
 
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1 , b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return
@@ -16445,7 +16460,7 @@ function OneShotFullLeftStart_onUpdate() -- 038520 038530 038540
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_L2) >= 3 or env(1108, ACTION_ARM_L1) >= 3) then act(2002, 121950)  end -- charged dmg boost
+    if (env(1108, ACTION_ARM_L2) >= 1500 or env(1108, ACTION_ARM_L1) >= 1500) then act(2002, 121960)  end -- charged dmg boost
 
     if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l1, "W_AttackBothLight1", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
