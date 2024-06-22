@@ -18604,6 +18604,11 @@ function MagicFireLeft_Upper_onUpdate()
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
+    
+    if ((env(1108, ACTION_ARM_L2) >= 1 or env(1108, ACTION_ARM_L1) >= 1)) and env(1116, 100770) == TRUE then
+        act(2002, 100781)  -- slow down attackspeed  40346 and 40309
+    end 
+    
     if i1BB == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1SubStart", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
         return
     elseif MagicCommonFunction(ALLBODY, QUICKTYPE_NORMAL) == TRUE then
