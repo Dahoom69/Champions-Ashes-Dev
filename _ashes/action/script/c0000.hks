@@ -18379,6 +18379,11 @@ function MagicFireRight_Upper_onUpdate()
         act("魔法ID切り替え無効")
     end
     SetVariable("IndexThrowHand", HAND_RIGHT)
+
+    if ((env(1108, ACTION_ARM_R2) >= 1 or env(1108, ACTION_ARM_R1) >= 1)) and env(1116, 100770) == TRUE then
+        act(2002, 100781)  -- slow down attackspeed  40346 and 40309
+    end 
+
     if MagicCommonFunction(ALLBODY, QUICKTYPE_NORMAL) == TRUE then
         return 
     elseif HalfBlendUpperCommonFunction(lower_state) == TRUE then
