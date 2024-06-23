@@ -728,8 +728,8 @@ function GetWeaponChangeType(hand)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -754,12 +754,12 @@ end
 function GetHandChangeType(hand)
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
-    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or  sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
+    if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -1699,8 +1699,8 @@ function IsEnableGuard()
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -2311,6 +2311,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
             or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style ~= HAND_LEFT_BOTH  -- corvian greatknife jump
+            or      (sp_o == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style == HAND_LEFT_BOTH then -- corvian greatknife jump
+                    ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
             end
@@ -2321,6 +2324,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif (GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE and c_Style == HAND_RIGHT) then -- dark sword alt moveset
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then -- great mace alt fr2
+            ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) then -- corvian greatknife jump
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 127) and c_Style ~= HAND_LEFT_BOTH)
         or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
@@ -4372,8 +4377,8 @@ function ExecWeaponChange(blend_type)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -4414,8 +4419,8 @@ function ExecHandChange(hand, is_force, blend_type)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -6142,8 +6147,8 @@ function IdleCommonFunction()
     if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -9181,7 +9186,6 @@ function AttackRightLight1_onUpdate() -- r11
     if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_m == 140) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
     if env(1116, 701) and IsWarcrySpAtk() == TRUE and (sp_o == 140) and c_Style == HAND_LEFT_BOTH then r2 = "W_AttackRightHeavySpecial2Start" end -- demon g machete
 
-
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight2", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight2", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
             if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
@@ -9232,6 +9236,9 @@ function Attack2RightLight1_onUpdate() -- r11
     local b2 = "W_Attack2BothHeavy1Start"
     local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
+
+    if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
+    if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9305,6 +9312,9 @@ function Attack2RightLight3_onUpdate() -- r13
     local leftoffhand = "W_AttackLeftHeavy1"
 
     if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy2Start" end
+
+    if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
+    if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9815,6 +9825,9 @@ function Attack2RightHeavy1Start_onUpdate()  -- r21 charge 030322
     local b2 = "W_Attack2BothHeavy2Start"
     local b1 = "W_Attack2BothLight1"
 
+    if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
+    if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
+
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
@@ -9870,6 +9883,9 @@ function Attack2RightHeavy1End_onUpdate() -- r21 release end - 030323
     local b2 = "W_Attack2BothHeavy2Start"
 
     if sp_m == 80 then r1 = "W_Attack2RightLight2" end
+
+    if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
+    if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
