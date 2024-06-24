@@ -2311,8 +2311,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
             or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
-            elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style ~= HAND_LEFT_BOTH  -- corvian greatknife jump
-            or      (sp_o == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style == HAND_LEFT_BOTH then -- corvian greatknife jump
+            elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style ~= HAND_LEFT_BOTH  -- murky scythe jump
+            or      (sp_o == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style == HAND_LEFT_BOTH then -- murky scythe jump
+                    ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif  (sp_m == 72 and env(1116, 708) == TRUE) and style ~= HAND_LEFT_BOTH  -- harpe alt fr2 jump
+            or      (sp_o == 72 and env(1116, 708) == TRUE) and style == HAND_LEFT_BOTH then -- harpe alt fr2 jump
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
@@ -2325,7 +2328,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then -- great mace alt fr2
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
-        elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) then -- corvian greatknife jump
+        elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) then -- murky scythe jump
+            ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif  (sp_m == 72 and env(1116, 708) == TRUE) then -- harpe alt fr2 jump
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_m == 127) and c_Style ~= HAND_LEFT_BOTH)
         or (env(1116, 698) and IsWarcrySpAtk() == TRUE and (sp_o == 127) and c_Style == HAND_LEFT_BOTH) then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
@@ -7151,8 +7156,18 @@ function MoveCommonFunction(blend_type)
         elseif ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998)) and c_Style ~= HAND_LEFT_BOTH)
             or ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998)) and c_Style == HAND_LEFT_BOTH)
             then -- morning star alt moveset
-            b1 = "W_AttackBothDashSpecial"
-            b2 = "W_AttackBothHeavyKick"
+                b1 = "W_AttackBothDashSpecial"
+                b2 = "W_AttackBothHeavyKick"
+        elseif (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style ~= HAND_LEFT_BOTH
+            or (sp_o == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style == HAND_LEFT_BOTH 
+            then -- murky scythe jump
+                r2 = "W_AttackRightHeavyKickSpecial" 
+                b2 = "W_AttackBothHeavyKickSpecial"   
+        elseif (sp_m == 72 and env(1116, 708) == TRUE) and style ~= HAND_LEFT_BOTH
+            or (sp_o == 72 and env(1116, 708) == TRUE) and style == HAND_LEFT_BOTH 
+            then -- harpe alt fr2 jump
+                r2 = "W_AttackRightHeavyKickSpecial" 
+                b2 = "W_AttackBothHeavyKickSpecial"   
         elseif IsEnableJumpAtk() == TRUE then
             r2 = "W_AttackRightHeavyKick"
             b2 = "W_AttackBothHeavyKick"
