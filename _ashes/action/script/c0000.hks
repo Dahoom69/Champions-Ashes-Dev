@@ -2441,11 +2441,14 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 if sp_g == 691 then l2 = "W_AttackLeftHeavySp1"
                 else l2 = "W_AttackLeftHeavy1" end
             elseif r1 == "W_AttackRightLightStep" then 
-                if sp_g ~= 691 then l2 = "W_AttackLeftHeavySp1"
+                if env(1116, 696) == TRUE then l2 = "W_AttackLeftHeavy1"
+                elseif sp_g ~= 691 then l2 = "W_AttackLeftHeavySp1"
                 elseif (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) and sp_m ~= 679 then l2 = "W_AttackLeftHeavySp2"
                 else  l2 = "W_AttackLeftHeavy2" end
             elseif r1 == "W_AttackRightBackstep" then l2 = "W_AttackLeftHeavySp2"
-            elseif l1 == "W_AttackLeftLight1" then l2 = "W_AttackLeftHeavy1"
+            elseif l1 == "W_AttackLeftLight1" then 
+                if env(1116, 696) == TRUE then l2 = "W_AttackLeftHeavySp1"
+                else l2 = "W_AttackLeftHeavy1" end
             elseif l1 == "W_AttackLeftLight2" then l2 = "W_AttackLeftHeavy2"           
             end
         end
@@ -10498,7 +10501,7 @@ function AttackLeftLight1_onUpdate()
     end
 end
 
-function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1
+function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090
     local sp_m = env(345 , HAND_RIGHT)
 
     local r1 = "W_AttackRightLight1"
@@ -10533,6 +10536,11 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  
             if env(1116, 100342) == TRUE then r1 = "W_AttackLeftHeavySp3" 
             else r1 = "W_AttackLeftHeavySp2" end
+
+            if env(1116, 100344) == TRUE then 
+                if env(1116, 696) == TRUE then l1 = "W_AttackLeftHeavySp1"
+                else l1 = "W_AttackLeftHeavy1" end
+            end
         end
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
     end
@@ -10545,10 +10553,16 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1
         b1 = r1 
     end
 
+    if (env(1108, ACTION_ARM_L1) >= 1) and env(1116, 100770) == TRUE then
+        act(2002, 100784)  -- slow down attackspeed 
+    end 
+    
+    if (env(1108, ACTION_ARM_L1) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
 
-    elseif ((sp_o == 691 or sp_o == 697 or sp_o == 698) and (c_Style == HAND_LEFT or c_Style == HAND_RIGHT)) or (sp_o == 691 and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- prosthetic art
-        if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", "W_AttackLeftHeavy2", "W_AttackLeftHeavy2", b1, b2, FALSE, TRUE) == TRUE then
+    elseif ((sp_o == 691 or sp_o == 697 or sp_o == 698) and (c_Style == HAND_LEFT or c_Style == HAND_RIGHT)) or ((sp_o == 691 or sp_o == 697) and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- prosthetic art
+        if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", l1, l1, b1, b2, FALSE, TRUE) == TRUE then
             return 
         elseif env(1108, ACTION_ARM_L1) <= 0 and env(1116, 100343) == TRUE and c_Style ~= HAND_RIGHT_BOTH then
             ExecEventAllBody("W_AttackLeftHeavy3")
@@ -10599,8 +10613,12 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
     if sp_o == 691 or sp_o == 697 or sp_o == 698 then 
         if 10 > env(2016) then  act(2002, 627) end -- out of bullets or fp
         
-        if sp_o == 691 then l1 = "W_AttackLeftHeavy2" 
-        else l1 = "W_AttackLeftHeavy1" end
+        if sp_o == 691 then 
+            l1 = "W_AttackLeftHeavy2" 
+        else 
+            if env(1116, 696) == TRUE then l1 = "W_AttackLeftHeavySp1"
+            else l1 = "W_AttackLeftHeavy1" end
+        end
         
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then 
             if env(1116, 100341) == TRUE then r1 = "W_AttackLeftHeavySp2" 
@@ -10677,7 +10695,10 @@ function AttackLeftHeavy3_onUpdate() -- 032060 AttackLeftHeavy3
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
     if sp_o == 691 or sp_o == 697 or sp_o == 698 then 
         if 10 > env(2016) then  act(2002, 627) end -- out of bullets or fp
-        l1 = "W_AttackLeftHeavy2" 
+        if env(1116, 100342) == TRUE then 
+            if env(1116, 696) == TRUE then l1 = "W_AttackLeftHeavySp1"
+            else l1 = "W_AttackLeftHeavy1" end
+        else l1 = "W_AttackLeftHeavy2" end
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  r1 = "W_AttackLeftHeavySp2" end
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
     end
@@ -10694,17 +10715,17 @@ function AttackLeftHeavy3_onUpdate() -- 032060 AttackLeftHeavy3
 
 end
 
-function AttackLeftHeavySp1_onUpdate()
+function AttackLeftHeavySp1_onUpdate() -- 032090
     AttackLeftHeavy1_onUpdate()
     return 
 end
 
-function AttackLeftHeavySp2_onUpdate()
+function AttackLeftHeavySp2_onUpdate() -- 032091
     AttackLeftHeavy2_onUpdate()
     return 
 end
 
-function AttackLeftHeavySp3_onUpdate()
+function AttackLeftHeavySp3_onUpdate() -- 032902
     AttackLeftHeavy3_onUpdate()
     return 
 end
@@ -10797,7 +10818,7 @@ function AttackBothLight1_onUpdate()  -- r11
     if ((sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) ) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then
         act("特殊補間設定", 0, TRUE)
         ExecEventAllBody("W_AttackBothLightStepSpecial")
-        end -- new
+    end -- new
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
