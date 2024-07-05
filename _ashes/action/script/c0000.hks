@@ -1079,7 +1079,9 @@ function GetAttackRequest(is_guard)
             end
 
         elseif (is_guard == TRUE and (sp_m == 672 or sp_m == 688)) then -- Sekiro Prosthetic Art
-            if (sp_o == 691 or sp_o == 697)  then return ATTACK_REQUEST_LEFT_HEAVY -- Sekiro Art
+            if (sp_o == 691 or sp_o == 697)  then 
+                if env(1116, 696) == TRUE then return ATTACK_REQUEST_LEFT_HEAVY_SP
+                else return ATTACK_REQUEST_LEFT_HEAVY end -- Sekiro Art
             else return ATTACK_REQUEST_BOTH_HEAVY
             end
         end
