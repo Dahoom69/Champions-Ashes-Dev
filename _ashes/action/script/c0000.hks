@@ -21926,12 +21926,12 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
             max_wrist_front_o = 20
             max_arm_front_m = -20
             max_arm_front_o = -20              
-        elseif GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) == TRUE and sp_m ~= 684 and sp_m ~= 127 and is_pyro_m == FALSE and is_both == FALSE  then
+        elseif GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_STAFF) == TRUE and sp_m ~= 684 and sp_m ~= 127 and is_pyro_m == FALSE and is_both == FALSE and c_IsFemale == FALSE then
             max_arm_front_m = -30
             max_wrist_front_m = -33
             max_arm_side_m = -0
             max_wrist_side_m = 26
-        elseif GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) == TRUE and sp_o ~= 684 and sp_o ~= 127 and is_pyro_o == FALSE and is_both == FALSE  then
+        elseif GetEquipType(HAND_LEFT, WEAPON_CATEGORY_STAFF) == TRUE and sp_o ~= 684 and sp_o ~= 127 and is_pyro_o == FALSE and is_both == FALSE and c_IsFemale == FALSE then
             max_arm_front_o = -30
             max_wrist_front_o = -33
             max_arm_side_o = -0
