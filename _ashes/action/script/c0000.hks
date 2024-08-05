@@ -733,6 +733,11 @@ function GetWeaponChangeType(hand)
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
+    if ((sp_m == 217 and GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+    or ((sp_o == 217 and GetEquipType(HAND_LEFT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style == HAND_LEFT_BOTH)
+    then ExtraR1Only = TRUE
+    else ExtraR1Only = FALSE end
+
     local left_offset = 0
     local pos = env("武器格納場所タイプ取得", hand)
     if hand == HAND_LEFT then
@@ -762,6 +767,11 @@ function GetHandChangeType(hand)
     or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
+
+    if ((sp_m == 217 and GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+    or ((sp_o == 217 and GetEquipType(HAND_LEFT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style == HAND_LEFT_BOTH)
+    then ExtraR1Only = TRUE
+    else ExtraR1Only = FALSE end
 
     local left_offset = 0
     local pos = env("武器格納場所タイプ取得", hand)
@@ -1445,6 +1455,7 @@ end
 
 function SetAttackQueue(r1, r2, l1, l2, b1, b2)
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -1474,6 +1485,7 @@ function ClearAttackQueue()
     local b1 = "W_AttackBothLight1"
     
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -1707,6 +1719,11 @@ function IsEnableGuard()
     or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
+
+    if ((sp_m == 217 and GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+    or ((sp_o == 217 and GetEquipType(HAND_LEFT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style == HAND_LEFT_BOTH)
+    then ExtraR1Only = TRUE
+    else ExtraR1Only = FALSE end
 
     local is_sl = GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_SHIELD, WEAPON_CATEGORY_LARGE_SHIELD, WEAPON_CATEGORY_TORCH) 
     local is_m = GetEquipType(HAND_LEFT, 20, 23, 25, 26, 28, 29, 30, 32, 33, 35, 36, 38) 
@@ -2120,6 +2137,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         end
 
         if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+        if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
 
         if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
         if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -2197,6 +2215,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         end
     
         if ExtraR1R2 == TRUE then 
+            if r1 == "W_AttackRightLight1" then r1 = "W_Attack2RightLight1" end -- followups for all attacks
+        end
+
+        if ExtraR1Only == TRUE then 
             if r1 == "W_AttackRightLight1" then r1 = "W_Attack2RightLight1" end -- followups for all attacks
         end
 
@@ -2575,6 +2597,10 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
 
             if ExtraR1R2 == TRUE then 
+                if b1 == "W_AttackBothLight1" then b1 = "W_Attack2BothLight1" end -- followups for all attacks
+            end
+
+            if ExtraR1Only == TRUE then 
                 if b1 == "W_AttackBothLight1" then b1 = "W_Attack2BothLight1" end -- followups for all attacks
             end
 
@@ -4397,6 +4423,11 @@ function ExecWeaponChange(blend_type)
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
+    if ((sp_m == 217 and GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+    or ((sp_o == 217 and GetEquipType(HAND_LEFT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style == HAND_LEFT_BOTH)
+    then ExtraR1Only = TRUE
+    else ExtraR1Only = FALSE end
+
     if c_HasActionRequest == FALSE then
         return FALSE
     end
@@ -4438,6 +4469,11 @@ function ExecHandChange(hand, is_force, blend_type)
     or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
+
+    if ((sp_m == 217 and GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+    or ((sp_o == 217 and GetEquipType(HAND_LEFT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style == HAND_LEFT_BOTH)
+    then ExtraR1Only = TRUE
+    else ExtraR1Only = FALSE end
 
     if is_force == FALSE then
         if c_HasActionRequest == FALSE then
@@ -6167,6 +6203,11 @@ function IdleCommonFunction()
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
+    if ((sp_m == 217 and GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style ~= HAND_LEFT_BOTH)
+    or ((sp_o == 217 and GetEquipType(HAND_LEFT, 32) == TRUE and IsWarcrySpAtk() == TRUE) and c_Style == HAND_LEFT_BOTH)
+    then ExtraR1Only = TRUE
+    else ExtraR1Only = FALSE end
+
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if iTC ~= TRUE and i1BB == TRUE then 
@@ -6178,6 +6219,7 @@ function IdleCommonFunction()
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -6464,6 +6506,7 @@ function SlideCommonFunction(can_endslide)
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -6511,6 +6554,7 @@ function ThrowCommonFunction(estep)
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -6638,6 +6682,7 @@ function MagicCommonFunction(blend_type, quick_type)
     local b2 = "W_AttackBothHeavy1SubStart"
     local r2 = "W_AttackRightHeavy1Start"
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -6707,6 +6752,7 @@ function CrossbowCommonFunction(blend_type)
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1SubStart"
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" 
     elseif (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" 
     elseif (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" 
@@ -6795,6 +6841,7 @@ function DamageCommonFunction(guardcondition, estep, fall_type)
     local r2 = "W_AttackRightHeavy1Start"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" 
     elseif (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" 
@@ -6850,6 +6897,7 @@ function QuickTurnCommonFunction()
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -6929,6 +6977,7 @@ function ItemCommonFunction(blend_type)
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -7026,6 +7075,7 @@ function StopCommonFunction(is_dash_stop)
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
@@ -7125,6 +7175,7 @@ function MoveCommonFunction(blend_type)
     local b2 = "W_AttackBothHeavy1Start"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if i1BB == TRUE and (env(345 , HAND_RIGHT) ~= 609)  then  
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -7267,6 +7318,7 @@ function GuardCommonFunction(is_guard_end, blend_type)
     local b2 = "W_AttackBothHeavy1Start"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -7377,6 +7429,7 @@ function SwordArtsParryCommonFunction()
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -7541,6 +7594,7 @@ function WeaponChangeCommonFunction(blend_type)
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -7586,6 +7640,7 @@ function HandChangeCommonFunction(blend_type)
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if iTC ~= TRUE and i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart"
@@ -8700,6 +8755,7 @@ function LandFallAttack_onUpdate()
     local b1 = "W_AttackBothLight1"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
     if i1BB == TRUE then 
         r2 = "W_AttackRightHeavy1SubStart" 
         b2 = "W_AttackBothHeavy1SubStart" 
@@ -17223,6 +17279,7 @@ function QuickItemEnchantDash_Upper_onUpdate()
     local b2 = "W_AttackBothHeavy1Start"
 
     if ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight1" r2 = "W_Attack2RightHeavy1Start" b1 = "W_Attack2BothLight1" b2 = "W_Attack2BothHeavy1Start"  end
+    if ExtraR1Only == TRUE then r1 = "W_Attack2RightLight1" b1 = "W_Attack2BothLight1" end 
 
     if 1 <= GetVariable("MoveSpeedIndex") then
         r1 = "W_AttackRightLightDash"
