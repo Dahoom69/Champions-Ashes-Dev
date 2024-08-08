@@ -850,6 +850,12 @@ function GetSwordArtsInfo()
             arts_id = SWORDARTS_MAGICBUFF
         end
 
+        -- follower dark hand offhand wa 
+        if (env(225, HAND_LEFT) == 33 and sp_o == 123 ) then 
+            arts_hand = HAND_LEFT   
+            arts_id = SWORDARTS_ONESHOTFULL
+        end
+
         -- guardian shield offhand wa 
         if (env(225, HAND_LEFT) == 48 and sp_o == 671 ) then 
             arts_hand = HAND_LEFT   
