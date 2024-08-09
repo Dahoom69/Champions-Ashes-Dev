@@ -9893,8 +9893,9 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
-
+    if (sp_m == 138 and c_Style ~= HAND_LEFT_BOTH) or GetEquipType(HAND_RIGHT, 47, 48) == TRUE then
+        if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+    end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -10030,7 +10031,9 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030340
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+    if (sp_m == 138 and c_Style ~= HAND_LEFT_BOTH) or GetEquipType(HAND_RIGHT, 47, 48) == TRUE then
+        if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+    end
 
     if is_catalysts == TRUE and is_pyro ~= TRUE then  
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightLight2", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
@@ -10567,7 +10570,7 @@ function AttackLeftLight1_onUpdate()
     end
 end
 
-function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090
+function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or AttackLeftHeavySp1
     local sp_m = env(345 , HAND_RIGHT)
 
     local r1 = "W_AttackRightLight1"
@@ -10598,6 +10601,11 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090
     
     if sp_o == 691 or sp_o == 697 or sp_o == 698 then 
         if 10 > env(2016) then  act(2002, 627) end -- out of bullets or fp
+        if sp_o == 697 then 
+            if (env(1108, ACTION_ARM_L1) <= 800) then 
+            act(2002, 121961) -- uncharged dmg boost
+            end
+        end
         l1 = "W_AttackLeftHeavy2" 
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  
             if env(1116, 100342) == TRUE then r1 = "W_AttackLeftHeavySp3" 
@@ -10621,7 +10629,6 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090
 
     if (env(1108, ACTION_ARM_L1) >= 1) and env(1116, 100770) == TRUE then
         act(2002, 100784)  -- slow down attackspeed 
-        if (env(1108, ACTION_ARM_L1) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
     end 
     
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
@@ -11606,7 +11613,9 @@ function AttackBothHeavy1Start_onUpdate()  -- r21 charge 034320
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+    if ((sp_m == 138 or GetEquipType(HAND_RIGHT, 47, 48) == TRUE) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 138 or GetEquipType(HAND_LEFT, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH) then
+        if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+    end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -11815,8 +11824,10 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2 034340
         if (env(1108, ACTION_ARM_R2) >= 1) and env(1116, 100770) == TRUE then
             act(2002, 100784)  -- slow down attackspeed 
         end 
-        
-        if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+
+        if ((sp_m == 138 or GetEquipType(HAND_RIGHT, 47, 48) == TRUE) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 138 or GetEquipType(HAND_LEFT, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH) then
+            if (env(1108, ACTION_ARM_R2) <= 800) then act(2002, 121961)  end -- uncharged dmg boost
+        end
 
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
@@ -16245,8 +16256,9 @@ function OneShotFullRightStart_onUpdate() -- 038500
         act(2002, 100784)  -- slow down attackspeed 
     end 
     
-    if (env(1108, ACTION_ARM_L2) >= 800 or env(1108, ACTION_ARM_L1) >= 800) then act(2002, 121960)  end -- charged dmg boost
-
+    if ((GetEquipType(HAND_RIGHT, 47, 48) == TRUE) and c_Style ~= HAND_LEFT_BOTH) then
+        if (env(1108, ACTION_ARM_L2) >= 800 or env(1108, ACTION_ARM_L1) >= 800) then act(2002, 121960)  end -- charged dmg boost
+    end
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return 
@@ -16283,9 +16295,10 @@ function OneShotFullBothStart_onUpdate() -- oneshot WA 038510
     if ((env(1108, ACTION_ARM_L2) >= 1 or env(1108, ACTION_ARM_L1) >= 1)) and env(1116, 100770) == TRUE then
         act(2002, 100784)  -- slow down attackspeed 
     end 
-    
-    if (env(1108, ACTION_ARM_L2) >= 800 or env(1108, ACTION_ARM_L1) >= 800) then act(2002, 121960)  end -- charged dmg boost
 
+    if ((GetEquipType(HAND_RIGHT, 47, 48) == TRUE) and c_Style ~= HAND_LEFT_BOTH) or((GetEquipType(HAND_LEFT, 47, 48) == TRUE) and c_Style == HAND_LEFT_BOTH) then
+        if (env(1108, ACTION_ARM_L2) >= 800 or env(1108, ACTION_ARM_L1) >= 800) then act(2002, 121960)  end -- charged dmg boost
+    end
 
     if SwordArtsCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1 , b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
         return
@@ -16648,8 +16661,11 @@ function OneShotFullLeftStart_onUpdate() -- 038520 038530 038540
     if ((env(1108, ACTION_ARM_L2) >= 1 or env(1108, ACTION_ARM_L1) >= 1)) and env(1116, 100770) == TRUE then
         act(2002, 100784)  -- slow down attackspeed 
     end 
+
+    if GetEquipType(HAND_LEFT, 47, 48) == TRUE then
+        if (env(1108, ACTION_ARM_L2) >= 800 or env(1108, ACTION_ARM_L1) >= 800) then act(2002, 121960)  end -- charged dmg boost
+    end
     
-    if (env(1108, ACTION_ARM_L2) >= 800 or env(1108, ACTION_ARM_L1) >= 800) then act(2002, 121960)  end -- charged dmg boost
     if (GetEquipType(HAND_LEFT, 48) == TRUE) then l1 = "W_AttackLeftHeavy2" end
 
     if SwordArtsCommonFunction("W_AttackRightLight1", r2, "W_AttackLeftLight1", l1, "W_AttackBothLight1", b2, FALSE, TRUE, TRUE, FALSE) == TRUE then
