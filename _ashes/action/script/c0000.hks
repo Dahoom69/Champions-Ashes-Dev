@@ -12329,6 +12329,7 @@ function AttackBothDash_onUpdate() -- run r1 034500
     local b1 = "W_AttackBothLight1"
 
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local sp_ugso = env(345 , HAND_LEFT)
     local is_Um = GetEquipType(HAND_RIGHT, 26, 35) 
     local is_Uo = GetEquipType(HAND_LEFT, 26, 35) 
@@ -12396,7 +12397,7 @@ function AttackBothDash_onUpdate() -- run r1 034500
     if IsFeintAttempt() and (sp_m == 685 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH)   then b1 = "W_AttackBothLight1" end
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then   b1 = "W_AttackBothLight1" end
 
-    if ((sp_m == 677  and is_both_right == TRUE) or (sp_o == 677  and is_both_right == FALSE) ) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then  
+    if ((sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) ) and (env(301, 0) == TRUE or env("アニメ終了か", 1) == TRUE) then  
         act("特殊補間設定", 0, TRUE)
     ExecEventAllBody("W_AttackBothDashSpecial")
     end -- new
