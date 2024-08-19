@@ -3422,7 +3422,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
             blend_type = UPPER
         end
-        if b1 == "W_AttackBothLightStep" then ExecEventAllBody("W_AttackBothLightStep")
+        if b1 == "W_AttackBothLightStep" then ExecEventAllBody("W_AttackBothLightStep") -- crossbow roll attack
         else
             if IsExistBolt(HAND_RIGHT) == TRUE then
                 ExecEventHalfBlend(Event_AttackCrossbowBothRightEmpty, blend_type)
@@ -3438,12 +3438,15 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         if blend_type == ALLBODY and MoveStart(LOWER, Event_MoveLong, FALSE) == TRUE then
             blend_type = UPPER
         end
-        if IsExistBolt(HAND_LEFT) == TRUE then
-            ExecEventHalfBlend(Event_AttackCrossbowBothLeftEmpty, blend_type)
-        elseif env("ボルト装填状態取得", 0) == TRUE then
-            ExecEventHalfBlend(Event_AttackCrossbowBothLeftStart, blend_type)
+        if b1 == "W_AttackBothLightStep" then ExecEventAllBody("W_AttackBothLightStep") -- crossbow roll attack
         else
-            ExecEventHalfBlend(Event_AttackCrossbowBothLeftReload, blend_type)
+            if IsExistBolt(HAND_LEFT) == TRUE then
+                ExecEventHalfBlend(Event_AttackCrossbowBothLeftEmpty, blend_type)
+            elseif env("ボルト装填状態取得", 0) == TRUE then
+                ExecEventHalfBlend(Event_AttackCrossbowBothLeftStart, blend_type)
+            else
+                ExecEventHalfBlend(Event_AttackCrossbowBothLeftReload, blend_type)
+            end
         end
     elseif request == ATTACK_REQUEST_ATTACK_WHILE_GUARD then
         local index = env(278, HAND_LEFT)
