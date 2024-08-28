@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fmg>
+<filename>Area_Names_dlc1.fmg</filename>
+<compression>None</compression>
+<version>DarkSouls3</version>
+<bigendian>False</bigendian>
+<entries>
+<text id="4500">Painted World of Ariandel</text>
+<text id="4700">Kiln of Flame</text>
+</entries>
+</fmg>
