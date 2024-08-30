@@ -2,9 +2,9 @@
 // @docs    ds3-common.emedf.json
 // @compress    DCX_DFLT_10000_44_9
 // @game    DarkSouls3
-// @string    
+// @string    ""
 // @linked    []
-// @version    3.4
+// @version    3.4.2
 // ==/EMEVD==
 
 $Event(0, Default, function() {
@@ -351,9 +351,6 @@ $Event(700, Default, function() {
     SetEventFlag(70000125, ON);
     SetEventFlag(70000128, ON);
     SetEventFlag(70000129, ON);
-    if (PlayersClass(ClassType.Sorcerer)) {
-        SetEventFlag(74000587, ON);
-    }
     if (PlayersClass(ClassType.Pyromancer)) {
         SetEventFlag(74000465, ON);
     }
