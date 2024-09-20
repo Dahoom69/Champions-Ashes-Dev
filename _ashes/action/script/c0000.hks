@@ -21934,6 +21934,7 @@ function UpdateWeaponAttackSpeedMultiplier()
     elseif env(1116, 100797) == TRUE then SetVariable("WeaponAnimSpeed", 2.5) 
     elseif env(1116, 100798) == TRUE then SetVariable("WeaponAnimSpeed", 3.0) 
     elseif env(1116, 100799) == TRUE then SetVariable("WeaponAnimSpeed", 3.5) 
+    elseif env(1116, 112045000) == TRUE and env(1116, 100771) == TRUE then SetVariable("WeaponAnimSpeed", 1.222) -- old hunter bone effect
     else SetVariable("WeaponAnimSpeed", 1.0)    end
 end
 
