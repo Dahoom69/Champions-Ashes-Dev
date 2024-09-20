@@ -16625,6 +16625,7 @@ function MagicBuffLeft_Upper_onUpdate() -- 037910
     local sp_o = env(345 , HAND_LEFT)
     if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
 
+    local r1 = "W_AttackRightLight2"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
@@ -16632,11 +16633,13 @@ function MagicBuffLeft_Upper_onUpdate() -- 037910
         b2 = "W_AttackBothHeavy1SubStart"
     end
 
+    if sp_m == 123 then r1 = "W_Attack2RightLight1" end
+
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif HalfBlendLowerCommonFunction(Event_MagicBuffLeftMirror, lower_state, FALSE, FALSE) == TRUE then
         return 
@@ -16650,6 +16653,7 @@ function MagicBuffLeft2_onUpdate() -- -- 037930 ?
     local sp_o = env(345 , HAND_LEFT)
     if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
     
+    local r1 = "W_AttackRightLight3"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
@@ -16657,11 +16661,13 @@ function MagicBuffLeft2_onUpdate() -- -- 037930 ?
         b2 = "W_AttackBothHeavy1SubStart"
     end
 
+    if sp_m == 123 then r1 = "W_Attack2RightLight1" end
+
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight3", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy3", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy3", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
@@ -16675,17 +16681,21 @@ function MagicBuffLeft3_onUpdate()
     --and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) 
     then act(2002, 121950)  end
 
+    local r1 = "W_AttackRightLight2"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then
         r2 = "W_AttackRightHeavy1SubStart"
         b2 = "W_AttackBothHeavy1Start"
     end
+
+    if sp_m == 123 then r1 = "W_Attack2RightLight1" end
+
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     else
         return 
