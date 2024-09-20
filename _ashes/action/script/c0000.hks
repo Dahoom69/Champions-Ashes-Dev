@@ -8388,6 +8388,8 @@ function BackStep_onUpdate()
 
     if sp_m == 621 or sp_m == 264 or sp_m == 605 or sp_m == 620 then br1 = "W_AttackBothLightKick" end
     if sp_m == 686 and c_Style ~= HAND_LEFT_BOTH then br2 = rr2 end
+    if sp_m == 123 and c_Style ~= HAND_LEFT_BOTH then rr2 = "W_AttackRightHeavyKick" br2 = "W_AttackBothHeavyKick" end
+    if sp_o == 123 and c_Style == HAND_LEFT_BOTH then rr2 = "W_AttackRightHeavyKick" br2 = "W_AttackBothHeavyKick" end
 
     local ll1 = "W_AttackLeftLight1"
     local lh1 = "W_AttackLeftHeavy1"
@@ -10698,6 +10700,7 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then 
             if env(1116, 100341) == TRUE then r1 = "W_AttackLeftHeavySp2" 
             elseif env(1116, 100342) == TRUE then r1 = "W_AttackLeftHeavySp3" 
+            elseif sp_m == 123 then r1 = "W_Attack2RightLight1"
             else r1 = "W_AttackRightLight2" end
         end
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
