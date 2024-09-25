@@ -4442,7 +4442,6 @@ local newWeapons =
 {
 
 -- weapons
-  0x02174B28, --Manus Catalyst
   0x0206F778, --Loaded Spear (Rush)
   0x0206F7DC, --Loaded Spear (Cleave)
   0x021635D0, --Golem Axe
