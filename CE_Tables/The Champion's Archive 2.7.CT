@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 2.6 | 8.14.2024"</Description>
+      <Description>"Open - The Champion's Archive 2.7 | 9.24.2024"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -2813,53 +2813,53 @@ CREATETHREAD(ItemGib)
 404D0F00:Candied Ochre Eyeball
 404D0F01:Candied Cataract
 404D0F02:Candied Crimson Eyeball
-404D0E96:Grime Remover
-404D0E92:Copper Polish
-404D0E93:Silver Polish
-404D0E94:Gold Polish
-404D0E95:Diamond Polish
-404D0E98:Cinnabar Polish
-404D0E99:Jade Polish
-404D0E9A:Kyanite Polish
-404D0E9B:Obsidian Polish
-404D0E9F:Spirit Amethyst Polish
-404D0EA0:Rose Quartz Polish
-404D0EA2:Serpentine Polish
-404D0EA3:Garnet Polish
-404D0EA4:Millwood Alloy Polish
-404D0EA5:Petrified Wood Polish
-404D0E9C:Mossy Dye
-404D0E9D:Poisonhorn Dye
-404D0E9E:Ash Lotus Dye
-404D0E90:Tasteless Sherbet
-404D0E91:Vanilla Sherbet
-404D0E96:Frosting Sherbet
-404D0EB3:Pumpkin Sherbet
-404D0EB4:Grape Sherbet
-404D0EB8:Plum Sherbet
-404D0EB9:Pomegranate Sherbet
-404D0EBA:Kiwi Sherbet
-404D0EBB:Licorice Sherbet
-404D0ED0:Lemon Sherbet
-404D0ED3:Fig Sherbet
-404D0ED5:Tomato Sherbet
-404D0EE0:Sugar Sherbet
-404D0EE1:Strawberry Sherbet
-404D0EE2:BilBerry Sherbet
-404D0EE3:Blueberry Sherbet
-404D0EE5:Honey Sherbet
-404D0EE6:Orange Sherbet
-404D0EE8:Lavender Sherbet
-404D0EEB:Fusion Sherbet
-404D0EEC:Peach Sherbet
-404D0F59:Drop Sherbet
-404D1084:Marshmallow Sherbet
-404D1086:Lime Sherbet
-404D0EA1:Elderberry Sherbet
-404D0EA6:Truffle Sherbet
-404D0F5C:Liquid Light
-404D0EAB:Blood Lacquer
-404D0EAC:Oil Lacquer
+404D10E8:Frosting Sherbet
+404D10E9:Elderberry Sherbet
+404D10EA:Truffle Sherbet
+404D10EB:Pumpkin Sherbet
+404D10EC:Grape Sherbet
+404D10ED:Plum Sherbet
+404D10EE:Pomegranat Sherbet
+404D10EF:Kiwi Sherbet
+404D10F0:Liquorice Sherbet
+404D10F1:Lemon Sherbet
+404D10F2:Fig Sherbet
+404D10F3:Watermelon Sherbet
+404D10F4:Sugar Sherbet
+404D10F5:Strawberry Sherbet
+404D10F6:Bilberry Sherbet
+404D10F7:Blueberry Sherbet
+404D10F8:Honey Sherbet
+404D10F9:Orange Sherbet
+404D10FA:Lavender Sherbet
+404D10FB:Fusion Sherbet
+404D10FC:Peach Sherbet
+404D10FD:Drop Sherbet
+404D10FE:Marshmallow Sherbet
+404D10FF:Dark Cherry Sherbet
+404D1100:Lime Sherbet
+404D1101:Shabriri Grape Sherbet
+404D114C:Copper Polish
+404D114D:Silver Polish
+404D114E:Gold Polish
+404D114F:Diamond Polish
+404D1150:Cinnabar Polish
+404D1151:Jade Polish
+404D1152:Kyanite Polish
+404D1153:Obsidian Polish
+404D1154:Amethyst Polish
+404D1155:Rose Quartz Polish
+404D1156:Serpentine Polish
+404D1157:Garnet Polish
+404D1158:Millwood Alloy Polish
+404D1159:Petrified Wood Polish
+404D11B0:Moss Dye
+404D11B1:Poisonhorn Dye
+404D11B2:Ash Lotus Dye
+404D1214:Blood Lacquer
+404D1215:Ink Lacquer
+404D1278:Liquid Light
+404D1279:Untrue Sherbet
 404D1088:Illusion Scroll - Hide Helmet
 404D1087:Illusion Scroll - Sister Friede
 404D1089:Illusion Scroll - Abyss Watchers' Undead Legion
@@ -3010,6 +3010,7 @@ CREATETHREAD(ItemGib)
 4013F560:Deep Soul
 4013F948:Great Deep Soul
 401879A0:Great Soul Dregs
+40188170:Grand Deep Communion
 401875B8:Affinity
 40189CC8:Dark Edge
 40249F00:Fireball
@@ -3047,6 +3048,7 @@ CREATETHREAD(ItemGib)
 4027D350:Black Fire Orb
 4024BA58:Black Serpent
 40280DE8:Black Flame Ritual
+4039D4B0:Blackflame Immolation
 403540D0:Heal Aid
 403567E0:Heal
 40356BC8:Med Heal
@@ -3226,6 +3228,7 @@ CREATETHREAD(ItemGib)
 006C7D70:Dragonslayer Greataxe
 005F0FF0:Yhorm's Great Machete
 006D8EE0:Earth Seeker
+02174B28:Manus Catalyst
 007A1200:Club
 007A8730:Reinforced Club
 007A3910:Mace
@@ -3404,6 +3407,8 @@ CREATETHREAD(ItemGib)
 0279B290:Piercing Rifle
 02B66D70:Parrying Gun
 0206F390:Loaded Axe
+0206F778:Loaded Spear (Rush)
+0206F7DC:Loaded Spear (Cleave)
 02826520:Twinblade
 02828C30:Godskin Peeler
 0282B340:Twinned Knights Sword
@@ -4136,6 +4141,8 @@ CREATETHREAD(ItemGib)
 1125C708:Ragged Knight Trousers
 15A21BB0:Old Bell Helm
 13D30100:Lumenwood's Kin Head
+13D32810:Beast Skin Mask
+13D34F20:Enlarged Head
 00061CD8:Wood Arrow
 00061A80:Standard Arrow
 00061BAC:Large Arrow
@@ -4435,6 +4442,9 @@ local newWeapons =
 {
 
 -- weapons
+  0x02174B28, --Manus Catalyst
+  0x0206F778, --Loaded Spear (Rush)
+  0x0206F7DC, --Loaded Spear (Cleave)
   0x021635D0, --Golem Axe
   0x0216D210, --Chosen Undead's Halberd
   0x00CD3B10, --Flickeirng Pyromancy Flame
@@ -5192,6 +5202,8 @@ local newArmors = -- Ashes Armor
 
 
 -- Standalone Helmets --
+  0x13D32810, --Beast Skin Mask
+  0x13D34F20, --Enlarged Head
   0x13DEC0D0, --Top Hat
   0x12B275D0, --One-Eyed Iron Helm
   0x15A21BB0, --Old Bell Helm
@@ -6109,6 +6121,8 @@ Spawn()
                           <AssemblerScript>{$lua}
 local newMagic =
   {
+  0x4039D4B0, --Blackflame Immolation
+  0x40188170, --Grand Deep Communion
   0x40180088, --Deep Crystal Hail
   0x4024F1D0, --Miasmic Deluge
   0x4024F16C, --Volatile Corruption
@@ -6397,6 +6411,53 @@ spawnB.onClick = Spawn
                           <AssemblerScript>{$lua}
 local newItems =
   {
+  0x404D10E8, --Frosting Sherbet
+  0x404D10E9, --Elderberry Sherbet
+  0x404D10EA, --Truffle Sherbet
+  0x404D10EB, --Pumpkin Sherbet
+  0x404D10EC, --Grape Sherbet
+  0x404D10ED, --Plum Sherbet
+  0x404D10EE, --Pomegranat Sherbet
+  0x404D10EF, --Kiwi Sherbet
+  0x404D10F0, --Liquorice Sherbet
+  0x404D10F1, --Lemon Sherbet
+  0x404D10F2, --Fig Sherbet
+  0x404D10F3, --Watermelon Sherbet
+  0x404D10F4, --Sugar Sherbet
+  0x404D10F5, --Strawberry Sherbet
+  0x404D10F6, --Bilberry Sherbet
+  0x404D10F7, --Blueberry Sherbet
+  0x404D10F8, --Honey Sherbet
+  0x404D10F9, --Orange Sherbet
+  0x404D10FA, --Lavender Sherbet
+  0x404D10FB, --Fusion Sherbet
+  0x404D10FC, --Peach Sherbet
+  0x404D10FD, --Drop Sherbet
+  0x404D10FE, --Marshmallow Sherbet
+  0x404D10FF, --Dark Cherry Sherbet
+  0x404D1100, --Lime Sherbet
+  0x404D1101, --Shabriri Grape Sherbet
+  0x404D114C, --Copper Polish
+  0x404D114D, --Silver Polish
+  0x404D114E, --Gold Polish
+  0x404D114F, --Diamond Polish
+  0x404D1150, --Cinnabar Polish
+  0x404D1151, --Jade Polish
+  0x404D1152, --Kyanite Polish
+  0x404D1153, --Obsidian Polish
+  0x404D1154, --Amethyst Polish
+  0x404D1155, --Rose Quartz Polish
+  0x404D1156, --Serpentine Polish
+  0x404D1157, --Garnet Polish
+  0x404D1158, --Millwood Alloy Polish
+  0x404D1159, --Petrified Wood Polish
+  0x404D11B0, --Moss Dye
+  0x404D11B1, --Poisonhorn Dye
+  0x404D11B2, --Ash Lotus Dye
+  0x404D1214, --Blood Lacquer
+  0x404D1215, --Ink Lacquer
+  0x404D1278, --Liquid Light
+  0x404D1279, --Untrue Sherbet
   0x4000025D, --Champion's Posture Challenge
   0x40000111, --Contact Medicine
   0x404D1089, --Illusion Scroll - Abyss Watchers' Undead Legion
@@ -6422,63 +6483,17 @@ local newItems =
   0x4000011E, --Rope Timed Molotov
   0x40000123, --Oil Urn
   0x4000017E, --Crystal Lantern
-  0x404D0EA6, --Truffle Sherbet
-  0x404D0EA1, --Elderberry Sherbet
-  0x404D0EAB, --Blood Lacquer
-  0x404D0EAC, --Oil Lacquer
-  0x404D0EA2, --Serpentine Polish
-  0x404D0EA3, --Garnet Polish
-  0x404D0EA4, --Millwood Alloy Polish
-  0x404D0EA5, --Petrified Wood Polish
-  0x404D0EB4, --Grape Sherbet
-  0x404D0EB8, --Plum Sherbet
-  0x404D0EB9, --Pomegranate Sherbet
-  0x404D0EBA, --Kiwi Sherbet
   0x4000234E, --Frenzy/Mald
-  0x404D0F5C, --Liquid Light
-  0x404D0E96, --Frosting Sherbet
-  0x404D1086, --Lime Sherbet
-  0x404D0E9F, --Spirit Amethyst Polish
-  0x404D0EA0, --Rose Quartz Polish
   0x4000018D, --Tainted Dragon Head Stone
   0x4000018E, --Tainted Dragon Torso Stone
   0x40000262, --White Character Tendency
   0x40000263, --Grey Character Tendency
   0x40000264, --Black Character Tendency
-  0x404D0E96, --Grime Remover
-  0x404D0E98, --Cinnabar Polish
-  0x404D0E99, --Jade Polish
-  0x404D0E9A, --Kyanite Polish
-  0x404D0E9B, --Obsidian Polish
-  0x404D0E92, --Copper Polish
-  0x404D0E93, --Silver Polish
-  0x404D0E94, --Gold Polish
-  0x404D0E95, --Diamond Polish
-  0x404D0E9C, --Mossy Dye
   0x40000133, --Rope Lightning Urn
-  0x404D0EFE, --Cleansing Agent
   0x404D0EFF, --Candied Azure Eyeball
   0x404D0F00, --Candied Ochre Eyeball
   0x404D0F01, --Candied Cataract
   0x404D0F02, --Candied Crimson Eyeball
-  0x404D0E91, --Vanilla Sherbet
-  0x404D0E90, --Tasteless Sherbet
-  0x404D0F59, --Drop Sherbet
-  0x404D0EBB, --Licorice Sherbet
-  0x404D0EE0, --Sugar Sherbet
-  0x404D0EE1, --Strawberry Sherbet
-  0x404D0EE2, --Bilberry Sherbet
-  0x404D0EE5, --Honey Sherbet
-  0x404D0EE6, --Orange Sherbet
-  0x404D0EE8, --Lavender Sherbet
-  0x404D0ED0, --Lemon Sherbet
-  0x404D0ED3, --Fig Sherbet
-  0x404D0ED5, --Tomato Sherbet
-  0x404D0EEC, --Peach Sherbet
-  0x404D0EE3, --Blueberry Sherbet
-  0x404D0EEB, --fusion Sherbet
-  0x404D1084, --Marshmallow Sherbet
-  0x404D0EB3, --Pumkin Sherbet
   0x40000153, --Pale Pine Bundle
   0x40000152, --Human Pine Bundle
   0x40000131, --Rock
@@ -6486,8 +6501,6 @@ local newItems =
   0x40000134, --Accursed Brew
   0x4000022B, --Dark Inscribed Ember
   0x400003F2, --Dragon Scale
-  0x40000871, --Mystical Key
-  0x40000870, --Old Grave Key
   0x40000156, --Thunder Paper
   0x40000151, --Thunder Flask
   }
