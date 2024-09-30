@@ -3,7 +3,7 @@
   <CheatEntries>
     <CheatEntry>
       <ID>249</ID>
-      <Description>"Open - The Champion's Archive 2.7 | 9.24.2024"</Description>
+      <Description>"Open - The Champion's Archive 2.7.2 | 9.30.2024"</Description>
       <Options moHideChildren="1"/>
       <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
@@ -1074,9 +1074,7 @@ Summon sign vac: Drags all the summon signs in the area to your current position
 
 Unlock summoning limit: Unlock the phantom limit to 6 regardless of the team.
 
-Cycling tears: Just like auto revive, but a lot better (will break your active Sherbet after dying once), activated by using rubbish
-
-PvPenny: Fully heals HP and FP, provides Budding Green Blossom and applies Old Cycling tears (Doesn't break Sherbets but will be broken if another body buff is applied), activated by using Rusted Gold Penny.
+PvPenny: Fully heals HP and FP, provides Budding Green Blossom and applies Cycling Tears, Activated by using Rusted Gold Penny.
 
 No consume: Infinite consumables (+ it removes the number count for cleaner icons).
 
@@ -1085,8 +1083,6 @@ No consume: Infinite consumables (+ it removes the number count for cleaner icon
 Scripts-&gt;PVP-&gt;Misc:
 
 Useful NPC menus: a collection of the most used menus
-
-Lightning mod (aka: VFX Shader): will change how the game looks with almost no performance hit.
 
 Session info UI: The Session info header put into a little window, displays all players in the session with other useful info.
 
@@ -1104,7 +1100,7 @@ AddSoul: Increase your souls in a safe way
 ItemGib: Spawn items directly into your inventory and will take your max
 weapon level into account (works with +5 weapons too)
 
-Mass ItemGib: Spawns all items of a category at once Will also include max weapon upgrade,
+Mass ItemGib: Spawns all items of a category at once. Will also include max weapon upgrade,
 also includes an option for infusions but it wont affect shields or unique weapons.
 
 Upgrades Need No Materials: Remove requirement for item upgrading
@@ -1130,6 +1126,8 @@ Scripts-&gt;Misc:
 
 Apply Effect: Apply any effect to yourself, enter the effect in "EffectID" and hit "← Apply Effect"
 
+Disable Infusion Visual Effects: Champion's Ashes only, does what it says
+
 Item Drop: Drop a bag containing any item of your choosing
 
 Bullet Spawn: Spawns any bullet in whatever location you want
@@ -1144,7 +1142,7 @@ Noclip: Self explanatory
 
 Disable Post Process Draw: Self explanatory
 
-PhantomParam Helper: Let's you fully customize any phantom color of your choosing
+PhantomParam Helper: Let's you fully customize any phantom color of your choosing, this is client-side only
 
 --------------
 
@@ -1178,7 +1176,7 @@ A: #anor-londo in The Grand Archives discord server
 
 [FOR CHAMPION ASHES]
 
-A: #info at the bottom in the Champion ashes discord server
+A: #faqs-and-resources in the Champion's Ashes discord server
 
 Q: Why does the game crash when I attach debugger?
 A: Make sure Cheat Engine is set to use VEH debugger:
@@ -1191,7 +1189,6 @@ A: It is now active by default, its headers can be found under
      Param -&gt; Param Scripting
 
 Q: How to dupe character?
-
 A1: Change "Save Slot" to desired slot (starts at 0 for first slot),
      preferably empty slot below the current one (so if at 0, set to 1).
      Quit your current game and load your saves, the dupe should be in
@@ -1200,63 +1197,50 @@ A1: Change "Save Slot" to desired slot (starts at 0 for first slot),
 A2: Use "SaveMerge" from nexus mods: https://www.nexusmods.com/darksouls3/mods/409
 
 Q: How to disable stagger / knockback?
-
 A: Hero -&gt; Character Flags -&gt; EventSuperArmor
 
 Q: How to hide character model?
-
 A: Hero -&gt; Character Flags -&gt; Enable ChrAsm (Set to 0 to Hide).
 
 Q: How to enable one shot kill? (NPCs only)
-
 A: Debug Stuff &gt; GAME &gt; CHR DBG &gt; Player Exterminate
 
 Q: How to use "Last Weapon Highlighted", "Last Armour
 Highlighted", etc.?
-
 A: Enable the script, open inventory and highlight the weapon or
      armour piece that you want to edit and return back to the script.
 
 Q: How to use "Effect Helper", "Bullet Helper", etc.?
-
 A: Enable "Find Address" and follow the instructions below it
 
 Q: How to extend buff duration?
-
 A: Use Effect Helper and change effectEndurance to
      whatever duration you want, or -1 for infinite.
 
 Q: How to get more Respecs and Rebirths?
-
 A: Hero &gt; World Flags &gt; Misc &gt; Rebirths (Go in order)
      or use Reallocate Stats script under Npc menus
 
 Q: How to Unlock All Gestures?
-
 A: Hero &gt; Game Data &gt; Player GameData:LocalPlayer &gt;
 &gt; Gesture Game Data
      or use the script under build creation
 
 Q: How to change Character Class?
-
 A: Hero &gt; GameData &gt; Player Game Data:LocalPlayer &gt;
 &gt; Player Param &gt; ArcheType
 
 Q: How to revive bosses?
-
 A: Hero &gt; World Flags &gt; Bosses
      Some NPCs can be found under World Flags too
 
 Q: I can’t find my bloodstain anywhere.
-
 A: Teleport &gt; Teleport to Bloodstain
 
 Q: How to get a Gael's beard?
-
 A: Set "Age" to "3" (Hero &gt; Appearance &gt; FaceData &gt; Misc)
 
 Q: How do I get the NPC's face?
-
 A: Enable the "Last Hit Info" script, punch this npc.
      Go to his facedata and enable "Copy and Apply FaceData".
      Enable and disable "Backread Toggle" to refresh your character
@@ -4288,6 +4272,7 @@ CREATETHREAD(ItemGib)
 2000517C:Cursed Giant's Ring
 20004EF2:Ring of Sacrifice
 200055F0:Combo Ring
+20005212:Just Frame Ring
 200059D8:Demon's Seal
 20005A3C:Hunter's Signet Ring
 20005A3D:Hunter's Signet Ring +1
@@ -5918,6 +5903,7 @@ Spawn()
                           <AssemblerScript>{$lua}
 local newRings = --Ashes Rings
 {
+  0x20005212, --Just Frame Ring
   0x20004F24, --Imperious Medallion
   0x20005A3C, --Bold Hunter's Mark
   0x20005A3D, --Bold Hunter's Mark +1
