@@ -14947,6 +14947,10 @@ function AttackSpinStart_Upper_onUpdate() -- 036400
     if sp_m == 101 and env("アニメ終了か", 1) == TRUE and env(1001) <= 0 then  ExecEventAllBody("W_Idle") end
     if sp_m == 101 then r1 = "W_AttackRightLight3" end
 
+    if (sp_m == 208 or sp_m == 655) then r1 = "W_AttackRightLightDash" end 
+    if (sp_m == 208 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 208 and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackRightLightDash" end 
+    if (sp_m == 655 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 655 and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothDash" end 
+
     local kind = env(225, hand)
     if kind == WEAPON_CATEGORY_CURVEDSWORD then
         local sp_kind = env(345 , hand)
