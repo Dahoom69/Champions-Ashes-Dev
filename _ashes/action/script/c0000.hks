@@ -2199,7 +2199,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         end
 
-        if (GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE and c_Style == HAND_RIGHT) then -- dark sword alt moveset
+        if (GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE and (sp_m == 57 or sp_m == 128) and c_Style == HAND_RIGHT) then -- dark sword alt moveset
             if r1 == "W_AttackRightLightStep" then r1 = "W_AttackRightLightStepSpecial"
             end
         end
@@ -2351,8 +2351,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif ((GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style ~= HAND_LEFT_BOTH))
             or     ((GetEquipType(HAND_LEFT, 33) == TRUE and env(1116, 707) == TRUE and (sp_o == 217 or sp_o == 240 or sp_o == 998) and c_Style == HAND_LEFT_BOTH)) then -- morning star alt moveset
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
-            elseif ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
-            or     ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE) and c_Style == HAND_LEFT_BOTH) then -- dark sword alt moveset
+            elseif ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE) and (sp_m == 57 or sp_m == 128) and c_Style ~= HAND_LEFT_BOTH)
+            or     ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE) and (sp_o == 57 or sp_o == 128) and c_Style == HAND_LEFT_BOTH) then -- dark sword alt moveset
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
             or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
@@ -2370,7 +2370,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (GetEquipType(HAND_RIGHT, 33) == TRUE and env(1116, 707) == TRUE and (sp_m == 148 or sp_m == 217 or sp_m == 240 or sp_m == 998) and c_Style == HAND_RIGHT) then -- morning star alt moveset
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
-        elseif (GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE and c_Style == HAND_RIGHT) then -- dark sword alt moveset
+        elseif (GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE and (sp_m == 57 or sp_m == 128) and c_Style == HAND_RIGHT) then -- dark sword alt moveset
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (sp_m == 686 and c_Style ~= HAND_LEFT_BOTH) then -- great mace alt fr2
             ExecEventAllBody("W_AttackRightHeavyKickSpecial")
@@ -2569,8 +2569,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 end
             end
 
-            if ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
-            or ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE) and c_Style == HAND_LEFT_BOTH)
+            if ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE) and (sp_m == 57 or sp_m == 128) and c_Style ~= HAND_LEFT_BOTH)
+            or ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE) and (sp_o == 57 or sp_o == 128) and c_Style == HAND_LEFT_BOTH)
             then -- dark sword alt moveset
                 if b1 == "W_AttackBothLightStep" then b1 = "W_AttackBothLightStepSpecial"
                 end
@@ -7242,8 +7242,8 @@ function MoveCommonFunction(blend_type)
                 r2 = "W_AttackRightHeavyKickSpecial"
                 b2 = "W_AttackBothHeavyKickSpecial"
             end
-        elseif ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE) and c_Style ~= HAND_LEFT_BOTH)
-        or ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE) and c_Style == HAND_LEFT_BOTH)
+        elseif ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE and (sp_m == 57 or sp_m == 128)) and c_Style ~= HAND_LEFT_BOTH)
+        or ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE and (sp_o == 57 or sp_o == 128)) and c_Style == HAND_LEFT_BOTH)
         then -- dark sword alt moveset
             r1 = "W_AttackRightLightDashSpecial"
             r2 = "W_AttackRightHeavyKick"
