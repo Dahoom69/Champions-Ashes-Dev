@@ -2286,7 +2286,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
 
             end
 
-        elseif sp_m == 208 then
+        elseif sp_m == 208 or sp_m == 187 or sp_m == 218 then
             if r2 == "W_AttackRightHeavy1Start" then
                 r2 = "W_AttackRightHeavySpecial1Start"
             elseif r2 == "W_AttackRightHeavy1SubStart" then
@@ -2698,7 +2698,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 elseif b2 == "W_AttackBothHeavy2Start" then
                     b2 = "W_AttackBothHeavySpecial2Start"
                 end
-            elseif ((sp_m == 208) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 208) and c_Style == HAND_LEFT_BOTH) then
+            elseif ((sp_m == 208 or sp_m == 187 or sp_m == 218) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 208 or sp_o == 187 or sp_o == 218) and c_Style == HAND_LEFT_BOTH) then
                 if b2 == "W_AttackBothHeavy1Start" then
                     b2 = "W_AttackBothHeavySpecial1Start"
                 elseif b2 == "W_AttackBothHeavy1SubStart" then
