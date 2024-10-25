@@ -3107,7 +3107,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     SetVariable("CircleStepAngleSelftrans", angle)
                     ExecEventAllBody("W_CircleStepStartSelftrans")
 
-                elseif ((sp_m == 193) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193) and c_Style == HAND_LEFT_BOTH) then
+                elseif ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
                     if front == true then angle = 0
                     elseif right == true then angle = 90
                     elseif left == true then angle = -90
@@ -3146,7 +3146,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     SetVariable("CircleStepAngleSelftrans", angle)
                     ExecEventAllBody("W_CircleStepStartSelftrans")
 
-                elseif ((sp_m == 193) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193) and c_Style == HAND_LEFT_BOTH) then
+                elseif ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
                     if front == true then angle = 0
                     elseif right == true then angle = 90
                     elseif left == true then angle = -90
@@ -14847,7 +14847,7 @@ function StampedeRightStart_onUpdate() -- 037400
         end
     end
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         r1 = "W_StampedeRightAttackLight"
         b1 = "W_StampedeRightAttackLight"
         r2 = "W_StepInRightUppercut"
@@ -14889,20 +14889,20 @@ function StampedeRightAttackLight_onUpdate() -- 50037410
 
      if sp_m == 128 then r1 = "W_Attack2RightLight2" end -- black knight greatsword combat art
 
-     if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+     if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         r1 = "W_StampedeRightAttackHeavy"
         b1 = "W_StampedeRightAttackHeavy"
         r2 = "W_StepInRightUppercut"
         b2 = "W_StepInRightUppercut"
     end
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         if (env(1108, ACTION_ARM_R1) >= 1) and env(1116, 100770) == TRUE then
             act(2002, 100784)  -- slow down attackspeed 
         end 
     end
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         if (env(1108, ACTION_ARM_R1) >= 800) then act(2002, 121960)  end -- charged dmg boost
     end
 
@@ -14937,20 +14937,20 @@ function StampedeRightAttackHeavy_onUpdate() -- 037420
         b1 = "W_AttackRightLight2" r1 = "W_AttackRightLight2" 
     end
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         r1 = "W_StampedeRightAttackLight"
         b1 = "W_StampedeRightAttackLight"
         r2 = "W_StepInRightUppercut"
         b2 = "W_StepInRightUppercut"
     end
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         if (env(1108, ACTION_ARM_R1) >= 1) and env(1116, 100770) == TRUE then
             act(2002, 100784)  -- slow down attackspeed 
         end 
     end
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         if (env(1108, ACTION_ARM_R1) >= 800) then act(2002, 121960)  end -- charged dmg boost
     end
 
@@ -15896,7 +15896,7 @@ function CircleStepStartSelftrans_onUpdate()
         end
     end    
 
-    if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193 and c_Style == HAND_LEFT_BOTH) then
+    if ((sp_m == 193 or sp_m == 202) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 193 or sp_o == 202) and c_Style == HAND_LEFT_BOTH) then
         if env(1116, 100250) == TRUE then
             r1 = "W_StampedeRightAttackLight"
             b1 = "W_StampedeRightAttackLight"
