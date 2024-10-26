@@ -2225,7 +2225,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             end
         end
 
-        if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) then 
+        if ((sp_m == 193 or (sp_m == 163 and GetEquipType(HAND_RIGHT, 26) == TRUE)) and c_Style ~= HAND_LEFT_BOTH) then 
             if r1 == "W_AttackRightLightDash" then r1 = "W_AttackRightLightDashSpecial"
             end
         end
@@ -2368,6 +2368,9 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif  (sp_m == 72 and env(1116, 708) == TRUE) and style ~= HAND_LEFT_BOTH  -- harpe alt fr2 jump
             or      (sp_o == 72 and env(1116, 708) == TRUE) and style == HAND_LEFT_BOTH then -- harpe alt fr2 jump
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
+            elseif  (sp_m == 193 or (sp_m == 163 and (GetEquipType(HAND_RIGHT, 26) == TRUE))) and style ~= HAND_LEFT_BOTH  -- large ugs alt jump
+            or      (sp_o == 193 or (sp_o == 163 and (GetEquipType(HAND_LEFT, 26) == TRUE))) and style == HAND_LEFT_BOTH then -- large ugs alt jump
+                    ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             else
                 ExecEventAllBody("W_AttackBothHeavyKick")
             end
@@ -2389,6 +2392,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == TRUE then  ExecEventAllBody("W_CrossbowStepInFire")
         elseif (sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (env(1116, 702) == TRUE) and (GetEquipType(HAND_RIGHT, 28) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif (sp_m == 193 or (sp_m == 163 and (GetEquipType(HAND_RIGHT, 26) == TRUE))) and style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         else
             ExecEventAllBody("W_AttackRightHeavyKick")
         end
@@ -2597,7 +2601,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 end
             end
 
-            if (sp_m == 193 and c_Style ~= HAND_LEFT_BOTH) then 
+            if ((sp_m == 193 or (sp_m == 163 and GetEquipType(HAND_RIGHT, 26) == TRUE)) and c_Style ~= HAND_LEFT_BOTH) then 
                 if b1 == "W_AttackBothDash" then b1 = "W_AttackBothDashSpecial"
                 end
             end
@@ -9869,7 +9873,7 @@ function AttackRightLightDashSpecial_onUpdate() -- bs r1 backstep r1 -- 030510
 
     local sp_m = env(345 , HAND_RIGHT)
     if sp_m == 264  or sp_m == 640 or sp_m == 677 then r1 = "W_AttackRightLight2" end
-    if sp_m == 609 or sp_m == 604 or sp_m == 164 or sp_m == 610 or sp_m == 649 or sp_m == 664  or sp_m == 627 or sp_m == 647 or sp_m == 667 or sp_m == 193 then r1 = "W_AttackRightLight3" end
+    if sp_m == 609 or sp_m == 604 or sp_m == 164 or sp_m == 610 or sp_m == 649 or sp_m == 664  or sp_m == 627 or sp_m == 647 or sp_m == 667 then r1 = "W_AttackRightLight3" end
     if sp_m == 614 or sp_m == 612 or sp_m == 622  or sp_m == 645 or sp_m == 646  then r1 = "W_AttackRightHeavySpecial1Start" end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightHeavySpecial1Start" b1 = r1 end
@@ -12504,7 +12508,6 @@ function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1 034510 "W_AttackB
     if (sp_m == 609 and c_Style == HAND_RIGHT_BOTH) or sp_m == 664 or sp_m == 627 or sp_m == 667 or sp_m == 604 or sp_m == 622  then b1 = "W_AttackBothLight3" end
 
     if (sp_m == 677  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 677  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight2" end
-    if (sp_m == 193  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 193  and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothLight3" end
 
     local l1 = "W_AttackBothLeft1"
     if sp_m == 643 then l1 = "W_AttackBothLeftStep" end
