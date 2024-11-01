@@ -11534,6 +11534,8 @@ function AttackBothLeftDash_onUpdate() -- bothdashleft run l1 run 33500
         end
     end
 
+    if IsFeintAttempt() then l1 = b1 end
+
     if env(345 , hand) == 161 then
         r1 = "W_AttackRightLight2"
         l1 = "W_AttackBothLeft2"
