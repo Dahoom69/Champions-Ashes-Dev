@@ -8379,6 +8379,9 @@ function BackStep_onUpdate()
     if IsDualBlade() == TRUE then br2 = "W_CrossbowStepInFire" end
     if sp_o == 250 and is_both_left == TRUE then br2 = "W_AttackBothHeavy1Start" end
     if sp_m == 250 and is_both_right == TRUE then br2 = "W_AttackBothHeavy1Start" end
+
+    if sp_o == 139 and is_both_left == TRUE then br2 = "W_CrossbowStepInReload" end
+    if sp_m == 139 and is_both_right == TRUE then br2 = "W_CrossbowStepInReload" end
     
     if (env(345 , hand) == 43) then rr2 = "W_AttackRightHeavy1Start" br2 = "W_AttackBothHeavy1Start" end
 
@@ -11488,6 +11491,9 @@ function AttackBothLeft3_onUpdate()  -- l13
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end
      if is_ss_ps == TRUE then offhand = "W_AttackRightBackstep" l1 = "W_AttackRightBackstep" end
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
+
+     if (sp_m == 139) and c_Style ~= HAND_LEFT_BOTH then l1 = "W_AttackBothLeft1" b1 = "W_AttackBothLight1" end 
+     if (sp_o == 139) and c_Style == HAND_LEFT_BOTH then l1 = "W_AttackBothLeft1" b1 = "W_AttackBothLight1" end 
 
      if env(1116, 100283) == FALSE  and  AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
