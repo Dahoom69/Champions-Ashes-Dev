@@ -12711,6 +12711,10 @@ function AttackBothLightKick_onUpdate() -- 034100
     end
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then   b1 = "W_AttackBothLight3" end
     
+    if (sp_m == 253 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 253 and c_Style == HAND_LEFT_BOTH) then 
+        if 10 > env(2016) then  act(2002, 627) end
+    end
+
     local request = GetAttackRequest(FALSE)
     if 0 < env(1001) and ((sp_m == 85 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 85 and c_Style == HAND_LEFT_BOTH)) then
         if request == ATTACK_REQUEST_BOTHRIGHT_CROSSBOW or request == ATTACK_REQUEST_BOTHRIGHT_CROSSBOW2 
