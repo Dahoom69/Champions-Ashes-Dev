@@ -1819,8 +1819,8 @@ function IsWarcrySpAtk()
     if env(1116, 702) == TRUE and (sp_m == 166) and style ~= HAND_LEFT_BOTH then return TRUE end -- gravelord neato
     if env(1116, 702) == TRUE and (sp_o == 166) and style == HAND_LEFT_BOTH then return TRUE end -- gravelord neato
 
-    if env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH then return TRUE end -- Follower Sabre
-    if env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH then return TRUE end -- Follower Sabre
+    if env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE and sp_m == 0) and style ~= HAND_LEFT_BOTH then return TRUE end -- Follower Sabre
+    if env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE and sp_m == 0)  and style == HAND_LEFT_BOTH then return TRUE end -- Follower Sabre
 
     if env(1116, 703) == TRUE and (sp_m == 689) and style ~= HAND_LEFT_BOTH then return TRUE end -- twinblade
     if env(1116, 703) == TRUE and (sp_o == 689) and style == HAND_LEFT_BOTH then return TRUE end -- twinblade
@@ -2365,8 +2365,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif ((GetEquipType(HAND_RIGHT, 23, 26) == TRUE and env(1116, 707) == TRUE) and (sp_m == 57 or sp_m == 128) and c_Style ~= HAND_LEFT_BOTH)
             or     ((GetEquipType(HAND_LEFT, 23, 26) == TRUE and env(1116, 707) == TRUE) and (sp_o == 57 or sp_o == 128) and c_Style == HAND_LEFT_BOTH) then -- dark sword alt moveset
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
-            elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
-            or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
+            elseif (env(1116, 702) == TRUE and (GetEquipType(HAND_RIGHT, 28) == TRUE  and sp_m == 0) and style ~= HAND_LEFT_BOTH)  -- Follower Sabre
+            or     (env(1116, 702) == TRUE and (GetEquipType(HAND_LEFT, 28) == TRUE  and sp_o == 0)  and style == HAND_LEFT_BOTH) then -- Follower Sabre
                     ExecEventAllBody("W_AttackBothHeavyKickSpecial")
             elseif  (sp_m == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style ~= HAND_LEFT_BOTH  -- murky scythe jump
             or      (sp_o == 72 and c_SwordArtsID ~= 24  and env(1116, 697) == TRUE) and style == HAND_LEFT_BOTH then -- murky scythe jump
@@ -2397,7 +2397,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == FALSE then  ExecEventAllBody("W_AttackBothHeavyKickSpecial")
         elseif GetEquipType(HAND_RIGHT, 38)  == TRUE and sp_m == 67 and env(1116, 100289) == TRUE then  ExecEventAllBody("W_CrossbowStepInFire")
         elseif (sp_m == 687 and env(1116, 705) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
-        elseif (env(1116, 702) == TRUE) and (GetEquipType(HAND_RIGHT, 28) == TRUE) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
+        elseif (env(1116, 702) == TRUE) and (GetEquipType(HAND_RIGHT, 28) == TRUE  and sp_m == 0) and c_Style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         elseif (sp_m == 193 or (sp_m == 163 and (GetEquipType(HAND_RIGHT, 26) == TRUE)) or (sp_m == 51 and (GetEquipType(HAND_RIGHT, 26) == TRUE))) and style ~= HAND_LEFT_BOTH then ExecEventAllBody("W_AttackRightHeavyKickSpecial")
         else
             ExecEventAllBody("W_AttackRightHeavyKick")
@@ -9340,6 +9340,7 @@ function AttackRightLight1_onUpdate() -- r11
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 23) == TRUE and GetEquipType(HAND_LEFT, 23)  == TRUE) then offhand = "W_AttackBothLeft2" end     
     if (GetEquipType(HAND_RIGHT, 25) == TRUE and GetEquipType(HAND_LEFT, 23, 25)  == TRUE) then offhand = "W_AttackBothLeft2" end  
+    if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28)  == TRUE) then offhand = "W_AttackBothLeft2" end  
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253))) then offhand = "W_AttackBothLeft2" end
     if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft2" end 
 
@@ -9612,6 +9613,7 @@ function AttackRightLight3_onUpdate() -- r13
     local offhand = "W_AttackLeftLight1"
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 25) == TRUE and GetEquipType(HAND_LEFT, 23, 25)  == TRUE) then offhand = "W_AttackBothLeft2" end  
+    if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28)  == TRUE) then offhand = "W_AttackRightBackstep" end  
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253 ))) then offhand = "W_AttackBothLeft2" end
     if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft2" end 
 
@@ -11569,6 +11571,7 @@ function AttackBothLeftDash_onUpdate() -- bothdashleft run l1 run 33500
     end
 
     if (GetEquipType(HAND_RIGHT, 25) == TRUE and GetEquipType(HAND_LEFT, 23, 25)  == TRUE) then l1 = "W_AttackBothLeft3" end  
+    if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28)  == TRUE) then l1 = "W_AttackRightBackstep" end  
 
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
@@ -11608,7 +11611,7 @@ function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
         l1 = "W_AttackBothLeftStep"
         if 10 > env(2016) then  act(2002, 627) end
     end
-    
+
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
