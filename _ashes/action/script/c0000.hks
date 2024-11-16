@@ -1158,12 +1158,14 @@ function GetAttackRequest(is_guard)
             local is_gss = GetEquipType(HAND_LEFT, 25)
             local is_gs = GetEquipType(HAND_LEFT, 25, 26) 
             local is_r = GetEquipType(HAND_LEFT, 27) 
+            local is_cs = GetEquipType(HAND_LEFT, 28)
             local is_a = GetEquipType(HAND_LEFT, 30)
             local is_d = GetEquipType(HAND_LEFT, 20) 
             local is_ssm = GetEquipType(HAND_RIGHT, 23) 
             local is_gssm = GetEquipType(HAND_RIGHT, 25) 
             local is_ugsm = GetEquipType(HAND_RIGHT, 26) 
             local is_rm = GetEquipType(HAND_RIGHT, 27) 
+            local is_csm = GetEquipType(HAND_LEFT, 28)
             local is_am = GetEquipType(HAND_RIGHT, 30)
             local is_gm = FALSE
             local is_go = FALSE
@@ -1179,6 +1181,7 @@ function GetAttackRequest(is_guard)
             -- powerstance
             if      is_axe_ps == TRUE   then return ATTACK_REQUEST_BOTH_LEFT
             elseif  is_ss_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
+            elseif  is_cs_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
             elseif  is_gss_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
             elseif  is_ts_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
             elseif  is_tb_ps == TRUE    then return ATTACK_REQUEST_BOTH_LEFT
@@ -9523,7 +9526,7 @@ function AttackRightLight2_onUpdate() -- r12
 
     local offhand = "W_AttackLeftLight1"
     if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
-    if is_ss_ps == TRUE or is_gss_ps == TRUE then offhand = "W_AttackBothLeft3" end
+    if is_ss_ps == TRUE or is_gss_ps == TRUE or is_cs_ps == TRUE then offhand = "W_AttackBothLeft3" end
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253))) then offhand = "W_AttackBothLeft3" end
     if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft3" end 
     if is_ts_ps == TRUE then offhand = "W_AttackBothLeft3" end
@@ -11399,7 +11402,7 @@ function AttackBothLeft2_onUpdate()  -- l12
 
      local offhand = "W_AttackLeftHeavy1"
      if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
-     if is_ss_ps == TRUE or is_gss_ps == TRUE then r1 = "W_AttackRightLight3" end
+     if is_ss_ps == TRUE or is_gss_ps == TRUE or is_cs_ps == TRUE then r1 = "W_AttackRightLight3" end
 
      local l1 = "W_AttackBothLeft3"
      if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
@@ -11495,7 +11498,7 @@ function AttackBothLeft3_onUpdate()  -- l13
      local is_Ro = GetEquipType(HAND_LEFT, 27) 
      if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end
-     if is_ss_ps == TRUE then offhand = "W_AttackRightBackstep" l1 = "W_AttackRightBackstep" end
+     if is_ss_ps == TRUE or is_cs_ps == TRUE then offhand = "W_AttackRightBackstep" l1 = "W_AttackRightBackstep" end
      if is_gss_ps == TRUE then offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
 
@@ -22163,6 +22166,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
     if (GetEquipType(HAND_RIGHT, 23) == TRUE and sp_m ~= 685 and sp_m ~= 236 and sp_m ~= 612 and sp_m ~= 101 and sp_m ~= 649 and sp_m ~= 627 and sp_m ~= 679 and sp_m ~= 693) and (GetEquipType(HAND_LEFT, 23) == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)   then is_ss_ps = TRUE else is_ss_ps = FALSE end
 	if (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m ~= 51 and sp_m ~= 163 and sp_m ~= 605 and sp_m ~= 620 and sp_m ~= 643) and (GetEquipType(HAND_LEFT, 23, 25) == TRUE and is_gun == FALSE and sp_o ~= 651 and sp_o ~= 51 and sp_o ~= 163)        and     (is_both == FALSE)   then is_gss_ps = TRUE else is_gss_ps = FALSE end
     if (GetEquipType(HAND_RIGHT, 27) == TRUE and sp_m ~= 624) and (GetEquipType(HAND_LEFT, 27) == TRUE) and (is_both == FALSE and sp_m ~= 237)                                                                                                                                  then is_ts_ps = TRUE else is_ts_ps = FALSE end
+    if (GetEquipType(HAND_RIGHT, 28) == TRUE) and (GetEquipType(HAND_LEFT, 28) == TRUE and is_gun == FALSE and sp_o ~= 651)        and     (is_both == FALSE and sp_m ~= 142)   then is_cs_ps = TRUE else is_cs_ps = FALSE end
     if (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253 and sp_m ~= 666  )  and    (GetEquipType(HAND_LEFT, 25, 26)  == TRUE and is_gun == FALSE and (sp_o ~= 161 and sp_o ~= 253 and sp_o ~= 666)) and (is_both == FALSE)                 then is_ugs_ps = TRUE else is_ugs_ps = FALSE end
     if (sp_m == 689 or sp_m == 690) and (sp_o == 689 or sp_o == 690)                                                                                                                                                                                                            then is_tb_ps = TRUE else is_tb_ps = FALSE end
 
@@ -22194,6 +22198,11 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
             --max_arm_front_m = 10
             max_arm_front_o = 20
         elseif is_ts_ps == TRUE  then 
+            max_wrist_front_m = 40
+            max_wrist_front_o = 40
+            max_arm_front_m = 10
+            max_arm_front_o = 10
+        elseif is_cs_ps == TRUE then
             max_wrist_front_m = 40
             max_wrist_front_o = 40
             max_arm_front_m = 10
