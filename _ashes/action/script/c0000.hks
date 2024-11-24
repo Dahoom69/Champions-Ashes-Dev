@@ -9537,6 +9537,7 @@ function AttackRightLight2_onUpdate() -- r12
     if (sp_m == 208) then r2 = "W_AttackRightLightStep" end
     if (sp_m == 654 or sp_m == 676) then r1 = "W_AttackRightLight1" end
     if (sp_m == 658) then r2 = "W_AttackRightHeavy2Start" end
+    if (sp_m == 50) then r2 = "W_AttackRightHeavy2Start" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_CrossbowStepInFire" b2 = r2 end 
     if sp_m == 687 and env(1116, 705) == TRUE then r1 = "W_CrossbowStepInFire" end
@@ -9848,6 +9849,7 @@ function AttackRightLightDash_onUpdate() -- run r1 030500
     if (sp_m == 643 and env(1116, 100281) == TRUE) then r1 = "W_AttackRightLight1" end
     if sp_m == 614 or sp_m == 645 or sp_m == 646 or sp_m == 627 then r1 = "W_AttackRightHeavySpecial1Start" end
     if IsFeintAttempt() and sp_m == 259 then r2 = "W_AttackRightHeavy2Start" end
+    if IsFeintAttempt() and sp_m == 50 then r1 = "W_AttackRightLight2" end
     if IsFeintAttempt() and sp_m == 685 then r1 = "W_AttackRightLight3" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" r2 = "W_AttackRightLightStepSpecial" b1 = r1 b2 = r2 end
 
@@ -9959,6 +9961,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
     if (sp_m == 614 or sp_m == 610) then r1 = "W_AttackRightLight3" end
     if sp_m == 609 or sp_m == 612 or sp_m == 622 or sp_m == 627 or sp_m == 640 or sp_m == 646 then r1 = "W_AttackRightHeavySpecial1Start" end
     if (sp_m == 658 and IsFeintAttempt()) then r1 = "W_AttackRightLight3" end
+    if (sp_m == 663) then r1 = "W_AttackRightHeavy2Start" r2 = "W_AttackRightHeavy2Start" end
     if (sp_m == 677) then r1 = "W_AttackRightLight2" end
     if (sp_m == 677 and IsFeintAttempt()) then r1 = "W_AttackRightLight3" r2 = "W_AttackRightHeavyKick" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b2 = r2 end
