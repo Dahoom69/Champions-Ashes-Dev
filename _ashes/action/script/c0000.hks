@@ -22110,6 +22110,7 @@ function UpdateMomentumMultiplier()
     if env(1116, 100718) == TRUE then act(2001, 2.8)    end
     if env(1116, 100719) == TRUE then act(2001, 2.9)    end
     if env(1116, 100720) == TRUE then act(2001, 3.0)    end
+    if env(1116, 100730) == TRUE then act(2001, -1.0)    end
 end
 
 function UpdateWeaponAttackSpeedMultiplier()
