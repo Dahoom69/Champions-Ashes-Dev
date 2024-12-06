@@ -2674,7 +2674,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             elseif (sp_m == 162 and sp_o == 154)  then l1 = "W_AttackBothLeftStep" 
             elseif sp_m == 649 then l1 = "W_AttackBothLeft1" 
             else l1 = "W_AttackBothLeftStep" end
-        elseif env(345 , HAND_RIGHT) == 609 and r1 == "W_AttackRightLightDashSpecial" then 
+        elseif (sp_m == 57 or sp_m == 609) and r1 == "W_AttackRightLightDashSpecial" then 
             l1 = "W_AttackBothLeftDash"
         elseif l1 == "W_AttackLeftLight1" then
             l1 = "W_AttackBothLeft1"
