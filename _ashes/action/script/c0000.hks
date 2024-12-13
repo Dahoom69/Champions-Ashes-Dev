@@ -813,7 +813,7 @@ function GetSwordArtsInfo()
         arts_id = env(326, arts_hand) -- Get Weapon ID
     else
         local arts_id_o = env(326, HAND_LEFT)
-        if (    (sp_o == 137 or sp_o == 237 or (is_r == TRUE) or sp_o == 186 or sp_o == 187 or sp_o == 20 or is_m == TRUE or arts_id_o == SWORDARTS_RIGHTARTS or arts_id_o == 1701 ) and not (sp_o == 115 or sp_o == 178 or sp_o == 207 or sp_o == 206 or sp_o == 217 or sp_o == 218 or sp_o == 220 or (sp_o == 159 and c_Style == HAND_RIGHT) or sp_o == 234 or sp_o == 257 or sp_o == 99 or sp_o == 101 or sp_o == 151 or sp_o == 71 or sp_o == 665 or (is_sh == TRUE and arts_id_o == 3202   ) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_o == 67)      )   ) then         
+        if (    (sp_o == 137 or sp_o == 237 or (is_r == TRUE) or (GetEquipType(HAND_LEFT, 46) and sp_o == 262) or sp_o == 186 or sp_o == 187 or sp_o == 20 or is_m == TRUE or arts_id_o == SWORDARTS_RIGHTARTS or arts_id_o == 1701 ) and not (sp_o == 115 or sp_o == 178 or sp_o == 207 or sp_o == 206 or sp_o == 217 or sp_o == 218 or sp_o == 220 or (sp_o == 159 and c_Style == HAND_RIGHT) or sp_o == 234 or sp_o == 257 or sp_o == 99 or sp_o == 101 or sp_o == 151 or sp_o == 71 or sp_o == 665 or (is_sh == TRUE and arts_id_o == 3202   ) or (GetEquipType(HAND_LEFT, 38)  == TRUE and sp_o == 67)      )   ) then         
             arts_hand = HAND_RIGHT
             arts_id = env(326, HAND_RIGHT) 
         else
@@ -1229,10 +1229,14 @@ function GetAttackRequest(is_guard)
             return ATTACK_REQUEST_LEFT_LIGHT
         end
     elseif env(1106, ACTION_ARM_L2) == TRUE then
+        local sp_o = env(345 , HAND_LEFT)
+        local sp_m = env(345 , HAND_RIGHT)
         if is_both == FALSE then
-            if GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW) == TRUE then
+            if GetEquipType(HAND_LEFT, WEAPON_CATEGORY_CROSSBOW) == TRUE and sp_o ~= 262 then
                 act("弓矢スロット選択", 1)
                 return ATTACK_REQUEST_LEFT_CROSSBOW2
+            elseif GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW) == TRUE and sp_m == 262 and c_Style ~= HAND_LEFT_BOTH then
+                return ExecEventAllBody("W_OneShotNoGenTransStart")
             elseif GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW, WEAPON_CATEGORY_LARGE_ARROW) == TRUE then
                 return ATTACK_REQUEST_ARROW_BOTH_LEFT
             end
@@ -1265,7 +1269,8 @@ function GetAttackRequest(is_guard)
                 return swordartrequest
             end
         elseif HAND_LEFT_BOTH <= style then
-            return ATTACK_REQUEST_BOTH_HEAVY
+            if sp_o == 262 and c_Style == HAND_LEFT_BOTH then return ExecEventAllBody("W_OneShotNoGenTransStart")
+            else return ATTACK_REQUEST_BOTH_HEAVY end 
         else
             return ATTACK_REQUEST_LEFT_HEAVY
         end
@@ -9746,6 +9751,7 @@ function AttackRightLightKick_onUpdate() -- 030100
     if (sp_m == 51 or sp_m == 166) then  r1 = "W_AttackRightLight2" end
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 68 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavyKick" end
+    if sp_m == 262 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" end
     if sp_m == 645 then r2 = "W_AttackRightHeavy2Start" end 
     if sp_m == 664 or sp_m == 621 then r2 ="W_AttackRightLightStepSpecial" end
     if sp_m == 649 then r1 = "W_AttackRightLight3" end
