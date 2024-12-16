@@ -382,7 +382,7 @@ $Event(0, Default, function() {
     InitializeEvent(0, 13009209, 0);
     InitializeCommonEvent(20005342, 53000260, 3000489, 3000260); //Outrider Knight, gives Rusted Iron Ring
     InitializeCommonEvent(20005342, 53000080, 3000304, 3000080); //Hollow Cleric, gives Priest Mask
-    InitializeCommonEvent(20005342, 50006700, 3002514, 57020); //Black Hand Kamui, gives Divine Blessing
+    InitializeCommonEvent(20005342, 50006700, 3002514, 57020); //Black Hand Kamui, gives Hunter's Ring
     InitializeCommonEvent(20005340, 13009000, 3009000); //Hollow Assassin, no respawn
     InitializeCommonEvent(20005520, 13009002, 3009002, 3004355); //Steel Soldier's Mask Chest Event
     InitializeCommonEvent(20005525, 53000970, 3000970, 3001261, 61); //Priestess Ring next to Emma
