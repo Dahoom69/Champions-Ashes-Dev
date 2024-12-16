@@ -251,7 +251,6 @@ $Event(0, Default, function() {
     InitializeCommonEvent(20005520, 13000354, 3001354, 3004354);
     InitializeCommonEvent(20005521, 13000420, 13005420, 3001250, 3001251, 3000170);
     InitializeCommonEvent(20005525, 53000650, 3000650, 3001260, 61);
-    InitializeCommonEvent(20005525, 53000970, 3000970, 3001261, 61); //Priestess Ring next to Emma
     InitializeCommonEvent(20005526, 53000950, 3000950, 3001900, 61, 9480);
     InitializeCommonEvent(20005620, 13000300, 13000301, 3001200, 3001201, 3001202, 13001300);
     InitializeCommonEvent(20005624, 13000310, 13000311, 3001210, 3001211, 3001212, 13001310);
@@ -386,6 +385,8 @@ $Event(0, Default, function() {
     InitializeCommonEvent(20005342, 50006700, 3002514, 57020); //Black Hand Kamui, gives Divine Blessing
     InitializeCommonEvent(20005340, 13009000, 3009000); //Hollow Assassin, no respawn
     InitializeCommonEvent(20005520, 13009002, 3009002, 3004355); //Steel Soldier's Mask Chest Event
+    InitializeCommonEvent(20005525, 53000970, 3000970, 3001261, 61); //Priestess Ring next to Emma
+    InitializeEvent(0, 13000902, 0); //Albert gives player Knight's Ring if present in Vordt's arena when Vordt dies
 });
 
 $Event(50, Default, function() {
@@ -420,6 +421,18 @@ L0:
     WaitFixedTimeSeconds(0.2);
     DeactivateObject(3001950, Enabled);
     ChangeCharacterEnableState(3000950, Enabled);
+});
+
+$Event(13000902, Default, function() {
+    EndIf(PlayerIsNotInOwnWorld());
+    EndIf(EventFlag(53010271));
+    WaitFor(InArea(3000190, 3002829));
+    WaitFor(CharacterDead(3000190, 1));
+    WaitFor(CharacterDead(3000800, 0));
+    WaitFixedTimeSeconds(4);
+    AwardItemLot(3010271);
+    SetEventFlag(53010271, ON);
+    EndEvent();
 });
 
 $Event(13009519, Restart, function() {
