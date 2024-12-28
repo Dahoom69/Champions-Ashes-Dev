@@ -358,9 +358,9 @@ $Event(0, Default, function() {
     InitializeCommonEvent(20005760, 13002514, 13004114, 13005114, 3002514);
     InitializeCommonEvent(20005341, 13002514, 3002514, 57020);
     InitializeCommonEvent(20005213, 3000302, 703, 1703, 1077936128, 3002511);
-    InitializeCommonEvent(20005210, 3000303, 700, 1700, 1084227584);
+    InitializeCommonEvent(20005210, 3000303, 700, 1700, 1084227584); //CA - Lothric Knight in front of HWoL spawn, disables Bonfire
     InitializeCommonEvent(20005210, 3000238, 700, 1700, 1092616192);
-    InitializeCommonEvent(20005210, 3002515, 704, 1704, 1065353216);
+    InitializeCommonEvent(20005210, 3002515, 704, 1704, 1065353216); //CA - Soldier protecting Greirat's cell
     InitializeEvent(0, 13009519, 0);
     InitializeEvent(0, 13009999, 0);
     InitializeEvent(0, 13009998, 0);
@@ -380,13 +380,14 @@ $Event(0, Default, function() {
     InitializeEvent(0, 13009975, 0);
     InitializeEvent(0, 13009980, 0);
     InitializeEvent(0, 13009209, 0);
-    InitializeCommonEvent(20005342, 53000260, 3000489, 3000260); //Outrider Knight, gives Rusted Iron Ring
-    InitializeCommonEvent(20005342, 53000080, 3000304, 3000080); //Hollow Cleric, gives Priest Mask
-    InitializeCommonEvent(20005342, 53410370, 3002514, 3410370); //Black Hand Kamui, gives Hunter's Ring
-    InitializeCommonEvent(20005340, 13009000, 3009000); //Hollow Assassin, no respawn
-    InitializeCommonEvent(20005520, 13009002, 3009002, 3004355); //Steel Soldier's Mask Chest Event
-    InitializeCommonEvent(20005525, 53000970, 3000970, 3001261, 61); //Priestess Ring next to Emma
-    InitializeEvent(0, 13000902, 0); //Albert gives player Knight's Ring if present in Vordt's arena when Vordt dies
+    InitializeCommonEvent(20005342, 53000260, 3000489, 3000260); //CA - Outrider Knight, gives Rusted Iron Ring
+    InitializeCommonEvent(20005342, 53000080, 3000304, 3000080); //CA - Hollow Cleric, gives Priest Mask
+    InitializeCommonEvent(20005342, 53410370, 3002514, 3410370); //CA - Black Hand Kamui, gives Hunter's Ring
+    InitializeCommonEvent(20005340, 13009000, 3009000); //CA - Hollow Assassin, no respawn
+    InitializeCommonEvent(20005520, 13009002, 3009002, 3004355); //CA - Steel Soldier's Mask Chest Event
+    InitializeCommonEvent(20005525, 53000970, 3000970, 3001261, 61); //CA - Priestess Ring next to Emma
+    InitializeEvent(0, 13000902, 0); //CA - Albert gives player Knight's Ring if present in Vordt's arena when Vordt dies
+    InitializeEvent(0, 13000903, 0); //CA - Archive Scholar that spawns dead, disappears after picking up Scholar Ring nearby
 });
 
 $Event(50, Default, function() {
@@ -434,6 +435,13 @@ $Event(13000902, Default, function() {
     SetEventFlag(53010271, ON);
     EndEvent();
 });
+
+$Event(13000903, Default, function() {
+    ForceCharacterDeath(3000301, false);
+    if (EventFlag(53410610)) {
+        ChangeCharacterEnableState(3000301, Disabled);
+        EndEvent();
+}})
 
 $Event(13009519, Restart, function() {
     EndIf(PlayerIsNotInOwnWorld());
