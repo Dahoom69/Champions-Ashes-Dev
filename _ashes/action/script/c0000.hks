@@ -9350,7 +9350,7 @@ function AttackRightLight1_onUpdate() -- r11
     local offhand = "W_AttackLeftLight1"
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 23) == TRUE and GetEquipType(HAND_LEFT, 23)  == TRUE) then offhand = "W_AttackBothLeft2" end     
-    if (GetEquipType(HAND_RIGHT, 25) == TRUE and GetEquipType(HAND_LEFT, 23, 25)  == TRUE) then offhand = "W_AttackBothLeft2" end  
+    if is_gss_ps == TRUE then offhand = "W_AttackBothLeft2" end  
     if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28)  == TRUE) then offhand = "W_AttackBothLeft2" end  
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253))) then offhand = "W_AttackBothLeft2" end
     if (sp_m == 162 and sp_o == 154) then offhand = "W_AttackBothLeft2" end 
