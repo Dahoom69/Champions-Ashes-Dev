@@ -15767,6 +15767,10 @@ function EndureRightHeavy_onUpdate() -- 37710
         end
     end   
 
+    if (env(1108, ACTION_ARM_R2) >= 1 ) and env(1116, 100770) == TRUE then
+        act(2002, 100781)  -- slow down attackspeed 
+    end 
+
     if env(1116, 100290) == TRUE then
         r2 = "W_EndureRightHeavy"
         l2 = "W_EndureRightHeavy"
