@@ -3327,9 +3327,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_FourWayAttackStartRight", right)
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)     
         if (faultyWA ~= TRUE) then
-            if      ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")   )  ) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
-            elseif  ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") == 0 and 0.5 < GetVariable("MoveSpeedLevel")  ) then ExecEventHalfBlend(Event_Endure, ALLBODY)
-               
+            --if      ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") ~= 0 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")   )  ) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
+            --elseif  ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") == 0 and 0.5 < GetVariable("MoveSpeedLevel")  ) then ExecEventHalfBlend(Event_Endure, ALLBODY)
+            if      ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") == 1 or (GetVariable("MoveDirection") == 0 and 0.5 > GetVariable("MoveSpeedLevel")   )  ) then ExecEventAllBody("W_Warcry") -- new warcry millwood warcry mechanic
+            elseif  ((GetEquipType(HAND_RIGHT, 30) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 30) == TRUE) and c_Style == HAND_LEFT_BOTH)  and (GetVariable("MoveDirection") ~= 1 and 0.5 < GetVariable("MoveSpeedLevel")  ) then ExecEventHalfBlend(Event_Endure, ALLBODY)
+                   
             else 
             if IsNodeActive("FourWayAttackStart_CMSG") == FALSE then
                 if 0 <= angle then
