@@ -9555,6 +9555,7 @@ function AttackRightLight2_onUpdate() -- r12
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy2" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_CrossbowStepInFire" b2 = r2 end 
     if sp_m == 687 and env(1116, 705) == TRUE then r1 = "W_CrossbowStepInFire" end
+    if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavy2Start" end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight1", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
@@ -9763,6 +9764,7 @@ function AttackRightLightKick_onUpdate() -- 030100
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b1 = r1 b2 = r2 end
     if sp_m == 107 and GetEquipType(HAND_RIGHT, 32) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavy1End" end
     if sp_m == 263 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" end
+    if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" r2 = "W_AttackRightLightStepSpecial" end
 
     if sp_m == 162 or sp_m == 154 then 
         if 10 > env(2016) then  act(2002, 627) end
@@ -9798,6 +9800,7 @@ function AttackRightLightStep_onUpdate() -- roll r1 030900
     if (sp_m == 642) then r2 = "W_AttackRightHeavy2Start" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightKick" r2 = "W_CrossbowStepInFire" b1 = r1 b2 = r2 end
     if sp_m == 263 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_CrossbowStepInFire" r2 = "W_AttackRightHeavy2Start" end
+    if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStepSpecial" end
 
     local request = GetAttackRequest(FALSE)
     if 0 < env(1001) and sp_m == 85 then
@@ -9985,6 +9988,7 @@ function AttackRightHeavy1Start_onUpdate()  -- r21 charge 030320
     if (sp_m == 677) then r1 = "W_AttackRightLight2" end
     if (sp_m == 677 and IsFeintAttempt()) then r1 = "W_AttackRightLight3" r2 = "W_AttackRightHeavyKick" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightDash" r2 = "W_AttackRightLightStepSpecial" b2 = r2 end
+    if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" end
 
     if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
@@ -10059,6 +10063,7 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end -- doesn't work for 
     if sp_m == 649 or sp_m == 640 then r1 = "W_AttackRightLight3" end
     if sp_m == 610 and IsFeintAttempt() then r1 = "W_AttackRightLight3" end
     if sp_m == 664 then b1 = "W_AttackBothLight2" end
+    if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" end
 
     if sp_m == 672 and env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
     then 
@@ -10737,6 +10742,8 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
     if (env(1108, ACTION_ARM_L1) >= 1) and env(1116, 100770) == TRUE then
         act(2002, 100784)  -- slow down attackspeed 
     end 
+
+    if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" end
     
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
 
