@@ -959,7 +959,7 @@ function GetAttackRequest(is_guard)
             elseif is_arrow == TRUE then
                 act("弓矢スロット選択", 0)
                 return ATTACK_REQUEST_ARROW_FIRE_RIGHT
-            elseif is_crossbow == TRUE then
+            elseif is_crossbow == TRUE and DASH_STARTING_SPEED > GetVariable("MoveSpeedLevelReal") then
                 act("弓矢スロット選択", 0)
                 if style == HAND_LEFT_BOTH then
                     return ATTACK_REQUEST_BOTHLEFT_CROSSBOW
@@ -1040,7 +1040,7 @@ function GetAttackRequest(is_guard)
             return ATTACK_REQUEST_LIGHT_KICK
         elseif is_arrow == TRUE then
             return ATTACK_REQUEST_ARROW_BOTH_RIGHT
-        elseif is_crossbow == TRUE then
+        elseif is_crossbow == TRUE and DASH_STARTING_SPEED > GetVariable("MoveSpeedLevelReal") then
             act("弓矢スロット選択", 0)
             return ATTACK_REQUEST_RIGHT_CROSSBOW
         end
@@ -1087,7 +1087,7 @@ function GetAttackRequest(is_guard)
             else
                 return ATTACK_REQUEST_ARROW_BOTH_RIGHT
             end
-        elseif is_crossbow == TRUE then
+        elseif is_crossbow == TRUE and DASH_STARTING_SPEED > GetVariable("MoveSpeedLevelReal") then
             if is_both == TRUE then
                 if style == HAND_LEFT_BOTH then
                     act("弓矢スロット選択", 1)
@@ -2246,6 +2246,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             if r1 == "W_AttackRightLightDash" then r1 = "W_AttackRightLightDashSpecial"
             end
         end
+
+        if GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW) == TRUE then
+            if r1 == "W_AttackRightLightDash" then r1 = "W_AttackRightHeavyKick"
+            end
+        end
     
         if ExtraR1R2 == TRUE then 
             if r1 == "W_AttackRightLight1" then r1 = "W_Attack2RightLight1" end -- followups for all attacks
@@ -2644,6 +2649,11 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 elseif b1 == "W_AttackBothLight2" then b1 = "W_AttackRightLight2"
                 elseif b1 == "W_AttackBothLight3" then b1 = "W_AttackRightLight3"
                 elseif b1 == "W_AttackBothLightStep" then b1 = "W_AttackRightLightStep"
+                end
+            end
+            
+            if GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_CROSSBOW) == TRUE or GetEquipType(HAND_LEFT_BOTH, WEAPON_CATEGORY_CROSSBOW) == TRUE then
+                if b1 == "W_AttackBothDash" then b1 = "W_AttackBothHeavyKick"
                 end
             end
 
