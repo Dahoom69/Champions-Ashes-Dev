@@ -13022,6 +13022,8 @@ function AttackArrowRightStart_Upper_onUpdate()
             else ExecEventAllBody("W_AttackArrowRightFire") end
             return 
         end
+    elseif env(1107, ACTION_ARM_L2) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight1", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
+        return 
     elseif ArrowLowerCommonFunction(Event_AttackArrowRightStartMirror, lower_state, FALSE, FALSE) == TRUE then
         return 
     else
@@ -13062,8 +13064,10 @@ function AttackArrowRightLoop_Upper_onUpdate()
         else ExecEventAllBody("W_AttackArrowRightFire") end
         return 
     end
-    if ArrowLowerCommonFunction(Event_AttackArrowRightLoop, lower_state, FALSE, TRUE) == TRUE then
-        return 
+    if env(1107, ACTION_ARM_L2) == TRUE and AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight1", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
+        return  
+    elseif ArrowLowerCommonFunction(Event_AttackArrowRightLoop, lower_state, FALSE, TRUE) == TRUE then
+        return
     else
         return 
     end
