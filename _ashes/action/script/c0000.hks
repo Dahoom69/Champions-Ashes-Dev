@@ -13075,7 +13075,10 @@ end
 
 function AttackArrowRightFire_onUpdate()
     act("精密射撃可能か")
-    if ArrowCommonFunction(ALLBODY, TRUE, FALSE) == TRUE then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) >= 1 then
+        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        return 
+    elseif ArrowCommonFunction(ALLBODY, TRUE, FALSE) == TRUE then
         return 
     elseif env(1001) <= 0 then
         return 
@@ -16243,8 +16246,17 @@ function ChargeShotFire_Activate()
 end
 
 function ChargeShotRightFire_onUpdate()
+    local r1 = "W_AttackRightLight1"
+    local r2 = "W_AttackRightHeavy1Start"
+    local b1 = "W_AttackBothLight1"
+    local b2 = "W_AttackBothHeavy1Start"
+
     act("精密射撃可能か")
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
+    
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) >= 1 then
+        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        return 
+    elseif AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         ExecEventAllBody("W_Idle")
