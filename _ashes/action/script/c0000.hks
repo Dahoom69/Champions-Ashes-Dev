@@ -12820,6 +12820,11 @@ function AttackBothLightKick_onUpdate() -- 034100
         then ExecEventAllBody("W_AttackBothLightStep") return end
     end
 
+    if 0 < env(1001) and ((GetEquipType(HAND_RIGHT, 44) and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 44) and c_Style == HAND_LEFT_BOTH)) then
+        if request == ATTACK_REQUEST_ARROW_FIRE_RIGHT or request == ATTACK_REQUEST_ARROW_FIRE_RIGHT2 
+        then ExecEventAllBody("W_AttackBothLightStep") return end
+    end
+
     if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
@@ -12874,6 +12879,13 @@ function AttackBothHeavyKick_onUpdate() -- jump 034600
         if (env(1108, ACTION_ARM_R2) >= 1 ) and env(1116, 100770) == TRUE then
             act(2002, 100780)  -- slow down attackspeed 
         end 
+    end
+
+    local request = GetAttackRequest(FALSE)
+
+    if 0 < env(1001) and ((GetEquipType(HAND_RIGHT, 44) and c_Style == HAND_RIGHT_BOTH) or (GetEquipType(HAND_LEFT, 44) and c_Style == HAND_LEFT_BOTH)) then
+        if request == ATTACK_REQUEST_ARROW_FIRE_RIGHT or request == ATTACK_REQUEST_ARROW_FIRE_RIGHT2 
+        then ExecEventAllBody("W_AttackBothLightStep") return end
     end
 
     if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
