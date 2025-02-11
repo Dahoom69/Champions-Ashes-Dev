@@ -10796,7 +10796,6 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
     if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" end
     
     if 10 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3") 
-
     elseif ((sp_o == 691 or sp_o == 697 or sp_o == 698) and (c_Style == HAND_LEFT or c_Style == HAND_RIGHT)) or ((sp_o == 691 or sp_o == 697) and (sp_m == 672 or sp_m == 688) and c_Style == HAND_RIGHT_BOTH) then -- prosthetic art
         if AttackCommonFunction(r1, "W_AttackRightHeavy2Start", l1, l1, b1, b2, FALSE, TRUE) == TRUE then
             return 
@@ -10809,7 +10808,22 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
         else
             return 
         end   
-    elseif AttackCommonFunction(r1, r2, nil, l1, b1, b2, FALSE, TRUE) == TRUE then
+    elseif  env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, nil, l1, b1, b1, FALSE, TRUE) == TRUE then return 
+    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, nil, l1, b1, b1, FALSE, TRUE) == TRUE then return
+    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, nil, l1, b1, b1, FALSE, TRUE) == TRUE then
+        if env(1106, ACTION_ARM_R1) == TRUE then
+            local staminaRegen = 0
+            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+            elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+            elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
+            elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
+            else staminaRegen = 15 end
+            
+            AddStamina(staminaRegen)
+            act(2002, 621)
+            act(2002, 622)
+        end
         return 
     else
         return 
