@@ -1269,7 +1269,8 @@ function GetAttackRequest(is_guard)
                 return swordartrequest
             end
         elseif HAND_LEFT_BOTH <= style then
-            if sp_o == 262 and c_Style == HAND_LEFT_BOTH then return ExecEventAllBody("W_OneShotNoGenTransStart")
+            if sp_m == 262 and c_Style == HAND_RIGHT_BOTH then return ATTACK_REQUEST_RIGHT_CROSSBOW2
+            elseif sp_o == 262 and c_Style == HAND_LEFT_BOTH then return ATTACK_REQUEST_LEFT_CROSSBOW2
             else return ATTACK_REQUEST_BOTH_HEAVY end 
         else
             return ATTACK_REQUEST_LEFT_HEAVY
