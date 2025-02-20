@@ -2696,7 +2696,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         elseif (sp_m == 57 or sp_m == 609) and r1 == "W_AttackRightLightDashSpecial" then 
             l1 = "W_AttackBothLeftDash"
         elseif l1 == "W_AttackLeftLight1" then
-            l1 = "W_AttackBothLeft1"
+            if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 107) and (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681)) then  l1 = "W_AttackBothLeft2"
+            else l1 = "W_AttackBothLeft1" end
         elseif l1 == "W_AttackLeftLight2" then
             l1 = "W_AttackBothLeft2"
         end
