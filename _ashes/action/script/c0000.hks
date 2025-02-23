@@ -11402,6 +11402,7 @@ function AttackBothLeft1_onUpdate() -- l11
     end
 
     if is_ugh_ps == TRUE then r1 = "W_AttackRightLight3" end
+    if is_ga_ps and IsWarcrySpAtk() == TRUE then r2 = "W_AttackRightHeavy2Start" end
 
     if sp_m == 610 then b1 =  "W_AttackBothHeavySpecial1Start" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
@@ -11508,6 +11509,7 @@ function AttackBothLeft2_onUpdate()  -- l12
      local offhand = "W_AttackLeftHeavy1"
      if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
      if is_ss_ps == TRUE or is_gss_ps == TRUE or is_uga_ps == TRUE or is_ugh_ps == TRUE or is_cs_ps == TRUE then r1 = "W_AttackRightLight3" end
+     if is_ga_ps and IsWarcrySpAtk() == TRUE then r2 = "W_AttackRightHeavy2Start" end
 
      local l1 = "W_AttackBothLeft3"
      if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
