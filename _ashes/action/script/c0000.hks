@@ -9781,6 +9781,7 @@ function AttackRightLightKick_onUpdate() -- 030100
     if sp_m == 262 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" end
     if sp_m == 645 then r2 = "W_AttackRightHeavy2Start" end 
     if sp_m == 664 or sp_m == 621 then r2 ="W_AttackRightLightStepSpecial" end
+    if sp_m == 646 then r2 ="W_AttackRightLightStepSpecial" end
     if sp_m == 649 then r1 = "W_AttackRightLight3" end
     if sp_m == 685 then r2 = "W_AttackRightHeavyKick" end
     if sp_m == 667 then r1 = "W_AttackRightLightDashSpecial" r2 = "W_AttackRightLightStepSpecial" end
@@ -12826,8 +12827,9 @@ function AttackBothLightKick_onUpdate() -- 034100
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
-    if sp_m == 649 then  b2 = "W_AttackBothHeavy1SubStart" end
-    if sp_m == 664 then b2 ="W_AttackBothLightStepSpecial" end
+    if sp_m == 646 then b2 = "W_AttackBothLightStepSpecial" end
+    if sp_m == 649 then b2 = "W_AttackBothHeavy1SubStart" end
+    if sp_m == 664 then b2 = "W_AttackBothLightStepSpecial" end
     if sp_m == 667 then b1 = "W_AttackBothDash" b2 = "W_AttackBothHeavyKickSpecial" end
 
     if ((sp_m == 683 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 683 and c_Style == HAND_LEFT_BOTH)) then 
