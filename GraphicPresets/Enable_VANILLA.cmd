@@ -12,6 +12,5 @@ ECHO.
 ECHO Initiating Preset...
 robocopy ".\Vanilla\map" "..\_ashes\map" "*.tpf*" "*.txt*" "*.btl*" "*.msb*" "*.dcx*" "*.hkxbdt*" "*.hkxbhd*" /e /z /mir >nul 2>nul
 robocopy ".\Vanilla\param\drawparam" "..\_ashes\param\drawparam" "*.gparam*" /e /z /mir >nul 2>nul
-robocopy ".\Vanilla\param\gameparam" "..\_ashes\param\gameparam" "*.parambnd*" /e /z /mir >nul 2>nul
 ECHO READY, Enjoy Ashes!
 PAUSE
