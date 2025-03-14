@@ -10768,6 +10768,9 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
         iG = TRUE
     end
 
+    local l1ps = nil
+    if is_cs_ps == TRUE then l1ps = "W_AttackBothLeft2" end
+
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight3" end
 
     if sp_o == 651 then l1 = "W_AttackLeftHeavySp2" end
@@ -10819,9 +10822,9 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
         else
             return 
         end   
-    elseif  env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, nil, l1, b1, b1, FALSE, TRUE) == TRUE then return 
-    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, nil, l1, b1, b1, FALSE, TRUE) == TRUE then return
-    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, nil, l1, b1, b1, FALSE, TRUE) == TRUE then
+    elseif  env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, l1ps, l1, b1, b1, FALSE, TRUE) == TRUE then return 
+    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == TRUE and AttackCommonFunction(r1, r2, l1ps, l1, b1, b1, FALSE, TRUE) == TRUE then return
+    elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, l1ps, l1, b1, b1, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
@@ -10865,6 +10868,9 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
         l1 = "W_AttackLeftHeavy1" 
         iG = TRUE
     end
+
+    local l1ps = nil
+    if is_cs_ps == TRUE then l1ps = "W_AttackBothLeft2" end
 
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
 
@@ -10913,7 +10919,7 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
 
         if 5 > env(2016) and iG == TRUE then  ExecEventAllBody("W_AttackLeftHeavySp3")
         
-        elseif AttackCommonFunction(r1, r2, nil, l1, b1, b2, FALSE, TRUE) == TRUE then
+        elseif AttackCommonFunction(r1, r2, l1ps, l1, b1, b2, FALSE, TRUE) == TRUE then
             return 
         else
             return 
@@ -10946,6 +10952,9 @@ function AttackLeftHeavy3_onUpdate() -- 032060 AttackLeftHeavy3
         l1 = "W_AttackLeftHeavy1" 
     end
 
+    local l1ps = nil
+    if is_cs_ps == TRUE then l1ps = "W_AttackBothLeft2" end
+
     if sp_o == 225 then l1 = "W_AttackLeftHeavy1" end
 
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
@@ -10969,7 +10978,7 @@ function AttackLeftHeavy3_onUpdate() -- 032060 AttackLeftHeavy3
         b1 = r1 
     end
 
-        if AttackCommonFunction(r1, r2, nil, l1, b1, b2, FALSE, TRUE) == TRUE then
+        if AttackCommonFunction(r1, r2, l1ps, l1, b1, b2, FALSE, TRUE) == TRUE then
             return 
         else
             return 
