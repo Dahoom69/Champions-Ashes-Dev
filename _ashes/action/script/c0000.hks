@@ -9352,7 +9352,7 @@ function AttackRightLight1_onUpdate() -- r11
     local r2 = "W_AttackRightHeavy1SubStart"
     local b2 = "W_AttackBothHeavy1Start"
     local sp_m = env(345 , HAND_RIGHT)
-    if GetEquipType(HAND_RIGHT, 20, 23, 26, 27, 29, 30, 35, 36, 38, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 137 or sp_m == 43  or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then r2 = "W_AttackRightHeavy2Start" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 26, 27, 29, 30, 35, 36, 38, 42) == TRUE or sp_m == 51 or sp_m == 221 or sp_m == 270 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 137 or sp_m == 43  or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then r2 = "W_AttackRightHeavy2Start" end
     if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 55 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 112 or sp_m == 50 or sp_m == 232 or i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
     -- applied to:
@@ -9384,7 +9384,7 @@ function AttackRightLight1_onUpdate() -- r11
     if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft2" end
     if GetEquipType(HAND_LEFT, 48) == TRUE then leftoffhand = "W_AttackLeftHeavy3" end
-    if (sp_m == 658) then r2 = "W_AttackRightHeavy1Start" end
+    if sp_m == 658 then r2 = "W_AttackRightHeavy1Start" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_CrossbowStepInFire" b2 = r2 end 
 
     if is_tb_ps == TRUE then offhand = "W_AttackBothLeft3" end
@@ -9445,6 +9445,7 @@ function Attack2RightLight1_onUpdate() -- r11
 
     if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
     if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
+    if (sp_m == 80) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9521,6 +9522,7 @@ function Attack2RightLight3_onUpdate() -- r13
 
     if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
     if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
+    if (sp_m == 80) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9625,7 +9627,7 @@ function AttackRightLight3_onUpdate() -- r13
 
     local r2 = "W_AttackRightHeavy1SubStart"
     local sp_m = env(345 , HAND_RIGHT)
-    if GetEquipType(HAND_RIGHT, 20, 23, 26, 27, 29, 30, 35, 36, 38, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 137 or sp_m == 43 then r2 = "W_AttackRightHeavy2Start" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 26, 27, 29, 30, 35, 36, 38, 42) == TRUE or sp_m == 51 or sp_m == 221 or sp_m == 270 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 137 or sp_m == 43 then r2 = "W_AttackRightHeavy2Start" end
     if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 55 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 112 or sp_m == 50 or sp_m == 232 or i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
     -- applied to:
