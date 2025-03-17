@@ -10166,6 +10166,7 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030340
     if sp_m == 614 or sp_m == 612 or sp_m == 622 or sp_m == 604 then r1 = "W_AttackRightLight3" end
     if sp_m == 609  or sp_m == 627 or sp_m == 640  then r1 = "W_AttackRightHeavySpecial1Start" end 
 
+    if sp_m == 151 then r1 = "W_AttackRightLight2" end
     if GetEquipType(HAND_RIGHT, 25) == TRUE then r1 =  "W_AttackRightLight2" end
     if GetEquipType(HAND_RIGHT, 35) == TRUE then r1 =  "W_AttackRightLight3" end
 
@@ -10257,7 +10258,7 @@ function AttackRightHeavy2End_onUpdate() -- r22 release end
     local b1 = "W_AttackBothLight1"
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
-    if (sp_m == 605 or sp_m == 620 or sp_m == 614 ) then r1 = "W_AttackRightLight2" end
+    if (sp_m == 151 or sp_m == 605 or sp_m == 620 or sp_m == 614 ) then r1 = "W_AttackRightLight2" end
 
     if sp_m == 264 or sp_m == 609 or sp_m == 612 or sp_m == 622 or sp_m == 627 or sp_m == 640 then r1 = "W_AttackRightLight3" end
 
@@ -11026,7 +11027,7 @@ function AttackBothLight1_onUpdate()  -- r11
     local b2 = "W_AttackBothHeavy1SubStart"
     local sp_o = env(345 , HAND_LEFT)
     local sp_m = env(345 , hand)
-    if GetEquipType(hand, 20, 23, 27, 30, 35, 36, 42) == TRUE or sp_m == 51 or sp_m == 158  or sp_m == 253 or sp_m == 161  or sp_m == 137  or sp_m == 139 or sp_m == 654 or sp_m == 179 or sp_m == 232 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176) or (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 242) then b2 = "W_AttackBothHeavy2Start" end
+    if GetEquipType(hand, 20, 23, 27, 30, 35, 36, 42) == TRUE or sp_m == 51 or sp_m == 158  or sp_m == 253 or sp_m == 161  or sp_m == 137  or sp_m == 139 or sp_m == 654 or sp_m == 151 or sp_m == 179 or sp_m == 232 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176) or (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m == 242) then b2 = "W_AttackBothHeavy2Start" end
     if sp_m == 57 or sp_m == 157 or sp_m == 54 or sp_m == 90 or sp_m == 205 or sp_m == 259 or sp_m == 177 or sp_m == 43 or i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
     if GetEquipType(hand, 32) == TRUE and IsWarcrySpAtk() == TRUE then b2 = "W_AttackBothHeavy2Start" end
 
@@ -12004,6 +12005,7 @@ function AttackBothHeavy2Start_onUpdate()  -- r22 charge roll r2 034340
             r2 = "W_AttackRightHeavy1SubStart"
         end
 
+        if (sp_m == 151 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 151 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_AttackBothLight2" end
         if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
 
         if IsFeintAttempt() and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
@@ -12102,6 +12104,7 @@ function AttackBothHeavy2End_onUpdate()  -- r22 release end 034341
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then b2 = "W_AttackBothHeavy1SubStart" end
 
+    if (sp_m == 151 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 151 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_AttackBothLight2" end
     if GetEquipType(HAND_RIGHT, 25) == TRUE then b1 =  "W_AttackBothLight2" end
 
     if IsFeintAttempt() and i1BB == FALSE then b1 =  "W_AttackBothLight2" end
