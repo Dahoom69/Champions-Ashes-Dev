@@ -312244,7 +312244,7 @@ null
             <hkparam name="animationName">a651_030100</hkparam>
             <hkparam name="triggers">null</hkparam>
             <hkparam name="userPartitionMask">0</hkparam>
-            <hkparam name="cropStartAmountLocalTime">0.2</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.6</hkparam>
             <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
             <hkparam name="startTime">0.0</hkparam>
             <hkparam name="playbackSpeed">1.0</hkparam>
