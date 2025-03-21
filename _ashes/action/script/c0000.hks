@@ -729,8 +729,8 @@ function GetWeaponChangeType(hand)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 651 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 651 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -764,8 +764,8 @@ function GetHandChangeType(hand)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 651 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 651 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -1747,8 +1747,8 @@ function IsEnableGuard()
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 651 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 651 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -4518,8 +4518,8 @@ function ExecWeaponChange(blend_type)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 651 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 651 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -4565,8 +4565,8 @@ function ExecHandChange(hand, is_force, blend_type)
     then i1BB = TRUE 
     else i1BB = FALSE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 651 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 651 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
@@ -6298,8 +6298,8 @@ function IdleCommonFunction()
     if (sp_m == 195 or sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 604 or sp_m == 605 or sp_m == 606 or sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 642 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 664 or sp_m == 667 ) 
     then i1BB = TRUE end
 
-    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
-    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
+    if ((sp_m == 698 or sp_m == 699 or sp_m == 700 or sp_m == 651 or sp_m == 80 or sp_m == 128 or sp_m == 57 or sp_m == 123 or sp_m == 72) and c_Style ~= HAND_LEFT_BOTH) 
+    or ((sp_o == 698 or sp_o == 699 or sp_o == 700 or sp_o == 651 or sp_o == 80 or sp_o == 128 or sp_o == 57 or sp_o == 123 or sp_o == 72) and c_Style == HAND_LEFT_BOTH) 
     then ExtraR1R2 = TRUE 
     else ExtraR1R2 = FALSE end
 
