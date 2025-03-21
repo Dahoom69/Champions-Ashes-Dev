@@ -9827,6 +9827,7 @@ function AttackRightLightStep_onUpdate() -- roll r1 030900
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightKick" r2 = "W_CrossbowStepInFire" b1 = r1 b2 = r2 end
     if sp_m == 263 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_CrossbowStepInFire" r2 = "W_AttackRightHeavy2Start" end
     if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStepSpecial" end
+    if sp_m == 651 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end
 
     local request = GetAttackRequest(FALSE)
     if 0 < env(1001) and sp_m == 85 then
@@ -9931,6 +9932,7 @@ function AttackRightLightDash_onUpdate() -- run r1 030500
     if IsFeintAttempt() and sp_m == 685 then r1 = "W_AttackRightLight3" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight2" r2 = "W_AttackRightLightStepSpecial" b1 = r1 b2 = r2 end
     if sp_m == 263 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight3" end
+    if sp_m == 651 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end
 
     if sp_m == 672 and c_Style ~= HAND_LEFT_BOTH then
         if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy2Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackRightLight1", "W_AttackRightHeavy2Start", FALSE, TRUE) == TRUE then
