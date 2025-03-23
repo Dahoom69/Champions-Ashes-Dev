@@ -10118,9 +10118,13 @@ function AttackRightHeavy1End_onUpdate() -- r21 release end -- doesn't work for 
     local b2 = "W_AttackBothHeavy2Start"
 
     local sp_m = env(345 , HAND_RIGHT)
-    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35, 42) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
+    if GetEquipType(HAND_RIGHT, 20, 23, 25, 26, 29, 30, 32, 33, 35) == TRUE or sp_m == 51 or sp_m == 80 or sp_m == 158 or sp_m == 151 or sp_m == 166 or sp_m == 179 or sp_m == 137 or sp_m == 43 then r1 = "W_AttackRightLight2" end
     if (GetEquipType(HAND_RIGHT, 38) == TRUE and sp_m ~= 179) or sp_m == 59 then r1 = "W_AttackRightLight3" end
     if IsFeintAttempt() or i1BB == TRUE or sp_m == 57 or sp_m == 90 or sp_m == 53 then r1 = "W_AttackRightLight1" end
+
+    if GetEquipType(HAND_RIGHT, 42) == TRUE then r1 = "W_AttackRightLight2" end -- all fists
+    if IsFeintAttempt() and (sp_m == 146 or sp_m == 235) then r1 = "W_AttackRightLight1" end -- all claws
+    if sp_m == 656 then r1 = "W_AttackRightLight1" end -- andre
     
     if sp_m == 643 or sp_m == 667 then r1 = "W_AttackRightLight2" end
     if sp_m == 614 or sp_m == 609 or sp_m == 612 or sp_m == 622 or sp_m == 627  or sp_m == 646 or sp_m == 621 then r1 = "W_AttackRightHeavySpecial1Start" end
@@ -10152,6 +10156,7 @@ function Attack2RightHeavy1End_onUpdate() -- r21 release end - 030323
     local b2 = "W_Attack2BothHeavy2Start"
 
     if sp_m == 80 then r1 = "W_Attack2RightLight2" end
+    if sp_m == 651 then r1 = "W_Attack2RightLight2" end
 
     if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
     if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
@@ -10187,6 +10192,13 @@ function AttackRightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030340
     if IsFeintAttempt() and i1BB == FALSE and sp_m == 179 or sp_m == 107 or sp_m == 261 then  r1 =  "W_AttackRightLight2" end
     if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90 or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
     if IsFeintAttempt() and i1BB == FALSE and sp_m == 51 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
+
+    if GetEquipType(HAND_RIGHT, 42) == TRUE then r1 = "W_AttackRightLight2" end -- all fists
+    if GetEquipType(HAND_RIGHT, 42) == TRUE and IsFeintAttempt() then r1 = "W_AttackRightLight1" end -- all fists
+    if GetEquipType(HAND_RIGHT, 42) == TRUE and (sp_m == 146 or sp_m == 235) then r1 = "W_AttackRightLight1" end -- all claws
+    if GetEquipType(HAND_RIGHT, 42) == TRUE and IsFeintAttempt() and (sp_m == 146 or sp_m == 235) then r1 = "W_AttackRightLight2" end -- all claws
+    if sp_m == 656 then r1 = "W_AttackRightLight1" end -- andre
+
 
     if sp_m == 685 and IsFeintAttempt() then r1 = "W_AttackRightLight3" end
     if sp_m == 685 and not IsFeintAttempt() then r1 = "W_AttackRightLight2" end
@@ -10285,6 +10297,12 @@ function AttackRightHeavy2End_onUpdate() -- r22 release end
     if IsFeintAttempt() and i1BB == FALSE and (GetEquipType(HAND_RIGHT, 25, 28, 30, 32, 33) == TRUE or sp_m == 50 or sp_m == 90  or sp_m == 57) then  r1 =  "W_AttackRightLight1" end
     if IsFeintAttempt() and i1BB == FALSE and sp_m == 51 or (GetEquipType(HAND_RIGHT, 25) == TRUE and sp_m == 176)  then  r1 =  "W_AttackRightLight2" end
 
+    if GetEquipType(HAND_RIGHT, 42) == TRUE then r1 = "W_AttackRightLight2" end -- all fists
+    if GetEquipType(HAND_RIGHT, 42) == TRUE and IsFeintAttempt() then r1 = "W_AttackRightLight1" end -- all fists
+    if GetEquipType(HAND_RIGHT, 42) == TRUE and (sp_m == 146 or sp_m == 235) then r1 = "W_AttackRightLight1" end -- all claws
+    if GetEquipType(HAND_RIGHT, 42) == TRUE and IsFeintAttempt() and (sp_m == 146 or sp_m == 235) then r1 = "W_AttackRightLight2" end -- all claws
+    if sp_m == 656 then r1 = "W_AttackRightLight1" end -- andre
+
     local is_pyro = FALSE
     if (sp_m == 149 or sp_m == 239) then is_pyro = TRUE end
     if sp_m == 215 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" end
@@ -10316,6 +10334,8 @@ function Attack2RightHeavy2End_onUpdate() -- r22 release end 030343
     local r1 = "W_Attack2RightLight1"
     local b1 = "W_Attack2BothLight1"
     local b2 = "W_Attack2BothHeavy1Start"
+
+    if sp_m == 651 then r1 = "W_Attack2RightLight2" end
 
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
