@@ -9364,13 +9364,14 @@ function AttackRightLight1_onUpdate() -- r11
     if GetEquipType(HAND_RIGHT, 32) == TRUE and IsWarcrySpAtk() == TRUE then r2 = "W_AttackRightHeavy2Start" end
 
     local sp_o = env(345 , HAND_LEFT)
+    local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
     if (sp_o == 656) then leftoffhand = "W_AttackLeftHeavy2" end
+    if (sp_o == 651) then leftoffhand = "W_AttackLeftHeavySp2" offhand = leftoffhand  end
 
     local is_Am = GetEquipType(HAND_RIGHT, 30) -- powerstance
     local is_Ao = GetEquipType(HAND_LEFT, 30, 33) 
 
-    local offhand = "W_AttackLeftLight1"
     if (is_Am == TRUE and is_Ao == TRUE) then offhand = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 23) == TRUE and GetEquipType(HAND_LEFT, 23)  == TRUE) then offhand = "W_AttackBothLeft2" end     
     if is_gss_ps == TRUE then offhand = "W_AttackBothLeft2" end  
@@ -9442,6 +9443,9 @@ function Attack2RightLight1_onUpdate() -- r11
     local b2 = "W_Attack2BothHeavy1Start"
     local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
+    local sp_o = env(345 , HAND_LEFT)
+
+    if sp_o == 651 then leftoffhand = "W_AttackLeftHeavySp2" offhand = leftoffhand end
 
     if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
     if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r2 = "W_Attack2RightHeavy2Start" end 
@@ -9479,6 +9483,8 @@ function Attack2RightLight2_onUpdate() -- r12
     local b2 = "W_Attack2BothHeavy1Start"
     local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
+    local sp_o = env(345 , HAND_LEFT)
+    if (sp_o == 651) then leftoffhand = "W_AttackLeftHeavySp3" offhand = leftoffhand  end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -9556,13 +9562,14 @@ function AttackRightLight2_onUpdate() -- r12
     local sp_m = env(345 , HAND_RIGHT)
 
     local sp_o = env(345 , HAND_LEFT)
+    local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
     if (sp_o == 656) then leftoffhand = "W_AttackLeftHeavy3" end
+    if (sp_o == 651) then leftoffhand = "W_AttackLeftHeavySp3" offhand = leftoffhand  end
     if sp_o == 225 then leftoffhand = "W_AttackLeftHeavy2" end
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
 
-    local offhand = "W_AttackLeftLight1"
     if is_axe_ps == TRUE then offhand = "W_AttackBothLeft3" end
     if is_ss_ps == TRUE or is_gss_ps == TRUE or is_uga_ps == TRUE or is_ugh_ps == TRUE or is_cs_ps == TRUE then offhand = "W_AttackBothLeft3" end
     if  (   (GetEquipType(HAND_RIGHT, 26) == TRUE and sp_m ~= 162 and sp_m ~= 161 and sp_m ~= 253) and (GetEquipType(HAND_LEFT, 25, 26) == TRUE and (sp_o ~= 161 and sp_o ~= 253))) then offhand = "W_AttackBothLeft3" end
@@ -10882,6 +10889,13 @@ function AttackLeftHeavy2_onUpdate() -- 032030 AttackLeftHeavy2
     if GetEquipType(HAND_LEFT, 48) == TRUE and GetEquipType(HAND_RIGHT, 48) == TRUE  then r1 = "W_AttackRightLight2" end
 
     if sp_m == 123 then r1 = "W_Attack2RightLight2" end
+
+    if sp_o == 651 then 
+        r1 = "W_AttackRightLight3" 
+        if GetEquipType(HAND_RIGHT, 26, 27, 35) == TRUE then r1 = "W_AttackRightLight1" end
+        if sp_m == 672 then r1 = "W_AttackRightLight1" end
+        if ExtraR1Only == TRUE or ExtraR1R2 == TRUE then r1 = "W_Attack2RightLight3" end
+    end
 
     if sp_o == 651 or (sp_o == 687 and env(1116, 705) == TRUE) then l1 = "W_AttackLeftHeavySp3" end
     if sp_o == 691 or sp_o == 697 or sp_o == 698 then 
