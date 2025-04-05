@@ -10087,16 +10087,22 @@ end
 
 function Attack2RightHeavy1Start_onUpdate()  -- r21 charge 030322
     local sp_m = env(345 , HAND_RIGHT)
-    
+    local sp_o = env(345 , HAND_LEFT)
     local r1 = "W_Attack2RightLight1"
     local r2 = "W_Attack2RightHeavy2Start"
     local b2 = "W_Attack2BothHeavy2Start"
     local b1 = "W_Attack2BothLight1"
+    local offhand = "W_AttackLeftLight1"
+    local leftoffhand = "W_AttackLeftHeavy1"
 
     if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
     if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
 
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    if sp_m == 651 then r1 = "W_Attack2RightLight2" end
+    if sp_m == 651 and sp_o == 651 then leftoffhand = "W_AttackLeftHeavySp3" offhand = leftoffhand end
+    if IsFeintAttempt() and sp_m == 651 then r1 = "W_Attack2RightLight3" end
+
+    if AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_R2) <= 0 and env(1116, 100280) == TRUE then
         ExecEventAllBody("W_Attack2RightHeavy1End")
@@ -10150,18 +10156,23 @@ end
 
 function Attack2RightHeavy1End_onUpdate() -- r21 release end - 030323
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local r1 = "W_Attack2RightLight1"
     local b1 = "W_Attack2BothLight1"
     local r2 = "W_Attack2RightHeavy2Start"
     local b2 = "W_Attack2BothHeavy2Start"
+    local offhand = "W_AttackLeftLight1"
+    local leftoffhand = "W_AttackLeftHeavy1"
 
     if sp_m == 80 then r1 = "W_Attack2RightLight2" end
     if sp_m == 651 then r1 = "W_Attack2RightLight2" end
+    if sp_m == 651 and sp_o == 651 then leftoffhand = "W_AttackLeftHeavySp3" offhand = leftoffhand end
+    if IsFeintAttempt() and sp_m == 651 then r1 = "W_Attack2RightLight3" end
 
     if (sp_m == 72) and c_Style ~= HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
     if (sp_o == 72) and c_Style == HAND_LEFT_BOTH then r1 = "W_Attack2RightLight2" end 
 
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -10258,6 +10269,9 @@ function Attack2RightHeavy2Start_onUpdate()  -- r22 charge -- roll r2 030342
     local r1 = "W_Attack2RightLight1"
     local b1 = "W_Attack2BothLight1"
     local b2 = "W_Attack2BothHeavy1Start"
+
+    if sp_m == 651 then r1 = "W_Attack2RightLight2" end
+    if sp_m == 651 and sp_o == 651 then leftoffhand = "W_AttackLeftHeavySp3" offhand = leftoffhand end
     
     if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
