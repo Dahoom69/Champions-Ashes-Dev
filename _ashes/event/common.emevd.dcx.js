@@ -4,7 +4,7 @@
 // @game    DarkSouls3
 // @string    ""
 // @linked    []
-// @version    3.4.2
+// @version    3.4
 // ==/EMEVD==
 
 $Event(0, Default, function() {
@@ -160,6 +160,7 @@ $Event(0, Default, function() {
     InitializeEvent(0, 234, 0);
     InitializeEvent(0, 236, 0);
     InitializeEvent(0, 90009, 0);
+    InitializeEvent(0, 237, 0);
 });
 
 $Event(50, Default, function() {
@@ -328,6 +329,11 @@ L3:
     RestartEvent();
 });
 
+$Event(237, Default, function(){
+    SetSpEffect(10000, 48);
+    SetSpEffect(10000, 49);
+    EndEvent();
+});
 $Event(250, Default, function(X0_4, X4_4, X8_4) {
     EndIf(ThisEventSlot());
     WaitFor(EventFlag(X4_4) && !PlayerIsNotInOwnWorld());
