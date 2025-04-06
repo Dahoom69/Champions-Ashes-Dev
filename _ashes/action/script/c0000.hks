@@ -16,6 +16,7 @@ DUEL_MODE_RESTORATION_TRIGGER_EFFECT = 100852
 DUEL_MODE_TEARS_EFFECT = 635
 HITSTUN_RING_EFFECT = 100853
 JUSTFRAME_RING_EFFECT = 100854
+COUNTER_RING_EFFECT = 100855
 -- =================================[ Globals end ]=================================
 
 
@@ -38,7 +39,8 @@ function DBSetPhantomColor(colorString)
         DBLUE = 5050082,
         YELLOW = 5050085,
         PURPLE = 5050088,
-        BLACK = 5050043
+        BLACK = 5050043,
+        GREEN = 5050624
     }
     act(2002, collorToSpEffect[colorString])
 end
@@ -22304,6 +22306,7 @@ function Update()
     UpdateShoulderTwist()
     UpdateMomentumMultiplier()
     UpdateWeaponAttackSpeedMultiplier()
+    UpdateCounterRingEffect()
     UpdateWristTwistNew()
     UpdateDuelMode()
     UpdateSunlightBlade()
@@ -22364,6 +22367,14 @@ function UpdateWeaponAttackSpeedMultiplier()
     elseif (env(1116, 100779) == TRUE and env(1116, 100771) == TRUE) or (env(1116, 112045000) == TRUE and env(1116, 100771) == TRUE) then SetVariable("WeaponAnimSpeed", 1.222) -- old hunter bone effect
 
     else SetVariable("WeaponAnimSpeed", 1.0)    end
+end
+
+function UpdateCounterRingEffect()
+    if env(1116, COUNTER_RING_EFFECT) == TRUE then
+        if env(1116, 31) == FALSE then DBSetPhantomColor("RESET")  
+        elseif env(1116, 31) == TRUE then DBSetPhantomColor("GREEN") 
+        else DBSetPhantomColor("RESET") end 
+    end
 end
 
 function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
