@@ -11749,7 +11749,8 @@ function AttackBothLeftDash_onUpdate() -- bothdashleft run l1 run 33500
     end
 
     if (GetEquipType(HAND_RIGHT, 25) == TRUE and GetEquipType(HAND_LEFT, 23, 25)  == TRUE) then l1 = "W_AttackBothLeft3" end  
-    if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28)  == TRUE) then l1 = "W_AttackRightBackstep" end  
+    if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28) == TRUE) then l1 = "W_AttackRightBackstep" end  
+    if ((GetEquipType(HAND_RIGHT, 28) == TRUE and (sp_m == 51 or sp_m == 166)) and (GetEquipType(HAND_LEFT, 28) == TRUE and (sp_o == 51 or sp_o == 166))) then l1 = "W_AttackBothLeft1" end  
 
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
 
