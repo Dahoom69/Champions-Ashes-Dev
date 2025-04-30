@@ -8027,7 +8027,8 @@ function ArrowLowerCommonFunction(event, lower_state, to_idle_on_cancel, is_fire
             if style == HAND_LEFT_BOTH then
                 hand = HAND_LEFT
             end
-            if env(225, hand) ~= WEAPON_CATEGORY_LARGE_ARROW then
+            --if env(225, hand) ~= WEAPON_CATEGORY_LARGE_ARROW then -- greatbow movement
+            if (env(345 , hand) ~= 83) and (env(345 , hand) ~= 244) then
                 if MoveStart(LOWER, Event_Move, FALSE) == TRUE then
                     if is_fire_upper_on_move == TRUE then
                         ExecEventHalfBlend(event, UPPER)
@@ -13108,7 +13109,7 @@ function AttackArrowRight_Activate()
     return 
 end
 
-function AttackArrowRightStart_Upper_onUpdate()
+function AttackArrowRightStart_Upper_onUpdate() -- 035500
     local style = c_Style
     local hand = HAND_RIGHT
     if style == HAND_LEFT_BOTH then
@@ -13116,10 +13117,14 @@ function AttackArrowRightStart_Upper_onUpdate()
     end
 
     local is_bow = GetEquipType(hand, WEAPON_CATEGORY_SMALL_ARROW)
+    local is_gbow = GetEquipType(hand, WEAPON_CATEGORY_LARGE_ARROW)
 
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
-    if ArrowCommonFunction(blend_type, FALSE, FALSE) == TRUE then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) > 0 then
+        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        return 
+    elseif ArrowCommonFunction(blend_type, FALSE, FALSE) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         if env("弓矢スロット取得", 0) == 0 then
@@ -13150,7 +13155,7 @@ function AttackArrowRightStart_Upper_onUpdate()
     end
 end
 
-function AttackArrowRightLoop_Upper_onUpdate()
+function AttackArrowRightLoop_Upper_onUpdate() -- 035510
     local style = c_Style
     local hand = HAND_RIGHT
     if style == HAND_LEFT_BOTH then
@@ -13165,7 +13170,10 @@ function AttackArrowRightLoop_Upper_onUpdate()
     if lower_state == LOWER_IDLE then
         act("ロックオン時システム旋回不可角度", 90, 90)
     end
-    if ArrowCommonFunction(blend_type, FALSE, FALSE) == TRUE then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) > 0 then
+        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        return     
+    elseif ArrowCommonFunction(blend_type, FALSE, FALSE) == TRUE then
         return 
     elseif env(1001) < STAMINA_MINIMUM then 
         if is_bow == TRUE then ExecEventHalfBlend(Event_AttackCrossbowRightEmpty, ALLBODY) 
@@ -13192,9 +13200,9 @@ function AttackArrowRightLoop_Upper_onUpdate()
     end
 end
 
-function AttackArrowRightFire_onUpdate()
+function AttackArrowRightFire_onUpdate() -- 034000
     act("精密射撃可能か")
-    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) >= 1 then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) > 0 then
         ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
         return 
     elseif ArrowCommonFunction(ALLBODY, TRUE, FALSE) == TRUE then
@@ -13227,7 +13235,7 @@ function AttackArrowRightFire_onUpdate()
     end
 end
 
-function AttackArrowRightFireDash_onUpdate()
+function AttackArrowRightFireDash_onUpdate() -- 034500
     act("精密射撃可能か")
     if ArrowCommonFunction(ALLBODY, TRUE, TRUE) == TRUE then
         return 
@@ -13238,7 +13246,7 @@ function AttackArrowRightFireDash_onUpdate()
     end
 end
 
-function AttackArrowRightFireStep_onUpdate()
+function AttackArrowRightFireStep_onUpdate() -- 034900
     act("精密射撃可能か")
     if ArrowCommonFunction(ALLBODY, TRUE, TRUE) == TRUE then
         return 
@@ -16203,7 +16211,7 @@ function ChargeShotRight_Upper_Activate()
     return 
 end
 
-function ChargeShotRightStart_Upper_onUpdate()
+function ChargeShotRightStart_Upper_onUpdate() -- 038100
 
     local hand = HAND_RIGHT
     local style = c_Style
@@ -16260,6 +16268,8 @@ function ChargeShotRightStart_Upper_onUpdate()
             elseif env("アニメ終了か", 1) == TRUE then
                 ExecEventHalfBlend(Event_ChargeShotRightLoop, ALLBODY)
                 return 
+            elseif HalfBlendLowerCommonFunction(Event_ChargeShotRightLoop, lower_state, FALSE, FALSE) == TRUE then
+                return 
             else
                 return 
             end
@@ -16273,6 +16283,7 @@ function ChargeShotRightLoop_Upper_onUpdate()
     if lower_state == LOWER_IDLE then
         act("ロックオン時システム旋回不可角度", 90, 90)
     end
+    
     if SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
         return 
     elseif env(1108, ACTION_ARM_L2) <= 0 then
@@ -16297,9 +16308,10 @@ function ChargeShotRightLoop_Upper_onUpdate()
     end
 end
 
-function ChargeShotRightHoldStart_Upper_onUpdate()
+function ChargeShotRightHoldStart_Upper_onUpdate() -- 038140
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
+    
     if SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
@@ -16321,13 +16333,16 @@ function ChargeShotRightHoldStart_Upper_onUpdate()
     end
 end
 
-function ChargeShotRightHoldLoop_Upper_onUpdate()
+function ChargeShotRightHoldLoop_Upper_onUpdate() -- 038150
     act("精密射撃可能か")
     local blend_type, lower_state = GetHalfBlendInfo()
     if lower_state == LOWER_IDLE then
         act("ロックオン時システム旋回不可角度", 90, 90)
     end
-    if SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) > 0 then
+        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        return 
+    elseif SwordArtsChargeShotCommonFunction(blend_type) == TRUE then
         return 
     elseif env(1001) < STAMINA_MINIMUM then 
          ExecEventAllBody("W_ChargeShotRightFire") 
@@ -16340,6 +16355,7 @@ function ChargeShotRightHoldLoop_Upper_onUpdate()
         ExecEventAllBody("W_ChargeShotRightFire")
         return 
     end
+
     if HalfBlendLowerCommonFunction(Event_ChargeShotRightHoldLoop, lower_state, FALSE, FALSE) == TRUE then
         return 
     else
@@ -16347,12 +16363,17 @@ function ChargeShotRightHoldLoop_Upper_onUpdate()
     end
 end
 
-function ChargeShotRightEnd_Upper_onUpdate()
+function ChargeShotRightEnd_Upper_onUpdate() -- 038120
     act("精密射撃可能か")
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE) == TRUE then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) > 0 then
+        ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
+        return     
+    elseif AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, FALSE) == TRUE then
         return 
     elseif env("アニメ終了か", 1) == TRUE then
         ExecEventAllBody("W_Idle")
+        return 
+    elseif HalfBlendLowerCommonFunction(Event_ChargeShotRightLoop, lower_state, FALSE, FALSE) == TRUE then
         return 
     else
         return 
@@ -16372,7 +16393,7 @@ function ChargeShotRightFire_onUpdate()
 
     act("精密射撃可能か")
     
-    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) >= 1 then
+    if env(301, 0) == TRUE and env(1108, ACTION_ARM_L2) > 0 then
         ExecEventHalfBlend(Event_ChargeShotRightStart, ALLBODY)
         return 
     elseif AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
