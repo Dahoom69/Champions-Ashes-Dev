@@ -9514,7 +9514,7 @@ function Attack2RightLight2_onUpdate() -- r12
     end
 end
 
-function Attack2RightLight3_onUpdate() -- r13
+function Attack2RightLight3_onUpdate() -- r13 030022
     local sp_m = env(345 , HAND_RIGHT)
     local r1 = "W_Attack2RightLight2"
     local b1 = "W_Attack2BothLight2"
@@ -11178,7 +11178,7 @@ function AttackBothLight1_onUpdate()  -- r11
     end
 end
 
-function Attack2BothLight1_onUpdate() -- r11
+function Attack2BothLight1_onUpdate() -- r11 034002
     local sp_m = env(345 , HAND_RIGHT)
     local r1 = "W_Attack2RightLight2"
     local b1 = "W_Attack2BothLight2"
@@ -11213,7 +11213,7 @@ function Attack2BothLight1_onUpdate() -- r11
     end
 end
 
-function Attack2BothLight2_onUpdate() -- r12
+function Attack2BothLight2_onUpdate() -- r12 034012
     local sp_m = env(345 , HAND_RIGHT)
     local r1 = "W_Attack2RightLight3"
     local b1 = "W_Attack2BothLight3"
@@ -11248,7 +11248,7 @@ function Attack2BothLight2_onUpdate() -- r12
     end
 end
 
-function Attack2BothLight3_onUpdate() -- r13
+function Attack2BothLight3_onUpdate() -- r13 034022
     local sp_m = env(345 , HAND_RIGHT)
     local r1 = "W_Attack2RightLight2"
     local b1 = "W_Attack2BothLight2"
