@@ -9793,6 +9793,7 @@ function AttackRightLightKick_onUpdate() -- 030100
     if sp_m == 68 and c_Style ~= HAND_LEFT_BOTH then r2 = "W_AttackRightHeavyKick" end
     if sp_m == 262 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLightStep" end
     if sp_m == 645 then r2 = "W_AttackRightHeavy2Start" end 
+    if sp_m == 261 then r2 = "W_AttackRightHeavy2End" end 
     if sp_m == 664 or sp_m == 621 then r2 ="W_AttackRightLightStepSpecial" end
     if sp_m == 646 then r2 ="W_AttackRightLightStepSpecial" end
     if sp_m == 649 then r1 = "W_AttackRightLight3" end
@@ -12891,6 +12892,7 @@ function AttackBothLightKick_onUpdate() -- 034100
     if GetEquipType(HAND_RIGHT, 30) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
     if GetEquipType(HAND_LEFT, 30) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy2Start" end
 
+    if (sp_m == 261 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 261 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2End" end 
     if sp_m == 107 and GetEquipType(HAND_RIGHT, 32) and c_Style ~= HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy1Start" end
     if sp_o == 107 and GetEquipType(HAND_LEFT, 32) and c_Style == HAND_LEFT_BOTH then b2 = "W_AttackBothHeavy1Start" end
 
