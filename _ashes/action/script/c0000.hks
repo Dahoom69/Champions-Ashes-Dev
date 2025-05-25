@@ -8441,8 +8441,8 @@ function BackStep_onUpdate()
         br2 = "W_AttackBothLightStepSpecial"
     end
 
-    if ((sp_m == 689 or sp_m == 690) and c_Style == HAND_RIGHT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)  then  br1 = "W_AttackBothDashSpecial" end
-    if ((sp_m == 689 or sp_m == 690)) then  rr1 = "W_AttackRightLightDashSpecial" end
+    if ((sp_m == 689 or sp_m == 690 or sp_m == 700) and c_Style == HAND_RIGHT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)  then  br1 = "W_AttackBothDashSpecial" end
+    if ((sp_m == 689 or sp_m == 690 or sp_m == 700)) then  rr1 = "W_AttackRightLightDashSpecial" end
 
 
     if (sp_m == 681 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 681 and c_Style == HAND_LEFT_BOTH)  then  br1 = "W_AttackBothDashSpecial" end
@@ -9654,7 +9654,7 @@ function AttackRightLight3_onUpdate() -- r13
     if (sp_m == 264 or sp_m == 164 or sp_m == 101 or sp_m == 195 or sp_m == 604 or sp_m == 605 or sp_m == 606 or  sp_m == 609 or sp_m == 610 or sp_m == 612 or sp_m == 622 or sp_m == 624 or sp_m == 613 or sp_m == 614 or sp_m == 620 or sp_m == 621  or sp_m == 624 or sp_m == 627 or sp_m == 640 or sp_m == 641 or sp_m == 643 or sp_m == 645 or sp_m == 646 or sp_m == 647 or sp_m == 649 or sp_m == 667) 
         then r1 = "W_AttackRightHeavySpecial1Start" end
 
-    if sp_m == 689 or sp_m == 690 then r1 = "W_AttackRightHeavyWepBroken1Start" end -- eleonora
+    if sp_m == 689 or sp_m == 690 or sp_m == 700 then r1 = "W_AttackRightHeavyWepBroken1Start" end -- eleonora
     if sp_m == 264 then r2 = "W_AttackRightHeavy2Start" end
         
     local is_Am = GetEquipType(HAND_RIGHT, 30) -- powerstance 
@@ -10590,7 +10590,7 @@ function AttackRightHeavyWepBroken1Start_onUpdate() -- r14 eleonora
     local offhand = "W_AttackLeftHeavy1"
     local l1 = "W_AttackLeftLight1"
     if is_tb_ps == TRUE then offhand = "W_AttackBothLeft3" l1 = "W_AttackBothLeft3" end
-    if sp_m == 689 or sp_m == 690 then -- eleonora
+    if sp_m == 689 or sp_m == 690 or sp_m == 700 then -- eleonora
         r1 = "W_AttackRightBackstep" -- r15
         if env(1116, 100283) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", l1, offhand, "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return
@@ -10727,7 +10727,7 @@ function AttackRightBackstep_onUpdate() -- r15 030920
     end
 
     if i1BB == TRUE then r2 = "W_AttackRightHeavy1SubStart" end
-    if sp_m == 689 or sp_m == 690 then r1 = "W_AttackRightLight1" end
+    if sp_m == 689 or sp_m == 690 or sp_m == 700 then r1 = "W_AttackRightLight1" end
 
         if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             return
@@ -11385,7 +11385,7 @@ function AttackBothLight3_onUpdate()  -- r13 034020
     end
     if sp_m == 610 or sp_m == 667 then l1 = "W_AttackBothLeft3" end
     if sp_m == 664 then b1 = "W_AttackBothLight1" end
-    if sp_m == 689 or sp_m == 690 then b1 = "W_AttackBothHeavyWepBroken1Start" end -- (sp_m == 689 or sp_m == 690 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)
+    if sp_m == 689 or sp_m == 690 or sp_m == 700 then b1 = "W_AttackBothHeavyWepBroken1Start" end -- (sp_m == 689 or sp_m == 690 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 689 and c_Style == HAND_LEFT_BOTH)
 
     if sp_m == 232 or sp_m == 242 then b1 = "W_AttackBothLight1" end
     if env(1116, 100440) == TRUE then
@@ -12476,7 +12476,7 @@ function AttackBothHeavyWepBroken1Start_onUpdate()  -- r14 034325
         else
             return
         end
-    elseif  ((sp_m == 689 or sp_m == 690) and c_Style == HAND_RIGHT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH) then -- eleonora
+    elseif  ((sp_m == 689 or sp_m == 690 or sp_m == 700) and c_Style == HAND_RIGHT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) then -- eleonora
             b1 = "W_AttackBothBackstep" -- r15
                 if env(1116, 100283) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
                     return 
@@ -13074,7 +13074,7 @@ function AttackBothBackstep_onUpdate() -- r15 eleonora
     end
 
     local b1 = "W_AttackBothLight1"
-    if ((sp_m == 689 or sp_m == 690) and c_Style == HAND_RIGHT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH) then 
+    if ((sp_m == 689 or sp_m == 690 or sp_m == 700) and c_Style == HAND_RIGHT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
         b1 = "W_AttackBothHeavyWepBroken1Start" end -- eleonora r14
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
@@ -13842,7 +13842,7 @@ function StepInRightStart_Upper_onUpdate() -- 036000
         end
     end
 
-    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
         r1 = "W_AttackRightHeavyWepBroken1Start" 
         b1 = "W_AttackBothHeavyWepBroken1Start"
         r2 = "W_AttackRightHeavy1Start" 
@@ -15110,7 +15110,7 @@ function StampedeRightStart_onUpdate() -- 037400
         end
     end
        
-    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
         r1 = "W_AttackRightLight1"
         b1 = "W_AttackBothLight1"
 
@@ -15788,7 +15788,7 @@ function Warcry_onUpdate() -- 037670 UT WA
         r2 = "W_AttackRightHeavy2Start"
     end
 
-    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
         r2 = "W_WarcryCancel" 
         b2 = "W_WarcryCancel" 
     end
@@ -16223,7 +16223,7 @@ function ChargeShotRightStart_Upper_onUpdate() -- 038100
     end
     local sp_m = env(345 , hand)
 
-    if sp_m == 689 or sp_m == 690 then
+    if sp_m == 689 or sp_m == 690 or sp_m == 700 then
         local r1 = "W_AttackRightLight1"
         local r2 = "W_AttackRightHeavy1Start"
         local b1 = "W_AttackBothLight1"
@@ -16884,7 +16884,7 @@ function RandomOneShotNext1_onUpdate() -- 039110
     local b1 = "W_AttackBothLight2"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
-    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
         r2 = "W_RandomOneShotNext1" 
         b2 = "W_RandomOneShotNext1" 
     end
@@ -17168,7 +17168,7 @@ function StormStanceStart_Upper_onUpdate() -- 038800
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
         local r1 = "W_AttackRightLight2"
         local r2 = "W_AttackRightHeavy1Start"
         local b1 = "W_AttackBothLight1"
