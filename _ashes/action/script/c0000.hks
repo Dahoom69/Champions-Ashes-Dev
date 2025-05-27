@@ -11933,7 +11933,10 @@ function Attack2BothHeavy1Start_onUpdate()  -- r21 charge 034322
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
 
-    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_Attack2BothLight3" end
+    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  
+        if IsFeintAttempt() then b1 = "W_AttackBothBackstep"
+        else b1 = "W_Attack2BothLight3" end
+    end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -12035,7 +12038,10 @@ function Attack2BothHeavy1End_onUpdate()  -- r21 release end 034323
     local r1 = "W_Attack2RightLight1" 
     local b2 = "W_Attack2BothHeavy2Start"
 
-    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_Attack2BothLight3" end
+    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  
+        if IsFeintAttempt() then b1 = "W_AttackBothBackstep"
+        else b1 = "W_Attack2BothLight3" end
+    end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return
@@ -12153,7 +12159,10 @@ function Attack2BothHeavy2Start_onUpdate()  -- r22 charge roll r2 034342
     local r1 = "W_Attack2RightLight1" 
     local r2 = "W_Attack2RightHeavy1Start"
 
-    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_Attack2BothLight2" end
+    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  
+        if IsFeintAttempt() then b1 = "W_Attack2BothLight3"
+        else b1 = "W_Attack2BothLight2" end
+    end
 
         if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             return 
@@ -12258,7 +12267,10 @@ function Attack2BothHeavy2End_onUpdate()  -- r22 release end 034343
     local r1 = "W_Attack2RightLight1" 
     local r2 = "W_Attack2RightHeavy1Start"
 
-    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  b1 = "W_Attack2BothLight2" end
+    if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  
+        if IsFeintAttempt() then b1 = "W_Attack2BothLight3"
+        else b1 = "W_Attack2BothLight2" end
+    end
     
     if ((is_catalysts == TRUE and HAND_LEFT_BOTH ~= c_Style) or (is_catalysto == TRUE and HAND_LEFT_BOTH == c_Style))  then  
         if AttackCommonFunction(r1, r2, "W_AttackBothLeft1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackRightLight1", FALSE, TRUE) == TRUE then
