@@ -11505,6 +11505,7 @@ function AttackBothLeft1_onUpdate() -- l11
 
     if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
     if sp_m == 664 or sp_m == 667 then b1 = "W_AttackBothLight3" end
+    if sp_m == 700 then r1 = "W_Attack2RightLight2" end
 
     local is_Rm = GetEquipType(HAND_RIGHT, 27) 
     local is_Ro = GetEquipType(HAND_LEFT, 27) 
@@ -11602,6 +11603,7 @@ function AttackBothLeft2_onUpdate()  -- l12
      local l1 = "W_AttackBothLeft3"
      if sp_m == 649 then b1 = "W_AttackBothLight1" l1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
      if sp_m == 664 then l1 = "W_AttackBothLeft1" offhand = "W_AttackBothLeft1"  end
+     if sp_m == 700 then r1 = "W_AttackRightHeavyWepBroken1Start" end
 
      if is_ts_ps == TRUE then offhand = "W_AttackBothLeft3" end
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" end 
@@ -11693,13 +11695,14 @@ function AttackBothLeft3_onUpdate()  -- l13
      local is_Ro = GetEquipType(HAND_LEFT, 27) 
      if (is_Rm == TRUE and is_Ro == TRUE) then offhand = "W_AttackBothLeft2" end
      if is_tb_ps == TRUE then r1 = "W_AttackRightHeavyWepBroken1Start" offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end
-     if is_ss_ps == TRUE or is_cs_ps == TRUE then offhand = "W_AttackRightBackstep" l1 = "W_AttackRightBackstep" end
+     if is_ss_ps == TRUE or is_cs_ps == TRUE then offhand = "W_AttackRightBackstep" l1 = "W_AttackRightBackstep" if sp_m == 700 then offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end end
      if is_gss_ps == TRUE or is_uga_ps == TRUE or is_ugh_ps == TRUE then offhand = "W_AttackBothLeft1" l1 = "W_AttackBothLeft1" end
      if (GetEquipType(HAND_RIGHT, 38)  == TRUE and GetEquipType(HAND_LEFT, 38)  == TRUE) then offhand = "W_AttackBothLeft3" end
      if is_ugh_ps == TRUE then r1 = "W_AttackRightLight3" end
 
      if (sp_m == 139) and c_Style ~= HAND_LEFT_BOTH then l1 = "W_AttackBothLeft1" b1 = "W_AttackBothLight1" end 
      if (sp_o == 139) and c_Style == HAND_LEFT_BOTH then l1 = "W_AttackBothLeft1" b1 = "W_AttackBothLight1" end 
+     if sp_m == 700 then r1 = "W_AttackRightBackstep" end -- r15
 
      if env(1116, 100283) == FALSE  and  AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -11764,6 +11767,7 @@ function AttackBothLeftDash_onUpdate() -- bothdashleft run l1 run 33500
         b1 = "W_AttackBothLight3"
     end
 
+    if is_ss_ps == TRUE and sp_m == 700 then r1 = "W_Attack2RightLight2" l1 = "W_AttackBothLeft2" end
     if (GetEquipType(HAND_RIGHT, 25) == TRUE and GetEquipType(HAND_LEFT, 23, 25)  == TRUE) then l1 = "W_AttackBothLeft3" end  
     if (GetEquipType(HAND_RIGHT, 28) == TRUE and GetEquipType(HAND_LEFT, 28) == TRUE) then l1 = "W_AttackRightBackstep" end  
     if ((GetEquipType(HAND_RIGHT, 28) == TRUE and (sp_m == 51 or sp_m == 166)) and (GetEquipType(HAND_LEFT, 28) == TRUE and (sp_o == 51 or sp_o == 166))) then l1 = "W_AttackBothLeft1" end  
@@ -11780,6 +11784,7 @@ end
 function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
+    local r1 = "W_AttackRightLight1"
     local b1 = "W_AttackBothLight1"
     local b2 = "W_AttackBothHeavy1Start"
 
@@ -11801,13 +11806,14 @@ function AttackBothLeftStep_onUpdate() -- roll l1 roll 33900
 
     if (env(345 , HAND_RIGHT) == 671 and c_Style == HAND_RIGHT_BOTH) or (env(345 , HAND_LEFT) == 671 and c_Style == HAND_LEFT_BOTH)  then b2 = "W_AttackBothHeavy2Start" end
     if (sp_m == 139 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 139 and c_Style == HAND_LEFT_BOTH)  then b1 = "W_AttackBothLight2" end
+    if is_ss_ps == TRUE and sp_m == 700 then l1 = "W_AttackBothLeft3" r1 = "W_AttackRightHeavyWepBroken1Start" end
 
     if sp_m == 162 and sp_o == 154 then 
         l1 = "W_AttackBothLeftStep"
         if 10 > env(2016) then  act(2002, 627) end
     end
 
-    if AttackCommonFunction("W_AttackRightLight1", "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, "W_AttackRightHeavy1Start", l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         return 
     else
         return 
@@ -11935,7 +11941,7 @@ function Attack2BothHeavy1Start_onUpdate()  -- r21 charge 034322
 
     if (sp_m == 700 and c_Style == HAND_RIGHT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH)  then  
         if IsFeintAttempt() then b1 = "W_AttackBothBackstep"
-        else b1 = "W_Attack2BothLight3" end
+         b1 = "W_Attack2BothLight3" end
     end
 
     if AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
