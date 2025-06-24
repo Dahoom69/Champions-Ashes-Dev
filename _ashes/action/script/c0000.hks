@@ -3219,7 +3219,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
         end
         local sp_m = env(345 , hand)
     
-        if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+        if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
 
             SetSwordArtsPointInfo(ACTION_ARM_L2, TRUE)    
 
@@ -15851,6 +15851,11 @@ function Warcry_onUpdate() -- 037670 UT WA
         b1 = r1
         r2 = "W_DrawStanceRightAttackHeavy"
         b2 = r2
+    end
+
+    if env(1116, 100260) == TRUE then
+        r2 = "W_WarcryCancel"
+        b2 = "W_WarcryCancel"
     end
 
     if SwordArtsCommonFunction(r1, r2, g_l1, g_l2, b1, b2, FALSE, FALSE, FALSE, GEN_TRANS_LEFT) == TRUE then
