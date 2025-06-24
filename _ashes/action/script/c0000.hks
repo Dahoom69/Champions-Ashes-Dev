@@ -1257,12 +1257,12 @@ function GetAttackRequest(is_guard)
             if (swordartrequest == SWORDARTS_REQUEST_LEFT_CHARGESHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_CHAINSHOT or swordartrequest == SWORDARTS_REQUEST_LEFT_CHAINSHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_CHARGESHOT or swordartrequest == SWORDARTS_REQUEST_LEFT_STRONGSHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_STRONGSHOT or swordartrequest == SWORDARTS_REQUEST_LEFT_WIDESHOT or swordartrequest == SWORDARTS_REQUEST_RIGHT_WIDESHOT) and is_both == FALSE then
                 local arts_hand = c_SwordArtsHand
                 if arts_hand == HAND_RIGHT then  
-                    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+                    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
                         return swordartrequest
                     else return ATTACK_REQUEST_ARROW_BOTH_RIGHT 
                     end
                 else
-                    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
+                    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
                         return swordartrequest
                     else return ATTACK_REQUEST_ARROW_BOTH_LEFT
                     end
@@ -13889,12 +13889,19 @@ function StepInRightStart_Upper_onUpdate() -- 036000
         end
     end
 
-    if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
+    if (( (sp_m == 689 or sp_m == 690)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690) and c_Style == HAND_LEFT_BOTH)) then 
         r1 = "W_AttackRightHeavyWepBroken1Start" 
         b1 = "W_AttackBothHeavyWepBroken1Start"
         r2 = "W_AttackRightHeavy1Start" 
         b2 = "W_AttackBothHeavy1Start" 
     end
+
+    if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_DrawStanceRightAttackLight"
+            b1 = "W_DrawStanceRightAttackLight"
+            r2 = "W_DrawStanceRightAttackHeavy"
+            b2 = "W_DrawStanceRightAttackHeavy"
+    end 
 
     if (( (sp_m == 271)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 271) and c_Style == HAND_LEFT_BOTH)) then 
         r1 = "W_AttackBothLight3" 
@@ -15618,6 +15625,11 @@ function Charge_Upper_onUpdate() -- 036700
         b2 = "W_ChargeContinue2"
     end
 
+    if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_Attack2RightLight3"
+            b1 = "W_Attack2BothLight2"
+    end 
+
     if sp_m == 101 and env("アニメ終了か", 1) == TRUE and env(1001) > 0 then ExecEventAllBody("W_ChargeContinue") end
     if sp_m == 101 and env("アニメ終了か", 1) == TRUE and env(1001) <= 0 then ExecEventAllBody("W_Idle") end 
     if sp_m == 641 then b1 = "W_AttackBothHeavySpecial1SubStart" end
@@ -15666,6 +15678,8 @@ function ChargeContinue_onUpdate() -- 036710
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
     if sp_m == 101 then iT = FALSE end
+    local b1 = "W_AttackBothLight1"
+    local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local l2 = "W_AttackLeftHeavy1"
     local b2 = "W_AttackBothHeavy1Start"
@@ -15680,7 +15694,6 @@ function ChargeContinue_onUpdate() -- 036710
 
     local is_h = GetEquipType(hand, 33) 
 
-    local r1 = "W_AttackRightLight1"
     if is_h == TRUE then r1 = "W_AttackRightLight3" end
 
     if i1BB == TRUE then 
@@ -15707,6 +15720,13 @@ function ChargeContinue_onUpdate() -- 036710
         r2 = "W_ChargeContinue2"
         b2 = "W_ChargeContinue2"
     end
+
+    if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_DrawStanceRightAttackLight"
+            b1 = "W_DrawStanceRightAttackLight"
+            r2 = "W_DrawStanceRightAttackHeavy"
+            b2 = "W_DrawStanceRightAttackHeavy"
+    end 
 
     if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", l2, b1, b2, is_artsr1, is_artsr2, TRUE, GEN_TRANS_LFET) == TRUE then
         return 
@@ -15923,6 +15943,11 @@ function WarcryCancel_onUpdate() -- 037680
         r2 = "W_AttackRightHeavy1Start"
         b2 = "W_AttackBothHeavy1Start"
     end
+
+    if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+        r2 = "W_DrawStanceRightAttackHeavy"
+        b2 = "W_DrawStanceRightAttackHeavy"
+    end 
 
     if 10 > env(2016) and sp_m == 604 then  ExecEventAllBody("W_StampedeRightAttackHeavy") end 
 
@@ -16162,14 +16187,23 @@ function MagicBuffRight_Upper_onUpdate()
     local blend_type, lower_state = GetHalfBlendInfo()
     local sp_m = env(345 , HAND_RIGHT)
     local sp_o = env(345 , HAND_LEFT)
+
+    local r1 = "W_AttackRightLight2"
+    local b1 = "W_AttackBothLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local b2 = "W_AttackBothHeavy1Start"
     if sp_m == 649 then r2 = "W_AttackRightHeavy1SubStart" b2 = "W_AttackBothHeavy1SubStart" end
 
+    if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+        r1 = "W_DrawStanceRightAttackLight"
+        b1 = "W_DrawStanceRightAttackLight"
+        r2 = "W_DrawStanceRightAttackHeavy"
+        b2 = "W_DrawStanceRightAttackHeavy"
+    end 
 
     if 5 > env(2016) and ((sp_m == 665 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 665 and c_Style ~= HAND_RIGHT_BOTH)) then act(2002, 121950)  end
 
-    if SwordArtsCommonFunction("W_AttackRightLight2", r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", "W_AttackBothLight1", b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
+    if SwordArtsCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy2", b1, b2, FALSE, FALSE, FALSE, FALSE) == TRUE then
         return 
     elseif HalfBlendLowerCommonFunction(Event_MagicBuffRightMirror, lower_state, FALSE, FALSE) == TRUE then
         return 
@@ -16292,6 +16326,11 @@ function ChargeShotRightStart_Upper_onUpdate() -- 038100
             r2 = "W_ChargeShotRightFire"
             b2 = "W_ChargeShotRightFire"
         end
+
+        if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_DrawStanceRightAttackLight"
+            b1 = "W_DrawStanceRightAttackLight"
+        end 
     
         if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
         then 
@@ -16447,10 +16486,20 @@ function ChargeShotFire_Activate()
 end
 
 function ChargeShotRightFire_onUpdate()
+    local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
+
     local r1 = "W_AttackRightLight1"
     local r2 = "W_AttackRightHeavy1Start"
     local b1 = "W_AttackBothLight1"
     local b2 = "W_AttackBothHeavy1Start"
+
+    if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_Attack2RightLight2"
+            b1 = "W_Attack2BothLight2"
+            r2 = "W_DrawStanceRightAttackHeavy"
+            b2 = "W_DrawStanceRightAttackHeavy"
+    end 
 
     act("精密射撃可能か")
     
@@ -17232,6 +17281,13 @@ function StormStanceStart_Upper_onUpdate() -- 038800
         local r2 = "W_AttackRightHeavy1Start"
         local b1 = "W_AttackBothLight1"
         local b2 = "W_AttackBothHeavy1Start"
+
+        if (    (sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or (  (sp_o == 700) and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_DrawStanceRightAttackLight"
+            b1 = "W_DrawStanceRightAttackLight"
+            r2 = "W_DrawStanceRightAttackHeavy"
+            b2 = "W_DrawStanceRightAttackHeavy"
+        end 
     
         if env("アーツポイント足りるか", ACTION_ARM_R2, c_SwordArtsHand) == FALSE -- 344 or HasEnoughArtsPoints no fp no mp
         then 
