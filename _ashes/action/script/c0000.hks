@@ -11261,6 +11261,7 @@ end
 
 function Attack2BothLight3_onUpdate() -- r13 034022
     local sp_m = env(345 , HAND_RIGHT)
+    local sp_o = env(345 , HAND_LEFT)
     local r1 = "W_Attack2RightLight2"
     local b1 = "W_Attack2BothLight2"
     local r2 = "W_Attack2RightHeavy1Start"
@@ -11268,7 +11269,7 @@ function Attack2BothLight3_onUpdate() -- r13 034022
     local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
 
-    if (sp_m == 700) and c_Style ~= HAND_LEFT_BOTH then b1 = "W_AttackBothHeavyWepBroken1Start" end
+    if (sp_m == 700 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothHeavyWepBroken1Start" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
