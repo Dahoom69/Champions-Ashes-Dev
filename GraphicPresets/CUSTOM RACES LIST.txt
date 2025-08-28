@@ -1,8 +1,8 @@
 Gender	Race		Musculature	Body Hair	Parts file
-Male	Gael		Standard	Standard 	fc_m_0004-partsbnd-dcx
-Male	Gael Hairy	Standard	Thick 		fc_m_0014-partsbnd-dcx
-Male	Gael Muscular	Muscular	Standard 	fc_m_0104-partsbnd-dcx
-Male	Gael Both	Muscular	Thick 		fc_m_0114-partsbnd-dcx
+Male	Gael		Standard	Standard 	fc_m_0003-partsbnd-dcx
+Male	Gael Hairy	Standard	Thick 		fc_m_0013-partsbnd-dcx
+Male	Gael Muscular	Muscular	Standard 	fc_m_0103-partsbnd-dcx
+Male	Gael Both	Muscular	Thick 		fc_m_0113-partsbnd-dcx
 
 Male	Hollow		Standard	Standard 	fc_m_0004-partsbnd-dcx
 Male	Hollow		Standard	Thick 		fc_m_0014-partsbnd-dcx
@@ -29,10 +29,10 @@ Male	Shadowlurker F	Standard	Thick 		fc_m_0018-partsbnd-dcx
 Male	Shadowlurker M	Muscular	Standard 	fc_m_0108-partsbnd-dcx
 Male	Mossman		Muscular	Thick 		fc_m_0118-partsbnd-dcx
 
-Female	Gael		Standard	Standard 	fc_f_0004-partsbnd-dcx
-Female	Gael Hairy	Standard	Thick 		fc_f_0014-partsbnd-dcx
-Female	Gael Muscular	Muscular	Standard 	fc_f_0104-partsbnd-dcx
-Female	Gael Both	Muscular	Thick 		fc_f_0114-partsbnd-dcx
+Female	Gael		Standard	Standard 	fc_f_0003-partsbnd-dcx
+Female	Gael Hairy	Standard	Thick 		fc_f_0013-partsbnd-dcx
+Female	Gael Muscular	Muscular	Standard 	fc_f_0103-partsbnd-dcx
+Female	Gael Both	Muscular	Thick 		fc_f_0113-partsbnd-dcx
 
 Female	Hollow		Standard	Standard 	fc_f_0004-partsbnd-dcx
 Female	Hollow		Standard	Thick 		fc_f_0014-partsbnd-dcx
@@ -65,3 +65,7 @@ Face	Skeletons	fg_a_0105-partsbnd-dcx
 Face	Demons		fg_a_0106-partsbnd-dcx
 Face	Dragons		fg_a_0107-partsbnd-dcx
 Face	Deep Creatures	fg_a_0108-partsbnd-dcx
+
+Hollowed Form Female	fc_f_0050-partsbnd-dcx
+Hollowed Form Male	fc_m_0050-partsbnd-dcx
+Hollowed Form Face	fg_a_0150-partsbnd-dcx
