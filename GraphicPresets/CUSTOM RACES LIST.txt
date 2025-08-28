@@ -1,0 +1,67 @@
+Gender	Race		Musculature	Body Hair	Parts file
+Male	Gael		Standard	Standard 	fc_m_0004-partsbnd-dcx
+Male	Gael Hairy	Standard	Thick 		fc_m_0014-partsbnd-dcx
+Male	Gael Muscular	Muscular	Standard 	fc_m_0104-partsbnd-dcx
+Male	Gael Both	Muscular	Thick 		fc_m_0114-partsbnd-dcx
+
+Male	Hollow		Standard	Standard 	fc_m_0004-partsbnd-dcx
+Male	Hollow		Standard	Thick 		fc_m_0014-partsbnd-dcx
+Male	Hollow		Muscular	Standard 	fc_m_0104-partsbnd-dcx
+Male	Hollow		Muscular	Thick 		fc_m_0114-partsbnd-dcx
+
+Male	Skeleton	Standard	Standard 	fc_m_0005-partsbnd-dcx
+Male	Tree Skeleton	Standard	Thick 		fc_m_0015-partsbnd-dcx
+Male	Silver Skeleton	Muscular	Standard 	fc_m_0105-partsbnd-dcx
+Male	Gold Skeleton	Muscular	Thick 		fc_m_0115-partsbnd-dcx
+
+Male	Capra Demon	Standard	Standard 	fc_m_0006-partsbnd-dcx
+Male	Flamelurker	Standard	Thick 		fc_m_0016-partsbnd-dcx
+Male	Titanite Demon	Muscular	Standard 	fc_m_0106-partsbnd-dcx
+Male	B.Flamelurker	Muscular	Thick 		fc_m_0116-partsbnd-dcx
+
+Male	Dragon		Standard	Standard 	fc_m_0007-partsbnd-dcx
+Male	Dragon Purple	Standard	Thick 		fc_m_0017-partsbnd-dcx
+Male	Dragon Blue	Muscular	Standard 	fc_m_0107-partsbnd-dcx
+Male	Dragon Green	Muscular	Thick 		fc_m_0117-partsbnd-dcx
+
+Male	Murkman		Standard	Standard 	fc_m_0008-partsbnd-dcx
+Male	Shadowlurker F	Standard	Thick 		fc_m_0018-partsbnd-dcx
+Male	Shadowlurker M	Muscular	Standard 	fc_m_0108-partsbnd-dcx
+Male	Mossman		Muscular	Thick 		fc_m_0118-partsbnd-dcx
+
+Female	Gael		Standard	Standard 	fc_f_0004-partsbnd-dcx
+Female	Gael Hairy	Standard	Thick 		fc_f_0014-partsbnd-dcx
+Female	Gael Muscular	Muscular	Standard 	fc_f_0104-partsbnd-dcx
+Female	Gael Both	Muscular	Thick 		fc_f_0114-partsbnd-dcx
+
+Female	Hollow		Standard	Standard 	fc_f_0004-partsbnd-dcx
+Female	Hollow		Standard	Thick 		fc_f_0014-partsbnd-dcx
+Female	Hollow		Muscular	Standard 	fc_f_0104-partsbnd-dcx
+Female	Hollow		Muscular	Thick 		fc_f_0114-partsbnd-dcx
+
+Female	Skeleton	Standard	Standard 	fc_f_0005-partsbnd-dcx
+Female	Tree Skeleton	Standard	Thick 		fc_f_0015-partsbnd-dcx
+Female	Silver Skeleton	Muscular	Standard 	fc_f_0105-partsbnd-dcx
+Female	Gold Skeleton	Muscular	Thick 		fc_f_0115-partsbnd-dcx
+
+Female	Capra Demon	Standard	Standard 	fc_f_0006-partsbnd-dcx
+Female	Flamelurker	Standard	Thick 		fc_f_0016-partsbnd-dcx
+Female	Titanite Demon	Muscular	Standard 	fc_f_0106-partsbnd-dcx
+Female	B.Flamelurker	Muscular	Thick 		fc_f_0116-partsbnd-dcx
+
+Female	Dragon		Standard	Standard 	fc_f_0007-partsbnd-dcx
+Female	Dragon Purple	Standard	Thick 		fc_f_0017-partsbnd-dcx
+Female	Dragon Blue	Muscular	Standard 	fc_f_0107-partsbnd-dcx
+Female	Dragon Green	Muscular	Thick 		fc_f_0117-partsbnd-dcx
+
+Female	Murkman		Standard	Standard 	fc_f_0008-partsbnd-dcx
+Female	Shadowlurker F	Standard	Thick 		fc_f_0018-partsbnd-dcx
+Female	Shadowlurker M	Muscular	Standard 	fc_f_0108-partsbnd-dcx
+Female	Mossman		Muscular	Thick 		fc_f_0118-partsbnd-dcx
+
+Face	Gael		fg_a_0103-partsbnd-dcx
+Face	Hollow		fg_a_0104-partsbnd-dcx
+Face	Skeletons	fg_a_0105-partsbnd-dcx
+Face	Demons		fg_a_0106-partsbnd-dcx
+Face	Dragons		fg_a_0107-partsbnd-dcx
+Face	Deep Creatures	fg_a_0108-partsbnd-dcx
