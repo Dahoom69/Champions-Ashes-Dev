@@ -15612,6 +15612,11 @@ function Charge_Upper_onUpdate() -- 036700
         b1 = "W_AttackBothLight2"
     end
 
+    if (sp_m == 51 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 51 and c_Style == HAND_LEFT_BOTH) then 
+        r1 = "W_AttackRightLight2"
+        b1 = "W_AttackBothLight2"
+    end
+
     if env(1116, 100260) == TRUE then
         r2 = "W_ChargeContinue"
         l2 = "W_ChargeContinue"
