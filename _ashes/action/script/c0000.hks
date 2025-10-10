@@ -17001,6 +17001,11 @@ function RandomOneShotNext1_onUpdate() -- 039110
     if (( (sp_m == 689 or sp_m == 690 or sp_m == 700)  and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 689 or sp_o == 690 or sp_o == 700) and c_Style == HAND_LEFT_BOTH)) then 
         r2 = "W_RandomOneShotNext1" 
         b2 = "W_RandomOneShotNext1" 
+
+        if (sp_m == 700 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH) then 
+            r1 = "W_Attack2RightLight2" 
+            b1 = "W_Attack2BothLight2" 
+        end
     end
 
     if (( (sp_m == 90 or sp_m == 672) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 90 or sp_o == 672) and c_Style == HAND_LEFT_BOTH)) then 
