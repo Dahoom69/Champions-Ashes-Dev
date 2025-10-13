@@ -8746,7 +8746,6 @@
 #14939
 #14956
 #15063
-#15080
 #15103
 #15122
 #15133
@@ -9882,7 +9881,6 @@
 #14940
 #14967
 #15064
-#15081
 #15104
 #15123
 #15134
@@ -10944,7 +10942,6 @@
 #14941
 #14968
 #15065
-#15082
 #15105
 #15124
 #15135
@@ -38277,7 +38274,7 @@
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17170445</hkparam>
             <hkparam name="name">AttackBothBackstep_CMSG</hkparam>
-            <hkparam name="generators" numelements="24">
+            <hkparam name="generators" numelements="25">
 #1994
 #1995
 #1996
@@ -38302,6 +38299,7 @@
 #14688
 #14727
 #15714
+#15751
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryHandStyle</hkparam>
             <hkparam name="animId">34920</hkparam>
@@ -44236,13 +44234,14 @@
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17170457</hkparam>
             <hkparam name="name">AttackBothHeavyWepBroken1Start_CMSG</hkparam>
-            <hkparam name="generators" numelements="6">
+            <hkparam name="generators" numelements="7">
 #2293
 #2294
 #13830
 #14684
 #14717
 #15708
+#15750
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryHandStyle</hkparam>
             <hkparam name="animId">34325</hkparam>
@@ -172880,7 +172879,6 @@ null
 #14939
 #14956
 #15063
-#15080
 #15103
 #15122
 #15133
@@ -214279,7 +214277,6 @@ null
 #14939
 #14956
 #15063
-#15080
 #15103
 #15122
 #15133
@@ -301453,60 +301450,7 @@ null
             <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
             <hkparam name="flags">0</hkparam>
         </hkobject>
-        <hkobject class="hkbClipGenerator" name="#15080" signature="0xd4cc9f6">
-            <hkparam name="variableBindingSet">null</hkparam>
-            <hkparam name="userData">0</hkparam>
-            <hkparam name="name">a154_030000.hkx</hkparam>
-            <hkparam name="animationBundleName"/>
-            <hkparam name="animationName">a154_030000</hkparam>
-            <hkparam name="triggers">null</hkparam>
-            <hkparam name="userPartitionMask">0</hkparam>
-            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
-            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
-            <hkparam name="startTime">0.0</hkparam>
-            <hkparam name="playbackSpeed">1.0</hkparam>
-            <hkparam name="enforcedDuration">0.0</hkparam>
-            <hkparam name="userControlledTimeFraction">0.0</hkparam>
-            <hkparam name="animationBindingIndex">65535</hkparam>
-            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
-            <hkparam name="flags">4</hkparam>
-        </hkobject>
-        <hkobject class="hkbClipGenerator" name="#15081" signature="0xd4cc9f6">
-            <hkparam name="variableBindingSet">null</hkparam>
-            <hkparam name="userData">0</hkparam>
-            <hkparam name="name">a154_030010.hkx</hkparam>
-            <hkparam name="animationBundleName"/>
-            <hkparam name="animationName">a154_030010</hkparam>
-            <hkparam name="triggers">null</hkparam>
-            <hkparam name="userPartitionMask">0</hkparam>
-            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
-            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
-            <hkparam name="startTime">0.0</hkparam>
-            <hkparam name="playbackSpeed">1.0</hkparam>
-            <hkparam name="enforcedDuration">0.0</hkparam>
-            <hkparam name="userControlledTimeFraction">0.0</hkparam>
-            <hkparam name="animationBindingIndex">65535</hkparam>
-            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
-            <hkparam name="flags">0</hkparam>
-        </hkobject>
-        <hkobject class="hkbClipGenerator" name="#15082" signature="0xd4cc9f6">
-            <hkparam name="variableBindingSet">null</hkparam>
-            <hkparam name="userData">0</hkparam>
-            <hkparam name="name">a154_030020.hkx</hkparam>
-            <hkparam name="animationBundleName"/>
-            <hkparam name="animationName">a154_030020</hkparam>
-            <hkparam name="triggers">null</hkparam>
-            <hkparam name="userPartitionMask">0</hkparam>
-            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
-            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
-            <hkparam name="startTime">0.0</hkparam>
-            <hkparam name="playbackSpeed">1.0</hkparam>
-            <hkparam name="enforcedDuration">0.0</hkparam>
-            <hkparam name="userControlledTimeFraction">0.0</hkparam>
-            <hkparam name="animationBindingIndex">65535</hkparam>
-            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
-            <hkparam name="flags">4</hkparam>
-        </hkobject>
+
         <hkobject class="hkbClipGenerator" name="#15083" signature="0xd4cc9f6">
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">0</hkparam>
@@ -304656,7 +304600,7 @@ null
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17104922</hkparam>
             <hkparam name="name">Attack2RightLight1_CMSG</hkparam>
-            <hkparam name="generators" numelements="11">
+            <hkparam name="generators" numelements="12">
 #15259
 #15320
 #15321
@@ -304668,6 +304612,7 @@ null
 #15492
 #15527
 #15668
+#15752
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryRight</hkparam>
             <hkparam name="animId">30002</hkparam>
@@ -304933,7 +304878,7 @@ null
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17170462</hkparam>
             <hkparam name="name">Attack2BothLight1_CMSG</hkparam>
-            <hkparam name="generators" numelements="11">
+            <hkparam name="generators" numelements="12">
 #15274
 #15305
 #15306
@@ -304945,6 +304890,7 @@ null
 #15499
 #15530
 #15675
+#15747
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryHandStyle</hkparam>
             <hkparam name="animId">34002</hkparam>
@@ -306872,7 +306818,7 @@ null
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17104928</hkparam>
             <hkparam name="name">Attack2RightLight2_CMSG</hkparam>
-            <hkparam name="generators" numelements="11">
+            <hkparam name="generators" numelements="12">
 #15381
 #15391
 #15395
@@ -306884,6 +306830,7 @@ null
 #15493
 #15528
 #15669
+#15753
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryRight</hkparam>
             <hkparam name="animId">30012</hkparam>
@@ -306930,7 +306877,7 @@ null
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17104929</hkparam>
             <hkparam name="name">Attack2RightLight3_CMSG</hkparam>
-            <hkparam name="generators" numelements="11">
+            <hkparam name="generators" numelements="12">
 #15384
 #15392
 #15396
@@ -306942,6 +306889,7 @@ null
 #15494
 #15529
 #15670
+#15754
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryRight</hkparam>
             <hkparam name="animId">30022</hkparam>
@@ -306988,7 +306936,7 @@ null
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17170468</hkparam>
             <hkparam name="name">Attack2BothLight2_CMSG</hkparam>
-            <hkparam name="generators" numelements="11">
+            <hkparam name="generators" numelements="12">
 #15387
 #15393
 #15397
@@ -307000,6 +306948,7 @@ null
 #15500
 #15531
 #15676
+#15748
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryHandStyle</hkparam>
             <hkparam name="animId">34012</hkparam>
@@ -307046,7 +306995,7 @@ null
             <hkparam name="variableBindingSet">null</hkparam>
             <hkparam name="userData">17170469</hkparam>
             <hkparam name="name">Attack2BothLight3_CMSG</hkparam>
-            <hkparam name="generators" numelements="11">
+            <hkparam name="generators" numelements="12">
 #15390
 #15394
 #15398
@@ -307058,6 +307007,7 @@ null
 #15501
 #15532
 #15677
+#15749
 </hkparam>
             <hkparam name="offsetType">WeaponCategoryHandStyle</hkparam>
             <hkparam name="animId">34022</hkparam>
@@ -313487,6 +313437,150 @@ null
             <hkparam name="animationBindingIndex">65535</hkparam>
             <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
             <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15747" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_034002.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_034002</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15748" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_034012.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_034012</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15749" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_034022.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_034022</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15750" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_034325.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_034325</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15751" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_034920.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_034920</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15752" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_030002.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_030002</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">4</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15753" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_030012.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_030012</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">0</hkparam>
+        </hkobject>
+        <hkobject class="hkbClipGenerator" name="#15754" signature="0xd4cc9f6">
+            <hkparam name="variableBindingSet">null</hkparam>
+            <hkparam name="userData">0</hkparam>
+            <hkparam name="name">a154_030022.hkx</hkparam>
+            <hkparam name="animationBundleName"/>
+            <hkparam name="animationName">a154_030022</hkparam>
+            <hkparam name="triggers">null</hkparam>
+            <hkparam name="userPartitionMask">0</hkparam>
+            <hkparam name="cropStartAmountLocalTime">0.0</hkparam>
+            <hkparam name="cropEndAmountLocalTime">0.0</hkparam>
+            <hkparam name="startTime">0.0</hkparam>
+            <hkparam name="playbackSpeed">1.0</hkparam>
+            <hkparam name="enforcedDuration">0.0</hkparam>
+            <hkparam name="userControlledTimeFraction">0.0</hkparam>
+            <hkparam name="animationBindingIndex">65535</hkparam>
+            <hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+            <hkparam name="flags">4</hkparam>
         </hkobject>
     </hksection>
 </hkpackfile>
