@@ -11199,6 +11199,8 @@ function Attack2BothLight1_onUpdate() -- r11 034002
     local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
 
+    if ((sp_m == 154  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 154  and c_Style == HAND_LEFT_BOTH) ) then b2 = "W_AttackBothHeavy1Start" end
+
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == TRUE  and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then return
@@ -11233,6 +11235,8 @@ function Attack2BothLight2_onUpdate() -- r12 034012
     local b2 = "W_Attack2BothHeavy1Start"
     local offhand = "W_AttackLeftLight1"
     local leftoffhand = "W_AttackLeftHeavy1"
+
+    if ((sp_m == 154  and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 154  and c_Style == HAND_LEFT_BOTH) ) then b2 = "W_AttackBothHeavy1Start" end
 
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
@@ -11271,7 +11275,7 @@ function Attack2BothLight3_onUpdate() -- r13 034022
     local leftoffhand = "W_AttackLeftHeavy1"
 
     if (sp_m == 700 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 700 and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothHeavyWepBroken1Start" end
-    if (sp_m == 154 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 154 and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothHeavyWepBroken1Start" end
+    if (sp_m == 154 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 154 and c_Style == HAND_LEFT_BOTH) then b1 = "W_AttackBothHeavyWepBroken1Start" b2 = "W_AttackBothHeavy1Start" end
     
     if env(1116, 100283) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         return 
