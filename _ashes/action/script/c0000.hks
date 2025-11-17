@@ -10688,6 +10688,7 @@ end
 
 function AttackRightHeavyKickSpecial_onUpdate() -- run r2 030610
     local r1 = "W_AttackRightLight1"
+    local b1 = "W_AttackBothLight1"
     local r2 = "W_AttackRightHeavy2Start"
     local b2 = "W_AttackBothHeavy1Start"
     if i1BB == TRUE then r1 = "W_AttackRightLight1" end
@@ -10697,6 +10698,7 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2 030610
     if sp_m == 649 or sp_m == 604 or sp_m == 664 or sp_m == 647 or sp_m == 667 then r1 = "W_AttackRightLight3" end
     if sp_m == 164 then r1 = "W_AttackRightHeavySpecial1Start" end
     if sp_m == 614  or sp_m == 612 or sp_m == 622 or sp_m == 627 or sp_m == 645 or sp_m == 621 then r1 = "W_AttackRightHeavySpecial1Start" end
+    if sp_m == 672 then r1 = "W_AttackRightHeavySpecial1Start" b1 = r1 end
     if (sp_m == 642) then r2 = "W_AttackRightHeavy1SubStart" end
     if sp_m == 688 and c_Style ~= HAND_LEFT_BOTH then b2 = r2 end
     if sp_m == 57 and c_Style ~= HAND_LEFT_BOTH then r1 = "W_AttackRightLight3" end
@@ -10711,7 +10713,7 @@ function AttackRightHeavyKickSpecial_onUpdate() -- run r2 030610
         act(2002, 627)
     end
 
-    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", b2, FALSE, TRUE) == TRUE then
+    if AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         if env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and env(1106, ACTION_ARM_R1) == TRUE then 
             local staminaRegen = 15
             if (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 end
