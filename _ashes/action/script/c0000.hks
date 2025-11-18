@@ -3039,6 +3039,8 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
     elseif request == SWORDARTS_REQUEST_RIGHT_CIRCLESTEP or request == SWORDARTS_REQUEST_LEFT_CIRCLESTEP then
         is_find_atk = FALSE
         is_atk_auto_aim = FALSE
+        local sp_m = env(345 , HAND_RIGHT)
+        local sp_o = env(345 , HAND_LEFT)
         local angle = GetVariable("MoveAngle")
         if GetWeightIndex(FALSE) == EVASION_WEIGHT_INDEX_OVERWEIGHT then
             local event = "W_RollingOverweightFront"
@@ -3050,7 +3052,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                 event = "W_RollingOverweightLeft"
             end
             ExecEventAllBody(event)
-        elseif GetWeightIndex(FALSE) == EVASION_WEIGHT_INDEX_HEAVY then
+        elseif (GetWeightIndex(FALSE) == EVASION_WEIGHT_INDEX_HEAVY) and not ((GetEquipType(HAND_RIGHT, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 26) == TRUE and c_Style == HAND_LEFT_BOTH))  then
             local rollingangle = GetVariable("RollingAngle")
             if 0 <= rollingangle then
                 SetVariable("RollingDirection", 1)
@@ -3101,7 +3103,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
             SetVariable("EnableTAE_RollingBack", back)
             SetVariable("EnableTAE_RollingLeft", left)
             SetVariable("EnableTAE_RollingRight", right)
-            AddStamina(c_StaminaCostRolling*3)
+            AddStamina(c_StaminaCostRolling)
             ExecEventAllBody(event) 
             
         else
@@ -3201,7 +3203,7 @@ function ExecAttack(r1, r2, l1, l2, b1, b2, is_guard, blend_type, artsr1, artsr2
                     if r1 == "W_AttackRightLightDash" then ExecEventAllBody("W_StampedeRightStart")
                     else ExecEventAllBody("W_CircleStepStartSelftrans") end
                 else
-                    ariable("CircleStepAngle", angle)
+                    SetVariable("CircleStepAngle", angle)
                     ExecEventAllBody("W_CircleStepStart")
                 end
             end
