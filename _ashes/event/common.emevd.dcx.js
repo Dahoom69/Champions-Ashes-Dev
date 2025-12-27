@@ -8,10 +8,12 @@
 // ==/EMEVD==
 
 $Event(0, Default, function() {
+     
     InitializeEvent(0, 200, 0);
     InitializeEvent(0, 230, 0);
     InitializeEvent(0, 9570, 4500, 3740);
     InitializeEvent(1, 9570, 4510, 3750);
+    InitializeEvent(0, 237, 0);
     EndIf(HasMultiplayerState(MultiplayerState.Client));
     EndIf(EventFlag(2052));
     InitializeEvent(0, 130, 40, 4004110, 0, -1);
@@ -160,7 +162,6 @@ $Event(0, Default, function() {
     InitializeEvent(0, 234, 0);
     InitializeEvent(0, 236, 0);
     InitializeEvent(0, 90009, 0);
-    InitializeEvent(0, 237, 0);
 });
 
 $Event(50, Default, function() {
