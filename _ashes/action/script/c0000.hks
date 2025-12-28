@@ -10858,13 +10858,12 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
         if (GetEquipType(HAND_RIGHT, 20, 23, 27, 28, 29, 30, 33, 42) == TRUE) then  
             if env(1116, 100342) == TRUE then r1 = "W_AttackLeftHeavySp3" 
             else r1 = "W_AttackLeftHeavySp2" end
-
-            if env(1116, 100344) == TRUE then 
-                if env(1116, 696) == TRUE then l1 = "W_AttackLeftHeavySp1"
-                else l1 = "W_AttackLeftHeavy1" end
-            end
         end
         if sp_m == 679 then r1 = "W_AttackRightLight1" end
+        if env(1116, 100344) == TRUE then -- loaded spear l1 followup effect
+            if env(1116, 696) == TRUE then l1 = "W_AttackLeftHeavySp1" -- loaded spear cleave
+            else l1 = "W_AttackLeftHeavy1" end
+        end
     end
 
     if (env(345 , HAND_RIGHT) == 624) then b2 = "W_AttackRightHeavy1SubStart" end
