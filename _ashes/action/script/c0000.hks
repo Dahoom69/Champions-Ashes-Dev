@@ -22715,7 +22715,7 @@ function UpdateWristTwistNew()	-- credits to El Fonzo -- stance
             max_arm_front_m = 20
             --max_arm_front_o = -30
             --max_wrist_side_o = -80
-        elseif     (GetEquipType(HAND_RIGHT, 38) == TRUE and (sp_m == 50 or sp_m == 179 or sp_m == 107 or sp_m == 232 or sp_m == 674 or sp_m == 663 or sp_m == 681))            and    (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681)) then
+        elseif     (GetEquipType(HAND_RIGHT, 38) == TRUE and (sp_m == 50 or sp_m == 179 or sp_m == 107 or sp_m == 232 or sp_m == 674 or sp_m == 663 or sp_m == 681))            and    (GetEquipType(HAND_LEFT, 38) == TRUE and (sp_o == 50 or sp_o == 179 or sp_o == 107 or sp_o == 232 or sp_o == 674 or sp_o == 663 or sp_o == 681)) and (is_both == FALSE) then
             max_wrist_front_m = 20
             max_wrist_front_o = 20
             max_arm_front_m = -20
