@@ -5465,6 +5465,8 @@ function ExecDamage(is_parry, is_attackwhileguard) -- receive damage add damage 
         damage_type = DAMAGE_TYPE_GUARDBREAK
     end
 
+    if env(1116, 575) == TRUE then act(2002, 576) end -- regen delay
+
     if env(1116, HITSTUN_RING_EFFECT) == TRUE then
             local damagecount = GetVariable("DamageCount")
             if damagecount >= 4 then
