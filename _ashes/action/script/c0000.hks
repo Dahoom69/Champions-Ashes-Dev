@@ -19792,6 +19792,7 @@ function MagicInvalidLeft_Upper_onUpdate()
 end
 
 function ThrowBackStab_Activate()
+    if env(1116, 572) == TRUE then act(2002, 573) end -- nerf backstabs by 50%
     act("バックスタブ発動")
     local style = c_Style
     if style == HAND_LEFT_BOTH then
