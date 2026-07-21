@@ -13657,6 +13657,15 @@ end
 function AttackCrossbowLeftEmpty_Upper_onUpdate()
     local blend_type, lower_state = GetHalfBlendInfo()
     local b2 = "W_AttackBothHeavy1SubStart"
+
+    if ((GetEquipType(HAND_RIGHT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, WEAPON_CATEGORY_SMALL_ARROW) == TRUE and c_Style == HAND_LEFT_BOTH)) then 
+        act("精密射撃可能か")
+        if IsExistArrow() == TRUE then
+            ExecEventAllBody("W_NoArrow")
+            return 
+        end 
+    end
+
     if env(345 , HAND_RIGHT) == 624 then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 610) then b2 = "W_AttackRightHeavy1SubStart" end
     if (env(345 , HAND_RIGHT) == 667) then b2 = "W_AttackRightHeavy1SubStart" end
