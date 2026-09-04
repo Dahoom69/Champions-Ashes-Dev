@@ -9429,9 +9429,10 @@ function AttackRightLight1_onUpdate() -- r11
         elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction("W_AttackRightLight2", r2, offhand, leftoffhand, "W_AttackBothLight2", b2, FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                 local staminaRegen = 0
-                if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+                elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10
                 elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
                 elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
                 elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
                 else staminaRegen = 15 end
@@ -9472,9 +9473,10 @@ function Attack2RightLight1_onUpdate() -- r11
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+            if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
             else staminaRegen = 15 end
@@ -9508,9 +9510,10 @@ function Attack2RightLight2_onUpdate() -- r12
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+            if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
             else staminaRegen = 15 end
@@ -9555,9 +9558,10 @@ function Attack2RightLight3_onUpdate() -- r13 030022
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+            if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
             else staminaRegen = 15 end
@@ -9625,9 +9629,10 @@ function AttackRightLight2_onUpdate() -- r12
         elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, offhand, leftoffhand, "W_AttackBothLight3", b2, FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                 local staminaRegen = 0
-                if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+                elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
                 elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
                 elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
                 elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
                 else staminaRegen = 15 end
@@ -9703,9 +9708,10 @@ function AttackRightLight3_onUpdate() -- r13
         elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2,  offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                 local staminaRegen = 0
-                if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+                elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
                 elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
                 elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
                 elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
                 else staminaRegen = 15 end
@@ -9878,9 +9884,10 @@ function AttackRightLightStep_onUpdate() -- roll r1 030900
         elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2,"W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                 local staminaRegen = 0
-                if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+                elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
                 elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
                 elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
                 elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
                 else staminaRegen = 15 end
@@ -9916,9 +9923,10 @@ function AttackRightLightStepSpecial_onUpdate() -- bs r2 -- 030910
     elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2,"W_AttackLeftLight1", "W_AttackLeftHeavy1", b1, "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+            if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
             else staminaRegen = 15 end
@@ -10621,9 +10629,10 @@ function AttackRightHeavyWepBroken1Start_onUpdate() -- r14 eleonora
         elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, "W_AttackRightHeavy1Start", l1, offhand, "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE  then
             if env(1106, ACTION_ARM_R1) == TRUE then
                     local staminaRegen = 0
-                    if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                    if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+                    elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
                     elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
                     elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
                     elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
                     else staminaRegen = 15 end
@@ -10762,9 +10771,10 @@ function AttackRightBackstep_onUpdate() -- r15 030920
         elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, "W_AttackLeftLight1", "W_AttackLeftHeavy1", "W_AttackBothLight1", "W_AttackBothHeavy1Start", FALSE, TRUE) == TRUE then
             if env(1106, ACTION_ARM_R1) == TRUE then
                     local staminaRegen = 0
-                    if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+                    if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+                    elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10  
                     elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+                    elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
                     elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
                     elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
                     else staminaRegen = 15 end
@@ -10905,9 +10915,10 @@ function AttackLeftHeavy1_onUpdate() -- 032000 AttackLeftHeavy1 -- 032090 or Att
     elseif  env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, l1ps, l1, b1, b1, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
+            if sp_m == 685 or sp_m == 651 then staminaRegen = 23
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE) then  staminaRegen = 10 
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE) then staminaRegen = 18
-            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) or sp_m == 685 then staminaRegen = 23 
+            elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE) then staminaRegen = 23 
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE) then staminaRegen = 30 
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE) then staminaRegen = 37
             else staminaRegen = 15 end
@@ -11183,9 +11194,9 @@ function AttackBothLight1_onUpdate()  -- r11
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
@@ -11220,9 +11231,9 @@ function Attack2BothLight1_onUpdate() -- r11 034002
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
@@ -11257,9 +11268,9 @@ function Attack2BothLight2_onUpdate() -- r12 034012
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
@@ -11296,9 +11307,9 @@ function Attack2BothLight3_onUpdate() -- r13 034022
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, offhand, leftoffhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
@@ -11365,9 +11376,9 @@ function AttackBothLight2_onUpdate()  -- r12
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE  and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
@@ -11451,9 +11462,9 @@ function AttackBothLight3_onUpdate()  -- r13 034020
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
@@ -11541,9 +11552,9 @@ function AttackBothLeft1_onUpdate() -- l11
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then 
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 18
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 23
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 30
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 37
@@ -11637,9 +11648,9 @@ function AttackBothLeft2_onUpdate()  -- l12
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, "W_AttackBothLeft3", offhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 18
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 23
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 30
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 37
@@ -11730,9 +11741,9 @@ function AttackBothLeft3_onUpdate()  -- l13
     elseif env(1116, 100283) == TRUE  and env(1116, 100273) == FALSE and  AttackCommonFunction(r1, r2, l1, offhand, b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 10
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 18
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 23
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 30
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 37
@@ -12809,9 +12820,9 @@ function AttackBothDashSpecial_onUpdate() -- bs r1 backstep r1 034510 "W_AttackB
     elseif env(1116, 100283) == TRUE and env(1116, 100273) == FALSE and AttackCommonFunction(r1, r2, l1, "W_AttackLeftHeavy1", b1, b2, FALSE, TRUE) == TRUE then
         if env(1106, ACTION_ARM_R1) == TRUE then
             local staminaRegen = 0
-            if     (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
+            if ((sp_m == 685 or sp_m == 651) and c_Style ~= HAND_LEFT_BOTH) or ((sp_o == 685 or sp_o == 651) and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
+            elseif (GetEquipType(HAND_RIGHT, 20, 42) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 20, 42) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 12
             elseif (GetEquipType(HAND_RIGHT, 30, 33) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 30, 33) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 22
-            elseif (sp_m == 685 and c_Style ~= HAND_LEFT_BOTH) or (sp_o == 685 and c_Style == HAND_LEFT_BOTH) then staminaRegen = 24
             elseif (GetEquipType(HAND_RIGHT, 25, 38, 51) == TRUE and c_Style ~= HAND_LEFT_BOTH) or (GetEquipType(HAND_LEFT, 25, 38, 51) == TRUE and c_Style == HAND_LEFT_BOTH)  then staminaRegen = 28
             elseif (GetEquipType(HAND_RIGHT, 35, 26) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 35, 26) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 36
             elseif (GetEquipType(HAND_RIGHT, 32, 47) == TRUE and c_Style ~= HAND_LEFT_BOTH)     or (GetEquipType(HAND_LEFT, 32, 47) == TRUE and c_Style == HAND_LEFT_BOTH)      then staminaRegen = 44
